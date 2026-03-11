@@ -1,0 +1,21 @@
+{
+  "shapiro_wilk": {
+    "W": 0.978666819510146,
+    "p_value": 0.05178412933035159,
+    "is_normal": true
+  },
+  "durbin_watson": {
+    "statistic": 1.5548217259882977,
+    "interpretation": "No autocorrelation"
+  },
+  "heteroscedasticity": {
+    "correlation": 0.261176392636136,
+    "p_value": 0.003809530822741815,
+    "constant_variance": false
+  },
+  "linear_fit": {
+    "slope": -0.002131325414943185,
+    "intercept": 0.6093763859455396,
+    "r_squared": 0.18657432943691757
+  }
+}

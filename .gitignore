@@ -1,0 +1,33 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+# Virtual environments
+venv/
+.venv/
+
+# IDE files
+.idea/
+.vscode/
+
+# Runtime outputs and local data
+output/
+data/raw_eis/
+*.log
+*.sqlite
+*.db
+
+# Temporary / local artifacts
+*.tmp
+*.bak
+*.zip
+

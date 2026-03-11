@@ -1,0 +1,6 @@
+Material_Condition,n_points,Slope,Intercept,E_MN_eV,R2,T_MN_K,Source,Notes
+S8 (overall),123,49.9,-6.83,0.0201,0.9809,233,Figure 3d / phase3v2_results,Canonical values for paper
+S60 (overall),63,48.2,-4.49,0.0207,0.9780,240,phase3v2_results,
+S8 (low-T <230K),39,49.8,-6.05,0.0201,0.9656,233,phase3v2_results,Similar to S8 overall
+S8 (high-T >270K),43,31.9,-3.94,0.0313,0.7551,363,phase3v2_results,Higher E_MN indicates different mechanism
+T_MN (S8 overall),-,-,-,-,-,233,E_MN/k_B (0.0201 eV),Coincides with low-T phase transition BP3

@@ -1,0 +1,9 @@
+Metric,Agent,Baseline,Improvement
+Rb Fitting R² (median),0.98738,0.89353,+10.5%
+R² > 0.95 rate,93%,4%,+89pp
+Arrhenius segments detected,4 segments (typical),2 segments (typical),+2 segments
+Phase transition detection,Automatic (threshold=0.2),Manual,-
+Adaptive sampling,Yes (FOCUSED/BACKTRACK),Fixed step,-
+Measurement points (typical),~47,~20-25,~2x denser
+Temperature range covered (K),185-300,190-300,Similar
+Fine-scan step size (K),1,3 (fixed),3x finer in transition zone

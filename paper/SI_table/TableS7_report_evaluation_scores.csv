@@ -1,0 +1,6 @@
+Model,D1_Scientific_Accuracy(20%),D2_Mechanistic_Depth(20%),D3_Data_Utilization(15%),D4_Completeness(15%),D5_Logical_Coherence(10%),D6_Novelty_Prediction(10%),D7_Presentation(10%),Weighted_Total(0-100)
+Agent-Enhanced (Ours),9.0,9.5,10.0,9.5,9.5,9.5,9.5,94.8
+GPT-5.2 Pro,8.5,8.5,7.5,9.0,8.5,7.5,8.5,83.3
+DeepSeek-R1,6.5,7.0,6.0,8.0,8.0,6.5,8.0,70.5
+Qwen,6.0,7.0,7.0,6.5,7.0,8.0,7.5,68.8
+Gemini 2.5 Pro,6.0,5.5,4.5,6.5,6.0,6.0,6.0,57.5

@@ -1,0 +1,830 @@
+{
+  "S8-2-1": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 17.68
+    },
+    "h3po4": {
+      "drops": 45,
+      "weight_mg": 1780.92,
+      "weight_pct": 69.97
+    },
+    "h2o": {
+      "drops": 0,
+      "weight_mg": 314.28,
+      "weight_pct": 12.35
+    },
+    "total_weight_mg": 2545.2,
+    "series": "S8"
+  },
+  "S8-2-2": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 19.46
+    },
+    "h3po4": {
+      "drops": 40,
+      "weight_mg": 1583.04,
+      "weight_pct": 68.46
+    },
+    "h2o": {
+      "drops": 0,
+      "weight_mg": 279.36,
+      "weight_pct": 12.08
+    },
+    "total_weight_mg": 2312.4,
+    "series": "S8"
+  },
+  "S8-3-1": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 20.44
+    },
+    "h3po4": {
+      "drops": 30,
+      "weight_mg": 1187.28,
+      "weight_pct": 53.93
+    },
+    "h2o": {
+      "drops": 10,
+      "weight_mg": 564.12,
+      "weight_pct": 25.63
+    },
+    "total_weight_mg": 2201.4,
+    "series": "S8"
+  },
+  "S8-3-2": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 18.92
+    },
+    "h3po4": {
+      "drops": 30,
+      "weight_mg": 1187.28,
+      "weight_pct": 49.91
+    },
+    "h2o": {
+      "drops": 15,
+      "weight_mg": 741.42,
+      "weight_pct": 31.17
+    },
+    "total_weight_mg": 2378.7,
+    "series": "S8"
+  },
+  "S8-3-3": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 21.53
+    },
+    "h3po4": {
+      "drops": 20,
+      "weight_mg": 791.52,
+      "weight_pct": 37.86
+    },
+    "h2o": {
+      "drops": 20,
+      "weight_mg": 848.88,
+      "weight_pct": 40.61
+    },
+    "total_weight_mg": 2090.4,
+    "series": "S8"
+  },
+  "S8-3-4": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 22.73
+    },
+    "h3po4": {
+      "drops": 10,
+      "weight_mg": 395.76,
+      "weight_pct": 19.99
+    },
+    "h2o": {
+      "drops": 30,
+      "weight_mg": 1133.64,
+      "weight_pct": 57.27
+    },
+    "total_weight_mg": 1979.4,
+    "series": "S8"
+  },
+  "S8-3-5": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 18.07
+    },
+    "h3po4": {
+      "drops": 40,
+      "weight_mg": 1583.04,
+      "weight_pct": 63.58
+    },
+    "h2o": {
+      "drops": 5,
+      "weight_mg": 456.66,
+      "weight_pct": 18.34
+    },
+    "total_weight_mg": 2489.7,
+    "series": "S8"
+  },
+  "S8-3-6": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 17.96
+    },
+    "h3po4": {
+      "drops": 35,
+      "weight_mg": 1385.16,
+      "weight_pct": 55.29
+    },
+    "h2o": {
+      "drops": 12,
+      "weight_mg": 669.96,
+      "weight_pct": 26.74
+    },
+    "total_weight_mg": 2505.12,
+    "series": "S8"
+  },
+  "S8-3-7": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 14.62
+    },
+    "h3po4": {
+      "drops": 45,
+      "weight_mg": 1780.92,
+      "weight_pct": 57.88
+    },
+    "h2o": {
+      "drops": 15,
+      "weight_mg": 846.18,
+      "weight_pct": 27.5
+    },
+    "total_weight_mg": 3077.1,
+    "series": "S8"
+  },
+  "S8-3-8": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 12.49
+    },
+    "h3po4": {
+      "drops": 54,
+      "weight_mg": 2137.1,
+      "weight_pct": 59.32
+    },
+    "h2o": {
+      "drops": 18,
+      "weight_mg": 1015.42,
+      "weight_pct": 28.19
+    },
+    "total_weight_mg": 3602.52,
+    "series": "S8"
+  },
+  "S8-3-9": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 18.92
+    },
+    "h3po4": {
+      "drops": 30,
+      "weight_mg": 1187.28,
+      "weight_pct": 49.91
+    },
+    "h2o": {
+      "drops": 15,
+      "weight_mg": 741.42,
+      "weight_pct": 31.17
+    },
+    "total_weight_mg": 2378.7,
+    "series": "S8"
+  },
+  "S8-3-10": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 16.87
+    },
+    "h3po4": {
+      "drops": 40,
+      "weight_mg": 1583.04,
+      "weight_pct": 59.36
+    },
+    "h2o": {
+      "drops": 10,
+      "weight_mg": 633.96,
+      "weight_pct": 23.77
+    },
+    "total_weight_mg": 2667.0,
+    "series": "S8"
+  },
+  "S8-3-11": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 18.21
+    },
+    "h3po4": {
+      "drops": 32,
+      "weight_mg": 1266.43,
+      "weight_pct": 51.23
+    },
+    "h2o": {
+      "drops": 15,
+      "weight_mg": 755.39,
+      "weight_pct": 30.56
+    },
+    "total_weight_mg": 2471.82,
+    "series": "S8"
+  },
+  "S8-3-20": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 17.88
+    },
+    "h3po4": {
+      "drops": 36,
+      "weight_mg": 1424.74,
+      "weight_pct": 56.62
+    },
+    "h2o": {
+      "drops": 11,
+      "weight_mg": 641.48,
+      "weight_pct": 25.49
+    },
+    "total_weight_mg": 2516.22,
+    "series": "S8"
+  },
+  "S8-3-21": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 18.24
+    },
+    "h3po4": {
+      "drops": 38,
+      "weight_mg": 1503.89,
+      "weight_pct": 60.95
+    },
+    "h2o": {
+      "drops": 7,
+      "weight_mg": 513.61,
+      "weight_pct": 20.82
+    },
+    "total_weight_mg": 2467.5,
+    "series": "S8"
+  },
+  "S8-3-22": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 18.71
+    },
+    "h3po4": {
+      "drops": 26,
+      "weight_mg": 1028.98,
+      "weight_pct": 42.78
+    },
+    "h2o": {
+      "drops": 21,
+      "weight_mg": 926.24,
+      "weight_pct": 38.51
+    },
+    "total_weight_mg": 2405.22,
+    "series": "S8"
+  },
+  "S8-3-23": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 20.48
+    },
+    "h3po4": {
+      "drops": 20,
+      "weight_mg": 791.52,
+      "weight_pct": 36.03
+    },
+    "h2o": {
+      "drops": 23,
+      "weight_mg": 955.26,
+      "weight_pct": 43.48
+    },
+    "total_weight_mg": 2196.78,
+    "series": "S8"
+  },
+  "S8-3-24": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 23.58
+    },
+    "h3po4": {
+      "drops": 10,
+      "weight_mg": 395.76,
+      "weight_pct": 20.74
+    },
+    "h2o": {
+      "drops": 28,
+      "weight_mg": 1062.72,
+      "weight_pct": 55.68
+    },
+    "total_weight_mg": 1908.48,
+    "series": "S8"
+  },
+  "S8-3-25": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 17.68
+    },
+    "h3po4": {
+      "drops": 45,
+      "weight_mg": 1780.92,
+      "weight_pct": 69.97
+    },
+    "h2o": {
+      "drops": 0,
+      "weight_mg": 314.28,
+      "weight_pct": 12.35
+    },
+    "total_weight_mg": 2545.2,
+    "series": "S8"
+  },
+  "S8-3-26": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 18.85
+    },
+    "h3po4": {
+      "drops": 34,
+      "weight_mg": 1345.58,
+      "weight_pct": 56.36
+    },
+    "h2o": {
+      "drops": 10,
+      "weight_mg": 592.06,
+      "weight_pct": 24.8
+    },
+    "total_weight_mg": 2387.64,
+    "series": "S8"
+  },
+  "S8-3-27": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 26.61
+    },
+    "h3po4": {
+      "drops": 0,
+      "weight_mg": 0.0,
+      "weight_pct": 0.0
+    },
+    "h2o": {
+      "drops": 35,
+      "weight_mg": 1241.1,
+      "weight_pct": 73.39
+    },
+    "total_weight_mg": 1691.1,
+    "series": "S8"
+  },
+  "S8-3-28": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 22.73
+    },
+    "h3po4": {
+      "drops": 10,
+      "weight_mg": 395.76,
+      "weight_pct": 19.99
+    },
+    "h2o": {
+      "drops": 30,
+      "weight_mg": 1133.64,
+      "weight_pct": 57.27
+    },
+    "total_weight_mg": 1979.4,
+    "series": "S8"
+  },
+  "S8-3-29": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 45.83
+    },
+    "h3po4": {
+      "drops": 0,
+      "weight_mg": 0.0,
+      "weight_pct": 0.0
+    },
+    "h2o": {
+      "drops": 15,
+      "weight_mg": 531.9,
+      "weight_pct": 54.17
+    },
+    "total_weight_mg": 981.9,
+    "series": "S8"
+  },
+  "S8-3-31": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 16.93
+    },
+    "h3po4": {
+      "drops": 36,
+      "weight_mg": 1424.74,
+      "weight_pct": 53.6
+    },
+    "h2o": {
+      "drops": 15,
+      "weight_mg": 783.32,
+      "weight_pct": 29.47
+    },
+    "total_weight_mg": 2658.06,
+    "series": "S8"
+  },
+  "S8-3-32": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 15.82
+    },
+    "h3po4": {
+      "drops": 40,
+      "weight_mg": 1583.04,
+      "weight_pct": 55.66
+    },
+    "h2o": {
+      "drops": 15,
+      "weight_mg": 811.26,
+      "weight_pct": 28.52
+    },
+    "total_weight_mg": 2844.3,
+    "series": "S8"
+  },
+  "S8-3-33": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 18.46
+    },
+    "h3po4": {
+      "drops": 13,
+      "weight_mg": 514.49,
+      "weight_pct": 21.1
+    },
+    "h2o": {
+      "drops": 39,
+      "weight_mg": 1473.73,
+      "weight_pct": 60.44
+    },
+    "total_weight_mg": 2438.22,
+    "series": "S8"
+  },
+  "S8-3-35": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 20.0
+    },
+    "h3po4": {
+      "drops": 28,
+      "weight_mg": 1116.0,
+      "weight_pct": 49.6
+    },
+    "h2o": {
+      "drops": 13,
+      "weight_mg": 684.0,
+      "weight_pct": 30.4
+    },
+    "total_weight_mg": 2250.0,
+    "series": "S8"
+  },
+  "S8-3-36": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 23.08
+    },
+    "h3po4": {
+      "drops": 23,
+      "weight_mg": 930.0,
+      "weight_pct": 47.69
+    },
+    "h2o": {
+      "drops": 11,
+      "weight_mg": 570.0,
+      "weight_pct": 29.23
+    },
+    "total_weight_mg": 1950.0,
+    "series": "S8"
+  },
+  "S8-3-37": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 16.98
+    },
+    "h3po4": {
+      "drops": 34,
+      "weight_mg": 1364.0,
+      "weight_pct": 51.47
+    },
+    "h2o": {
+      "drops": 16,
+      "weight_mg": 836.0,
+      "weight_pct": 31.55
+    },
+    "total_weight_mg": 2650.0,
+    "series": "S8"
+  },
+  "S8-3-38": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 15.25
+    },
+    "h3po4": {
+      "drops": 39,
+      "weight_mg": 1550.0,
+      "weight_pct": 52.54
+    },
+    "h2o": {
+      "drops": 19,
+      "weight_mg": 950.0,
+      "weight_pct": 32.2
+    },
+    "total_weight_mg": 2950.0,
+    "series": "S8"
+  },
+  "S60-1-1": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 24.37
+    },
+    "h3po4": {
+      "drops": 30,
+      "weight_mg": 1187.28,
+      "weight_pct": 64.29
+    },
+    "h2o": {
+      "drops": 0,
+      "weight_mg": 209.52,
+      "weight_pct": 11.35
+    },
+    "total_weight_mg": 1846.8,
+    "series": "S60"
+  },
+  "S60-1-3": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 27.48
+    },
+    "h3po4": {
+      "drops": 30,
+      "weight_mg": 1187.28,
+      "weight_pct": 72.52
+    },
+    "h2o": {
+      "drops": 0,
+      "weight_mg": 0.0,
+      "weight_pct": 0.0
+    },
+    "total_weight_mg": 1637.28,
+    "series": "S60"
+  },
+  "S60-2-1": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 29.38
+    },
+    "h3po4": {
+      "drops": 8,
+      "weight_mg": 316.61,
+      "weight_pct": 20.67
+    },
+    "h2o": {
+      "drops": 20,
+      "weight_mg": 765.07,
+      "weight_pct": 49.95
+    },
+    "total_weight_mg": 1531.68,
+    "series": "S60"
+  },
+  "S60-2-2": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 38.09
+    },
+    "h3po4": {
+      "drops": 2,
+      "weight_mg": 79.15,
+      "weight_pct": 6.7
+    },
+    "h2o": {
+      "drops": 18,
+      "weight_mg": 652.25,
+      "weight_pct": 55.21
+    },
+    "total_weight_mg": 1181.4,
+    "series": "S60"
+  },
+  "S60-2-3": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 28.84
+    },
+    "h3po4": {
+      "drops": 1,
+      "weight_mg": 39.58,
+      "weight_pct": 2.54
+    },
+    "h2o": {
+      "drops": 30,
+      "weight_mg": 1070.78,
+      "weight_pct": 68.62
+    },
+    "total_weight_mg": 1560.36,
+    "series": "S60"
+  },
+  "S60-2-4": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 33.45
+    },
+    "h3po4": {
+      "drops": 4,
+      "weight_mg": 158.3,
+      "weight_pct": 11.77
+    },
+    "h2o": {
+      "drops": 20,
+      "weight_mg": 737.14,
+      "weight_pct": 54.79
+    },
+    "total_weight_mg": 1345.44,
+    "series": "S60"
+  },
+  "S60-2-5": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 29.73
+    },
+    "h3po4": {
+      "drops": 0,
+      "weight_mg": 0.0,
+      "weight_pct": 0.0
+    },
+    "h2o": {
+      "drops": 30,
+      "weight_mg": 1063.8,
+      "weight_pct": 70.27
+    },
+    "total_weight_mg": 1513.8,
+    "series": "S60"
+  },
+  "S60-2-6": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 39.65
+    },
+    "h3po4": {
+      "drops": 1,
+      "weight_mg": 39.58,
+      "weight_pct": 3.49
+    },
+    "h2o": {
+      "drops": 18,
+      "weight_mg": 645.26,
+      "weight_pct": 56.86
+    },
+    "total_weight_mg": 1134.84,
+    "series": "S60"
+  },
+  "S60-2-7": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 36.84
+    },
+    "h3po4": {
+      "drops": 12,
+      "weight_mg": 474.91,
+      "weight_pct": 38.88
+    },
+    "h2o": {
+      "drops": 6,
+      "weight_mg": 296.57,
+      "weight_pct": 24.28
+    },
+    "total_weight_mg": 1221.48,
+    "series": "S60"
+  },
+  "S60-2-8": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 36.18
+    },
+    "h3po4": {
+      "drops": 14,
+      "weight_mg": 554.06,
+      "weight_pct": 44.55
+    },
+    "h2o": {
+      "drops": 4,
+      "weight_mg": 239.62,
+      "weight_pct": 19.27
+    },
+    "total_weight_mg": 1243.68,
+    "series": "S60"
+  },
+  "S60-2-9": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 30.8
+    },
+    "h3po4": {
+      "drops": 16,
+      "weight_mg": 633.22,
+      "weight_pct": 43.34
+    },
+    "h2o": {
+      "drops": 7,
+      "weight_mg": 377.69,
+      "weight_pct": 25.85
+    },
+    "total_weight_mg": 1460.91,
+    "series": "S60"
+  },
+  "S60-2-10": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 17.88
+    },
+    "h3po4": {
+      "drops": 36,
+      "weight_mg": 1424.74,
+      "weight_pct": 56.62
+    },
+    "h2o": {
+      "drops": 11,
+      "weight_mg": 641.48,
+      "weight_pct": 25.49
+    },
+    "total_weight_mg": 2516.22,
+    "series": "S60"
+  },
+  "S60-2-11": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 17.57
+    },
+    "h3po4": {
+      "drops": 40,
+      "weight_mg": 1583.04,
+      "weight_pct": 61.82
+    },
+    "h2o": {
+      "drops": 7,
+      "weight_mg": 527.58,
+      "weight_pct": 20.6
+    },
+    "total_weight_mg": 2560.62,
+    "series": "S60"
+  },
+  "S60-2-12": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 18.71
+    },
+    "h3po4": {
+      "drops": 26,
+      "weight_mg": 1028.98,
+      "weight_pct": 42.78
+    },
+    "h2o": {
+      "drops": 21,
+      "weight_mg": 926.24,
+      "weight_pct": 38.51
+    },
+    "total_weight_mg": 2405.22,
+    "series": "S60"
+  },
+  "S60-2-13": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 20.48
+    },
+    "h3po4": {
+      "drops": 20,
+      "weight_mg": 791.52,
+      "weight_pct": 36.03
+    },
+    "h2o": {
+      "drops": 23,
+      "weight_mg": 955.26,
+      "weight_pct": 43.48
+    },
+    "total_weight_mg": 2196.78,
+    "series": "S60"
+  },
+  "S60-2-14": {
+    "sepiolite": {
+      "weight_mg": 450.0,
+      "weight_pct": 23.58
+    },
+    "h3po4": {
+      "drops": 10,
+      "weight_mg": 395.76,
+      "weight_pct": 20.74
+    },
+    "h2o": {
+      "drops": 28,
+      "weight_mg": 1062.72,
+      "weight_pct": 55.68
+    },
+    "total_weight_mg": 1908.48,
+    "series": "S60"
+  }
+}

@@ -1,0 +1,6 @@
+# Phase 3 依赖（close 内闭环）
+# 建议 Python 3.8+
+pandas>=1.2
+numpy>=1.20
+scikit-learn>=1.0
+matplotlib>=3.3

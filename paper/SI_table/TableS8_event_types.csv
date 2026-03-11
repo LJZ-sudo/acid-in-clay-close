@@ -1,0 +1,13 @@
+Event_Type,Trigger,Agent_Source,Payload_Fields,Audit_Purpose
+STATE,State transition,Orchestrator,"status, phase",Trace workflow phases
+PLANNER_SUGGESTION,Planner gives advice,PlannerAgent,"action, value, strategy, confidence",Review planning logic
+DECISION_CRITIQUE,Critic evaluates decision,CriticAgent,"score, grade, issues, suggestions",Review quality gate
+DECISION,MainAgent final decision,MainAgent,"next_actions, reasoning",Trace decision formation
+UI_THOUGHT,Thought chain update,Orchestrator,"step_title, content",Explainability display
+TOOL_CALL,Hardware tool invoked,Orchestrator,"action_type, parameters",Trace hardware operations
+TOOL_RESULT,Hardware returns result,Orchestrator,"success, result_data",Verify execution results
+MEASUREMENT_CRITIQUE,Critic evaluates measurement,CriticAgent,"score, needs_retry, issues",Review data quality
+LITERATURE_SEARCH,Literature search triggered,LiteratureAgent,"query, results_count",Review knowledge source
+PATTERN_MATCH,Knowledge base match,KnowledgeBase,"match_score, pattern",Review prior utilization
+WARNING,Anomaly detected,Any,"message, severity",Track anomalies
+ERROR,Error occurred,Any,"error_type, message",Debug and recovery

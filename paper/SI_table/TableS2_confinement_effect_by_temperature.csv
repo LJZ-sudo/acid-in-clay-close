@@ -1,0 +1,7 @@
+Temperature_Zone,T_range_K,n_segments,mean_deltaEa_eV,std_eV,CI95_low_eV,CI95_high_eV
+Overall,157-300,121,0.0822,0.1597,0.0563,0.1118
+Low_T,<230,39,0.1978,0.1893,0.1355,0.2550
+Mid_T,230-270,40,0.0080,0.1147,-0.0230,0.0452
+High_T,>270,42,0.0457,0.0975,0.0173,0.0738
+Low_vs_High_ttest,,,t=4.592,p=1.64e-05,significant,TRUE
+Linear_trend,,,"slope=-0.00213 eV/K","R2=0.187","intercept=0.609 eV",

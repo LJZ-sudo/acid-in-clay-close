@@ -1,0 +1,12 @@
+{
+  "low_vs_high_ttest": {
+    "t_statistic": 4.591745819939469,
+    "p_value": 1.6352677378949724e-05,
+    "cohens_d": 1.0210885353934795,
+    "effect_size": "large"
+  },
+  "welch_ttest": {
+    "t_statistic": 4.492704835584033,
+    "p_value": 3.580809700051229e-05
+  }
+}

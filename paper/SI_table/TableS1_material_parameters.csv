@@ -1,0 +1,90 @@
+﻿Sample_ID,Material_Type,Clay_Mineral,Acid,R (acid/water molar ratio),N (liquid/solid ratio),L_cm,S_cm2,Role
+S12-*,S12,Montmorillonite,H2O (no acid),0.0000,2.46-3.70,0.12,3.9193,Cross-material
+S13-*,S13,Bentonite,Phytic,0.0200,0.84,0.12,3.9193,Cross-material
+S14-*,S14,Halloysite,H3PO4,0.0000-0.3137,0.50-1.92,0.12,3.9193,Cross-material
+S15-*,S15,Kaolin,Phytic,0.0200,0.79,0.12,3.9193,Cross-material
+S16-*,S16,Bentonite,H3PO4,0.0000-0.3079,1.01-1.18,0.2,3.9193,Cross-material
+S6-*,S6,Sepiolite,Phytic,0.0195,2.11-3.24,0.12,3.9193,Cross-material
+S60-*,S60,None (bulk),H3PO4,0.0000-1.0408,0.00,0.7,0.1963,Baseline (no confinement)
+S8-*,S8,Sepiolite,H3PO4,0.0000-1.0408,1.18-7.01,0.12,3.9193,Target (confinement)
+S95-*,S95,Sepiolite,H2SO4,0.0680,3.64,0.12,3.9193,Cross-material
+S96-*,S96,Bentonite,H2SO4,0.0679,1.15,0.12,3.9193,Cross-material
+S97-*,S97,Halloysite,H2SO4,0.0679,0.61,0.12,3.9193,Cross-material
+S12-1-1-2,S12,Montmorillonite,H2O (no acid),0.0000,3.70,0.12,3.9193,Cross-material
+S12-1-2-1,S12,Montmorillonite,H2O (no acid),0.0000,2.46,0.12,3.9193,Cross-material
+S13-1-1-1,S13,Bentonite,Phytic,0.0200,0.84,0.12,3.9193,Cross-material
+S14-1-1-1,S14,Halloysite,H3PO4,0.3137,1.92,0.12,3.9193,Cross-material
+S14-1-2-1,S14,Halloysite,H3PO4,0.3079,1.68,0.12,3.9193,Cross-material
+S14-1-3-1,S14,Halloysite,H3PO4,0.0000,0.50,0.12,3.9193,Cross-material
+S15-1-1-1,S15,Kaolin,Phytic,0.0200,0.79,0.12,3.9193,Cross-material
+S16-1-1-1,S16,Bentonite,H3PO4,0.3079,1.01,0.2,3.9193,Cross-material
+S16-1-2-1,S16,Bentonite,H3PO4,0.0000,1.18,0.2,3.9193,Cross-material
+S6-4-1,S6,Sepiolite,Phytic,0.0195,2.11,0.12,3.9193,Cross-material
+S6-4-1-1,S6,Sepiolite,Phytic,0.0195,2.11,0.12,3.9193,Cross-material
+S6-4-1-2,S6,Sepiolite,Phytic,0.0195,2.11,0.12,3.9193,Cross-material
+S6-4-2-1,S6,Sepiolite,Phytic,0.0195,3.24,0.12,3.9193,Cross-material
+S6-4-2-2,S6,Sepiolite,Phytic,0.0195,3.24,0.12,3.9193,Cross-material
+S6-4-2-3,S6,Sepiolite,Phytic,0.0195,3.24,0.12,3.9193,Cross-material
+S6-4-3-1,S6,Sepiolite,Phytic,0.0195,2.82,0.12,3.9193,Cross-material
+S6-4-3-2,S6,Sepiolite,Phytic,0.0195,2.82,0.12,3.9193,Cross-material
+S60-1-1-1,S60,None (bulk),H3PO4,1.0408,0.00,0.7,0.1963,Baseline
+S60-1-3-1,S60,None (bulk),H3PO4,1.0408,0.00,0.7,0.1963,Baseline
+S60-2-1-1,S60,None (bulk),H3PO4,0.0760,0.00,0.7,0.1963,Baseline
+S60-2-10-1,S60,None (bulk),H3PO4,0.4079,0.00,0.7,0.1963,Baseline
+S60-2-11-1,S60,None (bulk),H3PO4,0.5511,0.00,0.7,0.1963,Baseline
+S60-2-12-1,S60,None (bulk),H3PO4,0.2040,0.00,0.7,0.1963,Baseline
+S60-2-13-1,S60,None (bulk),H3PO4,0.1522,0.00,0.7,0.1963,Baseline
+S60-2-14-1,S60,None (bulk),H3PO4,0.0684,0.00,0.7,0.1963,Baseline
+S60-2-2-1,S60,None (bulk),H3PO4,0.0223,0.00,0.7,0.1963,Baseline
+S60-2-3-1,S60,None (bulk),H3PO4,0.0068,0.00,0.7,0.1963,Baseline
+S60-2-4-1,S60,None (bulk),H3PO4,0.0394,0.00,0.7,0.1963,Baseline
+S60-2-5-1,S60,None (bulk),H3PO4,0.0000,0.00,0.7,0.1963,Baseline
+S60-2-6-1,S60,None (bulk),H3PO4,0.0113,0.00,0.7,0.1963,Baseline
+S60-2-7-1,S60,None (bulk),H3PO4,0.2941,0.00,0.7,0.1963,Baseline
+S60-2-7-2,S60,None (bulk),H3PO4,0.2941,0.00,0.7,0.1963,Baseline
+S60-2-8-1,S60,None (bulk),H3PO4,0.4247,0.00,0.7,0.1963,Baseline
+S60-2-9-1,S60,None (bulk),H3PO4,0.3079,0.00,0.7,0.1963,Baseline
+S8-2-1-1,S8,Sepiolite,H3PO4,1.0408,4.66,0.12,3.9193,Target
+S8-2-1-2,S8,Sepiolite,H3PO4,1.0408,4.66,0.12,3.9193,Target
+S8-2-2-1,S8,Sepiolite,H3PO4,1.0408,4.14,0.12,3.9193,Target
+S8-2-2-2,S8,Sepiolite,H3PO4,1.0408,4.14,0.12,3.9193,Target
+S8-3-1-1,S8,Sepiolite,H3PO4,0.3866,3.89,0.12,3.9193,Target
+S8-3-1-2,S8,Sepiolite,H3PO4,0.3866,3.89,0.12,3.9193,Target
+S8-3-10-1,S8,Sepiolite,H3PO4,0.4586,4.93,0.12,3.9193,Target
+S8-3-11-1,S8,Sepiolite,H3PO4,0.3079,4.49,0.12,3.9193,Target
+S8-3-11-2,S8,Sepiolite,H3PO4,0.3079,4.49,0.12,3.9193,Target
+S8-3-2-1,S8,Sepiolite,H3PO4,0.2941,4.29,0.12,3.9193,Target
+S8-3-2-2,S8,Sepiolite,H3PO4,0.2941,4.29,0.12,3.9193,Target
+S8-3-2-3,S8,Sepiolite,H3PO4,0.2941,4.29,0.12,3.9193,Target
+S8-3-2-4,S8,Sepiolite,H3PO4,0.2941,4.29,0.12,3.9193,Target
+S8-3-2-5,S8,Sepiolite,H3PO4,0.2941,4.29,0.12,3.9193,Target
+S8-3-20-1-1,S8,Sepiolite,H3PO4,0.4079,4.59,0.12,3.9193,Target
+S8-3-21-1-1,S8,Sepiolite,H3PO4,0.5511,4.69,0.12,3.9193,Target
+S8-3-22-1-1,S8,Sepiolite,H3PO4,0.2040,4.34,0.12,3.9193,Target
+S8-3-23-2-1,S8,Sepiolite,H3PO4,0.1522,3.88,0.12,3.9193,Target
+S8-3-24-1-1,S8,Sepiolite,H3PO4,0.0684,2.92,0.12,3.9193,Target
+S8-3-25-1-1,S8,Sepiolite,H3PO4,1.0408,5.17,0.12,3.9193,Target
+S8-3-27-1-1,S8,Sepiolite,H3PO4,0.0000,2.76,0.12,3.9193,Target
+S8-3-28-1-1,S8,Sepiolite,H3PO4,0.0641,3.40,0.12,3.9193,Target
+S8-3-29-1-1,S8,Sepiolite,H3PO4,0.0000,1.18,0.12,3.9193,Target
+S8-3-3-1,S8,Sepiolite,H3PO4,0.1713,3.65,0.12,3.9193,Target
+S8-3-31-1-1,S8,Sepiolite,H3PO4,0.3341,4.91,0.12,3.9193,Target
+S8-3-32-1-1,S8,Sepiolite,H3PO4,0.3584,5.32,0.12,3.9193,Target
+S8-3-33-1-1,S8,Sepiolite,H3PO4,0.0641,4.42,0.12,3.9193,Target
+S8-3-35-1-1,S8,Sepiolite,H3PO4,0.2997,4.00,0.12,3.9193,Target
+S8-3-37-1-1,S8,Sepiolite,H3PO4,0.2997,4.89,0.12,3.9193,Target
+S8-3-38-1-1,S8,Sepiolite,H3PO4,0.2997,5.56,0.12,3.9193,Target
+S8-3-4-1,S8,Sepiolite,H3PO4,0.0641,3.40,0.12,3.9193,Target
+S8-3-5-1,S8,Sepiolite,H3PO4,0.6367,4.53,0.12,3.9193,Target
+S8-3-6-1,S8,Sepiolite,H3PO4,0.3797,4.57,0.12,3.9193,Target
+S8-3-6-2,S8,Sepiolite,H3PO4,0.3797,4.57,0.12,3.9193,Target
+S8-3-6-3,S8,Sepiolite,H3PO4,0.3797,4.57,0.12,3.9193,Target
+S8-3-7-1,S8,Sepiolite,H3PO4,0.3866,5.84,0.12,3.9193,Target
+S8-3-7-2,S8,Sepiolite,H3PO4,0.3866,5.84,0.12,3.9193,Target
+S8-3-8-2,S8,Sepiolite,H3PO4,0.3866,7.01,0.12,3.9193,Target
+S8-3-9-2,S8,Sepiolite,H3PO4,0.2941,4.29,0.12,3.9193,Target
+S8-3-9-3,S8,Sepiolite,H3PO4,0.2941,4.29,0.12,3.9193,Target
+S8-3-9-4,S8,Sepiolite,H3PO4,0.2941,4.29,0.12,3.9193,Target
+S95-1-1-1,S95,Sepiolite,H2SO4,0.0680,3.64,0.12,3.9193,Cross-material
+S96-1-1-1,S96,Bentonite,H2SO4,0.0679,1.15,0.12,3.9193,Cross-material
+S97-1-1-1,S97,Halloysite,H2SO4,0.0679,0.61,0.12,3.9193,Cross-material

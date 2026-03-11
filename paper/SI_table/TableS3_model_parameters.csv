@@ -1,0 +1,3 @@
+Model,Algorithm,Target,Features,Key_Hyperparameters,R2_train,CV_R2_mean,CV_R2_std,MAE_eV,n_samples,n_outliers_removed
+S60_Baseline,Ridge Regression,Ea(R; T),R; T,alpha=5.0,0.903,0.890,0.027,0.069,59,3
+S8_Confinement,Gradient Boosting Regressor,"Ea(R; N; T; R*N; R*T; N*T)","R; N; T; R*N; R*T; N*T","n_estimators=100; max_depth=4; learning_rate=0.1; subsample=0.8",0.971,0.807,-,0.041,121,0
