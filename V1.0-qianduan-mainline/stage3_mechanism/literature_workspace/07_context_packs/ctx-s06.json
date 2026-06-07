@@ -1,0 +1,53 @@
+{
+  "pack_id": "ctx-s06",
+  "stage_target": "s06",
+  "included_row_ids": [
+    "ER-0001",
+    "ER-0002",
+    "ER-0013",
+    "ER-0041",
+    "ER-0042",
+    "ER-0088",
+    "ER-0089",
+    "ER-0003",
+    "ER-0004",
+    "ER-0016",
+    "ER-0017",
+    "ER-0043",
+    "ER-0044",
+    "ER-0050",
+    "ER-0051"
+  ],
+  "excluded_row_ids": [
+    "ER-0005",
+    "ER-0018",
+    "ER-0045",
+    "ER-0046",
+    "ER-0092",
+    "ER-0010",
+    "ER-0011",
+    "ER-0069",
+    "ER-0052",
+    "ER-0034",
+    "ER-0035",
+    "ER-0039",
+    "ER-0040",
+    "ER-0090",
+    "ER-0091"
+  ],
+  "summary": "Context for s06: 7 mechanism claims, 8 measurements",
+  "key_supports": [
+    "transport:Grotthuss_hopping (x15)",
+    "temperature_dependence:pure_Arrhenius (x9)",
+    "phase_structure:single_continuous_phase (x7)",
+    "temperature_dependence:VTF (x6)"
+  ],
+  "key_weakens": [
+    "transport:vehicular_diffusion (x2)"
+  ],
+  "key_unknowns": [],
+  "usage_notes": [
+    "Evidence rows are sorted by relevance to this step",
+    "Each row traces to a specific paper_id"
+  ]
+}

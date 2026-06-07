@@ -1,0 +1,95 @@
+{
+  "step_id": "s06b_transfer_principles",
+  "principles": [
+    {
+      "principle_id": "P1",
+      "principle_type": "proton_source",
+      "acid_in_clay_origin": "E1/E3 indicate conductivity is sustained when the confined acid-water network remains connected.",
+      "transferable_rule": "Use a hydrated acid phase that supplies mobile protons while remaining coupled to a hydrogen-bond-rich host.",
+      "target_material_descriptor": "phosphoric-acid-containing proton donor embedded in an OH-rich host matrix",
+      "required_validation": [
+        "wide-temperature EIS",
+        "acid loading reproducibility"
+      ],
+      "failure_modes": [
+        "acid dilution causing low carrier density",
+        "excess acid leakage"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E3"
+      ],
+      "mechanism_links": [
+        "H4_acid_water_reconnection"
+      ]
+    },
+    {
+      "principle_id": "P2",
+      "principle_type": "confinement_geometry",
+      "acid_in_clay_origin": "E3/E4 support a confined-domain mechanism rather than unrestricted bulk acid behavior.",
+      "transferable_rule": "Introduce a nanoscale or fibrous confinement element that limits bulk acid crystallisation and preserves interfacial proton pathways.",
+      "target_material_descriptor": "1D or high-aspect-ratio inorganic scaffold with hydrated interfacial sites",
+      "required_validation": [
+        "filler dispersion imaging",
+        "thickness-normalised conductivity"
+      ],
+      "failure_modes": [
+        "filler aggregation",
+        "loss of continuous conduction pathway"
+      ],
+      "evidence_ids": [
+        "E3",
+        "E4"
+      ],
+      "mechanism_links": [
+        "H4_confined_network"
+      ]
+    },
+    {
+      "principle_id": "P3",
+      "principle_type": "bound_water_network",
+      "acid_in_clay_origin": "The selected mechanism separates confined mobile populations from bulk-like frozen populations.",
+      "transferable_rule": "Retain bound water and hydrogen-bond donor/acceptor density so the proton network does not collapse in the cold window.",
+      "target_material_descriptor": "OH-rich polymer or biopolymer matrix with retained bound water below 273 K",
+      "required_validation": [
+        "low-temperature EIS",
+        "DSC or mass-retention check"
+      ],
+      "failure_modes": [
+        "bulk water freezing",
+        "dry brittle matrix"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E4"
+      ],
+      "mechanism_links": [
+        "H4_low_T_Grotthuss"
+      ]
+    },
+    {
+      "principle_id": "P4",
+      "principle_type": "failure_mode_control",
+      "acid_in_clay_origin": "Multi-segment Arrhenius behavior marks overfilling and low-temperature degradation risk.",
+      "transferable_rule": "Treat low-temperature Ea excess and new Arrhenius breakpoints as hard warning signals for overfilling, freezing, or disconnected acid domains.",
+      "target_material_descriptor": "composition window that minimizes Ea_low excess while maintaining room-temperature conductivity",
+      "required_validation": [
+        "segmented Arrhenius analysis",
+        "repeat sample at the same composition"
+      ],
+      "failure_modes": [
+        "overfilled bulk acid phase",
+        "composition-sensitive brittleness"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E3",
+        "E4"
+      ],
+      "mechanism_links": [
+        "H4_multi_threshold"
+      ]
+    }
+  ],
+  "migration_summary": "The acid-in-clay mechanism transfers as a set of design rules: keep a connected hydrated proton source, add nanoscale confinement, retain bound water, and use low-temperature Ea excess as a failure-mode guardrail."
+}

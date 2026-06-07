@@ -1,0 +1,69 @@
+{
+  "paper_id": "manual_d6329c4fda",
+  "stage_target": "mechanism",
+  "bibliography": {
+    "title": "Neat liquid phosphoric acid (H 3 PO 4 ) has the highest intrinsic proton conductivity of any known substance and is a useful model for understanding proton transport in other phosphate-based systems in biology and clean energy technologies. Here, we present an  ab initio  molecular dynamics study that reveals, for the first time, the microscopic mechanism of this high proton conductivity. Anomalously fast proton transport in hydrogen-bonded systems involves a structural diffusion mechanism in which intramolecular proton transfer is driven by specific hydrogen bond rearrangements in the surrounding environment. Aqueous media transport excess charge defects through local hydrogen bond rearrangements that drive individual proton transfer reactions. In contrast, strong, polarizable hydrogen bonds in phosphoric acid produce coupled proton motion and a pronounced protic dielectric response of the medium, leading to the formation of extended, polarized hydrogen-bonded chains. The interplay between these chains and a frustrated hydrogen-bond network gives rise to the high proton conductivity. U",
+    "authors": "",
+    "year": 0
+  },
+  "system_identity": {
+    "base_material": "phosphoric acid (H3PO4)",
+    "dopant": "",
+    "form_factor": "",
+    "other": ""
+  },
+  "measurement_scope": {
+    "temp_range": "",
+    "freq_range": "",
+    "humidity": "",
+    "other_conditions": ""
+  },
+  "mechanism_relevant_findings": [
+    "Anomalously fast proton transport in hydrogen-bonded systems involves a structural diffusion mechanism driven by specific hydrogen bond rearrangements.",
+    "Strong, polarizable hydrogen bonds in phosphoric acid produce coupled proton motion and a pronounced protic dielectric response.",
+    "The high proton conductivity arises from the interplay between extended, polarized hydrogen-bonded chains and a frustrated hydrogen-bond network."
+  ],
+  "numerical_findings": [],
+  "eis_shape_findings": [],
+  "arrhenius_vtf_findings": [],
+  "limitations": [
+    "The study does not explicitly investigate long-range correlated proton motion in bulk protic media."
+  ],
+  "relevance_judgement": {
+    "score": 0.9,
+    "reason": "The paper provides a detailed mechanistic understanding relevant to proton transport."
+  },
+  "supports_axes": {
+    "transport": "Grotthuss_hopping",
+    "phase_structure": "multi_threshold_confined_domains",
+    "temperature_dependence": "VTF"
+  },
+  "conflicts_axes": {},
+  "trace_spans": [
+    {
+      "page": null,
+      "section": "©   2012   Macmillan Publishers Limited.  All rights reserved.",
+      "text_snippet": ""
+    },
+    {
+      "page": null,
+      "section": "The mechanism of proton conduction in phosphoric acid",
+      "text_snippet": ""
+    },
+    {
+      "page": null,
+      "section": "Linas Vilcˇiauskas 1 , Mark E. Tuckerman 2 * , Gabriel Bester 1 , Stephen J. Paddison 3   and Klaus-Dieter Kreuer 1 *",
+      "text_snippet": "nderstanding proton transport in hydrogen-bonded systems on the molecular level remains a fundamental problem in many areas of science, from biological systems to electrochemi- cal energy conversion 1"
+    },
+    {
+      "page": null,
+      "section": "ARTICLES",
+      "text_snippet": "PUBLISHED ONLINE: 22 APRIL 2012 |  DOI: 10.1038/NCHEM.1329 NATURE CHEMISTRY  | VOL 4 | JUNE 2012 | www.nature.com/naturechemistry 461"
+    },
+    {
+      "page": null,
+      "section": "©   2012   Macmillan Publishers Limited.  All rights reserved.",
+      "text_snippet": "phosphates 22 , phosphoric acid doped polybenzimidazole 21   and phosphonated polymers 23   have been suggested as electrolytes for fuel cell applications. In biology, adenosine triphosphate (ATP) syn"
+    }
+  ]
+}

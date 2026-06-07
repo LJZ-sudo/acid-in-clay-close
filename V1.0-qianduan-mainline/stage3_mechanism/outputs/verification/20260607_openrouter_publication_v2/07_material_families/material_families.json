@@ -1,0 +1,50 @@
+{
+  "step_id": "s09_families",
+  "families": [
+    {
+      "family_id": "F1",
+      "family_name": "OH-rich polymer host plus retained proton donor network",
+      "family_description": "OH-rich polymer or biopolymer hosts retain proton donors and provide hydrogen-bond pathways.",
+      "descriptor_match": [
+        "D1: host H-bond sites",
+        "D4: retained phosphoric acid or mobile proton phase"
+      ],
+      "literature_support_card_ids": [
+        "manual_1157b11126",
+        "manual_a624da98ce",
+        "manual_1190463586",
+        "manual_1ca1249fc4"
+      ]
+    },
+    {
+      "family_id": "F2",
+      "family_name": "Clay-confined acid channel composite",
+      "family_description": "Tubular or fibrous clays confine acid-rich phases and support interfacial proton transport.",
+      "descriptor_match": [
+        "D1: physical confinement",
+        "D4: acid retention",
+        "D6: donor-acceptor hopping motifs"
+      ],
+      "literature_support_card_ids": [
+        "manual_1190463586",
+        "manual_a16330d0f5",
+        "manual_b9c3d1711d",
+        "manual_1ca1249fc4"
+      ]
+    },
+    {
+      "family_id": "F3",
+      "family_name": "Cold-side hydrogel or plasticised electrolyte network",
+      "family_description": "Hydrogel-like or defect-rich matrices preserve conduction continuity in the low-temperature window.",
+      "descriptor_match": [
+        "D3: matrix mobility or free volume",
+        "D5: suppressed crystallisation or phase break"
+      ],
+      "literature_support_card_ids": [
+        "manual_a624da98ce",
+        "manual_f5f9ab95ca",
+        "manual_1ca1249fc4"
+      ]
+    }
+  ]
+}

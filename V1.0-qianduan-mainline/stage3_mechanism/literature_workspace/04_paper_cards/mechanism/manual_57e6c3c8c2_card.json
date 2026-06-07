@@ -1,0 +1,63 @@
+{
+  "paper_id": "manual_57e6c3c8c2",
+  "stage_target": "mechanism",
+  "bibliography": {
+    "title": "PHYSICAL REVIEW FLUIDS  5 , 124201 (2020)",
+    "authors": "",
+    "year": 0
+  },
+  "system_identity": {
+    "base_material": "cement",
+    "dopant": "deicing salts",
+    "form_factor": "porous media",
+    "other": ""
+  },
+  "measurement_scope": {
+    "temp_range": "not specified",
+    "freq_range": "",
+    "humidity": "not specified",
+    "other_conditions": "nanoconfinement, charged pore surfaces"
+  },
+  "mechanism_relevant_findings": [
+    "The proposed mechanism of nanofluidic salt trapping explains the high pressures required to damage concrete under freeze-thaw conditions.",
+    "Ice nucleation in confined porous media leads to significant disjoining pressures due to trapped ions.",
+    "Surface ion condensation or solid salt precipitation occurs at lower temperatures to release pressure, allowing complete freezing."
+  ],
+  "numerical_findings": [
+    {
+      "metric": "pressure",
+      "value": 10,
+      "unit": "MPa",
+      "conditions": "high pressure required to damage concrete"
+    }
+  ],
+  "eis_shape_findings": [],
+  "arrhenius_vtf_findings": [],
+  "limitations": [
+    "The applicability of previous frost heave theories to hardened cement is questionable due to its much higher stiffness."
+  ],
+  "relevance_judgement": {
+    "score": 0.7,
+    "reason": "The paper presents a novel mechanism relevant to proton transport in the context of freeze-thaw damage in porous media."
+  },
+  "supports_axes": {
+    "transport": "ionic_liquid_like",
+    "phase_structure": "multi_threshold_confined_domains",
+    "transition_topology": "single_transition"
+  },
+  "conflicts_axes": {
+    "temperature_dependence": "pure_Arrhenius"
+  },
+  "trace_spans": [
+    {
+      "page": null,
+      "section": "Freezing point depression and freeze-thaw damage by nanofluidic salt trapping",
+      "text_snippet": "Tingtao Zhou * Department of Physics, Massachusetts Institute of Technology, Cambridge, Massachusetts 02139, USA Mohammad Mirzadeh Department of Chemical Engineering, Massachusetts Institute of Techno"
+    },
+    {
+      "page": null,
+      "section": "ACKNOWLEDGMENTS",
+      "text_snippet": "The authors thank S. Yip, C. Qiao, J. Weiss, and M. Pinson for useful discussions. This work was carried out with the support of the Concrete Sustainability Hub at MIT. [1] C. L. Guy, Cold acclimation"
+    }
+  ]
+}

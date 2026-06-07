@@ -1,0 +1,656 @@
+{
+  "step_id": "s08",
+  "survey_scope": "material_search",
+  "cards": [
+    {
+      "card_id": "manual_1157b11126",
+      "title": "International   Journal   of   Biological   Macromolecules",
+      "authors": "",
+      "year": 0,
+      "doi": "",
+      "summary": "OH groups on starch and PVA formed hydrogen bonding interactions, which could improve the compatibility of the two components. The study does not quantify the exact relationship between water uptake and proton transport. tensile strength 9 MPa at 50% starch content",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "The paper discusses polymer blends but lacks detailed analysis of proton transport mechanisms.",
+      "component_descriptor_claims": [],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "manual_1190463586",
+      "title": "Article Composite Proton Exchange Membranes Based on Chitosan and Phosphotungstic Acid Immobilized One-Dimensional Attapulgite for Direct Methanol Fuel Cells",
+      "authors": "",
+      "year": 0,
+      "doi": "",
+      "summary": "The interaction between positively charged CS chains and negatively charged PWA constructs effective proton transport channels with the help of 1D AT. The proton conductivity of the composite membrane reached 35.3 mS cm − 1 at 80 °C. proton conductivity 35.3 mS cm − 1 at 80 °C, 4 wt.% WQAT loading",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "The study provides significant insights into proton transport mechanisms in composite membranes.",
+      "component_descriptor_claims": [
+        {
+          "component": "Attapulgite (1-D clay nanorods)",
+          "descriptor_ids": [
+            "D6"
+          ],
+          "quantitative_anchor": "35.3 mS cm⁻¹ at 80 °C (4 wt.% WQAT loading)",
+          "claim_text": "Attapulgite nanorods constrain phosphotungstic acid within high‑surface‑area domains, forming effective proton‑transport channels (proton conductivity 35.3 mS cm⁻¹ at 80 °C) (manual_1190463586).",
+          "confidence": "supported",
+          "human_review_status": "pending",
+          "reviewer": "",
+          "review_notes": ""
+        }
+      ],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "manual_1ca1249fc4",
+      "title": "Choline chloride-based deep eutectic solvents as electrolytes for wide  temperature range supercapacitors",
+      "authors": "Weirong Wang   a , * , Michael M. Sabugaa   b , Subhash Chandra   c , Yuli Panca Asmara   d , Baraa  Abd Alreda   e , Nestor Ulloa   f , Yasser Elmasry   g , Mustafa M. Kadhim   h , *",
+      "year": 0,
+      "doi": "",
+      "summary": "The electrical conductivity of the deep eutectic solvents increases with rising temperature. specific capacitance 198 F g−1 at 373 K with DES ChCl/PA energy density 110 Wh kg−1 at 373 K with DES ChCl/PA",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "The study provides significant insights into the conductivity and capacitance of choline chloride-based deep eutectic solvents.",
+      "component_descriptor_claims": [],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "manual_26f0dcfc01",
+      "title": "Journal of Materials Chemistry A",
+      "authors": "",
+      "year": 0,
+      "doi": "",
+      "summary": "Phosphate glasses exhibit high proton mobility arising from the strong hydrogen bonding of OH groups. The use of electrochemical alkali-proton substitution (APS) results in increased proton conductivity. The glass demonstrated stability for a long time at temperatures up to 280 °C indicating potential for Arrhenius behavior.",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "The findings support the development of intermediate temperature fuel cells utilizing phosphate glasses.",
+      "component_descriptor_claims": [],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "manual_3d7d6d5d7b",
+      "title": "",
+      "authors": "",
+      "year": 0,
+      "doi": "",
+      "summary": "Phosphate glasses can conduct protons via strong hydrogen bonding interactions. Protons in phosphate glasses form much stronger hydrogen bonds compared to those in silicate glasses. Long-term stability of proton conductivity is problematic and relies on maintaining high humidity.",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "The paper extensively discusses proton transport mechanisms in phosphate glasses.",
+      "component_descriptor_claims": [
+        {
+          "component": "phosphate glass",
+          "descriptor_ids": [
+            "D3"
+          ],
+          "quantitative_anchor": "",
+          "claim_text": "Phosphate glasses provide a non‑crystalline, ionically conductive matrix that may remain mobile and avoid crystalline acid‑phase formation at low temperatures. (manual_3d7d6d5d7b)",
+          "confidence": "hint",
+          "human_review_status": "pending",
+          "reviewer": "",
+          "review_notes": ""
+        }
+      ],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "manual_42051140ac",
+      "title": "Effect of deep eutectic solvent in proton conduction and thermal behaviour of chitosan-based membrane",
+      "authors": "a  Fuel Cell Institute, Universiti Kebangsaan Malaysia, 43600 UKM Bangi, Selangor, Malaysia b  School of Engineering, Taylor's University Lakeside Campus, No. 1, Jalan Taylor's, 47500 Subang Jaya, Selangor, Malaysia c  Graphene & Advanced 2D Materials Research Group (GAMRG), Research Centre for Nano-materials and Energy Technology (RCNMET), School of Science and Technology, Sunway University, No. 5, Jalan Universiti, Bandar Sunway, 47500 Subang Jaya, Selangor, Malaysia",
+      "year": 0,
+      "doi": "",
+      "summary": "The study showed a positive improvement in proton conductivity with DES compared to those without DES. The blend film with 75 wt% of chitosan and DES has a low but sufficient water uptake of 49.4% to avoid structural disintegration. The study revealed a slight trade-off on thermal stability with the use of DES.",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "The findings provide insights into proton conduction mechanisms in chitosan-based membranes.",
+      "component_descriptor_claims": [
+        {
+          "component": "chitosan",
+          "descriptor_ids": [
+            "D4"
+          ],
+          "quantitative_anchor": "49.4% water uptake (room temperature)",
+          "claim_text": "Chitosan membrane with DES retains 49.4% water, suggesting bound‑water capacity that could support local mobility for proton conduction. (manual_42051140ac)",
+          "confidence": "hint",
+          "human_review_status": "pending",
+          "reviewer": "",
+          "review_notes": ""
+        },
+        {
+          "component": "DES",
+          "descriptor_ids": [
+            "D4"
+          ],
+          "quantitative_anchor": "49.4% water uptake (with chitosan)",
+          "claim_text": "DES enhances water uptake (49.4% in chitosan blend) and proton conductivity, implying a role in retaining bound water. (manual_42051140ac)",
+          "confidence": "hint",
+          "human_review_status": "pending",
+          "reviewer": "",
+          "review_notes": ""
+        }
+      ],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "manual_529c072730",
+      "title": "Design Strategies for Anti-Freeze Electrolytes in Aqueous Energy Storage Devices at Low Temperatures",
+      "authors": "",
+      "year": 0,
+      "doi": "",
+      "summary": "The decline in electrochemical performance of aqueous energy storage devices at low temperatures can be attributed to the freezing of the electrolyte, which leads to slow ion diffusion. Deteriorated wettability results in restricted ion transport at the electrode-electrolyte interface. The formation of regular hydrogen bond networks among water molecules is the primary cause for its high freezing point characteristics.",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "The paper discusses mechanisms affecting proton transport but lacks quantitative EIS analysis.",
+      "component_descriptor_claims": [],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "manual_58ec9a6c2e",
+      "title": "Chemical Science",
+      "authors": "",
+      "year": 0,
+      "doi": "",
+      "summary": "The hydrogel electrolyte maintains exceptional ionic conductivity due to the establishment of continuous Zn2+ ion conduction pathways. The unique structure of the hydrogel significantly suppresses ice crystallization and depresses the freezing point. Achieving high mechanical strength, low frost resistance temperature, and superior ionic conductivity concurrently remains challenging.",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "The study presents significant advancements in proton conduction mechanisms in hydrogel electrolytes at ultra-low temperatures.",
+      "component_descriptor_claims": [
+        {
+          "component": "hydrogel electrolyte",
+          "descriptor_ids": [
+            "D1"
+          ],
+          "quantitative_anchor": "",
+          "claim_text": "Hydrogel electrolyte suppresses ice crystallisation and depresses the freezing point, maintaining continuous ionic conduction pathways at low temperatures. (manual_58ec9a6c2e)",
+          "confidence": "supported",
+          "human_review_status": "pending",
+          "reviewer": "",
+          "review_notes": ""
+        }
+      ],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "manual_6138017199",
+      "title": "",
+      "authors": "",
+      "year": 0,
+      "doi": "",
+      "summary": "La6W2O15 exhibits a higher electronic contribution to total conductivity than the LWO phase, which is linked to a faster hydration process in relaxation measurements (Abstract). EIS frequency range, humidity/water partial pressure, and fitting/activation-energy details are not provided in the supplied excerpt. No explicit Arrhenius or VTF analysis outcomes are included in the provided text.",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "The excerpt reports conductivity trends and hydration/relaxation behavior relevant to proton/electronic contributions but provides no EIS shapes or Arrhenius/VTF parameters.",
+      "component_descriptor_claims": [],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "manual_7f4f0a8392",
+      "title": "M O Acc OH Acc OH               X M O | M O trap Acc OH Acc OH K        (11)    Association between the acceptor and protons and/or oxygen vacancies has already been addressed  in the section on hydration for doped BaCeO 3 , and it could be argued that discussion of trapping  effects rather belongs in that section since it includes thermodynamic considerations. However, it  has traditionally been discussed along with mobility.",
+      "authors": "",
+      "year": 0,
+      "doi": "",
+      "summary": "Oxides dissolve protons that become mobile at high temperatures resulting in proton conduction. Effects of grain boundaries and trapping on proton transport are outlined. Proton conduction mechanisms are discussed with a basis in the thermodynamics of proton dissolution.",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "The paper provides valuable insights into high temperature proton conduction mechanisms.",
+      "component_descriptor_claims": [],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "manual_89488460eb",
+      "title": "Enhancing proton conductivity at subzero temperature through  constructing the well-ordered structure based on carbon dots",
+      "authors": "Department of Chemistry, College of Sciences, Northeastern University, Shenyang, 110819, China",
+      "year": 0,
+      "doi": "",
+      "summary": "The well-ordered dispersion of components reduces proton conduction resistance. The (PU/Nafion/PU/CDs)200/PA membrane exhibited fine proton conductivity stability. proton conductivity 3.29 ± 3.16 × 10 − 3 S/cm at −30 °C",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "The study provides significant insights into proton conductivity at subzero temperatures.",
+      "component_descriptor_claims": [
+        {
+          "component": "carbon dots (CDs)",
+          "descriptor_ids": [
+            "D1"
+          ],
+          "quantitative_anchor": "3.29 ± 3.16 × 10⁻³ S cm⁻¹ at −30 °C",
+          "claim_text": "Carbon dots (CDs) enable a well-ordered dispersion that maintains a continuous proton-conduction pathway, yielding proton conductivity of 3.29 × 10⁻³ S cm⁻¹ at −30 °C (manual_89488460eb).",
+          "confidence": "supported",
+          "human_review_status": "pending",
+          "reviewer": "",
+          "review_notes": ""
+        }
+      ],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "manual_8d58a81c9e_1",
+      "title": "An effective strategy to enhance phosphoric acid retention and proton  conductivity stability: Construction of proton transfer channels with starch  rather than H 3 PO 4",
+      "authors": "Based on the results in this study and the Grotthuss proton transfer mechanism, dense hydrogen-bonds from  oxygen-containing groups in polymer backbones should be more stable than hydrogen-bonds from massive  H 3 PO 4  molecules with high acid doping levels to promote proton conduction.",
+      "year": 0,
+      "doi": "",
+      "summary": "Proton conduction is promoted through dense hydrogen bonds formed by oxygen-containing groups in the polymer mainchain. PA retention and proton conductivity stability is maintained through low doping levels of phosphoric acid. The study does not explore the effects of varying polymer chain configurations on proton conductivity.",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "The paper provides significant insights into proton transport mechanisms relevant to high temperature applications.",
+      "component_descriptor_claims": [],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "manual_8d58a81c9e",
+      "title": "An effective strategy to enhance phosphoric acid retention and proton  conductivity stability: Construction of proton transfer channels with starch  rather than H 3 PO 4",
+      "authors": "Based on the results in this study and the Grotthuss proton transfer mechanism, dense hydrogen-bonds from  oxygen-containing groups in polymer backbones should be more stable than hydrogen-bonds from massive  H 3 PO 4  molecules with high acid doping levels to promote proton conduction.",
+      "year": 0,
+      "doi": "",
+      "summary": "The proton transfer channels are constructed through dense hydrogen bonds from the polymer backbones, promoting proton conduction. Phosphoric acid (PA) leaching and mechanical stability remain concerns for high doping levels. doping level 0.00484 mol H3PO4 low doping level",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "The study provides insights into mechanisms and stability of proton conduction in composite membranes.",
+      "component_descriptor_claims": [],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "manual_a16330d0f5",
+      "title": "Phosphoric Acid-in-Clay Electrolyte Boosting Polybenzimidazole Membranes for High-Performance Fuel Cells",
+      "authors": "",
+      "year": 0,
+      "doi": "",
+      "summary": "The PA@HNTs establishes a dense hydrogen-bonding network that facilitates ultrafast proton transport via the packed-acid mechanism and Grotthuss mechanism. The interaction of PA with the HNTs reduces susceptibility to PA leaching. Challenges include the leaching of phosphoric acid and potential plasticization of membranes.",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "The study presents innovative approaches to enhance proton conductivity in fuel cells through material modifications.",
+      "component_descriptor_claims": [
+        {
+          "component": "halloysite nanotubes (HNTs)",
+          "descriptor_ids": [
+            "D6"
+          ],
+          "quantitative_anchor": "",
+          "claim_text": "Halloysite nanotubes provide nanometric confinement for phosphoric acid, establishing a dense hydrogen-bonding network that facilitates ultrafast proton transport via packed-acid and Grotthuss mechanisms and improves acid retention (manual_a16330d0f5).",
+          "confidence": "supported",
+          "human_review_status": "pending",
+          "reviewer": "",
+          "review_notes": ""
+        }
+      ],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "manual_a624da98ce",
+      "title": "Enhanced Proton Conductivity from Phosphoric Acid-Incorporated 3D Polyacrylamide-Graft-Starch Hydrogel Materials for High-Temperature Proton Exchange Membranes",
+      "authors": "Correspondence to: Q. Tang (E - mail: tangqunwei@ouc.edu.cn) and X. Wang (E - mail: wangxinhd@ouc.edu.cn)",
+      "year": 2014,
+      "doi": "",
+      "summary": "The membrane’s high-temperature conductivity is described as being dependent on H3PO4 loading retained within a 3D porous PAAm-g-starch framework (Abstract; Introduction). Increasing NMBA crosslinker and APS initiator dosages is reported to increase H3PO4 loading and thereby increase proton conductivity (Abstract). The 3D hydrogel framework is stated to provide interconnected microporous space that absorbs and retains H3PO4 even under pressure and in anhydrous operation (Introduction).",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "The excerpt reports high anhydrous proton conductivity and composition/processing parameters but does not include EIS/Arrhenius/VTF mechanistic analysis details.",
+      "component_descriptor_claims": [
+        {
+          "component": "PAAm-g-starch hydrogel",
+          "descriptor_ids": [
+            "D6"
+          ],
+          "quantitative_anchor": "",
+          "claim_text": "The 3D PAAm-g-starch hydrogel framework provides interconnected microporous space that absorbs and retains H3PO4 under pressure and anhydrous conditions, enabling high proton conductivity (manual_a624da98ce).",
+          "confidence": "supported",
+          "human_review_status": "pending",
+          "reviewer": "",
+          "review_notes": ""
+        }
+      ],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "manual_b9c3d1711d",
+      "title": "Enhanced Proton Conductivity by the Influence of Modified  Montmorillonite on Poly (Vinyl alcohol) Based Blend  Composite Membranes",
+      "authors": "",
+      "year": 0,
+      "doi": "",
+      "summary": "The highest proton conductivity value of 0.0802 Scm -1 is obtained at 6wt% of protonated MMT added to the PVA/PEG blends. Significant improvements in hydrolytic stability were observed in the composite membranes. Proton conductivity measurements were made via Nyquist plot.",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "The study provides significant insights into proton transport mechanisms in composite membranes.",
+      "component_descriptor_claims": [
+        {
+          "component": "montmorillonite (MMT)",
+          "descriptor_ids": [
+            "D6"
+          ],
+          "quantitative_anchor": "0.0802 S/cm at 6 wt% protonated MMT (temperature unspecified)",
+          "claim_text": "Montmorillonite clay at 6 wt% in a PVA/PEG blend provides enhanced proton conductivity of 0.0802 S/cm, attributed to nanometric dispersion creating interfacial proton transport pathways (manual_b9c3d1711d).",
+          "confidence": "supported",
+          "human_review_status": "pending",
+          "reviewer": "",
+          "review_notes": ""
+        }
+      ],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "manual_c0c1101384",
+      "title": "Preparation and properties of chitosan/organic-modified attapulgite composite proton exchange membranes for fuel cell applications",
+      "authors": "Funding information Hubei provincial department of education, Grant/Award Numbers: Q20192705, 2018ACA152",
+      "year": 0,
+      "doi": "",
+      "summary": "The proton conductivity of the CS/QATP composite membranes is significantly higher than that of pure chitosan film. proton conductivity higher than pure CS film with 2 wt% QATP",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "The study provides insights into the enhancement of proton conductivity through composite materials.",
+      "component_descriptor_claims": [
+        {
+          "component": "chitosan",
+          "descriptor_ids": [
+            "D1"
+          ],
+          "quantitative_anchor": "",
+          "claim_text": "Chitosan provides a continuous, hydration-enabled proton-conduction pathway; the composite membrane with 2 wt% organic-modified attapulgite exhibits higher proton conductivity than pure chitosan film, indicating the matrix’s inherent proton transport capacity (manual_c0c1101384).",
+          "confidence": "hint",
+          "human_review_status": "pending",
+          "reviewer": "",
+          "review_notes": ""
+        },
+        {
+          "component": "organic-modified attapulgite (QATP)",
+          "descriptor_ids": [
+            "D1",
+            "D6"
+          ],
+          "quantitative_anchor": "",
+          "claim_text": "Organic-modified attapulgite introduces high-surface-area nanometric domains that confine proton-conducting electrolyte and suppress bulk crystallization, enhancing proton conductivity in chitosan-based composite membranes (manual_c0c1101384).",
+          "confidence": "hint",
+          "human_review_status": "pending",
+          "reviewer": "",
+          "review_notes": ""
+        }
+      ],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "manual_c8dafb5973",
+      "title": "Functionalized clay nanocomposites for enhanced proton conductivity in  polyether-based fuel cell membranes",
+      "authors": "a  Department of Chemistry, College of Science Al-zulfi, Majmaah University, Al-Majmaah 11952, Saudi Arabia b  Become: Deep Tech  &  Nanoscience, 63 rue de Tolbiac, 75013 Paris, France",
+      "year": 0,
+      "doi": "",
+      "summary": "Proton transport in clay-SPES nanocomposites is governed by a combination of vehicular and Grotthuss mechanisms. Review article\n\nFunctionalized clay nanocomposites for enhanced proton conductivity in  polyether-based fuel cell membranes\n\nYoussef O. Keshk   b , *\n\na  Department of Chemistry, College of Science Al-zulfi, Majmaah University, Al-Majmaah 11952, Saudi Arabia b  Become: Deep Tech  &  Nanoscience, 63 rue de Tolbiac, 75013 Paris, France\n\nA R T I C L E  I N F O\n\nKeywords: Proton exchange membranes (PEMs) Sulfonated polyether sulfone (SP",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "The article provides significant insights into proton transport mechanisms in functionalized clay nanocomposites.",
+      "component_descriptor_claims": [],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "manual_e2d7aef1a8",
+      "title": "=  c 0,H +  exp �",
+      "authors": "",
+      "year": 0,
+      "doi": "",
+      "summary": "Proton conductivity is dominant in H2O atmospheres compared to D2O and dry conditions. Conductivity is independent of pO2, confirming predominantly ionic (protonic) conductivity. Protons are charge-compensated by oxygen interstitials.",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "The study provides significant insights into proton conduction mechanisms at high temperatures.",
+      "component_descriptor_claims": [],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "manual_f56a2b0129",
+      "title": "ABSTRACT:  Growing concern regarding the impact of fossil fuels has led to demands for the development of green and renewable materials for advanced electrochemical energy storage devices. Biopolymers with unique hierarchical structures and physicochemical properties, serving as an appealing platform for the advancement of sustainable energy, have found widespread application in the gel electrolytes of supercapacitors. In this Review, we outline the structure and characteristics of various biopolymers, discuss the proposed mechanisms and assess the evaluation metrics of gel electrolytes in supercapacitor devices, and further analyze the roles of biopolymer materials in this context. The state-of-the-art electrochemical performance of biopolymer-based hydrogel electrolytes for supercapacitors and their multiple functionalities are summarized, while underscoring the current technical challenges and potential solutions. This Review is intended to offer a thorough overview of recent developments in biopolymer-based hydrogel electrolytes, highlighting research concerning green and sustainable energy storage devices and potential avenues for further development. G",
+      "authors": "",
+      "year": 0,
+      "doi": "",
+      "summary": "Biopolymers facilitate ion migration within gel polymer electrolytes (GPEs) for supercapacitors. 2024, 9, 1803−1825 Read Online\n\nACCESS Metrics & More Article Recommendations\n\nABSTRACT:  Growing concern regarding the impact of fossil fuels has led to demands for the development of green and renewable materials for advanced electrochemical energy storage devices. In this Review, we outline the structure and characteristics of various biopolymers, discuss the proposed mechanisms and assess the evaluation metrics of gel electrolytes in supercapacitor devices, and further analyze the roles of biopolymer materials in this context.",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "The paper discusses biopolymer-based GPEs but lacks specific EIS or Arrhenius analysis.",
+      "component_descriptor_claims": [],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "manual_f5f9ab95ca",
+      "title": "Improving the ionic conductivity in nanostructured membranes based on poly(vinyl alcohol) (PVA), chitosan (CS), phosphoric acid (H 3 PO 4 ), and niobium oxide (Nb 2 O 5 )",
+      "authors": "D. A. Quintana 1   &  E. Baca 1,2   &  E. Mosquera 1,2   &  R. A. Vargas 1,2   &  J. E. Diosa 1,2",
+      "year": 2018,
+      "doi": "",
+      "summary": "The enhancement of ionic conductivity is attributed to the introduction of Nb2O5 particles which create defects and free volume in the polymer matrix. Blending of PVA with chitosan improves ionic conductivity due to better compatibility and intermolecular interactions. The ionic transport mechanism is influenced by structural changes in the polymer matrix upon doping with Nb2O5 and H3PO4.",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "The paper provides significant experimental data supporting the understanding of proton conduction mechanisms.",
+      "component_descriptor_claims": [],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "manual_f7196a2c3b",
+      "title": "Hydrogen ion conducting starch-chitosan blend based electrolyte for application in electrochemical devices",
+      "authors": "a  Institute of Graduate Studies, University of Malaya, 50603 Kuala Lumpur, Malaysia b  Centre for Foundation Studies in Science, University of Malaya, 50603 Kuala Lumpur, Malaysia",
+      "year": 2014,
+      "doi": "",
+      "summary": "Transference number measurements indicate ions are the dominant conducting species in the electrolyte (Abstract). The cation transference number for the highest-conducting electrolyte is reported as t+ = 0.56 (Abstract). NH4Cl is described as a proton donor for polymer electrolytes in this system (Introduction).",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "The excerpt identifies a proton-donor salt system and provides ion/cation transference information and conductivity magnitude but lacks EIS/Arrhenius/VTF details needed for mechanism discrimination.",
+      "component_descriptor_claims": [],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "openalex_w1608495915",
+      "title": "",
+      "authors": "",
+      "year": 0,
+      "doi": "",
+      "summary": "The relaxation study showed that the hydration process was faster for the La 6 W 2 O 15 compared to the LWO phase. Conductivity of La 6 W 2 O 15 was one to two orders of magnitude lower compared to the phase pure La 6-x WO 12-δ. conductivity 10^-2 to 10^-3 S.cm^-1 moderate to elevated temperatures",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "The study presents significant findings on proton conductivity mechanisms in mixed conductors.",
+      "component_descriptor_claims": [],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "W2566581454",
+      "title": "Recent progress in layered transition metal carbides and/or nitrides (MXenes) and their composites: synthesis and applications",
+      "authors": "Vincent Ng, Hui Huang, Kun Zhou, Pooi See Lee, Wenxiu Que et al.",
+      "year": 2016,
+      "doi": "10.1039/c6ta06772g",
+      "summary": "Beyond the inaugural synthesis of multi-layered Ti<sub>3</sub>C<sub>2</sub>T<sub>x</sub>by etching Ti<sub>3</sub>AlC<sub>2</sub>with hydrofluoric acid (HF), novel routes with a myriad of reducing agents, etchants and intercalants have since been explored and have added many new members to the two-dimensional (2D) material constellation.",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "OpenAlex match for: proton conducting clay-confined acid composite solid electrolyte",
+      "component_descriptor_claims": [],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "W2559171777",
+      "title": "Hierarchically porous materials: synthesis strategies and structure design",
+      "authors": "Xiaoyu Yang, Lihua Chen, Yu Li, Joanna C. Rooke, Clément Sánchez et al.",
+      "year": 2016,
+      "doi": "10.1039/c6cs00829a",
+      "summary": "Owing to their immense potential in energy conversion and storage, catalysis, photocatalysis, adsorption, separation and life science applications, significant interest has been devoted to the design and synthesis of hierarchically porous materials. The hierarchy of materials on porosity, structural, morphological, and component levels is key for high performance in all kinds of applications. Synthesis and applications of hierarchically structured porous materials have become a rapidly evolving field of current interest. A large series of synthesis methods have been developed. This review addresses recent advances made in studies of this topic. After identifying the advantages and problems of natural hierarchically porous materials, synthetic hierarchically porous materials are presented. The synthesis strategies used to prepare hierarchically porous materials are first introduced and the features of synthesis and the resulting structures are presented using a series of examples. These involve templating methods (surfactant templating, nanocasting, macroporous polymer templating, colloidal crystal templating and bioinspired process, i.e. biotemplating), conventional techniques (supercritical fluids, emulsion, freeze-drying, breath figures, selective leaching, phase separation, zeolitization process, and replication) and basic methods (sol-gel controlling and post-treatment), as well as self-formation phenomenon of porous hierarchy. A series of detailed examples are given to show methods for the synthesis of hierarchically porous structures with various chemical compositions (dual porosities: micro-micropores, micro-mesopores, micro-macropores, meso-mesopores, meso-macropores, multiple porosities: micro-meso-macropores and meso-meso-macropores). We hope that this review will be helpful for those entering the field and also for those in the field who want quick access to helpful reference information about the synthesis of new hierarchically porous materials and metho",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "OpenAlex match for: proton conducting clay-confined acid composite solid electrolyte",
+      "component_descriptor_claims": [],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "W2324366651",
+      "title": "Polymer Nanocomposites—A Comparison between Carbon Nanotubes, Graphene, and Clay as Nanofillers",
+      "authors": "Mrinal Bhattacharya",
+      "year": 2016,
+      "doi": "10.3390/ma9040262",
+      "summary": "Nanofilled polymeric matrices have demonstrated remarkable mechanical, electrical, and thermal properties. In this article we review the processing of carbon nanotube, graphene, and clay montmorillonite platelet as potential nanofillers to form nanocomposites. The various functionalization techniques of modifying the nanofillers to enable interaction with polymers are summarized. The importance of filler dispersion in the polymeric matrix is highlighted. Finally, the challenges and future outlook for nanofilled polymeric composites are presented.",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "OpenAlex match for: proton conducting clay-confined acid composite solid electrolyte",
+      "component_descriptor_claims": [],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "W3176022823",
+      "title": "Layered double hydroxide-based electrocatalysts for the oxygen evolution reaction: identification and tailoring of active sites, and superaerophobic nanoarray electrode assembly",
+      "authors": "Daojin Zhou, Pengsong Li, Xiao Lin, Adam McKinley, Yun Kuang et al.",
+      "year": 2021,
+      "doi": "10.1039/d1cs00186h",
+      "summary": "The electrocatalytic oxygen evolution reaction (OER) is a critical half-cell reaction for hydrogen production via water electrolysis. However, the practical OER suffers from sluggish kinetics and thus requires efficient electrocatalysts. Transition metal-based layered double hydroxides (LDHs) represent one of the most active classes of OER catalysts. An in-depth understanding of the activity of LDH based electrocatalysts can promote further rational design and active site regulation of high-performance electrocatalysts. In this review, the fundamental understanding of the structural characteristics of LDHs is demonstrated first, then comparisons and in-depth discussions of recent advances in LDHs as highly active OER catalysts in alkaline media are offered, which include both experimental and computational methods. On top of the active site identification and structural characterization of LDHs on an atomic scale, strategies to promote the OER activity are summarised, including doping, intercalation and defect-making. Furthermore, the concept of superaerophobicity, which has a profound impact on the performance of gas evolution electrodes, is explored to enhance LDHs and their derivatives for a large scale OER. In addition, certain operating standards for OER measurements are proposed to avoid inconsistency in evaluating the OER activity of LDHs. Finally, several key challenges in using LDHs as anode materials for large scale water splitting, such as the issue of stability and the adoption of membrane-electrode-assembly based electrolysers, are emphasized to shed light on future research directions.",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "OpenAlex match for: proton conducting clay-confined acid composite solid electrolyte",
+      "component_descriptor_claims": [],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "W3201994217",
+      "title": "Hydrogen production, storage, utilisation and environmental impacts: a review",
+      "authors": "Ahmed I. Osman, Neha Mehta, Ahmed M. Elgarahy, Mahmoud Hefny, Amer Al‐Hinai et al.",
+      "year": 2021,
+      "doi": "10.1007/s10311-021-01322-8",
+      "summary": "Abstract Dihydrogen (H 2 ), commonly named ‘hydrogen’, is increasingly recognised as a clean and reliable energy vector for decarbonisation and defossilisation by various sectors. The global hydrogen demand is projected to increase from 70 million tonnes in 2019 to 120 million tonnes by 2024. Hydrogen development should also meet the seventh goal of ‘affordable and clean energy’ of the United Nations. Here we review hydrogen production and life cycle analysis, hydrogen geological storage and hydrogen utilisation. Hydrogen is produced by water electrolysis, steam methane reforming, methane pyrolysis and coal gasification. We compare the environmental impact of hydrogen production routes by life cycle analysis. Hydrogen is used in power systems, transportation, hydrocarbon and ammonia production, and metallugical industries. Overall, combining electrolysis-generated hydrogen with hydrogen storage in underground porous media such as geological reservoirs and salt caverns is well suited for shifting excess off-peak energy to meet dispatchable on-peak demand.",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "OpenAlex match for: proton conducting clay-confined acid composite solid electrolyte",
+      "component_descriptor_claims": [],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "W2005927954",
+      "title": "Bottom-up assembly of photonic crystals",
+      "authors": "Georg von Freymann, Vladimir Kitaev, Bettina V. Lotsch, Geoffrey A. Ozin",
+      "year": 2012,
+      "doi": "10.1039/c2cs35309a",
+      "summary": "In this tutorial review we highlight fundamental aspects of the physics underpinning the science of photonic crystals, provide insight into building-block assembly routes to the fabrication of different photonic crystal structures and compositions, discuss their properties and describe how these relate to function, and finally take a glimpse into future applications.",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "OpenAlex match for: proton conducting clay-confined acid composite solid electrolyte",
+      "component_descriptor_claims": [],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "W2792636844",
+      "title": "Materials for supercapacitors: When Li-ion battery power is not enough",
+      "authors": "Zifeng Lin, Eider Goikolea, Andrea Balducci, Katsuhiko Naoi, Pierre‐Louis Taberna et al.",
+      "year": 2018,
+      "doi": "10.1016/j.mattod.2018.01.035",
+      "summary": "",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "OpenAlex match for: proton conducting clay-confined acid composite solid electrolyte",
+      "component_descriptor_claims": [],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "W2787667840",
+      "title": "Ionic liquids and derived materials for lithium and sodium batteries",
+      "authors": "Qiwei Yang, Zhaoqiang Zhang, Xiao‐Guang Sun, Yong-Sheng Hu, Huabin Xing et al.",
+      "year": 2018,
+      "doi": "10.1039/c7cs00464h",
+      "summary": ") batteries, with a particular emphasis on recent advances in the literature. Their unique characteristics enable them to serve as advanced resources, medium, or ingredient for almost all the components of batteries, including electrodes, liquid electrolytes, solid electrolytes, artificial solid-electrolyte interphases, and current collectors. Some thoughts on the emerging challenges and opportunities are also presented in this review for further development.",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "OpenAlex match for: proton conducting clay-confined acid composite solid electrolyte",
+      "component_descriptor_claims": [],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "W2765922815",
+      "title": "Specific ion effects on protein fragments : A dielectric spectroscopy study",
+      "authors": "Vasileios Balos",
+      "year": 2017,
+      "doi": "",
+      "summary": "Due to its relevance for biotechnological and pharmaceutical applications, the way ions interact with biomolecules and their aqueous environment is one of the most fundamental questions in solvation science. Until today, the fundamentals of our understanding of such interactions originate from the seminal work of Hofmeister in the late 1800’s, who ordered ions according to their efficiency to denature or stabilize proteins. In the present work we provide molecular-level insight into the most fundamental questions regarding ion-protein and ion-water interactions. By using a combination of Dielectric Relaxation Spectroscopy (DRS) and Terahertz Time-Domain Spectroscopy (THz-TDS), we studied and quantified the interaction of ions with protein fragments. In our experiments we showed that denaturing ions are able to directly interact with up-to-two amide moieties, the common motif of the protein backbone, with highly denaturing cations showing the highest affinity towards the amide. The interaction strength followed a direct Hofmeister effect, apart from the guanidinium (Gdm+) cation, which shows an intermediate interaction strength with amide groups. Further investigation of the origins of this peculiarity suggested that it partially originates from Gdm+’s ability to compete with the counter-anion for the same interaction sites, as well as an enhanced affinity of Gdm+ to charged terminal groups. Finally, we study ion-water interactions, focusing on how ions affect the so-called “fast” water relaxation at ~300-400 GHz in the dielectric spectra. Preliminary experiments revealed and interesting scaling of the relaxation amplitude with conductivity, which still remains a topic of study.",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "OpenAlex match for: Stabilize an acid form (or acid–base/ion-pair speciation) that remains non-crystalline and ionically mobile at sub-zero temperatures, avoiding formation of a rigid pure-acid phase. proton conductor material",
+      "component_descriptor_claims": [],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "W2883181978",
+      "title": "Metal-organic materials for harmful anionic species removal from aqueous solution: investigation, characterization and application",
+      "authors": "Chenghong Wang",
+      "year": 2017,
+      "doi": "10.25560/60163",
+      "summary": "A recently developed class of porous materials, metal-organic frameworks (MOFs), has attracted substantial attention during the last years. In this thesis, the feasibility of water stable MOF materials working as functional adsorbents for contaminated water remediation (especially centered on anionic pollutants removal) was explored and studied. Three stages of research were conducted: firstly – the application of water stable MOF for the highly effective removal of specific anionic species, secondly – resolving the applicability problems of MOF adsorbents, and thirdly – the introduction of a novel concept of using metal-organic nanoclusters for efficient water decontamination. At the end, metal-organic materials were proved to provide a superior performance in the removal of harmful anionic species. The adsorption behaviors and mechanisms were systematically investigated to provide insightful understanding.",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "OpenAlex match for: Stabilize an acid form (or acid–base/ion-pair speciation) that remains non-crystalline and ionically mobile at sub-zero temperatures, avoiding formation of a rigid pure-acid phase. proton conductor material",
+      "component_descriptor_claims": [],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "W4392830896",
+      "title": "56th Annual Rocky Mountain Conference on Magnetic Resonance",
+      "authors": "",
+      "year": 2014,
+      "doi": "10.56902/rmcmr.2014.56.1",
+      "summary": "Final program, abstracts, and information about the 56th annual meeting of the Rocky Mountain Conference on Magnetic Resonance, co-endorsed by the Colorado Section of the American Chemical Society and the Society for Applied Spectroscopy. Held in Copper Mountain, Colorado, July 13-17, 2014.",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "OpenAlex match for: Stabilize an acid form (or acid–base/ion-pair speciation) that remains non-crystalline and ionically mobile at sub-zero temperatures, avoiding formation of a rigid pure-acid phase. proton conductor material",
+      "component_descriptor_claims": [],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "W4392830680",
+      "title": "57th Annual Rocky Mountain Conference on Magnetic Resonance",
+      "authors": "Kurt Zilm, Kurt Warncke -Chair, John Morton -Co-Chair, Ania Bleszynski-Jayich, Barbara Boehme et al.",
+      "year": 2015,
+      "doi": "10.56902/rmcmr.2015.57.1",
+      "summary": "Final program, abstracts, and information about the 57th annual meeting of the Rocky Mountain Conference on Magnetic Resonance, co-endorsed by the Colorado Section of the American Chemical Society and the Society for Applied Spectroscopy. Held in Snowbird, Utah, July 26-31, 2015.",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "OpenAlex match for: Stabilize an acid form (or acid–base/ion-pair speciation) that remains non-crystalline and ionically mobile at sub-zero temperatures, avoiding formation of a rigid pure-acid phase. proton conductor material",
+      "component_descriptor_claims": [],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "W4210908565",
+      "title": "Recent Advances in Post-Lithium Ion Batteries",
+      "authors": "Eliana Quartarone",
+      "year": 2021,
+      "doi": "10.3390/books978-3-0365-1245-7",
+      "summary": "Lithium ion batteries (LIBs) are efficient storage systems for portable electronic devices, electrical power grids, and electrified transportation due to their high-energy density and low maintenance requirements. After their launch into the market in 1990s, they immediately became the dominant technology for portable systems. The development of LiBs for electric drive vehicles has been, in contrast, rather incremental. There are several critical issues, such as an energy density, system safety, cost, and environmental impact of the battery production processes, that remain challenges in the automotive field. In order to strengthen the LiB&rsquo;s competitiveness and affordability in vehicle technology, the necessity of game-changer batteries is urgent. Recently, a novel approach going beyond Li batteries has become rapidly established. Several new chemistries have been proposed, leading to better performances in terms of energy density, long-life storage capability, safety, and sustainability. However, several challenges, such as a thorough understanding of mechanisms, cell design, long-term durability, and safety issues, have not yet been fully addressed. This book collects some recent developments and emerging trends in the field of &ldquo;post-lithium&rdquo; batteries, covering both fundamental and applied aspects of next-generation batteries",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "OpenAlex match for: Stabilize an acid form (or acid–base/ion-pair speciation) that remains non-crystalline and ionically mobile at sub-zero temperatures, avoiding formation of a rigid pure-acid phase. proton conductor material",
+      "component_descriptor_claims": [],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "W1817834530",
+      "title": "Aging Mechanisms in Amorphous GeTe",
+      "authors": "Jean‐Yves Raty, Wei Zhang, Jennifer Luckas, Riccardo Mazzarello, Christophe Bichara et al.",
+      "year": 2015,
+      "doi": "",
+      "summary": "editorial reviewed",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "OpenAlex match for: Stabilize an acid form (or acid–base/ion-pair speciation) that remains non-crystalline and ionically mobile at sub-zero temperatures, avoiding formation of a rigid pure-acid phase. proton conductor material",
+      "component_descriptor_claims": [],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "W1588850570",
+      "title": "Pressure-Induced Changes in Inter-Diffusivity, Compressive Stress, and Hardness in Chemically Strengthened Glass",
+      "authors": "Mouritz Nolsøe Svenson, Lynn M. Thirion, Randall E. Youngman, John C. Mauro, Sylwester J. Rzoska et al.",
+      "year": 2015,
+      "doi": "",
+      "summary": "",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "OpenAlex match for: Stabilize an acid form (or acid–base/ion-pair speciation) that remains non-crystalline and ionically mobile at sub-zero temperatures, avoiding formation of a rigid pure-acid phase. proton conductor material",
+      "component_descriptor_claims": [],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "W2613809131",
+      "title": "Characterisation of highly dispersed gold on ZrO2 catalysts active in the WGS reaction",
+      "authors": "Maela Manzoli, F. Boccuzzi, A. Chiorino, Francesco Pinna",
+      "year": 2007,
+      "doi": "",
+      "summary": "",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "OpenAlex match for: Stabilize an acid form (or acid–base/ion-pair speciation) that remains non-crystalline and ionically mobile at sub-zero temperatures, avoiding formation of a rigid pure-acid phase. proton conductor material",
+      "component_descriptor_claims": [],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    }
+  ],
+  "synthesis_notes": "The pool collectively points to polysaccharides (starch, chitosan), one-dimensional clays (attapulgite), phosphate glasses, and choline chloride–based deep eutectic solvents as potential proton-conducting material families. However, every quantitative transport measurement in the literature was obtained at elevated temperatures (80–373 K), and no sub-zero proton-conductivity data are available. Consequently, critical cold-end descriptors—D1 (percolated pathway without freezing), D2 (dual microenvironment activation with cooling), D4 (bound‑water mobility to ~200 K)—remain completely unaddressed. Only nanoconfinement (D6) has a concrete example in the attapulgite composite, albeit demonstrated only in the high‑temperature regime. The pool collectively supports several abstract material families: phosphate glasses as non‑crystalline proton conductors; polysaccharides (chitosan) in combination with deep‑eutectic solvents that enhance water retention; and hydrogel electrolytes that suppress ice crystallisation to maintain ionic pathways. However, descriptors D2 (two coupled proton microenvironments), D5 (mechanical compliance below 253 K) and D6 (nanometric confinement of acid) remain under‑covered, with no direct experimental evidence in the current cards. The literature pool includes proton-conducting oxide ceramics (La6W2O15, doped BaCeO3) that address high-temperature proton transport without low-temperature data, and a polymer-based subzero membrane (polyurethane/Nafion/phosphoric acid with carbon dots) that provides direct evidence for a continuous proton-conduction pathway down to −30 °C. The oxide cards contribute no cold-regime descriptors. The membrane card supports D1 (cold percolated pathway) but does not quantify bound-water dynamics, coupled microenvironments, acid-phase speciation, mechanical compliance, or nanometric acid confinement, leaving descriptors D2–D6 largely uncovered by current evidence. The literature pool collectively highlights material families such as polysaccharides (starch, starch graft copolymers), 1-D clays (halloysite nanotubes), 2-D clays (montmorillonite), and engineering thermoplastics (PVA, PEG, PBI) as hosts or fillers for phosphoric acid. These families primarily support descriptor D6 through nanometric confinement of acid and creation of interfacial proton pathways. However, descriptors related to low-temperature proton conduction (D1, D2, D3, D4, D5) remain completely uncovered, as none of the studies provide cold-end measurements or mechanistic insight below 273 K. The pool collectively supports composite systems of polysaccharide matrices (chitosan) with 1-D clay fillers (attapulgite), as well as sulfonated polyether sulfone/clay nanocomposites and generic biopolymer gel electrolytes. However, experimental evidence is absent for sub-zero proton conduction dynamics (D2, D4, D5) and acid-form stabilization (D3) across the cold-to-room window; only room-temperature or high-temperature conductivity enhancements are reported, leaving low-temperature descriptors critically under-covered. The literature pool covers polysaccharide/synthetic polymer blends (PVA, chitosan, starch) with proton-donating acids/salts, inorganic oxide fillers (Nb₂O₅), lanthanum tungstate proton conductors, and 2D MXenes, but none of the papers report experimental data in the required cold-to-room-temperature window (182–299 K). Consequently, no material family in the pool directly addresses the critical descriptors D1–D6 with low-temperature quantitative evidence; all are either high-temperature or room-temperature studies lacking sub-zero ionic conductivity or mechanical data. The literature pool contains no experimental studies of proton-conducting composite materials; thus, no abstract material families (e.g., polysaccharides, 1-D clays, 2-D clays, phosphate networks, engineering thermoplastics) are supported. All descriptors (D1–D6) remain under-covered with no quantitative component-level evidence. The literature pool contains no papers that directly address low-temperature proton-conducting materials. The cards are tangentially matched by keyword (e.g., 'proton conductor', 'acid form') but the actual studies concern anionic pollutant adsorption by MOFs (W2883181978), magnetic resonance conference abstracts (W4392830896, W4392830680), and a general book on post-lithium batteries (W4210908565), none of which characterize proton-conduction pathways, bound water, low-temperature mechanical compliance, or acid speciation below 273 K. Consequently, no abstract material families are supported, and all six descriptors remain unpopulated. The provided literature pool contains no materials that address the targeted descriptors; the three papers concern amorphous GeTe, chemically strengthened glass, and Au/ZrO₂ catalysts—none of which overlap with proton‑conducting material families (polysaccharides, 1‑D/2‑D clays, phosphate networks, engineering thermoplastics). Consequently, every descriptor (D1–D6) remains entirely uncovered with no family‑level foundation available from this batch."
+}

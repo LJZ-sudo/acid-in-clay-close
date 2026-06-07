@@ -1,0 +1,32 @@
+[
+  {
+    "paper_id": "manual_d4d73b37dc",
+    "local_path": "03_parsed_text\\manual_d4d73b37dc.pdf",
+    "status": "carded_fallback",
+    "findings_count": 11,
+    "mechanism_findings": 11,
+    "numerical_findings": 0,
+    "eis_findings": 0,
+    "arrhenius_findings": 0
+  },
+  {
+    "paper_id": "manual_5d38abe0f5",
+    "local_path": "03_parsed_text\\manual_5d38abe0f5.pdf",
+    "status": "card_failed_quality_gate",
+    "findings_count": 0,
+    "mechanism_findings": 0,
+    "numerical_findings": 0,
+    "eis_findings": 0,
+    "arrhenius_findings": 0
+  },
+  {
+    "paper_id": "manual_bcf27aaca9",
+    "local_path": "03_parsed_text\\manual_bcf27aaca9.pdf",
+    "status": "card_failed_quality_gate",
+    "findings_count": 0,
+    "mechanism_findings": 0,
+    "numerical_findings": 0,
+    "eis_findings": 0,
+    "arrhenius_findings": 0
+  }
+]

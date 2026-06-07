@@ -1,0 +1,18 @@
+{
+  "sources": {
+    "claim_review": "C:\\Users\\JZ\\Desktop\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\literature_workspace\\08_review\\claim_review_ai_assessment.json",
+    "ranking_robustness": null,
+    "manual_review_queue": null
+  },
+  "items": [
+    {
+      "kind": "claim",
+      "ref": {
+        "component": "glycerol_or_ethylene_glycol",
+        "status": "pending_external_support",
+        "risk": "high",
+        "note": "Antifreeze role is chemically plausible but under-backed by current S08 D4 claim pool."
+      }
+    }
+  ]
+}

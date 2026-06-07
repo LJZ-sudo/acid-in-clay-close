@@ -1,0 +1,9 @@
+{
+  "top1": "High-amylose plant starch / PVA / H3PO4 / sepiolite composite",
+  "top1_score": 0.82,
+  "top2": "Crosslinked PAAm-g-starch / H3PO4 hydrogel (literature baseline)",
+  "top2_score": 0.79,
+  "score_gap": 0.03,
+  "ranking_robust": false,
+  "warning": "Top-1 vs Top-2 gap is only 0.030; ranking may change with small weight perturbations."
+}

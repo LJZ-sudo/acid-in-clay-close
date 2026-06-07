@@ -1,0 +1,286 @@
+{
+  "step_id": "s09_instances",
+  "instances": [
+    {
+      "instance_id": "I1",
+      "family_id": "F1",
+      "instance_name": "Starch/PVA/organic-modified attapulgite/phosphoric acid membrane",
+      "composition_description": "starch + PVA + attapulgite + phosphoric acid (H3PO4)",
+      "components": [
+        "starch",
+        "PVA",
+        "attapulgite",
+        "phosphoric acid (H3PO4)"
+      ],
+      "expected_properties": [
+        "cold_window: bound-water and retained-acid continuity",
+        "processability: water-processable film route",
+        "evidence_basis: component-level D4 claims"
+      ],
+      "risk_flags": [
+        "acid leaching must be measured",
+        "clay dispersion controls reproducibility"
+      ],
+      "combination_novelty": "novel_combination",
+      "element_evidence": [
+        {
+          "component": "starch",
+          "role_in_formulation": "starch provides dense OH H-bond donor sites (MAT1).",
+          "descriptor_satisfied": [
+            "D1"
+          ],
+          "analog_paper_ids": [
+            "MAT1"
+          ],
+          "analog_reason": "starch provides dense OH H-bond donor sites (MAT1)."
+        },
+        {
+          "component": "PVA",
+          "role_in_formulation": "PVA compatibilises the clay/acid matrix and resists sub-zero brittleness when plasticised (MAT2).",
+          "descriptor_satisfied": [
+            "D4"
+          ],
+          "analog_paper_ids": [
+            "MAT2"
+          ],
+          "analog_reason": "PVA compatibilises the clay/acid matrix and resists sub-zero brittleness when plasticised (MAT2)."
+        },
+        {
+          "component": "attapulgite",
+          "role_in_formulation": "attapulgite supplies 1-D confined proton channels with interfacial acid retention (MAT2).",
+          "descriptor_satisfied": [
+            "D3"
+          ],
+          "analog_paper_ids": [
+            "MAT2"
+          ],
+          "analog_reason": "attapulgite supplies 1-D confined proton channels with interfacial acid retention (MAT2)."
+        },
+        {
+          "component": "phosphoric acid (H3PO4)",
+          "role_in_formulation": "H3PO4 supplies mobile protons retained by the matrix (MAT1).",
+          "descriptor_satisfied": [
+            "D2"
+          ],
+          "analog_paper_ids": [
+            "MAT1"
+          ],
+          "analog_reason": "H3PO4 supplies mobile protons retained by the matrix (MAT1)."
+        }
+      ],
+      "literature_support_card_ids": [
+        "MAT1",
+        "MAT2"
+      ],
+      "novelty_rationale": "This combines separate starch, PVA, 1-D clay, and phosphoric-acid evidence into a quaternary cold-side membrane rather than copying one S08 formulation.",
+      "origin": "llm_selected_from_broad_pool",
+      "source_mode": "broad_literature_pool_selection",
+      "user_candidate_id": null,
+      "design_principle_ids": [],
+      "descriptor_claim_coverage": null
+    },
+    {
+      "instance_id": "I2",
+      "family_id": "F2",
+      "instance_name": "Chitosan/organic-modified attapulgite/phosphoric acid composite",
+      "composition_description": "attapulgite + phosphoric acid (H3PO4)",
+      "components": [
+        "attapulgite",
+        "phosphoric acid (H3PO4)"
+      ],
+      "expected_properties": [
+        "host_sites: chitosan hydrogen-bond matrix",
+        "confinement: fibrous clay compartment",
+        "carrier: retained phosphoric acid"
+      ],
+      "risk_flags": [
+        "biopolymer swelling may alter percolation",
+        "acid loading needs optimisation"
+      ],
+      "combination_novelty": "novel_combination",
+      "element_evidence": [
+        {
+          "component": "attapulgite",
+          "role_in_formulation": "attapulgite supplies 1-D confined proton channels with interfacial acid retention (MAT2).",
+          "descriptor_satisfied": [
+            "D3"
+          ],
+          "analog_paper_ids": [
+            "MAT2"
+          ],
+          "analog_reason": "attapulgite supplies 1-D confined proton channels with interfacial acid retention (MAT2)."
+        },
+        {
+          "component": "phosphoric acid (H3PO4)",
+          "role_in_formulation": "H3PO4 supplies mobile protons retained by the matrix (MAT1).",
+          "descriptor_satisfied": [
+            "D2"
+          ],
+          "analog_paper_ids": [
+            "MAT1"
+          ],
+          "analog_reason": "H3PO4 supplies mobile protons retained by the matrix (MAT1)."
+        }
+      ],
+      "literature_support_card_ids": [
+        "MAT2",
+        "MAT1"
+      ],
+      "novelty_rationale": "This uses chitosan host evidence with attapulgite confinement and retained phosphoric acid from separate S08 claims, making the combined formulation literature-auditable but not a direct copy.",
+      "origin": "llm_selected_from_broad_pool",
+      "source_mode": "broad_literature_pool_selection",
+      "user_candidate_id": null,
+      "design_principle_ids": [],
+      "descriptor_claim_coverage": null
+    },
+    {
+      "instance_id": "I3",
+      "family_id": "F2",
+      "instance_name": "Halloysite nanotube/phosphoric acid/PVA hybrid membrane",
+      "composition_description": "phosphoric acid (H3PO4) + PVA",
+      "components": [
+        "phosphoric acid (H3PO4)",
+        "PVA"
+      ],
+      "expected_properties": [
+        "acid_retention: nanotube-confined phosphoric acid",
+        "film_integrity: PVA binder contribution",
+        "transport: packed-acid donor-acceptor network"
+      ],
+      "risk_flags": [
+        "high acid fraction may plasticise the matrix",
+        "tube loading must avoid brittleness"
+      ],
+      "combination_novelty": "novel_combination",
+      "element_evidence": [
+        {
+          "component": "phosphoric acid (H3PO4)",
+          "role_in_formulation": "H3PO4 supplies mobile protons retained by the matrix (MAT1).",
+          "descriptor_satisfied": [
+            "D2"
+          ],
+          "analog_paper_ids": [
+            "MAT1"
+          ],
+          "analog_reason": "H3PO4 supplies mobile protons retained by the matrix (MAT1)."
+        },
+        {
+          "component": "PVA",
+          "role_in_formulation": "PVA compatibilises the clay/acid matrix and resists sub-zero brittleness when plasticised (MAT2).",
+          "descriptor_satisfied": [
+            "D4"
+          ],
+          "analog_paper_ids": [
+            "MAT2"
+          ],
+          "analog_reason": "PVA compatibilises the clay/acid matrix and resists sub-zero brittleness when plasticised (MAT2)."
+        }
+      ],
+      "literature_support_card_ids": [
+        "MAT1",
+        "MAT2"
+      ],
+      "novelty_rationale": "This transfers halloysite-confined acid evidence into a PVA-containing film-forming route, differing from the closest single-paper acid-in-clay formulation by the added polymer matrix role.",
+      "origin": "llm_selected_from_broad_pool",
+      "source_mode": "broad_literature_pool_selection",
+      "user_candidate_id": null,
+      "design_principle_ids": [],
+      "descriptor_claim_coverage": null
+    },
+    {
+      "instance_id": "I4",
+      "family_id": "F3",
+      "instance_name": "PAAm-g-starch/phosphoric acid hydrogel electrolyte",
+      "composition_description": "phosphoric acid (H3PO4)",
+      "components": [
+        "phosphoric acid (H3PO4)"
+      ],
+      "expected_properties": [
+        "retention: microporous hydrogel acid uptake",
+        "cold_window: hydrogel continuity motif",
+        "host_sites: starch-containing H-bond network"
+      ],
+      "risk_flags": [
+        "water content may dominate freezing behaviour",
+        "mechanical strength may be low"
+      ],
+      "combination_novelty": "close_variant",
+      "element_evidence": [
+        {
+          "component": "phosphoric acid (H3PO4)",
+          "role_in_formulation": "H3PO4 supplies mobile protons retained by the matrix (MAT1).",
+          "descriptor_satisfied": [
+            "D2"
+          ],
+          "analog_paper_ids": [
+            "MAT1"
+          ],
+          "analog_reason": "H3PO4 supplies mobile protons retained by the matrix (MAT1)."
+        }
+      ],
+      "literature_support_card_ids": [
+        "MAT1"
+      ],
+      "novelty_rationale": "This is close to hydrogel acid-retention literature but is retained as an interpretable low-temperature comparison route with explicit component evidence.",
+      "origin": "llm_selected_from_broad_pool",
+      "source_mode": "broad_literature_pool_selection",
+      "user_candidate_id": null,
+      "design_principle_ids": [],
+      "descriptor_claim_coverage": null
+    },
+    {
+      "instance_id": "I5",
+      "family_id": "F3",
+      "instance_name": "PVA/chitosan/Nb2O5/H3PO4 defect-assisted composite",
+      "composition_description": "PVA + phosphoric acid (H3PO4)",
+      "components": [
+        "PVA",
+        "phosphoric acid (H3PO4)"
+      ],
+      "expected_properties": [
+        "mobility: oxide-induced free volume",
+        "carrier: H3PO4 donor-acceptor sites",
+        "matrix: PVA/chitosan film continuity"
+      ],
+      "risk_flags": [
+        "oxide agglomeration can block conduction",
+        "acid-base balance needs screening"
+      ],
+      "combination_novelty": "novel_combination",
+      "element_evidence": [
+        {
+          "component": "PVA",
+          "role_in_formulation": "PVA compatibilises the clay/acid matrix and resists sub-zero brittleness when plasticised (MAT2).",
+          "descriptor_satisfied": [
+            "D4"
+          ],
+          "analog_paper_ids": [
+            "MAT2"
+          ],
+          "analog_reason": "PVA compatibilises the clay/acid matrix and resists sub-zero brittleness when plasticised (MAT2)."
+        },
+        {
+          "component": "phosphoric acid (H3PO4)",
+          "role_in_formulation": "H3PO4 supplies mobile protons retained by the matrix (MAT1).",
+          "descriptor_satisfied": [
+            "D2"
+          ],
+          "analog_paper_ids": [
+            "MAT1"
+          ],
+          "analog_reason": "H3PO4 supplies mobile protons retained by the matrix (MAT1)."
+        }
+      ],
+      "literature_support_card_ids": [
+        "MAT2",
+        "MAT1"
+      ],
+      "novelty_rationale": "This combines PVA film support, chitosan host sites, Nb2O5 free-volume evidence, and phosphoric-acid proton donation across separate component claims to create a distinct defect-assisted route.",
+      "origin": "llm_selected_from_broad_pool",
+      "source_mode": "broad_literature_pool_selection",
+      "user_candidate_id": null,
+      "design_principle_ids": [],
+      "descriptor_claim_coverage": null
+    }
+  ]
+}

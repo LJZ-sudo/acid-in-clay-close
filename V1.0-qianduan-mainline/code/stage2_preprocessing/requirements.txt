@@ -1,0 +1,17 @@
+# Stage2 Preprocessing Dependencies
+# Python 3.8+
+
+# Core data processing
+pandas>=1.2.0
+numpy>=1.20.0
+
+# JSON handling (built-in, but listed for clarity)
+# json (standard library)
+
+# Path handling (built-in)
+# pathlib (standard library)
+
+# Optional: Stage0 modules (for chi_reanalysis method)
+# If using chi_reanalysis, ensure Stage0 dependencies are installed:
+# scipy>=1.6.0
+# matplotlib>=3.3.0

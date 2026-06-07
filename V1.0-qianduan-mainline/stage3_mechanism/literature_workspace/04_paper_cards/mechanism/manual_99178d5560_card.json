@@ -1,0 +1,84 @@
+{
+  "paper_id": "manual_99178d5560",
+  "stage_target": "mechanism",
+  "bibliography": {
+    "title": "Acid-in-Clay Electrolyte for Wide-Temperature-Range   and Long-Cycle Proton Batteries",
+    "authors": "",
+    "year": 0
+  },
+  "system_identity": {
+    "base_material": "phyllosilicate clay",
+    "dopant": "phosphoric acid",
+    "form_factor": "thin-film membranes",
+    "other": ""
+  },
+  "measurement_scope": {
+    "temp_range": "−82 °C to 25 °C",
+    "freq_range": "",
+    "humidity": "",
+    "other_conditions": ""
+  },
+  "mechanism_relevant_findings": [
+    "The acid-in-clay electrolyte (AiCE) integrates fast proton carriers within a natural clay network to facilitate proton transport.",
+    "Proton conductivities of AiCE were measured to be 15 mS cm−1 at 25 °C and 0.023 mS cm−1 at −82 °C."
+  ],
+  "numerical_findings": [
+    {
+      "metric": "proton conductivity",
+      "value": 15,
+      "unit": "mS cm−1",
+      "conditions": "at 25 °C"
+    },
+    {
+      "metric": "proton conductivity",
+      "value": 0.023,
+      "unit": "mS cm−1",
+      "conditions": "at −82 °C"
+    },
+    {
+      "metric": "electrochemical stability window",
+      "value": 3.35,
+      "unit": "V",
+      "conditions": ""
+    }
+  ],
+  "eis_shape_findings": [],
+  "arrhenius_vtf_findings": [],
+  "limitations": [],
+  "relevance_judgement": {
+    "score": 0.85,
+    "reason": "The study provides meaningful insights into proton conduction mechanisms and the benefits of the AiCE system."
+  },
+  "supports_axes": {
+    "transport": "Grotthuss_hopping",
+    "temperature_dependence": "VTF"
+  },
+  "conflicts_axes": {},
+  "trace_spans": [
+    {
+      "page": null,
+      "section": "",
+      "text_snippet": "www.advmat.de 2202063  (1 of 10) ©  2022 The Authors. Advanced Materials published by Wiley-VCH GmbH"
+    },
+    {
+      "page": null,
+      "section": "Research Article",
+      "text_snippet": "Shitong Wang, Heng Jiang, Yanhao Dong, David Clarkson, He Zhu, Charles M. Settens,  Yang Ren, Thanh Nguyen, Fei Han, Weiwei Fan, So Yeon Kim, Jianan Zhang,  Weijiang Xue, Sean K. Sandstrom, Guiyin Xu,"
+    },
+    {
+      "page": null,
+      "section": "1. Introduction",
+      "text_snippet": "An electrolyte conducts specific ions  between two electrodes in electrochemical  devices while forbidding electrons and  other unintended ions to cross. The elec- trolyte/separator combination should"
+    },
+    {
+      "page": null,
+      "section": "2. Results",
+      "text_snippet": "2.1. AiCE Synthesis and Proton-Transport Properties Based on the ratio of tetrahedra sheets and octahedral sheets  in the phyllosilicate network, clay minerals can be classified as  1:1 type (i.e., ha"
+    },
+    {
+      "page": null,
+      "section": "3. Discussion and Conclusion",
+      "text_snippet": "Based on our experiments (Figure  1), we see that: 1) Since  there are many more types of natural materials with abundant  internal surfaces (like clays and woods [25] ) than the materials  studied in"
+    }
+  ]
+}

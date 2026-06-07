@@ -1,0 +1,29 @@
+# Stage0 Measurement - Python Dependencies
+# Version: V1.0 (2026-04-10)
+# Keep this file ASCII-only so pip on Windows (GBK/cp936) can parse it.
+
+# Core numerics
+numpy>=1.24.0
+scipy>=1.11.0
+
+# Arrhenius multi-segment fitting (v4.0)
+pwlf>=2.5.0
+
+# Plotting
+matplotlib>=3.7.0
+pillow>=10.0.0
+
+# GUI automation (CHI control)
+pyautogui>=0.9.54
+opencv-python>=4.8.0
+
+# Hardware serial (temperature control)
+pyserial>=3.5
+
+# LLM / OpenAI SDK
+openai>=1.0.0
+
+# KK validation
+impedance>=1.7.1
+
+# Optional: python-dotenv>=1.0.0

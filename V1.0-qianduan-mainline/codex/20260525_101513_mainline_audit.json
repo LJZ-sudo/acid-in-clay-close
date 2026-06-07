@@ -1,0 +1,393 @@
+{
+  "generated_at": "2026-05-25T10:15:13",
+  "project_root": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline",
+  "stage1_recipe": {
+    "path": "stage1_optimization/output/attapulgite_aice/next_experiment_recipe.json",
+    "exists": true,
+    "schema_version": "0.2.0",
+    "artifact_type": "stage1_next_experiment_recipe",
+    "history_db": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage1_optimization\\campaign_memory\\history_db_attapulgite.json",
+    "expected_history_db": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage1_optimization\\campaign_memory\\history_db_attapulgite.json",
+    "schema_valid": true,
+    "warnings": []
+  },
+  "llm_config": {
+    "stage1_env_exists": true,
+    "stage3_env_exists": true,
+    "stage1_key": {
+      "present": true,
+      "length": 51,
+      "sha256_prefix": "ecd20b5bfc9d"
+    },
+    "stage3_key": {
+      "present": true,
+      "length": 51,
+      "sha256_prefix": "ecd20b5bfc9d"
+    },
+    "stage1_model": "deepseek-v4-pro",
+    "stage3_models": {
+      "cheap": "deepseek-v4-pro",
+      "standard": "deepseek-v4-pro",
+      "premium": "deepseek-v4-pro"
+    },
+    "models_aligned": true
+  },
+  "stage2_seed": {
+    "path": "stage2_statistics/exports/stage3_seed.json",
+    "exists": true,
+    "sha256": "fe7f48cc41a463c3db3348db2edadd5eceec11e49b6be2facdeec751076a100f",
+    "schema_version": "0.2.0",
+    "stage3_ready": true,
+    "blocking_reasons": [],
+    "sample_count": 40,
+    "segment_count": 158,
+    "evidence_unit_count": 13,
+    "warnings": []
+  },
+  "stage3_manifests": {
+    "manifest_count_seen": 13,
+    "latest_manifests": [
+      {
+        "path": "stage3_mechanism/outputs/verification/20260520_current_feedback_s13_s14_direct/run_manifest.json",
+        "stage2_seed_path": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage2_statistics\\exports\\stage3_seed.json",
+        "stage2_seed_sha256": "fe7f48cc41a463c3db3348db2edadd5eceec11e49b6be2facdeec751076a100f",
+        "output_dir": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\outputs\\verification\\20260520_current_feedback_s13_s14_direct",
+        "strict_real_input": true
+      },
+      {
+        "path": "stage3_mechanism/outputs/verification/20260520_current_feedback_s14_rerun/run_manifest.json",
+        "stage2_seed_path": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage2_statistics\\exports\\stage3_seed.json",
+        "stage2_seed_sha256": "fe7f48cc41a463c3db3348db2edadd5eceec11e49b6be2facdeec751076a100f",
+        "output_dir": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\outputs\\verification\\20260520_current_feedback_s14_rerun",
+        "strict_real_input": true
+      },
+      {
+        "path": "stage3_mechanism/outputs/verification/20260520_current_feedback_s14/run_manifest.json",
+        "stage2_seed_path": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage2_statistics\\exports\\stage3_seed.json",
+        "stage2_seed_sha256": "fe7f48cc41a463c3db3348db2edadd5eceec11e49b6be2facdeec751076a100f",
+        "output_dir": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\outputs\\verification\\20260520_current_feedback_s14",
+        "strict_real_input": true
+      },
+      {
+        "path": "stage3_mechanism/outputs/verification/20260519_stability_s14_verify_rerun/run_manifest.json",
+        "stage2_seed_path": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage2_statistics\\exports\\stage3_seed.json",
+        "stage2_seed_sha256": "fe7f48cc41a463c3db3348db2edadd5eceec11e49b6be2facdeec751076a100f",
+        "output_dir": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\outputs\\verification\\20260519_stability_s14_verify_rerun",
+        "strict_real_input": true
+      },
+      {
+        "path": "stage3_mechanism/outputs/verification/20260519_stability_s14_verify/run_manifest.json",
+        "stage2_seed_path": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage2_statistics\\exports\\stage3_seed.json",
+        "stage2_seed_sha256": "3f68b832d2f29b99d0c96c99179fc92a4c9164d67aaf04de10ebe715329c6073",
+        "output_dir": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\outputs\\verification\\20260519_stability_s14_verify",
+        "strict_real_input": true
+      },
+      {
+        "path": "stage3_mechanism/outputs/verification/20260518_post_optimization_s03_verify/run_manifest.json",
+        "stage2_seed_path": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage2_statistics\\exports\\stage3_seed.json",
+        "stage2_seed_sha256": "3f68b832d2f29b99d0c96c99179fc92a4c9164d67aaf04de10ebe715329c6073",
+        "output_dir": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\outputs\\verification\\20260518_post_optimization_s03_verify",
+        "strict_real_input": true
+      },
+      {
+        "path": "stage3_mechanism/outputs/verification/20260518_stage2_refresh_s03_verify/run_manifest.json",
+        "stage2_seed_path": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage2_statistics\\exports\\stage3_seed.json",
+        "stage2_seed_sha256": "f7332a4861e568876babc809bd01ce8fd8b1923098a7924ed6b01e25608f7495",
+        "output_dir": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\outputs\\verification\\20260518_stage2_refresh_s03_verify",
+        "strict_real_input": true
+      },
+      {
+        "path": "stage3_mechanism/outputs/verification/20260518_cache_current_s03_verify/run_manifest.json",
+        "stage2_seed_path": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage2_statistics\\exports\\stage3_seed.json",
+        "stage2_seed_sha256": "d4fbfe285f1b5dc5834125dfb1bea58e0ffeb8ed02c10e28bdf8282ef368bfda",
+        "output_dir": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\outputs\\verification\\20260518_cache_current_s03_verify",
+        "strict_real_input": true
+      },
+      {
+        "path": "stage3_mechanism/outputs/verification/20260518_source_audit_isolation_verify/run_manifest.json",
+        "stage2_seed_path": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage2_statistics\\exports\\stage3_seed.json",
+        "stage2_seed_sha256": "d4fbfe285f1b5dc5834125dfb1bea58e0ffeb8ed02c10e28bdf8282ef368bfda",
+        "output_dir": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\outputs\\verification\\20260518_source_audit_isolation_verify",
+        "strict_real_input": true
+      },
+      {
+        "path": "stage3_mechanism/outputs/stage3_current_real_mock_20260518_215842/run_manifest.json",
+        "stage2_seed_path": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage2_statistics\\exports\\stage3_seed.json",
+        "stage2_seed_sha256": "d4fbfe285f1b5dc5834125dfb1bea58e0ffeb8ed02c10e28bdf8282ef368bfda",
+        "output_dir": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\outputs\\stage3_current_real_mock_20260518_215842",
+        "strict_real_input": true
+      },
+      {
+        "path": "stage3_mechanism/outputs/verification/20260518_s03_smoke_verify/run_manifest.json",
+        "stage2_seed_path": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage2_statistics\\exports\\stage3_seed.json",
+        "stage2_seed_sha256": "d4fbfe285f1b5dc5834125dfb1bea58e0ffeb8ed02c10e28bdf8282ef368bfda",
+        "output_dir": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\outputs\\stage3_smoke_verify",
+        "strict_real_input": true
+      },
+      {
+        "path": "stage3_mechanism/outputs/archive/20260518_legacy_stage3_outputs/stage3/run_manifest.json",
+        "stage2_seed_path": null,
+        "stage2_seed_sha256": null,
+        "output_dir": null,
+        "strict_real_input": null
+      },
+      {
+        "path": "stage3_mechanism/outputs/archive/20260518_legacy_stage3_outputs/stage3_pre_DEFG/run_manifest.json",
+        "stage2_seed_path": null,
+        "stage2_seed_sha256": null,
+        "output_dir": null,
+        "strict_real_input": null
+      }
+    ],
+    "matching_current_stage2_seed": [
+      {
+        "path": "stage3_mechanism/outputs/verification/20260520_current_feedback_s13_s14_direct/run_manifest.json",
+        "stage2_seed_path": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage2_statistics\\exports\\stage3_seed.json",
+        "stage2_seed_sha256": "fe7f48cc41a463c3db3348db2edadd5eceec11e49b6be2facdeec751076a100f",
+        "output_dir": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\outputs\\verification\\20260520_current_feedback_s13_s14_direct",
+        "strict_real_input": true
+      },
+      {
+        "path": "stage3_mechanism/outputs/verification/20260520_current_feedback_s14_rerun/run_manifest.json",
+        "stage2_seed_path": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage2_statistics\\exports\\stage3_seed.json",
+        "stage2_seed_sha256": "fe7f48cc41a463c3db3348db2edadd5eceec11e49b6be2facdeec751076a100f",
+        "output_dir": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\outputs\\verification\\20260520_current_feedback_s14_rerun",
+        "strict_real_input": true
+      },
+      {
+        "path": "stage3_mechanism/outputs/verification/20260520_current_feedback_s14/run_manifest.json",
+        "stage2_seed_path": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage2_statistics\\exports\\stage3_seed.json",
+        "stage2_seed_sha256": "fe7f48cc41a463c3db3348db2edadd5eceec11e49b6be2facdeec751076a100f",
+        "output_dir": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\outputs\\verification\\20260520_current_feedback_s14",
+        "strict_real_input": true
+      },
+      {
+        "path": "stage3_mechanism/outputs/verification/20260519_stability_s14_verify_rerun/run_manifest.json",
+        "stage2_seed_path": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage2_statistics\\exports\\stage3_seed.json",
+        "stage2_seed_sha256": "fe7f48cc41a463c3db3348db2edadd5eceec11e49b6be2facdeec751076a100f",
+        "output_dir": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\outputs\\verification\\20260519_stability_s14_verify_rerun",
+        "strict_real_input": true
+      }
+    ],
+    "warnings": []
+  },
+  "experimental_feedback": {
+    "path": "stage3_mechanism/data/validation/experimental_feedback.json",
+    "exists": true,
+    "sha256": "a7a87e30c098674d692e0bf1e632676fad1fc6a16c8e0bdfae9d88c7636c072c",
+    "schema_version": "0.1.0",
+    "artifact_type": "stage3_experimental_feedback",
+    "n_validation_records": 7,
+    "schema_valid": true,
+    "warnings": []
+  },
+  "stage3_current_artifacts": {
+    "output_dir": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\outputs\\verification\\20260520_current_feedback_s13_s14_direct",
+    "ranking_robustness": {
+      "path": "stage3_mechanism/outputs/verification/20260520_current_feedback_s13_s14_direct/09_ranking/ranking_robustness_v2.json",
+      "exists": true,
+      "sha256": "a3aeee71c5d4c0a84f08992bfb8d52713b0299a3a86a352d593f77bf5412bd7e",
+      "status": "ok",
+      "stability_class": "stable",
+      "top1_stability_rate": 1.0,
+      "top3_jaccard_mean": 1.0
+    },
+    "validation_binding": {
+      "path": "stage3_mechanism/outputs/verification/20260520_current_feedback_s13_s14_direct/12_validation_binding/validation_binding_report.json",
+      "exists": true,
+      "sha256": "08cfe87bad5905dff8fd59f86fdfbc6fab48ef6354a62fdf7d0120c1e1e5930b",
+      "n_records": 7,
+      "n_bound": 7,
+      "feedback_schema_valid": true,
+      "source_feedback_path": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\data\\validation\\experimental_feedback.json"
+    },
+    "claim_audit": {
+      "path": "stage3_mechanism/outputs/verification/20260520_current_feedback_s13_s14_direct/13_claim_audit/claim_audit_report.json",
+      "exists": true,
+      "sha256": "e357ec6bf3e5a5bec880ee6d1161b739a63a4084946112bbba2dc2a8dd916b10",
+      "claim_paths_relative": true,
+      "publication_blocker_count": 0
+    },
+    "warnings": []
+  },
+  "scans": {
+    "possible_api_key": [],
+    "run_pipeline_reference": [
+      {
+        "path": "README.md",
+        "line": 18,
+        "text": "a repo-root `run_pipeline.py`, but that file is not part of the current"
+      },
+      {
+        "path": "backend_api/routers/pipeline.py",
+        "line": 4,
+        "text": "The current mainline no longer has a repo-root ``run_pipeline.py`` entrypoint."
+      },
+      {
+        "path": "backend_api/routers/pipeline.py",
+        "line": 20,
+        "text": "RUN_PIPELINE = PROJECT_ROOT / \"run_pipeline.py\""
+      },
+      {
+        "path": "backend_api/routers/pipeline.py",
+        "line": 22,
+        "text": "\"The legacy /api/pipeline trigger is disabled because run_pipeline.py is \""
+      },
+      {
+        "path": "backend_api/tests/test_pipeline_router_contracts.py",
+        "line": 17,
+        "text": "assert \"run_pipeline.py\" in body[\"stage2\"][\"message\"]"
+      }
+    ],
+    "root_next_recipe_reference": [],
+    "legacy_history_db_reference": [
+      {
+        "path": "scripts/audit_mainline.py",
+        "line": 123,
+        "text": "\"history_db\", \"campaign_memory/history_db.json\""
+      },
+      {
+        "path": "stage1_optimization/rebuild_closed_loop_metrics.py",
+        "line": 53,
+        "text": "\"campaign_memory/history_db.json\","
+      },
+      {
+        "path": "stage1_optimization/SDL_ARCHITECTURE_CURSOR_RULE.md",
+        "line": 79,
+        "text": "- `campaign_memory/history_db.json`"
+      },
+      {
+        "path": "stage1_optimization/suggest_next.py",
+        "line": 52,
+        "text": "db_rel = storage.get(\"history_db\") or \"campaign_memory/history_db.json\""
+      }
+    ],
+    "fixed_stage3_output_reference": [
+      {
+        "path": "scripts/audit_mainline.py",
+        "line": 302,
+        "text": "claim_paths_relative = \"outputs/stage3/\" not in claim_text.replace(\"\\\\\", \"/\")"
+      },
+      {
+        "path": "stage3_mechanism/CHANGELOG.md",
+        "line": 72,
+        "text": "- `outputs/stage3/10_reports/stage3_report_advisor.md` & `stage3_report_advisor_EN.md`: 论文式重写，Abstract / Methods / Results / Discussion / Appendices 完整结构，中英双版；`scripts/export_advisor_pdf.py` 新增 CLI 参数支持双语 PDF 出版。"
+      },
+      {
+        "path": "stage3_mechanism/CHANGELOG.md",
+        "line": 73,
+        "text": "- 旧 `outputs/stage3/` 归档至 `outputs/stage3_preLD4_20260420_094753/` 以便回溯对照。"
+      },
+      {
+        "path": "stage3_mechanism/CHANGELOG.md",
+        "line": 132,
+        "text": "- `outputs/stage3/10_reports/stage3_report_advisor.md / .pdf`：主榜 Top 5 → Top 7，设计哲学、§4 全部 Rank、§5 实验路径、§7 文献支撑说明、附录 C 全部改写为 D2 叙事。"
+      },
+      {
+        "path": "stage3_mechanism/CHANGELOG.md",
+        "line": 174,
+        "text": "- 对照实验完整输出：`outputs/stage3_noLit/`（与主榜单 `outputs/stage3/` 同级）。"
+      },
+      {
+        "path": "stage3_mechanism/CHANGELOG.md",
+        "line": 242,
+        "text": "- 重写 `outputs/stage3/10_reports/stage3_report_advisor.md` 以反映新 Top-list；去掉所有\"证据层 / literature_backed / mechanism_analog\"表述；突出\"Top-4 全是新组合路线\"的事实；实验路径建议改为\"首选 Rank 1（主力）+ Rank 2（机理验证）+ Rank 4（生物质特色 / 藕粉）并行\"；重导出 PDF。"
+      },
+      {
+        "path": "stage3_mechanism/CHANGELOG.md",
+        "line": 249,
+        "text": "- **`outputs/stage3/10_reports/stage3_report_advisor.md` / `.pdf`**"
+      },
+      {
+        "path": "stage3_mechanism/FUTURE_OPTIMIZATION.md",
+        "line": 7,
+        "text": "> 2026-05-19 path note: references to `outputs/stage3/` below are historical"
+      },
+      {
+        "path": "stage3_mechanism/FUTURE_OPTIMIZATION.md",
+        "line": 14,
+        "text": "**适用场景**：Top-6 候选（详见 `outputs/stage3/09_ranking/ranked_top_list.json`）进入实验阶段后，待实验回流数据可用，再触发下一轮代码/提示词迭代。"
+      },
+      {
+        "path": "stage3_mechanism/FUTURE_OPTIMIZATION.md",
+        "line": 72,
+        "text": "**设计**：把新测量封装为 E8, E9, ...（`confidence ≥ 0.9`，因为是新实验），加入 `outputs/stage3/01_evidence/evidence_cards.json`，然后重跑 S06 看 H2 置信度是否提升（理想结果：0.82 → 0.90+）或动摇（如果动摇，说明机理叙事需要改写）。"
+      },
+      {
+        "path": "stage3_mechanism/FUTURE_OPTIMIZATION.md",
+        "line": 92,
+        "text": "`outputs/stage3/01_evidence/evidence_cards.json` 的 E2 `support_metrics.ea_range_ev` 写的是 `\"-3.13-1.54\"`，明显是 sanitizer 之前的原始范围。修复方法：在 `src/s8_stage3/agents/s03_evidence_builder.py` 的 ea 聚合环节加 `ea_clipped = [e for e in raw_ea if 0.1 <= e <= 2."
+      },
+      {
+        "path": "stage3_mechanism/FUTURE_OPTIMIZATION.md",
+        "line": 182,
+        "text": "| `agents/s08_literature_scout_materials.py::_summarize_with_llm` | LLM 输出的 claim 里 `descriptor_ids` 为空列表时直接 drop，没有日志记录 | drop 前写 warning 到 `outputs/stage3/stage3_run.log`，便于复现审核 |"
+      },
+      {
+        "path": "stage3_mechanism/FUTURE_OPTIMIZATION.md",
+        "line": 217,
+        "text": "- 输出：`outputs/stage3/` + `outputs/stage3_preLD4_20260420_094753/`（L+D4 前快照）"
+      },
+      {
+        "path": "stage3_mechanism/README.md",
+        "line": 44,
+        "text": "`outputs/stage3/` is now only an example or archived run location, not an"
+      },
+      {
+        "path": "stage3_mechanism/README.md",
+        "line": 138,
+        "text": "- Do not treat historical `outputs/stage3/` reports as current unless the run"
+      },
+      {
+        "path": "stage3_mechanism/stage3-SDL.md",
+        "line": 395,
+        "text": "| 运行成本 | `run_cost_summary.json` | `outputs/stage3/` |"
+      },
+      {
+        "path": "stage3_mechanism/stage3-SDL.md",
+        "line": 445,
+        "text": "1. **结构完整**：`outputs/stage3/{00..10}_*/` 所有目录均有对应 JSON；`run_cost_summary.json` 存在"
+      },
+      {
+        "path": "stage3_mechanism/literature_workspace/08_review/claim_review_ai_assessment.json",
+        "line": 4,
+        "text": "\"source\": \"outputs/stage3/06_literature_materials/literature_cards_materials.json\","
+      },
+      {
+        "path": "stage3_mechanism/literature_workspace/08_review/claim_review_ai_assessment.md",
+        "line": 9,
+        "text": "This review assesses high-impact material literature claims that support the current Top-3 candidate routes in `outputs/stage3/09_ranking/ranked_top_list.json`."
+      },
+      {
+        "path": "stage3_mechanism/scripts/export_advisor_pdf.py",
+        "line": 6,
+        "text": "Reads  : outputs/stage3/10_reports/stage3_report_advisor.md"
+      },
+      {
+        "path": "stage3_mechanism/scripts/export_advisor_pdf.py",
+        "line": 7,
+        "text": "Writes : outputs/stage3/10_reports/stage3_report_advisor.pdf"
+      },
+      {
+        "path": "stage3_mechanism/tests/test_stage3_deep_chain_contracts.py",
+        "line": 349,
+        "text": "assert not any(\"outputs/stage3/\" in ref for ref in required)"
+      }
+    ]
+  },
+  "summary": {
+    "stage1_recipe_valid": true,
+    "llm_keys_present": true,
+    "stage3_model_aligned": true,
+    "stage2_ready": true,
+    "stage3_manifest_matches_current_seed": true,
+    "feedback_schema_valid_or_absent": true,
+    "latest_robustness_present": true,
+    "claim_audit_paths_relative": true,
+    "possible_api_key_hits": 0,
+    "run_pipeline_reference_hits": 5,
+    "root_next_recipe_reference_hits": 0,
+    "legacy_history_db_reference_hits": 4,
+    "fixed_stage3_output_reference_hits": 22
+  }
+}

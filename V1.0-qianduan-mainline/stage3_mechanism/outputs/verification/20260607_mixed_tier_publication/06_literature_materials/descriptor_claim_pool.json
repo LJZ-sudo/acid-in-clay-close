@@ -1,0 +1,171 @@
+{
+  "claims": [
+    {
+      "card_id": "manual_1190463586",
+      "paper_id": "manual_1190463586",
+      "paper_title": "Article Composite Proton Exchange Membranes Based on Chitosan and Phosphotungstic Acid Immobilized One-Dimensional Attapulgite for Direct Methanol Fuel Cells",
+      "component": "Attapulgite (1-D clay nanorods)",
+      "descriptor_ids": [
+        "D6"
+      ],
+      "quantitative_anchor": "35.3 mS cm⁻¹ at 80 °C (4 wt.% WQAT loading)",
+      "claim_text": "Attapulgite nanorods constrain phosphotungstic acid within high‑surface‑area domains, forming effective proton‑transport channels (proton conductivity 35.3 mS cm⁻¹ at 80 °C) (manual_1190463586).",
+      "confidence": "supported",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_3d7d6d5d7b",
+      "paper_id": "manual_3d7d6d5d7b",
+      "paper_title": "",
+      "component": "phosphate glass",
+      "descriptor_ids": [
+        "D3"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "Phosphate glasses provide a non‑crystalline, ionically conductive matrix that may remain mobile and avoid crystalline acid‑phase formation at low temperatures. (manual_3d7d6d5d7b)",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_42051140ac",
+      "paper_id": "manual_42051140ac",
+      "paper_title": "Effect of deep eutectic solvent in proton conduction and thermal behaviour of chitosan-based membrane",
+      "component": "chitosan",
+      "descriptor_ids": [
+        "D4"
+      ],
+      "quantitative_anchor": "49.4% water uptake (room temperature)",
+      "claim_text": "Chitosan membrane with DES retains 49.4% water, suggesting bound‑water capacity that could support local mobility for proton conduction. (manual_42051140ac)",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_42051140ac",
+      "paper_id": "manual_42051140ac",
+      "paper_title": "Effect of deep eutectic solvent in proton conduction and thermal behaviour of chitosan-based membrane",
+      "component": "DES",
+      "descriptor_ids": [
+        "D4"
+      ],
+      "quantitative_anchor": "49.4% water uptake (with chitosan)",
+      "claim_text": "DES enhances water uptake (49.4% in chitosan blend) and proton conductivity, implying a role in retaining bound water. (manual_42051140ac)",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_58ec9a6c2e",
+      "paper_id": "manual_58ec9a6c2e",
+      "paper_title": "Chemical Science",
+      "component": "hydrogel electrolyte",
+      "descriptor_ids": [
+        "D1"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "Hydrogel electrolyte suppresses ice crystallisation and depresses the freezing point, maintaining continuous ionic conduction pathways at low temperatures. (manual_58ec9a6c2e)",
+      "confidence": "supported",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_89488460eb",
+      "paper_id": "manual_89488460eb",
+      "paper_title": "Enhancing proton conductivity at subzero temperature through  constructing the well-ordered structure based on carbon dots",
+      "component": "carbon dots (CDs)",
+      "descriptor_ids": [
+        "D1"
+      ],
+      "quantitative_anchor": "3.29 ± 3.16 × 10⁻³ S cm⁻¹ at −30 °C",
+      "claim_text": "Carbon dots (CDs) enable a well-ordered dispersion that maintains a continuous proton-conduction pathway, yielding proton conductivity of 3.29 × 10⁻³ S cm⁻¹ at −30 °C (manual_89488460eb).",
+      "confidence": "supported",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_a16330d0f5",
+      "paper_id": "manual_a16330d0f5",
+      "paper_title": "Phosphoric Acid-in-Clay Electrolyte Boosting Polybenzimidazole Membranes for High-Performance Fuel Cells",
+      "component": "halloysite nanotubes (HNTs)",
+      "descriptor_ids": [
+        "D6"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "Halloysite nanotubes provide nanometric confinement for phosphoric acid, establishing a dense hydrogen-bonding network that facilitates ultrafast proton transport via packed-acid and Grotthuss mechanisms and improves acid retention (manual_a16330d0f5).",
+      "confidence": "supported",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_a624da98ce",
+      "paper_id": "manual_a624da98ce",
+      "paper_title": "Enhanced Proton Conductivity from Phosphoric Acid-Incorporated 3D Polyacrylamide-Graft-Starch Hydrogel Materials for High-Temperature Proton Exchange Membranes",
+      "component": "PAAm-g-starch hydrogel",
+      "descriptor_ids": [
+        "D6"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "The 3D PAAm-g-starch hydrogel framework provides interconnected microporous space that absorbs and retains H3PO4 under pressure and anhydrous conditions, enabling high proton conductivity (manual_a624da98ce).",
+      "confidence": "supported",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_b9c3d1711d",
+      "paper_id": "manual_b9c3d1711d",
+      "paper_title": "Enhanced Proton Conductivity by the Influence of Modified  Montmorillonite on Poly (Vinyl alcohol) Based Blend  Composite Membranes",
+      "component": "montmorillonite (MMT)",
+      "descriptor_ids": [
+        "D6"
+      ],
+      "quantitative_anchor": "0.0802 S/cm at 6 wt% protonated MMT (temperature unspecified)",
+      "claim_text": "Montmorillonite clay at 6 wt% in a PVA/PEG blend provides enhanced proton conductivity of 0.0802 S/cm, attributed to nanometric dispersion creating interfacial proton transport pathways (manual_b9c3d1711d).",
+      "confidence": "supported",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_c0c1101384",
+      "paper_id": "manual_c0c1101384",
+      "paper_title": "Preparation and properties of chitosan/organic-modified attapulgite composite proton exchange membranes for fuel cell applications",
+      "component": "chitosan",
+      "descriptor_ids": [
+        "D1"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "Chitosan provides a continuous, hydration-enabled proton-conduction pathway; the composite membrane with 2 wt% organic-modified attapulgite exhibits higher proton conductivity than pure chitosan film, indicating the matrix’s inherent proton transport capacity (manual_c0c1101384).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_c0c1101384",
+      "paper_id": "manual_c0c1101384",
+      "paper_title": "Preparation and properties of chitosan/organic-modified attapulgite composite proton exchange membranes for fuel cell applications",
+      "component": "organic-modified attapulgite (QATP)",
+      "descriptor_ids": [
+        "D1",
+        "D6"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "Organic-modified attapulgite introduces high-surface-area nanometric domains that confine proton-conducting electrolyte and suppress bulk crystallization, enhancing proton conductivity in chitosan-based composite membranes (manual_c0c1101384).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    }
+  ],
+  "n_claims": 11
+}

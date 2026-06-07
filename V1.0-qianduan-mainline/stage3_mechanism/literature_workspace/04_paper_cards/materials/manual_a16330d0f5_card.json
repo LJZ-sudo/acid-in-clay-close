@@ -1,0 +1,87 @@
+{
+  "paper_id": "manual_a16330d0f5",
+  "stage_target": "materials",
+  "bibliography": {
+    "title": "Phosphoric Acid-in-Clay Electrolyte Boosting Polybenzimidazole Membranes for High-Performance Fuel Cells",
+    "authors": "",
+    "year": 0
+  },
+  "system_identity": {
+    "base_material": "polybenzimidazole (PBI)",
+    "dopant": "phosphoric acid (PA)",
+    "form_factor": "solid-state proton conductor",
+    "other": "halloysite nanotubes (HNTs)"
+  },
+  "measurement_scope": {
+    "temp_range": "90 °C to 180 °C",
+    "freq_range": [],
+    "humidity": "0% to 98% RH",
+    "other_conditions": []
+  },
+  "mechanism_relevant_findings": [
+    "The PA@HNTs establishes a dense hydrogen-bonding network that facilitates ultrafast proton transport via the packed-acid mechanism and Grotthuss mechanism.",
+    "The interaction of PA with the HNTs reduces susceptibility to PA leaching."
+  ],
+  "numerical_findings": [
+    {
+      "metric": "proton conductivity",
+      "value": 0.127,
+      "unit": "S cm − 1",
+      "conditions": "180 °C/0% RH"
+    },
+    {
+      "metric": "proton conductivity",
+      "value": 0.08,
+      "unit": "S cm − 1",
+      "conditions": "90 °C/98% RH"
+    },
+    {
+      "metric": "proton conductivity",
+      "value": 85.81,
+      "unit": "mS cm − 1",
+      "conditions": "180 °C/0% RH"
+    }
+  ],
+  "eis_shape_findings": [],
+  "arrhenius_vtf_findings": [],
+  "limitations": [
+    "Challenges include the leaching of phosphoric acid and potential plasticization of membranes."
+  ],
+  "relevance_judgement": {
+    "score": 0.9,
+    "reason": "The study presents innovative approaches to enhance proton conductivity in fuel cells through material modifications."
+  },
+  "supports_axes": {
+    "transport": "Grotthuss_hopping",
+    "phase_structure": "single_continuous_phase",
+    "temperature_dependence": "VTF"
+  },
+  "conflicts_axes": {},
+  "trace_spans": [
+    {
+      "page": null,
+      "section": "RESEARCH ARTICLE",
+      "text_snippet": "www.afm-journal.de"
+    },
+    {
+      "page": null,
+      "section": "Bei Wang, Zhiwei Ling, Qingting Liu,* Xudong Fu, Rong Zhang, Shengfei Hu, Feng Zhao, Xiao Li, Xujin Bao, Nanwen Li,* and Jun Yang*",
+      "text_snippet": "The development of phosphoric acid (PA)-doped polybenzimidazole proton exchange membranes has progressed at a notably slow pace over the past few decades, primarily because of challenges such as the l"
+    },
+    {
+      "page": null,
+      "section": "1. Introduction",
+      "text_snippet": "The wide-temperature range application of proton exchange membranes (PEMs) is a critical strategy for advancing fuel cell B. Wang, Z. Ling, Q. Liu, X. Fu, R. Zhang, S. Hu, F. Zhao, X. Li, X. Bao Hubei"
+    },
+    {
+      "page": null,
+      "section": "2. Results and Discussion",
+      "text_snippet": "2.1. Characterization of PA@HNTs Proton Conductor To elucidate the interaction between PA and HNTs, the PA@HNTs sample was immersed in deionized water at room temperature (25  ° C) and subsequently wa"
+    },
+    {
+      "page": null,
+      "section": "3. Conclusion",
+      "text_snippet": "A novel PA@HNTs geopolymer with a 3D network structure was designed using ScCO 2  technology for the first time and incorpo- rated into a g-ABPBI-based PEM. Compared with conventional methods, this ap"
+    }
+  ]
+}

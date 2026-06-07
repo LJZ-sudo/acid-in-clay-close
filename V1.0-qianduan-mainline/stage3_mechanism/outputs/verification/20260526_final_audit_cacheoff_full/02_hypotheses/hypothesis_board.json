@@ -1,0 +1,98 @@
+{
+  "step_id": "s04_hypotheses",
+  "hypotheses": [
+    {
+      "hypothesis_id": "H1",
+      "mechanism_label": "VTF-governed vehicular transport in a single percolating acid-water network",
+      "description": "The proton conductivity is well-described by the Vogel-Tammann-Fulcher (VTF) model across the entire temperature range, indicating that proton motion is fundamentally tied to the structural relaxation of a single, continuous, liquid-like acid-water phase. Protons are transported via vehicular diffusion of hydronium ions and their heavier clusters. The observed piecewise Arrhenius behavior in Ea is an artifact of the VTF functional form rather than a genuine structural transition.",
+      "key_prediction": "The VTF pseudo-activation energy should correlate strongly with a compositional parameter like R or N that tunes the fragility of the liquid-like network, and the apparent breakpoint T should shift systematically with composition in a way predicted by the VTF divergence temperature T0.",
+      "mechanism_axes": {
+        "transport": "vehicular_diffusion",
+        "phase_structure": "single_continuous_phase",
+        "temperature_dependence": "VTF",
+        "transition_topology": "no_transition",
+        "carrier_medium_state": "bulk_free_water"
+      },
+      "supporting_evidence_ids": [
+        "V2-E7",
+        "V2-E12",
+        "V2-E11",
+        "V2-E8"
+      ],
+      "conflicting_evidence_ids": [
+        "V2-E2"
+      ],
+      "prior_plausibility": 0.75
+    },
+    {
+      "hypothesis_id": "H2",
+      "mechanism_label": "Low-T dehydration and a dual-population, dual-mechanism transport network",
+      "description": "The acid-water network within the attapulgite channels exists in two distinct dynamical states: a high-temperature, fully hydrated, Grotthuss-dominated regime and a low-temperature, partially dehydrated, vehicular-dominated regime. The piecewise breakpoint (median ~233 K) corresponds to a thermodynamic transition where water freezes or structural water is lost, leaving a more viscous, confined acid-rich phase where transport becomes energetically more costly and mechanistically different.",
+      "key_prediction": "The low-temperature activation energy should exhibit a strong correlation with the acid/water ratio R (controlling acid concentration in the dehydrated phase), whereas the high-temperature Ea should be more sensitive to N (controlling overall network connectivity). The breakpoint temperature should be relatively insensitive to composition within the measured range because it is set by the nucleation/freezing point of confined water.",
+      "mechanism_axes": {
+        "transport": "hybrid_grotthuss_vehicular",
+        "phase_structure": "multi_threshold_confined_domains",
+        "temperature_dependence": "piecewise_Arrhenius",
+        "transition_topology": "single_transition",
+        "carrier_medium_state": "two_populations_strong_weak_bound"
+      },
+      "supporting_evidence_ids": [
+        "V2-E2",
+        "V2-E11",
+        "V2-E12",
+        "E2"
+      ],
+      "conflicting_evidence_ids": [
+        "V2-E7"
+      ],
+      "prior_plausibility": 0.7
+    },
+    {
+      "hypothesis_id": "H3",
+      "mechanism_label": "Meyer-Neldel compensated Grotthuss hopping through a single, disordered H-bond network",
+      "description": "The apparent success of the Arrhenius model on small segments and the strong Meyer-Neldel compensation rule (R^2=0.973) suggest that the underlying transport is a single, thermally activated process—Grotthuss structural diffusion through a disordered hydrogen-bond network. The curved ln(σ) vs. 1/T plot (which VTF fits well) and the variable segment Ea are consequences of a broad distribution of local hopping barriers whose mean is temperature-dependent due to kinetic arrest, not of a liquid-like viscous flow mechanism.",
+      "key_prediction": "The Meyer-Neldel compensation temperature (isokinetic temperature T_iso) should be physically meaningful and correspond to an excited vibrational mode of the H-bond network. The prefactor of conductivity at a given N should be constant, independent of R, if R only modifies the barrier distribution.",
+      "mechanism_axes": {
+        "transport": "Grotthuss_hopping",
+        "phase_structure": "single_continuous_phase",
+        "temperature_dependence": "Arrhenius_with_MeyerNeldel_coupling",
+        "transition_topology": "no_transition",
+        "carrier_medium_state": "single_confined_population"
+      },
+      "supporting_evidence_ids": [
+        "V2-E2",
+        "V2-E8",
+        "V2-E11",
+        "V2-E12"
+      ],
+      "conflicting_evidence_ids": [
+        "V2-E7"
+      ],
+      "prior_plausibility": 0.65
+    },
+    {
+      "hypothesis_id": "H4",
+      "mechanism_label": "Confinement-induced multi-threshold percolation with interfacial-dominated transport",
+      "description": "Proton conductivity is not governed by a homogeneous bulk phase. Instead, the acid and water form a heterogeneous network of isolated clusters and a percolating interfacial film along the attapulgite channel walls. The piecewise transition corresponds to the solidification of the most weakly-bound central water, pushing all transport onto the strongly-bound, non-freezable interfacial layer. The VTF-like curvature arises from the thermal activation of charge carrier creation/exchange between these two distinct environments, not from a homogeneous liquid.",
+      "key_prediction": "The high-temperature Ea should be correlated with N (which determines total film/domain connectivity) while the low-temperature Ea is constant and set by the interfacial film properties alone. A loss tangent peak in dielectric spectroscopy should coincide with the conductivity breakpoint, indicating a relaxation process specific to the interfacial water.",
+      "mechanism_axes": {
+        "transport": "hybrid_grotthuss_vehicular",
+        "phase_structure": "core_shell_interfacial",
+        "temperature_dependence": "piecewise_Arrhenius",
+        "transition_topology": "multi_transition",
+        "carrier_medium_state": "interfacial_only"
+      },
+      "supporting_evidence_ids": [
+        "V2-E2",
+        "V2-E11",
+        "V2-E12",
+        "E2"
+      ],
+      "conflicting_evidence_ids": [
+        "V2-E7"
+      ],
+      "prior_plausibility": 0.3
+    }
+  ],
+  "reasoning_notes": "The hypotheses compete on all five axes. H1 posits no transport-mode transition (single VTF phase), while H2, H3, and H4 all interpret the piecewise breakpoint as a genuine physical transition, but argue for different microscopic origins: dehydration/phase-change (H2), kinetic arrest in Grotthuss hopping (H3), and percolation breakdown (H4). They are further differentiated by the `transport` mode (vehicular vs. Grotthuss vs. hybrid) and the `phase_structure` (single-phase vs. multi-domain vs. interfacial)."
+}

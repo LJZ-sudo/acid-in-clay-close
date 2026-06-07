@@ -1,0 +1,73 @@
+{
+  "paper_id": "openalex_w2807112462",
+  "stage_target": "mechanism",
+  "bibliography": {
+    "title": "",
+    "authors": "",
+    "year": 0
+  },
+  "system_identity": {
+    "base_material": "perfluorosulfonic acid ionomer (PFSA)",
+    "dopant": "",
+    "form_factor": "film",
+    "other": ""
+  },
+  "measurement_scope": {
+    "temp_range": "",
+    "freq_range": "",
+    "humidity": "",
+    "other_conditions": "ambient-driven actuation"
+  },
+  "mechanism_relevant_findings": [
+    "The actuator utilizes inherent nanoscale molecular channels within PFSA films for rapid response.",
+    "ARTICLE\n\nMolecular-channel driven actuator with considerations for multiple con fi gurations and color switching\n\nJiuke Mu 1 , Gang Wang 2 , Hongping Yan 3 , Huayu Li 2 , Xuemin Wang 4 , Enlai Gao 5 , Chengyi Hou 1 , Anh Thi Cam Pham 4 , Lianjun Wu 4 , Qinghong Zhang 1,6 , Yaogang Li 6 , Zhiping Xu ",
+    "Chemical modi fi cation of the surface allowed the development of a kirigami-inspired single-layer actuator for personal humidity and heat management through macroscale geometric design features, to afford a bilayer stimuli-responsive actuator with multicolor switching capability.",
+    "Learning from these biological systems, many arti fi cial actuating materials that can generate a mechanical response from other forms of energy have been developed, and are well suited for applications such as microrobotics, sensors, actuators, and stealth materials 3 – 5 .",
+    "The absence of commercially available materials with product-level stability will constrain the implementation of actuators for applications in wearable devices for human – environment interface communications.",
+    "Furthermore, vapor-driven actuating materials have been developed through the design of gradient microporous or multilayer structures 17 – 20 .",
+    "However, practical application of such systems has lagged sig- ni fi cantly, owing to inherently complicated synthetic processes, slow kinematics associated with the requisite molecular organi- zation, long response times caused by relatively slow vapor transport mechanisms, and poor machinability (",
+    "Thus, developing a new generation of actuating materials with properties that commensurate with use under physiological conditions is an urgent need.",
+    "IPMC performance, however, is limited due to electrolysis of water and/or water evaporation from cracks in the electrodes.",
+    "A kirigami-inspired single-layer actuator system was developed for personal humidity and heat management through the design of the macroscale geometry.",
+    "Furthermore, chemical modi fi cation of the surface led to the development of a bilayer stimuli-responsive actuator with multicolor switching capability."
+  ],
+  "numerical_findings": [],
+  "eis_shape_findings": [],
+  "arrhenius_vtf_findings": [],
+  "limitations": [
+    "Current vapour-driven actuators report slow kinematics and long response times due to slow vapor transport mechanisms."
+  ],
+  "relevance_judgement": {
+    "score": 0.3,
+    "reason": "The paper mentions transport mechanisms but lacks detailed EIS and Arrhenius behavior analysis."
+  },
+  "supports_axes": {},
+  "conflicts_axes": {},
+  "trace_spans": [
+    {
+      "page": null,
+      "section": "ARTICLE",
+      "text_snippet": ""
+    },
+    {
+      "page": null,
+      "section": "Molecular-channel driven actuator with considerations for multiple con fi gurations and color switching",
+      "text_snippet": "Jiuke Mu 1 , Gang Wang 2 , Hongping Yan 3 , Huayu Li 2 , Xuemin Wang 4 , Enlai Gao 5 , Chengyi Hou 1 , Anh Thi Cam Pham 4 , Lianjun Wu 4 , Qinghong Zhang 1,6 , Yaogang Li 6 , Zhiping Xu 5 , Yang Guo 1"
+    },
+    {
+      "page": null,
+      "section": "DOI: 10.1038/s41467-018-03032-2 OPEN",
+      "text_snippet": "1  State Key Laboratory for Modi fi cation of Chemical Fibres and Polymer Materials, College of Material Science and Engineering, Donghua University, 201620 Shanghai, China.   2   School of Chemical a"
+    },
+    {
+      "page": null,
+      "section": "F",
+      "text_snippet": "or many living things, self-adaptive movement in response to stimuli from exposure to sunlight, humidity, wetting, or other atmospheric conditions is often a necessity for survival 1 , 2 . Most of suc"
+    },
+    {
+      "page": null,
+      "section": "ARTICLE NATURE COMMUNICATIONS | DOI: 10.1038/s41467-018-03032-2",
+      "text_snippet": "2 NATURE COMMUNICATIONS |   (2018) 9:590  |   DOI: 10.1038/s41467-018-03032-2 |   www.nature.com/naturecommunications known ordering of the – CF 2 – chains in the crystalline regions 30 , 36 . As etha"
+    }
+  ]
+}

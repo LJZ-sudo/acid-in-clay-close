@@ -1,0 +1,93 @@
+{
+  "paper_id": "manual_58ec9a6c2e",
+  "stage_target": "materials",
+  "bibliography": {
+    "title": "Chemical Science",
+    "authors": "",
+    "year": 0
+  },
+  "system_identity": {
+    "base_material": "sodium hyaluronate and carboxymethyl chitosan",
+    "dopant": "zinc chloride",
+    "form_factor": "hydrogel",
+    "other": ""
+  },
+  "measurement_scope": {
+    "temp_range": "−60 °C to 25 °C",
+    "freq_range": "",
+    "humidity": "",
+    "other_conditions": ""
+  },
+  "mechanism_relevant_findings": [
+    "The hydrogel electrolyte maintains exceptional ionic conductivity due to the establishment of continuous Zn2+ ion conduction pathways.",
+    "The unique structure of the hydrogel significantly suppresses ice crystallization and depresses the freezing point."
+  ],
+  "numerical_findings": [
+    {
+      "metric": "ionic conductivity",
+      "value": 13.32,
+      "unit": "mS cm−1",
+      "conditions": "at −60 °C"
+    },
+    {
+      "metric": "ionic conductivity",
+      "value": 35.75,
+      "unit": "mS cm−1",
+      "conditions": "at 25 °C"
+    },
+    {
+      "metric": "capacity retention",
+      "value": 97.6,
+      "unit": "%",
+      "conditions": "after 20,000 cycles at 25 °C"
+    },
+    {
+      "metric": "capacity retention",
+      "value": 97.4,
+      "unit": "%",
+      "conditions": "after 20,000 cycles at −60 °C"
+    }
+  ],
+  "eis_shape_findings": [],
+  "arrhenius_vtf_findings": [],
+  "limitations": [
+    "Achieving high mechanical strength, low frost resistance temperature, and superior ionic conductivity concurrently remains challenging."
+  ],
+  "relevance_judgement": {
+    "score": 0.8,
+    "reason": "The study presents significant advancements in proton conduction mechanisms in hydrogel electrolytes at ultra-low temperatures."
+  },
+  "supports_axes": {
+    "transport": "Grotthuss_hopping",
+    "phase_structure": "single_continuous_phase",
+    "temperature_dependence": "VTF"
+  },
+  "conflicts_axes": {},
+  "trace_spans": [
+    {
+      "page": null,
+      "section": "Unlocking ultra-low temperature performance: an anti-freezing, high-conductivity, biodegradable hydrogel electrolyte for supercapacitors down to − 60 °C",
+      "text_snippet": "Yibin Xing, Nannan Zhu, Ruixi He, Xiyao Wang, Renyang Han, Bing Du and Xuejuan Wan * Hydrogel electrolytes are highly regarded in supercapacitors for their intrinsic safety and mechanical adaptability"
+    },
+    {
+      "page": null,
+      "section": "Introduction",
+      "text_snippet": "Flexible supercapacitors stand out among energy storage devices due to their high-power density, rapid charging/ discharging capabilities, long cycle life, and excellent   exi- bility,   nding wides"
+    },
+    {
+      "page": null,
+      "section": "EDGE ARTICLE",
+      "text_snippet": "Additionally, it is worth noting that most reported hydrogel electrolytes rely on non-biodegradable synthetic polymers, posing persistent environmental risks. Developing biodegrad- able alternatives f"
+    },
+    {
+      "page": null,
+      "section": "Results and discussion",
+      "text_snippet": "The SCG-Zn hydrogel electrolyte was fabricated using the natural polysaccharides SH and CMCS, which self-assembled into a dynamic network via electrostatic attraction and hydrogen bonding (Fig. 1a and"
+    },
+    {
+      "page": null,
+      "section": "Conclusions",
+      "text_snippet": "In summary, a biomass-derived hydrogel electrolyte (SCG-Zn) with exceptional cryogenic tolerance was successfully prepared via  a straightforward method. Synergistic ionic coordination coupled with a "
+    }
+  ]
+}

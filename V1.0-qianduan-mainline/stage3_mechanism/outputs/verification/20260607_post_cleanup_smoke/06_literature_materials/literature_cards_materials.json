@@ -1,0 +1,203 @@
+{
+  "step_id": "s08",
+  "survey_scope": "material_search",
+  "cards": [
+    {
+      "card_id": "MAT1",
+      "title": "Polysaccharide-based proton exchange membranes",
+      "authors": "Mock F",
+      "year": 2021,
+      "doi": "10.0000/mock-mat1",
+      "summary": "OH-rich polysaccharides enable Grotthuss transport.",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "D1, D2",
+      "component_descriptor_claims": [
+        {
+          "component": "starch",
+          "descriptor_ids": [
+            "D1"
+          ],
+          "quantitative_anchor": "OH density ~11 mmol/g",
+          "claim_text": "starch provides dense OH H-bond donor sites (MAT1).",
+          "confidence": "supported",
+          "human_review_status": "pending",
+          "reviewer": "",
+          "review_notes": ""
+        },
+        {
+          "component": "phosphoric acid (H3PO4)",
+          "descriptor_ids": [
+            "D2"
+          ],
+          "quantitative_anchor": "σ ~ 10 mS/cm at 298 K",
+          "claim_text": "H3PO4 supplies mobile protons retained by the matrix (MAT1).",
+          "confidence": "supported",
+          "human_review_status": "pending",
+          "reviewer": "",
+          "review_notes": ""
+        }
+      ],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "MAT2",
+      "title": "Clay-polymer composite membranes",
+      "authors": "Mock G, Test H",
+      "year": 2020,
+      "doi": "10.0000/mock-mat2",
+      "summary": "1D clay scaffolds reduce leakage risk.",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "D3, D4, D5",
+      "component_descriptor_claims": [
+        {
+          "component": "attapulgite",
+          "descriptor_ids": [
+            "D3",
+            "D5"
+          ],
+          "quantitative_anchor": "1-D tubular channel width ~3.7 Å",
+          "claim_text": "attapulgite supplies 1-D confined proton channels with interfacial acid retention (MAT2).",
+          "confidence": "supported",
+          "human_review_status": "pending",
+          "reviewer": "",
+          "review_notes": ""
+        },
+        {
+          "component": "PVA",
+          "descriptor_ids": [
+            "D4"
+          ],
+          "quantitative_anchor": "Tg ~ 85 °C, film-forming",
+          "claim_text": "PVA compatibilises the clay/acid matrix and resists sub-zero brittleness when plasticised (MAT2).",
+          "confidence": "supported",
+          "human_review_status": "pending",
+          "reviewer": "",
+          "review_notes": ""
+        }
+      ],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "MAT3",
+      "title": "OH-rich polysaccharide matrix for proton-conducting membranes",
+      "authors": "Mock I",
+      "year": 2023,
+      "doi": "10.0000/mock-mat3",
+      "summary": "OH-rich polysaccharide matrix study covering D1, D2, D4 descriptors (glycerol plasticiser).",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "D1, D2, D4",
+      "component_descriptor_claims": [
+        {
+          "component": "glycerol",
+          "descriptor_ids": [
+            "D4"
+          ],
+          "quantitative_anchor": "anti-freeze plasticiser, Tg depression ~40 K",
+          "claim_text": "glycerol suppresses sub-zero freezing of the polysaccharide+acid matrix (MAT3).",
+          "confidence": "supported",
+          "human_review_status": "pending",
+          "reviewer": "",
+          "review_notes": ""
+        },
+        {
+          "component": "starch",
+          "descriptor_ids": [
+            "D1"
+          ],
+          "quantitative_anchor": "",
+          "claim_text": "starch provides OH-rich H-bond donor sites (MAT3).",
+          "confidence": "supported",
+          "human_review_status": "pending",
+          "reviewer": "",
+          "review_notes": ""
+        }
+      ],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "MAT-pva",
+      "title": "PVA matrix continuity and hydrogen-bond compatibilisation",
+      "authors": "Mock P",
+      "year": 2022,
+      "doi": "",
+      "summary": "PVA improves film continuity and hydrogen-bond coupling in acid polymer membranes.",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "D2, D4",
+      "component_descriptor_claims": [
+        {
+          "component": "PVA",
+          "descriptor_ids": [
+            "D2",
+            "D4"
+          ],
+          "quantitative_anchor": "film-forming compatibiliser",
+          "claim_text": "PVA supports acid retention and cold-window matrix continuity.",
+          "confidence": "supported",
+          "human_review_status": "pending",
+          "reviewer": "",
+          "review_notes": ""
+        }
+      ],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "MAT-sep",
+      "title": "Sepiolite as one-dimensional hydrated clay scaffold",
+      "authors": "Mock S",
+      "year": 2021,
+      "doi": "",
+      "summary": "Sepiolite offers 1-D fibrous confinement and acid retention analogs.",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "D3, D5",
+      "component_descriptor_claims": [
+        {
+          "component": "sepiolite",
+          "descriptor_ids": [
+            "D3",
+            "D5"
+          ],
+          "quantitative_anchor": "1-D fibrous clay",
+          "claim_text": "Sepiolite-like clay supports confinement and leakage-control descriptors.",
+          "confidence": "supported",
+          "human_review_status": "pending",
+          "reviewer": "",
+          "review_notes": ""
+        }
+      ],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "MAT-biomass-A",
+      "title": "Biomass starch placeholder as OH-rich host",
+      "authors": "Mock B",
+      "year": 2024,
+      "doi": "",
+      "summary": "Biomass starch provides dense OH sites and retained bound water.",
+      "relevance_to_mechanism": "",
+      "relevance_to_descriptors": "D1, D4",
+      "component_descriptor_claims": [
+        {
+          "component": "biomass-starch-A",
+          "descriptor_ids": [
+            "D1",
+            "D4"
+          ],
+          "quantitative_anchor": "OH-rich biopolymer host",
+          "claim_text": "Biomass starch analog supports OH-rich and cold-window host descriptors.",
+          "confidence": "supported",
+          "human_review_status": "pending",
+          "reviewer": "",
+          "review_notes": ""
+        }
+      ],
+      "supports_hypothesis_ids": [],
+      "weakens_hypothesis_ids": []
+    }
+  ],
+  "synthesis_notes": "Three family-level literature groups identified matching descriptors D1-D5, with D4 (cold-side) covered mainly by glycerol-plasticised polysaccharide systems and 1-D clay anchoring."
+}

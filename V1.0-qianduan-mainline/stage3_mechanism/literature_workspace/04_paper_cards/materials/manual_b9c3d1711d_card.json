@@ -1,0 +1,74 @@
+{
+  "paper_id": "manual_b9c3d1711d",
+  "stage_target": "materials",
+  "bibliography": {
+    "title": "Enhanced Proton Conductivity by the Influence of Modified  Montmorillonite on Poly (Vinyl alcohol) Based Blend  Composite Membranes",
+    "authors": "",
+    "year": 0
+  },
+  "system_identity": {
+    "base_material": "Poly (Vinyl Alcohol) / Poly (Ethylene Glycol)",
+    "dopant": "Montmorillonite",
+    "form_factor": "composite membranes",
+    "other": ""
+  },
+  "measurement_scope": {
+    "temp_range": "room temperature",
+    "freq_range": "",
+    "humidity": "100% relative humidity",
+    "other_conditions": ""
+  },
+  "mechanism_relevant_findings": [
+    "The highest proton conductivity value of 0.0802 Scm -1 is obtained at 6wt% of protonated MMT added to the PVA/PEG blends.",
+    "Significant improvements in hydrolytic stability were observed in the composite membranes."
+  ],
+  "numerical_findings": [
+    {
+      "metric": "proton conductivity",
+      "value": 0.0802,
+      "unit": "Scm -1",
+      "conditions": "6wt% of protonated MMT in PVA/PEG blends"
+    }
+  ],
+  "eis_shape_findings": [
+    "Proton conductivity measurements were made via Nyquist plot."
+  ],
+  "arrhenius_vtf_findings": [],
+  "limitations": [],
+  "relevance_judgement": {
+    "score": 0.8,
+    "reason": "The study provides significant insights into proton transport mechanisms in composite membranes."
+  },
+  "supports_axes": {
+    "transport": "Grotthuss_hopping",
+    "temperature_dependence": "pure_Arrhenius"
+  },
+  "conflicts_axes": {},
+  "trace_spans": [
+    {
+      "page": null,
+      "section": "Enhanced proton conductivity by the influence of modified montmorillonite on poly (vinyl alcohol) based blend composite membranes",
+      "text_snippet": "P. Bahavan Palani ,  ,  K. Sainul Abidin ,  R. Kannan ,  ,  S. Rajashabala , and  M. Sivakumar Citation:  AIP Conference Proceedings   1731 , 110028 (2016); doi: 10.1063/1.4948049 View online:  http:/"
+    },
+    {
+      "page": null,
+      "section": "P. Bahavan Palani 1* , K. Sainul Abidin 1 , R. Kannan 1, 2** , S. Rajashabala 3 ,",
+      "text_snippet": "M. Sivakumar 4   1 Department of Physics, University College of Engineering, Anna University, Dindigul-624622  2  Department of Material Sciences & Engineering, Cornell University, Ithaca, NewYork-148"
+    },
+    {
+      "page": null,
+      "section": "INTRODUCTION",
+      "text_snippet": "Proton Exchange Membrane (PEM) is one of the  vital  component  in  DMFCs,  and  its  proton  conductivity, thermo-mechanical stability, fuel and  oxygen permeability have a critical influence on thei"
+    },
+    {
+      "page": null,
+      "section": "EXPERIMENTAL",
+      "text_snippet": "The composite membranes were prepared by using  solution casting technique, with appropriate weight ratios of PVA, PEG and modified MMT filler. The  interlayer cation of the MMT was exchanged from its"
+    },
+    {
+      "page": null,
+      "section": "RESULTS AND DISCUSSIONS",
+      "text_snippet": "Thermal analysis of PVA/PEG/MMT composite  membranes is shown in figures 1&2. FIGURE 1.   TGA spectra of composite membranes. FIGURE 2.   DTG spectra of composite membranes.  The TGA curve of all the "
+    }
+  ]
+}

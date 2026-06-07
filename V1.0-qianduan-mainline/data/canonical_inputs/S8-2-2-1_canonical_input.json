@@ -1,0 +1,550 @@
+{
+  "canonical_input_version": "1.1",
+  "identity": {
+    "sample_id": "S8-2-2-1",
+    "material_type": "S8",
+    "material_description": "S8：海泡石（Sepiolite）为固体载体、磷酸（H3PO4）为质子源的黏土-酸限域复合膜；通过 R、N 调控酸含量与限域填充，用于宽温域质子传导研究。",
+    "parameter_definitions": {
+      "R": {
+        "label_zh": "酸/水摩尔比 R",
+        "definition_zh": "n(H3PO4)/n(H2O)，表征酸液中磷酸相对水的摩尔比例，用于描述酸-水组成。",
+        "unit": "mol/mol"
+      },
+      "N": {
+        "label_zh": "液/固质量比 N",
+        "definition_zh": "液体总质量与黏土（固体载体）质量之比，表征酸在限域孔道/层间中的装载程度。对无黏土对照体系，见对应材料族说明。",
+        "unit": "g/g 或无量纲（与实验记录一致）"
+      },
+      "L_cm": {
+        "label_zh": "样品厚度 L",
+        "definition_zh": "质子传导方向上的膜/样品厚度，用于由 Rb 换算电导率 σ = L/(Rb·S)。",
+        "unit": "cm"
+      },
+      "S_cm2": {
+        "label_zh": "电极面积 S",
+        "definition_zh": "与电流方向垂直的有效电极面积，用于 σ 计算及几何归一。",
+        "unit": "cm²"
+      }
+    },
+    "metadata_schema_extension": {
+      "version": "phase1_material_lexicon_v1",
+      "source": "front_half_v2/data/phase1_material_lexicon.json"
+    }
+  },
+  "geometry": {
+    "R": 1.040816326530612,
+    "N": 4.1386666666666665,
+    "L_cm": 0.12,
+    "S_cm2": 3.919348
+  },
+  "arrays": {
+    "temperatures": [
+      300.0,
+      291.4,
+      282.75,
+      274.45,
+      266.15,
+      257.65,
+      249.35,
+      241.05,
+      232.75,
+      224.45,
+      216.2,
+      207.4,
+      196.4
+    ],
+    "rb_values": [
+      2.3292512733123667,
+      2.836908068905155,
+      9.139837309920766,
+      14.495072538023011,
+      22.951470424447763,
+      13.996840742163098,
+      12.021816769224895,
+      19.597656486157078,
+      39.235125570482595,
+      90.81890618078775,
+      335.4673716809222,
+      1980.0771766052624,
+      126367.1851848173
+    ],
+    "conductivity_values": [
+      0.013144712090216438,
+      0.01079250248150523,
+      0.0033498777204959375,
+      0.002112258306617416,
+      0.0013340033038078335,
+      0.0021874462914500117,
+      0.002546814509088142,
+      0.001562295848745376,
+      0.000780355279313676,
+      0.00033712515004874645,
+      9.126770576836484e-05,
+      1.5462698997396103e-05,
+      2.4228867113469336e-07
+    ]
+  },
+  "temperature_points": [
+    {
+      "temperature_K": 300.0,
+      "rb_ohm": 2.3292512733123667,
+      "conductivity_S_cm": 0.013144712090216438,
+      "rb_method": "X轴交点",
+      "rb_r2": 1.0,
+      "n_points": 54
+    },
+    {
+      "temperature_K": 291.4,
+      "rb_ohm": 2.836908068905155,
+      "conductivity_S_cm": 0.01079250248150523,
+      "rb_method": "X轴交点",
+      "rb_r2": 1.0,
+      "n_points": 53
+    },
+    {
+      "temperature_K": 282.75,
+      "rb_ohm": 9.139837309920766,
+      "conductivity_S_cm": 0.0033498777204959375,
+      "rb_method": "直线拟合",
+      "rb_r2": 0.9921278975404271,
+      "n_points": 53
+    },
+    {
+      "temperature_K": 274.45,
+      "rb_ohm": 14.495072538023011,
+      "conductivity_S_cm": 0.002112258306617416,
+      "rb_method": "直线拟合",
+      "rb_r2": 0.9979281460443821,
+      "n_points": 54
+    },
+    {
+      "temperature_K": 266.15,
+      "rb_ohm": 22.951470424447763,
+      "conductivity_S_cm": 0.0013340033038078335,
+      "rb_method": "直线拟合",
+      "rb_r2": 0.9986622715611116,
+      "n_points": 55
+    },
+    {
+      "temperature_K": 257.65,
+      "rb_ohm": 13.996840742163098,
+      "conductivity_S_cm": 0.0021874462914500117,
+      "rb_method": "直线拟合",
+      "rb_r2": 0.9970242470219004,
+      "n_points": 54
+    },
+    {
+      "temperature_K": 249.35,
+      "rb_ohm": 12.021816769224895,
+      "conductivity_S_cm": 0.002546814509088142,
+      "rb_method": "X轴交点",
+      "rb_r2": 1.0,
+      "n_points": 53
+    },
+    {
+      "temperature_K": 241.05,
+      "rb_ohm": 19.597656486157078,
+      "conductivity_S_cm": 0.001562295848745376,
+      "rb_method": "X轴交点",
+      "rb_r2": 1.0,
+      "n_points": 54
+    },
+    {
+      "temperature_K": 232.75,
+      "rb_ohm": 39.235125570482595,
+      "conductivity_S_cm": 0.000780355279313676,
+      "rb_method": "X轴交点",
+      "rb_r2": 1.0,
+      "n_points": 53
+    },
+    {
+      "temperature_K": 224.45,
+      "rb_ohm": 90.81890618078775,
+      "conductivity_S_cm": 0.00033712515004874645,
+      "rb_method": "X轴交点",
+      "rb_r2": 1.0,
+      "n_points": 53
+    },
+    {
+      "temperature_K": 216.2,
+      "rb_ohm": 335.4673716809222,
+      "conductivity_S_cm": 9.126770576836484e-05,
+      "rb_method": "直线拟合",
+      "rb_r2": 0.9770772596640778,
+      "n_points": 54
+    },
+    {
+      "temperature_K": 207.4,
+      "rb_ohm": 1980.0771766052624,
+      "conductivity_S_cm": 1.5462698997396103e-05,
+      "rb_method": "X轴交点",
+      "rb_r2": 1.0,
+      "n_points": 54
+    },
+    {
+      "temperature_K": 196.4,
+      "rb_ohm": 126367.1851848173,
+      "conductivity_S_cm": 2.4228867113469336e-07,
+      "rb_method": "X轴交点",
+      "rb_r2": 1.0,
+      "n_points": 53
+    }
+  ],
+  "arrhenius": {
+    "success": true,
+    "n_segments": 2,
+    "segments": [
+      {
+        "segment": 1,
+        "Ea_eV": 0.5042296644656525,
+        "Ea_kJ_per_mol": 48.65059917596849,
+        "r_squared": 0.9546470519757069,
+        "temp_range_K": [
+          266.15,
+          300.0
+        ],
+        "n_points": 5,
+        "sigma0_S_per_cm": 4193576.8942410825,
+        "ln_sigma0": 15.249064601769094
+      },
+      {
+        "segment": 2,
+        "Ea_eV": 0.8675665108415722,
+        "Ea_kJ_per_mol": 83.7071547985491,
+        "r_squared": 0.9577628872642475,
+        "temp_range_K": [
+          196.4,
+          232.75
+        ],
+        "n_points": 5,
+        "sigma0_S_per_cm": 9068102584886608.0,
+        "ln_sigma0": 36.74353944033788
+      }
+    ],
+    "Ea_eV": 0.5042296644656525,
+    "r_squared": 0.9546470519757069
+  },
+  "quality_summary": {
+    "overall_score": 70.0,
+    "overall_grade": "B",
+    "n_temperature_points": 13,
+    "temp_range_K": [
+      196.4,
+      300.0
+    ]
+  },
+  "eis_shape_features_by_T": [
+    {
+      "source": "raw_spectrum",
+      "hf_intercept_est_ohm": 2.3938,
+      "zreal_span_ohm": 792.1148,
+      "zimag_peak_abs_ohm": 1701.835,
+      "peak_frequency_Hz": 0.96,
+      "arc_visibility_score": 1.0,
+      "depression_score": 0.0,
+      "tail_slope": 1.9952,
+      "tail_angle_deg": 63.38,
+      "n_relaxation_peaks_est": 1,
+      "kk_valid": null,
+      "kk_rmse": null,
+      "drt_peak_count": null,
+      "drt_peak_widths": null,
+      "fit_method": "X轴交点",
+      "n_freq_points": 56,
+      "freq_range_Hz": [
+        0.96,
+        300046.9
+      ],
+      "T_K": 300.0,
+      "dta_file": "S8-2-2-1-300-120K 3K-min_#1.DTA"
+    },
+    {
+      "source": "raw_spectrum",
+      "hf_intercept_est_ohm": 2.6341,
+      "zreal_span_ohm": 766.8159,
+      "zimag_peak_abs_ohm": 1819.331,
+      "peak_frequency_Hz": 0.96,
+      "arc_visibility_score": 1.0,
+      "depression_score": 0.0,
+      "tail_slope": 2.2582,
+      "tail_angle_deg": 66.11,
+      "n_relaxation_peaks_est": 1,
+      "kk_valid": null,
+      "kk_rmse": null,
+      "drt_peak_count": null,
+      "drt_peak_widths": null,
+      "fit_method": "X轴交点",
+      "n_freq_points": 56,
+      "freq_range_Hz": [
+        0.96,
+        300046.9
+      ],
+      "T_K": 291.4,
+      "dta_file": "S8-2-2-1-300-120K 3K-min_#2.DTA"
+    },
+    {
+      "source": "raw_spectrum",
+      "hf_intercept_est_ohm": 9.5565,
+      "zreal_span_ohm": 739.3072,
+      "zimag_peak_abs_ohm": 1939.52,
+      "peak_frequency_Hz": 0.96,
+      "arc_visibility_score": 1.0,
+      "depression_score": 0.0,
+      "tail_slope": 2.5299,
+      "tail_angle_deg": 68.43,
+      "n_relaxation_peaks_est": 1,
+      "kk_valid": null,
+      "kk_rmse": null,
+      "drt_peak_count": null,
+      "drt_peak_widths": null,
+      "fit_method": "直线拟合",
+      "n_freq_points": 56,
+      "freq_range_Hz": [
+        0.96,
+        300046.9
+      ],
+      "T_K": 282.75,
+      "dta_file": "S8-2-2-1-300-120K 3K-min_#3.DTA"
+    },
+    {
+      "source": "raw_spectrum",
+      "hf_intercept_est_ohm": 10.6159,
+      "zreal_span_ohm": 645.8475,
+      "zimag_peak_abs_ohm": 2162.337,
+      "peak_frequency_Hz": 0.96,
+      "arc_visibility_score": 1.0,
+      "depression_score": 0.0,
+      "tail_slope": 3.3521,
+      "tail_angle_deg": 73.39,
+      "n_relaxation_peaks_est": 1,
+      "kk_valid": null,
+      "kk_rmse": null,
+      "drt_peak_count": null,
+      "drt_peak_widths": null,
+      "fit_method": "直线拟合",
+      "n_freq_points": 56,
+      "freq_range_Hz": [
+        0.96,
+        300046.9
+      ],
+      "T_K": 274.45,
+      "dta_file": "S8-2-2-1-300-120K 3K-min_#4.DTA"
+    },
+    {
+      "source": "raw_spectrum",
+      "hf_intercept_est_ohm": 12.7555,
+      "zreal_span_ohm": 597.8914,
+      "zimag_peak_abs_ohm": 2349.613,
+      "peak_frequency_Hz": 0.96,
+      "arc_visibility_score": 1.0,
+      "depression_score": 0.0,
+      "tail_slope": 4.0849,
+      "tail_angle_deg": 76.24,
+      "n_relaxation_peaks_est": 1,
+      "kk_valid": null,
+      "kk_rmse": null,
+      "drt_peak_count": null,
+      "drt_peak_widths": null,
+      "fit_method": "直线拟合",
+      "n_freq_points": 56,
+      "freq_range_Hz": [
+        0.96,
+        300046.9
+      ],
+      "T_K": 266.15,
+      "dta_file": "S8-2-2-1-300-120K 3K-min_#5.DTA"
+    },
+    {
+      "source": "raw_spectrum",
+      "hf_intercept_est_ohm": 13.52,
+      "zreal_span_ohm": 595.7477,
+      "zimag_peak_abs_ohm": 2540.099,
+      "peak_frequency_Hz": 0.96,
+      "arc_visibility_score": 1.0,
+      "depression_score": 0.0,
+      "tail_slope": 4.4369,
+      "tail_angle_deg": 77.3,
+      "n_relaxation_peaks_est": 1,
+      "kk_valid": null,
+      "kk_rmse": null,
+      "drt_peak_count": null,
+      "drt_peak_widths": null,
+      "fit_method": "直线拟合",
+      "n_freq_points": 56,
+      "freq_range_Hz": [
+        0.96,
+        300046.9
+      ],
+      "T_K": 257.65,
+      "dta_file": "S8-2-2-1-300-120K 3K-min_#6.DTA"
+    },
+    {
+      "source": "raw_spectrum",
+      "hf_intercept_est_ohm": 11.5786,
+      "zreal_span_ohm": 667.5947,
+      "zimag_peak_abs_ohm": 2767.005,
+      "peak_frequency_Hz": 0.96,
+      "arc_visibility_score": 1.0,
+      "depression_score": 0.0,
+      "tail_slope": 4.3318,
+      "tail_angle_deg": 77.0,
+      "n_relaxation_peaks_est": 1,
+      "kk_valid": null,
+      "kk_rmse": null,
+      "drt_peak_count": null,
+      "drt_peak_widths": null,
+      "fit_method": "X轴交点",
+      "n_freq_points": 56,
+      "freq_range_Hz": [
+        0.96,
+        300046.9
+      ],
+      "T_K": 249.35,
+      "dta_file": "S8-2-2-1-300-120K 3K-min_#7.DTA"
+    },
+    {
+      "source": "raw_spectrum",
+      "hf_intercept_est_ohm": 18.3637,
+      "zreal_span_ohm": 822.5109,
+      "zimag_peak_abs_ohm": 3080.667,
+      "peak_frequency_Hz": 0.96,
+      "arc_visibility_score": 1.0,
+      "depression_score": 0.0,
+      "tail_slope": 3.8342,
+      "tail_angle_deg": 75.38,
+      "n_relaxation_peaks_est": 1,
+      "kk_valid": null,
+      "kk_rmse": null,
+      "drt_peak_count": null,
+      "drt_peak_widths": null,
+      "fit_method": "X轴交点",
+      "n_freq_points": 56,
+      "freq_range_Hz": [
+        0.96,
+        300046.9
+      ],
+      "T_K": 241.05,
+      "dta_file": "S8-2-2-1-300-120K 3K-min_#8.DTA"
+    },
+    {
+      "source": "raw_spectrum",
+      "hf_intercept_est_ohm": 35.2708,
+      "zreal_span_ohm": 1081.3722,
+      "zimag_peak_abs_ohm": 3575.344,
+      "peak_frequency_Hz": 0.96,
+      "arc_visibility_score": 1.0,
+      "depression_score": 0.0,
+      "tail_slope": 3.2959,
+      "tail_angle_deg": 73.12,
+      "n_relaxation_peaks_est": 1,
+      "kk_valid": null,
+      "kk_rmse": null,
+      "drt_peak_count": null,
+      "drt_peak_widths": null,
+      "fit_method": "X轴交点",
+      "n_freq_points": 56,
+      "freq_range_Hz": [
+        0.96,
+        300046.9
+      ],
+      "T_K": 232.75,
+      "dta_file": "S8-2-2-1-300-120K 3K-min_#9.DTA"
+    },
+    {
+      "source": "raw_spectrum",
+      "hf_intercept_est_ohm": 79.9854,
+      "zreal_span_ohm": 1443.7456,
+      "zimag_peak_abs_ohm": 4396.699,
+      "peak_frequency_Hz": 0.96,
+      "arc_visibility_score": 1.0,
+      "depression_score": 0.0,
+      "tail_slope": 3.0408,
+      "tail_angle_deg": 71.8,
+      "n_relaxation_peaks_est": 1,
+      "kk_valid": null,
+      "kk_rmse": null,
+      "drt_peak_count": null,
+      "drt_peak_widths": null,
+      "fit_method": "X轴交点",
+      "n_freq_points": 56,
+      "freq_range_Hz": [
+        0.96,
+        300046.9
+      ],
+      "T_K": 224.45,
+      "dta_file": "S8-2-2-1-300-120K 3K-min_#10.DTA"
+    },
+    {
+      "source": "raw_spectrum",
+      "hf_intercept_est_ohm": 218.9954,
+      "zreal_span_ohm": 2027.7596,
+      "zimag_peak_abs_ohm": 5740.271,
+      "peak_frequency_Hz": 0.96,
+      "arc_visibility_score": 1.0,
+      "depression_score": 0.0,
+      "tail_slope": 3.1512,
+      "tail_angle_deg": 72.39,
+      "n_relaxation_peaks_est": 1,
+      "kk_valid": null,
+      "kk_rmse": null,
+      "drt_peak_count": null,
+      "drt_peak_widths": null,
+      "fit_method": "直线拟合",
+      "n_freq_points": 56,
+      "freq_range_Hz": [
+        0.96,
+        300046.9
+      ],
+      "T_K": 216.2,
+      "dta_file": "S8-2-2-1-300-120K 3K-min_#11.DTA"
+    },
+    {
+      "source": "raw_spectrum",
+      "hf_intercept_est_ohm": 868.393,
+      "zreal_span_ohm": 7236.659,
+      "zimag_peak_abs_ohm": 7885.749,
+      "peak_frequency_Hz": 0.96,
+      "arc_visibility_score": 1.0,
+      "depression_score": 0.0,
+      "tail_slope": 1.806,
+      "tail_angle_deg": 61.03,
+      "n_relaxation_peaks_est": 1,
+      "kk_valid": null,
+      "kk_rmse": null,
+      "drt_peak_count": null,
+      "drt_peak_widths": null,
+      "fit_method": "X轴交点",
+      "n_freq_points": 56,
+      "freq_range_Hz": [
+        0.96,
+        300046.9
+      ],
+      "T_K": 207.4,
+      "dta_file": "S8-2-2-1-300-120K 3K-min_#12.DTA"
+    },
+    {
+      "source": "raw_spectrum",
+      "hf_intercept_est_ohm": 1529.536,
+      "zreal_span_ohm": 486604.664,
+      "zimag_peak_abs_ohm": 15263.94,
+      "peak_frequency_Hz": 15046.87,
+      "arc_visibility_score": 0.0314,
+      "depression_score": 0.7557,
+      "tail_slope": 0.0465,
+      "tail_angle_deg": 2.66,
+      "n_relaxation_peaks_est": 3,
+      "kk_valid": null,
+      "kk_rmse": null,
+      "drt_peak_count": null,
+      "drt_peak_widths": null,
+      "fit_method": "X轴交点",
+      "n_freq_points": 56,
+      "freq_range_Hz": [
+        0.96,
+        300046.9
+      ],
+      "T_K": 196.4,
+      "dta_file": "S8-2-2-1-300-120K 3K-min_#13.DTA"
+    }
+  ]
+}

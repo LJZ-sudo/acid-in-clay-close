@@ -1,0 +1,52 @@
+{
+  "pack_id": "ctx-s08",
+  "stage_target": "s08",
+  "included_row_ids": [
+    "ER-0113",
+    "ER-0114",
+    "ER-0115",
+    "ER-0208",
+    "ER-0209",
+    "ER-0210",
+    "ER-0117",
+    "ER-0118",
+    "ER-0119",
+    "ER-0120"
+  ],
+  "excluded_row_ids": [
+    "ER-0121",
+    "ER-0124",
+    "ER-0125",
+    "ER-0163",
+    "ER-0164",
+    "ER-0172",
+    "ER-0173",
+    "ER-0174",
+    "ER-0175",
+    "ER-0193",
+    "ER-0194",
+    "ER-0195",
+    "ER-0196",
+    "ER-0197",
+    "ER-0198",
+    "ER-0201",
+    "ER-0204",
+    "ER-0226",
+    "ER-0229",
+    "ER-0245"
+  ],
+  "summary": "Context for s08: 10 measurements",
+  "key_supports": [
+    "phase_structure:single_continuous_phase (x10)",
+    "temperature_dependence:pure_Arrhenius (x7)",
+    "transport:Grotthuss_hopping (x6)",
+    "transport:ionic_liquid_like (x4)",
+    "temperature_dependence:VTF (x3)"
+  ],
+  "key_weakens": [],
+  "key_unknowns": [],
+  "usage_notes": [
+    "Evidence rows are sorted by relevance to this step",
+    "Each row traces to a specific paper_id"
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "paper_id": "manual_89488460eb",
+  "stage_target": "materials",
+  "bibliography": {
+    "title": "Enhancing proton conductivity at subzero temperature through  constructing the well-ordered structure based on carbon dots",
+    "authors": "Department of Chemistry, College of Sciences, Northeastern University, Shenyang, 110819, China",
+    "year": 0
+  },
+  "system_identity": {
+    "base_material": "Nafion",
+    "dopant": "carbon dots",
+    "form_factor": "multilayered structure",
+    "other": "polyurethane"
+  },
+  "measurement_scope": {
+    "temp_range": "−30 °C to 30 °C",
+    "freq_range": [],
+    "humidity": [],
+    "other_conditions": "five-cycle heating/cooling process"
+  },
+  "mechanism_relevant_findings": [
+    "The well-ordered dispersion of components reduces proton conduction resistance.",
+    "The (PU/Nafion/PU/CDs)200/PA membrane exhibited fine proton conductivity stability."
+  ],
+  "numerical_findings": [
+    {
+      "metric": "proton conductivity",
+      "value": "3.29 ± 3.16",
+      "unit": "× 10 − 3 S/cm",
+      "conditions": "at −30 °C"
+    },
+    {
+      "metric": "proton conductivity",
+      "value": "2.99 ± 0.39",
+      "unit": "× 10 − 2 S/cm",
+      "conditions": "at 30 °C"
+    },
+    {
+      "metric": "proton conductivity",
+      "value": "3.69",
+      "unit": "× 10 − 3 S/cm",
+      "conditions": "after five-cycle heating/cooling at −30 °C"
+    },
+    {
+      "metric": "proton conductivity",
+      "value": "3.34",
+      "unit": "× 10 − 2 S/cm",
+      "conditions": "after five-cycle heating/cooling at 30 °C"
+    },
+    {
+      "metric": "proton conductivity",
+      "value": "9.34",
+      "unit": "× 10 − 3 S/cm",
+      "conditions": "after 315 h non-stop test at −30 °C"
+    },
+    {
+      "metric": "proton conductivity",
+      "value": "1.58",
+      "unit": "× 10 − 2 S/cm",
+      "conditions": "after 315 h non-stop test at 0 °C"
+    }
+  ],
+  "eis_shape_findings": [],
+  "arrhenius_vtf_findings": [],
+  "limitations": [],
+  "relevance_judgement": {
+    "score": 0.8,
+    "reason": "The study provides significant insights into proton conductivity at subzero temperatures."
+  },
+  "supports_axes": {
+    "transport": "Grotthuss_hopping",
+    "temperature_dependence": "VTF"
+  },
+  "conflicts_axes": {},
+  "trace_spans": [
+    {
+      "page": null,
+      "section": "",
+      "text_snippet": "Journal of Membrane Science 653 (2022) 120536 Available online 4 April 2022 0376-7388/© 2022 Elsevier B.V. All rights reserved. A R T I C L E  I N F O Keywords:  Carbon dots  Nafion  Layer-by-layer se"
+    },
+    {
+      "page": null,
+      "section": "1. Introduction",
+      "text_snippet": "For achieving the target of the carbon-neutral, various clean energy  sources are experiencing the flourish development. The proton exchange  membrane fuel cell (PEMFC) as a highly efficient energy co"
+    },
+    {
+      "page": null,
+      "section": "Journal of Membrane Science",
+      "text_snippet": "journal homepage:  www.elsevier.com/locate/memsci https://doi.org/10.1016/j.memsci.2022.120536  Received 29 January 2022; Received in revised form 28 March 2022; Accepted 1 April 2022 Journal of Membr"
+    },
+    {
+      "page": null,
+      "section": "2. Experimental",
+      "text_snippet": "2.1. Materials The cationic 30 wt% of PU aqueous dispersion with a molecular  weight of 92,000 was received from Hepce Chem, South Korea. The 5 wt  % of Nafion solution was purchased from Alfa Aesar ("
+    },
+    {
+      "page": null,
+      "section": "3. Results and discussions",
+      "text_snippet": "3.1. Construction of multilayered membranes Fig. 1 (A)  schematically represented the layer by layer self-assembly  process for constructing the (PU/Nafion/PU/CDs) 200  membrane  through alternate dip"
+    }
+  ]
+}

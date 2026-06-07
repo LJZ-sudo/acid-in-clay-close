@@ -1,0 +1,108 @@
+{
+  "paper_id": "manual_3f3cacda8a",
+  "stage_target": "materials",
+  "bibliography": {
+    "title": "Highly ef fi cient self-template synthesis of porous silica nanorods from natural palygorskite",
+    "authors": "",
+    "year": 0
+  },
+  "system_identity": {
+    "base_material": "palygorskite",
+    "dopant": "",
+    "form_factor": "nanorods",
+    "other": "porous silica"
+  },
+  "measurement_scope": {
+    "temp_range": "",
+    "freq_range": "",
+    "humidity": "",
+    "other_conditions": "acid concentration of 2.0 mol/L and 8.0 mol/L"
+  },
+  "mechanism_relevant_findings": [],
+  "numerical_findings": [
+    {
+      "metric": "SiO2 content",
+      "value": 97.84,
+      "unit": "%",
+      "conditions": "at 2.0 mol/L acid concentration"
+    },
+    {
+      "metric": "SiO2 content",
+      "value": 79.92,
+      "unit": "%",
+      "conditions": "normal acid-bleaching process"
+    },
+    {
+      "metric": "SiO2 content",
+      "value": 94.56,
+      "unit": "%",
+      "conditions": "at 8.0 mol/L acid concentration"
+    },
+    {
+      "metric": "specific surface area",
+      "value": 119.39,
+      "unit": "m2/g",
+      "conditions": ""
+    },
+    {
+      "metric": "average pore size",
+      "value": 7.56,
+      "unit": "nm",
+      "conditions": ""
+    },
+    {
+      "metric": "L* value",
+      "value": 86.13,
+      "unit": "",
+      "conditions": ""
+    },
+    {
+      "metric": "a* value",
+      "value": 0.131,
+      "unit": "",
+      "conditions": ""
+    },
+    {
+      "metric": "b* value",
+      "value": 2.801,
+      "unit": "",
+      "conditions": ""
+    }
+  ],
+  "eis_shape_findings": [],
+  "arrhenius_vtf_findings": [],
+  "limitations": [],
+  "relevance_judgement": {
+    "score": 0.0,
+    "reason": "The paper does not provide relevant information on proton transport mechanisms or EIS analysis."
+  },
+  "supports_axes": {},
+  "conflicts_axes": {},
+  "trace_spans": [
+    {
+      "page": null,
+      "section": "Wenbo Wang   a , c , Wenkai Dong   a , b , Guangyan Tian   a , b , Luyi Sun   c , Qin Wang   a , Aiping Hui   a , Bin Mu   a , Aiqin Wang   a , ⁎",
+      "text_snippet": "a  Key Laboratory of Clay Mineral Applied Research of Gansu Province, Center of Eco-material and Green Chemistry, Lanzhou Institute of Chemical Physics, Chinese Academy of Sciences, Lanzhou 730000, PR"
+    },
+    {
+      "page": null,
+      "section": "1. Introduction",
+      "text_snippet": "One-dimensional (1D) silica nanomaterials play a vital role in the areas of functional materials and industries, e.g., catalysts, coating, ceramics, polymer composites, biomedical materials and  fl am"
+    },
+    {
+      "page": null,
+      "section": "Powder Technology",
+      "text_snippet": "journal homepage:  www.elsevier.com/locate/powtec two tetrahedral sheets that are opposite to each other. The special ar- rangement of inverse tetrahedral sheets and discontinuous octahedral sheets re"
+    },
+    {
+      "page": null,
+      "section": "2. Experimental",
+      "text_snippet": "2.1. Materials Palygorskite (Pal) was obtained from Mingguang mine, Mingguang City of Anhui province of China. Its chemical composition is: 56.96% SiO 2 , 13.99% Al 2 O 3 , 9.21% MgO, 9.51% Fe 2 O 3 ,"
+    },
+    {
+      "page": null,
+      "section": "3. Results and discussion",
+      "text_snippet": "3.1. SEM and TEM morphologies Fig. 1  exhibits the SEM images of RPal and the acid-leached Pal with different concentrations of aqueous HCl solutions under hydrothermal and atmospheric conditions, res"
+    }
+  ]
+}

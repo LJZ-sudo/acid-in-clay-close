@@ -1,0 +1,125 @@
+[
+  {
+    "trend_id": "trend::sigma_299K_interp_S_cm::R",
+    "target_metric": "sigma_299K_interp_S_cm",
+    "predictor": "R",
+    "method": "spearman_sample_level",
+    "n_samples": 36,
+    "effect_size": 0.30502011333297224,
+    "p_value": 0.07046446065414085,
+    "ci_low": -0.06518011199421901,
+    "ci_high": 0.5847731278340118,
+    "candidate_transition_points": [
+      {
+        "predictor_value": 0.1521902146952619,
+        "slope_below": 32.053728029329754,
+        "slope_above": 0.15345749546725282,
+        "method": "segmented_regression_brute_force"
+      }
+    ],
+    "strength": "moderate",
+    "limitations": []
+  },
+  {
+    "trend_id": "trend::sigma_299K_interp_S_cm::N",
+    "target_metric": "sigma_299K_interp_S_cm",
+    "predictor": "N",
+    "method": "spearman_sample_level",
+    "n_samples": 36,
+    "effect_size": 0.6093357867761711,
+    "p_value": 8.003195911893122e-05,
+    "ci_low": 0.3418116714611787,
+    "ci_high": 0.7895011157320851,
+    "candidate_transition_points": [
+      {
+        "predictor_value": 4.492933333333334,
+        "slope_below": 0.6951448589269399,
+        "slope_above": 0.05625554355332902,
+        "method": "segmented_regression_brute_force"
+      }
+    ],
+    "strength": "strong",
+    "limitations": []
+  },
+  {
+    "trend_id": "trend::sigma_233K_interp_S_cm::R",
+    "target_metric": "sigma_233K_interp_S_cm",
+    "predictor": "R",
+    "method": "spearman_sample_level",
+    "n_samples": 36,
+    "effect_size": 0.034917966394953676,
+    "p_value": 0.8397796094620794,
+    "ci_low": -0.29479280711452976,
+    "ci_high": 0.3159449393336315,
+    "candidate_transition_points": [
+      {
+        "predictor_value": 0.1712623980890066,
+        "slope_below": -19.442055619320772,
+        "slope_above": -0.178780463244431,
+        "method": "segmented_regression_brute_force"
+      }
+    ],
+    "strength": "moderate",
+    "limitations": []
+  },
+  {
+    "trend_id": "trend::sigma_233K_interp_S_cm::N",
+    "target_metric": "sigma_233K_interp_S_cm",
+    "predictor": "N",
+    "method": "spearman_sample_level",
+    "n_samples": 36,
+    "effect_size": 0.3354043692081863,
+    "p_value": 0.04552708068677093,
+    "ci_low": -0.00544855635229553,
+    "ci_high": 0.603696613328059,
+    "candidate_transition_points": [
+      {
+        "predictor_value": 3.892,
+        "slope_below": -2.9542411931927326,
+        "slope_above": 0.21283050764186726,
+        "method": "segmented_regression_brute_force"
+      }
+    ],
+    "strength": "moderate",
+    "limitations": []
+  },
+  {
+    "trend_id": "trend::best_arrhenius_ea_eV::R",
+    "target_metric": "best_arrhenius_ea_eV",
+    "predictor": "R",
+    "method": "spearman_sample_level",
+    "n_samples": 40,
+    "effect_size": 0.08758061546374586,
+    "p_value": 0.5910062225355314,
+    "ci_low": -0.3058143707855788,
+    "ci_high": 0.44574244268761043,
+    "candidate_transition_points": [
+      {
+        "predictor_value": 0.1521902146952619,
+        "slope_below": 5.255455301445202,
+        "slope_above": 0.0205378706924786,
+        "method": "segmented_regression_brute_force"
+      }
+    ],
+    "strength": "moderate",
+    "limitations": [
+      "best_arrhenius_ea_eV uses single-segment Arrhenius; piecewise/VTF preferences ignored."
+    ]
+  },
+  {
+    "trend_id": "trend::best_arrhenius_ea_eV::N",
+    "target_metric": "best_arrhenius_ea_eV",
+    "predictor": "N",
+    "method": "spearman_sample_level",
+    "n_samples": 40,
+    "effect_size": 0.019504572680692143,
+    "p_value": 0.9049130509446909,
+    "ci_low": -0.3836216103892902,
+    "ci_high": 0.42326267547697105,
+    "candidate_transition_points": [],
+    "strength": "moderate",
+    "limitations": [
+      "best_arrhenius_ea_eV uses single-segment Arrhenius; piecewise/VTF preferences ignored."
+    ]
+  }
+]

@@ -1,0 +1,86 @@
+{
+  "paper_id": "manual_e2d21540be",
+  "stage_target": "mechanism",
+  "bibliography": {
+    "title": "low temperatures. The ionic conductivity undergoes a super- Arrhenius-to-Arrhenius transition at the glass-transition tem- perature. The viscosity measurement reveals that these phosphoric acids are fragile glass-formers with fragility in the range of 95 − 150. The  T g  values determined from both conductivity and viscosity measurements are consistent with the result of previous DSC measurements. We have also con fi rmed that NMR line width analysis indeed overestimates the glass-transition temperature and therefore is not a suitable method for  T g  determination. Finally, our Walden plot analysis indicates that phosphoric acids behave like other aqueous acidic solutions at high temperatures but exhibit moderate decoupling between ionic conductivity and structural dynamics in the vicinity of the glass transition. ■ AUTHOR INFORMATION",
+    "authors": "",
+    "year": 0
+  },
+  "system_identity": {
+    "base_material": "phosphoric acid",
+    "dopant": null,
+    "form_factor": null,
+    "other": null
+  },
+  "measurement_scope": {
+    "temp_range": null,
+    "freq_range": null,
+    "humidity": null,
+    "other_conditions": "H2O:P2O5 ratio of 1.5 - 5"
+  },
+  "mechanism_relevant_findings": [
+    "Phosphoric acids behave like other aqueous acidic solutions at high temperatures but exhibit moderate decoupling between ionic conductivity and structural dynamics in the vicinity of the glass transition.",
+    "There are two principal mechanisms recognized for proton transport in liquids: the vehicle mechanism and the Grotthuss mechanism.",
+    "Proton migration in phosphoric acid is thought to be achieved through the Grotthuss mechanism, characterized by local proton hopping within hydrogen bonds."
+  ],
+  "numerical_findings": [
+    {
+      "metric": "glass-transition temperature",
+      "value": 152,
+      "unit": "K",
+      "conditions": "from electrical conductivity measurement"
+    },
+    {
+      "metric": "fragility",
+      "value": "95-150",
+      "unit": null,
+      "conditions": "viscosity measurement"
+    }
+  ],
+  "eis_shape_findings": [],
+  "arrhenius_vtf_findings": [
+    "The ionic conductivity undergoes a super-Arrhenius-to-Arrhenius transition at the glass-transition temperature."
+  ],
+  "limitations": [
+    "Previous studies on electrical conductivity of phosphoric acids are limited to high temperatures.",
+    "The appropriate method for determining the glass-transition temperature is still a subject of controversy."
+  ],
+  "relevance_judgement": {
+    "score": 0.8,
+    "reason": "The findings provide insightful details on proton mobility mechanisms in phosphoric acids."
+  },
+  "supports_axes": {
+    "transport": "Grotthuss_hopping",
+    "temperature_dependence": "pure_Arrhenius"
+  },
+  "conflicts_axes": {
+    "transport": "vehicular_diffusion"
+  },
+  "trace_spans": [
+    {
+      "page": null,
+      "section": "Ionic Conductivity and Glass Transition of Phosphoric Acids",
+      "text_snippet": "Yangyang Wang, * , †   Nathan A. Lane, §   Che-Nan Sun, ‡   Fei Fan, ∥ Thomas A. Zawodzinski, § , ‡ and Alexei P. Sokolov † , ∥ † Chemical Sciences Division and  ‡ Materials Science and Technology Div"
+    },
+    {
+      "page": null,
+      "section": "1. INTRODUCTION",
+      "text_snippet": "Phosphoric acids (H 3 PO 4 · x H 2 O) are one of the most important acids in modern industry. 1   A tremendous amount of phosphoric acid is produced globally each year, with the majority being used fo"
+    },
+    {
+      "page": null,
+      "section": "2. MATERIALS AND METHODS",
+      "text_snippet": "2.1. Materials.  Before describing the details of sample preparation, we would like to indicate that di ff erent notations have been used in literature to label the concentration of phosphoric acids. "
+    },
+    {
+      "page": null,
+      "section": "3. RESULTS",
+      "text_snippet": "3.1. Dielectric Spectra.  Representative dielectric spectra of phosphoric acids are shown in Figure 1, where the real part of complex conductivity ( σ ′ ), the imaginary part of complex electrical con"
+    },
+    {
+      "page": null,
+      "section": "4. DISCUSSION",
+      "text_snippet": "4.1. Activation Energy of Conductivity Relaxation Below  T g .  To further analyze the ionic transport behavior below  T g , the  τ σ  data are  fi tted by the Arrhenius equation. The activation energ"
+    }
+  ]
+}

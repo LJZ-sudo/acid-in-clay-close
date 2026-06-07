@@ -1,0 +1,33 @@
+{
+  "paper_id": "manual_bcf27aaca9",
+  "stage_target": "mechanism",
+  "bibliography": {
+    "title": "",
+    "authors": "",
+    "year": 0
+  },
+  "system_identity": {
+    "base_material": "",
+    "dopant": "",
+    "form_factor": "",
+    "other": ""
+  },
+  "measurement_scope": {
+    "temp_range": "",
+    "freq_range": "",
+    "humidity": "",
+    "other_conditions": ""
+  },
+  "mechanism_relevant_findings": [],
+  "numerical_findings": [],
+  "eis_shape_findings": [],
+  "arrhenius_vtf_findings": [],
+  "limitations": [],
+  "relevance_judgement": {
+    "score": 0.0,
+    "reason": "No relevant findings on proton transport mechanisms or analyses were provided."
+  },
+  "supports_axes": {},
+  "conflicts_axes": {},
+  "trace_spans": []
+}

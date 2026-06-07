@@ -1,0 +1,281 @@
+{
+  "campaign_name": "Attapulgite_AiCE_Wide_Temp_Optimization",
+  "trials": [
+    {
+      "trial_id": 1,
+      "timestamp": "2026-05-11T00:00:00",
+      "parameters": {
+        "R": 0.186,
+        "N": 1.029
+      },
+      "objectives": {
+        "conductivity_room_temp_S_cm": 0.025498583550434165,
+        "ea_high_temp_eV": 0.07951031348172834,
+        "ea_low_temp_eV": 0.33669330126861324,
+        "ea_low_excess_eV": 0.21742783104602073,
+        "n_segments": 3.0,
+        "combined_score": -1.9407287999780058
+      },
+      "metadata": {
+        "sample_id": "ATA-2026-5-11-R0.186-N1.029",
+        "source": "stage0_measurement",
+        "source_mode": "real",
+        "campaign_slug": "attapulgite_aice_campaign",
+        "ao_folder": "2026.5.11",
+        "roomT_C_actual": 18.0,
+        "formula_version": "v2.combined_score=log10(sigma_room)-3.0*Ea_high-0.5*ea_low_excess_eV",
+        "thickness_cm": 0.088,
+        "thickness_repair": {
+          "applied": false,
+          "factor": 1.0,
+          "original_sigma_S_cm": 0.025498583550434165,
+          "original_combined_score": -1.9407287999780058,
+          "fallback_thickness_used": 0.088,
+          "real_thickness_cm": 0.088,
+          "formula_version": "v2.combined_score=log10(sigma_room)-3.0*Ea_high-0.5*ea_low_excess_eV",
+          "note": "Repaired after bug in process_ao_stage0._parse_geometry (silent fallback to 0.022cm)"
+        }
+      }
+    },
+    {
+      "trial_id": 2,
+      "timestamp": "2026-05-12T00:00:00",
+      "parameters": {
+        "R": 0.35,
+        "N": 0.95
+      },
+      "objectives": {
+        "conductivity_room_temp_S_cm": 0.01845135377697845,
+        "ea_high_temp_eV": 0.14995566291263412,
+        "ea_low_temp_eV": 0.7078764239547537,
+        "ea_low_excess_eV": 0.48294292958580254,
+        "n_segments": 3.0,
+        "combined_score": -2.4253102176534793
+      },
+      "metadata": {
+        "sample_id": "ATA-2026-5-12-R0.35-N0.95",
+        "source": "stage0_measurement",
+        "source_mode": "real",
+        "campaign_slug": "attapulgite_aice_campaign",
+        "ao_folder": "2026.5.12",
+        "roomT_C_actual": 24.0,
+        "formula_version": "v2.combined_score=log10(sigma_room)-3.0*Ea_high-0.5*ea_low_excess_eV",
+        "thickness_cm": 0.1,
+        "thickness_repair": {
+          "applied": true,
+          "factor": 4.545454545454546,
+          "original_sigma_S_cm": 0.004059297830935259,
+          "original_combined_score": -3.082887536831273,
+          "fallback_thickness_used": 0.022,
+          "real_thickness_cm": 0.1,
+          "formula_version": "v2.combined_score=log10(sigma_room)-3.0*Ea_high-0.5*ea_low_excess_eV",
+          "note": "Repaired after bug in process_ao_stage0._parse_geometry (silent fallback to 0.022cm)"
+        }
+      }
+    },
+    {
+      "trial_id": 3,
+      "timestamp": "2026-05-13T00:00:00",
+      "parameters": {
+        "R": 0.62,
+        "N": 0.72
+      },
+      "objectives": {
+        "conductivity_room_temp_S_cm": 0.014103581278080361,
+        "ea_high_temp_eV": 0.21613537050298226,
+        "ea_low_temp_eV": 0.8639348688635252,
+        "ea_low_excess_eV": 0.5397318131090518,
+        "n_segments": 3.0,
+        "combined_score": -2.7689426123710854
+      },
+      "metadata": {
+        "sample_id": "R0.62-N0.72-2",
+        "source": "stage0_measurement",
+        "source_mode": "real",
+        "campaign_slug": "attapulgite_aice_campaign",
+        "ao_folder": "2026.5.13__R0.62-N0.72-2",
+        "roomT_C_actual": 17.0,
+        "formula_version": "v2.combined_score=log10(sigma_room)-3.0*Ea_high-0.5*ea_low_excess_eV",
+        "thickness_cm": 0.0877,
+        "thickness_repair": {
+          "applied": true,
+          "factor": 3.9863636363636368,
+          "original_sigma_S_cm": 0.00353795653498025,
+          "original_combined_score": -3.36951952491492,
+          "fallback_thickness_used": 0.022,
+          "real_thickness_cm": 0.0877,
+          "formula_version": "v2.combined_score=log10(sigma_room)-3.0*Ea_high-0.5*ea_low_excess_eV",
+          "note": "Repaired after bug in process_ao_stage0._parse_geometry (silent fallback to 0.022cm)"
+        }
+      }
+    },
+    {
+      "trial_id": 4,
+      "timestamp": "2026-05-14T00:00:00",
+      "parameters": {
+        "R": 0.5,
+        "N": 0.5
+      },
+      "objectives": {
+        "conductivity_room_temp_S_cm": 0.0026303275389835917,
+        "ea_high_temp_eV": 0.19513061510629912,
+        "ea_low_temp_eV": 0.5706799338963391,
+        "ea_low_excess_eV": 0.2779840112368904,
+        "n_segments": 3.0,
+        "combined_score": -3.3043740189813704
+      },
+      "metadata": {
+        "sample_id": "R0.5-N0.5-2",
+        "source": "stage0_measurement",
+        "source_mode": "real",
+        "campaign_slug": "attapulgite_aice_campaign",
+        "ao_folder": "2026.5.14__R0.5-N0.5-2",
+        "roomT_C_actual": 18.0,
+        "formula_version": "v2.combined_score=log10(sigma_room)-3.0*Ea_high-0.5*ea_low_excess_eV",
+        "thickness_cm": 0.0877,
+        "thickness_repair": {
+          "applied": true,
+          "factor": 3.9863636363636368,
+          "original_sigma_S_cm": 0.000659831309665211,
+          "original_combined_score": -3.904950931525205,
+          "fallback_thickness_used": 0.022,
+          "real_thickness_cm": 0.0877,
+          "formula_version": "v2.combined_score=log10(sigma_room)-3.0*Ea_high-0.5*ea_low_excess_eV",
+          "note": "Repaired after bug in process_ao_stage0._parse_geometry (silent fallback to 0.022cm)"
+        }
+      }
+    },
+    {
+      "trial_id": 5,
+      "timestamp": "2026-05-15T00:00:00",
+      "parameters": {
+        "R": 0.5,
+        "N": 1.2
+      },
+      "objectives": {
+        "conductivity_room_temp_S_cm": 0.045981832332733924,
+        "ea_high_temp_eV": 0.15246822551953204,
+        "ea_low_temp_eV": 0.9538301673494365,
+        "ea_low_excess_eV": 0.7251278290701384,
+        "n_segments": 3.0,
+        "combined_score": -2.1573823175892928
+      },
+      "metadata": {
+        "sample_id": "R0.5-N1.2-2",
+        "source": "stage0_measurement",
+        "source_mode": "real",
+        "campaign_slug": "attapulgite_aice_campaign",
+        "ao_folder": "2026.5.15__R0.5-N1.2-2",
+        "roomT_C_actual": 19.0,
+        "formula_version": "v2.combined_score=log10(sigma_room)-3.0*Ea_high-0.5*ea_low_excess_eV",
+        "thickness_cm": 0.086,
+        "thickness_repair": {
+          "applied": true,
+          "factor": 3.909090909090909,
+          "original_sigma_S_cm": 0.01176279431767612,
+          "original_combined_score": -2.749458088010654,
+          "fallback_thickness_used": 0.022,
+          "real_thickness_cm": 0.086,
+          "formula_version": "v2.combined_score=log10(sigma_room)-3.0*Ea_high-0.5*ea_low_excess_eV",
+          "note": "Repaired after bug in process_ao_stage0._parse_geometry (silent fallback to 0.022cm)"
+        }
+      }
+    },
+    {
+      "trial_id": 6,
+      "timestamp": "2026-05-16T08:05:02.902730",
+      "parameters": {
+        "R": 0.64,
+        "N": 0.58
+      },
+      "objectives": {
+        "conductivity_room_temp_S_cm": 0.00824260856623812,
+        "ea_high_temp_eV": 0.2102309330568004,
+        "ea_low_temp_eV": 0.7923637112166415,
+        "n_segments": 3.0,
+        "ea_low_excess_eV": 0.4770173116314409,
+        "combined_score": -2.9531367788909644
+      },
+      "metadata": {
+        "sample_id": "BO-R0.64-N0.58-7ffv-2",
+        "source": "stage0_measurement",
+        "timestamp": "2026-05-16T08:05:02.902730",
+        "thickness_cm": 0.0882,
+        "thickness_repair": {
+          "applied": true,
+          "factor": 4.00909090909091,
+          "original_sigma_S_cm": 0.002055979460966424,
+          "original_combined_score": -3.556182683200578,
+          "fallback_thickness_used": 0.022,
+          "real_thickness_cm": 0.0882,
+          "formula_version": "v2",
+          "note": "Repaired after bug in process_ao_stage0._parse_geometry (silent fallback to 0.022cm)"
+        }
+      }
+    },
+    {
+      "trial_id": 7,
+      "timestamp": "2026-05-16T23:09:54.274406",
+      "parameters": {
+        "R": 0.2,
+        "N": 1.1
+      },
+      "objectives": {
+        "conductivity_room_temp_S_cm": 0.01929730581986022,
+        "ea_high_temp_eV": 0.06793569213003356,
+        "ea_low_temp_eV": 0.6161550588700853,
+        "n_segments": 3.0,
+        "ea_low_excess_eV": 0.5142515206750349,
+        "combined_score": -2.1754361572143135
+      },
+      "metadata": {
+        "sample_id": "BO-R0.20-N1.10-746i-2",
+        "source": "stage0_measurement",
+        "timestamp": "2026-05-16T23:09:54.274406",
+        "thickness_cm": 0.0831,
+        "thickness_repair": {
+          "applied": true,
+          "factor": 3.7772727272727273,
+          "original_sigma_S_cm": 0.005108793357845064,
+          "original_combined_score": -2.752614500176218,
+          "fallback_thickness_used": 0.022,
+          "real_thickness_cm": 0.0831,
+          "formula_version": "v2",
+          "note": "Repaired after bug in process_ao_stage0._parse_geometry (silent fallback to 0.022cm)"
+        }
+      }
+    },
+    {
+      "trial_id": 8,
+      "timestamp": "2026-05-17T19:01:32.605684",
+      "parameters": {
+        "R": 0.5,
+        "N": 0.9
+      },
+      "objectives": {
+        "conductivity_room_temp_S_cm": 0.03221937196506944,
+        "ea_high_temp_eV": 0.17346737145044494,
+        "ea_low_temp_eV": 0.7926279476911804,
+        "n_segments": 3.0,
+        "ea_low_excess_eV": 0.532426890515513,
+        "combined_score": -2.278498488912704
+      },
+      "metadata": {
+        "sample_id": "BO-R0.50-N0.90-23yp-2",
+        "source": "stage0_measurement",
+        "timestamp": "2026-05-17T19:01:32.605684",
+        "thickness_cm": 0.1033,
+        "thickness_repair": {
+          "applied": true,
+          "factor": 4.695454545454546,
+          "original_sigma_S_cm": 0.006861821715697266,
+          "original_combined_score": -2.950176129610118,
+          "fallback_thickness_used": 0.022,
+          "real_thickness_cm": 0.1033,
+          "formula_version": "v2",
+          "note": "Repaired after bug in process_ao_stage0._parse_geometry (silent fallback to 0.022cm)"
+        }
+      }
+    }
+  ]
+}

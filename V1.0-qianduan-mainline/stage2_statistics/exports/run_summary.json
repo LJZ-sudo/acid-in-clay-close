@@ -1,0 +1,198 @@
+{
+  "input_file": "stage2_statistics\\data\\s8_input.csv",
+  "generated_at": "2026-06-07T15:43:01.755830",
+  "original_data_rows": 1081,
+  "cleaned_data_rows": 1031,
+  "excluded_records": 50,
+  "evidence_summary": {
+    "total_evidences": 56,
+    "by_theme": {
+      "transport_dynamics": 10,
+      "composition_sensitivity": 41,
+      "phase_transition": 5
+    },
+    "by_claim_level": {
+      "observation": 5,
+      "interpretation": 44,
+      "question": 7
+    },
+    "avg_confidence": 0.8507259926765097,
+    "high_confidence_count": 48
+  },
+  "data_profile": {
+    "profiler_name": "DataProfiler",
+    "data_scale": {
+      "total_rows": 1081,
+      "total_columns": 34,
+      "column_names": [
+        "sample_id",
+        "scan_dir",
+        "excel_id",
+        "R",
+        "N",
+        "L_cm",
+        "S_cm2",
+        "T",
+        "T_C",
+        "sigma",
+        "R2",
+        "rb_ohm",
+        "Ea",
+        "sigma0",
+        "ln_sigma0",
+        "T_break",
+        "T_arc",
+        "data_valid",
+        "R_high_freq_ohm",
+        "R_low_freq_ohm",
+        "delta_R_ohm",
+        "R_ratio",
+        "arc_diameter_ohm",
+        "median_zimag_ohm",
+        "arc_visible",
+        "semicircle_visible",
+        "semicircle_quality",
+        "characteristic_frequency",
+        "peak_neg_zimag_ohm",
+        "nyquist_peak_ratio",
+        "nyquist_rising_ratio",
+        "nyquist_falling_ratio",
+        "inv_T_1000",
+        "ln_sigma"
+      ],
+      "R_unique_count": 20,
+      "R_min": 0.0,
+      "R_max": 1.0408163265306123,
+      "R_range": 1.0408163265306123,
+      "R_column": "R",
+      "N_unique_count": 25,
+      "N_min": 1.182,
+      "N_max": 7.005600000000001,
+      "N_range": 5.823600000000001,
+      "N_column": "N",
+      "R_available": true,
+      "N_available": true
+    },
+    "temperature_coverage": {
+      "has_temperature": true,
+      "is_wide_temperature_range": true,
+      "temperature_column": "T",
+      "T_min": 182.15,
+      "T_max": 299.15,
+      "T_range": 116.99999999999997,
+      "T_mean": 252.07136910268272,
+      "T_std": 30.13817433418777,
+      "n_temperature_points": 1081,
+      "has_high_T": true,
+      "high_T_count": 365,
+      "has_low_T": true,
+      "low_T_count": 279,
+      "has_mid_T": true,
+      "mid_T_count": 437
+    },
+    "feature_completeness": {
+      "has_eis_features": true,
+      "eis_feature_columns": [
+        "arc_visible",
+        "semicircle_visible",
+        "characteristic_frequency",
+        "arc_diameter_ohm",
+        "semicircle_quality",
+        "peak_neg_zimag_ohm",
+        "nyquist_peak_ratio",
+        "nyquist_rising_ratio",
+        "nyquist_falling_ratio",
+        "R_high_freq_ohm",
+        "R_low_freq_ohm",
+        "delta_R_ohm",
+        "R_ratio",
+        "rb_ohm"
+      ],
+      "has_activation_energy": true,
+      "has_conductivity": true,
+      "has_composition": true,
+      "n_eis_features": 14,
+      "activation_energy_column": "Ea",
+      "Ea_min": -3.128772248255314,
+      "Ea_max": 1.53692138704735,
+      "Ea_mean": 0.3881806946121267,
+      "n_Ea_points": 1081,
+      "conductivity_column": "sigma",
+      "n_conductivity_points": 1081,
+      "completeness_score": 100
+    },
+    "quality_assessment": {
+      "has_r2": true,
+      "r2_statistics": {
+        "n_points": 1081,
+        "mean": 0.9309051919413847,
+        "std": 0.03649497375197768,
+        "min": 0.6440800206386441,
+        "max": 0.95,
+        "median": 0.95,
+        "q25": 0.8999715327093193,
+        "q75": 0.95
+      },
+      "r2_column": "R2",
+      "high_quality_count": 745,
+      "high_quality_ratio": 0.6891766882516188,
+      "quality_grade": "good",
+      "low_quality_count": 25,
+      "low_quality_ratio": 0.02312673450508788
+    },
+    "warnings": [],
+    "recommendations": [
+      "数据质量良好，可以进行全面的证据挖掘分析"
+    ]
+  },
+  "execution_plan": {
+    "specialists": {
+      "sanity_checker": true,
+      "trend_analyzer": true,
+      "model_competitor": true,
+      "morphology_expert": true,
+      "evidence_synthesizer": true
+    },
+    "plan_summary": "数据包含 1081 个样本，宽温区数据（跨度 117.0 K），包含 14 个 EIS 形貌特征，数据质量为 good，将全量启动所有 5 个分析专家。",
+    "reasons": {
+      "sanity_checker": "数据清洗是所有分析的基础，必须执行",
+      "trend_analyzer": "组分敏感性分析是 S8 材料的核心研究目标，必须执行",
+      "model_competitor": "数据满足宽温区条件（117.0 K > 50.0 K），且高质量数据充足（68.9%），适合进行模型竞争分析",
+      "morphology_expert": "检测到 14 个 EIS 形貌特征，可以进行 EIS-Arrhenius 对齐分析",
+      "evidence_synthesizer": "证据合成是生成高级 Question 的必需步骤，必须执行"
+    },
+    "expected_evidences": {
+      "sanity_checker": [
+        "data_quality",
+        "outlier_detection"
+      ],
+      "trend_analyzer": [
+        "composition_sensitivity",
+        "critical_breakpoint",
+        "nonlinear_trend"
+      ],
+      "model_competitor": [
+        "meyer_neldel",
+        "vtf_preferred",
+        "arrhenius_preferred"
+      ],
+      "morphology_expert": [
+        "eis_arrhenius_alignment",
+        "phase_transition",
+        "structural_reorganization"
+      ],
+      "evidence_synthesizer": [
+        "mechanistic_question",
+        "cross_specialist_synthesis"
+      ]
+    },
+    "total_specialists": 5,
+    "enabled_specialists": 5,
+    "disabled_specialists": 0
+  },
+  "visualization_paths": {
+    "ea_vs_R_trend": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage2_statistics\\exports\\visualizations\\ea_vs_R_trend.png",
+    "meyer_neldel": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage2_statistics\\exports\\visualizations\\meyer_neldel.png",
+    "eis_alignment": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage2_statistics\\exports\\visualizations\\eis_alignment.png"
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "packet_id": "QP-S08-001",
+  "stage_target": "s08_materials",
+  "focus_question": "寻找满足机理描述符的候选材料家族及其质子传导性能文献",
+  "search_queries": [
+    {
+      "query_id": "QT01",
+      "intent": "寻找满足描述符 'Ability to facilitate multi-pathway tran' 的材料家族文献",
+      "query_text": "\"high ionic conductivity structural adaptability\" ionic conductivity membrane",
+      "query_type": "google_scholar",
+      "include_terms": [
+        "high ionic conductivity",
+        "structural adaptability",
+        "proton"
+      ],
+      "exclude_terms": [
+        "Nafion",
+        "SPEEK",
+        "fuel cell"
+      ],
+      "year_hint": "2015-2026",
+      "notes": "关注 family 级别: 多糖类/黏土类/复合凝胶类，不要具体配方"
+    },
+    {
+      "query_id": "QT02",
+      "intent": "寻找满足描述符 'Thermal stability across a range of temp' 的材料家族文献",
+      "query_text": "\"thermal resilience phase stability\" ionic conductivity membrane",
+      "query_type": "google_scholar",
+      "include_terms": [
+        "thermal resilience",
+        "phase stability",
+        "proton"
+      ],
+      "exclude_terms": [
+        "Nafion",
+        "SPEEK",
+        "fuel cell"
+      ],
+      "year_hint": "2015-2026",
+      "notes": "关注 family 级别: 多糖类/黏土类/复合凝胶类，不要具体配方"
+    },
+    {
+      "query_id": "QT03",
+      "intent": "寻找满足描述符 'Ability to undergo molecular rearrangeme' 的材料家族文献",
+      "query_text": "\"flexibility dynamic structural properties\" ionic conductivity membrane",
+      "query_type": "google_scholar",
+      "include_terms": [
+        "flexibility",
+        "dynamic structural properties",
+        "proton"
+      ],
+      "exclude_terms": [
+        "Nafion",
+        "SPEEK",
+        "fuel cell"
+      ],
+      "year_hint": "2015-2026",
+      "notes": "关注 family 级别: 多糖类/黏土类/复合凝胶类，不要具体配方"
+    },
+    {
+      "query_id": "QT04",
+      "intent": "寻找满足描述符 'Facilitation of structural diffusion for' 的材料家族文献",
+      "query_text": "\"porosity connectivity\" ionic conductivity membrane",
+      "query_type": "google_scholar",
+      "include_terms": [
+        "porosity",
+        "connectivity",
+        "proton"
+      ],
+      "exclude_terms": [
+        "Nafion",
+        "SPEEK",
+        "fuel cell"
+      ],
+      "year_hint": "2015-2026",
+      "notes": "关注 family 级别: 多糖类/黏土类/复合凝胶类，不要具体配方"
+    },
+    {
+      "query_id": "QT05",
+      "intent": "寻找满足描述符 'High scalability for various application' 的材料家族文献",
+      "query_text": "\"ease of processing material versatility\" ionic conductivity membrane",
+      "query_type": "google_scholar",
+      "include_terms": [
+        "ease of processing",
+        "material versatility",
+        "proton"
+      ],
+      "exclude_terms": [
+        "Nafion",
+        "SPEEK",
+        "fuel cell"
+      ],
+      "year_hint": "2015-2026",
+      "notes": "关注 family 级别: 多糖类/黏土类/复合凝胶类，不要具体配方"
+    },
+    {
+      "query_id": "QT06",
+      "intent": "多糖基质子交换膜的电导率文献",
+      "query_text": "polysaccharide proton exchange membrane conductivity",
+      "query_type": "google_scholar",
+      "include_terms": [
+        "polysaccharide",
+        "proton",
+        "exchange",
+        "membrane"
+      ],
+      "exclude_terms": [
+        "Nafion",
+        "fuel cell"
+      ],
+      "year_hint": "2015-2026",
+      "notes": null
+    },
+    {
+      "query_id": "QT07",
+      "intent": "黏土-高分子复合材料离子电导率综述",
+      "query_text": "clay polymer composite ionic conductivity review",
+      "query_type": "google_scholar",
+      "include_terms": [
+        "clay",
+        "polymer",
+        "composite",
+        "ionic"
+      ],
+      "exclude_terms": [
+        "Nafion",
+        "fuel cell"
+      ],
+      "year_hint": "2015-2026",
+      "notes": null
+    },
+    {
+      "query_id": "QT08",
+      "intent": "淀粉/磷酸复合质子导体",
+      "query_text": "starch phosphoric acid proton conductor",
+      "query_type": "google_scholar",
+      "include_terms": [
+        "starch",
+        "phosphoric",
+        "acid",
+        "proton"
+      ],
+      "exclude_terms": [
+        "Nafion",
+        "fuel cell"
+      ],
+      "year_hint": "2015-2026",
+      "notes": null
+    },
+    {
+      "query_id": "QT09",
+      "intent": "天然高分子水凝胶的离子电导率温度特性",
+      "query_text": "natural polymer hydrogel ionic conductivity temperature",
+      "query_type": "google_scholar",
+      "include_terms": [
+        "natural",
+        "polymer",
+        "hydrogel",
+        "ionic"
+      ],
+      "exclude_terms": [
+        "Nafion",
+        "fuel cell"
+      ],
+      "year_hint": "2015-2026",
+      "notes": null
+    }
+  ],
+  "screening_notes": [
+    "优先保留: 有电导率数据（S/cm）的论文",
+    "优先保留: 有温度范围和稳定性信息的论文",
+    "优先保留: 天然高分子/黏土/水凝胶类材料",
+    "排除: 纯商用膜（Nafion, SPEEK）的优化研究",
+    "排除: 纯电池极片材料"
+  ],
+  "stop_rule": "每个材料家族至少找到 3 篇相关论文，或连续 8 篇不相关时停止",
+  "generated_from": {
+    "source": "descriptor_sheet",
+    "n_descriptors": 5
+  },
+  "created_at": "2026-04-17T13:07:17.848559+00:00"
+}

@@ -1,0 +1,85 @@
+{
+  "paper_id": "manual_1190463586",
+  "stage_target": "materials",
+  "bibliography": {
+    "title": "Article Composite Proton Exchange Membranes Based on Chitosan and Phosphotungstic Acid Immobilized One-Dimensional Attapulgite for Direct Methanol Fuel Cells",
+    "authors": "",
+    "year": 0
+  },
+  "system_identity": {
+    "base_material": "chitosan",
+    "dopant": "phosphotungstic acid",
+    "form_factor": "composite",
+    "other": "attapulgite"
+  },
+  "measurement_scope": {
+    "temp_range": "80 °C",
+    "freq_range": [],
+    "humidity": [],
+    "other_conditions": "4 wt.% WQAT loading"
+  },
+  "mechanism_relevant_findings": [
+    "The interaction between positively charged CS chains and negatively charged PWA constructs effective proton transport channels with the help of 1D AT.",
+    "The proton conductivity of the composite membrane reached 35.3 mS cm − 1 at 80 °C."
+  ],
+  "numerical_findings": [
+    {
+      "metric": "proton conductivity",
+      "value": 35.3,
+      "unit": "mS cm − 1",
+      "conditions": "at 80 °C, 4 wt.% WQAT loading"
+    },
+    {
+      "metric": "peak power density",
+      "value": 70.26,
+      "unit": "mW cm − 2",
+      "conditions": "fed at 2 M methanol, 4% WQAT content"
+    },
+    {
+      "metric": "peak power density",
+      "value": 40.08,
+      "unit": "mW cm − 2",
+      "conditions": "pure CS membrane"
+    }
+  ],
+  "eis_shape_findings": [],
+  "arrhenius_vtf_findings": [],
+  "limitations": [],
+  "relevance_judgement": {
+    "score": 0.9,
+    "reason": "The study provides significant insights into proton transport mechanisms in composite membranes."
+  },
+  "supports_axes": {
+    "transport": "Grotthuss_hopping",
+    "phase_structure": "single_continuous_phase",
+    "temperature_dependence": "pure_Arrhenius"
+  },
+  "conflicts_axes": {},
+  "trace_spans": [
+    {
+      "page": null,
+      "section": "nanomaterials",
+      "text_snippet": "Wen-Chin Tsen Department of Fashion and Design, Lee-Ming Institute of Technology, New Taipei City 243, Taiwan; charity@mail.lit.edu.tw; Tel.:  + 886-02-29097811 Received: 30 June 2020; Accepted: 19 Au"
+    },
+    {
+      "page": null,
+      "section": "1. Introduction",
+      "text_snippet": "Direct methanol fuel cell (DMFC) is a highly e ffi cient and eco-friendly energy conversion device that can directly convert chemical energy into electrical energy by using liquid methanol as the anod"
+    },
+    {
+      "page": null,
+      "section": "2. Materials and Methods",
+      "text_snippet": "2.1. Materials Attapulgite clay was obtained from the Huaiyuan Mining Industry Co. (Huai’an, Jiangsu Province, China). Chitosan ( M w  =  500 kDa) with a degree of 90% deacetylation was purchased from"
+    },
+    {
+      "page": null,
+      "section": "3. Results and Discussion",
+      "text_snippet": "3.1. Synthesis and Characterization of WQAT The synthesis process of WQAT could be divided into three steps as illustrated in Scheme  1 : The first step is a conventional acid treatment, which can int"
+    },
+    {
+      "page": null,
+      "section": "3. Results and Discussion",
+      "text_snippet": "3.1. Synthesis and Characterization of WQAT The synthesis process of WQAT could be divided into three steps as illustrated in Scheme 1: The  first step is a conventional acid treatment, which can intr"
+    }
+  ]
+}

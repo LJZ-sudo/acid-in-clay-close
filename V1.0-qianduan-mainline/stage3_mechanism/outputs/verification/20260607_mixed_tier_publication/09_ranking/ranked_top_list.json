@@ -1,0 +1,329 @@
+{
+  "step_id": "s10_ranking",
+  "ranked_candidates": [
+    {
+      "rank": 1,
+      "instance_id": "I1",
+      "instance_name": "Starch/PVA/organic-modified attapulgite/phosphoric acid membrane",
+      "total_score": 0.8905,
+      "criteria_scores": [
+        {
+          "criterion_name": "mechanism_fit",
+          "score": 0.84,
+          "weight": 0.2,
+          "rationale": "Transfer mechanism fit from critical descriptors and role coverage."
+        },
+        {
+          "criterion_name": "evidence_quality",
+          "score": 1.0,
+          "weight": 0.18,
+          "rationale": "Claim confidence, quantitative anchors, support-card diversity, and pair count."
+        },
+        {
+          "criterion_name": "formulation_completeness",
+          "score": 1.0,
+          "weight": 0.18,
+          "rationale": "Presence of biopolymer host, film matrix, clay confinement, and acid carrier roles."
+        },
+        {
+          "criterion_name": "low_temperature_plausibility",
+          "score": 0.95,
+          "weight": 0.14,
+          "rationale": "Cold-window plausibility from retention, confinement, clay, and H-bond motifs."
+        },
+        {
+          "criterion_name": "processability",
+          "score": 0.7,
+          "weight": 0.11,
+          "rationale": "Film-forming and water-processable route with penalties for dispersion or brittleness."
+        },
+        {
+          "criterion_name": "novelty",
+          "score": 0.85,
+          "weight": 0.05,
+          "rationale": "Deterministic novelty mapping for novel_combination."
+        },
+        {
+          "criterion_name": "citation_validity",
+          "score": 1.0,
+          "weight": 0.04,
+          "rationale": "Cited literature card ids are present in the S08 material pool."
+        },
+        {
+          "criterion_name": "risk_control",
+          "score": 0.7,
+          "weight": 0.1,
+          "rationale": "Inverse risk score; risk enters the final priority score as a penalty."
+        }
+      ],
+      "ranking_rationale": "Deterministic S10 material-priority ranking from mechanism fit, evidence quality, formulation completeness, low-temperature plausibility, processability, novelty, citation validity, and risk penalties.",
+      "combination_novelty": "novel_combination",
+      "literature_support_card_ids": [
+        "manual_b9c3d1711d",
+        "manual_1190463586",
+        "manual_a16330d0f5"
+      ],
+      "novelty_rationale": "This combines separate starch, PVA, 1-D clay, and phosphoric-acid evidence into a quaternary cold-side membrane rather than copying one S08 formulation.",
+      "risk_summary": "acid leaching must be measured; clay dispersion controls reproducibility"
+    },
+    {
+      "rank": 2,
+      "instance_id": "I2",
+      "instance_name": "Chitosan/organic-modified attapulgite/phosphoric acid composite",
+      "total_score": 0.8435,
+      "criteria_scores": [
+        {
+          "criterion_name": "mechanism_fit",
+          "score": 0.84,
+          "weight": 0.2,
+          "rationale": "Transfer mechanism fit from critical descriptors and role coverage."
+        },
+        {
+          "criterion_name": "evidence_quality",
+          "score": 1.0,
+          "weight": 0.18,
+          "rationale": "Claim confidence, quantitative anchors, support-card diversity, and pair count."
+        },
+        {
+          "criterion_name": "formulation_completeness",
+          "score": 1.0,
+          "weight": 0.18,
+          "rationale": "Presence of biopolymer host, film matrix, clay confinement, and acid carrier roles."
+        },
+        {
+          "criterion_name": "low_temperature_plausibility",
+          "score": 0.75,
+          "weight": 0.14,
+          "rationale": "Cold-window plausibility from retention, confinement, clay, and H-bond motifs."
+        },
+        {
+          "criterion_name": "processability",
+          "score": 0.5,
+          "weight": 0.11,
+          "rationale": "Film-forming and water-processable route with penalties for dispersion or brittleness."
+        },
+        {
+          "criterion_name": "novelty",
+          "score": 0.85,
+          "weight": 0.05,
+          "rationale": "Deterministic novelty mapping for novel_combination."
+        },
+        {
+          "criterion_name": "citation_validity",
+          "score": 1.0,
+          "weight": 0.04,
+          "rationale": "Cited literature card ids are present in the S08 material pool."
+        },
+        {
+          "criterion_name": "risk_control",
+          "score": 0.73,
+          "weight": 0.1,
+          "rationale": "Inverse risk score; risk enters the final priority score as a penalty."
+        }
+      ],
+      "ranking_rationale": "Deterministic S10 material-priority ranking from mechanism fit, evidence quality, formulation completeness, low-temperature plausibility, processability, novelty, citation validity, and risk penalties.",
+      "combination_novelty": "novel_combination",
+      "literature_support_card_ids": [
+        "manual_1190463586",
+        "manual_a16330d0f5"
+      ],
+      "novelty_rationale": "This uses chitosan host evidence with attapulgite confinement and retained phosphoric acid from separate S08 claims, making the combined formulation literature-auditable but not a direct copy.",
+      "risk_summary": "biopolymer swelling may alter percolation; acid loading needs optimisation"
+    },
+    {
+      "rank": 3,
+      "instance_id": "I4",
+      "instance_name": "PAAm-g-starch/phosphoric acid hydrogel electrolyte",
+      "total_score": 0.8345,
+      "criteria_scores": [
+        {
+          "criterion_name": "mechanism_fit",
+          "score": 0.91,
+          "weight": 0.2,
+          "rationale": "Transfer mechanism fit from critical descriptors and role coverage."
+        },
+        {
+          "criterion_name": "evidence_quality",
+          "score": 1.0,
+          "weight": 0.18,
+          "rationale": "Claim confidence, quantitative anchors, support-card diversity, and pair count."
+        },
+        {
+          "criterion_name": "formulation_completeness",
+          "score": 1.0,
+          "weight": 0.18,
+          "rationale": "Presence of biopolymer host, film matrix, clay confinement, and acid carrier roles."
+        },
+        {
+          "criterion_name": "low_temperature_plausibility",
+          "score": 0.75,
+          "weight": 0.14,
+          "rationale": "Cold-window plausibility from retention, confinement, clay, and H-bond motifs."
+        },
+        {
+          "criterion_name": "processability",
+          "score": 0.5,
+          "weight": 0.11,
+          "rationale": "Film-forming and water-processable route with penalties for dispersion or brittleness."
+        },
+        {
+          "criterion_name": "novelty",
+          "score": 0.55,
+          "weight": 0.05,
+          "rationale": "Deterministic novelty mapping for close_variant."
+        },
+        {
+          "criterion_name": "citation_validity",
+          "score": 1.0,
+          "weight": 0.04,
+          "rationale": "Cited literature card ids are present in the S08 material pool."
+        },
+        {
+          "criterion_name": "risk_control",
+          "score": 0.65,
+          "weight": 0.1,
+          "rationale": "Inverse risk score; risk enters the final priority score as a penalty."
+        }
+      ],
+      "ranking_rationale": "Deterministic S10 material-priority ranking from mechanism fit, evidence quality, formulation completeness, low-temperature plausibility, processability, novelty, citation validity, and risk penalties.",
+      "combination_novelty": "close_variant",
+      "literature_support_card_ids": [
+        "manual_a624da98ce",
+        "manual_a16330d0f5",
+        "manual_58ec9a6c2e"
+      ],
+      "novelty_rationale": "This is close to hydrogel acid-retention literature but is retained as an interpretable low-temperature comparison route with explicit component evidence.",
+      "risk_summary": "water content may dominate freezing behaviour; mechanical strength may be low"
+    },
+    {
+      "rank": 4,
+      "instance_id": "I5",
+      "instance_name": "PVA/chitosan/Nb2O5/H3PO4 defect-assisted composite",
+      "total_score": 0.8225,
+      "criteria_scores": [
+        {
+          "criterion_name": "mechanism_fit",
+          "score": 0.84,
+          "weight": 0.2,
+          "rationale": "Transfer mechanism fit from critical descriptors and role coverage."
+        },
+        {
+          "criterion_name": "evidence_quality",
+          "score": 1.0,
+          "weight": 0.18,
+          "rationale": "Claim confidence, quantitative anchors, support-card diversity, and pair count."
+        },
+        {
+          "criterion_name": "formulation_completeness",
+          "score": 1.0,
+          "weight": 0.18,
+          "rationale": "Presence of biopolymer host, film matrix, clay confinement, and acid carrier roles."
+        },
+        {
+          "criterion_name": "low_temperature_plausibility",
+          "score": 0.75,
+          "weight": 0.14,
+          "rationale": "Cold-window plausibility from retention, confinement, clay, and H-bond motifs."
+        },
+        {
+          "criterion_name": "processability",
+          "score": 0.7,
+          "weight": 0.11,
+          "rationale": "Film-forming and water-processable route with penalties for dispersion or brittleness."
+        },
+        {
+          "criterion_name": "novelty",
+          "score": 0.85,
+          "weight": 0.05,
+          "rationale": "Deterministic novelty mapping for novel_combination."
+        },
+        {
+          "criterion_name": "citation_validity",
+          "score": 1.0,
+          "weight": 0.04,
+          "rationale": "Cited literature card ids are present in the S08 material pool."
+        },
+        {
+          "criterion_name": "risk_control",
+          "score": 0.30000000000000004,
+          "weight": 0.1,
+          "rationale": "Inverse risk score; risk enters the final priority score as a penalty."
+        }
+      ],
+      "ranking_rationale": "Deterministic S10 material-priority ranking from mechanism fit, evidence quality, formulation completeness, low-temperature plausibility, processability, novelty, citation validity, and risk penalties.",
+      "combination_novelty": "novel_combination",
+      "literature_support_card_ids": [
+        "manual_b9c3d1711d",
+        "manual_1190463586",
+        "manual_a16330d0f5"
+      ],
+      "novelty_rationale": "This combines PVA film support, chitosan host sites, Nb2O5 free-volume evidence, and phosphoric-acid proton donation across separate component claims to create a distinct defect-assisted route.",
+      "risk_summary": "oxide agglomeration can block conduction; acid-base balance needs screening"
+    },
+    {
+      "rank": 5,
+      "instance_id": "I3",
+      "instance_name": "Halloysite nanotube/phosphoric acid/PVA hybrid membrane",
+      "total_score": 0.772,
+      "criteria_scores": [
+        {
+          "criterion_name": "mechanism_fit",
+          "score": 0.7525,
+          "weight": 0.2,
+          "rationale": "Transfer mechanism fit from critical descriptors and role coverage."
+        },
+        {
+          "criterion_name": "evidence_quality",
+          "score": 1.0,
+          "weight": 0.18,
+          "rationale": "Claim confidence, quantitative anchors, support-card diversity, and pair count."
+        },
+        {
+          "criterion_name": "formulation_completeness",
+          "score": 0.75,
+          "weight": 0.18,
+          "rationale": "Presence of biopolymer host, film matrix, clay confinement, and acid carrier roles."
+        },
+        {
+          "criterion_name": "low_temperature_plausibility",
+          "score": 0.75,
+          "weight": 0.14,
+          "rationale": "Cold-window plausibility from retention, confinement, clay, and H-bond motifs."
+        },
+        {
+          "criterion_name": "processability",
+          "score": 0.6,
+          "weight": 0.11,
+          "rationale": "Film-forming and water-processable route with penalties for dispersion or brittleness."
+        },
+        {
+          "criterion_name": "novelty",
+          "score": 0.85,
+          "weight": 0.05,
+          "rationale": "Deterministic novelty mapping for novel_combination."
+        },
+        {
+          "criterion_name": "citation_validity",
+          "score": 1.0,
+          "weight": 0.04,
+          "rationale": "Cited literature card ids are present in the S08 material pool."
+        },
+        {
+          "criterion_name": "risk_control",
+          "score": 0.53,
+          "weight": 0.1,
+          "rationale": "Inverse risk score; risk enters the final priority score as a penalty."
+        }
+      ],
+      "ranking_rationale": "Deterministic S10 material-priority ranking from mechanism fit, evidence quality, formulation completeness, low-temperature plausibility, processability, novelty, citation validity, and risk penalties.",
+      "combination_novelty": "novel_combination",
+      "literature_support_card_ids": [
+        "manual_a16330d0f5",
+        "manual_b9c3d1711d"
+      ],
+      "novelty_rationale": "This transfers halloysite-confined acid evidence into a PVA-containing film-forming route, differing from the closest single-paper acid-in-clay formulation by the added polymer matrix role.",
+      "risk_summary": "high acid fraction may plasticise the matrix; tube loading must avoid brittleness"
+    }
+  ],
+  "ranking_notes": "Deterministic ranking: total_score equals candidate_audit material_priority_score. Audit gate fields remain in candidate_audit for claim-boundary checks."
+}

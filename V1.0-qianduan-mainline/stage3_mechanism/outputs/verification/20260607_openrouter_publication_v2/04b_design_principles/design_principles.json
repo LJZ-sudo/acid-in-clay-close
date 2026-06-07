@@ -1,0 +1,135 @@
+{
+  "step_id": "s06b_transfer_principles",
+  "principles": [
+    {
+      "principle_id": "P1",
+      "principle_type": "proton_source",
+      "acid_in_clay_origin": "In the acid-in-clay dataset, conductivity correlates much more strongly with overall acid loading than with acid/water ratio, indicating that accessible proton inventory per host volume matters more than precise stoichiometric tuning within the tested range [V2-E2, V2-E4, V2-E1, V2-E3, V2-E13].",
+      "transferable_rule": "When designing hybrid proton conductors, prefer systems that maximize retained and percolating proton-donor loading inside the host network, while keeping the acid distributed as a confined phase rather than as a separable free liquid.",
+      "target_material_descriptor": "Acid-accepting polar hybrid matrix combining an OH-rich polymer phase with an internal high-surface-area inorganic host",
+      "required_validation": [
+        "acid uptake and retention after conditioning",
+        "EIS conductivity versus loading series",
+        "leach resistance under humidity/temperature hold"
+      ],
+      "failure_modes": [
+        "free acid leakage",
+        "interfacial acid pooling",
+        "high loading without connected transport pathways"
+      ],
+      "evidence_ids": [
+        "V2-E2",
+        "V2-E4",
+        "V2-E1",
+        "V2-E3",
+        "V2-E13"
+      ],
+      "mechanism_links": [
+        "M1"
+      ]
+    },
+    {
+      "principle_id": "P2",
+      "principle_type": "confinement_geometry",
+      "acid_in_clay_origin": "The winning mechanism is best explained by proton motion in a nanoconfined acid-water hydrogen-bond network hosted by attapulgite-class clay, with transport dominated by structural relaxation rather than a single fixed barrier [V2-E7, V2-E10, E1].",
+      "transferable_rule": "When selecting an inorganic host, prefer high-aspect-ratio porous or channel-bearing solids that can immobilize a continuous acid-water phase in nanoscale confinement while still permitting long-range pathway connectivity.",
+      "target_material_descriptor": "1-D fibrous or channel-containing hydrated silicate-class inorganic host with high internal surface area and polar adsorption sites",
+      "required_validation": [
+        "SEM/TEM dispersion and network continuity",
+        "sorption or uptake evidence for confined acid-water phase",
+        "EIS thickness dependence and anisotropy checks"
+      ],
+      "failure_modes": [
+        "host agglomeration",
+        "dead-end pores that trap acid without percolation",
+        "macroscopic phase separation between host and matrix"
+      ],
+      "evidence_ids": [
+        "V2-E7",
+        "V2-E10",
+        "E1"
+      ],
+      "mechanism_links": [
+        "M1"
+      ]
+    },
+    {
+      "principle_id": "P3",
+      "principle_type": "bound_water_network",
+      "acid_in_clay_origin": "Transport is overwhelmingly VTF-like across the sample set and shows a broad low-temperature crossover near the 233 K region, consistent with proton mobility being governed by the freezing/relaxation behavior of a confined acid-water hydrogen-bond network rather than by one Arrhenius barrier [V2-E7, V2-E10, V2-E12, V2-E11].",
+      "transferable_rule": "For operation in the 182–299 K window, prefer material combinations that convert bulk-like water into strongly associated bound water within an acid-stabilized hydrogen-bond network so that cooling suppresses crystallization more than it suppresses connectivity.",
+      "target_material_descriptor": "Hydrophilic polymer–inorganic composite capable of forming dense bound-water domains around a retained Brønsted acid phase",
+      "required_validation": [
+        "DSC freezing suppression",
+        "low-temperature EIS continuity",
+        "humidity-controlled conductivity measurements"
+      ],
+      "failure_modes": [
+        "bulk water freezing",
+        "dry-out of the hydrogen-bond network",
+        "temperature-driven collapse of proton pathway continuity"
+      ],
+      "evidence_ids": [
+        "V2-E7",
+        "V2-E10",
+        "V2-E12",
+        "V2-E11"
+      ],
+      "mechanism_links": [
+        "M1"
+      ]
+    },
+    {
+      "principle_id": "P4",
+      "principle_type": "acid_retention",
+      "acid_in_clay_origin": "Because conductivity depends strongly on loading yet the mechanism requires a confined rather than freely mobile acid-water phase, the host must retain acid at internal polar sites instead of allowing a bulk liquid phase to dominate transport [V2-E2, V2-E4, V2-E7, E3].",
+      "transferable_rule": "When incorporating a strong acid into a soft matrix, prefer hosts and polymer functionalities that create multipoint adsorption or coordination of the acid-water ensemble, so proton density rises without sacrificing dimensional or chemical stability.",
+      "target_material_descriptor": "Polar composite framework containing hydrogen-bonding or Lewis-basic anchoring sites adjacent to a nanostructured inorganic scaffold",
+      "required_validation": [
+        "mass loss or leach testing after thermal/humidity exposure",
+        "spectroscopic evidence of acid-host association",
+        "conductivity retention after cycling"
+      ],
+      "failure_modes": [
+        "acid exudation during warming",
+        "corrosion of surrounding components",
+        "conductivity decay from acid redistribution"
+      ],
+      "evidence_ids": [
+        "V2-E2",
+        "V2-E4",
+        "V2-E7",
+        "E3"
+      ],
+      "mechanism_links": [
+        "M1"
+      ]
+    },
+    {
+      "principle_id": "P5",
+      "principle_type": "failure_mode_control",
+      "acid_in_clay_origin": "Impedance morphology is rarely resolved as clear arcs and equivalent-circuit assignment is non-unique, so apparent electrochemical simplicity cannot be used as proof of a single transport process; materials should instead be designed and screened for robust bulk conduction across temperature despite overlapping relaxations [V2-E9, E3, E2].",
+      "transferable_rule": "When optimizing new proton-conducting composites, prefer designs whose performance is stable against interfacial polarization and microstructural heterogeneity, and validate mechanism claims with temperature-dependent transport trends rather than impedance shape alone.",
+      "target_material_descriptor": "Processable composite membrane or pellet system with homogeneous mesoscale dispersion and low susceptibility to electrode-dominated artifacts",
+      "required_validation": [
+        "electrode variation control experiments",
+        "replicate EIS with modulus/formalism cross-checks",
+        "temperature-dependent model comparison"
+      ],
+      "failure_modes": [
+        "misattribution of electrode polarization as bulk transport",
+        "batch-to-batch heterogeneity",
+        "false optimization from morphology artifacts"
+      ],
+      "evidence_ids": [
+        "V2-E9",
+        "E3",
+        "E2"
+      ],
+      "mechanism_links": [
+        "M1"
+      ]
+    }
+  ],
+  "migration_summary": "The acid-in-clay mechanism transfers to biopolymer/clay/H3PO4-type systems by preserving the same functional architecture rather than the exact composition: use a strong proton donor at sufficiently high retained loading, immobilize it inside a high-aspect-ratio nanoconfining inorganic host, and surround that host with a hydrophilic matrix that promotes bound-water continuity instead of bulk water domains. The key design goal is a percolating confined acid-water hydrogen-bond network whose mobility follows host-assisted structural relaxation, giving good conductivity over the cold window without relying on free liquid acid. In practice, this means prioritizing acid retention, nanoscale dispersion, and freezing suppression, while screening out systems that leak acid, segregate water, or show only interfacial rather than true bulk transport."
+}

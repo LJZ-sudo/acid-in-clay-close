@@ -1,0 +1,44 @@
+{
+  "step_id": "s06_mechanism",
+  "mechanism_card": {
+    "selected_hypothesis_id": "H2",
+    "mechanism_label": "Two-population bound-water network with sequential activation",
+    "justification": "H2 best reconciles the strongest evidence layers at once: near-universal VTF preference at the whole-sample level, a nearly universal detectable low-temperature breakpoint, and the large shift from lower apparent activation energies at high/mid temperature to much higher ones at low temperature. That combination is most naturally explained if the attapulgite-confined acid-water electrolyte contains at least two dynamically distinct proton-conducting populations or environments: a more weakly bound, cooperative acid-water network dominating at higher temperature, and a more strongly bound interfacial population that becomes comparatively important after cooling suppresses the mobility of the labile network. This also matches the chemistry of an acid-water system confined in a high-surface-area clay, where interfacial hydrogen-bonding heterogeneity and bound-water fractions are highly plausible. H2 preserves the observed cooperative transport character at high temperature while also explaining why a separate resistive process becomes resolvable on cooling without forcing the entire dataset into a single-transition or purely compensation-law picture.",
+    "confidence": 0.79,
+    "evidence_alignment": [
+      "V2-E7: VTF wins on 39/40 samples, consistent with cooperative transport in the higher-temperature mobile acid-water network rather than a purely Arrhenius single-barrier process.",
+      "V2-E10: The overwhelming VTF asymmetry indicates that the dominant transport channel is not a simple single-hop Arrhenius conductor across the full temperature range, which fits H2's high-T mobile network component.",
+      "V2-E12: A detectable breakpoint in 39/40 samples strongly argues for an additional low-T change in the controlling process; H2 explains this as sequential dominance of weakly bound then strongly bound populations.",
+      "V2-E11: The pooled activation energy increase from about 0.31 eV at high/mid T to about 0.66 eV at low T is consistent with a switch to a more strongly bound, less dynamically reconfigurable population on cooling.",
+      "V2-E2: Conductivity at 299 K correlates strongly with N, consistent with larger liquid loading improving connectivity of the mobile weakly bound acid-water network.",
+      "V2-E4: Conductivity at 233 K still correlates with N but more weakly, consistent with retained importance of available proton-conducting domains even after the mobile fraction is partly suppressed.",
+      "V2-E3: The lack of clear low-T monotonic relation with R suggests that once cooled, conductivity is less controlled by bulk acid stoichiometry alone and more by confinement/interfacial binding heterogeneity, which fits H2 better than a single homogeneous network view.",
+      "V2-E9: Rare but real arc/semicircle visibility is compatible with a secondary process becoming resolvable only in some samples or temperatures, as expected for sequentially activated populations in a heterogeneous confined medium.",
+      "E2: Multiple fitted transport regimes across 40 samples align with H2's multi-threshold confined-domain picture."
+    ],
+    "literature_support": [
+      "manual_7bf378dab7: Structural diffusion in phosphoric acid-water systems depends strongly on water content and can weaken as hydration state changes, supporting distinct transport behavior for differently bound acid-water populations.",
+      "manual_d6329c4fda: Fast proton transport in phosphoric-acid-like hydrogen-bond networks depends on rearrangeable hydrogen bonds, consistent with a mobile high-T population and slower low-T transport when rearrangement is hindered.",
+      "manual_e2d21540be: Phosphoric-acid systems can show decoupling between ionic conductivity and structural dynamics near glass-like slowdown, supporting a crossover from cooperative mobile transport to a more hindered low-T regime.",
+      "manual_99178d5560: Acid-in-clay electrolytes are chemically plausible hosts for confined fast proton carriers, supporting an interfacially heterogeneous confined acid-water transport picture rather than a purely bulk liquid one.",
+      "manual_15d8390320: Confined hydrogen-bonded water wires can retain proton shuttling while their dynamical regime changes strongly with confinement and state, supporting persistence of proton hopping in a more strongly bound low-T population."
+    ],
+    "t_arc_t_break_explanation": "T_break and T_arc need not coincide because they probe different physical observables. T_break is a conductivity-versus-temperature marker extracted from the dominant dc transport pathway, so it identifies where the rate-controlling transport regime changes in the aggregate sample. T_arc, by contrast, is an EIS resolvability marker: it appears when a distinct relaxation time becomes sufficiently separated in frequency from other processes to produce a visible semicircle. In H2, the population crossover can begin to alter dc transport before, after, or over a broader range than the temperature where the interfacial/strongly bound population becomes spectrally resolved as an arc. Thus a dc breakpoint and an EIS arc-emergence temperature are related but not expected to be identical.",
+    "eis_evolution_explanation": "H2 explains the EIS morphology evolution by a combination of (a) and (b). At room and higher temperature, the weakly bound acid-water network is highly mobile and cooperative, so its characteristic relaxation is fast and can collapse into an unresolved high-frequency feature, leaving the Nyquist plot dominated by a low-frequency inclined tail associated with electrode polarization and/or distributed mass-transport-like response. On cooling, the mobile network slows and a more strongly bound interfacial acid-water population becomes comparatively important. Its characteristic relaxation time moves into the measurement window, and a distinct resistive-capacitive process gradually emerges as a mid/high-frequency semicircle, while the low-frequency tail remains. The resulting low-temperature morphology therefore becomes 'semicircle + line'. The semicircle is not taken as proof of one unique circuit element, only as evidence that a previously averaged or too-fast bulk/network/interfacial process has become spectrally resolvable on cooling.",
+    "caveats": [
+      "The evidence does not directly isolate the two populations spectroscopically; H2 is an inference from transport phenomenology, breakpoint ubiquity, and confinement chemistry.",
+      "Because EIS morphology is sparse and heuristic, the semicircle is used only as a resolvability signal and not as definitive proof of a specific interfacial equivalent circuit."
+    ],
+    "rejected_hypotheses": [
+      "H1 rejected: It captures the high-T VTF behavior well, but its single continuous network and single-transition framing is less consistent with the strong evidence for a separate low-T regime with much higher activation energy and with the emergence of a resolvable extra EIS process on cooling.",
+      "H3 rejected: Meyer-Neldel compensation is clearly present at the segment level, but H3 makes compensation the core mechanism and does not explain the dominant whole-sample VTF behavior or the low-T EIS morphology change as naturally as a two-population crossover does.",
+      "H4 rejected: A purely interfacial-shell-dominated mechanism is too restrictive for the strong N dependence at 299 K and for the evidence that a more bulk-like cooperative acid-water network contributes importantly at higher temperature."
+    ],
+    "why_not": [
+      "H1: it would explain the overwhelming whole-sample VTF preference slightly more simply than H2.",
+      "H3: it would explain the very strong segment-level Meyer-Neldel correlation better than H2.",
+      "H4: it would explain a low-temperature interfacial semicircle emergence somewhat more directly than H2."
+    ]
+  },
+  "arbitration_method": "evidence_consistency + literature_weight + eis_evolution_check"
+}

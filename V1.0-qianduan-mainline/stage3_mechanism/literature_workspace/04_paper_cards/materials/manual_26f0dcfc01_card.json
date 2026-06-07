@@ -1,0 +1,83 @@
+{
+  "paper_id": "manual_26f0dcfc01",
+  "stage_target": "materials",
+  "bibliography": {
+    "title": "Journal of Materials Chemistry A",
+    "authors": "",
+    "year": 0
+  },
+  "system_identity": {
+    "base_material": "phosphate glass",
+    "dopant": "NbO5/2, BaO, LaO3/2, GeO2, B2O3",
+    "form_factor": "glass",
+    "other": "36HO1/2 - 4NbO5/2 - 2BaO - 4LaO3/2 - 4GeO2 - 1BO3/2 - 49PO5/2"
+  },
+  "measurement_scope": {
+    "temp_range": "up to 280 °C",
+    "freq_range": null,
+    "humidity": null,
+    "other_conditions": "fuel cell operating conditions"
+  },
+  "mechanism_relevant_findings": [
+    "Phosphate glasses exhibit high proton mobility arising from the strong hydrogen bonding of OH groups.",
+    "The use of electrochemical alkali-proton substitution (APS) results in increased proton conductivity."
+  ],
+  "numerical_findings": [
+    {
+      "metric": "proton conductivity",
+      "value": "1",
+      "unit": "S cm-1",
+      "conditions": "at 280 °C"
+    },
+    {
+      "metric": "concentration of proton carriers",
+      "value": "8",
+      "unit": "10^21 cm-3",
+      "conditions": "for glasses prepared by low temperature melting"
+    }
+  ],
+  "eis_shape_findings": [],
+  "arrhenius_vtf_findings": [
+    "The glass demonstrated stability for a long time at temperatures up to 280 °C indicating potential for Arrhenius behavior."
+  ],
+  "limitations": [
+    "Most previous studies focused on increasing the concentration of proton carriers, while dehydration occurs at temperatures higher than 230 °C."
+  ],
+  "relevance_judgement": {
+    "score": 0.8,
+    "reason": "The findings support the development of intermediate temperature fuel cells utilizing phosphate glasses."
+  },
+  "supports_axes": {
+    "transport": "Grotthuss_hopping",
+    "phase_structure": "single_continuous_phase",
+    "temperature_dependence": "VTF"
+  },
+  "conflicts_axes": {},
+  "trace_spans": [
+    {
+      "page": null,
+      "section": "Proton-conducting phosphate glass and its melt exhibiting high electrical conductivity at intermediate temperatures †",
+      "text_snippet": "Takuya Yamaguchi, ‡ a   Satoshi Tsukuda, a  Tomohiro Ishiyama, b  Junji Nishii, c Toshiharu Yamashita, d   Hiroshi Kawazoe d   and Takahisa Omata * a A working hypothesis to design proton-conducting p"
+    },
+    {
+      "page": null,
+      "section": "1. Introduction",
+      "text_snippet": "Intermediate-temperature fuel cells (ITFCs) that operate at 250 – 500   � C are expected to be next-generation fuel cells because they possess several advantages over current solid oxide fuel cells an"
+    },
+    {
+      "page": null,
+      "section": "PAPER",
+      "text_snippet": "Published on 06 November 2018. Downloaded by Beihang University on 3/24/2026 3:10:41 AM. View Article Online View Journal  | View Issue at a comparatively low melting temperature such as <800   � C. 1"
+    },
+    {
+      "page": null,
+      "section": "2. Working hypothesis and composition design to realize both high proton conductivity and high thermal stability at intermediate temperatures",
+      "text_snippet": "2.1. Glass composition to realize high proton conductivity Both the carrier concentration and carrier mobility need to be high to achieve high proton conductivity, because the conduc- tivity is propor"
+    },
+    {
+      "page": null,
+      "section": "3. Experimental",
+      "text_snippet": "3.1. Preparation of the precursor glass The precursor 36Na-glass was prepared by a standard melt- quenching technique. The 36Na-glass was prepared from reagent-grade Na 2 CO 3 , Nb 2 O 5 , BaCO 3 , La"
+    }
+  ]
+}

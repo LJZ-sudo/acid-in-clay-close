@@ -1,0 +1,77 @@
+{
+  "paper_id": "manual_8d58a81c9e_1",
+  "stage_target": "materials",
+  "bibliography": {
+    "title": "An effective strategy to enhance phosphoric acid retention and proton  conductivity stability: Construction of proton transfer channels with starch  rather than H 3 PO 4",
+    "authors": "Based on the results in this study and the Grotthuss proton transfer mechanism, dense hydrogen-bonds from  oxygen-containing groups in polymer backbones should be more stable than hydrogen-bonds from massive  H 3 PO 4  molecules with high acid doping levels to promote proton conduction.",
+    "year": 0
+  },
+  "system_identity": {
+    "base_material": "poly arylene ether ketones (PAEK)",
+    "dopant": "phosphoric acid (PA)",
+    "form_factor": "biobased composite membranes",
+    "other": "starch, graphene oxide"
+  },
+  "measurement_scope": {
+    "temp_range": "200 °C",
+    "freq_range": [],
+    "humidity": [],
+    "other_conditions": "600 min duration"
+  },
+  "mechanism_relevant_findings": [
+    "Proton conduction is promoted through dense hydrogen bonds formed by oxygen-containing groups in the polymer mainchain.",
+    "PA retention and proton conductivity stability is maintained through low doping levels of phosphoric acid."
+  ],
+  "numerical_findings": [
+    {
+      "metric": "doping level",
+      "value": 0.00484,
+      "unit": "mol H3PO4",
+      "conditions": "extremely low doping level"
+    }
+  ],
+  "eis_shape_findings": [],
+  "arrhenius_vtf_findings": [],
+  "limitations": [
+    "The study does not explore the effects of varying polymer chain configurations on proton conductivity."
+  ],
+  "relevance_judgement": {
+    "score": 0.8,
+    "reason": "The paper provides significant insights into proton transport mechanisms relevant to high temperature applications."
+  },
+  "supports_axes": {
+    "transport": "Grotthuss_hopping",
+    "phase_structure": "single_continuous_phase",
+    "temperature_dependence": "pure_Arrhenius"
+  },
+  "conflicts_axes": {
+    "transport": "vehicular_diffusion"
+  },
+  "trace_spans": [
+    {
+      "page": null,
+      "section": "",
+      "text_snippet": "a  Dalian Key Laboratory of Green Manufacturing Technology for Fine Chemicals Production, College of Environmental and Chemical Engineering, Dalian University,  Dalian, 116622, China b  State Key Labo"
+    },
+    {
+      "page": null,
+      "section": "1. Introduction",
+      "text_snippet": "High temperature proton exchange membrane fuel cells (HT-  PEMFCs) [ 1 – 4 ] have received immense attentions due to their advan­ tage of enhancing catalysts tolerance to CO poisoning, increasing oxyg"
+    },
+    {
+      "page": null,
+      "section": "Polymer Testing",
+      "text_snippet": "journal homepage:  www.elsevier.com/locate/polytest https://doi.org/10.1016/j.polymertesting.2024.108568 Received 21 May 2024; Received in revised form 28 August 2024; Accepted 7 September 2024 Polyme"
+    },
+    {
+      "page": null,
+      "section": "2. Experimental details",
+      "text_snippet": "2.1. Preparation of biobased starch graphene oxide PAEK (st-GO-PAEK)  proton exchange membrane The preparation of St-GO-PAEK proton exchange membranes mainly  includes two steps: solution casting St-G"
+    },
+    {
+      "page": null,
+      "section": "3. Results and discussion",
+      "text_snippet": "3.1. Structure simulation Fig. 1  shows abundant uniformly distributed oxygen-containing  groups in the membrane structure. The membrane overview structure  exhibit abundant uniformly distributed oxyg"
+    }
+  ]
+}

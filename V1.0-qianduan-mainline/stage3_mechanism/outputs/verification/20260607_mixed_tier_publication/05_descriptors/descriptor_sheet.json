@@ -1,0 +1,72 @@
+{
+  "step_id": "s07_descriptors",
+  "descriptors": [
+    {
+      "descriptor_id": "D1",
+      "descriptor_text": "Maintain a continuous, percolated proton-conduction pathway with no disruptive freezing/crystallisation or phase separation across the cold-to-room operating window (~182–299 K).",
+      "mechanism_role": "Prevents loss of macroscopic dc connectivity when the dominant transport population changes; ensures conductivity is measurable and not catastrophically interrupted at low T.",
+      "required_material_features": [
+        "Single connected ionic/hydrogen-bond network spanning the sample",
+        "No sharp first-order transition (freezing/eutectic separation/crystallisation) that breaks percolation within 182–299 K"
+      ],
+      "priority": "critical",
+      "derived_from_mechanism": "H2: two-population bound-water network; dc pathway persists through sequential activation"
+    },
+    {
+      "descriptor_id": "D2",
+      "descriptor_text": "Provide two distinguishable but coupled proton-carrying microenvironments (weakly bound/mobile vs strongly bound/immobilised) that enable sequential activation with cooling, yielding a low-temperature transport regime without total shutdown.",
+      "mechanism_role": "Implements the H2 explanation for VTF-like behavior at higher T and an apparent breakpoint/activation increase at lower T via population crossover rather than a single mechanism collapse.",
+      "required_material_features": [
+        "Heterogeneous hydration/acid-binding landscape (at least two binding-strength populations)",
+        "Coupling/adjacency such that the low-T population can still form a continuous pathway when the high-mobility population becomes less effective"
+      ],
+      "priority": "important",
+      "derived_from_mechanism": "H2: sequential activation / population crossover at T_break"
+    },
+    {
+      "descriptor_id": "D3",
+      "descriptor_text": "Stabilize an acid form (or acid–base/ion-pair speciation) that remains non-crystalline and ionically mobile at sub-zero temperatures, avoiding formation of a rigid pure-acid phase.",
+      "mechanism_role": "Keeps the proton donor/acceptor pool available in the cold regime, supporting the strongly bound network’s conduction when weakly bound water mobility declines.",
+      "required_material_features": [
+        "Acid speciation that resists crystallisation/solidification in ~182–273 K",
+        "Sufficient dissociation/proton availability maintained under confinement and cooling"
+      ],
+      "priority": "critical",
+      "derived_from_mechanism": "H2: low-T regime requires acid/proton reservoir that does not freeze out"
+    },
+    {
+      "descriptor_id": "D4",
+      "descriptor_text": "Retain a bound-water/plasticiser fraction with local mobility (hydrogen-bond rearrangement) down to ~200 K to support Grotthuss-type hopping in the cold regime.",
+      "mechanism_role": "Enables the low-temperature, higher-apparent-Ea transport pathway inferred under H2 when cooperative motion is reduced but not extinguished.",
+      "required_material_features": [
+        "Non-freezing or strongly supercooled bound-water/plasticiser component",
+        "Dense hydrogen-bond donor/acceptor network enabling proton hopping even when translational diffusion is slow"
+      ],
+      "priority": "critical",
+      "derived_from_mechanism": "H2: strongly bound network dominates at low T; requires residual reorientational dynamics"
+    },
+    {
+      "descriptor_id": "D5",
+      "descriptor_text": "Ensure the host matrix remains mechanically compliant or locally flexible (non-glassy/brittle at relevant length scales) below 253 K so that nanoscale ionic pathways do not fracture or disconnect during cooling.",
+      "mechanism_role": "Prevents mechanical vitrification from severing the percolated pathway and supports continuity of the bound-water network through the breakpoint region.",
+      "required_material_features": [
+        "Amorphous/interfacial fraction that retains segmental or interfacial mobility below 253 K",
+        "Thermomechanical robustness against shrinkage-induced microcracking or pore collapse"
+      ],
+      "priority": "important",
+      "derived_from_mechanism": "H2: conductivity breakpoint reflects mobility change, not catastrophic structural failure"
+    },
+    {
+      "descriptor_id": "D6",
+      "descriptor_text": "Constrain and retain the acid–water (or acid–plasticiser) electrolyte within nanometric, high-surface-area domains to promote strong binding, suppress bulk crystallisation, and create continuous interfacial proton-transport channels.",
+      "mechanism_role": "Generates the heterogeneous bound states central to H2 and supports the observed dc transport dominated by an interfacial/confinement-mediated pathway rather than bulk liquid behavior.",
+      "required_material_features": [
+        "High density of polar/ionic surface sites to bind and structure the electrolyte",
+        "Connected nanochannels/pores or interfacial layers that remain filled (low leaching/low segregation) over 182–299 K"
+      ],
+      "priority": "important",
+      "derived_from_mechanism": "H2: confinement-driven two-population bound water/acid network"
+    }
+  ],
+  "extraction_notes": "Descriptors are written to encode the H2 mechanism: a confinement-structured electrolyte with two coupled bound-water/acid populations that cross over near a low-T breakpoint, requiring non-freezing acid speciation, residual bound-water mobility, and cold-to-room percolation continuity (182–299 K)."
+}

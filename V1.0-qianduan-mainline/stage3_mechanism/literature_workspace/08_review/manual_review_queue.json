@@ -1,0 +1,98 @@
+{
+  "review_scope": "top3_literature_support_claims",
+  "n_items": 6,
+  "items": [
+    {
+      "card_id": "MAT1",
+      "title": "Polysaccharide-based proton exchange membranes: a review",
+      "component": "starch",
+      "descriptor_ids": [
+        "D1"
+      ],
+      "quantitative_anchor": "OH-rich polysaccharide backbone",
+      "claim_text": "Starch supplies dense OH H-bond donor/acceptor sites.",
+      "confidence": "supported",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": "",
+      "reason": "Claim is linked to literature cards used by Top-3 ranked candidates."
+    },
+    {
+      "card_id": "MAT1",
+      "title": "Polysaccharide-based proton exchange membranes: a review",
+      "component": "H3PO4",
+      "descriptor_ids": [
+        "D2"
+      ],
+      "quantitative_anchor": "strong acid dopant",
+      "claim_text": "Phosphoric acid supplies mobile protons retained by the matrix.",
+      "confidence": "supported",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": "",
+      "reason": "Claim is linked to literature cards used by Top-3 ranked candidates."
+    },
+    {
+      "card_id": "MAT2",
+      "title": "Clay-polymer composite membranes for proton conduction",
+      "component": "attapulgite",
+      "descriptor_ids": [
+        "D3",
+        "D5"
+      ],
+      "quantitative_anchor": "1-D clay scaffold",
+      "claim_text": "Attapulgite-like 1-D clay provides confinement and leakage control.",
+      "confidence": "supported",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": "",
+      "reason": "Claim is linked to literature cards used by Top-3 ranked candidates."
+    },
+    {
+      "card_id": "MAT2",
+      "title": "Clay-polymer composite membranes for proton conduction",
+      "component": "PVA",
+      "descriptor_ids": [
+        "D4"
+      ],
+      "quantitative_anchor": "film-forming polymer matrix",
+      "claim_text": "PVA improves matrix continuity and processability.",
+      "confidence": "supported",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": "",
+      "reason": "Claim is linked to literature cards used by Top-3 ranked candidates."
+    },
+    {
+      "card_id": "MAT3",
+      "title": "High-amylose starch matrices with tuneable OH density for proton conductors",
+      "component": "starch",
+      "descriptor_ids": [
+        "D1",
+        "D4"
+      ],
+      "quantitative_anchor": "high-amylose starch matrix",
+      "claim_text": "High-amylose starch supports OH-rich and cold-side matrix continuity descriptors.",
+      "confidence": "supported",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": "",
+      "reason": "Claim is linked to literature cards used by Top-3 ranked candidates."
+    },
+    {
+      "card_id": "MAT3",
+      "title": "High-amylose starch matrices with tuneable OH density for proton conductors",
+      "component": "glycerol",
+      "descriptor_ids": [
+        "D4"
+      ],
+      "quantitative_anchor": "plasticiser / freezing suppression motif",
+      "claim_text": "Glycerol-like plasticisation supports cold-window continuity.",
+      "confidence": "supported",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": "",
+      "reason": "Claim is linked to literature cards used by Top-3 ranked candidates."
+    }
+  ]
+}

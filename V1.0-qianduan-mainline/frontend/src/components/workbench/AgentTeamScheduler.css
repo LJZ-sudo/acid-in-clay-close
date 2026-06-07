@@ -1,0 +1,124 @@
+﻿.agent-scheduler-negotiation-strip {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: 8px;
+  align-items: stretch;
+}
+
+.agent-scheduler-negotiation-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 0.65rem;
+  background: #ffffff;
+}
+
+.agent-scheduler-negotiation-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.agent-scheduler-tip {
+  width: 16px;
+  height: 16px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  line-height: 1;
+  border: 1px solid #cbd5e1;
+  color: #334155;
+  background: #f8fafc;
+  cursor: help;
+}
+
+.agent-scheduler-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  font-weight: 700;
+}
+
+.agent-scheduler-pipeline-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 10px;
+}
+
+@media (min-width: 1280px) {
+  .agent-scheduler-pipeline-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.agent-scheduler-node {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 0.65rem;
+  background: #ffffff;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.agent-scheduler-node:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 1px 2px rgba(2, 6, 23, 0.08);
+}
+
+.agent-scheduler-node-active {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.22);
+}
+
+.agent-scheduler-status {
+  font-size: 11px;
+  padding: 0.15rem 0.45rem;
+  border-radius: 9999px;
+  border: 1px solid transparent;
+}
+
+.agent-scheduler-status-idle {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.agent-scheduler-status-running {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.agent-scheduler-status-success {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.agent-scheduler-status-failed {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.agent-scheduler-status-blocked {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.agent-scheduler-warning {
+  font-size: 11px;
+  border-radius: 0.5rem;
+  padding: 0.35rem 0.45rem;
+  background: #fffbeb;
+  color: #92400e;
+  border: 1px solid #fcd34d;
+}
+
+@media (max-width: 1023px) {
+  .agent-scheduler-negotiation-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .agent-scheduler-arrow {
+    display: none;
+  }
+}

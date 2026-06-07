@@ -1,0 +1,63 @@
+{
+  "step_id": "s07_descriptors",
+  "descriptors": [
+    {
+      "descriptor_id": "D1",
+      "descriptor_text": "OH-rich host matrix with dense H-bond donor/acceptor sites operable from 182 K to 299 K",
+      "mechanism_role": "Provides cold-side proton hopping backbone",
+      "required_material_features": [
+        "high OH density",
+        "hydrophilic",
+        "sub-zero bound water"
+      ],
+      "priority": "critical",
+      "derived_from_mechanism": "H4_low_T_Grotthuss"
+    },
+    {
+      "descriptor_id": "D2",
+      "descriptor_text": "Acid anchor sites with moderate retention capacity, resistant to sub-273 K crystallisation",
+      "mechanism_role": "Maintains mobile proton source across the cold-to-room-T window",
+      "required_material_features": [
+        "acid affinity",
+        "low leakage",
+        "no sub-zero crystallisation"
+      ],
+      "priority": "critical",
+      "derived_from_mechanism": "H4_acid_water_reconnection"
+    },
+    {
+      "descriptor_id": "D3",
+      "descriptor_text": "Hydrated 1D scaffold or fibrous filler providing nanometric channel confinement",
+      "mechanism_role": "Confines cold-side proton conduction pathway",
+      "required_material_features": [
+        "1D morphology",
+        "water retention"
+      ],
+      "priority": "important",
+      "derived_from_mechanism": "H4_confined_network"
+    },
+    {
+      "descriptor_id": "D4",
+      "descriptor_text": "Cold-to-room-T matrix continuity: no sharp freezing/crystallisation phase transition inside 182–299 K",
+      "mechanism_role": "Preserves conduction pathway down to ~182 K; anti-freeze co-solvent or low-Tg matrix",
+      "required_material_features": [
+        "no phase transition 182–299 K",
+        "low-Tg or plasticised matrix"
+      ],
+      "priority": "critical",
+      "derived_from_mechanism": "H4_cold_side_requirement"
+    },
+    {
+      "descriptor_id": "D5",
+      "descriptor_text": "Low ionic leakage risk under operational humidification across cold-to-room T",
+      "mechanism_role": "Prevents acid loss degrading long-term cold-side conductivity",
+      "required_material_features": [
+        "low acid vapor pressure",
+        "crosslinking capability"
+      ],
+      "priority": "important",
+      "derived_from_mechanism": "H4_stability"
+    }
+  ],
+  "extraction_notes": "Five descriptors derived from H4 mechanism; explicitly cold-side-oriented (window 182–299 K)."
+}

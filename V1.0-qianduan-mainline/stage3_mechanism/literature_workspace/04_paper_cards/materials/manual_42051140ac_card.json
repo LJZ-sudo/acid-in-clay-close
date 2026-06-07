@@ -1,0 +1,81 @@
+{
+  "paper_id": "manual_42051140ac",
+  "stage_target": "materials",
+  "bibliography": {
+    "title": "Effect of deep eutectic solvent in proton conduction and thermal behaviour of chitosan-based membrane",
+    "authors": "a  Fuel Cell Institute, Universiti Kebangsaan Malaysia, 43600 UKM Bangi, Selangor, Malaysia b  School of Engineering, Taylor's University Lakeside Campus, No. 1, Jalan Taylor's, 47500 Subang Jaya, Selangor, Malaysia c  Graphene & Advanced 2D Materials Research Group (GAMRG), Research Centre for Nano-materials and Energy Technology (RCNMET), School of Science and Technology, Sunway University, No. 5, Jalan Universiti, Bandar Sunway, 47500 Subang Jaya, Selangor, Malaysia",
+    "year": 0
+  },
+  "system_identity": {
+    "base_material": "chitosan",
+    "dopant": "choline chloride (ChCl) and urea based deep eutectic solvent (DES)",
+    "form_factor": "biocomposite membrane",
+    "other": "carboxymethylcellulose (CMC)"
+  },
+  "measurement_scope": {
+    "temp_range": [],
+    "freq_range": [],
+    "humidity": [],
+    "other_conditions": []
+  },
+  "mechanism_relevant_findings": [
+    "The study showed a positive improvement in proton conductivity with DES compared to those without DES.",
+    "The blend film with 75 wt% of chitosan and DES has a low but sufficient water uptake of 49.4% to avoid structural disintegration."
+  ],
+  "numerical_findings": [
+    {
+      "metric": "proton conductivity",
+      "value": 0.0157,
+      "unit": "S/cm",
+      "conditions": "50 wt% chitosan"
+    },
+    {
+      "metric": "proton conductivity",
+      "value": 0.086,
+      "unit": "S/cm",
+      "conditions": "Na fi on-117 membrane"
+    }
+  ],
+  "eis_shape_findings": [],
+  "arrhenius_vtf_findings": [],
+  "limitations": [
+    "The study revealed a slight trade-off on thermal stability with the use of DES."
+  ],
+  "relevance_judgement": {
+    "score": 0.8,
+    "reason": "The findings provide insights into proton conduction mechanisms in chitosan-based membranes."
+  },
+  "supports_axes": {
+    "transport": "Grotthuss_hopping",
+    "phase_structure": "single_continuous_phase",
+    "temperature_dependence": "pure_Arrhenius"
+  },
+  "conflicts_axes": {},
+  "trace_spans": [
+    {
+      "page": null,
+      "section": "a b s t r a c t a r t i c l e i n f o",
+      "text_snippet": "Article history: Received 7 June 2018 Received in revised form 16 August 2018 Accepted 18 August 2018 Available online 20 August 2018 This work aims to study the effect of choline chloride (ChCl) and "
+    },
+    {
+      "page": null,
+      "section": "1. Introduction",
+      "text_snippet": "Chitosan-based membrane has recently been explored as the poten- tial polymer exchange membrane for low-temperature fuel cell applica- tions owing to its advantages of (1) possessing the hydrophilic g"
+    },
+    {
+      "page": null,
+      "section": "Journal of Molecular Liquids",
+      "text_snippet": "journal homepage:  www.elsevier.com/locate/molliq release of mobile charge carries due to the ion dissolution effect [ 5 ]. For instance, Singh et al. [ 6 ] reported the use of polyethylene glycol (PE"
+    },
+    {
+      "page": null,
+      "section": "2. Experimental",
+      "text_snippet": "2.1. Materials Chitosan powder (low-molecular weight) having a viscosity of 20 – 300 cP and carboxymethyl cellulose (CMC) were obtained from Sigma-Aldrich, Malaysia. Choline chloride (ChCl), urea (99."
+    },
+    {
+      "page": null,
+      "section": "3. Results and discussion",
+      "text_snippet": "Fig. 1  shows that the addition of DES has increased the overall  fi lm thickness. The addition of ChCl and urea-based DES was believed to be embedded in between the polymer chains of CMC and chitosan"
+    }
+  ]
+}

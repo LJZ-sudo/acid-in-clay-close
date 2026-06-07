@@ -1,0 +1,94 @@
+{
+  "paper_id": "manual_5f30cb6578",
+  "stage_target": "mechanism",
+  "bibliography": {
+    "title": "Ultrafast Lithium-Ion Transport Engineered by Nanoconfinement Effect",
+    "authors": "",
+    "year": 0
+  },
+  "system_identity": {
+    "base_material": "graphene oxide",
+    "dopant": null,
+    "form_factor": "laminar membrane",
+    "other": "lithium hexafluorophosphate (LiPF6) in organic solvents"
+  },
+  "measurement_scope": {
+    "temp_range": "-60 °C to 25 °C",
+    "freq_range": null,
+    "humidity": null,
+    "other_conditions": null
+  },
+  "mechanism_relevant_findings": [
+    "The enhanced ionic conductivity is attributed to the layer-by-layer cations and anions distribution induced by high surface charge and nanoconfinement effects in graphene oxide nanochannels.",
+    "In basic carbonate liquid electrolytes, the ion conduction behavior primarily relies on the vehicle transport model."
+  ],
+  "numerical_findings": [
+    {
+      "metric": "ionic conductivity",
+      "value": 170,
+      "unit": "mS cm^-1",
+      "conditions": "nanoconfined LiPF6-EC/DMC electrolyte"
+    },
+    {
+      "metric": "ionic conductivity",
+      "value": 11,
+      "unit": "mS cm^-1",
+      "conditions": "at -60 °C"
+    },
+    {
+      "metric": "ionic conductivity",
+      "value": 10,
+      "unit": "mS cm^-1",
+      "conditions": "at 25 °C for traditional electrolytes"
+    },
+    {
+      "metric": "ionic conductivity",
+      "value": 1.0,
+      "unit": "mS cm^-1",
+      "conditions": "at 25 °C for solid-state electrolytes"
+    }
+  ],
+  "eis_shape_findings": [],
+  "arrhenius_vtf_findings": [],
+  "limitations": [
+    "Little is known about the influence of complex organic solvent systems on nanoconfined Li-ion transport and its underlying transport mechanisms."
+  ],
+  "relevance_judgement": {
+    "score": 0.7,
+    "reason": "The study provides insights into the mechanisms enhancing lithium-ion transport which is relevant to proton conduction research."
+  },
+  "supports_axes": {
+    "transport": "Grotthuss_hopping",
+    "temperature_dependence": "pure_Arrhenius"
+  },
+  "conflicts_axes": {
+    "transport": "vehicular_diffusion"
+  },
+  "trace_spans": [
+    {
+      "page": null,
+      "section": "RESEARCH ARTICLE",
+      "text_snippet": "www.advmat.de"
+    },
+    {
+      "page": null,
+      "section": "Yahan Yang, Zefeng Li, Zhilin Yang, Qiannan Zhang, Qian Chen, Yuying Jiao, Zixuan Wang, Xiaokun Zhang, Pengbo Zhai,* Zhimei Sun,* Yong Xiang,* and Yongji Gong*",
+      "text_snippet": "Amid the burgeoning demand for electrochemical energy storage and neuromorphic computing, fast ion transport behavior has attracted widespread attention at both fundamental and practical levels. Here,"
+    },
+    {
+      "page": null,
+      "section": "1. Introduction",
+      "text_snippet": "The fast ion transport is a critical factor for enhancing elec- trochemical energy storage and conversion efficiency and thus Y. Yang, Z. Li, Q. Zhang, Q. Chen, Y. Jiao, Z. Wang, P. Zhai, Z. Sun, Y. G"
+    },
+    {
+      "page": null,
+      "section": "2. Results and Discussion",
+      "text_snippet": "2.1. Synthesis and Characterization of Graphene Oxide Membranes The 2DLMs with an ordered structure are essential for achiev- ing ultrafast interlayer ion transport in nanochannel ( Figure  1 a ). Amo"
+    },
+    {
+      "page": null,
+      "section": "3. Conclusion",
+      "text_snippet": "In summary, through systematic investigation of ion transport behavior in the 2D nanochannel of GOLMs, we achieved ultra- high ionic conductivity typically exceeding 10 2   mS cm − 1 , enhanc- ing tha"
+    }
+  ]
+}

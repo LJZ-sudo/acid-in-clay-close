@@ -1,0 +1,128 @@
+{
+  "method": "ranking_robustness_v2",
+  "status": "ok",
+  "n_candidates": 5,
+  "n_seeds": 200,
+  "rng_seed": 20260501,
+  "weight_jitter_sigma": 0.05,
+  "sub_score_jitter_sigma": 0.02,
+  "source_term_ok_assumed": true,
+  "default_weights": {
+    "mechanism_fit": 0.2,
+    "evidence_quality": 0.18,
+    "formulation_completeness": 0.18,
+    "low_temperature_plausibility": 0.14,
+    "processability": 0.11,
+    "novelty": 0.05,
+    "citation": 0.04,
+    "one_minus_risk": 0.1
+  },
+  "default_top1": "I1",
+  "default_top3": [
+    "I1",
+    "I2",
+    "I3"
+  ],
+  "top1_stability_rate": 1.0,
+  "top3_jaccard_mean": 1.0,
+  "stability_class": "stable",
+  "rank_std_summary": {
+    "mean": 0.3348,
+    "max": 0.485
+  },
+  "unstable_candidates": [],
+  "recommended_wording_hint": "Single-winner wording is allowed with audit caveats.",
+  "spearman_to_default": {
+    "mean": 0.9475,
+    "min": 0.8,
+    "p05": 0.9
+  },
+  "per_candidate": [
+    {
+      "instance_id": "I1",
+      "instance_name": "Starch/PVA/organic-modified attapulgite/phosphoric acid membrane",
+      "default_rank": 1,
+      "default_score": 0.8833,
+      "rank_histogram": [
+        200,
+        0,
+        0,
+        0,
+        0
+      ],
+      "top1_freq": 1.0,
+      "top3_freq": 1.0,
+      "mean_rank": 1.0,
+      "std_rank": 0.0
+    },
+    {
+      "instance_id": "I2",
+      "instance_name": "Chitosan/organic-modified attapulgite/phosphoric acid composite",
+      "default_rank": 2,
+      "default_score": 0.8233,
+      "rank_histogram": [
+        0,
+        124,
+        76,
+        0,
+        0
+      ],
+      "top1_freq": 0.0,
+      "top3_freq": 1.0,
+      "mean_rank": 2.38,
+      "std_rank": 0.485
+    },
+    {
+      "instance_id": "I3",
+      "instance_name": "Halloysite nanotube/phosphoric acid/PVA hybrid membrane",
+      "default_rank": 3,
+      "default_score": 0.8192,
+      "rank_histogram": [
+        0,
+        76,
+        124,
+        0,
+        0
+      ],
+      "top1_freq": 0.0,
+      "top3_freq": 1.0,
+      "mean_rank": 2.62,
+      "std_rank": 0.485
+    },
+    {
+      "instance_id": "I5",
+      "instance_name": "PVA/chitosan/Nb2O5/H3PO4 defect-assisted composite",
+      "default_rank": 4,
+      "default_score": 0.7381,
+      "rank_histogram": [
+        0,
+        0,
+        0,
+        171,
+        29
+      ],
+      "top1_freq": 0.0,
+      "top3_freq": 0.0,
+      "mean_rank": 4.145,
+      "std_rank": 0.352
+    },
+    {
+      "instance_id": "I4",
+      "instance_name": "PAAm-g-starch/phosphoric acid hydrogel electrolyte",
+      "default_rank": 5,
+      "default_score": 0.7078,
+      "rank_histogram": [
+        0,
+        0,
+        0,
+        29,
+        171
+      ],
+      "top1_freq": 0.0,
+      "top3_freq": 0.0,
+      "mean_rank": 4.855,
+      "std_rank": 0.352
+    }
+  ],
+  "interpretation": "top-1 is stable across perturbations (100% of seeds keep the same winner); top-3 Jaccard vs default = 1.00; mean Spearman to default ranks = 0.95."
+}

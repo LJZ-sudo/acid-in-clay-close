@@ -1,0 +1,339 @@
+{
+  "step_id": "s09_instances",
+  "instances": [
+    {
+      "instance_id": "I1",
+      "family_id": "F1",
+      "instance_name": "Starch/PVA/organic-modified attapulgite/phosphoric acid membrane",
+      "composition_description": "starch + poly(vinyl alcohol) (PVA) + chitosan (CS) + phosphoric acid (PA)",
+      "components": [
+        "starch",
+        "poly(vinyl alcohol) (PVA)",
+        "chitosan (CS)",
+        "phosphoric acid (PA)"
+      ],
+      "expected_properties": [
+        "cold_window: bound-water and retained-acid continuity",
+        "processability: water-processable film route",
+        "evidence_basis: component-level D4 claims"
+      ],
+      "risk_flags": [
+        "acid leaching must be measured",
+        "clay dispersion controls reproducibility"
+      ],
+      "combination_novelty": "novel_combination",
+      "element_evidence": [
+        {
+          "component": "starch",
+          "role_in_formulation": "Starch provides a hydrogen-bond donor/acceptor landscape (D6) by forming hydrogen-bond interactions via its OH groups...",
+          "descriptor_satisfied": [
+            "D6"
+          ],
+          "analog_paper_ids": [
+            "manual_1157b11126"
+          ],
+          "analog_reason": "Starch provides a hydrogen-bond donor/acceptor landscape (D6) by forming hydrogen-bond interactions via its OH groups with the blend partner, improving compa..."
+        },
+        {
+          "component": "poly(vinyl alcohol) (PVA)",
+          "role_in_formulation": "Poly(vinyl alcohol) (PVA) provides a hydrogen-bond donor/acceptor landscape (D6) through OH-mediated hydrogen bonding...",
+          "descriptor_satisfied": [
+            "D6"
+          ],
+          "analog_paper_ids": [
+            "manual_1157b11126"
+          ],
+          "analog_reason": "Poly(vinyl alcohol) (PVA) provides a hydrogen-bond donor/acceptor landscape (D6) through OH-mediated hydrogen bonding with starch in the blend (manual_1157b1..."
+        },
+        {
+          "component": "chitosan (CS)",
+          "role_in_formulation": "Chitosan (CS) provides a percolated, acid-interacting scaffold aiding interconnected confinement/transport-channel fo...",
+          "descriptor_satisfied": [
+            "D5"
+          ],
+          "analog_paper_ids": [
+            "manual_1190463586"
+          ],
+          "analog_reason": "Chitosan (CS) provides a percolated, acid-interacting scaffold aiding interconnected confinement/transport-channel formation (D5) and acid immobilisation (D7..."
+        },
+        {
+          "component": "phosphoric acid (PA)",
+          "role_in_formulation": "Phosphoric acid (PA) provides an acid proton source in a deep eutectic (D4), being used as the acid component in a Ch...",
+          "descriptor_satisfied": [
+            "D4"
+          ],
+          "analog_paper_ids": [
+            "manual_1ca1249fc4"
+          ],
+          "analog_reason": "Phosphoric acid (PA) provides an acid proton source in a deep eutectic (D4), being used as the acid component in a ChCl/PA DES electrolyte rather than as a n..."
+        }
+      ],
+      "literature_support_card_ids": [
+        "manual_1157b11126",
+        "manual_1190463586",
+        "manual_1ca1249fc4"
+      ],
+      "novelty_rationale": "This combines separate starch, PVA, 1-D clay, and phosphoric-acid evidence into a quaternary cold-side membrane rather than copying one S08 formulation.",
+      "origin": "llm_selected_from_broad_pool",
+      "source_mode": "broad_literature_pool_selection",
+      "user_candidate_id": null,
+      "design_principle_ids": [],
+      "descriptor_claim_coverage": null
+    },
+    {
+      "instance_id": "I2",
+      "family_id": "F2",
+      "instance_name": "Chitosan/organic-modified attapulgite/phosphoric acid composite",
+      "composition_description": "chitosan (CS) + phosphoric acid (PA)",
+      "components": [
+        "chitosan (CS)",
+        "phosphoric acid (PA)"
+      ],
+      "expected_properties": [
+        "host_sites: chitosan hydrogen-bond matrix",
+        "confinement: fibrous clay compartment",
+        "carrier: retained phosphoric acid"
+      ],
+      "risk_flags": [
+        "biopolymer swelling may alter percolation",
+        "acid loading needs optimisation"
+      ],
+      "combination_novelty": "novel_combination",
+      "element_evidence": [
+        {
+          "component": "chitosan (CS)",
+          "role_in_formulation": "Chitosan (CS) provides a percolated, acid-interacting scaffold aiding interconnected confinement/transport-channel fo...",
+          "descriptor_satisfied": [
+            "D5"
+          ],
+          "analog_paper_ids": [
+            "manual_1190463586"
+          ],
+          "analog_reason": "Chitosan (CS) provides a percolated, acid-interacting scaffold aiding interconnected confinement/transport-channel formation (D5) and acid immobilisation (D7..."
+        },
+        {
+          "component": "phosphoric acid (PA)",
+          "role_in_formulation": "Phosphoric acid (PA) provides an acid proton source in a deep eutectic (D4), being used as the acid component in a Ch...",
+          "descriptor_satisfied": [
+            "D4"
+          ],
+          "analog_paper_ids": [
+            "manual_1ca1249fc4"
+          ],
+          "analog_reason": "Phosphoric acid (PA) provides an acid proton source in a deep eutectic (D4), being used as the acid component in a ChCl/PA DES electrolyte rather than as a n..."
+        }
+      ],
+      "literature_support_card_ids": [
+        "manual_1190463586",
+        "manual_1ca1249fc4"
+      ],
+      "novelty_rationale": "This uses chitosan host evidence with attapulgite confinement and retained phosphoric acid from separate S08 claims, making the combined formulation literature-auditable but not a direct copy.",
+      "origin": "llm_selected_from_broad_pool",
+      "source_mode": "broad_literature_pool_selection",
+      "user_candidate_id": null,
+      "design_principle_ids": [],
+      "descriptor_claim_coverage": null
+    },
+    {
+      "instance_id": "I3",
+      "family_id": "F2",
+      "instance_name": "Halloysite nanotube/phosphoric acid/PVA hybrid membrane",
+      "composition_description": "halloysite nanotubes (HNTs) + phosphoric acid (PA) + poly(vinyl alcohol) (PVA)",
+      "components": [
+        "halloysite nanotubes (HNTs)",
+        "phosphoric acid (PA)",
+        "poly(vinyl alcohol) (PVA)"
+      ],
+      "expected_properties": [
+        "acid_retention: nanotube-confined phosphoric acid",
+        "film_integrity: PVA binder contribution",
+        "transport: packed-acid donor-acceptor network"
+      ],
+      "risk_flags": [
+        "high acid fraction may plasticise the matrix",
+        "tube loading must avoid brittleness"
+      ],
+      "combination_novelty": "novel_combination",
+      "element_evidence": [
+        {
+          "component": "halloysite nanotubes (HNTs)",
+          "role_in_formulation": "Halloysite nanotubes (HNTs) provide nanoconfinement for the conducting fraction: the electrolyte is described as phos...",
+          "descriptor_satisfied": [
+            "D5"
+          ],
+          "analog_paper_ids": [
+            "manual_a16330d0f5"
+          ],
+          "analog_reason": "Halloysite nanotubes (HNTs) provide nanoconfinement for the conducting fraction: the electrolyte is described as phosphoric acid hosted in HNTs (PA@HNTs), im..."
+        },
+        {
+          "component": "phosphoric acid (PA)",
+          "role_in_formulation": "Phosphoric acid (PA) provides an acid proton source in a deep eutectic (D4), being used as the acid component in a Ch...",
+          "descriptor_satisfied": [
+            "D4"
+          ],
+          "analog_paper_ids": [
+            "manual_1ca1249fc4"
+          ],
+          "analog_reason": "Phosphoric acid (PA) provides an acid proton source in a deep eutectic (D4), being used as the acid component in a ChCl/PA DES electrolyte rather than as a n..."
+        },
+        {
+          "component": "poly(vinyl alcohol) (PVA)",
+          "role_in_formulation": "Poly(vinyl alcohol) (PVA) provides a hydrogen-bond donor/acceptor landscape (D6) through OH-mediated hydrogen bonding...",
+          "descriptor_satisfied": [
+            "D6"
+          ],
+          "analog_paper_ids": [
+            "manual_1157b11126"
+          ],
+          "analog_reason": "Poly(vinyl alcohol) (PVA) provides a hydrogen-bond donor/acceptor landscape (D6) through OH-mediated hydrogen bonding with starch in the blend (manual_1157b1..."
+        }
+      ],
+      "literature_support_card_ids": [
+        "manual_a16330d0f5",
+        "manual_1ca1249fc4",
+        "manual_1157b11126"
+      ],
+      "novelty_rationale": "This transfers halloysite-confined acid evidence into a PVA-containing film-forming route, differing from the closest single-paper acid-in-clay formulation by the added polymer matrix role.",
+      "origin": "llm_selected_from_broad_pool",
+      "source_mode": "broad_literature_pool_selection",
+      "user_candidate_id": null,
+      "design_principle_ids": [],
+      "descriptor_claim_coverage": null
+    },
+    {
+      "instance_id": "I4",
+      "family_id": "F3",
+      "instance_name": "PAAm-g-starch/phosphoric acid hydrogel electrolyte",
+      "composition_description": "polyacrylamide-graft-starch (PAAm-g-starch) hydrogel framework + phosphoric acid (PA)",
+      "components": [
+        "polyacrylamide-graft-starch (PAAm-g-starch) hydrogel framework",
+        "phosphoric acid (PA)"
+      ],
+      "expected_properties": [
+        "retention: microporous hydrogel acid uptake",
+        "cold_window: hydrogel continuity motif",
+        "host_sites: starch-containing H-bond network"
+      ],
+      "risk_flags": [
+        "water content may dominate freezing behaviour",
+        "mechanical strength may be low"
+      ],
+      "combination_novelty": "close_variant",
+      "element_evidence": [
+        {
+          "component": "polyacrylamide-graft-starch (PAAm-g-starch) hydrogel framework",
+          "role_in_formulation": "PAAm-g-starch hydrogel framework provides interconnected confinement: it is described as a 3D porous framework with i...",
+          "descriptor_satisfied": [
+            "D5"
+          ],
+          "analog_paper_ids": [
+            "manual_a624da98ce"
+          ],
+          "analog_reason": "PAAm-g-starch hydrogel framework provides interconnected confinement: it is described as a 3D porous framework with interconnected microporous space that abs..."
+        },
+        {
+          "component": "phosphoric acid (PA)",
+          "role_in_formulation": "Phosphoric acid (PA) provides an acid proton source in a deep eutectic (D4), being used as the acid component in a Ch...",
+          "descriptor_satisfied": [
+            "D4"
+          ],
+          "analog_paper_ids": [
+            "manual_1ca1249fc4"
+          ],
+          "analog_reason": "Phosphoric acid (PA) provides an acid proton source in a deep eutectic (D4), being used as the acid component in a ChCl/PA DES electrolyte rather than as a n..."
+        }
+      ],
+      "literature_support_card_ids": [
+        "manual_a624da98ce",
+        "manual_1ca1249fc4"
+      ],
+      "novelty_rationale": "This is close to hydrogel acid-retention literature but is retained as an interpretable low-temperature comparison route with explicit component evidence.",
+      "origin": "llm_selected_from_broad_pool",
+      "source_mode": "broad_literature_pool_selection",
+      "user_candidate_id": null,
+      "design_principle_ids": [],
+      "descriptor_claim_coverage": null
+    },
+    {
+      "instance_id": "I5",
+      "family_id": "F3",
+      "instance_name": "PVA/chitosan/Nb2O5/H3PO4 defect-assisted composite",
+      "composition_description": "poly(vinyl alcohol) (PVA) + chitosan (CS) + Nb2O5 + phosphoric acid (PA)",
+      "components": [
+        "poly(vinyl alcohol) (PVA)",
+        "chitosan (CS)",
+        "Nb2O5",
+        "phosphoric acid (PA)"
+      ],
+      "expected_properties": [
+        "mobility: oxide-induced free volume",
+        "carrier: H3PO4 donor-acceptor sites",
+        "matrix: PVA/chitosan film continuity"
+      ],
+      "risk_flags": [
+        "oxide agglomeration can block conduction",
+        "acid-base balance needs screening"
+      ],
+      "combination_novelty": "novel_combination",
+      "element_evidence": [
+        {
+          "component": "poly(vinyl alcohol) (PVA)",
+          "role_in_formulation": "Poly(vinyl alcohol) (PVA) provides a hydrogen-bond donor/acceptor landscape (D6) through OH-mediated hydrogen bonding...",
+          "descriptor_satisfied": [
+            "D6"
+          ],
+          "analog_paper_ids": [
+            "manual_1157b11126"
+          ],
+          "analog_reason": "Poly(vinyl alcohol) (PVA) provides a hydrogen-bond donor/acceptor landscape (D6) through OH-mediated hydrogen bonding with starch in the blend (manual_1157b1..."
+        },
+        {
+          "component": "chitosan (CS)",
+          "role_in_formulation": "Chitosan (CS) provides a percolated, acid-interacting scaffold aiding interconnected confinement/transport-channel fo...",
+          "descriptor_satisfied": [
+            "D5"
+          ],
+          "analog_paper_ids": [
+            "manual_1190463586"
+          ],
+          "analog_reason": "Chitosan (CS) provides a percolated, acid-interacting scaffold aiding interconnected confinement/transport-channel formation (D5) and acid immobilisation (D7..."
+        },
+        {
+          "component": "Nb2O5",
+          "role_in_formulation": "Nb2O5 provides interconnected nanoconfinement/free-volume disruption: its particle addition is described as creating ...",
+          "descriptor_satisfied": [
+            "D5"
+          ],
+          "analog_paper_ids": [
+            "manual_f5f9ab95ca"
+          ],
+          "analog_reason": "Nb2O5 provides interconnected nanoconfinement/free-volume disruption: its particle addition is described as creating defects and free volume in the polymer m..."
+        },
+        {
+          "component": "phosphoric acid (PA)",
+          "role_in_formulation": "Phosphoric acid (PA) provides an acid proton source in a deep eutectic (D4), being used as the acid component in a Ch...",
+          "descriptor_satisfied": [
+            "D4"
+          ],
+          "analog_paper_ids": [
+            "manual_1ca1249fc4"
+          ],
+          "analog_reason": "Phosphoric acid (PA) provides an acid proton source in a deep eutectic (D4), being used as the acid component in a ChCl/PA DES electrolyte rather than as a n..."
+        }
+      ],
+      "literature_support_card_ids": [
+        "manual_1157b11126",
+        "manual_1190463586",
+        "manual_f5f9ab95ca",
+        "manual_1ca1249fc4"
+      ],
+      "novelty_rationale": "This combines PVA film support, chitosan host sites, Nb2O5 free-volume evidence, and phosphoric-acid proton donation across separate component claims to create a distinct defect-assisted route.",
+      "origin": "llm_selected_from_broad_pool",
+      "source_mode": "broad_literature_pool_selection",
+      "user_candidate_id": null,
+      "design_principle_ids": [],
+      "descriptor_claim_coverage": null
+    }
+  ]
+}

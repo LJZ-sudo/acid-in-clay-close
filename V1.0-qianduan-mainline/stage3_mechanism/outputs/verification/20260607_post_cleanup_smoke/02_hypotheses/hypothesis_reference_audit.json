@@ -1,0 +1,35 @@
+{
+  "valid_evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "V2-E1",
+    "V2-E10",
+    "V2-E11",
+    "V2-E12",
+    "V2-E13",
+    "V2-E2",
+    "V2-E3",
+    "V2-E4",
+    "V2-E5",
+    "V2-E6",
+    "V2-E7",
+    "V2-E8",
+    "V2-E9"
+  ],
+  "invalid_refs": {
+    "H3": {
+      "invalid_supporting_evidence_ids": [
+        "E4"
+      ],
+      "invalid_conflicting_evidence_ids": []
+    },
+    "H4": {
+      "invalid_supporting_evidence_ids": [
+        "E4"
+      ],
+      "invalid_conflicting_evidence_ids": []
+    }
+  },
+  "repair_action": "Invalid supporting/conflicting evidence ids were pruned before downstream arbitration."
+}

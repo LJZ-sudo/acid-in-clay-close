@@ -1,0 +1,99 @@
+{
+  "step_id": "s11_report",
+  "title": "Stage 3 Mechanism & Materials Report (Mock Run)",
+  "sections": [
+    {
+      "section_id": "S1",
+      "title": "Evidence Summary",
+      "content": "Proton transport data across 200-340K shows thermally-activated behavior with at least two distinct Ea regimes per sample. EIS arc disappearance near T_arc=255-268K is heuristic and does not uniquely determine mechanism.",
+      "subsections": []
+    },
+    {
+      "section_id": "S2",
+      "title": "Proposed Mechanism",
+      "content": "Working mechanism: Multi-threshold confined acid-water H-bond reconnection (H4). T_arc reflects interface impedance transition; T_break reflects bulk H-bond network restructuring. These probe different physical processes.",
+      "subsections": []
+    },
+    {
+      "section_id": "S3",
+      "title": "Materials Top List",
+      "content": "Top 3 candidates ranked by mechanism consistency and conductivity potential. Rank 1: 1D-scaffold/OH-polymer/H3PO4. Rank 2: OH-polysaccharide/H3PO4. Rank 3: alternative polysaccharide/H3PO4.",
+      "subsections": []
+    }
+  ],
+  "top_candidates_summary": [
+    {
+      "rank": 1,
+      "name": "1D-scaffold/OH-polymer/H3PO4",
+      "score": 0.82,
+      "literature_support_card_ids": [
+        "MAT2"
+      ]
+    },
+    {
+      "rank": 2,
+      "name": "OH-polysaccharide/H3PO4",
+      "score": 0.79,
+      "literature_support_card_ids": [
+        "MAT1",
+        "MAT3"
+      ]
+    },
+    {
+      "rank": 3,
+      "name": "Alternative polysaccharide/H3PO4",
+      "score": 0.68,
+      "literature_support_card_ids": [
+        "MAT1"
+      ]
+    }
+  ],
+  "eis_disclaimer": "EIS morphology is heuristic only and does not uniquely determine mechanism. All EIS-based interpretations should be treated as contextual hints.",
+  "audit_trail": [
+    {
+      "step_id": "s03",
+      "status": "completed",
+      "notes": "Deterministic evidence extraction"
+    },
+    {
+      "step_id": "s04",
+      "status": "completed",
+      "notes": "4 hypotheses generated"
+    },
+    {
+      "step_id": "s05",
+      "status": "completed",
+      "notes": "2 mechanism literature cards"
+    },
+    {
+      "step_id": "s06",
+      "status": "completed",
+      "notes": "H4 selected"
+    },
+    {
+      "step_id": "s07",
+      "status": "completed",
+      "notes": "5 descriptors extracted"
+    },
+    {
+      "step_id": "s08",
+      "status": "completed",
+      "notes": "3 material literature cards"
+    },
+    {
+      "step_id": "s09",
+      "status": "completed",
+      "notes": "2 families, 3 instances"
+    },
+    {
+      "step_id": "s10",
+      "status": "completed",
+      "notes": "3 ranked candidates"
+    },
+    {
+      "step_id": "s11",
+      "status": "completed",
+      "notes": "Report compiled"
+    }
+  ]
+}

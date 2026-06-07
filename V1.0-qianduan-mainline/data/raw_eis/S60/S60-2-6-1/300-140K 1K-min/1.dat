@@ -1,0 +1,39 @@
+[Header]
+; Copyright 1997-2010, Quantum Design, Inc. All rights reserved.
+FILEOPENTIME,3807518352.133,8/25/2020,11:59 AM
+BYAPP, LogDynaCoolData, 1.0, 2.2
+INFO, APPNAME, DynaCool MultiVu Application, Release 1.2.5.1
+FIELDGROUP, Standard,2,3,4,5,6,7,8,9,11,10
+FIELDGROUP, Diagnostic,2,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33
+FIELDGROUP, User,2,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65
+STARTUPGROUP, All
+STARTUPAXIS, X, 2, LINEAR, AUTO
+STARTUPAXIS, Y1, 3, LINEAR, AUTO
+TIMEMODE, MINUTES, RELATIVE
+PLOT_APPEARANCE, ALL, HORZ_GRID_ON, VERT_GRID_ON, MARKERS_AND_LINES, ALL_LINES
+RECORDS, ALL_RECORDS
+DATATYPE, TIME, 2
+DATATYPE, COMMENT, 1
+[Data]
+Comment,Time Stamp (sec),Temperature (K),Magnetic Field (Oe),System Pres (Torr),Chamber Status (code),Temperature Status (code),Field Status (code),Cryostat Status (code),Control Therm (ID),Sample Therm (ID),Block Temp (K),Neck Temp (K),High Neck Temp (K),Control Temp (K),1st Stage Temp (K),2nd Stage Temp (K),Magnet Temp (K),Impedance Temp (K),Pot Liquid level (%),Block Power (W),Neck Heater Power (W),High Neck Heater Power (W),1st Stage Heater Power (W),2nd Stage Heater Power (W),Magnet Voltage (V),Impedance Heater Power (W),Pot Power (W),CFE Flow (SCCM),Pump Flow (uncal SCCM),Tank Pressure (Torr),Annulus Pressure (Torr),Compressor State (code),Channel 1,Channel 2,Channel 3,Channel 4,Channel 5,Channel 6,Channel 7,Channel 8,Channel 9,Channel 10,Channel 11,Channel 12,Channel 13,Channel 14,Channel 15,Channel 16
+,3807518352.14,299.9987,,,,,,,,
+,3807518352.14,299.9987,,,,,,,,
+,3807518368.18,299.8431,,,,,,,,
+,3807518388.22,299.5002,,,,,,,,
+,3807518408.30,299.1496,,,,,,,,
+,3807518428.32,298.7902,,,,,,,,
+,3807518448.34,298.4409,,,,,,,,
+,3807518468.35,298.0947,,,,,,,,
+,3807518488.42,297.7591,,,,,,,,
+,3807518508.47,297.4197,,,,,,,,
+,3807518528.51,297.091,,,,,,,,
+,3807518548.52,296.7607,,,,,,,,
+,3807518568.54,296.437,,,,,,,,
+,3807518588.56,296.1086,,,,,,,,
+,3807518608.58,295.7791,,,,,,,,
+,3807518628.60,295.4405,,,,,,,,
+,3807518648.61,295.1086,,,,,,,,
+,3807518668.63,294.778,,,,,,,,
+,3807518688.64,294.4512,,,,,,,,
+,3807518708.64,294.1111,,,,,,,,
+,3807518728.66,293.7849,,,,,,,,

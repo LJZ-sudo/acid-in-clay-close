@@ -1,0 +1,452 @@
+[
+  {
+    "row_index":60,
+    "sample_id":"S8-3-1-1",
+    "rule_id":"invalid_ea",
+    "column":"Ea",
+    "value":0.0387896861,
+    "threshold":"[0.1, 2.0]",
+    "reason":"Ea 超出配置的物理合理范围"
+  },
+  {
+    "row_index":61,
+    "sample_id":"S8-3-1-1",
+    "rule_id":"invalid_ea",
+    "column":"Ea",
+    "value":0.0387896861,
+    "threshold":"[0.1, 2.0]",
+    "reason":"Ea 超出配置的物理合理范围"
+  },
+  {
+    "row_index":62,
+    "sample_id":"S8-3-1-1",
+    "rule_id":"invalid_ea",
+    "column":"Ea",
+    "value":0.0387896861,
+    "threshold":"[0.1, 2.0]",
+    "reason":"Ea 超出配置的物理合理范围"
+  },
+  {
+    "row_index":93,
+    "sample_id":"S8-3-10-1",
+    "rule_id":"low_r2",
+    "column":"R2",
+    "value":0.7554795114,
+    "threshold":">= 0.8",
+    "reason":"R2 低于拟合质量阈值"
+  },
+  {
+    "row_index":133,
+    "sample_id":"S8-3-11-1",
+    "rule_id":"low_r2",
+    "column":"R2",
+    "value":0.7824315805,
+    "threshold":">= 0.8",
+    "reason":"R2 低于拟合质量阈值"
+  },
+  {
+    "row_index":134,
+    "sample_id":"S8-3-11-1",
+    "rule_id":"low_r2",
+    "column":"R2",
+    "value":0.7488638824,
+    "threshold":">= 0.8",
+    "reason":"R2 低于拟合质量阈值"
+  },
+  {
+    "row_index":135,
+    "sample_id":"S8-3-11-1",
+    "rule_id":"low_r2",
+    "column":"R2",
+    "value":0.7084060734,
+    "threshold":">= 0.8",
+    "reason":"R2 低于拟合质量阈值"
+  },
+  {
+    "row_index":136,
+    "sample_id":"S8-3-11-1",
+    "rule_id":"low_r2",
+    "column":"R2",
+    "value":0.6440800206,
+    "threshold":">= 0.8",
+    "reason":"R2 低于拟合质量阈值"
+  },
+  {
+    "row_index":230,
+    "sample_id":"S8-3-11-2",
+    "rule_id":"low_r2",
+    "column":"R2",
+    "value":0.7445182646,
+    "threshold":">= 0.8",
+    "reason":"R2 低于拟合质量阈值"
+  },
+  {
+    "row_index":271,
+    "sample_id":"S8-3-2-1",
+    "rule_id":"low_r2",
+    "column":"R2",
+    "value":0.795315206,
+    "threshold":">= 0.8",
+    "reason":"R2 低于拟合质量阈值"
+  },
+  {
+    "row_index":272,
+    "sample_id":"S8-3-2-1",
+    "rule_id":"low_r2",
+    "column":"R2",
+    "value":0.660239859,
+    "threshold":">= 0.8",
+    "reason":"R2 低于拟合质量阈值"
+  },
+  {
+    "row_index":317,
+    "sample_id":"S8-3-2-2",
+    "rule_id":"invalid_ea",
+    "column":"Ea",
+    "value":-0.1977458048,
+    "threshold":"[0.1, 2.0]",
+    "reason":"Ea 超出配置的物理合理范围"
+  },
+  {
+    "row_index":318,
+    "sample_id":"S8-3-2-2",
+    "rule_id":"invalid_ea",
+    "column":"Ea",
+    "value":-0.1977458048,
+    "threshold":"[0.1, 2.0]",
+    "reason":"Ea 超出配置的物理合理范围"
+  },
+  {
+    "row_index":319,
+    "sample_id":"S8-3-2-2",
+    "rule_id":"invalid_ea",
+    "column":"Ea",
+    "value":-0.1977458048,
+    "threshold":"[0.1, 2.0]",
+    "reason":"Ea 超出配置的物理合理范围"
+  },
+  {
+    "row_index":320,
+    "sample_id":"S8-3-2-2",
+    "rule_id":"invalid_ea",
+    "column":"Ea",
+    "value":-0.1977458048,
+    "threshold":"[0.1, 2.0]",
+    "reason":"Ea 超出配置的物理合理范围"
+  },
+  {
+    "row_index":321,
+    "sample_id":"S8-3-2-2",
+    "rule_id":"invalid_ea",
+    "column":"Ea",
+    "value":-0.1977458048,
+    "threshold":"[0.1, 2.0]",
+    "reason":"Ea 超出配置的物理合理范围"
+  },
+  {
+    "row_index":322,
+    "sample_id":"S8-3-2-2",
+    "rule_id":"invalid_ea",
+    "column":"Ea",
+    "value":-0.1977458048,
+    "threshold":"[0.1, 2.0]",
+    "reason":"Ea 超出配置的物理合理范围"
+  },
+  {
+    "row_index":361,
+    "sample_id":"S8-3-20-1-1",
+    "rule_id":"low_r2",
+    "column":"R2",
+    "value":0.7325000686,
+    "threshold":">= 0.8",
+    "reason":"R2 低于拟合质量阈值"
+  },
+  {
+    "row_index":400,
+    "sample_id":"S8-3-21-1-1",
+    "rule_id":"low_r2",
+    "column":"R2",
+    "value":0.7971555657,
+    "threshold":">= 0.8",
+    "reason":"R2 低于拟合质量阈值"
+  },
+  {
+    "row_index":436,
+    "sample_id":"S8-3-22-1-1",
+    "rule_id":"low_r2",
+    "column":"R2",
+    "value":0.7400485563,
+    "threshold":">= 0.8",
+    "reason":"R2 低于拟合质量阈值"
+  },
+  {
+    "row_index":500,
+    "sample_id":"S8-3-25-1-1",
+    "rule_id":"low_r2",
+    "column":"R2",
+    "value":0.7319516732,
+    "threshold":">= 0.8",
+    "reason":"R2 低于拟合质量阈值"
+  },
+  {
+    "row_index":544,
+    "sample_id":"S8-3-28-1-1",
+    "rule_id":"low_r2",
+    "column":"R2",
+    "value":0.7664403282,
+    "threshold":">= 0.8",
+    "reason":"R2 低于拟合质量阈值"
+  },
+  {
+    "row_index":600,
+    "sample_id":"S8-3-31-1-1",
+    "rule_id":"low_r2",
+    "column":"R2",
+    "value":0.7759916508,
+    "threshold":">= 0.8",
+    "reason":"R2 低于拟合质量阈值"
+  },
+  {
+    "row_index":640,
+    "sample_id":"S8-3-32-1-1",
+    "rule_id":"low_r2",
+    "column":"R2",
+    "value":0.7255526871,
+    "threshold":">= 0.8",
+    "reason":"R2 低于拟合质量阈值"
+  },
+  {
+    "row_index":678,
+    "sample_id":"S8-3-33-1-1",
+    "rule_id":"low_r2",
+    "column":"R2",
+    "value":0.7906995168,
+    "threshold":">= 0.8",
+    "reason":"R2 低于拟合质量阈值"
+  },
+  {
+    "row_index":716,
+    "sample_id":"S8-3-35-1-1",
+    "rule_id":"low_r2",
+    "column":"R2",
+    "value":0.7035713106,
+    "threshold":">= 0.8",
+    "reason":"R2 低于拟合质量阈值"
+  },
+  {
+    "row_index":759,
+    "sample_id":"S8-3-37-1-1",
+    "rule_id":"invalid_ea",
+    "column":"Ea",
+    "value":0.0478241184,
+    "threshold":"[0.1, 2.0]",
+    "reason":"Ea 超出配置的物理合理范围"
+  },
+  {
+    "row_index":760,
+    "sample_id":"S8-3-37-1-1",
+    "rule_id":"invalid_ea",
+    "column":"Ea",
+    "value":0.0478241184,
+    "threshold":"[0.1, 2.0]",
+    "reason":"Ea 超出配置的物理合理范围"
+  },
+  {
+    "row_index":761,
+    "sample_id":"S8-3-37-1-1",
+    "rule_id":"invalid_ea",
+    "column":"Ea",
+    "value":0.0478241184,
+    "threshold":"[0.1, 2.0]",
+    "reason":"Ea 超出配置的物理合理范围"
+  },
+  {
+    "row_index":762,
+    "sample_id":"S8-3-37-1-1",
+    "rule_id":"invalid_ea",
+    "column":"Ea",
+    "value":0.0478241184,
+    "threshold":"[0.1, 2.0]",
+    "reason":"Ea 超出配置的物理合理范围"
+  },
+  {
+    "row_index":763,
+    "sample_id":"S8-3-37-1-1",
+    "rule_id":"invalid_ea",
+    "column":"Ea",
+    "value":0.0478241184,
+    "threshold":"[0.1, 2.0]",
+    "reason":"Ea 超出配置的物理合理范围"
+  },
+  {
+    "row_index":764,
+    "sample_id":"S8-3-37-1-1",
+    "rule_id":"invalid_ea",
+    "column":"Ea",
+    "value":0.0478241184,
+    "threshold":"[0.1, 2.0]",
+    "reason":"Ea 超出配置的物理合理范围"
+  },
+  {
+    "row_index":765,
+    "sample_id":"S8-3-37-1-1",
+    "rule_id":"invalid_ea",
+    "column":"Ea",
+    "value":0.0478241184,
+    "threshold":"[0.1, 2.0]",
+    "reason":"Ea 超出配置的物理合理范围"
+  },
+  {
+    "row_index":766,
+    "sample_id":"S8-3-37-1-1",
+    "rule_id":"invalid_ea",
+    "column":"Ea",
+    "value":0.0478241184,
+    "threshold":"[0.1, 2.0]",
+    "reason":"Ea 超出配置的物理合理范围"
+  },
+  {
+    "row_index":767,
+    "sample_id":"S8-3-37-1-1",
+    "rule_id":"invalid_ea",
+    "column":"Ea",
+    "value":0.0478241184,
+    "threshold":"[0.1, 2.0]",
+    "reason":"Ea 超出配置的物理合理范围"
+  },
+  {
+    "row_index":768,
+    "sample_id":"S8-3-37-1-1",
+    "rule_id":"invalid_ea",
+    "column":"Ea",
+    "value":0.0478241184,
+    "threshold":"[0.1, 2.0]",
+    "reason":"Ea 超出配置的物理合理范围"
+  },
+  {
+    "row_index":769,
+    "sample_id":"S8-3-37-1-1",
+    "rule_id":"invalid_ea",
+    "column":"Ea",
+    "value":-3.1287722483,
+    "threshold":"[0.1, 2.0]",
+    "reason":"Ea 超出配置的物理合理范围"
+  },
+  {
+    "row_index":770,
+    "sample_id":"S8-3-37-1-1",
+    "rule_id":"invalid_ea",
+    "column":"Ea",
+    "value":-3.1287722483,
+    "threshold":"[0.1, 2.0]",
+    "reason":"Ea 超出配置的物理合理范围"
+  },
+  {
+    "row_index":771,
+    "sample_id":"S8-3-38-1-1",
+    "rule_id":"low_r2",
+    "column":"R2",
+    "value":0.7932487374,
+    "threshold":">= 0.8",
+    "reason":"R2 低于拟合质量阈值"
+  },
+  {
+    "row_index":818,
+    "sample_id":"S8-3-4-1",
+    "rule_id":"invalid_ea",
+    "column":"Ea",
+    "value":0.0741003152,
+    "threshold":"[0.1, 2.0]",
+    "reason":"Ea 超出配置的物理合理范围"
+  },
+  {
+    "row_index":819,
+    "sample_id":"S8-3-4-1",
+    "rule_id":"invalid_ea",
+    "column":"Ea",
+    "value":0.0741003152,
+    "threshold":"[0.1, 2.0]",
+    "reason":"Ea 超出配置的物理合理范围"
+  },
+  {
+    "row_index":820,
+    "sample_id":"S8-3-4-1",
+    "rule_id":"invalid_ea",
+    "column":"Ea",
+    "value":0.0741003152,
+    "threshold":"[0.1, 2.0]",
+    "reason":"Ea 超出配置的物理合理范围"
+  },
+  {
+    "row_index":821,
+    "sample_id":"S8-3-4-1",
+    "rule_id":"invalid_ea",
+    "column":"Ea",
+    "value":0.0741003152,
+    "threshold":"[0.1, 2.0]",
+    "reason":"Ea 超出配置的物理合理范围"
+  },
+  {
+    "row_index":822,
+    "sample_id":"S8-3-4-1",
+    "rule_id":"invalid_ea",
+    "column":"Ea",
+    "value":0.0741003152,
+    "threshold":"[0.1, 2.0]",
+    "reason":"Ea 超出配置的物理合理范围"
+  },
+  {
+    "row_index":823,
+    "sample_id":"S8-3-4-1",
+    "rule_id":"invalid_ea",
+    "column":"Ea",
+    "value":0.0741003152,
+    "threshold":"[0.1, 2.0]",
+    "reason":"Ea 超出配置的物理合理范围"
+  },
+  {
+    "row_index":837,
+    "sample_id":"S8-3-6-1",
+    "rule_id":"low_r2",
+    "column":"R2",
+    "value":0.7607411471,
+    "threshold":">= 0.8",
+    "reason":"R2 低于拟合质量阈值"
+  },
+  {
+    "row_index":857,
+    "sample_id":"S8-3-6-2",
+    "rule_id":"low_r2",
+    "column":"R2",
+    "value":0.7727262861,
+    "threshold":">= 0.8",
+    "reason":"R2 低于拟合质量阈值"
+  },
+  {
+    "row_index":907,
+    "sample_id":"S8-3-7-1",
+    "rule_id":"low_r2",
+    "column":"R2",
+    "value":0.7789931183,
+    "threshold":">= 0.8",
+    "reason":"R2 低于拟合质量阈值"
+  },
+  {
+    "row_index":996,
+    "sample_id":"S8-3-9-2",
+    "rule_id":"low_r2",
+    "column":"R2",
+    "value":0.721514322,
+    "threshold":">= 0.8",
+    "reason":"R2 低于拟合质量阈值"
+  },
+  {
+    "row_index":1032,
+    "sample_id":"S8-3-9-3",
+    "rule_id":"low_r2",
+    "column":"R2",
+    "value":0.7054029546,
+    "threshold":">= 0.8",
+    "reason":"R2 低于拟合质量阈值"
+  }
+]

@@ -1,0 +1,77 @@
+{
+  "paper_id": "manual_b8bf9aa17f",
+  "stage_target": "mechanism",
+  "bibliography": {
+    "title": "Entropy and Isokinetic Temperature in Fast Ion Transport",
+    "authors": "",
+    "year": 0
+  },
+  "system_identity": {
+    "base_material": "Li6MLa2Ta2O12",
+    "dopant": "Ba, Ca, Sr, and Sr0.5Ba0.5",
+    "form_factor": "garnet-structured",
+    "other": ""
+  },
+  "measurement_scope": {
+    "temp_range": "",
+    "freq_range": "",
+    "humidity": "",
+    "other_conditions": ""
+  },
+  "mechanism_relevant_findings": [
+    "The temperature dependence of ionic conductivity in solids often follows the Arrhenius law.",
+    "Lattice vibrations provide the excitation energy for the ions to overcome the activation barrier.",
+    "The multi-excitation entropy model suggests that isokinetic temperature can be tuned by modulating the excitation phonon frequency."
+  ],
+  "numerical_findings": [
+    {
+      "metric": "isokinetic temperature",
+      "value": "T_iso",
+      "unit": "",
+      "conditions": "found from the intersection of Arrhenius plots at different activation energies"
+    }
+  ],
+  "eis_shape_findings": [],
+  "arrhenius_vtf_findings": [
+    "The activation energy and prefactor are determined from the slope and intercept of the Arrhenius plot."
+  ],
+  "limitations": [
+    "A comprehensive understanding of the fundamental mechanism of MNR in ion transport is lacking."
+  ],
+  "relevance_judgement": {
+    "score": 0.7,
+    "reason": "The paper provides significant insights into the Arrhenius behavior and conductivity mechanisms."
+  },
+  "supports_axes": {
+    "transport": "Grotthuss_hopping",
+    "temperature_dependence": "piecewise_Arrhenius"
+  },
+  "conflicts_axes": {},
+  "trace_spans": [
+    {
+      "page": null,
+      "section": "PERSPECTIVE",
+      "text_snippet": "www.advancedscience.com"
+    },
+    {
+      "page": null,
+      "section": "Peng Du, Hong Zhu, Artur Braun, Arthur Yelon, and Qianli Chen*",
+      "text_snippet": "Ion transport in crystalline solids is an essential process for many electrochemical energy converters such as solid-state batteries and fuel cells. Empirical data have shown that ion transport in cry"
+    },
+    {
+      "page": null,
+      "section": "1. Introduction",
+      "text_snippet": "The search for materials with high ionic mobility and diffusivity, so-called fast ionic conductors (FICs), remains an ongoing quest. FICs are essential components for electrochemical energy conversion"
+    },
+    {
+      "page": null,
+      "section": "2. Activation Entropy and Isokinetic Temperature in MNR",
+      "text_snippet": "It has been known since the work of Eyring [23]   in the 1920s, that a more rigorous form of the Arrhenius equation for any activated process is given by X  =  X 0  exp ( −Δ G k B T ) (3) where the fr"
+    },
+    {
+      "page": null,
+      "section": "3. Applicability of MNR in Solid State Ionics",
+      "text_snippet": "We now examine the fundamental physics of ion transport, in order to understand the effect of MNR, and especially, of  T iso ,  on ionic conductivity at  T . The conductivity,  𝜎 , is given by: 𝜎 =  c"
+    }
+  ]
+}

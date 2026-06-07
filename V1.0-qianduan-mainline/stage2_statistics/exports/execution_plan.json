@@ -1,0 +1,45 @@
+{
+  "specialists": {
+    "sanity_checker": true,
+    "trend_analyzer": true,
+    "model_competitor": true,
+    "morphology_expert": true,
+    "evidence_synthesizer": true
+  },
+  "plan_summary": "数据包含 1081 个样本，宽温区数据（跨度 117.0 K），包含 14 个 EIS 形貌特征，数据质量为 good，将全量启动所有 5 个分析专家。",
+  "reasons": {
+    "sanity_checker": "数据清洗是所有分析的基础，必须执行",
+    "trend_analyzer": "组分敏感性分析是 S8 材料的核心研究目标，必须执行",
+    "model_competitor": "数据满足宽温区条件（117.0 K > 50.0 K），且高质量数据充足（68.9%），适合进行模型竞争分析",
+    "morphology_expert": "检测到 14 个 EIS 形貌特征，可以进行 EIS-Arrhenius 对齐分析",
+    "evidence_synthesizer": "证据合成是生成高级 Question 的必需步骤，必须执行"
+  },
+  "expected_evidences": {
+    "sanity_checker": [
+      "data_quality",
+      "outlier_detection"
+    ],
+    "trend_analyzer": [
+      "composition_sensitivity",
+      "critical_breakpoint",
+      "nonlinear_trend"
+    ],
+    "model_competitor": [
+      "meyer_neldel",
+      "vtf_preferred",
+      "arrhenius_preferred"
+    ],
+    "morphology_expert": [
+      "eis_arrhenius_alignment",
+      "phase_transition",
+      "structural_reorganization"
+    ],
+    "evidence_synthesizer": [
+      "mechanistic_question",
+      "cross_specialist_synthesis"
+    ]
+  },
+  "total_specialists": 5,
+  "enabled_specialists": 5,
+  "disabled_specialists": 0
+}

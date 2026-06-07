@@ -1,0 +1,382 @@
+{
+  "step_id": "s12_prospective_registry",
+  "run_id": "stage3-ee1e749497",
+  "preregistered_at": "2026-05-26T13:52:44Z",
+  "discovery_mode": "broad_literature_pool_selection",
+  "top_n": 5,
+  "n_candidates": 5,
+  "candidates": [
+    {
+      "candidate_id": "PC-ee1e749497-1",
+      "instance_id": "I1",
+      "instance_name": "Starch/PVA/organic-modified attapulgite/phosphoric acid membrane",
+      "origin": "llm_selected_from_broad_pool",
+      "discovery_mode": "broad_literature_pool_selection",
+      "rank_before_experiment": 1,
+      "score_before_experiment": 0.8945,
+      "combination_novelty": "novel_combination",
+      "components": [
+        "Starch",
+        "modified montmorillonite (MMT)",
+        "Chitosan (CS)",
+        "Choline chloride/phosphoric acid deep eutectic solvent (ChCl/PA DES)"
+      ],
+      "composition_description": "Starch + modified montmorillonite (MMT) + Chitosan (CS) + Choline chloride/phosphoric acid deep eutectic solvent (ChCl/PA DES)",
+      "design_principle_ids": [],
+      "descriptor_ids": [
+        "D3",
+        "D5",
+        "D6"
+      ],
+      "evidence_card_ids": [],
+      "literature_card_ids": [
+        "manual_8d58a81c9e_1",
+        "manual_b9c3d1711d",
+        "manual_1190463586",
+        "manual_1ca1249fc4"
+      ],
+      "source_run_id": "stage3-ee1e749497",
+      "preregistered_at": "2026-05-26T13:52:44Z",
+      "prompt_hashes": {
+        "s09_family_generator": "eeaee659ed6c4520a75e42bab44dea0ff09488092b06cac3bd143ffa0b1c1c6b",
+        "s10_instance_ranker": "50fa68024c045be4b2bf04c24e4b2710d7c87ebab83a43477c9670329c325aae"
+      },
+      "input_hashes": {},
+      "output_hashes": {
+        "00_sanitizer_digest.json": "58a172b1c8dfcde53309bb1776b689134aadf91e195e01d45a27efbe36c8d35e",
+        "00_seed_real/adapter_warnings.json": "bbd64f45e5da2f0c4fdff1dacc3a61e81882ab68535de2506ac300d9203278c6",
+        "00_seed_real/real_seed_diagnostics.json": "2f3eee4b5a5923d5563853d63bb55118a59abdeffd524422ae92a362d4686d68",
+        "00_seed_real/seed_bundle_real.json": "099234916caa40fe38842d84e351d1ce793757131c722e9e1f055dc586874c4f",
+        "01_evidence/evidence_cards.json": "230ab7a8a2ec0f0abb45e2e79ebd14cbcd22799ab73550df3b3dee5315f82535",
+        "02_hypotheses/hypothesis_board.json": "a136e0a279d763528874dab75a82045b8e484b94bd8fc9fdd78e353683c775fa",
+        "03_literature_mechanism/literature_cards_mechanism.json": "a573d2ba73de9e703215aad6c0e85e8452e09cc566ec3b12e1c2110c26842b76",
+        "04_mechanism/mechanism_card.json": "5b1a2fb85f7937488c088e3adbf8ed9f85548488181c3d760357377910cf531d",
+        "04b_design_principles/design_principles.json": "0618d5386dcdda8f5de276abe6490a5c5a3cfffa7534369ab5122de9a9bedf8c",
+        "05_descriptors/descriptor_sheet.json": "6cf4bd0da975e6c9e5e35f0c26f22c575e957398856c502579d6ac7f61a67c4c",
+        "06_literature_materials/claim_coverage_summary.json": "db50a4b62d5c1da305f5b87a05bba8bf292dbf381a2f4df0cf74e9fe516ea580",
+        "06_literature_materials/descriptor_claim_pool.json": "f5bf91ffa7b1570ac7c494a44c4f2263007ce4f4dd0efaab2fc6606cdcceaa32",
+        "06_literature_materials/literature_cards_materials.json": "fad329da499a371b4d0e932b4a17f497d2ad51b4d1c42ad5e7df0f65c399fdc8",
+        "06_literature_materials/material_pool_balance.json": "62353f989c63ef4934377e3a874f1ed2aff20ec9352ccdda2b9f6202633c9791",
+        "06_literature_materials/s08_claim_extraction_diagnostics.json": "9aef3ffbfdd5a486da1f970e9bfb98771ca7e51ad2dd0e060da265ac89a23977",
+        "07_material_families/material_families.json": "817c1fe261f10a975b3f4e990425df184dbfa304cdd89f21d7184435821799f0",
+        "08_material_instances/candidate_generation_audit.json": "b4350c66f1af40b2aa365b6e0c89ab29bbdbd3a3d7dd0b6b89e8c3c7538860dc",
+        "08_material_instances/material_instances.json": "fa60906d296cbf9757eee2d1383cb4e40cd647d01efb6452ae55897706d80356",
+        "09_ranking/candidate_audit.json": "4eb3dc8dd88160f469f7de73738288d88ea99ddc1d68e37bc172be8c1708dabb",
+        "09_ranking/deterministic_reranked_top_list.json": "29f911ccee38eeccd4bc62b4611dd3e8475c278646a5f275eb5c97db49dca329",
+        "09_ranking/ranked_top_list.json": "f0c18dcd72b0d528c6929e6a6b00aacb6df7dba4a15ee0177039ac13d8504c5b",
+        "09_ranking/ranking_generation_audit.json": "65420df0fcde985e7b7e7a97ab0f60da232417178f66a5d2ba4b22b50bdd27de",
+        "09_ranking/ranking_robustness.json": "534571b251c38dd4aa8efff921a2f27a32693b9e1da09cfc2e6c1f06a525a67b",
+        "09_ranking/ranking_robustness_v2.json": "e26806dd674d69e54aac2620f1bbccaec8b335b917ee0767efd585518b0fa953",
+        "09_ranking/score_override_log.json": "65910717d6454c75bc6ecc30f38c1ee0db961c4e46939e91bfb7b336300d29e6",
+        "source_term_audit.json": "b8ee0add6460661936f674a3084d9b615fd09cd8f681a6416419384c717e5cc5"
+      },
+      "settings_snapshot": {
+        "llm_mode": "live",
+        "model_tier": "",
+        "discovery_mode": "broad_literature_pool_selection",
+        "final_audit": "True",
+        "enable_cache": "False"
+      },
+      "validation_status": "not_synthesized",
+      "validation_record_ids": [],
+      "allowed_claim": "LLM selected and recombined lotus-root-starch evidence from a broad biomass / polymer / clay literature pool.",
+      "forbidden_claim": "Do not claim that the LLM independently invented lotus-root starch; the term was reachable via the S08 literature pool."
+    },
+    {
+      "candidate_id": "PC-ee1e749497-2",
+      "instance_id": "I2",
+      "instance_name": "Chitosan/organic-modified attapulgite/phosphoric acid composite",
+      "origin": "llm_selected_from_broad_pool",
+      "discovery_mode": "broad_literature_pool_selection",
+      "rank_before_experiment": 2,
+      "score_before_experiment": 0.8435,
+      "combination_novelty": "novel_combination",
+      "components": [
+        "Chitosan (CS)",
+        "Choline chloride/phosphoric acid deep eutectic solvent (ChCl/PA DES)"
+      ],
+      "composition_description": "Chitosan (CS) + Choline chloride/phosphoric acid deep eutectic solvent (ChCl/PA DES)",
+      "design_principle_ids": [],
+      "descriptor_ids": [
+        "D3",
+        "D6"
+      ],
+      "evidence_card_ids": [],
+      "literature_card_ids": [
+        "manual_1190463586",
+        "manual_1ca1249fc4"
+      ],
+      "source_run_id": "stage3-ee1e749497",
+      "preregistered_at": "2026-05-26T13:52:44Z",
+      "prompt_hashes": {
+        "s09_family_generator": "eeaee659ed6c4520a75e42bab44dea0ff09488092b06cac3bd143ffa0b1c1c6b",
+        "s10_instance_ranker": "50fa68024c045be4b2bf04c24e4b2710d7c87ebab83a43477c9670329c325aae"
+      },
+      "input_hashes": {},
+      "output_hashes": {
+        "00_sanitizer_digest.json": "58a172b1c8dfcde53309bb1776b689134aadf91e195e01d45a27efbe36c8d35e",
+        "00_seed_real/adapter_warnings.json": "bbd64f45e5da2f0c4fdff1dacc3a61e81882ab68535de2506ac300d9203278c6",
+        "00_seed_real/real_seed_diagnostics.json": "2f3eee4b5a5923d5563853d63bb55118a59abdeffd524422ae92a362d4686d68",
+        "00_seed_real/seed_bundle_real.json": "099234916caa40fe38842d84e351d1ce793757131c722e9e1f055dc586874c4f",
+        "01_evidence/evidence_cards.json": "230ab7a8a2ec0f0abb45e2e79ebd14cbcd22799ab73550df3b3dee5315f82535",
+        "02_hypotheses/hypothesis_board.json": "a136e0a279d763528874dab75a82045b8e484b94bd8fc9fdd78e353683c775fa",
+        "03_literature_mechanism/literature_cards_mechanism.json": "a573d2ba73de9e703215aad6c0e85e8452e09cc566ec3b12e1c2110c26842b76",
+        "04_mechanism/mechanism_card.json": "5b1a2fb85f7937488c088e3adbf8ed9f85548488181c3d760357377910cf531d",
+        "04b_design_principles/design_principles.json": "0618d5386dcdda8f5de276abe6490a5c5a3cfffa7534369ab5122de9a9bedf8c",
+        "05_descriptors/descriptor_sheet.json": "6cf4bd0da975e6c9e5e35f0c26f22c575e957398856c502579d6ac7f61a67c4c",
+        "06_literature_materials/claim_coverage_summary.json": "db50a4b62d5c1da305f5b87a05bba8bf292dbf381a2f4df0cf74e9fe516ea580",
+        "06_literature_materials/descriptor_claim_pool.json": "f5bf91ffa7b1570ac7c494a44c4f2263007ce4f4dd0efaab2fc6606cdcceaa32",
+        "06_literature_materials/literature_cards_materials.json": "fad329da499a371b4d0e932b4a17f497d2ad51b4d1c42ad5e7df0f65c399fdc8",
+        "06_literature_materials/material_pool_balance.json": "62353f989c63ef4934377e3a874f1ed2aff20ec9352ccdda2b9f6202633c9791",
+        "06_literature_materials/s08_claim_extraction_diagnostics.json": "9aef3ffbfdd5a486da1f970e9bfb98771ca7e51ad2dd0e060da265ac89a23977",
+        "07_material_families/material_families.json": "817c1fe261f10a975b3f4e990425df184dbfa304cdd89f21d7184435821799f0",
+        "08_material_instances/candidate_generation_audit.json": "b4350c66f1af40b2aa365b6e0c89ab29bbdbd3a3d7dd0b6b89e8c3c7538860dc",
+        "08_material_instances/material_instances.json": "fa60906d296cbf9757eee2d1383cb4e40cd647d01efb6452ae55897706d80356",
+        "09_ranking/candidate_audit.json": "4eb3dc8dd88160f469f7de73738288d88ea99ddc1d68e37bc172be8c1708dabb",
+        "09_ranking/deterministic_reranked_top_list.json": "29f911ccee38eeccd4bc62b4611dd3e8475c278646a5f275eb5c97db49dca329",
+        "09_ranking/ranked_top_list.json": "f0c18dcd72b0d528c6929e6a6b00aacb6df7dba4a15ee0177039ac13d8504c5b",
+        "09_ranking/ranking_generation_audit.json": "65420df0fcde985e7b7e7a97ab0f60da232417178f66a5d2ba4b22b50bdd27de",
+        "09_ranking/ranking_robustness.json": "534571b251c38dd4aa8efff921a2f27a32693b9e1da09cfc2e6c1f06a525a67b",
+        "09_ranking/ranking_robustness_v2.json": "e26806dd674d69e54aac2620f1bbccaec8b335b917ee0767efd585518b0fa953",
+        "09_ranking/score_override_log.json": "65910717d6454c75bc6ecc30f38c1ee0db961c4e46939e91bfb7b336300d29e6",
+        "source_term_audit.json": "b8ee0add6460661936f674a3084d9b615fd09cd8f681a6416419384c717e5cc5"
+      },
+      "settings_snapshot": {
+        "llm_mode": "live",
+        "model_tier": "",
+        "discovery_mode": "broad_literature_pool_selection",
+        "final_audit": "True",
+        "enable_cache": "False"
+      },
+      "validation_status": "not_synthesized",
+      "validation_record_ids": [],
+      "allowed_claim": "LLM selected and recombined lotus-root-starch evidence from a broad biomass / polymer / clay literature pool.",
+      "forbidden_claim": "Do not claim that the LLM independently invented lotus-root starch; the term was reachable via the S08 literature pool."
+    },
+    {
+      "candidate_id": "PC-ee1e749497-3",
+      "instance_id": "I5",
+      "instance_name": "PVA/chitosan/Nb2O5/H3PO4 defect-assisted composite",
+      "origin": "llm_selected_from_broad_pool",
+      "discovery_mode": "broad_literature_pool_selection",
+      "rank_before_experiment": 3,
+      "score_before_experiment": 0.7985,
+      "combination_novelty": "novel_combination",
+      "components": [
+        "modified montmorillonite (MMT)",
+        "Chitosan (CS)",
+        "Niobium oxide (Nb2O5)",
+        "Choline chloride/phosphoric acid deep eutectic solvent (ChCl/PA DES)"
+      ],
+      "composition_description": "modified montmorillonite (MMT) + Chitosan (CS) + Niobium oxide (Nb2O5) + Choline chloride/phosphoric acid deep eutectic solvent (ChCl/PA DES)",
+      "design_principle_ids": [],
+      "descriptor_ids": [
+        "D3",
+        "D5",
+        "D6"
+      ],
+      "evidence_card_ids": [],
+      "literature_card_ids": [
+        "manual_b9c3d1711d",
+        "manual_1190463586",
+        "manual_f5f9ab95ca",
+        "manual_1ca1249fc4"
+      ],
+      "source_run_id": "stage3-ee1e749497",
+      "preregistered_at": "2026-05-26T13:52:44Z",
+      "prompt_hashes": {
+        "s09_family_generator": "eeaee659ed6c4520a75e42bab44dea0ff09488092b06cac3bd143ffa0b1c1c6b",
+        "s10_instance_ranker": "50fa68024c045be4b2bf04c24e4b2710d7c87ebab83a43477c9670329c325aae"
+      },
+      "input_hashes": {},
+      "output_hashes": {
+        "00_sanitizer_digest.json": "58a172b1c8dfcde53309bb1776b689134aadf91e195e01d45a27efbe36c8d35e",
+        "00_seed_real/adapter_warnings.json": "bbd64f45e5da2f0c4fdff1dacc3a61e81882ab68535de2506ac300d9203278c6",
+        "00_seed_real/real_seed_diagnostics.json": "2f3eee4b5a5923d5563853d63bb55118a59abdeffd524422ae92a362d4686d68",
+        "00_seed_real/seed_bundle_real.json": "099234916caa40fe38842d84e351d1ce793757131c722e9e1f055dc586874c4f",
+        "01_evidence/evidence_cards.json": "230ab7a8a2ec0f0abb45e2e79ebd14cbcd22799ab73550df3b3dee5315f82535",
+        "02_hypotheses/hypothesis_board.json": "a136e0a279d763528874dab75a82045b8e484b94bd8fc9fdd78e353683c775fa",
+        "03_literature_mechanism/literature_cards_mechanism.json": "a573d2ba73de9e703215aad6c0e85e8452e09cc566ec3b12e1c2110c26842b76",
+        "04_mechanism/mechanism_card.json": "5b1a2fb85f7937488c088e3adbf8ed9f85548488181c3d760357377910cf531d",
+        "04b_design_principles/design_principles.json": "0618d5386dcdda8f5de276abe6490a5c5a3cfffa7534369ab5122de9a9bedf8c",
+        "05_descriptors/descriptor_sheet.json": "6cf4bd0da975e6c9e5e35f0c26f22c575e957398856c502579d6ac7f61a67c4c",
+        "06_literature_materials/claim_coverage_summary.json": "db50a4b62d5c1da305f5b87a05bba8bf292dbf381a2f4df0cf74e9fe516ea580",
+        "06_literature_materials/descriptor_claim_pool.json": "f5bf91ffa7b1570ac7c494a44c4f2263007ce4f4dd0efaab2fc6606cdcceaa32",
+        "06_literature_materials/literature_cards_materials.json": "fad329da499a371b4d0e932b4a17f497d2ad51b4d1c42ad5e7df0f65c399fdc8",
+        "06_literature_materials/material_pool_balance.json": "62353f989c63ef4934377e3a874f1ed2aff20ec9352ccdda2b9f6202633c9791",
+        "06_literature_materials/s08_claim_extraction_diagnostics.json": "9aef3ffbfdd5a486da1f970e9bfb98771ca7e51ad2dd0e060da265ac89a23977",
+        "07_material_families/material_families.json": "817c1fe261f10a975b3f4e990425df184dbfa304cdd89f21d7184435821799f0",
+        "08_material_instances/candidate_generation_audit.json": "b4350c66f1af40b2aa365b6e0c89ab29bbdbd3a3d7dd0b6b89e8c3c7538860dc",
+        "08_material_instances/material_instances.json": "fa60906d296cbf9757eee2d1383cb4e40cd647d01efb6452ae55897706d80356",
+        "09_ranking/candidate_audit.json": "4eb3dc8dd88160f469f7de73738288d88ea99ddc1d68e37bc172be8c1708dabb",
+        "09_ranking/deterministic_reranked_top_list.json": "29f911ccee38eeccd4bc62b4611dd3e8475c278646a5f275eb5c97db49dca329",
+        "09_ranking/ranked_top_list.json": "f0c18dcd72b0d528c6929e6a6b00aacb6df7dba4a15ee0177039ac13d8504c5b",
+        "09_ranking/ranking_generation_audit.json": "65420df0fcde985e7b7e7a97ab0f60da232417178f66a5d2ba4b22b50bdd27de",
+        "09_ranking/ranking_robustness.json": "534571b251c38dd4aa8efff921a2f27a32693b9e1da09cfc2e6c1f06a525a67b",
+        "09_ranking/ranking_robustness_v2.json": "e26806dd674d69e54aac2620f1bbccaec8b335b917ee0767efd585518b0fa953",
+        "09_ranking/score_override_log.json": "65910717d6454c75bc6ecc30f38c1ee0db961c4e46939e91bfb7b336300d29e6",
+        "source_term_audit.json": "b8ee0add6460661936f674a3084d9b615fd09cd8f681a6416419384c717e5cc5"
+      },
+      "settings_snapshot": {
+        "llm_mode": "live",
+        "model_tier": "",
+        "discovery_mode": "broad_literature_pool_selection",
+        "final_audit": "True",
+        "enable_cache": "False"
+      },
+      "validation_status": "not_synthesized",
+      "validation_record_ids": [],
+      "allowed_claim": "LLM selected and recombined lotus-root-starch evidence from a broad biomass / polymer / clay literature pool.",
+      "forbidden_claim": "Do not claim that the LLM independently invented lotus-root starch; the term was reachable via the S08 literature pool."
+    },
+    {
+      "candidate_id": "PC-ee1e749497-4",
+      "instance_id": "I3",
+      "instance_name": "Halloysite nanotube/phosphoric acid/PVA hybrid membrane",
+      "origin": "llm_selected_from_broad_pool",
+      "discovery_mode": "broad_literature_pool_selection",
+      "rank_before_experiment": 4,
+      "score_before_experiment": 0.772,
+      "combination_novelty": "novel_combination",
+      "components": [
+        "halloysite nanotubes (HNTs)",
+        "Choline chloride/phosphoric acid deep eutectic solvent (ChCl/PA DES)",
+        "modified montmorillonite (MMT)"
+      ],
+      "composition_description": "halloysite nanotubes (HNTs) + Choline chloride/phosphoric acid deep eutectic solvent (ChCl/PA DES) + modified montmorillonite (MMT)",
+      "design_principle_ids": [],
+      "descriptor_ids": [
+        "D3",
+        "D5"
+      ],
+      "evidence_card_ids": [],
+      "literature_card_ids": [
+        "manual_a16330d0f5",
+        "manual_1ca1249fc4",
+        "manual_b9c3d1711d"
+      ],
+      "source_run_id": "stage3-ee1e749497",
+      "preregistered_at": "2026-05-26T13:52:44Z",
+      "prompt_hashes": {
+        "s09_family_generator": "eeaee659ed6c4520a75e42bab44dea0ff09488092b06cac3bd143ffa0b1c1c6b",
+        "s10_instance_ranker": "50fa68024c045be4b2bf04c24e4b2710d7c87ebab83a43477c9670329c325aae"
+      },
+      "input_hashes": {},
+      "output_hashes": {
+        "00_sanitizer_digest.json": "58a172b1c8dfcde53309bb1776b689134aadf91e195e01d45a27efbe36c8d35e",
+        "00_seed_real/adapter_warnings.json": "bbd64f45e5da2f0c4fdff1dacc3a61e81882ab68535de2506ac300d9203278c6",
+        "00_seed_real/real_seed_diagnostics.json": "2f3eee4b5a5923d5563853d63bb55118a59abdeffd524422ae92a362d4686d68",
+        "00_seed_real/seed_bundle_real.json": "099234916caa40fe38842d84e351d1ce793757131c722e9e1f055dc586874c4f",
+        "01_evidence/evidence_cards.json": "230ab7a8a2ec0f0abb45e2e79ebd14cbcd22799ab73550df3b3dee5315f82535",
+        "02_hypotheses/hypothesis_board.json": "a136e0a279d763528874dab75a82045b8e484b94bd8fc9fdd78e353683c775fa",
+        "03_literature_mechanism/literature_cards_mechanism.json": "a573d2ba73de9e703215aad6c0e85e8452e09cc566ec3b12e1c2110c26842b76",
+        "04_mechanism/mechanism_card.json": "5b1a2fb85f7937488c088e3adbf8ed9f85548488181c3d760357377910cf531d",
+        "04b_design_principles/design_principles.json": "0618d5386dcdda8f5de276abe6490a5c5a3cfffa7534369ab5122de9a9bedf8c",
+        "05_descriptors/descriptor_sheet.json": "6cf4bd0da975e6c9e5e35f0c26f22c575e957398856c502579d6ac7f61a67c4c",
+        "06_literature_materials/claim_coverage_summary.json": "db50a4b62d5c1da305f5b87a05bba8bf292dbf381a2f4df0cf74e9fe516ea580",
+        "06_literature_materials/descriptor_claim_pool.json": "f5bf91ffa7b1570ac7c494a44c4f2263007ce4f4dd0efaab2fc6606cdcceaa32",
+        "06_literature_materials/literature_cards_materials.json": "fad329da499a371b4d0e932b4a17f497d2ad51b4d1c42ad5e7df0f65c399fdc8",
+        "06_literature_materials/material_pool_balance.json": "62353f989c63ef4934377e3a874f1ed2aff20ec9352ccdda2b9f6202633c9791",
+        "06_literature_materials/s08_claim_extraction_diagnostics.json": "9aef3ffbfdd5a486da1f970e9bfb98771ca7e51ad2dd0e060da265ac89a23977",
+        "07_material_families/material_families.json": "817c1fe261f10a975b3f4e990425df184dbfa304cdd89f21d7184435821799f0",
+        "08_material_instances/candidate_generation_audit.json": "b4350c66f1af40b2aa365b6e0c89ab29bbdbd3a3d7dd0b6b89e8c3c7538860dc",
+        "08_material_instances/material_instances.json": "fa60906d296cbf9757eee2d1383cb4e40cd647d01efb6452ae55897706d80356",
+        "09_ranking/candidate_audit.json": "4eb3dc8dd88160f469f7de73738288d88ea99ddc1d68e37bc172be8c1708dabb",
+        "09_ranking/deterministic_reranked_top_list.json": "29f911ccee38eeccd4bc62b4611dd3e8475c278646a5f275eb5c97db49dca329",
+        "09_ranking/ranked_top_list.json": "f0c18dcd72b0d528c6929e6a6b00aacb6df7dba4a15ee0177039ac13d8504c5b",
+        "09_ranking/ranking_generation_audit.json": "65420df0fcde985e7b7e7a97ab0f60da232417178f66a5d2ba4b22b50bdd27de",
+        "09_ranking/ranking_robustness.json": "534571b251c38dd4aa8efff921a2f27a32693b9e1da09cfc2e6c1f06a525a67b",
+        "09_ranking/ranking_robustness_v2.json": "e26806dd674d69e54aac2620f1bbccaec8b335b917ee0767efd585518b0fa953",
+        "09_ranking/score_override_log.json": "65910717d6454c75bc6ecc30f38c1ee0db961c4e46939e91bfb7b336300d29e6",
+        "source_term_audit.json": "b8ee0add6460661936f674a3084d9b615fd09cd8f681a6416419384c717e5cc5"
+      },
+      "settings_snapshot": {
+        "llm_mode": "live",
+        "model_tier": "",
+        "discovery_mode": "broad_literature_pool_selection",
+        "final_audit": "True",
+        "enable_cache": "False"
+      },
+      "validation_status": "not_synthesized",
+      "validation_record_ids": [],
+      "allowed_claim": "LLM selected and recombined lotus-root-starch evidence from a broad biomass / polymer / clay literature pool.",
+      "forbidden_claim": "Do not claim that the LLM independently invented lotus-root starch; the term was reachable via the S08 literature pool."
+    },
+    {
+      "candidate_id": "PC-ee1e749497-5",
+      "instance_id": "I4",
+      "instance_name": "PAAm-g-starch/phosphoric acid hydrogel electrolyte",
+      "origin": "llm_selected_from_broad_pool",
+      "discovery_mode": "broad_literature_pool_selection",
+      "rank_before_experiment": 5,
+      "score_before_experiment": 0.7427,
+      "combination_novelty": "close_variant",
+      "components": [
+        "PAAm-g-starch (3D polyacrylamide-graft-starch hydrogel)",
+        "Choline chloride/phosphoric acid deep eutectic solvent (ChCl/PA DES)",
+        "Hydrogel electrolyte network"
+      ],
+      "composition_description": "PAAm-g-starch (3D polyacrylamide-graft-starch hydrogel) + Choline chloride/phosphoric acid deep eutectic solvent (ChCl/PA DES) + Hydrogel electrolyte network",
+      "design_principle_ids": [],
+      "descriptor_ids": [
+        "D1",
+        "D2",
+        "D3"
+      ],
+      "evidence_card_ids": [],
+      "literature_card_ids": [
+        "manual_a624da98ce",
+        "manual_1ca1249fc4",
+        "manual_58ec9a6c2e"
+      ],
+      "source_run_id": "stage3-ee1e749497",
+      "preregistered_at": "2026-05-26T13:52:44Z",
+      "prompt_hashes": {
+        "s09_family_generator": "eeaee659ed6c4520a75e42bab44dea0ff09488092b06cac3bd143ffa0b1c1c6b",
+        "s10_instance_ranker": "50fa68024c045be4b2bf04c24e4b2710d7c87ebab83a43477c9670329c325aae"
+      },
+      "input_hashes": {},
+      "output_hashes": {
+        "00_sanitizer_digest.json": "58a172b1c8dfcde53309bb1776b689134aadf91e195e01d45a27efbe36c8d35e",
+        "00_seed_real/adapter_warnings.json": "bbd64f45e5da2f0c4fdff1dacc3a61e81882ab68535de2506ac300d9203278c6",
+        "00_seed_real/real_seed_diagnostics.json": "2f3eee4b5a5923d5563853d63bb55118a59abdeffd524422ae92a362d4686d68",
+        "00_seed_real/seed_bundle_real.json": "099234916caa40fe38842d84e351d1ce793757131c722e9e1f055dc586874c4f",
+        "01_evidence/evidence_cards.json": "230ab7a8a2ec0f0abb45e2e79ebd14cbcd22799ab73550df3b3dee5315f82535",
+        "02_hypotheses/hypothesis_board.json": "a136e0a279d763528874dab75a82045b8e484b94bd8fc9fdd78e353683c775fa",
+        "03_literature_mechanism/literature_cards_mechanism.json": "a573d2ba73de9e703215aad6c0e85e8452e09cc566ec3b12e1c2110c26842b76",
+        "04_mechanism/mechanism_card.json": "5b1a2fb85f7937488c088e3adbf8ed9f85548488181c3d760357377910cf531d",
+        "04b_design_principles/design_principles.json": "0618d5386dcdda8f5de276abe6490a5c5a3cfffa7534369ab5122de9a9bedf8c",
+        "05_descriptors/descriptor_sheet.json": "6cf4bd0da975e6c9e5e35f0c26f22c575e957398856c502579d6ac7f61a67c4c",
+        "06_literature_materials/claim_coverage_summary.json": "db50a4b62d5c1da305f5b87a05bba8bf292dbf381a2f4df0cf74e9fe516ea580",
+        "06_literature_materials/descriptor_claim_pool.json": "f5bf91ffa7b1570ac7c494a44c4f2263007ce4f4dd0efaab2fc6606cdcceaa32",
+        "06_literature_materials/literature_cards_materials.json": "fad329da499a371b4d0e932b4a17f497d2ad51b4d1c42ad5e7df0f65c399fdc8",
+        "06_literature_materials/material_pool_balance.json": "62353f989c63ef4934377e3a874f1ed2aff20ec9352ccdda2b9f6202633c9791",
+        "06_literature_materials/s08_claim_extraction_diagnostics.json": "9aef3ffbfdd5a486da1f970e9bfb98771ca7e51ad2dd0e060da265ac89a23977",
+        "07_material_families/material_families.json": "817c1fe261f10a975b3f4e990425df184dbfa304cdd89f21d7184435821799f0",
+        "08_material_instances/candidate_generation_audit.json": "b4350c66f1af40b2aa365b6e0c89ab29bbdbd3a3d7dd0b6b89e8c3c7538860dc",
+        "08_material_instances/material_instances.json": "fa60906d296cbf9757eee2d1383cb4e40cd647d01efb6452ae55897706d80356",
+        "09_ranking/candidate_audit.json": "4eb3dc8dd88160f469f7de73738288d88ea99ddc1d68e37bc172be8c1708dabb",
+        "09_ranking/deterministic_reranked_top_list.json": "29f911ccee38eeccd4bc62b4611dd3e8475c278646a5f275eb5c97db49dca329",
+        "09_ranking/ranked_top_list.json": "f0c18dcd72b0d528c6929e6a6b00aacb6df7dba4a15ee0177039ac13d8504c5b",
+        "09_ranking/ranking_generation_audit.json": "65420df0fcde985e7b7e7a97ab0f60da232417178f66a5d2ba4b22b50bdd27de",
+        "09_ranking/ranking_robustness.json": "534571b251c38dd4aa8efff921a2f27a32693b9e1da09cfc2e6c1f06a525a67b",
+        "09_ranking/ranking_robustness_v2.json": "e26806dd674d69e54aac2620f1bbccaec8b335b917ee0767efd585518b0fa953",
+        "09_ranking/score_override_log.json": "65910717d6454c75bc6ecc30f38c1ee0db961c4e46939e91bfb7b336300d29e6",
+        "source_term_audit.json": "b8ee0add6460661936f674a3084d9b615fd09cd8f681a6416419384c717e5cc5"
+      },
+      "settings_snapshot": {
+        "llm_mode": "live",
+        "model_tier": "",
+        "discovery_mode": "broad_literature_pool_selection",
+        "final_audit": "True",
+        "enable_cache": "False"
+      },
+      "validation_status": "not_synthesized",
+      "validation_record_ids": [],
+      "allowed_claim": "LLM selected and recombined lotus-root-starch evidence from a broad biomass / polymer / clay literature pool.",
+      "forbidden_claim": "Do not claim that the LLM independently invented lotus-root starch; the term was reachable via the S08 literature pool."
+    }
+  ],
+  "registry_hash": "f1fb18f04c288406f24d751b9628af1a1a6fbf3b11649e602d47dba223ee7162",
+  "notes": "Frozen prospective registry. S13 writes append-only validation links separately."
+}

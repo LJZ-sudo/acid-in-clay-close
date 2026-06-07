@@ -1,0 +1,5 @@
+LOG 0 1 10.00 2 0 0 "C:\Users\Public\Documents\My Gamry Data\Shitong Wang\S60-2-2-1\300-140K 1K-min\1.dat" "" "" ""
+TMP TEMP 140.000000 1.000000 0
+WAI WAITFOR 10 1 0 0 0 0
+TMP TEMP 300.000000 10.000000 0
+WAI WAITFOR 10 1 0 0 0 0

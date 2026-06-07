@@ -1,0 +1,45 @@
+{
+  "step_id": "s06_mechanism",
+  "mechanism_card": {
+    "selected_hypothesis_id": "H1",
+    "mechanism_label": "Confined acid-water network with VTF-governed hybrid hopping",
+    "justification": "H1 is the best working mechanism because it matches the strongest and most global signal in the dataset: conductivity across 39/40 samples is better described by VTF than by Arrhenius or piecewise fits, indicating that proton mobility is governed primarily by temperature-dependent structural relaxation of a confined phosphoric-acid/water hydrogen-bond network rather than by a single fixed activation barrier. This is also chemically plausible for an attapulgite-confined acid-water system, where proton transport is expected to involve mixed structural diffusion and vehicular contributions within a continuous but nanoconfined hydrogen-bond network. The positive dependence of conductivity on loading N, much stronger than on acid/water ratio R, is consistent with transport being controlled mainly by how much connected mobile confined liquid network exists, not by a purely interfacial-only pathway. The observed low-temperature breakpoints and higher low-T apparent activation energies are then interpreted not as evidence that the dominant mechanism changes to a different carrier population, but as a crossover in the same confined network when structural relaxation slows enough that the conductivity curve becomes piecewise over a limited window. H1 therefore best captures the dominant transport physics while still allowing secondary low-temperature resolvability effects in EIS.",
+    "confidence": 0.74,
+    "evidence_alignment": [
+      "V2-E7: VTF is AICc-preferred in 39/40 samples, directly supporting a relaxation-controlled network mechanism rather than a primarily Arrhenius piecewise transport picture.",
+      "V2-E10: The 98% VTF preference is the strongest model-selection signal in the evidence and favors H1 over hypotheses centered on intrinsically piecewise Arrhenius transport.",
+      "V2-E2: Conductivity at 299 K increases strongly with N, consistent with more extensive/connected confined acid-water network volume enhancing proton transport.",
+      "V2-E4: Conductivity at 233 K still correlates positively with N, indicating the same loading-dependent network remains relevant even at low temperature.",
+      "V2-E5: Weak dependence of apparent activation energy on R argues against a mechanism controlled mainly by acid-decorated surface chemistry alone.",
+      "V2-E6: Weak dependence of apparent activation energy on N is consistent with activation reflecting network dynamics more than simple loading amount.",
+      "V2-E11: Much higher low-T apparent activation energies are compatible with a slowing hydrogen-bond/network relaxation regime within the same confined medium.",
+      "V2-E12: Near-universal detectable breakpoints indicate a widespread crossover, which H1 can interpret as a dynamic crossover superimposed on an overall VTF-governed transport process.",
+      "V2-E9: Rare visible arcs/semi-circles imply EIS morphology is not the dominant evidence layer and should be treated as occasional resolvability of secondary processes rather than proof of a different main mechanism.",
+      "E2: Multiple fitted transport regimes are expected if a relaxation-controlled confined network crosses different dynamical windows during cooling."
+    ],
+    "literature_support": [
+      "manual_d6329c4fda: Strong hydrogen-bond rearrangement can drive anomalously fast proton structural diffusion in phosphoric-acid-like systems, consistent with hybrid hopping in a confined acid-water network.",
+      "manual_e2d21540be: Phosphoric-acid systems can show conductivity coupled to, but partly decoupled from, structural dynamics near glass-transition-like slowing, supporting a VTF-style relaxation-governed picture.",
+      "manual_7bf378dab7: Proton transport in phosphoric acid/water mixtures depends sensitively on water content and the balance between structural diffusion and vehicular motion, consistent with a continuous acid-water network mechanism.",
+      "manual_99178d5560: Acid-in-clay electrolytes support the plausibility of fast proton transport through acid/water species hosted by a clay framework rather than exclusively through bare mineral surfaces.",
+      "manual_15d8390320: In nanoconfined hydrogen-bonded channels, proton motion can remain Grotthuss-dominated and confinement can shift which dynamic mode is expressed, supporting confined-network transport with temperature-dependent crossover."
+    ],
+    "t_arc_t_break_explanation": "T_break and T_arc differ because they report different physical thresholds. T_break comes from the temperature dependence of the bulk DC conductivity and marks where the dominant mobile proton network changes its apparent transport law as structural relaxation slows. T_arc instead is an EIS resolvability temperature: it is the point where a secondary relaxation time becomes sufficiently separated from the low-frequency conduction tail to appear as a visible semicircle or arc within the experimental frequency window. These need not coincide. In a VTF-governed confined network, bulk conductivity can show a crossover before or after a distinct impedance arc becomes experimentally separable, because one metric tracks the main conductive pathway while the other tracks timescale separation of overlapping processes.",
+    "eis_evolution_explanation": "The selected mechanism explains the EIS evolution mainly through combination (a) plus a weaker contribution from (b). At room and higher temperature, proton transport in the confined acid-water network is fast and strongly dynamically averaged; the characteristic relaxation time of the bulk/network process is too short and too overlapped with dispersive electrode/interfacial polarization to yield a resolved high-frequency semicircle, so the Nyquist plot is dominated by a low-frequency inclined tail. On cooling, the hydrogen-bond network relaxation slows in a VTF-like manner, so the bulk/network relaxation time shifts into the measurable frequency window and a mid/high-frequency semicircle gradually emerges. At the same time, interfacial polarization or bottleneck effects that were hidden at high temperature can become more distinct once the main network motion slows, producing the observed transition from mostly line-like response to 'semicircle + line'. Thus the arc emergence is interpreted as a resolvability consequence of network slowing, not as proof that the dominant transport mechanism fundamentally changes.",
+    "caveats": [
+      "H1 does not natively encode the very common low-T piecewise breakpoint as explicitly as H2 does; this is handled here as a crossover within an overall relaxation-controlled network, so the fit is strong but not perfect.",
+      "The EIS morphology evidence is sparse and heuristic, so the assignment of the emerging semicircle to a slowed bulk/network relaxation plus secondary polarization remains plausible rather than uniquely proven."
+    ],
+    "rejected_hypotheses": [
+      "H2 rejected: it explains the breakpoint phenomenology well, but its core piecewise-Arrhenius two-population framing is less consistent with the dominant sample-level VTF model selection signal in 39/40 samples.",
+      "H3 rejected: a mainly interfacial-only hopping mechanism does not fit the stronger conductivity dependence on loading N than on R and is less aligned with VTF-dominated transport in a confined acid-water medium.",
+      "H4 rejected: loading-driven percolation may matter for composition dependence, but a percolation-threshold-centered story is not needed to explain the broad temperature behavior and does not naturally account for the nearly universal low-T crossover as well as relaxation-controlled network dynamics."
+    ],
+    "why_not": [
+      "H2: it would explain the widespread detectable breakpoint and high low-T activation-energy segment more directly than H1.",
+      "H3: none identified",
+      "H4: it would explain the positive conductivity-N correlation somewhat more directly than H1."
+    ]
+  },
+  "arbitration_method": "evidence_consistency + literature_weight + eis_evolution_check"
+}

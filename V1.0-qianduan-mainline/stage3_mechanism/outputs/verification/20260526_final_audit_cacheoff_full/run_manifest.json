@@ -1,0 +1,547 @@
+{
+  "run_mode": "real",
+  "literature_mode": "hybrid",
+  "output_dir": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\outputs\\verification\\20260526_final_audit_cacheoff_full",
+  "selected_steps": [
+    "s03_evidence_builder",
+    "s04_hypothesis_generator",
+    "s05_literature_scout_mechanism",
+    "s06_mechanism_arbiter",
+    "s06b_design_principle_extractor",
+    "s07_descriptor_extractor",
+    "s08_literature_scout_materials",
+    "s09_candidate_family_generator",
+    "s10_instance_ranker",
+    "s12_prospective_registry",
+    "s13_validation_binder",
+    "s14_claim_auditor",
+    "s11_report_compiler"
+  ],
+  "until_step": "",
+  "max_samples": null,
+  "sample_ids": null,
+  "manual_strict": false,
+  "stage2_input": {
+    "stage2_input_dir": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage2_statistics\\exports",
+    "stage2_seed_path": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage2_statistics\\exports\\stage3_seed.json",
+    "strict_real_input": true,
+    "allow_legacy_atlas": false,
+    "input_source": "cli_stage2_output_dir",
+    "adapter_warning_count": 0,
+    "stage2_seed_sha256": "fe7f48cc41a463c3db3348db2edadd5eceec11e49b6be2facdeec751076a100f"
+  },
+  "stage2_input_dir": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage2_statistics\\exports",
+  "stage2_seed_path": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage2_statistics\\exports\\stage3_seed.json",
+  "stage2_seed_sha256": "fe7f48cc41a463c3db3348db2edadd5eceec11e49b6be2facdeec751076a100f",
+  "strict_real_input": true,
+  "adapter_warning_count": 0,
+  "settings": {
+    "llm_mode": "live",
+    "model_tier": "",
+    "enable_cache": false,
+    "llm_temperature": 0.0,
+    "llm_seed": null,
+    "use_structured_outputs": false
+  },
+  "prompt_manifest": [
+    {
+      "name": "global_system",
+      "path": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\src\\s8_stage3\\prompts\\global_system.md",
+      "sha256": "4b24ff05c9fb489ce66880da07cc82da855ddb992599b20659f47fc9254db5c8"
+    },
+    {
+      "name": "s03_evidence_builder",
+      "path": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\src\\s8_stage3\\prompts\\s03_evidence_builder.md",
+      "sha256": "861dcb1a282e1154df97554ccd9444d4074362d7054ee21402c1e3bb401e8011"
+    },
+    {
+      "name": "s04_hypothesis_generator",
+      "path": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\src\\s8_stage3\\prompts\\s04_hypothesis_generator.md",
+      "sha256": "308f277e9710701c21a3496efd38518210099efad3cc0008d23396245bff7ff9"
+    },
+    {
+      "name": "s05_literature_mechanism",
+      "path": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\src\\s8_stage3\\prompts\\s05_literature_mechanism.md",
+      "sha256": "1ce165bb8f16b21f4992a4304908e30245d19388be16819f3e69d5a35bcb0236"
+    },
+    {
+      "name": "s06_mechanism_arbiter",
+      "path": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\src\\s8_stage3\\prompts\\s06_mechanism_arbiter.md",
+      "sha256": "11dd3004296e460d8685f715da111720210af4759714adeb9f080675443a014f"
+    },
+    {
+      "name": "s06b_design_principle_extractor",
+      "path": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\src\\s8_stage3\\prompts\\s06b_design_principle_extractor.md",
+      "sha256": "9d53e160a5ca0c496904475daa95eb7937b085bbb5b6e55a6c6e1e72c9c5654c"
+    },
+    {
+      "name": "s07_descriptor_extractor",
+      "path": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\src\\s8_stage3\\prompts\\s07_descriptor_extractor.md",
+      "sha256": "652a22b88f5c77119fa6f402a6f963b061d1f6a41e1cd7c8b74792d6e4ab00c8"
+    },
+    {
+      "name": "s08_literature_materials",
+      "path": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\src\\s8_stage3\\prompts\\s08_literature_materials.md",
+      "sha256": "1f589aae4ad886ac6894e4a1784e07be29b1436e9c41d2313e26225e2c28f922"
+    },
+    {
+      "name": "s09_family_generator",
+      "path": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\src\\s8_stage3\\prompts\\s09_family_generator.md",
+      "sha256": "eeaee659ed6c4520a75e42bab44dea0ff09488092b06cac3bd143ffa0b1c1c6b"
+    },
+    {
+      "name": "s09_family_generator_compact",
+      "path": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\src\\s8_stage3\\prompts\\s09_family_generator_compact.md",
+      "sha256": "9375d4d0bff990ddc34f76ac3d5a16a97afc6026b1fd467ed3dfaffb2465cd73"
+    },
+    {
+      "name": "s10_instance_ranker",
+      "path": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\src\\s8_stage3\\prompts\\s10_instance_ranker.md",
+      "sha256": "50fa68024c045be4b2bf04c24e4b2710d7c87ebab83a43477c9670329c325aae"
+    },
+    {
+      "name": "s11_report_compiler",
+      "path": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\src\\s8_stage3\\prompts\\s11_report_compiler.md",
+      "sha256": "f1b59b725bbd293d3e6c1ddc2c2b432d5aa7a93cf8416fd5f51d9665c46a0060"
+    }
+  ],
+  "step_results": [
+    {
+      "step": "s03_evidence_builder",
+      "status": "completed",
+      "error": null
+    },
+    {
+      "step": "s04_hypothesis_generator",
+      "status": "completed",
+      "error": null
+    },
+    {
+      "step": "s05_literature_scout_mechanism",
+      "status": "completed",
+      "error": null
+    },
+    {
+      "step": "s06_mechanism_arbiter",
+      "status": "completed",
+      "error": null
+    },
+    {
+      "step": "s06b_design_principle_extractor",
+      "status": "completed",
+      "error": null
+    },
+    {
+      "step": "s07_descriptor_extractor",
+      "status": "completed",
+      "error": null
+    },
+    {
+      "step": "s08_literature_scout_materials",
+      "status": "completed",
+      "error": null
+    },
+    {
+      "step": "s09_candidate_family_generator",
+      "status": "completed",
+      "error": null
+    },
+    {
+      "step": "s10_instance_ranker",
+      "status": "completed",
+      "error": null
+    },
+    {
+      "step": "s12_prospective_registry",
+      "status": "completed",
+      "error": null
+    },
+    {
+      "step": "s13_validation_binder",
+      "status": "completed",
+      "error": null
+    },
+    {
+      "step": "s14_claim_auditor",
+      "status": "completed",
+      "error": null
+    },
+    {
+      "step": "s11_report_compiler",
+      "status": "completed",
+      "error": null
+    }
+  ],
+  "ranking_robustness": {
+    "path": "D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\outputs\\verification\\20260526_final_audit_cacheoff_full\\09_ranking\\ranking_robustness_v2.json",
+    "sha256": "e26806dd674d69e54aac2620f1bbccaec8b335b917ee0767efd585518b0fa953",
+    "status": "ok",
+    "stability_class": "stable",
+    "top1_stability_rate": 1.0,
+    "top3_jaccard_mean": 0.9,
+    "recommended_wording_hint": "Single-winner wording is allowed with audit caveats."
+  },
+  "agent_trace": [
+    {
+      "step": "s03_evidence_builder",
+      "status": "completed",
+      "output_hashes": {
+        "00_sanitizer_digest.json": "58a172b1c8dfcde53309bb1776b689134aadf91e195e01d45a27efbe36c8d35e",
+        "00_seed_real/adapter_warnings.json": "bbd64f45e5da2f0c4fdff1dacc3a61e81882ab68535de2506ac300d9203278c6",
+        "00_seed_real/real_seed_diagnostics.json": "2f3eee4b5a5923d5563853d63bb55118a59abdeffd524422ae92a362d4686d68",
+        "00_seed_real/seed_bundle_real.json": "099234916caa40fe38842d84e351d1ce793757131c722e9e1f055dc586874c4f",
+        "01_evidence/evidence_cards.json": "230ab7a8a2ec0f0abb45e2e79ebd14cbcd22799ab73550df3b3dee5315f82535",
+        "source_term_audit.json": "b8ee0add6460661936f674a3084d9b615fd09cd8f681a6416419384c717e5cc5"
+      },
+      "guardrail_warnings": []
+    },
+    {
+      "step": "s04_hypothesis_generator",
+      "status": "completed",
+      "output_hashes": {
+        "00_sanitizer_digest.json": "58a172b1c8dfcde53309bb1776b689134aadf91e195e01d45a27efbe36c8d35e",
+        "00_seed_real/adapter_warnings.json": "bbd64f45e5da2f0c4fdff1dacc3a61e81882ab68535de2506ac300d9203278c6",
+        "00_seed_real/real_seed_diagnostics.json": "2f3eee4b5a5923d5563853d63bb55118a59abdeffd524422ae92a362d4686d68",
+        "00_seed_real/seed_bundle_real.json": "099234916caa40fe38842d84e351d1ce793757131c722e9e1f055dc586874c4f",
+        "01_evidence/evidence_cards.json": "230ab7a8a2ec0f0abb45e2e79ebd14cbcd22799ab73550df3b3dee5315f82535",
+        "02_hypotheses/hypothesis_board.json": "a136e0a279d763528874dab75a82045b8e484b94bd8fc9fdd78e353683c775fa",
+        "source_term_audit.json": "b8ee0add6460661936f674a3084d9b615fd09cd8f681a6416419384c717e5cc5"
+      },
+      "guardrail_warnings": []
+    },
+    {
+      "step": "s05_literature_scout_mechanism",
+      "status": "completed",
+      "output_hashes": {
+        "00_sanitizer_digest.json": "58a172b1c8dfcde53309bb1776b689134aadf91e195e01d45a27efbe36c8d35e",
+        "00_seed_real/adapter_warnings.json": "bbd64f45e5da2f0c4fdff1dacc3a61e81882ab68535de2506ac300d9203278c6",
+        "00_seed_real/real_seed_diagnostics.json": "2f3eee4b5a5923d5563853d63bb55118a59abdeffd524422ae92a362d4686d68",
+        "00_seed_real/seed_bundle_real.json": "099234916caa40fe38842d84e351d1ce793757131c722e9e1f055dc586874c4f",
+        "01_evidence/evidence_cards.json": "230ab7a8a2ec0f0abb45e2e79ebd14cbcd22799ab73550df3b3dee5315f82535",
+        "02_hypotheses/hypothesis_board.json": "a136e0a279d763528874dab75a82045b8e484b94bd8fc9fdd78e353683c775fa",
+        "03_literature_mechanism/literature_cards_mechanism.json": "a573d2ba73de9e703215aad6c0e85e8452e09cc566ec3b12e1c2110c26842b76",
+        "source_term_audit.json": "b8ee0add6460661936f674a3084d9b615fd09cd8f681a6416419384c717e5cc5"
+      },
+      "guardrail_warnings": []
+    },
+    {
+      "step": "s06_mechanism_arbiter",
+      "status": "completed",
+      "output_hashes": {
+        "00_sanitizer_digest.json": "58a172b1c8dfcde53309bb1776b689134aadf91e195e01d45a27efbe36c8d35e",
+        "00_seed_real/adapter_warnings.json": "bbd64f45e5da2f0c4fdff1dacc3a61e81882ab68535de2506ac300d9203278c6",
+        "00_seed_real/real_seed_diagnostics.json": "2f3eee4b5a5923d5563853d63bb55118a59abdeffd524422ae92a362d4686d68",
+        "00_seed_real/seed_bundle_real.json": "099234916caa40fe38842d84e351d1ce793757131c722e9e1f055dc586874c4f",
+        "01_evidence/evidence_cards.json": "230ab7a8a2ec0f0abb45e2e79ebd14cbcd22799ab73550df3b3dee5315f82535",
+        "02_hypotheses/hypothesis_board.json": "a136e0a279d763528874dab75a82045b8e484b94bd8fc9fdd78e353683c775fa",
+        "03_literature_mechanism/literature_cards_mechanism.json": "a573d2ba73de9e703215aad6c0e85e8452e09cc566ec3b12e1c2110c26842b76",
+        "04_mechanism/mechanism_card.json": "5b1a2fb85f7937488c088e3adbf8ed9f85548488181c3d760357377910cf531d",
+        "source_term_audit.json": "b8ee0add6460661936f674a3084d9b615fd09cd8f681a6416419384c717e5cc5"
+      },
+      "guardrail_warnings": []
+    },
+    {
+      "step": "s06b_design_principle_extractor",
+      "status": "completed",
+      "output_hashes": {
+        "00_sanitizer_digest.json": "58a172b1c8dfcde53309bb1776b689134aadf91e195e01d45a27efbe36c8d35e",
+        "00_seed_real/adapter_warnings.json": "bbd64f45e5da2f0c4fdff1dacc3a61e81882ab68535de2506ac300d9203278c6",
+        "00_seed_real/real_seed_diagnostics.json": "2f3eee4b5a5923d5563853d63bb55118a59abdeffd524422ae92a362d4686d68",
+        "00_seed_real/seed_bundle_real.json": "099234916caa40fe38842d84e351d1ce793757131c722e9e1f055dc586874c4f",
+        "01_evidence/evidence_cards.json": "230ab7a8a2ec0f0abb45e2e79ebd14cbcd22799ab73550df3b3dee5315f82535",
+        "02_hypotheses/hypothesis_board.json": "a136e0a279d763528874dab75a82045b8e484b94bd8fc9fdd78e353683c775fa",
+        "03_literature_mechanism/literature_cards_mechanism.json": "a573d2ba73de9e703215aad6c0e85e8452e09cc566ec3b12e1c2110c26842b76",
+        "04_mechanism/mechanism_card.json": "5b1a2fb85f7937488c088e3adbf8ed9f85548488181c3d760357377910cf531d",
+        "04b_design_principles/design_principles.json": "0618d5386dcdda8f5de276abe6490a5c5a3cfffa7534369ab5122de9a9bedf8c",
+        "source_term_audit.json": "b8ee0add6460661936f674a3084d9b615fd09cd8f681a6416419384c717e5cc5"
+      },
+      "guardrail_warnings": []
+    },
+    {
+      "step": "s07_descriptor_extractor",
+      "status": "completed",
+      "output_hashes": {
+        "00_sanitizer_digest.json": "58a172b1c8dfcde53309bb1776b689134aadf91e195e01d45a27efbe36c8d35e",
+        "00_seed_real/adapter_warnings.json": "bbd64f45e5da2f0c4fdff1dacc3a61e81882ab68535de2506ac300d9203278c6",
+        "00_seed_real/real_seed_diagnostics.json": "2f3eee4b5a5923d5563853d63bb55118a59abdeffd524422ae92a362d4686d68",
+        "00_seed_real/seed_bundle_real.json": "099234916caa40fe38842d84e351d1ce793757131c722e9e1f055dc586874c4f",
+        "01_evidence/evidence_cards.json": "230ab7a8a2ec0f0abb45e2e79ebd14cbcd22799ab73550df3b3dee5315f82535",
+        "02_hypotheses/hypothesis_board.json": "a136e0a279d763528874dab75a82045b8e484b94bd8fc9fdd78e353683c775fa",
+        "03_literature_mechanism/literature_cards_mechanism.json": "a573d2ba73de9e703215aad6c0e85e8452e09cc566ec3b12e1c2110c26842b76",
+        "04_mechanism/mechanism_card.json": "5b1a2fb85f7937488c088e3adbf8ed9f85548488181c3d760357377910cf531d",
+        "04b_design_principles/design_principles.json": "0618d5386dcdda8f5de276abe6490a5c5a3cfffa7534369ab5122de9a9bedf8c",
+        "05_descriptors/descriptor_sheet.json": "6cf4bd0da975e6c9e5e35f0c26f22c575e957398856c502579d6ac7f61a67c4c",
+        "source_term_audit.json": "b8ee0add6460661936f674a3084d9b615fd09cd8f681a6416419384c717e5cc5"
+      },
+      "guardrail_warnings": []
+    },
+    {
+      "step": "s08_literature_scout_materials",
+      "status": "completed",
+      "output_hashes": {
+        "00_sanitizer_digest.json": "58a172b1c8dfcde53309bb1776b689134aadf91e195e01d45a27efbe36c8d35e",
+        "00_seed_real/adapter_warnings.json": "bbd64f45e5da2f0c4fdff1dacc3a61e81882ab68535de2506ac300d9203278c6",
+        "00_seed_real/real_seed_diagnostics.json": "2f3eee4b5a5923d5563853d63bb55118a59abdeffd524422ae92a362d4686d68",
+        "00_seed_real/seed_bundle_real.json": "099234916caa40fe38842d84e351d1ce793757131c722e9e1f055dc586874c4f",
+        "01_evidence/evidence_cards.json": "230ab7a8a2ec0f0abb45e2e79ebd14cbcd22799ab73550df3b3dee5315f82535",
+        "02_hypotheses/hypothesis_board.json": "a136e0a279d763528874dab75a82045b8e484b94bd8fc9fdd78e353683c775fa",
+        "03_literature_mechanism/literature_cards_mechanism.json": "a573d2ba73de9e703215aad6c0e85e8452e09cc566ec3b12e1c2110c26842b76",
+        "04_mechanism/mechanism_card.json": "5b1a2fb85f7937488c088e3adbf8ed9f85548488181c3d760357377910cf531d",
+        "04b_design_principles/design_principles.json": "0618d5386dcdda8f5de276abe6490a5c5a3cfffa7534369ab5122de9a9bedf8c",
+        "05_descriptors/descriptor_sheet.json": "6cf4bd0da975e6c9e5e35f0c26f22c575e957398856c502579d6ac7f61a67c4c",
+        "06_literature_materials/claim_coverage_summary.json": "db50a4b62d5c1da305f5b87a05bba8bf292dbf381a2f4df0cf74e9fe516ea580",
+        "06_literature_materials/descriptor_claim_pool.json": "f5bf91ffa7b1570ac7c494a44c4f2263007ce4f4dd0efaab2fc6606cdcceaa32",
+        "06_literature_materials/literature_cards_materials.json": "fad329da499a371b4d0e932b4a17f497d2ad51b4d1c42ad5e7df0f65c399fdc8",
+        "06_literature_materials/material_pool_balance.json": "62353f989c63ef4934377e3a874f1ed2aff20ec9352ccdda2b9f6202633c9791",
+        "06_literature_materials/s08_claim_extraction_diagnostics.json": "9aef3ffbfdd5a486da1f970e9bfb98771ca7e51ad2dd0e060da265ac89a23977",
+        "source_term_audit.json": "b8ee0add6460661936f674a3084d9b615fd09cd8f681a6416419384c717e5cc5"
+      },
+      "guardrail_warnings": []
+    },
+    {
+      "step": "s09_candidate_family_generator",
+      "status": "completed",
+      "output_hashes": {
+        "00_sanitizer_digest.json": "58a172b1c8dfcde53309bb1776b689134aadf91e195e01d45a27efbe36c8d35e",
+        "00_seed_real/adapter_warnings.json": "bbd64f45e5da2f0c4fdff1dacc3a61e81882ab68535de2506ac300d9203278c6",
+        "00_seed_real/real_seed_diagnostics.json": "2f3eee4b5a5923d5563853d63bb55118a59abdeffd524422ae92a362d4686d68",
+        "00_seed_real/seed_bundle_real.json": "099234916caa40fe38842d84e351d1ce793757131c722e9e1f055dc586874c4f",
+        "01_evidence/evidence_cards.json": "230ab7a8a2ec0f0abb45e2e79ebd14cbcd22799ab73550df3b3dee5315f82535",
+        "02_hypotheses/hypothesis_board.json": "a136e0a279d763528874dab75a82045b8e484b94bd8fc9fdd78e353683c775fa",
+        "03_literature_mechanism/literature_cards_mechanism.json": "a573d2ba73de9e703215aad6c0e85e8452e09cc566ec3b12e1c2110c26842b76",
+        "04_mechanism/mechanism_card.json": "5b1a2fb85f7937488c088e3adbf8ed9f85548488181c3d760357377910cf531d",
+        "04b_design_principles/design_principles.json": "0618d5386dcdda8f5de276abe6490a5c5a3cfffa7534369ab5122de9a9bedf8c",
+        "05_descriptors/descriptor_sheet.json": "6cf4bd0da975e6c9e5e35f0c26f22c575e957398856c502579d6ac7f61a67c4c",
+        "06_literature_materials/claim_coverage_summary.json": "db50a4b62d5c1da305f5b87a05bba8bf292dbf381a2f4df0cf74e9fe516ea580",
+        "06_literature_materials/descriptor_claim_pool.json": "f5bf91ffa7b1570ac7c494a44c4f2263007ce4f4dd0efaab2fc6606cdcceaa32",
+        "06_literature_materials/literature_cards_materials.json": "fad329da499a371b4d0e932b4a17f497d2ad51b4d1c42ad5e7df0f65c399fdc8",
+        "06_literature_materials/material_pool_balance.json": "62353f989c63ef4934377e3a874f1ed2aff20ec9352ccdda2b9f6202633c9791",
+        "06_literature_materials/s08_claim_extraction_diagnostics.json": "9aef3ffbfdd5a486da1f970e9bfb98771ca7e51ad2dd0e060da265ac89a23977",
+        "07_material_families/material_families.json": "817c1fe261f10a975b3f4e990425df184dbfa304cdd89f21d7184435821799f0",
+        "08_material_instances/candidate_generation_audit.json": "b4350c66f1af40b2aa365b6e0c89ab29bbdbd3a3d7dd0b6b89e8c3c7538860dc",
+        "08_material_instances/material_instances.json": "fa60906d296cbf9757eee2d1383cb4e40cd647d01efb6452ae55897706d80356",
+        "source_term_audit.json": "b8ee0add6460661936f674a3084d9b615fd09cd8f681a6416419384c717e5cc5"
+      },
+      "guardrail_warnings": []
+    },
+    {
+      "step": "s10_instance_ranker",
+      "status": "completed",
+      "output_hashes": {
+        "00_sanitizer_digest.json": "58a172b1c8dfcde53309bb1776b689134aadf91e195e01d45a27efbe36c8d35e",
+        "00_seed_real/adapter_warnings.json": "bbd64f45e5da2f0c4fdff1dacc3a61e81882ab68535de2506ac300d9203278c6",
+        "00_seed_real/real_seed_diagnostics.json": "2f3eee4b5a5923d5563853d63bb55118a59abdeffd524422ae92a362d4686d68",
+        "00_seed_real/seed_bundle_real.json": "099234916caa40fe38842d84e351d1ce793757131c722e9e1f055dc586874c4f",
+        "01_evidence/evidence_cards.json": "230ab7a8a2ec0f0abb45e2e79ebd14cbcd22799ab73550df3b3dee5315f82535",
+        "02_hypotheses/hypothesis_board.json": "a136e0a279d763528874dab75a82045b8e484b94bd8fc9fdd78e353683c775fa",
+        "03_literature_mechanism/literature_cards_mechanism.json": "a573d2ba73de9e703215aad6c0e85e8452e09cc566ec3b12e1c2110c26842b76",
+        "04_mechanism/mechanism_card.json": "5b1a2fb85f7937488c088e3adbf8ed9f85548488181c3d760357377910cf531d",
+        "04b_design_principles/design_principles.json": "0618d5386dcdda8f5de276abe6490a5c5a3cfffa7534369ab5122de9a9bedf8c",
+        "05_descriptors/descriptor_sheet.json": "6cf4bd0da975e6c9e5e35f0c26f22c575e957398856c502579d6ac7f61a67c4c",
+        "06_literature_materials/claim_coverage_summary.json": "db50a4b62d5c1da305f5b87a05bba8bf292dbf381a2f4df0cf74e9fe516ea580",
+        "06_literature_materials/descriptor_claim_pool.json": "f5bf91ffa7b1570ac7c494a44c4f2263007ce4f4dd0efaab2fc6606cdcceaa32",
+        "06_literature_materials/literature_cards_materials.json": "fad329da499a371b4d0e932b4a17f497d2ad51b4d1c42ad5e7df0f65c399fdc8",
+        "06_literature_materials/material_pool_balance.json": "62353f989c63ef4934377e3a874f1ed2aff20ec9352ccdda2b9f6202633c9791",
+        "06_literature_materials/s08_claim_extraction_diagnostics.json": "9aef3ffbfdd5a486da1f970e9bfb98771ca7e51ad2dd0e060da265ac89a23977",
+        "07_material_families/material_families.json": "817c1fe261f10a975b3f4e990425df184dbfa304cdd89f21d7184435821799f0",
+        "08_material_instances/candidate_generation_audit.json": "b4350c66f1af40b2aa365b6e0c89ab29bbdbd3a3d7dd0b6b89e8c3c7538860dc",
+        "08_material_instances/material_instances.json": "fa60906d296cbf9757eee2d1383cb4e40cd647d01efb6452ae55897706d80356",
+        "09_ranking/candidate_audit.json": "4eb3dc8dd88160f469f7de73738288d88ea99ddc1d68e37bc172be8c1708dabb",
+        "09_ranking/deterministic_reranked_top_list.json": "29f911ccee38eeccd4bc62b4611dd3e8475c278646a5f275eb5c97db49dca329",
+        "09_ranking/ranked_top_list.json": "f0c18dcd72b0d528c6929e6a6b00aacb6df7dba4a15ee0177039ac13d8504c5b",
+        "09_ranking/ranking_generation_audit.json": "65420df0fcde985e7b7e7a97ab0f60da232417178f66a5d2ba4b22b50bdd27de",
+        "09_ranking/ranking_robustness.json": "534571b251c38dd4aa8efff921a2f27a32693b9e1da09cfc2e6c1f06a525a67b",
+        "09_ranking/ranking_robustness_v2.json": "e26806dd674d69e54aac2620f1bbccaec8b335b917ee0767efd585518b0fa953",
+        "09_ranking/score_override_log.json": "65910717d6454c75bc6ecc30f38c1ee0db961c4e46939e91bfb7b336300d29e6",
+        "source_term_audit.json": "b8ee0add6460661936f674a3084d9b615fd09cd8f681a6416419384c717e5cc5"
+      },
+      "guardrail_warnings": []
+    },
+    {
+      "step": "s12_prospective_registry",
+      "status": "completed",
+      "output_hashes": {
+        "00_sanitizer_digest.json": "58a172b1c8dfcde53309bb1776b689134aadf91e195e01d45a27efbe36c8d35e",
+        "00_seed_real/adapter_warnings.json": "bbd64f45e5da2f0c4fdff1dacc3a61e81882ab68535de2506ac300d9203278c6",
+        "00_seed_real/real_seed_diagnostics.json": "2f3eee4b5a5923d5563853d63bb55118a59abdeffd524422ae92a362d4686d68",
+        "00_seed_real/seed_bundle_real.json": "099234916caa40fe38842d84e351d1ce793757131c722e9e1f055dc586874c4f",
+        "01_evidence/evidence_cards.json": "230ab7a8a2ec0f0abb45e2e79ebd14cbcd22799ab73550df3b3dee5315f82535",
+        "02_hypotheses/hypothesis_board.json": "a136e0a279d763528874dab75a82045b8e484b94bd8fc9fdd78e353683c775fa",
+        "03_literature_mechanism/literature_cards_mechanism.json": "a573d2ba73de9e703215aad6c0e85e8452e09cc566ec3b12e1c2110c26842b76",
+        "04_mechanism/mechanism_card.json": "5b1a2fb85f7937488c088e3adbf8ed9f85548488181c3d760357377910cf531d",
+        "04b_design_principles/design_principles.json": "0618d5386dcdda8f5de276abe6490a5c5a3cfffa7534369ab5122de9a9bedf8c",
+        "05_descriptors/descriptor_sheet.json": "6cf4bd0da975e6c9e5e35f0c26f22c575e957398856c502579d6ac7f61a67c4c",
+        "06_literature_materials/claim_coverage_summary.json": "db50a4b62d5c1da305f5b87a05bba8bf292dbf381a2f4df0cf74e9fe516ea580",
+        "06_literature_materials/descriptor_claim_pool.json": "f5bf91ffa7b1570ac7c494a44c4f2263007ce4f4dd0efaab2fc6606cdcceaa32",
+        "06_literature_materials/literature_cards_materials.json": "fad329da499a371b4d0e932b4a17f497d2ad51b4d1c42ad5e7df0f65c399fdc8",
+        "06_literature_materials/material_pool_balance.json": "62353f989c63ef4934377e3a874f1ed2aff20ec9352ccdda2b9f6202633c9791",
+        "06_literature_materials/s08_claim_extraction_diagnostics.json": "9aef3ffbfdd5a486da1f970e9bfb98771ca7e51ad2dd0e060da265ac89a23977",
+        "07_material_families/material_families.json": "817c1fe261f10a975b3f4e990425df184dbfa304cdd89f21d7184435821799f0",
+        "08_material_instances/candidate_generation_audit.json": "b4350c66f1af40b2aa365b6e0c89ab29bbdbd3a3d7dd0b6b89e8c3c7538860dc",
+        "08_material_instances/material_instances.json": "fa60906d296cbf9757eee2d1383cb4e40cd647d01efb6452ae55897706d80356",
+        "09_ranking/candidate_audit.json": "4eb3dc8dd88160f469f7de73738288d88ea99ddc1d68e37bc172be8c1708dabb",
+        "09_ranking/deterministic_reranked_top_list.json": "29f911ccee38eeccd4bc62b4611dd3e8475c278646a5f275eb5c97db49dca329",
+        "09_ranking/ranked_top_list.json": "f0c18dcd72b0d528c6929e6a6b00aacb6df7dba4a15ee0177039ac13d8504c5b",
+        "09_ranking/ranking_generation_audit.json": "65420df0fcde985e7b7e7a97ab0f60da232417178f66a5d2ba4b22b50bdd27de",
+        "09_ranking/ranking_robustness.json": "534571b251c38dd4aa8efff921a2f27a32693b9e1da09cfc2e6c1f06a525a67b",
+        "09_ranking/ranking_robustness_v2.json": "e26806dd674d69e54aac2620f1bbccaec8b335b917ee0767efd585518b0fa953",
+        "09_ranking/score_override_log.json": "65910717d6454c75bc6ecc30f38c1ee0db961c4e46939e91bfb7b336300d29e6",
+        "11_candidate_registry/prospective_candidates.json": "1e616f874203f6d6d3f021265fb5079a8a39ba1c152807a3fcd9c559548beeba",
+        "source_term_audit.json": "b8ee0add6460661936f674a3084d9b615fd09cd8f681a6416419384c717e5cc5"
+      },
+      "guardrail_warnings": []
+    },
+    {
+      "step": "s13_validation_binder",
+      "status": "completed",
+      "output_hashes": {
+        "00_sanitizer_digest.json": "58a172b1c8dfcde53309bb1776b689134aadf91e195e01d45a27efbe36c8d35e",
+        "00_seed_real/adapter_warnings.json": "bbd64f45e5da2f0c4fdff1dacc3a61e81882ab68535de2506ac300d9203278c6",
+        "00_seed_real/real_seed_diagnostics.json": "2f3eee4b5a5923d5563853d63bb55118a59abdeffd524422ae92a362d4686d68",
+        "00_seed_real/seed_bundle_real.json": "099234916caa40fe38842d84e351d1ce793757131c722e9e1f055dc586874c4f",
+        "01_evidence/evidence_cards.json": "230ab7a8a2ec0f0abb45e2e79ebd14cbcd22799ab73550df3b3dee5315f82535",
+        "02_hypotheses/hypothesis_board.json": "a136e0a279d763528874dab75a82045b8e484b94bd8fc9fdd78e353683c775fa",
+        "03_literature_mechanism/literature_cards_mechanism.json": "a573d2ba73de9e703215aad6c0e85e8452e09cc566ec3b12e1c2110c26842b76",
+        "04_mechanism/mechanism_card.json": "5b1a2fb85f7937488c088e3adbf8ed9f85548488181c3d760357377910cf531d",
+        "04b_design_principles/design_principles.json": "0618d5386dcdda8f5de276abe6490a5c5a3cfffa7534369ab5122de9a9bedf8c",
+        "05_descriptors/descriptor_sheet.json": "6cf4bd0da975e6c9e5e35f0c26f22c575e957398856c502579d6ac7f61a67c4c",
+        "06_literature_materials/claim_coverage_summary.json": "db50a4b62d5c1da305f5b87a05bba8bf292dbf381a2f4df0cf74e9fe516ea580",
+        "06_literature_materials/descriptor_claim_pool.json": "f5bf91ffa7b1570ac7c494a44c4f2263007ce4f4dd0efaab2fc6606cdcceaa32",
+        "06_literature_materials/literature_cards_materials.json": "fad329da499a371b4d0e932b4a17f497d2ad51b4d1c42ad5e7df0f65c399fdc8",
+        "06_literature_materials/material_pool_balance.json": "62353f989c63ef4934377e3a874f1ed2aff20ec9352ccdda2b9f6202633c9791",
+        "06_literature_materials/s08_claim_extraction_diagnostics.json": "9aef3ffbfdd5a486da1f970e9bfb98771ca7e51ad2dd0e060da265ac89a23977",
+        "07_material_families/material_families.json": "817c1fe261f10a975b3f4e990425df184dbfa304cdd89f21d7184435821799f0",
+        "08_material_instances/candidate_generation_audit.json": "b4350c66f1af40b2aa365b6e0c89ab29bbdbd3a3d7dd0b6b89e8c3c7538860dc",
+        "08_material_instances/material_instances.json": "fa60906d296cbf9757eee2d1383cb4e40cd647d01efb6452ae55897706d80356",
+        "09_ranking/candidate_audit.json": "4eb3dc8dd88160f469f7de73738288d88ea99ddc1d68e37bc172be8c1708dabb",
+        "09_ranking/deterministic_reranked_top_list.json": "29f911ccee38eeccd4bc62b4611dd3e8475c278646a5f275eb5c97db49dca329",
+        "09_ranking/ranked_top_list.json": "f0c18dcd72b0d528c6929e6a6b00aacb6df7dba4a15ee0177039ac13d8504c5b",
+        "09_ranking/ranking_generation_audit.json": "65420df0fcde985e7b7e7a97ab0f60da232417178f66a5d2ba4b22b50bdd27de",
+        "09_ranking/ranking_robustness.json": "534571b251c38dd4aa8efff921a2f27a32693b9e1da09cfc2e6c1f06a525a67b",
+        "09_ranking/ranking_robustness_v2.json": "e26806dd674d69e54aac2620f1bbccaec8b335b917ee0767efd585518b0fa953",
+        "09_ranking/score_override_log.json": "65910717d6454c75bc6ecc30f38c1ee0db961c4e46939e91bfb7b336300d29e6",
+        "11_candidate_registry/prospective_candidates.json": "1e616f874203f6d6d3f021265fb5079a8a39ba1c152807a3fcd9c559548beeba",
+        "12_validation_binding/candidate_validation_link_20260526T135245Z.json": "9c00435099f307b424143fbda6541e0c7aceded3834ed00d0f80ebcc1ac822ac",
+        "12_validation_binding/validation_binding_report.json": "8528878648c6401eefb892daf707993ff56e3aae6f128859193b7f638aad296a",
+        "source_term_audit.json": "b8ee0add6460661936f674a3084d9b615fd09cd8f681a6416419384c717e5cc5"
+      },
+      "guardrail_warnings": []
+    },
+    {
+      "step": "s14_claim_auditor",
+      "status": "completed",
+      "output_hashes": {
+        "00_sanitizer_digest.json": "58a172b1c8dfcde53309bb1776b689134aadf91e195e01d45a27efbe36c8d35e",
+        "00_seed_real/adapter_warnings.json": "bbd64f45e5da2f0c4fdff1dacc3a61e81882ab68535de2506ac300d9203278c6",
+        "00_seed_real/real_seed_diagnostics.json": "2f3eee4b5a5923d5563853d63bb55118a59abdeffd524422ae92a362d4686d68",
+        "00_seed_real/seed_bundle_real.json": "099234916caa40fe38842d84e351d1ce793757131c722e9e1f055dc586874c4f",
+        "01_evidence/evidence_cards.json": "230ab7a8a2ec0f0abb45e2e79ebd14cbcd22799ab73550df3b3dee5315f82535",
+        "02_hypotheses/hypothesis_board.json": "a136e0a279d763528874dab75a82045b8e484b94bd8fc9fdd78e353683c775fa",
+        "03_literature_mechanism/literature_cards_mechanism.json": "a573d2ba73de9e703215aad6c0e85e8452e09cc566ec3b12e1c2110c26842b76",
+        "04_mechanism/mechanism_card.json": "5b1a2fb85f7937488c088e3adbf8ed9f85548488181c3d760357377910cf531d",
+        "04b_design_principles/design_principles.json": "0618d5386dcdda8f5de276abe6490a5c5a3cfffa7534369ab5122de9a9bedf8c",
+        "05_descriptors/descriptor_sheet.json": "6cf4bd0da975e6c9e5e35f0c26f22c575e957398856c502579d6ac7f61a67c4c",
+        "06_literature_materials/claim_coverage_summary.json": "db50a4b62d5c1da305f5b87a05bba8bf292dbf381a2f4df0cf74e9fe516ea580",
+        "06_literature_materials/descriptor_claim_pool.json": "f5bf91ffa7b1570ac7c494a44c4f2263007ce4f4dd0efaab2fc6606cdcceaa32",
+        "06_literature_materials/literature_cards_materials.json": "fad329da499a371b4d0e932b4a17f497d2ad51b4d1c42ad5e7df0f65c399fdc8",
+        "06_literature_materials/material_pool_balance.json": "62353f989c63ef4934377e3a874f1ed2aff20ec9352ccdda2b9f6202633c9791",
+        "06_literature_materials/s08_claim_extraction_diagnostics.json": "9aef3ffbfdd5a486da1f970e9bfb98771ca7e51ad2dd0e060da265ac89a23977",
+        "07_material_families/material_families.json": "817c1fe261f10a975b3f4e990425df184dbfa304cdd89f21d7184435821799f0",
+        "08_material_instances/candidate_generation_audit.json": "b4350c66f1af40b2aa365b6e0c89ab29bbdbd3a3d7dd0b6b89e8c3c7538860dc",
+        "08_material_instances/material_instances.json": "fa60906d296cbf9757eee2d1383cb4e40cd647d01efb6452ae55897706d80356",
+        "09_ranking/candidate_audit.json": "4eb3dc8dd88160f469f7de73738288d88ea99ddc1d68e37bc172be8c1708dabb",
+        "09_ranking/deterministic_reranked_top_list.json": "29f911ccee38eeccd4bc62b4611dd3e8475c278646a5f275eb5c97db49dca329",
+        "09_ranking/ranked_top_list.json": "f0c18dcd72b0d528c6929e6a6b00aacb6df7dba4a15ee0177039ac13d8504c5b",
+        "09_ranking/ranking_generation_audit.json": "65420df0fcde985e7b7e7a97ab0f60da232417178f66a5d2ba4b22b50bdd27de",
+        "09_ranking/ranking_robustness.json": "534571b251c38dd4aa8efff921a2f27a32693b9e1da09cfc2e6c1f06a525a67b",
+        "09_ranking/ranking_robustness_v2.json": "e26806dd674d69e54aac2620f1bbccaec8b335b917ee0767efd585518b0fa953",
+        "09_ranking/score_override_log.json": "65910717d6454c75bc6ecc30f38c1ee0db961c4e46939e91bfb7b336300d29e6",
+        "11_candidate_registry/prospective_candidates.json": "1e616f874203f6d6d3f021265fb5079a8a39ba1c152807a3fcd9c559548beeba",
+        "12_validation_binding/candidate_validation_link_20260526T135245Z.json": "9c00435099f307b424143fbda6541e0c7aceded3834ed00d0f80ebcc1ac822ac",
+        "12_validation_binding/validation_binding_report.json": "8528878648c6401eefb892daf707993ff56e3aae6f128859193b7f638aad296a",
+        "13_claim_audit/claim_audit_report.json": "a4a34d7cf61e61b669fe4e9e91cc9cb499b748ae8719e2a6c627b15d672d8b0e",
+        "13_claim_audit/claim_audit_report.md": "1efadf7602d4a5fb0e668707704a050fe87c03ed533d114b2d838edea47b6fc6",
+        "source_term_audit.json": "b8ee0add6460661936f674a3084d9b615fd09cd8f681a6416419384c717e5cc5"
+      },
+      "guardrail_warnings": []
+    },
+    {
+      "step": "s11_report_compiler",
+      "status": "completed",
+      "output_hashes": {
+        "00_sanitizer_digest.json": "58a172b1c8dfcde53309bb1776b689134aadf91e195e01d45a27efbe36c8d35e",
+        "00_seed_real/adapter_warnings.json": "bbd64f45e5da2f0c4fdff1dacc3a61e81882ab68535de2506ac300d9203278c6",
+        "00_seed_real/real_seed_diagnostics.json": "2f3eee4b5a5923d5563853d63bb55118a59abdeffd524422ae92a362d4686d68",
+        "00_seed_real/seed_bundle_real.json": "099234916caa40fe38842d84e351d1ce793757131c722e9e1f055dc586874c4f",
+        "01_evidence/evidence_cards.json": "230ab7a8a2ec0f0abb45e2e79ebd14cbcd22799ab73550df3b3dee5315f82535",
+        "02_hypotheses/hypothesis_board.json": "a136e0a279d763528874dab75a82045b8e484b94bd8fc9fdd78e353683c775fa",
+        "03_literature_mechanism/literature_cards_mechanism.json": "a573d2ba73de9e703215aad6c0e85e8452e09cc566ec3b12e1c2110c26842b76",
+        "04_mechanism/mechanism_card.json": "5b1a2fb85f7937488c088e3adbf8ed9f85548488181c3d760357377910cf531d",
+        "04b_design_principles/design_principles.json": "0618d5386dcdda8f5de276abe6490a5c5a3cfffa7534369ab5122de9a9bedf8c",
+        "05_descriptors/descriptor_sheet.json": "6cf4bd0da975e6c9e5e35f0c26f22c575e957398856c502579d6ac7f61a67c4c",
+        "06_literature_materials/claim_coverage_summary.json": "db50a4b62d5c1da305f5b87a05bba8bf292dbf381a2f4df0cf74e9fe516ea580",
+        "06_literature_materials/descriptor_claim_pool.json": "f5bf91ffa7b1570ac7c494a44c4f2263007ce4f4dd0efaab2fc6606cdcceaa32",
+        "06_literature_materials/literature_cards_materials.json": "fad329da499a371b4d0e932b4a17f497d2ad51b4d1c42ad5e7df0f65c399fdc8",
+        "06_literature_materials/material_pool_balance.json": "62353f989c63ef4934377e3a874f1ed2aff20ec9352ccdda2b9f6202633c9791",
+        "06_literature_materials/s08_claim_extraction_diagnostics.json": "9aef3ffbfdd5a486da1f970e9bfb98771ca7e51ad2dd0e060da265ac89a23977",
+        "07_material_families/material_families.json": "817c1fe261f10a975b3f4e990425df184dbfa304cdd89f21d7184435821799f0",
+        "08_material_instances/candidate_generation_audit.json": "b4350c66f1af40b2aa365b6e0c89ab29bbdbd3a3d7dd0b6b89e8c3c7538860dc",
+        "08_material_instances/material_instances.json": "fa60906d296cbf9757eee2d1383cb4e40cd647d01efb6452ae55897706d80356",
+        "09_ranking/candidate_audit.json": "4eb3dc8dd88160f469f7de73738288d88ea99ddc1d68e37bc172be8c1708dabb",
+        "09_ranking/deterministic_reranked_top_list.json": "29f911ccee38eeccd4bc62b4611dd3e8475c278646a5f275eb5c97db49dca329",
+        "09_ranking/ranked_top_list.json": "f0c18dcd72b0d528c6929e6a6b00aacb6df7dba4a15ee0177039ac13d8504c5b",
+        "09_ranking/ranking_generation_audit.json": "65420df0fcde985e7b7e7a97ab0f60da232417178f66a5d2ba4b22b50bdd27de",
+        "09_ranking/ranking_robustness.json": "534571b251c38dd4aa8efff921a2f27a32693b9e1da09cfc2e6c1f06a525a67b",
+        "09_ranking/ranking_robustness_v2.json": "e26806dd674d69e54aac2620f1bbccaec8b335b917ee0767efd585518b0fa953",
+        "09_ranking/score_override_log.json": "65910717d6454c75bc6ecc30f38c1ee0db961c4e46939e91bfb7b336300d29e6",
+        "10_reports/report_generation_audit.json": "eca60290041e3cc500484ab0f773fa56d7ce0effab42f928422b4087538f74c5",
+        "10_reports/stage3_report.json": "799c24ad6733b7996572b4b029cbbe4828cb81ace36c5119086cc528bf885080",
+        "10_reports/stage3_report.md": "47da6cf1141b9876ae854898e59c51491bc478d3012ea229dfaab9c8be73e767",
+        "11_candidate_registry/prospective_candidates.json": "1e616f874203f6d6d3f021265fb5079a8a39ba1c152807a3fcd9c559548beeba",
+        "12_validation_binding/candidate_validation_link_20260526T135245Z.json": "9c00435099f307b424143fbda6541e0c7aceded3834ed00d0f80ebcc1ac822ac",
+        "12_validation_binding/validation_binding_report.json": "8528878648c6401eefb892daf707993ff56e3aae6f128859193b7f638aad296a",
+        "13_claim_audit/claim_audit_report.json": "a4a34d7cf61e61b669fe4e9e91cc9cb499b748ae8719e2a6c627b15d672d8b0e",
+        "13_claim_audit/claim_audit_report.md": "1efadf7602d4a5fb0e668707704a050fe87c03ed533d114b2d838edea47b6fc6",
+        "source_term_audit.json": "b8ee0add6460661936f674a3084d9b615fd09cd8f681a6416419384c717e5cc5"
+      },
+      "guardrail_warnings": []
+    }
+  ],
+  "output_hashes": {
+    "00_sanitizer_digest.json": "58a172b1c8dfcde53309bb1776b689134aadf91e195e01d45a27efbe36c8d35e",
+    "00_seed_real/adapter_warnings.json": "bbd64f45e5da2f0c4fdff1dacc3a61e81882ab68535de2506ac300d9203278c6",
+    "00_seed_real/real_seed_diagnostics.json": "2f3eee4b5a5923d5563853d63bb55118a59abdeffd524422ae92a362d4686d68",
+    "00_seed_real/seed_bundle_real.json": "099234916caa40fe38842d84e351d1ce793757131c722e9e1f055dc586874c4f",
+    "01_evidence/evidence_cards.json": "230ab7a8a2ec0f0abb45e2e79ebd14cbcd22799ab73550df3b3dee5315f82535",
+    "02_hypotheses/hypothesis_board.json": "a136e0a279d763528874dab75a82045b8e484b94bd8fc9fdd78e353683c775fa",
+    "03_literature_mechanism/literature_cards_mechanism.json": "a573d2ba73de9e703215aad6c0e85e8452e09cc566ec3b12e1c2110c26842b76",
+    "04_mechanism/mechanism_card.json": "5b1a2fb85f7937488c088e3adbf8ed9f85548488181c3d760357377910cf531d",
+    "04b_design_principles/design_principles.json": "0618d5386dcdda8f5de276abe6490a5c5a3cfffa7534369ab5122de9a9bedf8c",
+    "05_descriptors/descriptor_sheet.json": "6cf4bd0da975e6c9e5e35f0c26f22c575e957398856c502579d6ac7f61a67c4c",
+    "06_literature_materials/claim_coverage_summary.json": "db50a4b62d5c1da305f5b87a05bba8bf292dbf381a2f4df0cf74e9fe516ea580",
+    "06_literature_materials/descriptor_claim_pool.json": "f5bf91ffa7b1570ac7c494a44c4f2263007ce4f4dd0efaab2fc6606cdcceaa32",
+    "06_literature_materials/literature_cards_materials.json": "fad329da499a371b4d0e932b4a17f497d2ad51b4d1c42ad5e7df0f65c399fdc8",
+    "06_literature_materials/material_pool_balance.json": "62353f989c63ef4934377e3a874f1ed2aff20ec9352ccdda2b9f6202633c9791",
+    "06_literature_materials/s08_claim_extraction_diagnostics.json": "9aef3ffbfdd5a486da1f970e9bfb98771ca7e51ad2dd0e060da265ac89a23977",
+    "07_material_families/material_families.json": "817c1fe261f10a975b3f4e990425df184dbfa304cdd89f21d7184435821799f0",
+    "08_material_instances/candidate_generation_audit.json": "b4350c66f1af40b2aa365b6e0c89ab29bbdbd3a3d7dd0b6b89e8c3c7538860dc",
+    "08_material_instances/material_instances.json": "fa60906d296cbf9757eee2d1383cb4e40cd647d01efb6452ae55897706d80356",
+    "09_ranking/candidate_audit.json": "4eb3dc8dd88160f469f7de73738288d88ea99ddc1d68e37bc172be8c1708dabb",
+    "09_ranking/deterministic_reranked_top_list.json": "29f911ccee38eeccd4bc62b4611dd3e8475c278646a5f275eb5c97db49dca329",
+    "09_ranking/ranked_top_list.json": "f0c18dcd72b0d528c6929e6a6b00aacb6df7dba4a15ee0177039ac13d8504c5b",
+    "09_ranking/ranking_generation_audit.json": "65420df0fcde985e7b7e7a97ab0f60da232417178f66a5d2ba4b22b50bdd27de",
+    "09_ranking/ranking_robustness.json": "534571b251c38dd4aa8efff921a2f27a32693b9e1da09cfc2e6c1f06a525a67b",
+    "09_ranking/ranking_robustness_v2.json": "e26806dd674d69e54aac2620f1bbccaec8b335b917ee0767efd585518b0fa953",
+    "09_ranking/score_override_log.json": "65910717d6454c75bc6ecc30f38c1ee0db961c4e46939e91bfb7b336300d29e6",
+    "10_reports/report_generation_audit.json": "eca60290041e3cc500484ab0f773fa56d7ce0effab42f928422b4087538f74c5",
+    "10_reports/stage3_report.json": "799c24ad6733b7996572b4b029cbbe4828cb81ace36c5119086cc528bf885080",
+    "10_reports/stage3_report.md": "47da6cf1141b9876ae854898e59c51491bc478d3012ea229dfaab9c8be73e767",
+    "11_candidate_registry/prospective_candidates.json": "1e616f874203f6d6d3f021265fb5079a8a39ba1c152807a3fcd9c559548beeba",
+    "12_validation_binding/candidate_validation_link_20260526T135245Z.json": "9c00435099f307b424143fbda6541e0c7aceded3834ed00d0f80ebcc1ac822ac",
+    "12_validation_binding/validation_binding_report.json": "8528878648c6401eefb892daf707993ff56e3aae6f128859193b7f638aad296a",
+    "13_claim_audit/claim_audit_report.json": "a4a34d7cf61e61b669fe4e9e91cc9cb499b748ae8719e2a6c627b15d672d8b0e",
+    "13_claim_audit/claim_audit_report.md": "1efadf7602d4a5fb0e668707704a050fe87c03ed533d114b2d838edea47b6fc6",
+    "llm_cost_summary.json": "20baa8a9d3a4d1d7c59e1633fa2bfc271819fd718d585b749c452d2647ecf3fa",
+    "source_term_audit.json": "b8ee0add6460661936f674a3084d9b615fd09cd8f681a6416419384c717e5cc5"
+  }
+}

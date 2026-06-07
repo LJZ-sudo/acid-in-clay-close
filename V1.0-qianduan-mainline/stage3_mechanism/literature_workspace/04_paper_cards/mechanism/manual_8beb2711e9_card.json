@@ -1,0 +1,83 @@
+{
+  "paper_id": "manual_8beb2711e9",
+  "stage_target": "mechanism",
+  "bibliography": {
+    "title": "Optimizing the Proton Conductivity with the Isokinetic  Temperature in Perovskite-Type Proton Conductors  According to Meyer–Neldel Rule",
+    "authors": "",
+    "year": 0
+  },
+  "system_identity": {
+    "base_material": "BaMO3 (M = Zr/Ce)",
+    "dopant": "trivalent elements",
+    "form_factor": "ceramic",
+    "other": ""
+  },
+  "measurement_scope": {
+    "temp_range": "450-700 °C",
+    "freq_range": "",
+    "humidity": "humid environment",
+    "other_conditions": ""
+  },
+  "mechanism_relevant_findings": [
+    "Protons migrate along oxygen sites in the ZrO6 octahedra through the Grotthuss (hopping) mechanism.",
+    "Thermal activation drives the proton hopping from one oxygen to another by overcoming an energy barrier."
+  ],
+  "numerical_findings": [
+    {
+      "metric": "activation energy",
+      "value": "E_a",
+      "unit": "",
+      "conditions": "temperature-dependent conductivity"
+    },
+    {
+      "metric": "isokinetic temperature",
+      "value": "T_iso",
+      "unit": "",
+      "conditions": "related to lattice vibration frequency"
+    }
+  ],
+  "eis_shape_findings": [],
+  "arrhenius_vtf_findings": [
+    "The temperature-dependent proton conductivity follows the Arrhenius equation.",
+    "The conductivities intersect at an isokinetic temperature, indicating independence from activation energy."
+  ],
+  "limitations": [
+    "The study may not address all potential factors influencing proton conductivity."
+  ],
+  "relevance_judgement": {
+    "score": 0.9,
+    "reason": "The paper provides significant insights into proton transport mechanisms and their dependencies on temperature and materials properties."
+  },
+  "supports_axes": {
+    "transport": "Grotthuss_hopping",
+    "temperature_dependence": "pure_Arrhenius"
+  },
+  "conflicts_axes": {},
+  "trace_spans": [
+    {
+      "page": null,
+      "section": "",
+      "text_snippet": "www.advenergymat.de 2102939  (1 of 8) © 2021 Wiley-VCH GmbH"
+    },
+    {
+      "page": null,
+      "section": "Research Article",
+      "text_snippet": ""
+    },
+    {
+      "page": null,
+      "section": "Peng Du, Nana Li, Xiao Ling, Zhijun Fan, Artur Braun, Wenge Yang,* Qianli Chen,* and  Arthur Yelon",
+      "text_snippet": "DOI: 10.1002/aenm.202102939 proton-conducting electrolytes for inter- mediate temperature (450–700  ° C) proton- conducting  ceramic  fuel  cells  (IT-PCFCs). [1–7]  Fully understanding the  proton tr"
+    },
+    {
+      "page": null,
+      "section": "1. Introduction",
+      "text_snippet": "Perovskite-type metal oxides, such as barium zirconate  and cerate (BaMO 3  where M  =  Zr/Ce) are promising Adv. Energy Mater.   2022 ,  12 , 2102939 www.advenergymat.de www.advancedsciencenews.com ©"
+    },
+    {
+      "page": null,
+      "section": "2. Results",
+      "text_snippet": "2.1. Proton Conductivity in Perovskites: An Investigation  According to MNR To verify whether MNR describes proton conductivity in the  perovskite proton conductors, we plot the Arrhenius prefactor  σ"
+    }
+  ]
+}

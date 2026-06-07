@@ -1,0 +1,33 @@
+{
+  "step_id": "s06_mechanism",
+  "mechanism_card": {
+    "selected_hypothesis_id": "H4",
+    "mechanism_label": "Multi-threshold confined acid-water H-bond reconnection",
+    "justification": "H4 best accounts for the multiple Ea regimes, T_arc < T_break offset, and wide-temperature behavior observed across samples.",
+    "confidence": 0.72,
+    "evidence_alignment": [
+      "E1: wide T range with two distinct Ea regimes",
+      "E3: T_arc consistently below T_break",
+      "E4: Arrhenius better than VTF in low-T regime"
+    ],
+    "literature_support": [
+      "ML1: Grotthuss hopping supports low-T Arrhenius regime",
+      "ML2: EIS arc disappearance contextually consistent (heuristic)"
+    ],
+    "t_arc_t_break_explanation": "T_arc reflects the disappearance of grain-boundary impedance arc (interface effect), while T_break marks restructuring of bulk H-bond network. These probe different physical processes and can differ by 5-15K.",
+    "eis_evolution_explanation": "On cooling, the dominant relaxation time of the bulk H-bond network enters the measurement frequency window (mechanism (a)), while a slower interfacial / bound-water process that was dynamically averaged out at room T becomes resolved as a distinct semicircle (mechanism (b)). At room T only the low-frequency linear tail is visible.",
+    "caveats": [
+      "EIS interpretation is heuristic and non-unique",
+      "VTF vs Arrhenius discrimination requires broader T range"
+    ],
+    "rejected_hypotheses": [
+      "H2 rejected: insufficient evidence for single sharp percolation threshold",
+      "H3 partially rejected: VTF not dominant in low-T regime"
+    ],
+    "why_not": [
+      "H2: would have explained composition-driven jumps better only if a single dominant threshold existed; observed multi-jump pattern argues against it",
+      "H3: would have explained a continuous VTF trend better than the observed piecewise Arrhenius — none identified for the low-T regime"
+    ]
+  },
+  "arbitration_method": "evidence_consistency + literature_weight + eis_evolution_check"
+}

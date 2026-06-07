@@ -1,0 +1,22 @@
+{
+  "prompt_version": "0.2.0",
+  "last_modified": "2026-05-09",
+  "system_file": "closure_system.md",
+  "user_template_file": "closure_user_template.md",
+  "intended_models": [
+    "deepseek-v4-pro",
+    "deepseek-r1",
+    "deepseek-r1-0528",
+    "deepseek-v3.2"
+  ],
+  "default_model": "deepseek-v4-pro",
+  "min_max_tokens": 3500,
+  "notes": "v4-pro returns clean JSON in `content` and CoT in `reasoning_content`. Hidden reasoning eats tokens, so max_tokens must be >= 3500 for the new ≤600-char comprehensive_analysis_zh field to render.",
+  "do_not_overclaim": [
+    "不要预测或推荐下一步实验参数（R/N/温度等）",
+    "不要引用未在输入中给出的样品 / 文献 / 邻居样品",
+    "不要修改任何数字（σ、Ea、相变 T、KK pass rate、置信度）",
+    "不要使用'显著突破/远超/世界领先'之类的夸张措辞",
+    "comprehensive_analysis_zh 里的每一条因果话术必须能落到具体数字或段 idx"
+  ]
+}

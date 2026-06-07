@@ -1,0 +1,83 @@
+{
+  "step_id": "s07_descriptors",
+  "descriptors": [
+    {
+      "descriptor_id": "D1",
+      "descriptor_text": "Continuous proton-transport pathway with no disruptive phase transition across the cold-to-room operating window (~182–299 K), i.e., no freezing/crystallisation/eutectic segregation that breaks percolation at sub-zero temperatures.",
+      "mechanism_role": "Maintains a single connected confined hydrogen-bond network so VTF-like, relaxation-controlled transport remains valid over the full measurement span.",
+      "required_material_features": [
+        "Single-phase (or percolated two-phase) morphology maintained from ~182 K to ~299 K",
+        "Suppressed crystallisation/freezing of the conducting fraction under confinement"
+      ],
+      "priority": "critical",
+      "derived_from_mechanism": "Confined acid-water network with VTF-governed hybrid hopping; continuity requirement implied by VTF-governed transport"
+    },
+    {
+      "descriptor_id": "D2",
+      "descriptor_text": "Bound-water/plasticiser continuity down to ~200 K: the conducting fraction must retain a mobile, hydrogen-bonded polar fluid (bound water and/or anti-freeze co-solvent) so proton hopping is not quenched by rigidification.",
+      "mechanism_role": "Provides the dynamically relaxing polar medium whose structural relaxation rate governs proton mobility (VTF behavior).",
+      "required_material_features": [
+        "High fraction of non-freezing (strongly bound/confined) water or equivalent polar plasticiser",
+        "Hydrogen-bond network remains labile below 253 K"
+      ],
+      "priority": "critical",
+      "derived_from_mechanism": "VTF-governed hybrid hopping in confined hydrated acid network"
+    },
+    {
+      "descriptor_id": "D3",
+      "descriptor_text": "Matrix flexibility below 253 K: the host scaffold must avoid a glassy-brittle state that disconnects channels; it should preserve segmental freedom or an amorphous interfacial layer enabling relaxation-coupled transport at low temperature.",
+      "mechanism_role": "Prevents mechanical/segmental arrest from throttling the relaxation-controlled conductivity and breaking nanoscale connectivity.",
+      "required_material_features": [
+        "Host has sufficiently low effective Tg in the hydrated/plasticised state",
+        "No brittle microcracking or pore collapse upon cooling"
+      ],
+      "priority": "critical",
+      "derived_from_mechanism": "Relaxation-controlled (VTF) transport coupled to host/plasticiser dynamics"
+    },
+    {
+      "descriptor_id": "D4",
+      "descriptor_text": "Cold-stable acid form within confinement: the proton source must remain in a mobile, non-crystallising speciation under 182–299 K conditions (e.g., buffered/partially neutralised/complexed acid species rather than a neat crystallising acid phase).",
+      "mechanism_role": "Ensures the proton-donor reservoir stays liquid-like and participates in the hydrogen-bond network rather than precipitating into an insulating solid phase.",
+      "required_material_features": [
+        "Acid speciation that resists crystallisation/phase separation under cooling",
+        "Sustained ionic dissociation (available mobile protons) at low temperature"
+      ],
+      "priority": "critical",
+      "derived_from_mechanism": "Confined hydrated-acid network must remain mobile; avoids acid crystallisation-driven loss of conduction"
+    },
+    {
+      "descriptor_id": "D5",
+      "descriptor_text": "Interconnected nanoconfinement of the conducting fraction: the architecture must confine the hydrated acid network in nanometric domains while still providing a percolated pathway (no isolated pools), to couple mobility to structural relaxation and suppress bulk-like freezing.",
+      "mechanism_role": "Creates the confined acid–water network responsible for hybrid hopping and VTF-type temperature dependence.",
+      "required_material_features": [
+        "Nanometer-scale channels/pores or interfacial layers that host the polar conducting phase",
+        "Percolation of these domains across the membrane thickness"
+      ],
+      "priority": "important",
+      "derived_from_mechanism": "“Confined acid-water network” structural premise"
+    },
+    {
+      "descriptor_id": "D6",
+      "descriptor_text": "Dense hydrogen-bond donor/acceptor landscape enabling hybrid (vehicular + Grotthuss-like) proton transfer: the conducting phase must provide contiguous proton relay sites with short hopping distances and high hydrogen-bond connectivity.",
+      "mechanism_role": "Enables fast proton translocation within the confined network, with transport rate governed by network relaxation (VTF).",
+      "required_material_features": [
+        "High concentration of protonatable sites and hydrogen-bond acceptors in the conducting phase",
+        "Continuous hydrogen-bond connectivity (no long nonpolar gaps)"
+      ],
+      "priority": "important",
+      "derived_from_mechanism": "Hybrid hopping within confined hydrogen-bond network"
+    },
+    {
+      "descriptor_id": "D7",
+      "descriptor_text": "Strong retention of the conducting phase without over-binding protons: the host must immobilise/retain acid and water (low leaching/volatility) while avoiding excessive ion-pairing or proton trapping that would reduce effective proton mobility.",
+      "mechanism_role": "Stabilises composition and maintains a high population of mobile charge carriers consistent with observed conductivity trends.",
+      "required_material_features": [
+        "Specific interactions that confine/retain the polar phase under thermal cycling",
+        "Moderate binding strength that preserves high proton activity and minimizes fixed ion pairing"
+      ],
+      "priority": "important",
+      "derived_from_mechanism": "Compositionally stable confined acid–water network required for reproducible VTF behavior"
+    }
+  ],
+  "extraction_notes": "Descriptors are framed to enforce sub-zero (182–299 K) operability consistent with a relaxation-controlled, confined hydrated-acid proton network (VTF), emphasizing suppression of freezing/crystallisation and preservation of a percolated, dynamically mobile hydrogen-bonded phase."
+}

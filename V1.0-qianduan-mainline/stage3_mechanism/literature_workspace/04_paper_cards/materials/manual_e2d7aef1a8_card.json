@@ -1,0 +1,81 @@
+{
+  "paper_id": "manual_e2d7aef1a8",
+  "stage_target": "materials",
+  "bibliography": {
+    "title": "=  c 0,H +  exp �",
+    "authors": "",
+    "year": 0
+  },
+  "system_identity": {
+    "base_material": "ZrP2O7",
+    "dopant": "Sc, Y, La",
+    "form_factor": "solid",
+    "other": ""
+  },
+  "measurement_scope": {
+    "temp_range": "500-1000°C",
+    "freq_range": "",
+    "humidity": "varying (H2O and D2O atmospheres)",
+    "other_conditions": "Oxidizing and reducing conditions"
+  },
+  "mechanism_relevant_findings": [
+    "Proton conductivity is dominant in H2O atmospheres compared to D2O and dry conditions.",
+    "Conductivity is independent of pO2, confirming predominantly ionic (protonic) conductivity.",
+    "Protons are charge-compensated by oxygen interstitials."
+  ],
+  "numerical_findings": [
+    {
+      "metric": "proton conductivity",
+      "value": "1.5e-4",
+      "unit": "S/cm",
+      "conditions": "340°C for 5 mol % Y-doped ZrP2O7"
+    },
+    {
+      "metric": "conductivity",
+      "value": "10^-7 to 10^-3",
+      "unit": "S/cm",
+      "conditions": "20°C when humidity increases from 20 to 90%"
+    }
+  ],
+  "eis_shape_findings": [],
+  "arrhenius_vtf_findings": [],
+  "limitations": [
+    "Densification is challenging due to the thermal decomposition and volatility of phosphorus oxides."
+  ],
+  "relevance_judgement": {
+    "score": 0.8,
+    "reason": "The study provides significant insights into proton conduction mechanisms at high temperatures."
+  },
+  "supports_axes": {
+    "transport": "Grotthuss_hopping",
+    "temperature_dependence": "VTF"
+  },
+  "conflicts_axes": {},
+  "trace_spans": [
+    {
+      "page": null,
+      "section": "High Temperature Proton Conductivity of ZrP 2 O 7",
+      "text_snippet": ""
+    },
+    {
+      "page": null,
+      "section": "Vajeeston Nalini, a, z   Koji Amezawa, b   Wen Xing, a   and Truls Norby a, * , z",
+      "text_snippet": "a Centre for Materials Science and Nanotechnology, FERMiO, Department of Chemistry, University of Oslo, NO-0349 Oslo, Norway b Graduate School of Environmental Studies, Tohoku University, Sendai 980-8"
+    },
+    {
+      "page": null,
+      "section": "�� P 2 O 7 � P 2 O 7 x � 3 p � H 2 O � = exp � � S 0",
+      "text_snippet": ""
+    },
+    {
+      "page": null,
+      "section": "R   � exp � − � H 0",
+      "text_snippet": ""
+    },
+    {
+      "page": null,
+      "section": "RT   �",
+      "text_snippet": "� 2 � *  Electrochemical Society Active Member. z  E-mail: vajeesn@kjemi.uio.no; truls.norby@kjemi.uio.no Journal of The Electrochemical Society,  157  � 10 � B1491-B1498  � 2010 � 0013-4651/2010/157 "
+    }
+  ]
+}

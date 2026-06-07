@@ -1,0 +1,38 @@
+{
+  "step_id": "s05",
+  "survey_scope": "mechanism_constraint",
+  "cards": [
+    {
+      "card_id": "ML1",
+      "title": "Grotthuss proton hopping in acid hydrogels",
+      "authors": "Mock A, Test B",
+      "year": 2021,
+      "doi": "10.0000/mock-ml1",
+      "summary": "Grotthuss mechanism dominant below 270K in PA-polymer systems.",
+      "relevance_to_mechanism": "Supports H1 and H4",
+      "relevance_to_descriptors": "",
+      "component_descriptor_claims": [],
+      "supports_hypothesis_ids": [
+        "H1",
+        "H4"
+      ],
+      "weakens_hypothesis_ids": []
+    },
+    {
+      "card_id": "ML2",
+      "title": "EIS arc temperature dependence",
+      "authors": "Mock C",
+      "year": 2020,
+      "doi": "10.0000/mock-ml2",
+      "summary": "EIS arc disappearance near T_arc is heuristic.",
+      "relevance_to_mechanism": "Context only for T_arc interpretation",
+      "relevance_to_descriptors": "",
+      "component_descriptor_claims": [],
+      "supports_hypothesis_ids": [
+        "H2"
+      ],
+      "weakens_hypothesis_ids": []
+    }
+  ],
+  "synthesis_notes": "H1 and H4 have strongest literature support; EIS evidence is heuristic only."
+}

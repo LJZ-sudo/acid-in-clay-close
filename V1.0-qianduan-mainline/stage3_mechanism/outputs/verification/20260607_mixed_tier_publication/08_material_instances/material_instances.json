@@ -1,0 +1,314 @@
+{
+  "step_id": "s09_instances",
+  "instances": [
+    {
+      "instance_id": "I1",
+      "family_id": "F1",
+      "instance_name": "Starch/PVA/organic-modified attapulgite/phosphoric acid membrane",
+      "composition_description": "montmorillonite (MMT) + Attapulgite (1-D clay nanorods) + halloysite nanotubes (HNTs)",
+      "components": [
+        "montmorillonite (MMT)",
+        "Attapulgite (1-D clay nanorods)",
+        "halloysite nanotubes (HNTs)"
+      ],
+      "expected_properties": [
+        "cold_window: bound-water and retained-acid continuity",
+        "processability: water-processable film route",
+        "evidence_basis: component-level D4 claims"
+      ],
+      "risk_flags": [
+        "acid leaching must be measured",
+        "clay dispersion controls reproducibility"
+      ],
+      "combination_novelty": "novel_combination",
+      "element_evidence": [
+        {
+          "component": "montmorillonite (MMT)",
+          "role_in_formulation": "Montmorillonite clay at 6 wt% in a PVA/PEG blend provides enhanced proton conductivity of 0.0802 S/cm, attributed to ...",
+          "descriptor_satisfied": [
+            "D6"
+          ],
+          "analog_paper_ids": [
+            "manual_b9c3d1711d"
+          ],
+          "analog_reason": "Montmorillonite clay at 6 wt% in a PVA/PEG blend provides enhanced proton conductivity of 0.0802 S/cm, attributed to nanometric dispersion creating interfaci..."
+        },
+        {
+          "component": "Attapulgite (1-D clay nanorods)",
+          "role_in_formulation": "Attapulgite nanorods constrain phosphotungstic acid within high‑surface‑area domains, forming effective proton‑transp...",
+          "descriptor_satisfied": [
+            "D6"
+          ],
+          "analog_paper_ids": [
+            "manual_1190463586"
+          ],
+          "analog_reason": "Attapulgite nanorods constrain phosphotungstic acid within high‑surface‑area domains, forming effective proton‑transport channels (proton conductivity 35.3 m..."
+        },
+        {
+          "component": "halloysite nanotubes (HNTs)",
+          "role_in_formulation": "Halloysite nanotubes provide nanometric confinement for phosphoric acid, establishing a dense hydrogen-bonding networ...",
+          "descriptor_satisfied": [
+            "D6"
+          ],
+          "analog_paper_ids": [
+            "manual_a16330d0f5"
+          ],
+          "analog_reason": "Halloysite nanotubes provide nanometric confinement for phosphoric acid, establishing a dense hydrogen-bonding network that facilitates ultrafast proton tran..."
+        }
+      ],
+      "literature_support_card_ids": [
+        "manual_b9c3d1711d",
+        "manual_1190463586",
+        "manual_a16330d0f5"
+      ],
+      "novelty_rationale": "This combines separate starch, PVA, 1-D clay, and phosphoric-acid evidence into a quaternary cold-side membrane rather than copying one S08 formulation.",
+      "origin": "llm_selected_from_broad_pool",
+      "source_mode": "broad_literature_pool_selection",
+      "user_candidate_id": null,
+      "design_principle_ids": [],
+      "descriptor_claim_coverage": null
+    },
+    {
+      "instance_id": "I2",
+      "family_id": "F2",
+      "instance_name": "Chitosan/organic-modified attapulgite/phosphoric acid composite",
+      "composition_description": "Attapulgite (1-D clay nanorods) + halloysite nanotubes (HNTs)",
+      "components": [
+        "Attapulgite (1-D clay nanorods)",
+        "halloysite nanotubes (HNTs)"
+      ],
+      "expected_properties": [
+        "host_sites: chitosan hydrogen-bond matrix",
+        "confinement: fibrous clay compartment",
+        "carrier: retained phosphoric acid"
+      ],
+      "risk_flags": [
+        "biopolymer swelling may alter percolation",
+        "acid loading needs optimisation"
+      ],
+      "combination_novelty": "novel_combination",
+      "element_evidence": [
+        {
+          "component": "Attapulgite (1-D clay nanorods)",
+          "role_in_formulation": "Attapulgite nanorods constrain phosphotungstic acid within high‑surface‑area domains, forming effective proton‑transp...",
+          "descriptor_satisfied": [
+            "D6"
+          ],
+          "analog_paper_ids": [
+            "manual_1190463586"
+          ],
+          "analog_reason": "Attapulgite nanorods constrain phosphotungstic acid within high‑surface‑area domains, forming effective proton‑transport channels (proton conductivity 35.3 m..."
+        },
+        {
+          "component": "halloysite nanotubes (HNTs)",
+          "role_in_formulation": "Halloysite nanotubes provide nanometric confinement for phosphoric acid, establishing a dense hydrogen-bonding networ...",
+          "descriptor_satisfied": [
+            "D6"
+          ],
+          "analog_paper_ids": [
+            "manual_a16330d0f5"
+          ],
+          "analog_reason": "Halloysite nanotubes provide nanometric confinement for phosphoric acid, establishing a dense hydrogen-bonding network that facilitates ultrafast proton tran..."
+        }
+      ],
+      "literature_support_card_ids": [
+        "manual_1190463586",
+        "manual_a16330d0f5"
+      ],
+      "novelty_rationale": "This uses chitosan host evidence with attapulgite confinement and retained phosphoric acid from separate S08 claims, making the combined formulation literature-auditable but not a direct copy.",
+      "origin": "llm_selected_from_broad_pool",
+      "source_mode": "broad_literature_pool_selection",
+      "user_candidate_id": null,
+      "design_principle_ids": [],
+      "descriptor_claim_coverage": null
+    },
+    {
+      "instance_id": "I3",
+      "family_id": "F2",
+      "instance_name": "Halloysite nanotube/phosphoric acid/PVA hybrid membrane",
+      "composition_description": "halloysite nanotubes (HNTs) + montmorillonite (MMT)",
+      "components": [
+        "halloysite nanotubes (HNTs)",
+        "montmorillonite (MMT)"
+      ],
+      "expected_properties": [
+        "acid_retention: nanotube-confined phosphoric acid",
+        "film_integrity: PVA binder contribution",
+        "transport: packed-acid donor-acceptor network"
+      ],
+      "risk_flags": [
+        "high acid fraction may plasticise the matrix",
+        "tube loading must avoid brittleness"
+      ],
+      "combination_novelty": "novel_combination",
+      "element_evidence": [
+        {
+          "component": "halloysite nanotubes (HNTs)",
+          "role_in_formulation": "Halloysite nanotubes provide nanometric confinement for phosphoric acid, establishing a dense hydrogen-bonding networ...",
+          "descriptor_satisfied": [
+            "D6"
+          ],
+          "analog_paper_ids": [
+            "manual_a16330d0f5"
+          ],
+          "analog_reason": "Halloysite nanotubes provide nanometric confinement for phosphoric acid, establishing a dense hydrogen-bonding network that facilitates ultrafast proton tran..."
+        },
+        {
+          "component": "montmorillonite (MMT)",
+          "role_in_formulation": "Montmorillonite clay at 6 wt% in a PVA/PEG blend provides enhanced proton conductivity of 0.0802 S/cm, attributed to ...",
+          "descriptor_satisfied": [
+            "D6"
+          ],
+          "analog_paper_ids": [
+            "manual_b9c3d1711d"
+          ],
+          "analog_reason": "Montmorillonite clay at 6 wt% in a PVA/PEG blend provides enhanced proton conductivity of 0.0802 S/cm, attributed to nanometric dispersion creating interfaci..."
+        }
+      ],
+      "literature_support_card_ids": [
+        "manual_a16330d0f5",
+        "manual_b9c3d1711d"
+      ],
+      "novelty_rationale": "This transfers halloysite-confined acid evidence into a PVA-containing film-forming route, differing from the closest single-paper acid-in-clay formulation by the added polymer matrix role.",
+      "origin": "llm_selected_from_broad_pool",
+      "source_mode": "broad_literature_pool_selection",
+      "user_candidate_id": null,
+      "design_principle_ids": [],
+      "descriptor_claim_coverage": null
+    },
+    {
+      "instance_id": "I4",
+      "family_id": "F3",
+      "instance_name": "PAAm-g-starch/phosphoric acid hydrogel electrolyte",
+      "composition_description": "PAAm-g-starch hydrogel + halloysite nanotubes (HNTs) + hydrogel electrolyte",
+      "components": [
+        "PAAm-g-starch hydrogel",
+        "halloysite nanotubes (HNTs)",
+        "hydrogel electrolyte"
+      ],
+      "expected_properties": [
+        "retention: microporous hydrogel acid uptake",
+        "cold_window: hydrogel continuity motif",
+        "host_sites: starch-containing H-bond network"
+      ],
+      "risk_flags": [
+        "water content may dominate freezing behaviour",
+        "mechanical strength may be low"
+      ],
+      "combination_novelty": "close_variant",
+      "element_evidence": [
+        {
+          "component": "PAAm-g-starch hydrogel",
+          "role_in_formulation": "The 3D PAAm-g-starch hydrogel framework provides interconnected microporous space that absorbs and retains H3PO4 unde...",
+          "descriptor_satisfied": [
+            "D6"
+          ],
+          "analog_paper_ids": [
+            "manual_a624da98ce"
+          ],
+          "analog_reason": "The 3D PAAm-g-starch hydrogel framework provides interconnected microporous space that absorbs and retains H3PO4 under pressure and anhydrous conditions, ena..."
+        },
+        {
+          "component": "halloysite nanotubes (HNTs)",
+          "role_in_formulation": "Halloysite nanotubes provide nanometric confinement for phosphoric acid, establishing a dense hydrogen-bonding networ...",
+          "descriptor_satisfied": [
+            "D6"
+          ],
+          "analog_paper_ids": [
+            "manual_a16330d0f5"
+          ],
+          "analog_reason": "Halloysite nanotubes provide nanometric confinement for phosphoric acid, establishing a dense hydrogen-bonding network that facilitates ultrafast proton tran..."
+        },
+        {
+          "component": "hydrogel electrolyte",
+          "role_in_formulation": "Hydrogel electrolyte suppresses ice crystallisation and depresses the freezing point, maintaining continuous ionic co...",
+          "descriptor_satisfied": [
+            "D1"
+          ],
+          "analog_paper_ids": [
+            "manual_58ec9a6c2e"
+          ],
+          "analog_reason": "Hydrogel electrolyte suppresses ice crystallisation and depresses the freezing point, maintaining continuous ionic conduction pathways at low temperatures. (..."
+        }
+      ],
+      "literature_support_card_ids": [
+        "manual_a624da98ce",
+        "manual_a16330d0f5",
+        "manual_58ec9a6c2e"
+      ],
+      "novelty_rationale": "This is close to hydrogel acid-retention literature but is retained as an interpretable low-temperature comparison route with explicit component evidence.",
+      "origin": "llm_selected_from_broad_pool",
+      "source_mode": "broad_literature_pool_selection",
+      "user_candidate_id": null,
+      "design_principle_ids": [],
+      "descriptor_claim_coverage": null
+    },
+    {
+      "instance_id": "I5",
+      "family_id": "F3",
+      "instance_name": "PVA/chitosan/Nb2O5/H3PO4 defect-assisted composite",
+      "composition_description": "montmorillonite (MMT) + Attapulgite (1-D clay nanorods) + halloysite nanotubes (HNTs)",
+      "components": [
+        "montmorillonite (MMT)",
+        "Attapulgite (1-D clay nanorods)",
+        "halloysite nanotubes (HNTs)"
+      ],
+      "expected_properties": [
+        "mobility: oxide-induced free volume",
+        "carrier: H3PO4 donor-acceptor sites",
+        "matrix: PVA/chitosan film continuity"
+      ],
+      "risk_flags": [
+        "oxide agglomeration can block conduction",
+        "acid-base balance needs screening"
+      ],
+      "combination_novelty": "novel_combination",
+      "element_evidence": [
+        {
+          "component": "montmorillonite (MMT)",
+          "role_in_formulation": "Montmorillonite clay at 6 wt% in a PVA/PEG blend provides enhanced proton conductivity of 0.0802 S/cm, attributed to ...",
+          "descriptor_satisfied": [
+            "D6"
+          ],
+          "analog_paper_ids": [
+            "manual_b9c3d1711d"
+          ],
+          "analog_reason": "Montmorillonite clay at 6 wt% in a PVA/PEG blend provides enhanced proton conductivity of 0.0802 S/cm, attributed to nanometric dispersion creating interfaci..."
+        },
+        {
+          "component": "Attapulgite (1-D clay nanorods)",
+          "role_in_formulation": "Attapulgite nanorods constrain phosphotungstic acid within high‑surface‑area domains, forming effective proton‑transp...",
+          "descriptor_satisfied": [
+            "D6"
+          ],
+          "analog_paper_ids": [
+            "manual_1190463586"
+          ],
+          "analog_reason": "Attapulgite nanorods constrain phosphotungstic acid within high‑surface‑area domains, forming effective proton‑transport channels (proton conductivity 35.3 m..."
+        },
+        {
+          "component": "halloysite nanotubes (HNTs)",
+          "role_in_formulation": "Halloysite nanotubes provide nanometric confinement for phosphoric acid, establishing a dense hydrogen-bonding networ...",
+          "descriptor_satisfied": [
+            "D6"
+          ],
+          "analog_paper_ids": [
+            "manual_a16330d0f5"
+          ],
+          "analog_reason": "Halloysite nanotubes provide nanometric confinement for phosphoric acid, establishing a dense hydrogen-bonding network that facilitates ultrafast proton tran..."
+        }
+      ],
+      "literature_support_card_ids": [
+        "manual_b9c3d1711d",
+        "manual_1190463586",
+        "manual_a16330d0f5"
+      ],
+      "novelty_rationale": "This combines PVA film support, chitosan host sites, Nb2O5 free-volume evidence, and phosphoric-acid proton donation across separate component claims to create a distinct defect-assisted route.",
+      "origin": "llm_selected_from_broad_pool",
+      "source_mode": "broad_literature_pool_selection",
+      "user_candidate_id": null,
+      "design_principle_ids": [],
+      "descriptor_claim_coverage": null
+    }
+  ]
+}

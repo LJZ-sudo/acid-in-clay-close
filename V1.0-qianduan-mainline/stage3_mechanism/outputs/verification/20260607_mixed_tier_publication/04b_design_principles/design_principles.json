@@ -1,0 +1,129 @@
+{
+  "step_id": "s06b_transfer_principles",
+  "principles": [
+    {
+      "principle_id": "P1",
+      "principle_type": "proton_source",
+      "acid_in_clay_origin": "In the acid-in-clay dataset, conductivity increases more strongly with acid/loading count N than with ratio-style parameter R, especially at 299 K and still positively at 233 K, indicating that available proton-bearing network density matters more than simple composition ratio alone [V2-E2, V2-E4, V2-E13].",
+      "transferable_rule": "When designing cold-operable proton conductors, prefer proton donors that can be loaded to create a percolating interfacial proton network inside the host, but only within a range where the acid remains immobilized or strongly associated rather than forming a separate free-liquid phase.",
+      "target_material_descriptor": "Strong Brønsted-acid phase or acid-functional component dispersible within an OH-rich polymer/inorganic composite",
+      "required_validation": [
+        "EIS conductivity versus acid-loading series",
+        "acid retention or leaching test",
+        "thickness-dependent conductivity check"
+      ],
+      "failure_modes": [
+        "free acid leakage",
+        "phase-separated acid-rich domains",
+        "electrode-polarization-dominated apparent conductivity"
+      ],
+      "evidence_ids": [
+        "V2-E2",
+        "V2-E4",
+        "V2-E13"
+      ],
+      "mechanism_links": [
+        "M1"
+      ]
+    },
+    {
+      "principle_id": "P2",
+      "principle_type": "confinement_geometry",
+      "acid_in_clay_origin": "The winning mechanism is consistent with two dynamically distinct proton populations arising from confinement in a high-surface-area inorganic host, while broad non-Arrhenius behavior and multiple transport regimes are nearly universal across samples [V2-E7, V2-E10, E2].",
+      "transferable_rule": "When designing composite proton conductors, prefer inorganic hosts that supply extended internal surfaces and nanoscale confinement capable of supporting both a mobile acid-water domain and a more strongly bound interfacial domain, rather than dense fillers that only dilute the electrolyte.",
+      "target_material_descriptor": "1-D fibrous or channel-bearing hydrated silicate-class inorganic host with high external/interfacial area",
+      "required_validation": [
+        "SEM or TEM dispersion imaging",
+        "sorption or water-uptake partitioning",
+        "EIS comparison of filled versus unfilled matrix"
+      ],
+      "failure_modes": [
+        "filler aggregation",
+        "non-percolating inorganic phase",
+        "host acting as inert diluent without interfacial conduction"
+      ],
+      "evidence_ids": [
+        "V2-E7",
+        "V2-E10",
+        "E2"
+      ],
+      "mechanism_links": [
+        "M1"
+      ]
+    },
+    {
+      "principle_id": "P3",
+      "principle_type": "bound_water_network",
+      "acid_in_clay_origin": "A detectable low-temperature breakpoint appears in 39/40 samples and segment-level activation energies shift from lower values at high/mid temperature to much higher values at low temperature, supporting sequential activation of a labile network and a more strongly bound interfacial water population [V2-E11, V2-E12].",
+      "transferable_rule": "When designing for proton transport in the 182–299 K window, prefer material combinations that convert most water from bulk-like freezing water into bound or interfacial water that remains hydrogen-bond-connected after cooling, so transport can hand off from a mobile network to a more strongly bound one instead of collapsing abruptly.",
+      "target_material_descriptor": "Hydrophilic polymer–acid–inorganic interface capable of stabilizing non-bulk water through dense hydrogen-bonding sites",
+      "required_validation": [
+        "DSC freezing suppression",
+        "variable-temperature EIS",
+        "spectroscopy of bound versus free water"
+      ],
+      "failure_modes": [
+        "bulk water freezing",
+        "loss of connectivity in the hydrogen-bond network",
+        "sharp conductivity collapse below the crossover temperature"
+      ],
+      "evidence_ids": [
+        "V2-E11",
+        "V2-E12"
+      ],
+      "mechanism_links": [
+        "M1"
+      ]
+    },
+    {
+      "principle_id": "P4",
+      "principle_type": "acid_retention",
+      "acid_in_clay_origin": "Because the observed transport is dominated by distributed, mostly non-uniquely resolvable EIS responses rather than clean separate semicircles, the conductive phase is best interpreted as interfacially distributed and strongly coupled to the host rather than as a simple free electrolyte pool [V2-E9, E3].",
+      "transferable_rule": "When selecting binders or matrix phases, prefer chemistries that anchor the acid through hydrogen bonding, coordination, or nanoconfinement so the proton reservoir stays interfacial and spatially distributed during thermal cycling.",
+      "target_material_descriptor": "Polar matrix with dense acid-binding functionalities and limited acid solvation volume",
+      "required_validation": [
+        "thermal cycling with post-cycle mass balance",
+        "acid migration mapping",
+        "humidity-conditioned impedance reproducibility"
+      ],
+      "failure_modes": [
+        "acid exudation during cooling or heating",
+        "interfacial depletion over time",
+        "conductivity drift from redistribution of the acid phase"
+      ],
+      "evidence_ids": [
+        "V2-E9",
+        "E3"
+      ],
+      "mechanism_links": [
+        "M1"
+      ]
+    },
+    {
+      "principle_id": "P5",
+      "principle_type": "cold_window_stability",
+      "acid_in_clay_origin": "Across 140 fitted segments and 40 samples, transport is broadly VTF-like yet shows a nearly universal low-temperature regime change, implying that useful materials for this window must preserve conductivity through a crossover rather than trying to avoid it entirely [E1, V2-E7, V2-E12].",
+      "transferable_rule": "When designing materials for sub-ambient proton conduction, prefer systems whose conductivity degrades gradually across cooling-induced regime transitions and whose low-temperature pathway remains measurable, rather than systems optimized only for peak room-temperature conductivity.",
+      "target_material_descriptor": "Multiphase proton-conducting composite with thermally persistent interfacial pathway",
+      "required_validation": [
+        "multi-cycle temperature-ramp EIS",
+        "breakpoint reproducibility analysis",
+        "low-temperature hold stability test"
+      ],
+      "failure_modes": [
+        "irreversible conductivity loss after one cool-down",
+        "thermal hysteresis from water redistribution",
+        "apparent performance based only on room-temperature transport"
+      ],
+      "evidence_ids": [
+        "E1",
+        "V2-E7",
+        "V2-E12"
+      ],
+      "mechanism_links": [
+        "M1"
+      ]
+    }
+  ],
+  "migration_summary": "The acid-in-clay result transfers to new biopolymer/clay/acid systems by treating conductivity not as a single homogeneous electrolyte property, but as an interfacial-network design problem. The new material should combine a retainable proton source, a high-surface-area confining inorganic host, and a hydrophilic matrix that stabilizes bound water so cooling shifts transport from a more mobile acid-water population to a more strongly bound interfacial population rather than eliminating proton motion. In practice, this means choosing an OH-rich polymer class that can immobilize acid, pairing it with a fibrous or channel-bearing hydrated silicate-class filler that creates abundant confined interfaces, and validating that water is mostly non-bulk, acid remains distributed rather than leaking, and conductivity remains continuous through the low-temperature crossover."
+}

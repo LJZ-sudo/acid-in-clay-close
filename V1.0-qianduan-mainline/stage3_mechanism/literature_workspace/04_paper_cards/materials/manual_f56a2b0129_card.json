@@ -1,0 +1,73 @@
+{
+  "paper_id": "manual_f56a2b0129",
+  "stage_target": "materials",
+  "bibliography": {
+    "title": "ABSTRACT:  Growing concern regarding the impact of fossil fuels has led to demands for the development of green and renewable materials for advanced electrochemical energy storage devices. Biopolymers with unique hierarchical structures and physicochemical properties, serving as an appealing platform for the advancement of sustainable energy, have found widespread application in the gel electrolytes of supercapacitors. In this Review, we outline the structure and characteristics of various biopolymers, discuss the proposed mechanisms and assess the evaluation metrics of gel electrolytes in supercapacitor devices, and further analyze the roles of biopolymer materials in this context. The state-of-the-art electrochemical performance of biopolymer-based hydrogel electrolytes for supercapacitors and their multiple functionalities are summarized, while underscoring the current technical challenges and potential solutions. This Review is intended to offer a thorough overview of recent developments in biopolymer-based hydrogel electrolytes, highlighting research concerning green and sustainable energy storage devices and potential avenues for further development. G",
+    "authors": "",
+    "year": 0
+  },
+  "system_identity": {
+    "base_material": "biopolymers",
+    "dopant": "",
+    "form_factor": "gel electrolytes",
+    "other": ""
+  },
+  "measurement_scope": {
+    "temp_range": "−50 to 200 °C",
+    "freq_range": "",
+    "humidity": "",
+    "other_conditions": ""
+  },
+  "mechanism_relevant_findings": [
+    "Biopolymers facilitate ion migration within gel polymer electrolytes (GPEs) for supercapacitors.",
+    "2024, 9, 1803−1825 Read Online\n\nACCESS Metrics & More Article Recommendations\n\nABSTRACT:  Growing concern regarding the impact of fossil fuels has led to demands for the development of green and renewable materials for advanced electrochemical energy storage devices.",
+    "In this Review, we outline the structure and characteristics of various biopolymers, discuss the proposed mechanisms and assess the evaluation metrics of gel electrolytes in supercapacitor devices, and further analyze the roles of biopolymer materials in this context.",
+    "This Review is intended to offer a thorough overview of recent developments in biopolymer-based hydrogel electrolytes, highlighting research concerning green and sustainable energy storage devices and potential avenues for further development.",
+    "G\n\niven the rapid progress in fields such as electric vehicles and smart grids, the importance of highly efficient energy storage systems for sustainable energy development and energy security cannot be overstated.",
+    "However, in practical applications, flexible supercapacitors are more susceptible to various deformations under mechanical strains, especially bending and shearing forces.",
+    "4 , 5   Gel polymer electrolytes (GPEs), which contain immobilized liquid electrolytes in a polymer matrix, have been proposed to simultaneously act as both separator and electrolyte, reducing the risk of leakage and evaporation observed in devices using liquid electrolytes and the rigidity of solid",
+    "Compared with\n\nReceived: November 28, 2023 Revised: January 15, 2024 Accepted: February 8, 2024 Published:  March 29, 2024\n\nReview\n\nhttp://pubs.acs.org/journal/aelccp\n\n© 2024 The Authors.",
+    "Moreover, their tunable morphology and mechanical properties, along with abundant reactive sites amenable to chemical modification, render them as appealing building blocks for sustainable electronic devices.",
+    "While some reviews have touched upon the utilization of biopolymer-based GPEs in flexible supercapacitors, they rarely delve into the intricacies of incorporating biopolymers into gel electrolytes for supercapacitors, nor have they proposed effective strategies to enhance the performance of such dev",
+    "9 − 12   In this Review, we aim to comprehensively discuss recent advances of biopolymer-based GPEs and their applications in energy storage devices, especially super- capacitors."
+  ],
+  "numerical_findings": [],
+  "eis_shape_findings": [],
+  "arrhenius_vtf_findings": [],
+  "limitations": [
+    "The review does not delve into the intricacies of incorporating biopolymers into gel electrolytes for supercapacitors."
+  ],
+  "relevance_judgement": {
+    "score": 0.5,
+    "reason": "The paper discusses biopolymer-based GPEs but lacks specific EIS or Arrhenius analysis."
+  },
+  "supports_axes": {},
+  "conflicts_axes": {},
+  "trace_spans": [
+    {
+      "page": null,
+      "section": "Recent Advances in Biopolymer-Based Hydrogel Electrolytes for Flexible Supercapacitors",
+      "text_snippet": ""
+    },
+    {
+      "page": null,
+      "section": "Jiansen Ding, Yang Yang, *  Jade Poisson, Yuan He, Hua Zhang, *  Ying Zhang, Yulan Bao, Shuiliang Chen, Yong Mei Chen, *  and Kai Zhang *",
+      "text_snippet": "Cite This:  ACS Energy Lett.  2024, 9, 1803−1825 Read Online"
+    },
+    {
+      "page": null,
+      "section": "ACCESS Metrics & More Article Recommendations",
+      "text_snippet": "iven the rapid progress in fields such as electric vehicles and smart grids, the importance of highly efficient energy storage systems for sustainable energy development and energy security cannot be "
+    },
+    {
+      "page": null,
+      "section": "Review",
+      "text_snippet": "http://pubs.acs.org/journal/aelccp © 2024 The Authors. Published by American Chemical Society 1803 https://doi.org/10.1021/acsenergylett.3c02567 ACS Energy Lett.  2024, 9, 1803 − 1825 This article is "
+    },
+    {
+      "page": null,
+      "section": "The interactions between surface functional groups in biopolymers, as well as their compatibility and dis- persion within other components, greatly affect the overall performances of the devices.",
+      "text_snippet": "ACS Energy Letters http://pubs.acs.org/journal/aelccp Review https://doi.org/10.1021/acsenergylett.3c02567 ACS Energy Lett.  2024, 9, 1803 − 1825 1806 Figure 3. Schematic ion storage mechanisms and el"
+    }
+  ]
+}

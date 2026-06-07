@@ -1,0 +1,144 @@
+{
+  "claims": [
+    {
+      "card_id": "MAT1",
+      "paper_id": "MAT1",
+      "paper_title": "Polysaccharide-based proton exchange membranes",
+      "component": "starch",
+      "descriptor_ids": [
+        "D1"
+      ],
+      "quantitative_anchor": "OH density ~11 mmol/g",
+      "claim_text": "starch provides dense OH H-bond donor sites (MAT1).",
+      "confidence": "supported",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "MAT1",
+      "paper_id": "MAT1",
+      "paper_title": "Polysaccharide-based proton exchange membranes",
+      "component": "phosphoric acid (H3PO4)",
+      "descriptor_ids": [
+        "D2"
+      ],
+      "quantitative_anchor": "σ ~ 10 mS/cm at 298 K",
+      "claim_text": "H3PO4 supplies mobile protons retained by the matrix (MAT1).",
+      "confidence": "supported",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "MAT2",
+      "paper_id": "MAT2",
+      "paper_title": "Clay-polymer composite membranes",
+      "component": "attapulgite",
+      "descriptor_ids": [
+        "D3",
+        "D5"
+      ],
+      "quantitative_anchor": "1-D tubular channel width ~3.7 Å",
+      "claim_text": "attapulgite supplies 1-D confined proton channels with interfacial acid retention (MAT2).",
+      "confidence": "supported",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "MAT2",
+      "paper_id": "MAT2",
+      "paper_title": "Clay-polymer composite membranes",
+      "component": "PVA",
+      "descriptor_ids": [
+        "D4"
+      ],
+      "quantitative_anchor": "Tg ~ 85 °C, film-forming",
+      "claim_text": "PVA compatibilises the clay/acid matrix and resists sub-zero brittleness when plasticised (MAT2).",
+      "confidence": "supported",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "MAT3",
+      "paper_id": "MAT3",
+      "paper_title": "OH-rich polysaccharide matrix for proton-conducting membranes",
+      "component": "glycerol",
+      "descriptor_ids": [
+        "D4"
+      ],
+      "quantitative_anchor": "anti-freeze plasticiser, Tg depression ~40 K",
+      "claim_text": "glycerol suppresses sub-zero freezing of the polysaccharide+acid matrix (MAT3).",
+      "confidence": "supported",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "MAT3",
+      "paper_id": "MAT3",
+      "paper_title": "OH-rich polysaccharide matrix for proton-conducting membranes",
+      "component": "starch",
+      "descriptor_ids": [
+        "D1"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "starch provides OH-rich H-bond donor sites (MAT3).",
+      "confidence": "supported",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "MAT-pva",
+      "paper_id": "MAT-pva",
+      "paper_title": "PVA matrix continuity and hydrogen-bond compatibilisation",
+      "component": "PVA",
+      "descriptor_ids": [
+        "D2",
+        "D4"
+      ],
+      "quantitative_anchor": "film-forming compatibiliser",
+      "claim_text": "PVA supports acid retention and cold-window matrix continuity.",
+      "confidence": "supported",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "MAT-sep",
+      "paper_id": "MAT-sep",
+      "paper_title": "Sepiolite as one-dimensional hydrated clay scaffold",
+      "component": "sepiolite",
+      "descriptor_ids": [
+        "D3",
+        "D5"
+      ],
+      "quantitative_anchor": "1-D fibrous clay",
+      "claim_text": "Sepiolite-like clay supports confinement and leakage-control descriptors.",
+      "confidence": "supported",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "MAT-biomass-A",
+      "paper_id": "MAT-biomass-A",
+      "paper_title": "Biomass starch placeholder as OH-rich host",
+      "component": "biomass-starch-A",
+      "descriptor_ids": [
+        "D1",
+        "D4"
+      ],
+      "quantitative_anchor": "OH-rich biopolymer host",
+      "claim_text": "Biomass starch analog supports OH-rich and cold-window host descriptors.",
+      "confidence": "supported",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    }
+  ],
+  "n_claims": 9
+}

@@ -1,0 +1,18 @@
+# Stage 2 Evidence Agent 依赖
+# 建议 Python 3.8+
+
+# 核心数据处理
+pandas>=1.2.0
+numpy>=1.20.0
+
+# 科学计算（统计分析、模型拟合）
+scipy>=1.6.0
+
+# 数据验证和序列化
+pydantic>=2.0.0
+
+# 可视化
+matplotlib>=3.3.0
+
+# 机器学习（未来可能使用）
+scikit-learn>=1.0.0

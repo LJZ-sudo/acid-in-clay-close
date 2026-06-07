@@ -1,0 +1,186 @@
+{
+  "packet_id": "QP-S05-001",
+  "stage_target": "s05_mechanism",
+  "focus_question": "验证以下机理假说: Single-transition Grotthuss threshold hopping; Single percolation threshold; Cooperative VTF rearrangement",
+  "search_queries": [
+    {
+      "query_id": "QM01",
+      "intent": "寻找支持/反驳假说 'Single-transition Grotthuss threshold hopping' 的文献",
+      "query_text": "\"Single transition Grotthuss threshold hopping\" proton conduction mechanism",
+      "query_type": "google_scholar",
+      "include_terms": [
+        "Single",
+        "transition",
+        "Grotthuss",
+        "proton",
+        "conductivity"
+      ],
+      "exclude_terms": [
+        "battery",
+        "fuel cell membrane"
+      ],
+      "year_hint": "2010-2026",
+      "notes": "建议查看 Cited by 链，关注 EIS + Arrhenius 方法论文"
+    },
+    {
+      "query_id": "QM02",
+      "intent": "寻找支持/反驳假说 'Single percolation threshold' 的文献",
+      "query_text": "\"Single percolation threshold\" proton conduction mechanism",
+      "query_type": "google_scholar",
+      "include_terms": [
+        "Single",
+        "percolation",
+        "threshold",
+        "proton",
+        "conductivity"
+      ],
+      "exclude_terms": [
+        "battery",
+        "fuel cell membrane"
+      ],
+      "year_hint": "2010-2026",
+      "notes": "建议查看 Cited by 链，关注 EIS + Arrhenius 方法论文"
+    },
+    {
+      "query_id": "QM03",
+      "intent": "寻找支持/反驳假说 'Cooperative VTF rearrangement' 的文献",
+      "query_text": "\"Cooperative VTF rearrangement\" proton conduction mechanism",
+      "query_type": "google_scholar",
+      "include_terms": [
+        "Cooperative",
+        "VTF",
+        "rearrangement",
+        "proton",
+        "conductivity"
+      ],
+      "exclude_terms": [
+        "battery",
+        "fuel cell membrane"
+      ],
+      "year_hint": "2010-2026",
+      "notes": "建议查看 Cited by 链，关注 EIS + Arrhenius 方法论文"
+    },
+    {
+      "query_id": "QM04",
+      "intent": "寻找支持/反驳假说 'Multi-threshold confined acid-water network reconnection' 的文献",
+      "query_text": "\"Multi threshold confined acid water\" proton conduction mechanism",
+      "query_type": "google_scholar",
+      "include_terms": [
+        "Multi",
+        "threshold",
+        "confined",
+        "proton",
+        "conductivity"
+      ],
+      "exclude_terms": [
+        "battery",
+        "fuel cell membrane"
+      ],
+      "year_hint": "2010-2026",
+      "notes": "建议查看 Cited by 链，关注 EIS + Arrhenius 方法论文"
+    },
+    {
+      "query_id": "QM05",
+      "intent": "酸性高分子水凝胶中质子传输机制的温度依赖性综述",
+      "query_text": "proton transport mechanism polymer hydrogel temperature dependent",
+      "query_type": "google_scholar",
+      "include_terms": [
+        "proton",
+        "transport",
+        "mechanism",
+        "polymer"
+      ],
+      "exclude_terms": [
+        "battery",
+        "lithium"
+      ],
+      "year_hint": "2010-2026",
+      "notes": null
+    },
+    {
+      "query_id": "QM06",
+      "intent": "Grotthuss 与 Vehicle 机制的区分方法",
+      "query_text": "Grotthuss vehicle proton hopping activation energy polymer",
+      "query_type": "google_scholar",
+      "include_terms": [
+        "Grotthuss",
+        "vehicle",
+        "proton",
+        "hopping"
+      ],
+      "exclude_terms": [
+        "battery",
+        "lithium"
+      ],
+      "year_hint": "2010-2026",
+      "notes": null
+    },
+    {
+      "query_id": "QM07",
+      "intent": "EIS + Arrhenius 分析在质子导体中的应用",
+      "query_text": "EIS Nyquist proton conductor activation energy Arrhenius",
+      "query_type": "google_scholar",
+      "include_terms": [
+        "EIS",
+        "Nyquist",
+        "proton",
+        "conductor"
+      ],
+      "exclude_terms": [
+        "battery",
+        "lithium"
+      ],
+      "year_hint": "2010-2026",
+      "notes": null
+    },
+    {
+      "query_id": "QM08",
+      "intent": "酸-黏土复合体系的宽温区质子传导",
+      "query_text": "acid clay composite proton conduction wide temperature",
+      "query_type": "google_scholar",
+      "include_terms": [
+        "acid",
+        "clay",
+        "composite",
+        "proton"
+      ],
+      "exclude_terms": [
+        "battery",
+        "lithium"
+      ],
+      "year_hint": "2010-2026",
+      "notes": null
+    },
+    {
+      "query_id": "QM09",
+      "intent": "氢键网络与质子跳跃的水通道结构",
+      "query_text": "hydrogen bond network proton hopping water channel polymer",
+      "query_type": "google_scholar",
+      "include_terms": [
+        "hydrogen",
+        "bond",
+        "network",
+        "proton"
+      ],
+      "exclude_terms": [
+        "battery",
+        "lithium"
+      ],
+      "year_hint": "2010-2026",
+      "notes": null
+    }
+  ],
+  "screening_notes": [
+    "优先保留: 有明确温区划分和 Ea 数据的论文",
+    "优先保留: 对比了 Grotthuss vs Vehicle 机制的论文",
+    "优先保留: 含 EIS 形貌分析（Nyquist / Bode）的论文",
+    "排除: 纯燃料电池膜性能测试（无机理讨论）",
+    "排除: 纯计算/MD模拟（无实验验证）"
+  ],
+  "stop_rule": "连续 10 篇论文标题/摘要均不相关时停止检索",
+  "generated_from": {
+    "source": "hypothesis_board",
+    "n_hypotheses": 4
+  },
+  "created_at": "2026-04-17T13:07:17.847559+00:00"
+}

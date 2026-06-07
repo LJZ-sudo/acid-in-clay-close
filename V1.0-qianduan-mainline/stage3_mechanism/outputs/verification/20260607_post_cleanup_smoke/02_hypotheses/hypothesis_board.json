@@ -1,0 +1,78 @@
+{
+  "step_id": "s04_hypotheses",
+  "hypotheses": [
+    {
+      "hypothesis_id": "H1",
+      "mechanism_label": "Piecewise-Arrhenius Grotthuss with single H-bond threshold",
+      "description": "Proton transport via H-bond network restructuring with a single threshold near T_break.",
+      "key_prediction": "Two Arrhenius regimes separated at T_break; EIS arc persists only below T_arc.",
+      "mechanism_axes": {
+        "transport": "Grotthuss_hopping",
+        "phase_structure": "single_continuous_phase",
+        "temperature_dependence": "piecewise_Arrhenius",
+        "transition_topology": "single_transition"
+      },
+      "supporting_evidence_ids": [
+        "E1",
+        "E2"
+      ],
+      "conflicting_evidence_ids": [],
+      "prior_plausibility": 0.55
+    },
+    {
+      "hypothesis_id": "H2",
+      "mechanism_label": "Single percolation threshold with vehicular step-up",
+      "description": "Conductive phase percolates at a single temperature, producing a step-change in vehicular transport.",
+      "key_prediction": "Step-change in conductivity near T_break; weak T_arc/T_break coupling.",
+      "mechanism_axes": {
+        "transport": "vehicular_diffusion",
+        "phase_structure": "single_percolation_threshold",
+        "temperature_dependence": "piecewise_Arrhenius",
+        "transition_topology": "single_transition"
+      },
+      "supporting_evidence_ids": [
+        "E3"
+      ],
+      "conflicting_evidence_ids": [
+        "E2"
+      ],
+      "prior_plausibility": 0.35
+    },
+    {
+      "hypothesis_id": "H3",
+      "mechanism_label": "Cooperative VTF above Tg, no sharp transition",
+      "description": "Cooperative segmental motion governs proton mobility; σ(T) is smooth with no distinct transition.",
+      "key_prediction": "VTF fit dominates throughout the range; T_break is a fit artifact.",
+      "mechanism_axes": {
+        "transport": "vehicular_diffusion",
+        "phase_structure": "single_continuous_phase",
+        "temperature_dependence": "VTF",
+        "transition_topology": "no_transition"
+      },
+      "supporting_evidence_ids": [],
+      "conflicting_evidence_ids": [
+        "E1"
+      ],
+      "prior_plausibility": 0.3
+    },
+    {
+      "hypothesis_id": "H4",
+      "mechanism_label": "Multi-threshold confined acid-water reconnection",
+      "description": "Multiple connectivity transitions of confined acid-water domains produce several Ea regimes.",
+      "key_prediction": "More than one Ea break; EIS arc and conductivity transitions decouple in temperature.",
+      "mechanism_axes": {
+        "transport": "hybrid_grotthuss_vehicular",
+        "phase_structure": "multi_threshold_confined_domains",
+        "temperature_dependence": "Arrhenius_with_MeyerNeldel_coupling",
+        "transition_topology": "multi_transition"
+      },
+      "supporting_evidence_ids": [
+        "E1",
+        "E3"
+      ],
+      "conflicting_evidence_ids": [],
+      "prior_plausibility": 0.65
+    }
+  ],
+  "reasoning_notes": "Four competing hypotheses differing on transport (Grotthuss vs vehicular vs hybrid), phase_structure (continuous vs percolation vs multi-threshold confined), and transition_topology (no/single/multi)."
+}

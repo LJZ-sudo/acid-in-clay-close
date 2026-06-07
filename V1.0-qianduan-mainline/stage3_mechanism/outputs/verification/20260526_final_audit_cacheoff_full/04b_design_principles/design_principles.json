@@ -1,0 +1,104 @@
+{
+  "step_id": "s06b_transfer_principles",
+  "principles": [
+    {
+      "principle_id": "P1",
+      "principle_type": "proton_source",
+      "acid_in_clay_origin": "σ correlates strongly with water content N at both 299 K (V2-E2) and 233 K (V2-E4) but only marginally with acid ratio R at 299 K (V2-E1) and not at 233 K (V2-E3); over-stoichiometric acid loading is unnecessary for high conductivity at these temperatures.",
+      "transferable_rule": "When selecting a proton source for a confined-electrolyte system, prioritize acid carriers that also function as hydration-water mediators, not merely proton-donor stoichiometry; ensure the carrier's water-binding capacity sustains a percolating network across the target temperature window.",
+      "target_material_descriptor": "OH-rich polyol or polysaccharide acid host capable of multiple hydrogen-bonding modes, containing a moderate to high density of bound water even at an intermediate acid loading (e.g., plant-derived starch-class biopolymers with 1,4-α-glycosidic linkages).",
+      "required_validation": [
+        "Correlation of DC conductivity with total water content N at two temperatures spanning the operational window",
+        "DSC quantitation of non-freezable bound water fraction in the composite film"
+      ],
+      "failure_modes": [
+        "Free acid exudation / leaching when the proton source does not complex water effectively",
+        "Suppression of conductivity at low temperature due to water crystallization rather than vitrification"
+      ],
+      "evidence_ids": [
+        "V2-E1",
+        "V2-E2",
+        "V2-E3",
+        "V2-E4"
+      ],
+      "mechanism_links": [
+        "M1"
+      ]
+    },
+    {
+      "principle_id": "P2",
+      "principle_type": "confinement_geometry",
+      "acid_in_clay_origin": "The VTF-preferring per-sample statistics (V2-E7, V2-E10) and EIS evidence of a low-temperature semicircle (V2-E9) indicate that the inorganic host provides a strongly confining, disordered interfacial pathway distinct from bulk liquid channels; a 2D or 1D-host geometry enables the percolation-to-cluster transition seen at T_break.",
+      "transferable_rule": "Choose an inorganic host with a high-aspect-ratio mesoporous or fibrous geometry that forces the proton-conducting phase into a nanoscale confined film (thickness ≤ 5 nm), so that interfacial transport dominates over bulk-like conduction and the crossover from connected film to isolated cluster is thermodynamically accessible.",
+      "target_material_descriptor": "1-D fibrous hydrated magnesium silicate clay with sub-10 nm channel cross-sections (e.g., the sepiolite/palygorskite family).",
+      "required_validation": [
+        "TEM or SEM imaging of composite cross-section to verify filler dispersion and interfacial layer continuity",
+        "EIS frequency sweep at multiple temperatures to detect the emergence of a resolvable semicircle below a characteristic temperature"
+      ],
+      "failure_modes": [
+        "Aggregation of the filler leading to bulk-like acid pockets and loss of confinement",
+        "Geometric tortuosity preventing the formation of a sample-spanning interfacial network at low filler volume fraction"
+      ],
+      "evidence_ids": [
+        "V2-E7",
+        "V2-E9",
+        "V2-E10",
+        "V2-E12"
+      ],
+      "mechanism_links": [
+        "M1"
+      ]
+    },
+    {
+      "principle_id": "P3",
+      "principle_type": "bound_water_network",
+      "acid_in_clay_origin": "The positive σ–N correlation (V2-E2, V2-E4) combined with VTF transport (V2-E10) and the median piecewise break at 233 K (V2-E12) demonstrates that bound water vitrifies rather than freezing in the confined environment, and that this non-freezable water network sustains proton mobility into the cold window.",
+      "transferable_rule": "Engineer the bound-water fraction so that the system contains negligible freezable bulk water below 273 K; this is achieved by selecting both the proton source and the inorganic host to maximize water-binding sites that depress the water activity and suppress ice nucleation.",
+      "target_material_descriptor": "Composite with a total hydroxyl-group density exceeding 10 mmol/cm³, distributed between a hygroscopic biopolymer matrix and a high internal-surface-area clay filler, such that DSC analysis shows > 80% of water remains non-freezable above 182 K.",
+      "required_validation": [
+        "DSC heating/cooling scans to quantify freezable vs non-freezable water",
+        "Low-temperature XRD or neutron scattering to confirm absence of bulk ice phases"
+      ],
+      "failure_modes": [
+        "Bulk water freezing causing film cracking and catastrophic conductivity loss below 273 K",
+        "Excessive drying during film fabrication that reduces bound water below the percolation threshold"
+      ],
+      "evidence_ids": [
+        "V2-E2",
+        "V2-E4",
+        "V2-E10",
+        "V2-E11",
+        "V2-E12"
+      ],
+      "mechanism_links": [
+        "M1"
+      ]
+    },
+    {
+      "principle_id": "P4",
+      "principle_type": "failure_mode_control",
+      "acid_in_clay_origin": "Ea is not correlated with R or N (V2-E5, V2-E6), and the top-performing σ samples (V2-E13) cover a broad range of R, indicating that simply increasing acid concentration does not overcome the fundamental transport barriers set by confinement and percolation topology.",
+      "transferable_rule": "Do not use global activation energy (Ea) as a primary optimization metric; instead, monitor the low-temperature segment activation energy and the piecewise breakpoint temperature T_break as diagnostics of network connectivity. Target a T_break below 245 K to ensure cold-window operability.",
+      "target_material_descriptor": "Any proton-conducting composite film that is intended for operation between 182 K and 299 K, where the DC Arrhenius plot exhibits a single piecewise break aligning with the EIS semicircle appearance temperature.",
+      "required_validation": [
+        "Piecewise linear regression of DC conductivity vs 1/T to extract T_break and low-T segment Ea",
+        "Coincidence check: T_break from DC data should match T_arc from EIS within 15 K"
+      ],
+      "failure_modes": [
+        "Misleading optimization based on room-temperature conductivity alone, ignoring cold-window performance collapse",
+        "High acid loading that produces initial σ gains but introduces mobile free acid that leaches over time"
+      ],
+      "evidence_ids": [
+        "V2-E5",
+        "V2-E6",
+        "V2-E11",
+        "V2-E12",
+        "V2-E13"
+      ],
+      "mechanism_links": [
+        "M1"
+      ]
+    }
+  ],
+  "migration_summary": "The design rules extracted from the acid-in-clay system transfer to biopolymer/clay/H₃PO₄ composites through three parallel axes: (1) the proton-source role shifts from a liquid acid/clay slurry to a solid biopolymer that simultaneously binds phosphoric acid and a large fraction of non-freezable water, making the polysaccharide's OH-group density and water-binding capacity the critical design parameters; (2) the fibrous clay retains its role as a 1D nanoconfinement scaffold that forces the proton-conducting phase into a thin interfacial film, so that the selection of a sepiolite/palygorskite-class filler with high aspect ratio and sub-10 nm channels is universally applicable; (3) the anti-freeze strategy generalizes from 'bound water in clay interlayers' to 'bound water co-complexed by the biopolymer and the clay surface', requiring DSC validation of a vitrified water network that suppresses ice crystallization across the 182–299 K window. In every case, the multi-threshold percolation topology (continuous film → disconnected clusters) is recreated, and the same diagnostic T_break/T_arc coincidence test validates the design."
+}

@@ -1,0 +1,83 @@
+{
+  "paper_id": "manual_15d8390320",
+  "stage_target": "mechanism",
+  "bibliography": {
+    "title": "bottleneck, and the constrained water solvent molecule positions reveal a frozen water wire. Moreover, while proton shuttles through this frozen water wire, Grotthuss di ff usion, rather than vehicular di ff usion, plays a dominant role in the process. Compared to the free energy pro fi le of a  fi ctitious non- Grotthuss shuttling classical H 3 O + , the excess protonic charge distribution reveals that Grotthuss di ff usion in the axial direction is important in a  d  = 0.81 nm CNT (6,6) nanopore and much less important in a  d  = 0.95 nm CNT (7,7) nanopore, in which the Grotthuss di ff usion is primarily just rattling within the interesting orthogonally aligned Zundel cation. These studies thus provide insights into the di ff erences between the ultrafast and ultraslow proton di ff usion rates in the CNT (6,6) and CNT (7,7). The proton di ff usion then becomes more bulk-like in larger-diameter nanopores but mostly in the water layer adjacent to the hydrophobic CNT wall. The simulations presented in this work provide multiple predictions and insights into the novel behavior of hydrated excess protons under nanoscale con fi nement in hydrophobic CNTs, which can be the focus of future detailed experimental studies. ■ ASSOCIATED CONTENT * s ı  Supporting Information The Supporting Information is available free of charge at https://pubs.acs.org/doi/10.1021/acs.jpcc.0c04493 .",
+    "authors": "",
+    "year": 0
+  },
+  "system_identity": {
+    "base_material": "carbon nanotube",
+    "dopant": null,
+    "form_factor": "nanopore",
+    "other": null
+  },
+  "measurement_scope": {
+    "temp_range": null,
+    "freq_range": null,
+    "humidity": null,
+    "other_conditions": "nanopore diameters of 0.81, 0.95, 1.09, 1.22, 1.36, 1.63, and 1.90 nm"
+  },
+  "mechanism_relevant_findings": [
+    "Proton shuttling through the frozen water wire predominantly occurs via Grotthuss diffusion.",
+    "In the CNT (6,6) nanopore, Grotthuss diffusion plays a dominant role, while in the CNT (7,7) nanopore, it is primarily just rattling within the Zundel cation."
+  ],
+  "numerical_findings": [
+    {
+      "metric": "water density increase",
+      "value": 40,
+      "unit": "%",
+      "conditions": "in CNT (7,7) nanopore with hydrated excess proton"
+    },
+    {
+      "metric": "water density increase",
+      "value": 20,
+      "unit": "%",
+      "conditions": "in CNT (7,7) nanopore with K+"
+    }
+  ],
+  "eis_shape_findings": [],
+  "arrhenius_vtf_findings": [
+    "The proton transport free energy barrier decreases significantly as nanopore diameter increases and becomes almost barrierless in diameters greater than 1 nm."
+  ],
+  "limitations": [
+    "The study focuses on computational simulations and may not fully capture the complexities of real-world scenarios."
+  ],
+  "relevance_judgement": {
+    "score": 0.9,
+    "reason": "The findings provide significant insights into proton transport mechanisms under nanoscale confinement."
+  },
+  "supports_axes": {
+    "transport": "Grotthuss_hopping",
+    "phase_structure": "single_continuous_phase",
+    "temperature_dependence": "VTF"
+  },
+  "conflicts_axes": {},
+  "trace_spans": [
+    {
+      "page": null,
+      "section": "Water-Assisted Proton Transport in Con fi ned Nanochannels",
+      "text_snippet": ""
+    },
+    {
+      "page": null,
+      "section": "Xinyou Ma, Chenghan Li, Alex B. F. Martinson, and Gregory A. Voth *",
+      "text_snippet": "Cite This:  J. Phys. Chem. C  2020, 124, 16186 − 16201 Read Online"
+    },
+    {
+      "page": null,
+      "section": "ACCESS Metrics & More Article Recommendations * s ı Supporting Information",
+      "text_snippet": ""
+    },
+    {
+      "page": null,
+      "section": "1. INTRODUCTION",
+      "text_snippet": "The solvation and mobility of the excess proton in water have been extensively studied due to its importance in numerous areas of chemistry, materials science, and biology. 1 − 8   The hydration (solv"
+    },
+    {
+      "page": null,
+      "section": "∑ = · r c r",
+      "text_snippet": "i i i CEC 2 COC, (1) where  r COC, i  is the hydronium center of charge position of the  i th MS-EVB basis state. An extension of the LAMMPS software, 71 called RAPTOR, 70   was used to carry out the "
+    }
+  ]
+}

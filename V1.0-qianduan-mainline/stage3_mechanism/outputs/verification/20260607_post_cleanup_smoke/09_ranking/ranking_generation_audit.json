@@ -1,0 +1,6 @@
+{
+  "generation_mode": "llm_ranker",
+  "audit_ok": true,
+  "n_instances": 5,
+  "n_ranked_candidates": 3
+}

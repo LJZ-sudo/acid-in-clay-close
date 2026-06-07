@@ -1,0 +1,598 @@
+{
+  "claims": [
+    {
+      "card_id": "manual_1157b11126",
+      "paper_id": "manual_1157b11126",
+      "paper_title": "International   Journal   of   Biological   Macromolecules",
+      "component": "starch",
+      "descriptor_ids": [
+        "D6"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "Starch provides a hydrogen-bond donor/acceptor landscape (D6) by forming hydrogen-bond interactions via its OH groups with the blend partner, improving compatibility (manual_1157b11126).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_1157b11126",
+      "paper_id": "manual_1157b11126",
+      "paper_title": "International   Journal   of   Biological   Macromolecules",
+      "component": "poly(vinyl alcohol) (PVA)",
+      "descriptor_ids": [
+        "D6"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "Poly(vinyl alcohol) (PVA) provides a hydrogen-bond donor/acceptor landscape (D6) through OH-mediated hydrogen bonding with starch in the blend (manual_1157b11126).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_1190463586",
+      "paper_id": "manual_1190463586",
+      "paper_title": "Article Composite Proton Exchange Membranes Based on Chitosan and Phosphotungstic Acid Immobilized One-Dimensional Attapulgite for Direct Methanol Fuel Cells",
+      "component": "chitosan (CS)",
+      "descriptor_ids": [
+        "D5",
+        "D7"
+      ],
+      "quantitative_anchor": "35.3 mS/cm at 80 °C (composite membrane; 4 wt.% WQAT loading)",
+      "claim_text": "Chitosan (CS) provides a percolated, acid-interacting scaffold aiding interconnected confinement/transport-channel formation (D5) and acid immobilisation (D7), consistent with composite conductivity reaching 35.3 mS/cm at 80 °C at 4 wt.% WQAT (manual_1190463586).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_1190463586",
+      "paper_id": "manual_1190463586",
+      "paper_title": "Article Composite Proton Exchange Membranes Based on Chitosan and Phosphotungstic Acid Immobilized One-Dimensional Attapulgite for Direct Methanol Fuel Cells",
+      "component": "phosphotungstic acid (PWA)",
+      "descriptor_ids": [
+        "D6",
+        "D7"
+      ],
+      "quantitative_anchor": "35.3 mS/cm at 80 °C (composite membrane; 4 wt.% WQAT loading)",
+      "claim_text": "Phosphotungstic acid (PWA) provides dense proton-relay functionality (D6) while being described as immobilized within the composite (D7), with the membrane showing 35.3 mS/cm conductivity at 80 °C at 4 wt.% WQAT (manual_1190463586).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_1190463586",
+      "paper_id": "manual_1190463586",
+      "paper_title": "Article Composite Proton Exchange Membranes Based on Chitosan and Phosphotungstic Acid Immobilized One-Dimensional Attapulgite for Direct Methanol Fuel Cells",
+      "component": "attapulgite (1D AT; WQAT filler)",
+      "descriptor_ids": [
+        "D5",
+        "D7"
+      ],
+      "quantitative_anchor": "35.3 mS/cm at 80 °C (composite membrane; 4 wt.% WQAT loading)",
+      "claim_text": "Attapulgite (1D AT; WQAT) provides interconnected nanoconfinement and channel guidance (D5) and supports acid immobilisation (D7) as a one-dimensional host for the acid in the composite achieving 35.3 mS/cm at 80 °C at 4 wt.% WQAT (manual_1190463586).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_1ca1249fc4",
+      "paper_id": "manual_1ca1249fc4",
+      "paper_title": "Choline chloride-based deep eutectic solvents as electrolytes for wide  temperature range supercapacitors",
+      "component": "choline chloride (ChCl)",
+      "descriptor_ids": [
+        "D4"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "Choline chloride (ChCl) provides a complexing counter-species consistent with forming a deep eutectic with an acid (D4) when used as a ChCl/PA deep eutectic solvent electrolyte (manual_1ca1249fc4).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_1ca1249fc4",
+      "paper_id": "manual_1ca1249fc4",
+      "paper_title": "Choline chloride-based deep eutectic solvents as electrolytes for wide  temperature range supercapacitors",
+      "component": "phosphoric acid (PA)",
+      "descriptor_ids": [
+        "D4"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "Phosphoric acid (PA) provides an acid proton source in a deep eutectic (D4), being used as the acid component in a ChCl/PA DES electrolyte rather than as a neat acid phase (manual_1ca1249fc4).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_26f0dcfc01",
+      "paper_id": "manual_26f0dcfc01",
+      "paper_title": "Journal of Materials Chemistry A",
+      "component": "phosphate glass (APS proton-substituted / protonated phosphate network)",
+      "descriptor_ids": [
+        "D1",
+        "D6",
+        "D7"
+      ],
+      "quantitative_anchor": "reported long-term stability up to 280 °C (glass)",
+      "claim_text": "Phosphate glass (APS proton-substituted network) provides an amorphous, continuous proton-transport medium (D1) with OH-enabled hydrogen-bonded proton mobility (D6) and strong immobilisation/retention within a rigid network (D7), with stability reported up to 280 °C (manual_26f0dcfc01).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_3d7d6d5d7b",
+      "paper_id": "manual_3d7d6d5d7b",
+      "paper_title": "",
+      "component": "phosphate glass",
+      "descriptor_ids": [
+        "D6"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "Phosphate glass provides a dense hydrogen-bond donor/acceptor landscape (D6): protons are described as forming much stronger hydrogen bonds in phosphate glasses than in silicate glasses (manual_3d7d6d5d7b).",
+      "confidence": "supported",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_3d7d6d5d7b",
+      "paper_id": "manual_3d7d6d5d7b",
+      "paper_title": "",
+      "component": "phosphate glass",
+      "descriptor_ids": [
+        "D7"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "Phosphate glass provides only conditionally retained conducting phase (D7): the long-term stability of proton conductivity is described as problematic and dependent on maintaining high humidity (manual_3d7d6d5d7b).",
+      "confidence": "supported",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_42051140ac",
+      "paper_id": "manual_42051140ac",
+      "paper_title": "Effect of deep eutectic solvent in proton conduction and thermal behaviour of chitosan-based membrane",
+      "component": "chitosan",
+      "descriptor_ids": [
+        "D7"
+      ],
+      "quantitative_anchor": "water uptake = 49.4% (for 75 wt% chitosan + DES blend film)",
+      "claim_text": "Chitosan provides conducting-phase retention without structural failure (D7): the 75 wt% chitosan/DES blend has 49.4% water uptake yet avoids structural disintegration (manual_42051140ac).",
+      "confidence": "supported",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_42051140ac",
+      "paper_id": "manual_42051140ac",
+      "paper_title": "Effect of deep eutectic solvent in proton conduction and thermal behaviour of chitosan-based membrane",
+      "component": "deep eutectic solvent (DES)",
+      "descriptor_ids": [
+        "D2"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "Deep eutectic solvent (DES) provides bound/plasticised polar-fluid continuity (D2): adding DES is reported to improve proton conductivity compared to DES-free chitosan films, consistent with a more mobile hydrogen-bonded conducting fraction (manual_42051140ac).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_42051140ac",
+      "paper_id": "manual_42051140ac",
+      "paper_title": "Effect of deep eutectic solvent in proton conduction and thermal behaviour of chitosan-based membrane",
+      "component": "deep eutectic solvent (DES)",
+      "descriptor_ids": [
+        "D4"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "Deep eutectic solvent (DES) provides a putatively non-crystallising acid-like proton-carrier environment (D4): the membrane’s proton conduction improves upon DES incorporation alongside altered thermal behaviour, consistent with eutectic-mediated suppression of crystallisation relative to neat phases (manual_42051140ac).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_529c072730",
+      "paper_id": "manual_529c072730",
+      "paper_title": "Design Strategies for Anti-Freeze Electrolytes in Aqueous Energy Storage Devices at Low Temperatures",
+      "component": "water",
+      "descriptor_ids": [
+        "D1",
+        "D2"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "Water constrains cold-to-room pathway continuity and bound-fluid mobility (D1, D2): regular hydrogen-bond networks among water molecules are identified as the primary cause of water’s high freezing point and low-temperature diffusion slowdown (manual_529c072730).",
+      "confidence": "disputed",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_7f4f0a8392",
+      "paper_id": "manual_7f4f0a8392",
+      "paper_title": "M O Acc OH Acc OH               X M O | M O trap Acc OH Acc OH K        (11)    Association between the acceptor and protons and/or oxygen vacancies has already been addressed  in the section on hydration for doped BaCeO 3 , and it could be argued that discussion of trapping  effects rather belongs in that section since it includes thermodynamic considerations. However, it  has traditionally been discussed along with mobility.",
+      "component": "doped BaCeO3 (acceptor-doped barium cerate oxide)",
+      "descriptor_ids": [
+        "D7"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "Doped BaCeO3 highlights a proton-transport limitation via trapping/association of protons with defects (acceptors/oxygen vacancies and grain-boundary-related traps), underscoring the risk of over-binding that reduces effective mobility (manual_7f4f0a8392).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_89488460eb",
+      "paper_id": "manual_89488460eb",
+      "paper_title": "Enhancing proton conductivity at subzero temperature through  constructing the well-ordered structure based on carbon dots",
+      "component": "carbon dots (CDs)",
+      "descriptor_ids": [
+        "D5"
+      ],
+      "quantitative_anchor": "3.29 ± 3.16 × 10−3 S/cm at −30 °C (PU/Nafion/PU/CDs)200/PA membrane",
+      "claim_text": "Carbon dots are used to construct a more well-ordered dispersed structure (nanostructural organization consistent with interconnected confinement), coincident with measurable subzero proton conductivity in the composite membrane at −30 °C (manual_89488460eb).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_89488460eb",
+      "paper_id": "manual_89488460eb",
+      "paper_title": "Enhancing proton conductivity at subzero temperature through  constructing the well-ordered structure based on carbon dots",
+      "component": "phosphoric acid (PA)",
+      "descriptor_ids": [
+        "D6"
+      ],
+      "quantitative_anchor": "3.29 ± 3.16 × 10−3 S/cm at −30 °C (PU/Nafion/PU/CDs)200/PA membrane",
+      "claim_text": "Phosphoric acid serves as the proton-conducting medium enabling hydrogen-bond-mediated proton transfer in the reported composite membrane, which retains measurable conductivity at −30 °C (manual_89488460eb).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_8d58a81c9e_1",
+      "paper_id": "manual_8d58a81c9e_1",
+      "paper_title": "An effective strategy to enhance phosphoric acid retention and proton  conductivity stability: Construction of proton transfer channels with starch  rather than H 3 PO 4",
+      "component": "starch",
+      "descriptor_ids": [
+        "D6",
+        "D5"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "Starch is presented as a hydrogen-bond-dense channel former whose oxygen-containing groups promote proton conduction and channel-like transport pathways (manual_8d58a81c9e_1).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_8d58a81c9e_1",
+      "paper_id": "manual_8d58a81c9e_1",
+      "paper_title": "An effective strategy to enhance phosphoric acid retention and proton  conductivity stability: Construction of proton transfer channels with starch  rather than H 3 PO 4",
+      "component": "phosphoric acid (H3PO4 / PA)",
+      "descriptor_ids": [
+        "D7"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "Phosphoric acid used at low doping levels is described as being better retained with improved proton-conductivity stability, indicating a retention-focused strategy to limit loss of the conducting phase (manual_8d58a81c9e_1).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_8d58a81c9e",
+      "paper_id": "manual_8d58a81c9e",
+      "paper_title": "An effective strategy to enhance phosphoric acid retention and proton  conductivity stability: Construction of proton transfer channels with starch  rather than H 3 PO 4",
+      "component": "starch",
+      "descriptor_ids": [
+        "D6"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "Starch provides a dense hydrogen-bond donor/acceptor landscape enabling proton relay: the proton transfer channels are described as being constructed through dense hydrogen bonds from the polymer backbones (manual_8d58a81c9e).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_8d58a81c9e",
+      "paper_id": "manual_8d58a81c9e",
+      "paper_title": "An effective strategy to enhance phosphoric acid retention and proton  conductivity stability: Construction of proton transfer channels with starch  rather than H 3 PO 4",
+      "component": "H3PO4 (phosphoric acid)",
+      "descriptor_ids": [
+        "D7"
+      ],
+      "quantitative_anchor": "0.00484 mol H3PO4 (doping level, condition not specified)",
+      "claim_text": "H3PO4 challenges conducting-phase retention at higher loadings: the summary notes phosphoric-acid leaching remains a concern and reports a low doping level of 0.00484 mol H3PO4 (manual_8d58a81c9e).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_a16330d0f5",
+      "paper_id": "manual_a16330d0f5",
+      "paper_title": "Phosphoric Acid-in-Clay Electrolyte Boosting Polybenzimidazole Membranes for High-Performance Fuel Cells",
+      "component": "halloysite nanotubes (HNTs)",
+      "descriptor_ids": [
+        "D5"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "Halloysite nanotubes (HNTs) provide nanoconfinement for the conducting fraction: the electrolyte is described as phosphoric acid hosted in HNTs (PA@HNTs), implying acid confined within the clay architecture (manual_a16330d0f5).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_a16330d0f5",
+      "paper_id": "manual_a16330d0f5",
+      "paper_title": "Phosphoric Acid-in-Clay Electrolyte Boosting Polybenzimidazole Membranes for High-Performance Fuel Cells",
+      "component": "halloysite nanotubes (HNTs)",
+      "descriptor_ids": [
+        "D7"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "Halloysite nanotubes (HNTs) improve retention of the conducting phase: interaction of phosphoric acid with HNTs is stated to reduce susceptibility to phosphoric-acid leaching (manual_a16330d0f5).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_a16330d0f5",
+      "paper_id": "manual_a16330d0f5",
+      "paper_title": "Phosphoric Acid-in-Clay Electrolyte Boosting Polybenzimidazole Membranes for High-Performance Fuel Cells",
+      "component": "H3PO4 (phosphoric acid)",
+      "descriptor_ids": [
+        "D6"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "H3PO4 provides a hydrogen-bonded proton-conduction medium: the PA@HNTs system is described as establishing a dense hydrogen-bonding network enabling packed-acid and Grotthuss mechanisms (manual_a16330d0f5).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_a16330d0f5",
+      "paper_id": "manual_a16330d0f5",
+      "paper_title": "Phosphoric Acid-in-Clay Electrolyte Boosting Polybenzimidazole Membranes for High-Performance Fuel Cells",
+      "component": "polybenzimidazole (PBI)",
+      "descriptor_ids": [
+        "D7"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "Polybenzimidazole (PBI) is positioned as a host membrane whose performance/stability is boosted by the phosphoric-acid-in-clay electrolyte, with leaching and plasticization highlighted as concerns in the composite context (manual_a16330d0f5).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_a624da98ce",
+      "paper_id": "manual_a624da98ce",
+      "paper_title": "Enhanced Proton Conductivity from Phosphoric Acid-Incorporated 3D Polyacrylamide-Graft-Starch Hydrogel Materials for High-Temperature Proton Exchange Membranes",
+      "component": "polyacrylamide-graft-starch (PAAm-g-starch) hydrogel framework",
+      "descriptor_ids": [
+        "D5"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "PAAm-g-starch hydrogel framework provides interconnected confinement: it is described as a 3D porous framework with interconnected microporous space that absorbs and retains the acid (manual_a624da98ce).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_a624da98ce",
+      "paper_id": "manual_a624da98ce",
+      "paper_title": "Enhanced Proton Conductivity from Phosphoric Acid-Incorporated 3D Polyacrylamide-Graft-Starch Hydrogel Materials for High-Temperature Proton Exchange Membranes",
+      "component": "polyacrylamide-graft-starch (PAAm-g-starch) hydrogel framework",
+      "descriptor_ids": [
+        "D7"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "PAAm-g-starch hydrogel framework provides retention of the conducting phase: the 3D hydrogel is stated to absorb and retain H3PO4 even under pressure and in anhydrous operation (manual_a624da98ce).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_a624da98ce",
+      "paper_id": "manual_a624da98ce",
+      "paper_title": "Enhanced Proton Conductivity from Phosphoric Acid-Incorporated 3D Polyacrylamide-Graft-Starch Hydrogel Materials for High-Temperature Proton Exchange Membranes",
+      "component": "H3PO4 (phosphoric acid)",
+      "descriptor_ids": [
+        "D7"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "H3PO4 loading is linked to conductivity via retained acid content: the summary states that increasing crosslinker/initiator dosages increases H3PO4 loading and thereby increases proton conductivity (manual_a624da98ce).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_b9c3d1711d",
+      "paper_id": "manual_b9c3d1711d",
+      "paper_title": "Enhanced Proton Conductivity by the Influence of Modified  Montmorillonite on Poly (Vinyl alcohol) Based Blend  Composite Membranes",
+      "component": "protonated montmorillonite (MMT)",
+      "descriptor_ids": [
+        "D5"
+      ],
+      "quantitative_anchor": "6 wt% protonated MMT (composition at maximum reported conductivity, temperature not specified)",
+      "claim_text": "Protonated montmorillonite (MMT) supports nanoconfinement-linked conduction in the composite: the highest conductivity is reported at 6 wt% protonated MMT addition to the polymer blend (manual_b9c3d1711d).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_b9c3d1711d",
+      "paper_id": "manual_b9c3d1711d",
+      "paper_title": "Enhanced Proton Conductivity by the Influence of Modified  Montmorillonite on Poly (Vinyl alcohol) Based Blend  Composite Membranes",
+      "component": "protonated montmorillonite (MMT)",
+      "descriptor_ids": [
+        "D6"
+      ],
+      "quantitative_anchor": "0.0802 S/cm (maximum reported proton conductivity; measurement temperature/RH not specified)",
+      "claim_text": "Protonated montmorillonite (MMT) contributes to a proton-transfer-friendly hydrogen-bond/acidic environment in the blend: 0.0802 S/cm is reported as the maximum conductivity for the membrane containing 6 wt% protonated MMT (manual_b9c3d1711d).",
+      "confidence": "supported",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_b9c3d1711d",
+      "paper_id": "manual_b9c3d1711d",
+      "paper_title": "Enhanced Proton Conductivity by the Influence of Modified  Montmorillonite on Poly (Vinyl alcohol) Based Blend  Composite Membranes",
+      "component": "poly(vinyl alcohol) (PVA)",
+      "descriptor_ids": [
+        "D3"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "Poly(vinyl alcohol) (PVA) functions as the flexible hydrophilic host in which conductivity is measured for the blend composite, but no sub-253 K mechanical/relaxation data are provided in the summary (manual_b9c3d1711d).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_b9c3d1711d",
+      "paper_id": "manual_b9c3d1711d",
+      "paper_title": "Enhanced Proton Conductivity by the Influence of Modified  Montmorillonite on Poly (Vinyl alcohol) Based Blend  Composite Membranes",
+      "component": "poly(ethylene glycol) (PEG)",
+      "descriptor_ids": [
+        "D2"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "Poly(ethylene glycol) (PEG) is used as a hydrophilic plasticising/co-conducting blend component in the membrane where proton conductivity is measured, but the summary provides no low-temperature bound-fluid continuity metrics (manual_b9c3d1711d).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_c0c1101384",
+      "paper_id": "manual_c0c1101384",
+      "paper_title": "Preparation and properties of chitosan/organic-modified attapulgite composite proton exchange membranes for fuel cell applications",
+      "component": "Chitosan (CS)",
+      "descriptor_ids": [
+        "D6"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "Chitosan (CS) provides a proton-transporting hydrogen-bonded matrix (as evidenced by measurable proton conductivity of the pure CS film, albeit lower than the composites) (manual_c0c1101384).",
+      "confidence": "supported",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_c0c1101384",
+      "paper_id": "manual_c0c1101384",
+      "paper_title": "Preparation and properties of chitosan/organic-modified attapulgite composite proton exchange membranes for fuel cell applications",
+      "component": "Organic-modified attapulgite (QATP)",
+      "descriptor_ids": [
+        "D5"
+      ],
+      "quantitative_anchor": "2 wt% QATP (composite loading giving higher conductivity than pure CS; temperature/RH not stated in summary)",
+      "claim_text": "Organic-modified attapulgite (QATP) provides a nanofiller-enabled confined/percolative architecture consistent with interconnected nanoconfinement, since adding QATP (notably at 2 wt%) significantly increases composite membrane proton conductivity versus pure chitosan film (manual_c0c1101384).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_c8dafb5973",
+      "paper_id": "manual_c8dafb5973",
+      "paper_title": "Functionalized clay nanocomposites for enhanced proton conductivity in  polyether-based fuel cell membranes",
+      "component": "Functionalized clay (nanofiller in clay–SPES nanocomposites)",
+      "descriptor_ids": [
+        "D5",
+        "D6"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "Functionalized clay in polyether-based PEM nanocomposites is described as enabling nanocomposite pathways where proton transport involves both vehicular and Grotthuss contributions, consistent with confined, hydrogen-bond-connected relay networks (manual_c8dafb5973).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_c8dafb5973",
+      "paper_id": "manual_c8dafb5973",
+      "paper_title": "Functionalized clay nanocomposites for enhanced proton conductivity in  polyether-based fuel cell membranes",
+      "component": "Sulfonated polyether sulfone (SPES)",
+      "descriptor_ids": [
+        "D6"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "Sulfonated polyether sulfone (SPES) is discussed as the polymer matrix supporting mixed vehicular + Grotthuss proton transport in clay–SPES PEM nanocomposites (manual_c8dafb5973).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_f5f9ab95ca",
+      "paper_id": "manual_f5f9ab95ca",
+      "paper_title": "Improving the ionic conductivity in nanostructured membranes based on poly(vinyl alcohol) (PVA), chitosan (CS), phosphoric acid (H 3 PO 4 ), and niobium oxide (Nb 2 O 5 )",
+      "component": "Nb2O5",
+      "descriptor_ids": [
+        "D5"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "Nb2O5 provides interconnected nanoconfinement/free-volume disruption: its particle addition is described as creating defects and free volume in the polymer matrix associated with increased ionic conductivity (manual_f5f9ab95ca).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "manual_f7196a2c3b",
+      "paper_id": "manual_f7196a2c3b",
+      "paper_title": "Hydrogen ion conducting starch-chitosan blend based electrolyte for application in electrochemical devices",
+      "component": "NH4Cl",
+      "descriptor_ids": [
+        "D4"
+      ],
+      "quantitative_anchor": "t+ = 0.56 (highest-conducting electrolyte; temperature not specified in excerpt)",
+      "claim_text": "NH4Cl provides a cold-stable proton source in the formulation context: the electrolyte is described as hydrogen-ion conducting with a measured cation transference number t+ = 0.56 for the highest-conducting composition (manual_f7196a2c3b).",
+      "confidence": "supported",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    },
+    {
+      "card_id": "openalex_w1608495915",
+      "paper_id": "openalex_w1608495915",
+      "paper_title": "",
+      "component": "La6W2O15",
+      "descriptor_ids": [
+        "D1"
+      ],
+      "quantitative_anchor": "10^-2 to 10^-3 S/cm at moderate to elevated temperatures",
+      "claim_text": "La6W2O15 provides a continuous proton-transport pathway at elevated temperature: reported conductivity is 10^-2 to 10^-3 S/cm at moderate to elevated temperatures (openalex_w1608495915).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": ""
+    }
+  ],
+  "n_claims": 39
+}

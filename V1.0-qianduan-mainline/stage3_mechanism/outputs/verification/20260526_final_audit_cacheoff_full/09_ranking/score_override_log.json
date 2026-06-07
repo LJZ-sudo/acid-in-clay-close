@@ -1,0 +1,35 @@
+{
+  "ranking_consistency_warnings": [],
+  "recomputed": [
+    {
+      "instance_id": "I1",
+      "rank": 1,
+      "llm_total_score": 0.8945,
+      "weighted_score_from_criteria": 0.8945
+    },
+    {
+      "instance_id": "I2",
+      "rank": 2,
+      "llm_total_score": 0.8435,
+      "weighted_score_from_criteria": 0.8435
+    },
+    {
+      "instance_id": "I5",
+      "rank": 3,
+      "llm_total_score": 0.7985,
+      "weighted_score_from_criteria": 0.7985
+    },
+    {
+      "instance_id": "I3",
+      "rank": 4,
+      "llm_total_score": 0.772,
+      "weighted_score_from_criteria": 0.772
+    },
+    {
+      "instance_id": "I4",
+      "rank": 5,
+      "llm_total_score": 0.7427,
+      "weighted_score_from_criteria": 0.7427
+    }
+  ]
+}

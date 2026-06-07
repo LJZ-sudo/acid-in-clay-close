@@ -1,0 +1,100 @@
+{
+  "step_id": "s11_report",
+  "title": "Stage 3 Mechanism & Materials Report",
+  "sections": [
+    {
+      "section_id": "S1",
+      "title": "Evidence Summary",
+      "content": "16 evidence cards constrain the mechanism reasoning.",
+      "subsections": []
+    },
+    {
+      "section_id": "S2",
+      "title": "Selected Mechanism",
+      "content": "Confinement-induced multi-threshold percolation with interfacial-dominated transport: Statistically, VTF (H1) wins per-sample AICc by a huge margin (V2‑E7, V2‑E10), yet it cannot explain the near‑universal piecewise breakpoints (V2‑E12) or the qualitative EIS evolution from capacitive tail to resolved semicircle on cooling (V2‑E9, V‑E10). H2 (dual‑population dehydration) accounts for the piecewise Arrhenius break but incorrectly expects dehydration to suppress conductivity at high R, whereas the strongest evidence (V2‑E2, V2‑E4) shows σ correlates positively with water content N at both 299 K and 233 K, and only at 299 K does σ marginally correlate with R (p ≈ 0.07). H3 (Meyer‑Neldel Grotthuss) explains the segment‑level compensation (V2‑E8) elegantly, but fails to accommodate the piecewise energy‑scale doubling (V2‑E11) and the EIS morphology change. H4 posits an interfacial, percolation‑controlled network where a high‑T conductive film dominates and a low‑T cluster‑percolation threshold appears; this naturally explains why T_arc differs from T_break (two distinct geometric/topological transitions), why the EIS semicircle emerges only when the low‑T percolating film becomes resistive enough to shift its τ into the measurement window, and why conductivity depends strongly on N but only weakly on R—the interfacial water film is sensitive to the total volume of hydrated pathways but not to the bulk acid/water ratio. Therefore H4 is the only hypothesis that simultaneously fits the statistical model selection, the decoupled T_arc / T_break, the σ(N,R) correlation pattern, and the EIS spectral evolution.",
+      "subsections": []
+    },
+    {
+      "section_id": "S3",
+      "title": "Candidate Ranking",
+      "content": "5 material instances ranked for transfer validation.",
+      "subsections": []
+    }
+  ],
+  "top_candidates_summary": [
+    {
+      "rank": 1,
+      "name": "Starch/PVA/organic-modified attapulgite/phosphoric acid membrane",
+      "score": 0.8945,
+      "literature_support_card_ids": [
+        "manual_8d58a81c9e_1",
+        "manual_b9c3d1711d",
+        "manual_1190463586",
+        "manual_1ca1249fc4"
+      ]
+    },
+    {
+      "rank": 2,
+      "name": "Chitosan/organic-modified attapulgite/phosphoric acid composite",
+      "score": 0.8435,
+      "literature_support_card_ids": [
+        "manual_1190463586",
+        "manual_1ca1249fc4"
+      ]
+    },
+    {
+      "rank": 3,
+      "name": "PVA/chitosan/Nb2O5/H3PO4 defect-assisted composite",
+      "score": 0.7985,
+      "literature_support_card_ids": [
+        "manual_b9c3d1711d",
+        "manual_1190463586",
+        "manual_f5f9ab95ca",
+        "manual_1ca1249fc4"
+      ]
+    },
+    {
+      "rank": 4,
+      "name": "Halloysite nanotube/phosphoric acid/PVA hybrid membrane",
+      "score": 0.772,
+      "literature_support_card_ids": [
+        "manual_a16330d0f5",
+        "manual_1ca1249fc4",
+        "manual_b9c3d1711d"
+      ]
+    },
+    {
+      "rank": 5,
+      "name": "PAAm-g-starch/phosphoric acid hydrogel electrolyte",
+      "score": 0.7427,
+      "literature_support_card_ids": [
+        "manual_a624da98ce",
+        "manual_1ca1249fc4",
+        "manual_58ec9a6c2e"
+      ]
+    }
+  ],
+  "eis_disclaimer": "EIS morphology is heuristic only and does not uniquely determine mechanism.",
+  "audit_trail": [
+    {
+      "step_id": "s03",
+      "status": "completed",
+      "notes": "16 cards"
+    },
+    {
+      "step_id": "s06",
+      "status": "completed",
+      "notes": "H4"
+    },
+    {
+      "step_id": "s09",
+      "status": "completed",
+      "notes": "5 instances"
+    },
+    {
+      "step_id": "s10",
+      "status": "completed",
+      "notes": "5 ranked"
+    }
+  ]
+}

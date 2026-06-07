@@ -1,0 +1,75 @@
+{
+  "paper_id": "manual_6ca6be5f68",
+  "stage_target": "materials",
+  "bibliography": {
+    "title": "Structure and physicochemical properties of starches in lotus ( Nelumbo nucifera  Gaertn.) rhizome",
+    "authors": "Correspondence Liangjun Li, School of Horticulture and Plant Protection, Yangzhou University, Yangzhou 225009, P. R. China. Tel/Fax: +86-514-87979394; E-mail: ljli@yzu.edu.cn",
+    "year": 2013
+  },
+  "system_identity": {
+    "base_material": "Lotus (Nelumbo nucifera Gaertn.) rhizome starch (cultivars Meirenhong and Wawalian)",
+    "dopant": "",
+    "form_factor": "Isolated starch granules (semicrystalline granules)",
+    "other": "Polymorphs reported: C-type (Meirenhong) and A-type (Wawalian) X-ray diffraction patterns (Abstract)."
+  },
+  "measurement_scope": {
+    "temp_range": "",
+    "freq_range": "",
+    "humidity": "",
+    "other_conditions": "Characterization methods listed: X-ray powder diffraction, 13C CP-MAS NMR, ATR-FTIR, SEM, DSC, and rapid viscosity analyzer (RVA) (Abstract)."
+  },
+  "mechanism_relevant_findings": [],
+  "numerical_findings": [
+    {
+      "metric": "Gelatinization temperature",
+      "value": 330.5,
+      "unit": "K",
+      "conditions": "Starch from cultivar Meirenhong measured by DSC (Abstract)."
+    },
+    {
+      "metric": "Gelatinization temperature",
+      "value": 342.4,
+      "unit": "K",
+      "conditions": "Starch from cultivar Wawalian measured by DSC (Abstract)."
+    }
+  ],
+  "eis_shape_findings": [],
+  "arrhenius_vtf_findings": [],
+  "limitations": [
+    "The provided text contains no electrochemical impedance spectroscopy (EIS) measurements, ionic/proton conductivity data, or sigma(T) fits (Arrhenius/VTF).",
+    "The excerpt focuses on starch structural/thermal/rheological characterization rather than proton transport."
+  ],
+  "relevance_judgement": {
+    "score": 0.02,
+    "reason": "The excerpt reports starch polymorph/thermal properties but provides no proton transport, EIS, or Arrhenius/VTF conductivity analysis."
+  },
+  "supports_axes": {},
+  "conflicts_axes": {},
+  "trace_spans": [
+    {
+      "page": null,
+      "section": "",
+      "text_snippet": "ORIGINAL RESEARCH Huaguang Yu 1 , Libao Cheng 2 , Jingjing Yin 2 , Shunjun Yan 1 , Kejun Liu 1 , Fengmin Zhang 3 , Bin Xu 3 & Liangjun Li 2 Keywords Crystalline structure, lotus ( Nelumbo nucifera Gae"
+    },
+    {
+      "page": null,
+      "section": "Introduction",
+      "text_snippet": "Lotus ( Nelumbo nucifera  Gaertn.), a member of the family Nymphaeaceae, is an aquatic herb vegetable. Lotus has been wildly cultivated in China, Japan, and other South- east Asian countries for its m"
+    },
+    {
+      "page": null,
+      "section": "Materials and Methods",
+      "text_snippet": "Plant materials Two cultivars of lotus, Meirenhong and Wawalian, were obtained from the experimental base of aquatic vegetables of Yangzhou University, Yangzhou, Jiangsu Province, P. R. China. Meirenh"
+    },
+    {
+      "page": null,
+      "section": "Results and Discussion",
+      "text_snippet": "XRD patterns of starches isolated from different lotus rhizome X-ray diffraction is one of the most effective methods in studying the structure of native starch, especially in ª  2013 The Authors.  Fo"
+    },
+    {
+      "page": null,
+      "section": "Experimental C1 resonances",
+      "text_snippet": "Simulated C1 resonances Individual components (a) Figure 3.  Spectral decomposition of the C1 area (a) Meirenhong and (b) Wawalian. Table 2.  The relative crystallinity determined by XRD and 13 C CP M"
+    }
+  ]
+}

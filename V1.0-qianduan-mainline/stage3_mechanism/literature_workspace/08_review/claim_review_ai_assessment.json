@@ -1,0 +1,49 @@
+{
+  "review_date": "2026-05-01",
+  "reviewer": "AI-assisted materials/electrochemistry review",
+  "source": "outputs/stage3/06_literature_materials/literature_cards_materials.json",
+  "overall_assessment": "D4 claims are useful as component-level evidence, but cold-window applicability must be separated from high-temperature PEM analog support.",
+  "component_reviews": [
+    {
+      "component": "lotus rhizome starch",
+      "status": "accept_as_component_property_analog",
+      "risk": "medium",
+      "note": "Supports OH-rich biopolymer host and thermal property analogs, not direct proton conductivity."
+    },
+    {
+      "component": "polyvinyl alcohol",
+      "status": "accept_as_matrix_compliance_analog",
+      "risk": "low_medium",
+      "note": "Supports film compliance and H-bond compatibility."
+    },
+    {
+      "component": "attapulgite",
+      "status": "accept_as_1d_clay_confinement_analog",
+      "risk": "medium",
+      "note": "Strong motif analog; quantitative anchor is at 80 C rather than S8 cold window."
+    },
+    {
+      "component": "halloysite nanotubes",
+      "status": "accept_with_temperature_caveat",
+      "risk": "medium_high",
+      "note": "High-temperature PBI/PA evidence; useful but not direct cold-window support."
+    },
+    {
+      "component": "phosphoric acid",
+      "status": "accept_as_retained_proton_reservoir",
+      "risk": "medium",
+      "note": "Must be framed as retained/complexed, not free bulk acid."
+    },
+    {
+      "component": "glycerol_or_ethylene_glycol",
+      "status": "pending_external_support",
+      "risk": "high",
+      "note": "Antifreeze role is chemically plausible but under-backed by current S08 D4 claim pool."
+    }
+  ],
+  "recommended_actions": [
+    "Add explicit low-temperature antifreeze co-solvent literature claims for glycerol/ethylene glycol.",
+    "Mark high-temperature PEM evidence as analog support, not direct cold-window validation.",
+    "Keep Top-list language at component-route hypothesis level until wet validation exists."
+  ]
+}

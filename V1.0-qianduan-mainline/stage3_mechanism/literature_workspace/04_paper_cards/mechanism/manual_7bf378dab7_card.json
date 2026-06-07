@@ -1,0 +1,82 @@
+{
+  "paper_id": "manual_7bf378dab7",
+  "stage_target": "mechanism",
+  "bibliography": {
+    "title": "",
+    "authors": "",
+    "year": 0
+  },
+  "system_identity": {
+    "base_material": "phosphoric acid",
+    "dopant": "water",
+    "form_factor": "liquid",
+    "other": "H4P2O7"
+  },
+  "measurement_scope": {
+    "temp_range": [],
+    "freq_range": [],
+    "humidity": [],
+    "other_conditions": []
+  },
+  "mechanism_relevant_findings": [
+    "The high conductivity contribution from structural diffusion in neat phosphoric acid (H3PO4) passes through a maximum at higher water contents.",
+    "Structural diffusion virtually disappears in H3PO4·2H2O but overall conductivity increases with more water due to enhanced vehicle transport.",
+    "Hydrogen bond network frustration is closely related to the appearance of structural diffusion and decreases with changes in water content."
+  ],
+  "numerical_findings": [
+    {
+      "metric": "proton conduction contribution",
+      "value": 97,
+      "unit": "%",
+      "conditions": "in neat phosphoric acid"
+    },
+    {
+      "metric": "maximum conductivity composition",
+      "value": 5,
+      "unit": "H2O",
+      "conditions": "H3PO4·nH2O system"
+    }
+  ],
+  "eis_shape_findings": [],
+  "arrhenius_vtf_findings": [],
+  "limitations": [],
+  "relevance_judgement": {
+    "score": 0.8,
+    "reason": "The findings provide significant insights into the proton transport mechanisms and their dependency on water content."
+  },
+  "supports_axes": {
+    "transport": "hybrid_grotthuss_vehicular",
+    "phase_structure": "single_continuous_phase",
+    "temperature_dependence": "pure_Arrhenius"
+  },
+  "conflicts_axes": {
+    "transport": "Grotthuss_hopping"
+  },
+  "trace_spans": [
+    {
+      "page": null,
+      "section": "",
+      "text_snippet": "This journal is ©the Owner Societies 2017 Phys. Chem. Chem. Phys.,  2017,  19 , 587--600 |  587 Cite this:  Phys.Chem.Chem.Phys., 2017,  19 , 587"
+    },
+    {
+      "page": null,
+      "section": "Proton conduction mechanisms in the phosphoric acid–water system (H 4 P 2 O 7 –H 3 PO 4 � 2H 2 O): a   1 H, 31 P and  17 O PFG-NMR and conductivity study †",
+      "text_snippet": "Jan-Patrick Melchior, Klaus-Dieter Kreuer* and Joachim Maier Ionic charge carrier formation and mobility, including the underlying conduction mechanisms, are investigated for phosphoric acid at water "
+    },
+    {
+      "page": null,
+      "section": "Introduction",
+      "text_snippet": "Neat fused phosphoric acid (H 3 PO 4 ) is the compound with the highest reported intrinsic proton conductivity, which is mainly the consequence of its ‘‘frustrated’’ hydrogen bond network (there is a "
+    },
+    {
+      "page": null,
+      "section": "PCCP",
+      "text_snippet": ""
+    },
+    {
+      "page": null,
+      "section": "PAPER",
+      "text_snippet": "Published on 05 December 2016. Downloaded on 3/24/2026 2:47:36 AM. View Article Online View Journal  | View Issue 588  |  Phys. Chem. Chem. Phys.,  2017,  19 , 587--600 This journal is ©the Owner Soci"
+    }
+  ]
+}

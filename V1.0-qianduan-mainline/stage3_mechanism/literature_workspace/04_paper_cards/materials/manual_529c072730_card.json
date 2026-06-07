@@ -1,0 +1,69 @@
+{
+  "paper_id": "manual_529c072730",
+  "stage_target": "materials",
+  "bibliography": {
+    "title": "Design Strategies for Anti-Freeze Electrolytes in Aqueous Energy Storage Devices at Low Temperatures",
+    "authors": "",
+    "year": 0
+  },
+  "system_identity": {
+    "base_material": "water",
+    "dopant": "not specified",
+    "form_factor": "aqueous electrolyte",
+    "other": "anti-freeze"
+  },
+  "measurement_scope": {
+    "temp_range": "not specified",
+    "freq_range": "not specified",
+    "humidity": "not specified",
+    "other_conditions": "low-temperature"
+  },
+  "mechanism_relevant_findings": [
+    "The decline in electrochemical performance of aqueous energy storage devices at low temperatures can be attributed to the freezing of the electrolyte, which leads to slow ion diffusion.",
+    "Deteriorated wettability results in restricted ion transport at the electrode-electrolyte interface.",
+    "The formation of regular hydrogen bond networks among water molecules is the primary cause for its high freezing point characteristics."
+  ],
+  "numerical_findings": [],
+  "eis_shape_findings": [],
+  "arrhenius_vtf_findings": [],
+  "limitations": [
+    "The review does not provide specific experimental data or numerical analysis."
+  ],
+  "relevance_judgement": {
+    "score": 0.5,
+    "reason": "The paper discusses mechanisms affecting proton transport but lacks quantitative EIS analysis."
+  },
+  "supports_axes": {
+    "transport": "Grotthuss_hopping",
+    "phase_structure": "single_continuous_phase",
+    "temperature_dependence": "VTF"
+  },
+  "conflicts_axes": {},
+  "trace_spans": [
+    {
+      "page": null,
+      "section": "REVIEW",
+      "text_snippet": "www.afm-journal.de"
+    },
+    {
+      "page": null,
+      "section": "Chaolin You, Weijia Fan, Xiaosong Xiong, Haoyuan Yang, Lijun Fu, Tao Wang,* Faxing Wang,* Zhi Zhu, Jiarui He, and Yuping Wu*",
+      "text_snippet": "With the continuous development of electrochemical energy storage technology, especially in the current pursuit of environmental sustainability and safety, aqueous energy storage devices, due to their"
+    },
+    {
+      "page": null,
+      "section": "1. Introduction",
+      "text_snippet": "Aqueous energy storage devices have become an important alter- native to non-aqueous energy storage devices due to their high C. You, W. Fan, X. Xiong, H. Yang, T. Wang, F. Wang, Z. Zhu, J. He, Y. Wu "
+    },
+    {
+      "page": null,
+      "section": "2. Fundamentals of Anti-Freezing Aqueous Electrolytes at Low Temperatures",
+      "text_snippet": "Electrolytes, serving as the medium for ion transport between an- ode and cathode electrodes, play a vital role in the electrochemi- cal process of the battery. [ 9 ]   Clearly, the physical state of "
+    },
+    {
+      "page": null,
+      "section": "3. Strategies of Anti-Freezing Aqueous Electrolyte",
+      "text_snippet": "3.1. Ion/Concentration Regulation Strategy The addition of a solute salt to a pure aqueous solution lowers the freezing point of the solution. This phenomenon is inherent colligative properties of the"
+    }
+  ]
+}

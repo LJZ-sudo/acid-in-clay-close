@@ -1,0 +1,353 @@
+{
+  "step_id": "s09_instances",
+  "instances": [
+    {
+      "instance_id": "I1",
+      "family_id": "F1",
+      "instance_name": "Starch/PVA/organic-modified attapulgite/phosphoric acid membrane",
+      "composition_description": "Starch + modified montmorillonite (MMT) + Chitosan (CS) + Choline chloride/phosphoric acid deep eutectic solvent (ChCl/PA DES)",
+      "components": [
+        "Starch",
+        "modified montmorillonite (MMT)",
+        "Chitosan (CS)",
+        "Choline chloride/phosphoric acid deep eutectic solvent (ChCl/PA DES)"
+      ],
+      "expected_properties": [
+        "cold_window: bound-water and retained-acid continuity",
+        "processability: water-processable film route",
+        "evidence_basis: component-level D4 claims"
+      ],
+      "risk_flags": [
+        "acid leaching must be measured",
+        "clay dispersion controls reproducibility"
+      ],
+      "combination_novelty": "novel_combination",
+      "element_evidence": [
+        {
+          "component": "Starch",
+          "role_in_formulation": "Starch in a high-temperature PEM provides dense hydrogen bonds via oxygen-containing groups to promote proton conduct...",
+          "descriptor_satisfied": [
+            "D5"
+          ],
+          "analog_paper_ids": [
+            "manual_8d58a81c9e_1"
+          ],
+          "analog_reason": "Starch in a high-temperature PEM provides dense hydrogen bonds via oxygen-containing groups to promote proton conduction and enhance phosphoric acid retentio..."
+        },
+        {
+          "component": "modified montmorillonite (MMT)",
+          "role_in_formulation": "Protonated MMT at 6 wt% loading provides hydrophilic surface sites that enhance proton conductivity in PVA/PEG blends...",
+          "descriptor_satisfied": [
+            "D5"
+          ],
+          "analog_paper_ids": [
+            "manual_b9c3d1711d"
+          ],
+          "analog_reason": "Protonated MMT at 6 wt% loading provides hydrophilic surface sites that enhance proton conductivity in PVA/PEG blends, achieving a value of 0.0802 S/cm (manu..."
+        },
+        {
+          "component": "Chitosan (CS)",
+          "role_in_formulation": "Chitosan provides a positively charged polymer backbone that, through interaction with phosphotungstic acid, helps co...",
+          "descriptor_satisfied": [
+            "D6"
+          ],
+          "analog_paper_ids": [
+            "manual_1190463586"
+          ],
+          "analog_reason": "Chitosan provides a positively charged polymer backbone that, through interaction with phosphotungstic acid, helps construct effective proton transport chann..."
+        },
+        {
+          "component": "Choline chloride/phosphoric acid deep eutectic solvent (ChCl/PA DES)",
+          "role_in_formulation": "The choline chloride/phosphoric acid deep eutectic solvent provides a mobile acid species with conductivity that incr...",
+          "descriptor_satisfied": [
+            "D3"
+          ],
+          "analog_paper_ids": [
+            "manual_1ca1249fc4"
+          ],
+          "analog_reason": "The choline chloride/phosphoric acid deep eutectic solvent provides a mobile acid species with conductivity that increases with temperature, as evidenced by ..."
+        }
+      ],
+      "literature_support_card_ids": [
+        "manual_8d58a81c9e_1",
+        "manual_b9c3d1711d",
+        "manual_1190463586",
+        "manual_1ca1249fc4"
+      ],
+      "novelty_rationale": "This combines separate starch, PVA, 1-D clay, and phosphoric-acid evidence into a quaternary cold-side membrane rather than copying one S08 formulation.",
+      "origin": "llm_selected_from_broad_pool",
+      "source_mode": "broad_literature_pool_selection",
+      "user_candidate_id": null,
+      "design_principle_ids": [],
+      "descriptor_claim_coverage": null
+    },
+    {
+      "instance_id": "I2",
+      "family_id": "F2",
+      "instance_name": "Chitosan/organic-modified attapulgite/phosphoric acid composite",
+      "composition_description": "Chitosan (CS) + Choline chloride/phosphoric acid deep eutectic solvent (ChCl/PA DES)",
+      "components": [
+        "Chitosan (CS)",
+        "Choline chloride/phosphoric acid deep eutectic solvent (ChCl/PA DES)"
+      ],
+      "expected_properties": [
+        "host_sites: chitosan hydrogen-bond matrix",
+        "confinement: fibrous clay compartment",
+        "carrier: retained phosphoric acid"
+      ],
+      "risk_flags": [
+        "biopolymer swelling may alter percolation",
+        "acid loading needs optimisation"
+      ],
+      "combination_novelty": "novel_combination",
+      "element_evidence": [
+        {
+          "component": "Chitosan (CS)",
+          "role_in_formulation": "Chitosan provides a positively charged polymer backbone that, through interaction with phosphotungstic acid, helps co...",
+          "descriptor_satisfied": [
+            "D6"
+          ],
+          "analog_paper_ids": [
+            "manual_1190463586"
+          ],
+          "analog_reason": "Chitosan provides a positively charged polymer backbone that, through interaction with phosphotungstic acid, helps construct effective proton transport chann..."
+        },
+        {
+          "component": "Choline chloride/phosphoric acid deep eutectic solvent (ChCl/PA DES)",
+          "role_in_formulation": "The choline chloride/phosphoric acid deep eutectic solvent provides a mobile acid species with conductivity that incr...",
+          "descriptor_satisfied": [
+            "D3"
+          ],
+          "analog_paper_ids": [
+            "manual_1ca1249fc4"
+          ],
+          "analog_reason": "The choline chloride/phosphoric acid deep eutectic solvent provides a mobile acid species with conductivity that increases with temperature, as evidenced by ..."
+        }
+      ],
+      "literature_support_card_ids": [
+        "manual_1190463586",
+        "manual_1ca1249fc4"
+      ],
+      "novelty_rationale": "This uses chitosan host evidence with attapulgite confinement and retained phosphoric acid from separate S08 claims, making the combined formulation literature-auditable but not a direct copy.",
+      "origin": "llm_selected_from_broad_pool",
+      "source_mode": "broad_literature_pool_selection",
+      "user_candidate_id": null,
+      "design_principle_ids": [],
+      "descriptor_claim_coverage": null
+    },
+    {
+      "instance_id": "I3",
+      "family_id": "F2",
+      "instance_name": "Halloysite nanotube/phosphoric acid/PVA hybrid membrane",
+      "composition_description": "halloysite nanotubes (HNTs) + Choline chloride/phosphoric acid deep eutectic solvent (ChCl/PA DES) + modified montmorillonite (MMT)",
+      "components": [
+        "halloysite nanotubes (HNTs)",
+        "Choline chloride/phosphoric acid deep eutectic solvent (ChCl/PA DES)",
+        "modified montmorillonite (MMT)"
+      ],
+      "expected_properties": [
+        "acid_retention: nanotube-confined phosphoric acid",
+        "film_integrity: PVA binder contribution",
+        "transport: packed-acid donor-acceptor network"
+      ],
+      "risk_flags": [
+        "high acid fraction may plasticise the matrix",
+        "tube loading must avoid brittleness"
+      ],
+      "combination_novelty": "novel_combination",
+      "element_evidence": [
+        {
+          "component": "halloysite nanotubes (HNTs)",
+          "role_in_formulation": "HNTs act as a confining host that establishes a dense hydrogen-bonding network with PA, reducing susceptibility to PA...",
+          "descriptor_satisfied": [
+            "D5"
+          ],
+          "analog_paper_ids": [
+            "manual_a16330d0f5"
+          ],
+          "analog_reason": "HNTs act as a confining host that establishes a dense hydrogen-bonding network with PA, reducing susceptibility to PA leaching and potentially providing segm..."
+        },
+        {
+          "component": "Choline chloride/phosphoric acid deep eutectic solvent (ChCl/PA DES)",
+          "role_in_formulation": "The choline chloride/phosphoric acid deep eutectic solvent provides a mobile acid species with conductivity that incr...",
+          "descriptor_satisfied": [
+            "D3"
+          ],
+          "analog_paper_ids": [
+            "manual_1ca1249fc4"
+          ],
+          "analog_reason": "The choline chloride/phosphoric acid deep eutectic solvent provides a mobile acid species with conductivity that increases with temperature, as evidenced by ..."
+        },
+        {
+          "component": "modified montmorillonite (MMT)",
+          "role_in_formulation": "Protonated MMT at 6 wt% loading provides hydrophilic surface sites that enhance proton conductivity in PVA/PEG blends...",
+          "descriptor_satisfied": [
+            "D5"
+          ],
+          "analog_paper_ids": [
+            "manual_b9c3d1711d"
+          ],
+          "analog_reason": "Protonated MMT at 6 wt% loading provides hydrophilic surface sites that enhance proton conductivity in PVA/PEG blends, achieving a value of 0.0802 S/cm (manu..."
+        }
+      ],
+      "literature_support_card_ids": [
+        "manual_a16330d0f5",
+        "manual_1ca1249fc4",
+        "manual_b9c3d1711d"
+      ],
+      "novelty_rationale": "This transfers halloysite-confined acid evidence into a PVA-containing film-forming route, differing from the closest single-paper acid-in-clay formulation by the added polymer matrix role.",
+      "origin": "llm_selected_from_broad_pool",
+      "source_mode": "broad_literature_pool_selection",
+      "user_candidate_id": null,
+      "design_principle_ids": [],
+      "descriptor_claim_coverage": null
+    },
+    {
+      "instance_id": "I4",
+      "family_id": "F3",
+      "instance_name": "PAAm-g-starch/phosphoric acid hydrogel electrolyte",
+      "composition_description": "PAAm-g-starch (3D polyacrylamide-graft-starch hydrogel) + Choline chloride/phosphoric acid deep eutectic solvent (ChCl/PA DES) + Hydrogel electrolyte network",
+      "components": [
+        "PAAm-g-starch (3D polyacrylamide-graft-starch hydrogel)",
+        "Choline chloride/phosphoric acid deep eutectic solvent (ChCl/PA DES)",
+        "Hydrogel electrolyte network"
+      ],
+      "expected_properties": [
+        "retention: microporous hydrogel acid uptake",
+        "cold_window: hydrogel continuity motif",
+        "host_sites: starch-containing H-bond network"
+      ],
+      "risk_flags": [
+        "water content may dominate freezing behaviour",
+        "mechanical strength may be low"
+      ],
+      "combination_novelty": "close_variant",
+      "element_evidence": [
+        {
+          "component": "PAAm-g-starch (3D polyacrylamide-graft-starch hydrogel)",
+          "role_in_formulation": "The 3D PAAm-g-starch hydrogel framework provides an interconnected microporous space that absorbs and retains H₃PO₄, ...",
+          "descriptor_satisfied": [
+            "D1"
+          ],
+          "analog_paper_ids": [
+            "manual_a624da98ce"
+          ],
+          "analog_reason": "The 3D PAAm-g-starch hydrogel framework provides an interconnected microporous space that absorbs and retains H₃PO₄, suggesting host confinement and potentia..."
+        },
+        {
+          "component": "Choline chloride/phosphoric acid deep eutectic solvent (ChCl/PA DES)",
+          "role_in_formulation": "The choline chloride/phosphoric acid deep eutectic solvent provides a mobile acid species with conductivity that incr...",
+          "descriptor_satisfied": [
+            "D3"
+          ],
+          "analog_paper_ids": [
+            "manual_1ca1249fc4"
+          ],
+          "analog_reason": "The choline chloride/phosphoric acid deep eutectic solvent provides a mobile acid species with conductivity that increases with temperature, as evidenced by ..."
+        },
+        {
+          "component": "Hydrogel electrolyte network",
+          "role_in_formulation": "The hydrogel network maintains segmental flexibility and significantly suppresses ice crystallization to depress the ...",
+          "descriptor_satisfied": [
+            "D2"
+          ],
+          "analog_paper_ids": [
+            "manual_58ec9a6c2e"
+          ],
+          "analog_reason": "The hydrogel network maintains segmental flexibility and significantly suppresses ice crystallization to depress the freezing point, thereby retaining ionic ..."
+        }
+      ],
+      "literature_support_card_ids": [
+        "manual_a624da98ce",
+        "manual_1ca1249fc4",
+        "manual_58ec9a6c2e"
+      ],
+      "novelty_rationale": "This is close to hydrogel acid-retention literature but is retained as an interpretable low-temperature comparison route with explicit component evidence.",
+      "origin": "llm_selected_from_broad_pool",
+      "source_mode": "broad_literature_pool_selection",
+      "user_candidate_id": null,
+      "design_principle_ids": [],
+      "descriptor_claim_coverage": null
+    },
+    {
+      "instance_id": "I5",
+      "family_id": "F3",
+      "instance_name": "PVA/chitosan/Nb2O5/H3PO4 defect-assisted composite",
+      "composition_description": "modified montmorillonite (MMT) + Chitosan (CS) + Niobium oxide (Nb2O5) + Choline chloride/phosphoric acid deep eutectic solvent (ChCl/PA DES)",
+      "components": [
+        "modified montmorillonite (MMT)",
+        "Chitosan (CS)",
+        "Niobium oxide (Nb2O5)",
+        "Choline chloride/phosphoric acid deep eutectic solvent (ChCl/PA DES)"
+      ],
+      "expected_properties": [
+        "mobility: oxide-induced free volume",
+        "carrier: H3PO4 donor-acceptor sites",
+        "matrix: PVA/chitosan film continuity"
+      ],
+      "risk_flags": [
+        "oxide agglomeration can block conduction",
+        "acid-base balance needs screening"
+      ],
+      "combination_novelty": "novel_combination",
+      "element_evidence": [
+        {
+          "component": "modified montmorillonite (MMT)",
+          "role_in_formulation": "Protonated MMT at 6 wt% loading provides hydrophilic surface sites that enhance proton conductivity in PVA/PEG blends...",
+          "descriptor_satisfied": [
+            "D5"
+          ],
+          "analog_paper_ids": [
+            "manual_b9c3d1711d"
+          ],
+          "analog_reason": "Protonated MMT at 6 wt% loading provides hydrophilic surface sites that enhance proton conductivity in PVA/PEG blends, achieving a value of 0.0802 S/cm (manu..."
+        },
+        {
+          "component": "Chitosan (CS)",
+          "role_in_formulation": "Chitosan provides a positively charged polymer backbone that, through interaction with phosphotungstic acid, helps co...",
+          "descriptor_satisfied": [
+            "D6"
+          ],
+          "analog_paper_ids": [
+            "manual_1190463586"
+          ],
+          "analog_reason": "Chitosan provides a positively charged polymer backbone that, through interaction with phosphotungstic acid, helps construct effective proton transport chann..."
+        },
+        {
+          "component": "Niobium oxide (Nb2O5)",
+          "role_in_formulation": "Nb2O5 particles create defects and free volume in the polymer matrix, potentially introducing surface sites that anch...",
+          "descriptor_satisfied": [
+            "D6"
+          ],
+          "analog_paper_ids": [
+            "manual_f5f9ab95ca"
+          ],
+          "analog_reason": "Nb2O5 particles create defects and free volume in the polymer matrix, potentially introducing surface sites that anchor the proton-conducting phase (manual_f..."
+        },
+        {
+          "component": "Choline chloride/phosphoric acid deep eutectic solvent (ChCl/PA DES)",
+          "role_in_formulation": "The choline chloride/phosphoric acid deep eutectic solvent provides a mobile acid species with conductivity that incr...",
+          "descriptor_satisfied": [
+            "D3"
+          ],
+          "analog_paper_ids": [
+            "manual_1ca1249fc4"
+          ],
+          "analog_reason": "The choline chloride/phosphoric acid deep eutectic solvent provides a mobile acid species with conductivity that increases with temperature, as evidenced by ..."
+        }
+      ],
+      "literature_support_card_ids": [
+        "manual_b9c3d1711d",
+        "manual_1190463586",
+        "manual_f5f9ab95ca",
+        "manual_1ca1249fc4"
+      ],
+      "novelty_rationale": "This combines PVA film support, chitosan host sites, Nb2O5 free-volume evidence, and phosphoric-acid proton donation across separate component claims to create a distinct defect-assisted route.",
+      "origin": "llm_selected_from_broad_pool",
+      "source_mode": "broad_literature_pool_selection",
+      "user_candidate_id": null,
+      "design_principle_ids": [],
+      "descriptor_claim_coverage": null
+    }
+  ]
+}

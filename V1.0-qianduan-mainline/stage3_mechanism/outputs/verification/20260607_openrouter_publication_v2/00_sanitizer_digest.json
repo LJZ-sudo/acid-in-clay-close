@@ -1,0 +1,530 @@
+{
+  "bundle_id": "SEED-1ad04c55",
+  "n_samples": 40,
+  "n_segments": 158,
+  "sanitization_flags": [
+    {
+      "sample_id": "S8-2-1-1",
+      "flag_type": "missing_ea",
+      "detail": "Segment S8-2-1-1::vtf: representative_ea is None",
+      "severity": "warning"
+    },
+    {
+      "sample_id": "S8-2-1-2",
+      "flag_type": "missing_ea",
+      "detail": "Segment S8-2-1-2::vtf: representative_ea is None",
+      "severity": "warning"
+    },
+    {
+      "sample_id": "S8-2-2-1",
+      "flag_type": "missing_ea",
+      "detail": "Segment S8-2-2-1::vtf: representative_ea is None",
+      "severity": "warning"
+    },
+    {
+      "sample_id": "S8-2-2-2",
+      "flag_type": "missing_ea",
+      "detail": "Segment S8-2-2-2::vtf: representative_ea is None",
+      "severity": "warning"
+    },
+    {
+      "sample_id": "S8-3-1-1",
+      "flag_type": "missing_ea",
+      "detail": "Segment S8-3-1-1::vtf: representative_ea is None",
+      "severity": "warning"
+    },
+    {
+      "sample_id": "S8-3-1-2",
+      "flag_type": "missing_ea",
+      "detail": "Segment S8-3-1-2::vtf: representative_ea is None",
+      "severity": "warning"
+    },
+    {
+      "sample_id": "S8-3-10-1",
+      "flag_type": "missing_ea",
+      "detail": "Segment S8-3-10-1::vtf: representative_ea is None",
+      "severity": "warning"
+    },
+    {
+      "sample_id": "S8-3-11-1",
+      "flag_type": "missing_ea",
+      "detail": "Segment S8-3-11-1::vtf: representative_ea is None",
+      "severity": "warning"
+    },
+    {
+      "sample_id": "S8-3-11-2",
+      "flag_type": "missing_ea",
+      "detail": "Segment S8-3-11-2::vtf: representative_ea is None",
+      "severity": "warning"
+    },
+    {
+      "sample_id": "S8-3-2-1",
+      "flag_type": "missing_ea",
+      "detail": "Segment S8-3-2-1::vtf: representative_ea is None",
+      "severity": "warning"
+    },
+    {
+      "sample_id": "S8-3-2-2",
+      "flag_type": "missing_ea",
+      "detail": "Segment S8-3-2-2::vtf: representative_ea is None",
+      "severity": "warning"
+    },
+    {
+      "sample_id": "S8-3-2-3",
+      "flag_type": "missing_ea",
+      "detail": "Segment S8-3-2-3::vtf: representative_ea is None",
+      "severity": "warning"
+    },
+    {
+      "sample_id": "S8-3-2-4",
+      "flag_type": "missing_ea",
+      "detail": "Segment S8-3-2-4::vtf: representative_ea is None",
+      "severity": "warning"
+    },
+    {
+      "sample_id": "S8-3-2-5",
+      "flag_type": "missing_ea",
+      "detail": "Segment S8-3-2-5::vtf: representative_ea is None",
+      "severity": "warning"
+    },
+    {
+      "sample_id": "S8-3-20-1-1",
+      "flag_type": "missing_ea",
+      "detail": "Segment S8-3-20-1-1::vtf: representative_ea is None",
+      "severity": "warning"
+    },
+    {
+      "sample_id": "S8-3-21-1-1",
+      "flag_type": "missing_ea",
+      "detail": "Segment S8-3-21-1-1::vtf: representative_ea is None",
+      "severity": "warning"
+    },
+    {
+      "sample_id": "S8-3-22-1-1",
+      "flag_type": "missing_ea",
+      "detail": "Segment S8-3-22-1-1::vtf: representative_ea is None",
+      "severity": "warning"
+    },
+    {
+      "sample_id": "S8-3-23-2-1",
+      "flag_type": "missing_ea",
+      "detail": "Segment S8-3-23-2-1::vtf: representative_ea is None",
+      "severity": "warning"
+    },
+    {
+      "sample_id": "S8-3-25-1-1",
+      "flag_type": "missing_ea",
+      "detail": "Segment S8-3-25-1-1::vtf: representative_ea is None",
+      "severity": "warning"
+    },
+    {
+      "sample_id": "S8-3-27-1-1",
+      "flag_type": "missing_ea",
+      "detail": "Segment S8-3-27-1-1::vtf: representative_ea is None",
+      "severity": "warning"
+    },
+    {
+      "sample_id": "S8-3-28-1-1",
+      "flag_type": "missing_ea",
+      "detail": "Segment S8-3-28-1-1::vtf: representative_ea is None",
+      "severity": "warning"
+    },
+    {
+      "sample_id": "S8-3-29-1-1",
+      "flag_type": "missing_ea",
+      "detail": "Segment S8-3-29-1-1::vtf: representative_ea is None",
+      "severity": "warning"
+    },
+    {
+      "sample_id": "S8-3-3-1",
+      "flag_type": "missing_ea",
+      "detail": "Segment S8-3-3-1::vtf: representative_ea is None",
+      "severity": "warning"
+    },
+    {
+      "sample_id": "S8-3-31-1-1",
+      "flag_type": "missing_ea",
+      "detail": "Segment S8-3-31-1-1::vtf: representative_ea is None",
+      "severity": "warning"
+    },
+    {
+      "sample_id": "S8-3-32-1-1",
+      "flag_type": "missing_ea",
+      "detail": "Segment S8-3-32-1-1::vtf: representative_ea is None",
+      "severity": "warning"
+    },
+    {
+      "sample_id": "S8-3-33-1-1",
+      "flag_type": "missing_ea",
+      "detail": "Segment S8-3-33-1-1::vtf: representative_ea is None",
+      "severity": "warning"
+    },
+    {
+      "sample_id": "S8-3-35-1-1",
+      "flag_type": "missing_ea",
+      "detail": "Segment S8-3-35-1-1::vtf: representative_ea is None",
+      "severity": "warning"
+    },
+    {
+      "sample_id": "S8-3-37-1-1",
+      "flag_type": "missing_ea",
+      "detail": "Segment S8-3-37-1-1::vtf: representative_ea is None",
+      "severity": "warning"
+    },
+    {
+      "sample_id": "S8-3-38-1-1",
+      "flag_type": "missing_ea",
+      "detail": "Segment S8-3-38-1-1::vtf: representative_ea is None",
+      "severity": "warning"
+    },
+    {
+      "sample_id": "S8-3-4-1",
+      "flag_type": "missing_ea",
+      "detail": "Segment S8-3-4-1::vtf: representative_ea is None",
+      "severity": "warning"
+    },
+    {
+      "sample_id": "S8-3-5-1",
+      "flag_type": "missing_ea",
+      "detail": "Segment S8-3-5-1::vtf: representative_ea is None",
+      "severity": "warning"
+    },
+    {
+      "sample_id": "S8-3-6-1",
+      "flag_type": "missing_ea",
+      "detail": "Segment S8-3-6-1::vtf: representative_ea is None",
+      "severity": "warning"
+    },
+    {
+      "sample_id": "S8-3-6-2",
+      "flag_type": "missing_ea",
+      "detail": "Segment S8-3-6-2::vtf: representative_ea is None",
+      "severity": "warning"
+    },
+    {
+      "sample_id": "S8-3-6-3",
+      "flag_type": "missing_ea",
+      "detail": "Segment S8-3-6-3::vtf: representative_ea is None",
+      "severity": "warning"
+    },
+    {
+      "sample_id": "S8-3-7-1",
+      "flag_type": "missing_ea",
+      "detail": "Segment S8-3-7-1::vtf: representative_ea is None",
+      "severity": "warning"
+    },
+    {
+      "sample_id": "S8-3-7-2",
+      "flag_type": "missing_ea",
+      "detail": "Segment S8-3-7-2::vtf: representative_ea is None",
+      "severity": "warning"
+    },
+    {
+      "sample_id": "S8-3-8-2",
+      "flag_type": "missing_ea",
+      "detail": "Segment S8-3-8-2::vtf: representative_ea is None",
+      "severity": "warning"
+    },
+    {
+      "sample_id": "S8-3-9-2",
+      "flag_type": "missing_ea",
+      "detail": "Segment S8-3-9-2::vtf: representative_ea is None",
+      "severity": "warning"
+    },
+    {
+      "sample_id": "S8-3-9-3",
+      "flag_type": "missing_ea",
+      "detail": "Segment S8-3-9-3::vtf: representative_ea is None",
+      "severity": "warning"
+    },
+    {
+      "sample_id": "S8-3-9-4",
+      "flag_type": "missing_ea",
+      "detail": "Segment S8-3-9-4::vtf: representative_ea is None",
+      "severity": "warning"
+    }
+  ],
+  "flagged_segment_ids": {
+    "S8-2-1-1::vtf": [
+      "missing_ea"
+    ],
+    "S8-2-1-2::vtf": [
+      "missing_ea"
+    ],
+    "S8-2-2-1::vtf": [
+      "missing_ea"
+    ],
+    "S8-2-2-2::vtf": [
+      "missing_ea"
+    ],
+    "S8-3-1-1::vtf": [
+      "missing_ea"
+    ],
+    "S8-3-1-2::vtf": [
+      "missing_ea"
+    ],
+    "S8-3-10-1::vtf": [
+      "missing_ea"
+    ],
+    "S8-3-11-1::vtf": [
+      "missing_ea"
+    ],
+    "S8-3-11-2::vtf": [
+      "missing_ea"
+    ],
+    "S8-3-2-1::vtf": [
+      "missing_ea"
+    ],
+    "S8-3-2-2::vtf": [
+      "missing_ea"
+    ],
+    "S8-3-2-3::vtf": [
+      "missing_ea"
+    ],
+    "S8-3-2-4::vtf": [
+      "missing_ea"
+    ],
+    "S8-3-2-5::vtf": [
+      "missing_ea"
+    ],
+    "S8-3-20-1-1::vtf": [
+      "missing_ea"
+    ],
+    "S8-3-21-1-1::vtf": [
+      "missing_ea"
+    ],
+    "S8-3-22-1-1::vtf": [
+      "missing_ea"
+    ],
+    "S8-3-23-2-1::vtf": [
+      "missing_ea"
+    ],
+    "S8-3-25-1-1::vtf": [
+      "missing_ea"
+    ],
+    "S8-3-27-1-1::vtf": [
+      "missing_ea"
+    ],
+    "S8-3-28-1-1::vtf": [
+      "missing_ea"
+    ],
+    "S8-3-29-1-1::vtf": [
+      "missing_ea"
+    ],
+    "S8-3-3-1::vtf": [
+      "missing_ea"
+    ],
+    "S8-3-31-1-1::vtf": [
+      "missing_ea"
+    ],
+    "S8-3-32-1-1::vtf": [
+      "missing_ea"
+    ],
+    "S8-3-33-1-1::vtf": [
+      "missing_ea"
+    ],
+    "S8-3-35-1-1::vtf": [
+      "missing_ea"
+    ],
+    "S8-3-37-1-1::vtf": [
+      "missing_ea"
+    ],
+    "S8-3-38-1-1::vtf": [
+      "missing_ea"
+    ],
+    "S8-3-4-1::vtf": [
+      "missing_ea"
+    ],
+    "S8-3-5-1::vtf": [
+      "missing_ea"
+    ],
+    "S8-3-6-1::vtf": [
+      "missing_ea"
+    ],
+    "S8-3-6-2::vtf": [
+      "missing_ea"
+    ],
+    "S8-3-6-3::vtf": [
+      "missing_ea"
+    ],
+    "S8-3-7-1::vtf": [
+      "missing_ea"
+    ],
+    "S8-3-7-2::vtf": [
+      "missing_ea"
+    ],
+    "S8-3-8-2::vtf": [
+      "missing_ea"
+    ],
+    "S8-3-9-2::vtf": [
+      "missing_ea"
+    ],
+    "S8-3-9-3::vtf": [
+      "missing_ea"
+    ],
+    "S8-3-9-4::vtf": [
+      "missing_ea"
+    ]
+  },
+  "upstream_facts": {
+    "input_mode": "stage2_seed_v2",
+    "stage3_ready": true,
+    "stage3_blocking_reasons": [],
+    "input_hashes": {
+      "input_csv": "21f3caad64ba3cf77710c8dfd01f3889742296c2fb7d1f5352f90fe482dfeb3e"
+    }
+  },
+  "composition_nodes_summary": [
+    {
+      "node_id": "CN-001",
+      "r": 0.0,
+      "n": 1.182,
+      "sample_count": 1
+    },
+    {
+      "node_id": "CN-002",
+      "r": 0.0,
+      "n": 2.758,
+      "sample_count": 1
+    },
+    {
+      "node_id": "CN-003",
+      "r": 0.06412143,
+      "n": 3.39866667,
+      "sample_count": 2
+    },
+    {
+      "node_id": "CN-004",
+      "r": 0.06412143,
+      "n": 4.41826667,
+      "sample_count": 1
+    },
+    {
+      "node_id": "CN-005",
+      "r": 0.15219021,
+      "n": 3.88173333,
+      "sample_count": 1
+    },
+    {
+      "node_id": "CN-006",
+      "r": 0.1712624,
+      "n": 3.64533333,
+      "sample_count": 1
+    },
+    {
+      "node_id": "CN-007",
+      "r": 0.20404515,
+      "n": 4.34493333,
+      "sample_count": 1
+    },
+    {
+      "node_id": "CN-008",
+      "r": 0.29412726,
+      "n": 4.286,
+      "sample_count": 8
+    },
+    {
+      "node_id": "CN-009",
+      "r": 0.29967777,
+      "n": 4.0,
+      "sample_count": 1
+    },
+    {
+      "node_id": "CN-010",
+      "r": 0.29967777,
+      "n": 4.88888889,
+      "sample_count": 1
+    },
+    {
+      "node_id": "CN-011",
+      "r": 0.29967777,
+      "n": 5.55555556,
+      "sample_count": 1
+    },
+    {
+      "node_id": "CN-012",
+      "r": 0.30793441,
+      "n": 4.49293333,
+      "sample_count": 2
+    },
+    {
+      "node_id": "CN-013",
+      "r": 0.33407147,
+      "n": 4.9068,
+      "sample_count": 1
+    },
+    {
+      "node_id": "CN-014",
+      "r": 0.35840846,
+      "n": 5.32066667,
+      "sample_count": 1
+    },
+    {
+      "node_id": "CN-015",
+      "r": 0.37974975,
+      "n": 4.56693333,
+      "sample_count": 3
+    },
+    {
+      "node_id": "CN-016",
+      "r": 0.38656994,
+      "n": 3.892,
+      "sample_count": 2
+    },
+    {
+      "node_id": "CN-017",
+      "r": 0.38656994,
+      "n": 5.838,
+      "sample_count": 2
+    },
+    {
+      "node_id": "CN-018",
+      "r": 0.38656994,
+      "n": 7.0056,
+      "sample_count": 1
+    },
+    {
+      "node_id": "CN-019",
+      "r": 0.40793879,
+      "n": 4.5916,
+      "sample_count": 1
+    },
+    {
+      "node_id": "CN-020",
+      "r": 0.45864479,
+      "n": 4.92666667,
+      "sample_count": 1
+    },
+    {
+      "node_id": "CN-021",
+      "r": 0.55112485,
+      "n": 4.69026667,
+      "sample_count": 1
+    },
+    {
+      "node_id": "CN-022",
+      "r": 0.63671539,
+      "n": 4.53266667,
+      "sample_count": 1
+    },
+    {
+      "node_id": "CN-023",
+      "r": 1.04081633,
+      "n": 4.13866667,
+      "sample_count": 2
+    },
+    {
+      "node_id": "CN-024",
+      "r": 1.04081633,
+      "n": 4.656,
+      "sample_count": 2
+    },
+    {
+      "node_id": "CN-025",
+      "r": 1.04081633,
+      "n": 5.17333333,
+      "sample_count": 1
+    }
+  ],
+  "note": "Flagged values are preserved in the original bundle but should not be treated as strong numeric evidence when passed to LLM agents."
+}

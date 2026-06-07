@@ -1,0 +1,62 @@
+{
+  "campaign_name": "Attapulgite_AiCE_Wide_Temp_Optimization",
+  "source_tag": "attapulgite_aice",
+  "domain_knowledge": "【材料学专家背景】本体系为凹凸棒土（Attapulgite / Palygorskite）酸-黏土复合固态电解质 (AiCE)。磷酸/水混合物被限域在凹凸棒土的一维纤维状纳米通道（约 0.37 × 0.64 nm）中。与海泡石（Sepiolite）同属一维黏土酸限域体系，但通道几何与表面 Si-OH/Mg-OH 密度略有差异，必须作为独立 prospective campaign 验证。\n【当前真机起点 + 边界】当前已积累 5 个真机样品：R∈{0.186,0.35,0.5,0.5,0.62}, N∈{0.5,0.72,0.95,1.029,1.2}。综合数据 + 物理判据，本阶段搜索域固定为 R∈[0, 1.04]、N∈[0.5, 1.3]。其中 R 上限留到 1.04 以覆盖『接近 5/4 磷酸单酐 H2P2O7 化学计量比』的可能极限；N 上限收窄到 1.3 以避免体相酸液溢出限域通道。\n【核心物理判据】：\n1. 纳米限域判定：若 N 过高，酸液将溢出通道形成体相 (Bulk phase)，在低温下极易冻结或相变，导致 Arrhenius 曲线断折或低温区 Ea 剧增（Ea_low / Ea_high 比值 > 1.5 即视为退化信号）。\n2. 过低 N 风险：若 N 过低（接近 0.5 下限），酸/水网络可能不连续，室温电导率下降；因此低 N 点用于确认强限域下限，不应过度 exploitation。\n3. 传导机制判定：理想限域下，质子通过连续氢键网络 Grotthuss 跳跃，全温域 Ea 极低且稳定（Ea_high ≲ 0.15 eV、Ea_low ≲ 1.5×Ea_high）。\n4. R 极限：当 R 趋近 1.0–1.04，体系接近 H2P2O7（焦磷酸）化学计量，水含量极低、自由酸/腐蚀/低温结晶风险骤增，应在 BO 推荐中由 safety_box 给出警告。\n5. 与 S8 sepiolite 历史证据的关系：S8 的 20 trial history 仅作为 transfer reference / domain prior，不混入本 campaign 的 BO 训练库。\n【决策约束】：在推荐下一步 R/N 时，不仅追求室温电导率，必须严密监视低温区 Ea 和相变点（用派生量 ea_low_excess_eV = max(0, Ea_low - 1.5·Ea_high) 显式量化退化）。如观测到低温 Ea 异常偏高，下一轮优先降低 N 或调整 R 以恢复强限域；如室温电导率整体偏低且 Ea 不高，可适度提高 N 以补足连续酸网络。冷启动阶段优先覆盖 R/N 边界，避免过早 exploitation。",
+  "objective": {
+    "target": "combined_score",
+    "goal": "maximize",
+    "formula": "math.log10(conductivity_room_temp_S_cm) - 3.0 * ea_high_temp_eV - 0.5 * ea_low_excess_eV",
+    "rationale": "在 Goodenough/proton-conductor 文献中，固态电解质优劣首先用室温电导率（操作温度 σ_RT）的 log10 衡量；活化能 Ea 是次级筛选量（Grotthuss 跳跃 Ea_high 越低越好）。本体系在凹凸棒纳米通道里关键风险是低温区相变 / 体相酸冻结，仅以 Ea_high 不足以惩罚该退化，因此引入派生量 ea_low_excess_eV = max(0, Ea_low - 1.5·Ea_high)，专门量化『低温段相对高温段超出多少』。系数 3.0 与 0.5 取自 5 炉真机校准：让退化最严重的样品（Ea_low/Ea_high ≈ 6×）分数惩罚 ≈ 0.36（与 log10σ 单位量纲相当），而健康样品几乎不被扣分。"
+  },
+  "parameters": {
+    "R": {
+      "type": "continuous",
+      "low": 0.0,
+      "high": 1.04,
+      "desc": "酸/水摩尔比 R: n(H3PO4)/n(H2O)，决定氢键网络中供体与受体的比例。当前阶段搜索域 [0, 1.04]，上限 1.04 允许 BO 探到接近 H2P2O7 焦磷酸化学计量极限的强酸区。"
+    },
+    "N": {
+      "type": "continuous",
+      "low": 0.5,
+      "high": 1.3,
+      "desc": "液/固质量比 N: m(85% H3PO4 + H2O) / m(attapulgite)，决定酸水网络在凹凸棒土纤维通道内的装载程度。已观测样品 N∈[0.5, 1.2]；本阶段域固定 [0.5, 1.3]，避免体相酸液溢出限域通道。"
+    }
+  },
+  "storage": {
+    "history_db": "campaign_memory/history_db_attapulgite.json",
+    "output_dir": "output/attapulgite_aice"
+  },
+  "termination_criteria": {
+    "version": "v3",
+    "rationale": "基于 AiCE 海泡石 SOTA (Wang/Li MIT, Adv Mater 2022: σ@25°C=1.5e-2 S/cm, Ea_high=0.12 eV, ea_low_excess≈0.47 eV) 与凹凸棒通道窄于海泡石的事实，凹凸棒体系可达性大致等同或略低于 SOTA。trial 1 (R=0.186,N=1.029, @18°C) 已经达到 σ=2.55e-2、Ea_high=0.080 eV，逼近/超过 SOTA。v3 把绝对目标定在『明显超 SOTA 且统计显著』并放宽 ea_low_excess（≤0.10 物理上极苛刻），同时用 BO 收敛作等价退出口，预算 20 个样品兜底。",
+    "performance_target": {
+      "sigma_rt_min_S_cm": 0.03,
+      "ea_high_max_eV": 0.10,
+      "ea_low_excess_max_eV": 0.20,
+      "combined_score_min": -1.6,
+      "consecutive_distinct_recipes_required": 2,
+      "distinct_recipe_min_distance": 0.05
+    },
+    "convergence": {
+      "best_score_plateau_window": 5,
+      "best_score_min_delta": 0.10,
+      "recommendation_shift_window": 3,
+      "recommendation_shift_max_l2": 0.05,
+      "predicted_std_max": 0.20,
+      "rules_required_to_trigger": 2
+    },
+    "budget": {
+      "max_total_trials": 20
+    },
+    "anomaly": {
+      "safety_box_consecutive_fail": 2,
+      "stage0_consecutive_fail": 3,
+      "boundary_hugging_consecutive": 2,
+      "boundary_proximity_normalized": 0.02
+    }
+  },
+  "transfer_reference": {
+    "note": "S8 sepiolite 20 trial 母系统证据（mother-system evidence）已迁出 stage1_optimization，归档在 three_pillars/pillar1_transfer_agent/s8_acid_in_clay_mother_system/ 下；当前 attapulgite BO 不消费此证据，仅在 Pillar 1 transfer 叙事中作为先验引用。BO 训练点必须仅来自本 campaign 的 history_db_attapulgite.json。",
+    "mother_system_evidence_path": "three_pillars/pillar1_transfer_agent/s8_acid_in_clay_mother_system/"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "method": "ranking_robustness_v2",
+  "status": "ok",
+  "n_candidates": 3,
+  "n_seeds": 200,
+  "rng_seed": 20260501,
+  "weight_jitter_sigma": 0.05,
+  "sub_score_jitter_sigma": 0.02,
+  "source_term_ok_assumed": true,
+  "default_weights": {
+    "mechanism_fit": 0.2,
+    "evidence_quality": 0.18,
+    "formulation_completeness": 0.18,
+    "low_temperature_plausibility": 0.14,
+    "processability": 0.11,
+    "novelty": 0.05,
+    "citation": 0.04,
+    "one_minus_risk": 0.1
+  },
+  "default_top1": "I1",
+  "default_top3": [
+    "I1",
+    "I2",
+    "I3"
+  ],
+  "top1_stability_rate": 1.0,
+  "top3_jaccard_mean": 1.0,
+  "stability_class": "stable",
+  "rank_std_summary": {
+    "mean": 0.0,
+    "max": 0.0
+  },
+  "unstable_candidates": [],
+  "recommended_wording_hint": "Single-winner wording is allowed with audit caveats.",
+  "spearman_to_default": {
+    "mean": 1.0,
+    "min": 1.0,
+    "p05": 1.0
+  },
+  "per_candidate": [
+    {
+      "instance_id": "I1",
+      "instance_name": "Crosslinked PAAm-g-starch / H3PO4 hydrogel (literature baseline)",
+      "default_rank": 1,
+      "default_score": 0.9115,
+      "rank_histogram": [
+        200,
+        0,
+        0
+      ],
+      "top1_freq": 1.0,
+      "top3_freq": 1.0,
+      "mean_rank": 1.0,
+      "std_rank": 0.0
+    },
+    {
+      "instance_id": "I2",
+      "instance_name": "biomass-starch-A / PVA / H3PO4 / 1D-clay composite membrane",
+      "default_rank": 2,
+      "default_score": 0.8435,
+      "rank_histogram": [
+        0,
+        200,
+        0
+      ],
+      "top1_freq": 0.0,
+      "top3_freq": 1.0,
+      "mean_rank": 2.0,
+      "std_rank": 0.0
+    },
+    {
+      "instance_id": "I3",
+      "instance_name": "High-amylose plant starch / PVA / H3PO4 / sepiolite composite",
+      "default_rank": 3,
+      "default_score": 0.778,
+      "rank_histogram": [
+        0,
+        0,
+        200
+      ],
+      "top1_freq": 0.0,
+      "top3_freq": 1.0,
+      "mean_rank": 3.0,
+      "std_rank": 0.0
+    }
+  ],
+  "interpretation": "top-1 is stable across perturbations (100% of seeds keep the same winner); top-3 Jaccard vs default = 1.00; mean Spearman to default ranks = 1.00."
+}

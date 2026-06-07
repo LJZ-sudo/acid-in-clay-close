@@ -1,0 +1,42 @@
+{
+  "step_id": "s06_mechanism",
+  "mechanism_card": {
+    "selected_hypothesis_id": "H4",
+    "mechanism_label": "Confinement-induced multi-threshold percolation with interfacial-dominated transport",
+    "justification": "Statistically, VTF (H1) wins per-sample AICc by a huge margin (V2‑E7, V2‑E10), yet it cannot explain the near‑universal piecewise breakpoints (V2‑E12) or the qualitative EIS evolution from capacitive tail to resolved semicircle on cooling (V2‑E9, V‑E10). H2 (dual‑population dehydration) accounts for the piecewise Arrhenius break but incorrectly expects dehydration to suppress conductivity at high R, whereas the strongest evidence (V2‑E2, V2‑E4) shows σ correlates positively with water content N at both 299 K and 233 K, and only at 299 K does σ marginally correlate with R (p ≈ 0.07). H3 (Meyer‑Neldel Grotthuss) explains the segment‑level compensation (V2‑E8) elegantly, but fails to accommodate the piecewise energy‑scale doubling (V2‑E11) and the EIS morphology change. H4 posits an interfacial, percolation‑controlled network where a high‑T conductive film dominates and a low‑T cluster‑percolation threshold appears; this naturally explains why T_arc differs from T_break (two distinct geometric/topological transitions), why the EIS semicircle emerges only when the low‑T percolating film becomes resistive enough to shift its τ into the measurement window, and why conductivity depends strongly on N but only weakly on R—the interfacial water film is sensitive to the total volume of hydrated pathways but not to the bulk acid/water ratio. Therefore H4 is the only hypothesis that simultaneously fits the statistical model selection, the decoupled T_arc / T_break, the σ(N,R) correlation pattern, and the EIS spectral evolution.",
+    "confidence": 0.72,
+    "evidence_alignment": [
+      "V2-E2: H4 expects the interfacial water film thickness to scale with total water content N, giving positive σ–N correlation at 299 K.",
+      "V2-E4: The persistent positive σ–N correlation at 233 K is consistent with H4’s low‑T cluster percolation being also N‑dependent.",
+      "V2-E7+V2-E10: VTF wins AICc per‑sample, but H4 explicitly allows a VTF‑like regime above the high‑T percolation threshold; the piecewise Arrhenius fit is a macroscopic approximation of two percolation thresholds.",
+      "V2-E12: The detection of a breakpoint in 39/40 samples matches H4’s two‑threshold picture; the break temperature distribution reflects the percolating film–cluster transition.",
+      "V2-E9+E3: The EIS arc emerges only on cooling, consistent with H4’s prediction that the low‑T cluster phase introduces a new resistive time constant that is outside the window at high T.",
+      "V2-E11: The factor‑of‑two difference in activation energies between high‑ and low‑T segments aligns with H4’s transition from a highly conductive interfacial film to a more resistive cluster‑percolation regime.",
+      "V2-E1+V2-E3+V2-E5+V2-E6: The weak or absent correlation of σ and Ea with R supports H4’s interfacial mechanism that relies on the amount of water (N) rather than the bulk acid/water stoichiometry."
+    ],
+    "literature_support": [
+      "manual_d6329c4fda: Anomalously fast proton transport in hydrogen‑bonded systems can arise from interfacial structural diffusion, strengthening H4’s claim of an interfacial‑dominated pathway.",
+      "manual_e2d21540be: Decoupling between ionic conductivity and structural dynamics near a glass transition in phosphoric acid systems suggests that confined, interfacial populations can exhibit distinct transport signatures, as H4 proposes.",
+      "W2167386768: (if applicable) The concept of confinement‑induced interfacial transport is precedented in nanolayered proton conductors.",
+      "manual_57e6c3c8c2: Phase transitions and segregation in confined porous media support H4’s idea of distinct temperature‑triggered topological changes in the acid‑water network."
+    ],
+    "t_arc_t_break_explanation": "T_arc marks the temperature at which the low‑T cluster‑percolation network becomes resistive enough that its characteristic relaxation time enters the EIS measurement window (resolvable semicircle). T_break is the thermodynamic temperature at which the network topology shifts from a continuous interfacial film to a partially disconnected cluster regime, as detected by the change in DC Arrhenius slope. Because the EIS time‑scale and the DC conductivity respond to different aspects of the same topological transition (local relaxation versus long‑range percolation), T_arc and T_break naturally differ.",
+    "eis_evolution_explanation": "The selected H4 mechanism explains the EIS morphology evolution through a combination of mechanisms (b) and (c): At high temperature a fully percolating interfacial film provides a low‑resistance, highly capacitive pathway, yielding only a low‑frequency linear tail (the high‑frequency semicircle is collapsed because the interfacial resistance is too small to resolve). On cooling, the film breaks into isolated clusters with a new, slower interfacial polarisation or grain‑boundary‑like process (b) that emerges as a resistive semicircle in the mid‑/high‑frequency range. Simultaneously, the network undergoes a composition/structure change from a single interfacial film to a two‑phase cluster‑matrix morphology (c), which introduces the additional resistive component observed at low temperature. Thus the Nyquist plot transitions from a dominant capacitive tail to “semicircle + line”.",
+    "caveats": [
+      "The per‑sample AICc strongly favours VTF over piecewise Arrhenius for 39/40 samples, implying that at the bulk DC level the deviations from VTF are subtle; H4’s piecewise approximation must be regarded as a pragmatic, not a fundamental, description of the DC data.",
+      "Direct microstructural or spectroscopic evidence for the existence of isolated clusters versus a continuous interfacial film in attapulgite channels has not yet been provided, so H4 remains a model inferred from transport and EIS observables.",
+      "The EIS data are sparse (6/40 samples with any visible arc) and only heuristically support the τ‑shift argument; further frequency‑domain measurements are needed to confirm the time‑constant separation."
+    ],
+    "rejected_hypotheses": [
+      "H1 rejected: VTF perfectly fits the DC data but cannot produce the ubiquitous piecewise Arrhenius break or the temperature‑dependent EIS shape change without invoking a second process.",
+      "H2 rejected: Dehydration‑driven dual‑population transport incorrectly predicts a negative or null σ‑R correlation at high T; the observed weak positive ρ(σ,R) at 299 K (p ≈ 0.07) and the strong σ–N correlation contradict H2’s expected chemistry.",
+      "H3 rejected: A single‑process Grotthuss mechanism with MN compensation does not explain the factor‑of‑two activation‑energy shift between high‑ and low‑T segments, nor the decoupling of T_arc from any Arrhenius break."
+    ],
+    "why_not": [
+      "H1: A pure VTF model could have accounted for the gradual EIS evolution without an explicit topological transition, if the relaxation time distribution merely shifted with temperature; however the data show a distinct arc emergence rather than a smooth scaling.",
+      "H2: The dual‑population model naturally explains the two activation energies; however it would have predicted a stronger dependence of σ on the acid/water ratio R than is observed.",
+      "H3: Meyer‑Neldel compensation excellently captures the segment‑level pre‑exponential coupling, but it fails to explain the piecewise energy‑scale doubling that is the most prominent feature of the DC conductivity."
+    ]
+  },
+  "arbitration_method": "evidence_consistency + literature_weight + eis_evolution_check"
+}

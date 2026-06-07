@@ -1,0 +1,70 @@
+{
+  "paper_id": "manual_389b761143",
+  "stage_target": "materials",
+  "bibliography": {
+    "title": "Mechanical and water resistance properties of chitosan/poly(vinyl alcohol) films reinforced with attapulgite dispersed by high-pressure homogenization",
+    "authors": "",
+    "year": 0
+  },
+  "system_identity": {
+    "base_material": "chitosan/poly(vinyl alcohol)",
+    "dopant": "attapulgite",
+    "form_factor": "nanocomposite",
+    "other": ""
+  },
+  "measurement_scope": {
+    "temp_range": "",
+    "freq_range": "",
+    "humidity": "",
+    "other_conditions": "high-pressure homogenization"
+  },
+  "mechanism_relevant_findings": [
+    "g r a p h i c a l a b s t r a c t\n\na r t i c l e i n f o\n\nArticle history: Received 27 June 2012 Received in revised form 21 August 2012 Accepted 24 August 2012 Available online 5 September 2012\n\nKeywords: Nanocomposites Attapulgite High-pressure homogenization Mechanical properties Water resistance",
+    "However, natural APT cannot develop its nanometer reinforce advantages because it usually appears as a crystal bundle or aggregate.",
+    "� 2012 Elsevier B.V.",
+    "developed a novel polyimide/ APT nanocomposite  [7]  and found that the tensile modulus, tensile\n\n1385-8947/$ - see front matter  � 2012 Elsevier B.V.",
+    "Chemical Engineering Journal 210 (2012) 166–172\n\nContents lists available at  SciVerse ScienceDirect\n\nChemical Engineering Journal\n\njournal homepage: www.elsevier.com/locate/cej\n\nstrength, elongation at break of polyimide were sharply increased by introducing organified APT.",
+    "However, natural APT usually appears as a bundle or aggregate of randomly oriented rod crystals due to the action of van der Waals’ interactions among the APT rods [12] .",
+    "Unlike individual rod-like single crystal, the crystal bundles or aggregate do not have the characteristics of nanometer materi- als, and so the advantages of APT as a reinforce filler cannot be fully developed and its extensive application was limited.",
+    "Therefore, the high-efficient disaggregation of APT aggregates into individual rods becomes a key to utilize the nanometer properties and develop the high-performance product.",
+    "Conventionally, the disaggregation or dispersion of APT bundles can be realized by adding various chem- ical dispersants, but this method can only partially disaggregate the bundles, the process is complex and the undesirable chemicals may be introduced inevitably.",
+    "In our previous work, we have disaggregated and dispersed APT crystal bundles effectively by a simple high-pressure homogenization process [13] ."
+  ],
+  "numerical_findings": [],
+  "eis_shape_findings": [],
+  "arrhenius_vtf_findings": [],
+  "limitations": [],
+  "relevance_judgement": {
+    "score": 0.0,
+    "reason": "The paper does not provide relevant information on proton transport mechanisms or EIS analysis."
+  },
+  "supports_axes": {},
+  "conflicts_axes": {},
+  "trace_spans": [
+    {
+      "page": null,
+      "section": "Dajian Huang   a , b , Wenbo Wang   a , Jixiang Xu   a , b , Aiqin Wang   a , ⇑",
+      "text_snippet": "a  Center of Xuyi Attapulgite Applied Technology, Lanzhou Institute of Chemical Physics, Chinese Academy of Science, Lanzhou 730000, China b  Graduate University of the Chinese Academy of Sciences, Be"
+    },
+    {
+      "page": null,
+      "section": "1. Introduction",
+      "text_snippet": "Organic/inorganic nanocomposites have attracted considerable attentions in the past decades because the incorporation of nano- scale inorganic filler into polymer matrix brings surprising hybrid perfo"
+    },
+    {
+      "page": null,
+      "section": "Chemical Engineering Journal",
+      "text_snippet": "journal homepage: www.elsevier.com/locate/cej strength, elongation at break of polyimide were sharply increased by introducing organified APT. Yin et al. prepared PAN/APT nano- composite films with di"
+    },
+    {
+      "page": null,
+      "section": "2. Materials and methods",
+      "text_snippet": "2.1. Materials PVA (degree of polymerization, 1700 ± 50, degree of hydrolysis, 99%) was purchased from Lanzhou Chemical Reagent Co. Ltd. (Gan- su, China). CS (90% degree of deacetylation and molecular"
+    },
+    {
+      "page": null,
+      "section": "3. Results and discussion",
+      "text_snippet": "3.1. FTIR analysis FTIR spectroscopy is one of the most effective tools to study the interactions in polymer/clay composites.  Fig. 1  shows the ATR– FTIR spectra of neat CS/PVA and nanocomposites. In"
+    }
+  ]
+}

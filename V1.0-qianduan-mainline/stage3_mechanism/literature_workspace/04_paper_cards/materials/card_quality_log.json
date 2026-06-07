@@ -1,0 +1,32 @@
+[
+  {
+    "paper_id": "manual_3f3cacda8a",
+    "local_path": "03_parsed_text\\manual_3f3cacda8a.pdf",
+    "status": "carded",
+    "findings_count": 8,
+    "mechanism_findings": 0,
+    "numerical_findings": 8,
+    "eis_findings": 0,
+    "arrhenius_findings": 0
+  },
+  {
+    "paper_id": "manual_389b761143",
+    "local_path": "03_parsed_text\\manual_389b761143.pdf",
+    "status": "carded_fallback",
+    "findings_count": 10,
+    "mechanism_findings": 10,
+    "numerical_findings": 0,
+    "eis_findings": 0,
+    "arrhenius_findings": 0
+  },
+  {
+    "paper_id": "manual_c0c1101384",
+    "local_path": "03_parsed_text\\manual_c0c1101384.pdf",
+    "status": "carded",
+    "findings_count": 2,
+    "mechanism_findings": 1,
+    "numerical_findings": 1,
+    "eis_findings": 0,
+    "arrhenius_findings": 0
+  }
+]

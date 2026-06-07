@@ -1,0 +1,60 @@
+{
+  "paper_id": "manual_b19f09d965",
+  "stage_target": "mechanism",
+  "bibliography": {
+    "title": "c..  --.  E-t  rt:>  - ...c::  rt:>  '-\"",
+    "authors": "",
+    "year": 0
+  },
+  "system_identity": {},
+  "measurement_scope": {},
+  "mechanism_relevant_findings": [
+    "We review important recent advances in the fundamental understand- ing  of  glasses that have resulted from two complementary statistical  mechanical viewpoints: the energy landscape formalism  and  statisti- cal geometry.",
+    "At  the molecular level, they have a liquid- like structure and therefore lack the periodicity of crystals.",
+    "Glasses, moreover, being  structurally liquid-like but mechanically solid, and having history-dependent  properties that nevertheless can persist unchanged over geological times, fall\n\n1HEORY  OF SUPERCOOLED LIQUIDS AND GLASSES  23\n\nbetween the clear-cut boundaries into which chemical engineering sc",
+    ", The pharmaceutical industry  is  perhaps the best example of this evolution.",
+    "We  believe that the evolving needs of our practical profession, coupled with  the trend in virtually all areas of contemporary scholarship toward a lowering  of barriers between traditional disciplines will bring the vitreous state closer  to the core of chemical engineering.",
+    "In this article we review important recent advances in the fundamental  understanding of glasses that have resulted from two complementary statis- tical mechanical viewpoints: statistical geometry and the energy landscape.",
+    "There are several excellent reviews of this vast topic.",
+    "More recent reviews include the articles by  Angell (1995), Ediger  et  al.",
+    "The  most common  route  to  the  glassy state,  however, is  the  rapid cooling  of  a melt.",
+    "The  cooling  rate  needed  to  achieve this is substance-specific."
+  ],
+  "numerical_findings": [],
+  "eis_shape_findings": [],
+  "arrhenius_vtf_findings": [],
+  "limitations": [],
+  "relevance_judgement": {
+    "score": 0.0,
+    "reason": "The paper does not provide specific findings related to proton transport mechanisms or relevant numerical data."
+  },
+  "supports_axes": {},
+  "conflicts_axes": {},
+  "trace_spans": [
+    {
+      "page": null,
+      "section": "",
+      "text_snippet": "THEORY OF SUPERCOOLED LIQUIDS AND GLASSES: ENERGY LANDSCAPE AND STATISTICAL GEOMETRY PERSPECTIVES Pablo  G.  Debenedetti, * Thomas  M.  Truskett,  and  Catherine  P.  Lewis Department  of  Chemical  E"
+    },
+    {
+      "page": null,
+      "section": "s  ::s  ........  0  >",
+      "text_snippet": ""
+    },
+    {
+      "page": null,
+      "section": "Temperature",
+      "text_snippet": ""
+    },
+    {
+      "page": null,
+      "section": "Temperature",
+      "text_snippet": "Fro.  1.  Isobaric relationship between volume and temperature in the liquid, glassy, and crys- talline states.  Tm  is  the melting temperature, and  Tga  and  Tgb  are the glass transition temperatu"
+    },
+    {
+      "page": null,
+      "section": ";;;......  I  I  ~  I  ta",
+      "text_snippet": "I  I  ~ I  I  I  ll.:!  --;..  .......  --:  ,,  I I  I  I  I  ITm  Temperature II"
+    }
+  ]
+}

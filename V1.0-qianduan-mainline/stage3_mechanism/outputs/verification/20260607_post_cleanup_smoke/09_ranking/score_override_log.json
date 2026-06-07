@@ -1,0 +1,23 @@
+{
+  "ranking_consistency_warnings": [],
+  "recomputed": [
+    {
+      "instance_id": "I3",
+      "rank": 1,
+      "llm_total_score": 0.82,
+      "weighted_score_from_criteria": 0.8075
+    },
+    {
+      "instance_id": "I1",
+      "rank": 2,
+      "llm_total_score": 0.79,
+      "weighted_score_from_criteria": 0.7589
+    },
+    {
+      "instance_id": "I2",
+      "rank": 3,
+      "llm_total_score": 0.68,
+      "weighted_score_from_criteria": 0.6877
+    }
+  ]
+}

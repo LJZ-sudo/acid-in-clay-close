@@ -1,0 +1,112 @@
+{
+  "step_id": "s04_hypotheses",
+  "hypotheses": [
+    {
+      "hypothesis_id": "H1",
+      "mechanism_label": "Confined acid-water network with dynamic-freezing crossover",
+      "description": "Proton transport occurs mainly through a continuous H3PO4/H2O hydrogen-bond network confined within attapulgite fiber channels and inter-fiber voids. Above the crossover, network rearrangement enables VTF-like cooperative hopping; below it, partial freezing/rigidification of the confined liquid raises the apparent barrier and yields a higher-Ea regime.",
+      "key_prediction": "The breakpoint temperature should track signatures of carrier-medium mobility loss rather than acid loading alone, and high-temperature conductivity should scale more strongly with total liquid content N than with acid/water ratio R.",
+      "mechanism_axes": {
+        "transport": "hybrid_grotthuss_vehicular",
+        "phase_structure": "single_continuous_phase",
+        "temperature_dependence": "VTF",
+        "transition_topology": "single_transition",
+        "carrier_medium_state": "single_confined_population"
+      },
+      "supporting_evidence_ids": [
+        "V2-E2",
+        "V2-E4",
+        "V2-E7",
+        "V2-E10",
+        "V2-E11",
+        "V2-E12",
+        "E1",
+        "E2"
+      ],
+      "conflicting_evidence_ids": [
+        "V2-E8"
+      ],
+      "prior_plausibility": 0.83
+    },
+    {
+      "hypothesis_id": "H2",
+      "mechanism_label": "Two-population bound-water network with sequential activation",
+      "description": "The attapulgite hosts two proton-conducting carrier populations: weakly bound acid-water domains that are mobile at higher temperature and strongly bound interfacial water/acid species that dominate after the more labile network becomes dynamically arrested. The observed breakpoint reflects a redistribution between these populations rather than a single homogeneous medium.",
+      "key_prediction": "Samples with similar N but different proportions of interfacial vs less-bound liquid should show similar room-temperature conductivity yet different breakpoint temperatures and low-temperature activation energies.",
+      "mechanism_axes": {
+        "transport": "hybrid_grotthuss_vehicular",
+        "phase_structure": "multi_threshold_confined_domains",
+        "temperature_dependence": "piecewise_Arrhenius",
+        "transition_topology": "multi_transition",
+        "carrier_medium_state": "two_populations_strong_weak_bound"
+      },
+      "supporting_evidence_ids": [
+        "V2-E11",
+        "V2-E12",
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "conflicting_evidence_ids": [
+        "V2-E7",
+        "V2-E10"
+      ],
+      "prior_plausibility": 0.69
+    },
+    {
+      "hypothesis_id": "H3",
+      "mechanism_label": "Meyer-Neldel compensated hopping in a heterogeneous confined proton glass",
+      "description": "Transport is dominated by proton hopping across a distribution of confined hydrogen-bond environments whose local barriers and prefactors are strongly compensation-coupled. The apparent breakpoint emerges from barrier-population reshuffling with temperature, while the underlying physics remains thermally activated but disorder-dominated.",
+      "key_prediction": "Across samples and temperature segments, pre-exponential factors should continue to co-vary systematically with extracted Ea, and changes in conductivity with composition should be larger than changes in best-fit Ea.",
+      "mechanism_axes": {
+        "transport": "Grotthuss_hopping",
+        "phase_structure": "multi_threshold_confined_domains",
+        "temperature_dependence": "Arrhenius_with_MeyerNeldel_coupling",
+        "transition_topology": "single_transition",
+        "carrier_medium_state": "two_populations_strong_weak_bound"
+      },
+      "supporting_evidence_ids": [
+        "V2-E5",
+        "V2-E6",
+        "V2-E8",
+        "V2-E11",
+        "V2-E12",
+        "E2"
+      ],
+      "conflicting_evidence_ids": [
+        "V2-E7",
+        "V2-E10"
+      ],
+      "prior_plausibility": 0.62
+    },
+    {
+      "hypothesis_id": "H4",
+      "mechanism_label": "Interfacial proton shell percolation around attapulgite fibers",
+      "description": "Most protons move along acid-rich interfacial shells coating attapulgite surfaces rather than through a bulk-like confined liquid core. Increasing N mainly increases shell connectivity and wet inter-fiber bridges, while R has weaker leverage because the dominant pathway is set by surface-mediated proton relays in a hydration-stabilized shell.",
+      "key_prediction": "Conductivity should be much more sensitive to variables that change interfacial coverage/connectivity than to moderate shifts in acid/water ratio, and any impedance arc should appear only when interfacial pathways become partially disconnected at low liquid loading.",
+      "mechanism_axes": {
+        "transport": "Grotthuss_hopping",
+        "phase_structure": "core_shell_interfacial",
+        "temperature_dependence": "piecewise_Arrhenius",
+        "transition_topology": "single_transition",
+        "carrier_medium_state": "interfacial_only"
+      },
+      "supporting_evidence_ids": [
+        "V2-E2",
+        "V2-E4",
+        "V2-E1",
+        "V2-E3",
+        "V2-E12",
+        "V2-E13",
+        "E3"
+      ],
+      "conflicting_evidence_ids": [
+        "V2-E7",
+        "V2-E10",
+        "V2-E9"
+      ],
+      "prior_plausibility": 0.54
+    }
+  ],
+  "reasoning_notes": "These hypotheses compete mainly on whether the conductive medium is a single confined acid-water population or split strong/weak-bound populations, whether transport is predominantly cooperative VTF-like or Arrhenius/Meyer-Neldel compensated hopping, and whether connectivity is a continuous confined liquid network, heterogeneous confined domains, or interfacial core-shell pathways. The strong N-dependence, weak R-dependence, near-universal breakpoint detection, and dominant VTF model preference motivate H1, while the dual-Ea landscape and strong Meyer-Neldel compensation keep H2-H4 viable alternatives."
+}

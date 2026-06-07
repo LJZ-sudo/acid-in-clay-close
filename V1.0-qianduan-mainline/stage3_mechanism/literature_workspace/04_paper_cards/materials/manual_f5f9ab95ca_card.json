@@ -1,0 +1,90 @@
+{
+  "paper_id": "manual_f5f9ab95ca",
+  "stage_target": "materials",
+  "bibliography": {
+    "title": "Improving the ionic conductivity in nanostructured membranes based on poly(vinyl alcohol) (PVA), chitosan (CS), phosphoric acid (H 3 PO 4 ), and niobium oxide (Nb 2 O 5 )",
+    "authors": "D. A. Quintana 1   &  E. Baca 1,2   &  E. Mosquera 1,2   &  R. A. Vargas 1,2   &  J. E. Diosa 1,2",
+    "year": 2018
+  },
+  "system_identity": {
+    "base_material": "poly(vinyl alcohol) (PVA) and chitosan (CS)",
+    "dopant": "phosphoric acid (H3PO4) and niobium oxide (Nb2O5)",
+    "form_factor": "nanostructured membranes",
+    "other": ""
+  },
+  "measurement_scope": {
+    "temp_range": "between 8 and 130 °C",
+    "freq_range": "",
+    "humidity": "",
+    "other_conditions": "dry atmosphere"
+  },
+  "mechanism_relevant_findings": [
+    "The enhancement of ionic conductivity is attributed to the introduction of Nb2O5 particles which create defects and free volume in the polymer matrix.",
+    "Blending of PVA with chitosan improves ionic conductivity due to better compatibility and intermolecular interactions.",
+    "The ionic transport mechanism is influenced by structural changes in the polymer matrix upon doping with Nb2O5 and H3PO4."
+  ],
+  "numerical_findings": [
+    {
+      "metric": "ionic conductivity",
+      "value": "4.67",
+      "unit": "S/cm",
+      "conditions": "at 130 °C for the sample with 6% Nb2O5"
+    },
+    {
+      "metric": "glass transition temperature",
+      "value": "8-18",
+      "unit": "°C",
+      "conditions": ""
+    },
+    {
+      "metric": "melting point",
+      "value": "160",
+      "unit": "°C",
+      "conditions": ""
+    }
+  ],
+  "eis_shape_findings": [],
+  "arrhenius_vtf_findings": [],
+  "limitations": [
+    "The study does not explore the long-term stability of the membranes under operational conditions."
+  ],
+  "relevance_judgement": {
+    "score": 0.8,
+    "reason": "The paper provides significant experimental data supporting the understanding of proton conduction mechanisms."
+  },
+  "supports_axes": {
+    "transport": "Grotthuss_hopping",
+    "phase_structure": "single_continuous_phase",
+    "temperature_dependence": "VTF"
+  },
+  "conflicts_axes": {
+    "transition_topology": "multi_transition"
+  },
+  "trace_spans": [
+    {
+      "page": null,
+      "section": "",
+      "text_snippet": "ORIGINAL PAPER #  Springer-Verlag GmbH Germany, part of Springer Nature 2018 Keywords  Polymer electrolytes  .  DC conductivities  .  Composites  .  Thermal properties"
+    },
+    {
+      "page": null,
+      "section": "Introduction",
+      "text_snippet": "The development of alternatives to current commercial fuel cell electrolytes should be based on materials capable of effectively conducting protons, manufactured by using low-cost raw ma- terials [ 1 "
+    },
+    {
+      "page": null,
+      "section": "Experimental",
+      "text_snippet": "We used hydrolyzed (98 – 99%) PVA (Sigma-Aldrich) with molecular weight between 31,000 and 50,000 chitosan (from shrimp shells  ≥ 75% (deacetylated), Sigma-Aldrich), phos- phoric acid (H 3 PO 4 , Sigm"
+    },
+    {
+      "page": null,
+      "section": "Results and discussion",
+      "text_snippet": "Figure  1  shows the TGA curves of the membranes at a heating rate of 10 °C/min with a dry N 2  flux of freshly prepared sam- ples. For PVA, it starts with a dehydration process up to ap- proximately "
+    },
+    {
+      "page": null,
+      "section": ") W m ( w ol F t a e H",
+      "text_snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "n_independent_segments": 118,
+  "n_unique_samples": 40,
+  "r2": 0.9731908967849188,
+  "slope": 50.64363707700565,
+  "intercept": -7.820666560349994,
+  "slope_ci": [
+    48.750720212918466,
+    52.564232013047004
+  ],
+  "E_MN_eV": 0.019745817198702782,
+  "strength": "moderate",
+  "limitations": [
+    "Derived from segment-level Arrhenius fits; requires independent replication before promotion."
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "paper_id": "openalex_w3180677679",
+  "stage_target": "materials",
+  "bibliography": {
+    "title": "REVIEW ARTICLE OPEN Removal of heavy metal ions from wastewater: a comprehensive and critical review",
+    "authors": "PHOTOCATALYTIC-BASED SEPARATION The photocatalytic process was reported as a simple process for wastewater treatment that uses light and semiconductors, such as",
+    "year": 2021
+  },
+  "system_identity": {
+    "base_material": "",
+    "dopant": "",
+    "form_factor": "",
+    "other": ""
+  },
+  "measurement_scope": {
+    "temp_range": "",
+    "freq_range": "",
+    "humidity": "",
+    "other_conditions": ""
+  },
+  "mechanism_relevant_findings": [
+    "REVIEW ARTICLE OPEN Removal of heavy metal ions from wastewater: a comprehensive and critical review\n\nNaef A.",
+    "Different reported methods were devoted to heavy metal ions removal from various wastewater sources.",
+    "This paper comprehensively and critically reviews and discusses these methods in terms of used agents/adsorbents, removal ef fi ciency, operating conditions, and the pros and cons of each method.",
+    "Besides, the key  fi ndings of the previous studies reported in the literature are summarized.",
+    "Even though the chemical and membrane methods are practical, the large-volume sludge formation and post-treatment requirements are vital issues that need to be solved for chemical techniques.",
+    "However, pre-treatment and periodic cleaning of membranes incur additional costs.",
+    "Electrical-based methods were also reported to be ef fi cient; however, industrial-scale separation is needed in addition to tackling the issue of large- volume sludge formation.",
+    "Although these heavy metals can be detected in traces; however, they are still hazardous.",
+    "Therefore, the\n\npresent review comprehensively and critically discusses the available technologies to expel heavy metal ions from wastewater ef fi ciently.",
+    "The methods discussed in this review are classi fi ed into adsorption-, membrane-, chemical-, electric-, and photocatalytic- based treatments."
+  ],
+  "numerical_findings": [],
+  "eis_shape_findings": [],
+  "arrhenius_vtf_findings": [],
+  "limitations": [],
+  "relevance_judgement": {
+    "score": 0.0,
+    "reason": "The paper does not address proton transport mechanisms, EIS analysis, or related material properties."
+  },
+  "supports_axes": {},
+  "conflicts_axes": {},
+  "trace_spans": [
+    {
+      "page": null,
+      "section": "",
+      "text_snippet": "Removal of heavy metal ions from wastewater is of prime importance for a clean environment and human health. Different reported methods were devoted to heavy metal ions removal from various wastewater"
+    },
+    {
+      "page": null,
+      "section": "Method Pros Cons",
+      "text_snippet": "Electro-deposition - High ability to recover valuable materials. - Chemicals are not added. - Selective process. - Low operational cost. - Water disinfection. - High sensitivity of the treatment ef fi"
+    },
+    {
+      "page": null,
+      "section": "REFERENCES",
+      "text_snippet": "1. El-Sherif, I. Y., Tolani, S., Ofosu, K., Mohamed, O. A. & Wanekaya, A. K. Polymeric nano fi bers for the removal of Cr(III) from tannery waste water.  J. Environ. Manag. 129 , 410 – 413 (2013). 2. "
+    },
+    {
+      "page": null,
+      "section": "Supplementary information  The online version contains supplementary material available at  https://doi.org/10.1038/s41545-021-00127-0 .",
+      "text_snippet": "Correspondence  and requests for materials should be addressed to Naef A. A. Qasem. Reprints and permission information  is available at  http://www.nature.com/ reprints Publisher ’ s note  Springer N"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "audit_ok": true,
+  "valid_literature_card_ids": [
+    "MAT-biomass-A",
+    "MAT-pva",
+    "MAT-sep",
+    "MAT1",
+    "MAT2",
+    "MAT3"
+  ],
+  "instances_with_bad_paper_ids": [],
+  "instances_missing_novelty_rationale": [],
+  "n_instances": 5,
+  "generation_mode": "deterministic_from_d4"
+}

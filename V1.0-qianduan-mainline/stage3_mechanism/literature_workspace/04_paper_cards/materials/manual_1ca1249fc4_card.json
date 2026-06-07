@@ -1,0 +1,96 @@
+{
+  "paper_id": "manual_1ca1249fc4",
+  "stage_target": "materials",
+  "bibliography": {
+    "title": "Choline chloride-based deep eutectic solvents as electrolytes for wide  temperature range supercapacitors",
+    "authors": "Weirong Wang   a , * , Michael M. Sabugaa   b , Subhash Chandra   c , Yuli Panca Asmara   d , Baraa  Abd Alreda   e , Nestor Ulloa   f , Yasser Elmasry   g , Mustafa M. Kadhim   h , *",
+    "year": 0
+  },
+  "system_identity": {
+    "base_material": "choline chloride",
+    "dopant": "glycerol, propionic acid",
+    "form_factor": "deep eutectic solvent",
+    "other": ""
+  },
+  "measurement_scope": {
+    "temp_range": "room temperature to 373 K",
+    "freq_range": "",
+    "humidity": "",
+    "other_conditions": "maximum voltage up to 2.5 V"
+  },
+  "mechanism_relevant_findings": [
+    "The electrical conductivity of the deep eutectic solvents increases with rising temperature."
+  ],
+  "numerical_findings": [
+    {
+      "metric": "specific capacitance",
+      "value": 198,
+      "unit": "F g−1",
+      "conditions": "at 373 K with DES ChCl/PA"
+    },
+    {
+      "metric": "energy density",
+      "value": 110,
+      "unit": "Wh kg−1",
+      "conditions": "at 373 K with DES ChCl/PA"
+    },
+    {
+      "metric": "specific capacitance",
+      "value": 145,
+      "unit": "F g−1",
+      "conditions": "at room temperature with DES ChCl/PA"
+    },
+    {
+      "metric": "energy density",
+      "value": 16.3,
+      "unit": "Wh kg−1",
+      "conditions": "at room temperature with DES ChCl/PA"
+    },
+    {
+      "metric": "capacity retention",
+      "value": 93,
+      "unit": "%",
+      "conditions": "up to 5000 cycles at 373 K"
+    }
+  ],
+  "eis_shape_findings": [],
+  "arrhenius_vtf_findings": [],
+  "limitations": [],
+  "relevance_judgement": {
+    "score": 0.8,
+    "reason": "The study provides significant insights into the conductivity and capacitance of choline chloride-based deep eutectic solvents."
+  },
+  "supports_axes": {
+    "transport": "ionic_liquid_like",
+    "phase_structure": "single_continuous_phase",
+    "temperature_dependence": "pure_Arrhenius"
+  },
+  "conflicts_axes": {},
+  "trace_spans": [
+    {
+      "page": null,
+      "section": "",
+      "text_snippet": "Journal of Energy Storage 71 (2023) 108141 Available online 27 June 2023 2352-152X/© 2023 Elsevier Ltd. All rights reserved. Research Papers a  Entrepreneurship and Employment Guidance and Service Cen"
+    },
+    {
+      "page": null,
+      "section": "1. Introduction",
+      "text_snippet": "Fuel cells, batteries, and supercapacitors all require efficient storage  of clean energy (SCs). Compared to renewable energy sources like wind  and solar, SCs are crucial in providing energy continuo"
+    },
+    {
+      "page": null,
+      "section": "Journal of Energy Storage",
+      "text_snippet": "journal homepage:  www.elsevier.com/locate/est https://doi.org/10.1016/j.est.2023.108141  Received 15 March 2023; Received in revised form 2 June 2023; Accepted 18 June 2023 Journal of Energy Storage "
+    },
+    {
+      "page": null,
+      "section": "2. Experimental",
+      "text_snippet": "2.1. Materials Deep eutectic solvents (DESs) were prepared using only the starting  materials choline chloride salt, glycerol and propionic acid that were  purchased from Merck and used without furthe"
+    },
+    {
+      "page": null,
+      "section": "3. Results and discussion",
+      "text_snippet": "3.1. Thermophysical properties of prepared DESs Depending on the pre-treatment of the raw materials, the DESs may  contain traces of water. In this study, the used chemicals were not pu­ rified or dri"
+    }
+  ]
+}

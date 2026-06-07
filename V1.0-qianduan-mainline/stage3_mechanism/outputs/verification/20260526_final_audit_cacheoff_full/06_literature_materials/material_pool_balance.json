@@ -1,0 +1,29 @@
+{
+  "n_cards": 23,
+  "n_component_descriptor_claims": 37,
+  "card_ids": [
+    "manual_1157b11126",
+    "manual_1190463586",
+    "manual_1ca1249fc4",
+    "manual_26f0dcfc01",
+    "manual_3d7d6d5d7b",
+    "manual_42051140ac",
+    "manual_529c072730",
+    "manual_58ec9a6c2e",
+    "manual_6138017199",
+    "manual_7f4f0a8392",
+    "manual_89488460eb",
+    "manual_8d58a81c9e_1",
+    "manual_8d58a81c9e",
+    "manual_a16330d0f5",
+    "manual_a624da98ce",
+    "manual_b9c3d1711d",
+    "manual_c0c1101384",
+    "manual_c8dafb5973",
+    "manual_e2d7aef1a8",
+    "manual_f56a2b0129",
+    "manual_f5f9ab95ca",
+    "manual_f7196a2c3b",
+    "openalex_w1608495915"
+  ]
+}

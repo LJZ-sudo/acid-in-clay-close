@@ -1,0 +1,2034 @@
+{
+  "metadata": {
+    "generated_at": "2026-06-07T15:43:01.755830",
+    "stage": "stage2_statistics",
+    "version": "1.0",
+    "input_file": "stage2_statistics\\data\\s8_input.csv",
+    "data_profile": {
+      "profiler_name": "DataProfiler",
+      "data_scale": {
+        "total_rows": 1081,
+        "total_columns": 34,
+        "column_names": [
+          "sample_id",
+          "scan_dir",
+          "excel_id",
+          "R",
+          "N",
+          "L_cm",
+          "S_cm2",
+          "T",
+          "T_C",
+          "sigma",
+          "R2",
+          "rb_ohm",
+          "Ea",
+          "sigma0",
+          "ln_sigma0",
+          "T_break",
+          "T_arc",
+          "data_valid",
+          "R_high_freq_ohm",
+          "R_low_freq_ohm",
+          "delta_R_ohm",
+          "R_ratio",
+          "arc_diameter_ohm",
+          "median_zimag_ohm",
+          "arc_visible",
+          "semicircle_visible",
+          "semicircle_quality",
+          "characteristic_frequency",
+          "peak_neg_zimag_ohm",
+          "nyquist_peak_ratio",
+          "nyquist_rising_ratio",
+          "nyquist_falling_ratio",
+          "inv_T_1000",
+          "ln_sigma"
+        ],
+        "R_unique_count": 20,
+        "R_min": 0.0,
+        "R_max": 1.0408163265306123,
+        "R_range": 1.0408163265306123,
+        "R_column": "R",
+        "N_unique_count": 25,
+        "N_min": 1.182,
+        "N_max": 7.005600000000001,
+        "N_range": 5.823600000000001,
+        "N_column": "N",
+        "R_available": true,
+        "N_available": true
+      },
+      "temperature_coverage": {
+        "has_temperature": true,
+        "is_wide_temperature_range": true,
+        "temperature_column": "T",
+        "T_min": 182.15,
+        "T_max": 299.15,
+        "T_range": 116.99999999999997,
+        "T_mean": 252.07136910268272,
+        "T_std": 30.13817433418777,
+        "n_temperature_points": 1081,
+        "has_high_T": true,
+        "high_T_count": 365,
+        "has_low_T": true,
+        "low_T_count": 279,
+        "has_mid_T": true,
+        "mid_T_count": 437
+      },
+      "feature_completeness": {
+        "has_eis_features": true,
+        "eis_feature_columns": [
+          "arc_visible",
+          "semicircle_visible",
+          "characteristic_frequency",
+          "arc_diameter_ohm",
+          "semicircle_quality",
+          "peak_neg_zimag_ohm",
+          "nyquist_peak_ratio",
+          "nyquist_rising_ratio",
+          "nyquist_falling_ratio",
+          "R_high_freq_ohm",
+          "R_low_freq_ohm",
+          "delta_R_ohm",
+          "R_ratio",
+          "rb_ohm"
+        ],
+        "has_activation_energy": true,
+        "has_conductivity": true,
+        "has_composition": true,
+        "n_eis_features": 14,
+        "activation_energy_column": "Ea",
+        "Ea_min": -3.128772248255314,
+        "Ea_max": 1.53692138704735,
+        "Ea_mean": 0.3881806946121267,
+        "n_Ea_points": 1081,
+        "conductivity_column": "sigma",
+        "n_conductivity_points": 1081,
+        "completeness_score": 100
+      },
+      "quality_assessment": {
+        "has_r2": true,
+        "r2_statistics": {
+          "n_points": 1081,
+          "mean": 0.9309051919413847,
+          "std": 0.03649497375197768,
+          "min": 0.6440800206386441,
+          "max": 0.95,
+          "median": 0.95,
+          "q25": 0.8999715327093193,
+          "q75": 0.95
+        },
+        "r2_column": "R2",
+        "high_quality_count": 745,
+        "high_quality_ratio": 0.6891766882516188,
+        "quality_grade": "good",
+        "low_quality_count": 25,
+        "low_quality_ratio": 0.02312673450508788
+      },
+      "warnings": [],
+      "recommendations": [
+        "数据质量良好，可以进行全面的证据挖掘分析"
+      ]
+    },
+    "execution_plan": {
+      "specialists": {
+        "sanity_checker": true,
+        "trend_analyzer": true,
+        "model_competitor": true,
+        "morphology_expert": true,
+        "evidence_synthesizer": true
+      },
+      "plan_summary": "数据包含 1081 个样本，宽温区数据（跨度 117.0 K），包含 14 个 EIS 形貌特征，数据质量为 good，将全量启动所有 5 个分析专家。",
+      "reasons": {
+        "sanity_checker": "数据清洗是所有分析的基础，必须执行",
+        "trend_analyzer": "组分敏感性分析是 S8 材料的核心研究目标，必须执行",
+        "model_competitor": "数据满足宽温区条件（117.0 K > 50.0 K），且高质量数据充足（68.9%），适合进行模型竞争分析",
+        "morphology_expert": "检测到 14 个 EIS 形貌特征，可以进行 EIS-Arrhenius 对齐分析",
+        "evidence_synthesizer": "证据合成是生成高级 Question 的必需步骤，必须执行"
+      },
+      "expected_evidences": {
+        "sanity_checker": [
+          "data_quality",
+          "outlier_detection"
+        ],
+        "trend_analyzer": [
+          "composition_sensitivity",
+          "critical_breakpoint",
+          "nonlinear_trend"
+        ],
+        "model_competitor": [
+          "meyer_neldel",
+          "vtf_preferred",
+          "arrhenius_preferred"
+        ],
+        "morphology_expert": [
+          "eis_arrhenius_alignment",
+          "phase_transition",
+          "structural_reorganization"
+        ],
+        "evidence_synthesizer": [
+          "mechanistic_question",
+          "cross_specialist_synthesis"
+        ]
+      },
+      "total_specialists": 5,
+      "enabled_specialists": 5,
+      "disabled_specialists": 0
+    },
+    "specialist_count": 3,
+    "original_data_rows": 1081,
+    "cleaned_data_rows": 1031,
+    "visualization_paths": {
+      "ea_vs_R_trend": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage2_statistics\\exports\\visualizations\\ea_vs_R_trend.png",
+      "meyer_neldel": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage2_statistics\\exports\\visualizations\\meyer_neldel.png",
+      "eis_alignment": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage2_statistics\\exports\\visualizations\\eis_alignment.png"
+    }
+  },
+  "sample_ids": [
+    "S8-2-1-1",
+    "S8-2-1-2",
+    "S8-2-2-1",
+    "S8-2-2-2",
+    "S8-3-1-1",
+    "S8-3-1-2",
+    "S8-3-10-1",
+    "S8-3-11-1",
+    "S8-3-11-2",
+    "S8-3-2-1",
+    "S8-3-2-2",
+    "S8-3-2-3",
+    "S8-3-2-4",
+    "S8-3-2-5",
+    "S8-3-20-1-1",
+    "S8-3-21-1-1",
+    "S8-3-22-1-1",
+    "S8-3-23-2-1",
+    "S8-3-25-1-1",
+    "S8-3-27-1-1",
+    "S8-3-28-1-1",
+    "S8-3-29-1-1",
+    "S8-3-3-1",
+    "S8-3-31-1-1",
+    "S8-3-32-1-1",
+    "S8-3-33-1-1",
+    "S8-3-35-1-1",
+    "S8-3-37-1-1",
+    "S8-3-38-1-1",
+    "S8-3-4-1",
+    "S8-3-5-1",
+    "S8-3-6-1",
+    "S8-3-6-2",
+    "S8-3-6-3",
+    "S8-3-7-1",
+    "S8-3-7-2",
+    "S8-3-8-2",
+    "S8-3-9-2",
+    "S8-3-9-3",
+    "S8-3-9-4"
+  ],
+  "evidence_units": [
+    {
+      "claim_level": "observation",
+      "theme": "transport_dynamics",
+      "statement": "数据清洗：从 1081 个样本中识别出 50 个低质量数据点 (4.6%)。R² < 0.8 的有 23 个，Ea 超出合理范围 [0.1, 2.0] eV 的有 27 个。",
+      "support_metrics": {
+        "original_count": 1081,
+        "filtered_count": 50,
+        "filter_ratio": 0.04625346901017576,
+        "low_r2_count": 23,
+        "invalid_ea_count": 27,
+        "invalid_sigma_count": 0,
+        "nan_count": 0,
+        "r2_threshold": 0.8,
+        "ea_range": [
+          0.1,
+          2.0
+        ],
+        "sigma_range": [
+          1e-10,
+          100.0
+        ]
+      },
+      "confidence": 1.0,
+      "confidence_basis": {
+        "rule_id": "sanity_filter_ratio",
+        "formula": "1.0 if filter_ratio < 0.3 else 0.8",
+        "inputs": {
+          "filter_ratio": 0.04625346901017576
+        },
+        "interpretation": "数据清洗证据权重；不是严格统计置信概率"
+      },
+      "tags": [
+        "data_quality",
+        "sanity_check"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "composition_sensitivity",
+      "statement": "在全温度范围区间，活化能 Ea 在 R = 0.00 附近发生显著突降，从 0.259 eV 突降至 0.108 eV，相对变化达 58.5%。这提示可能存在渗流类连通性转变，但仍需独立结构或重复实验验证。",
+      "support_metrics": {
+        "composition_variable": "R",
+        "temperature_zone": "all_T",
+        "critical_value": 0.0,
+        "critical_value_unit": "composition",
+        "R_critical": 0.0,
+        "comp_value": 0.0,
+        "ea_before": 0.2594193069521647,
+        "ea_after": 0.1077718272914408,
+        "jump_magnitude": -0.1516474796607239,
+        "relative_jump": -0.5845651252498595,
+        "direction": "decrease"
+      },
+      "confidence": 0.9,
+      "confidence_basis": {
+        "rule_id": "critical_jump_or_inflection",
+        "formula": "jump: min(0.90, 0.7 + abs(relative_jump) * 0.5); inflection: 0.75",
+        "inputs": {
+          "relative_jump": -0.5845651252498595,
+          "critical_value": 0.0,
+          "composition_variable": "R"
+        },
+        "interpretation": "组分阈值证据权重；渗流仅作为假说线索"
+      },
+      "tags": [
+        "critical_breakpoint",
+        "percolation_hint",
+        "R_critical"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "composition_sensitivity",
+      "statement": "在全温度范围区间，活化能 Ea 在 R = 0.06 附近发生显著跃升，从 0.427 eV 跃升至 0.813 eV，相对变化达 90.5%。这提示可能存在渗流类连通性转变，但仍需独立结构或重复实验验证。",
+      "support_metrics": {
+        "composition_variable": "R",
+        "temperature_zone": "all_T",
+        "critical_value": 0.0641214250069669,
+        "critical_value_unit": "composition",
+        "R_critical": 0.0641214250069669,
+        "comp_value": 0.0641214250069669,
+        "ea_before": 0.4265958426954862,
+        "ea_after": 0.8126481907800511,
+        "jump_magnitude": 0.3860523480845649,
+        "relative_jump": 0.9049604085338867,
+        "direction": "increase"
+      },
+      "confidence": 0.9,
+      "confidence_basis": {
+        "rule_id": "critical_jump_or_inflection",
+        "formula": "jump: min(0.90, 0.7 + abs(relative_jump) * 0.5); inflection: 0.75",
+        "inputs": {
+          "relative_jump": 0.9049604085338867,
+          "critical_value": 0.0641214250069669,
+          "composition_variable": "R"
+        },
+        "interpretation": "组分阈值证据权重；渗流仅作为假说线索"
+      },
+      "tags": [
+        "critical_breakpoint",
+        "percolation_hint",
+        "R_critical"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "composition_sensitivity",
+      "statement": "在全温度范围区间，活化能 Ea 在 R = 0.15 附近发生显著突降，从 0.813 eV 突降至 0.337 eV，相对变化达 58.5%。这提示可能存在渗流类连通性转变，但仍需独立结构或重复实验验证。",
+      "support_metrics": {
+        "composition_variable": "R",
+        "temperature_zone": "all_T",
+        "critical_value": 0.1521902146952619,
+        "critical_value_unit": "composition",
+        "R_critical": 0.1521902146952619,
+        "comp_value": 0.1521902146952619,
+        "ea_before": 0.8126481907800511,
+        "ea_after": 0.3370883919416964,
+        "jump_magnitude": -0.47555979883835475,
+        "relative_jump": -0.5851976343931445,
+        "direction": "decrease"
+      },
+      "confidence": 0.9,
+      "confidence_basis": {
+        "rule_id": "critical_jump_or_inflection",
+        "formula": "jump: min(0.90, 0.7 + abs(relative_jump) * 0.5); inflection: 0.75",
+        "inputs": {
+          "relative_jump": -0.5851976343931445,
+          "critical_value": 0.1521902146952619,
+          "composition_variable": "R"
+        },
+        "interpretation": "组分阈值证据权重；渗流仅作为假说线索"
+      },
+      "tags": [
+        "critical_breakpoint",
+        "percolation_hint",
+        "R_critical"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "composition_sensitivity",
+      "statement": "在全温度范围区间，活化能 Ea 在 R = 0.17 附近发生显著突降，从 0.970 eV 突降至 0.461 eV，相对变化达 52.5%。这提示可能存在渗流类连通性转变，但仍需独立结构或重复实验验证。",
+      "support_metrics": {
+        "composition_variable": "R",
+        "temperature_zone": "all_T",
+        "critical_value": 0.1712623980890066,
+        "critical_value_unit": "composition",
+        "R_critical": 0.1712623980890066,
+        "comp_value": 0.1712623980890066,
+        "ea_before": 0.9701719233883028,
+        "ea_after": 0.4606196669044425,
+        "jump_magnitude": -0.5095522564838604,
+        "relative_jump": -0.5252185145744694,
+        "direction": "decrease"
+      },
+      "confidence": 0.9,
+      "confidence_basis": {
+        "rule_id": "critical_jump_or_inflection",
+        "formula": "jump: min(0.90, 0.7 + abs(relative_jump) * 0.5); inflection: 0.75",
+        "inputs": {
+          "relative_jump": -0.5252185145744694,
+          "critical_value": 0.1712623980890066,
+          "composition_variable": "R"
+        },
+        "interpretation": "组分阈值证据权重；渗流仅作为假说线索"
+      },
+      "tags": [
+        "critical_breakpoint",
+        "percolation_hint",
+        "R_critical"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "composition_sensitivity",
+      "statement": "在全温度范围区间，活化能 Ea 在 R = 0.20 附近发生显著跃升，从 0.221 eV 跃升至 0.400 eV，相对变化达 80.7%。这提示可能存在渗流类连通性转变，但仍需独立结构或重复实验验证。",
+      "support_metrics": {
+        "composition_variable": "R",
+        "temperature_zone": "all_T",
+        "critical_value": 0.2040451455952585,
+        "critical_value_unit": "composition",
+        "R_critical": 0.2040451455952585,
+        "comp_value": 0.2040451455952585,
+        "ea_before": 0.2211739913976937,
+        "ea_after": 0.3996501065762149,
+        "jump_magnitude": 0.17847611517852122,
+        "relative_jump": 0.8069489276322853,
+        "direction": "increase"
+      },
+      "confidence": 0.9,
+      "confidence_basis": {
+        "rule_id": "critical_jump_or_inflection",
+        "formula": "jump: min(0.90, 0.7 + abs(relative_jump) * 0.5); inflection: 0.75",
+        "inputs": {
+          "relative_jump": 0.8069489276322853,
+          "critical_value": 0.2040451455952585,
+          "composition_variable": "R"
+        },
+        "interpretation": "组分阈值证据权重；渗流仅作为假说线索"
+      },
+      "tags": [
+        "critical_breakpoint",
+        "percolation_hint",
+        "R_critical"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "composition_sensitivity",
+      "statement": "在全温度范围区间，活化能 Ea 在 R = 0.29 附近发生显著跃升，从 0.264 eV 跃升至 0.439 eV，相对变化达 66.3%。这提示可能存在渗流类连通性转变，但仍需独立结构或重复实验验证。",
+      "support_metrics": {
+        "composition_variable": "R",
+        "temperature_zone": "all_T",
+        "critical_value": 0.2941272648899327,
+        "critical_value_unit": "composition",
+        "R_critical": 0.2941272648899327,
+        "comp_value": 0.2941272648899327,
+        "ea_before": 0.2638724445133263,
+        "ea_after": 0.4388743090487451,
+        "jump_magnitude": 0.17500186453541877,
+        "relative_jump": 0.663206288395076,
+        "direction": "increase"
+      },
+      "confidence": 0.9,
+      "confidence_basis": {
+        "rule_id": "critical_jump_or_inflection",
+        "formula": "jump: min(0.90, 0.7 + abs(relative_jump) * 0.5); inflection: 0.75",
+        "inputs": {
+          "relative_jump": 0.663206288395076,
+          "critical_value": 0.2941272648899327,
+          "composition_variable": "R"
+        },
+        "interpretation": "组分阈值证据权重；渗流仅作为假说线索"
+      },
+      "tags": [
+        "critical_breakpoint",
+        "percolation_hint",
+        "R_critical"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "composition_sensitivity",
+      "statement": "在全温度范围区间，活化能 Ea 在 R = 0.30 附近发生显著跃升，从 0.141 eV 跃升至 0.352 eV，相对变化达 150.7%。这提示可能存在渗流类连通性转变，但仍需独立结构或重复实验验证。",
+      "support_metrics": {
+        "composition_variable": "R",
+        "temperature_zone": "all_T",
+        "critical_value": 0.2996777658431793,
+        "critical_value_unit": "composition",
+        "R_critical": 0.2996777658431793,
+        "comp_value": 0.2996777658431793,
+        "ea_before": 0.1405493821032535,
+        "ea_after": 0.3523678426352971,
+        "jump_magnitude": 0.2118184605320436,
+        "relative_jump": 1.5070750035488085,
+        "direction": "increase"
+      },
+      "confidence": 0.9,
+      "confidence_basis": {
+        "rule_id": "critical_jump_or_inflection",
+        "formula": "jump: min(0.90, 0.7 + abs(relative_jump) * 0.5); inflection: 0.75",
+        "inputs": {
+          "relative_jump": 1.5070750035488085,
+          "critical_value": 0.2996777658431793,
+          "composition_variable": "R"
+        },
+        "interpretation": "组分阈值证据权重；渗流仅作为假说线索"
+      },
+      "tags": [
+        "critical_breakpoint",
+        "percolation_hint",
+        "R_critical"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "composition_sensitivity",
+      "statement": "在全温度范围区间，活化能 Ea 在 R = 0.31 附近发生显著突降，从 0.330 eV 突降至 0.152 eV，相对变化达 53.9%。这提示可能存在渗流类连通性转变，但仍需独立结构或重复实验验证。",
+      "support_metrics": {
+        "composition_variable": "R",
+        "temperature_zone": "all_T",
+        "critical_value": 0.3079344114331621,
+        "critical_value_unit": "composition",
+        "R_critical": 0.3079344114331621,
+        "comp_value": 0.3079344114331621,
+        "ea_before": 0.3303865224696488,
+        "ea_after": 0.1523179360200124,
+        "jump_magnitude": -0.17806858644963638,
+        "relative_jump": -0.5389704916488983,
+        "direction": "decrease"
+      },
+      "confidence": 0.9,
+      "confidence_basis": {
+        "rule_id": "critical_jump_or_inflection",
+        "formula": "jump: min(0.90, 0.7 + abs(relative_jump) * 0.5); inflection: 0.75",
+        "inputs": {
+          "relative_jump": -0.5389704916488983,
+          "critical_value": 0.3079344114331621,
+          "composition_variable": "R"
+        },
+        "interpretation": "组分阈值证据权重；渗流仅作为假说线索"
+      },
+      "tags": [
+        "critical_breakpoint",
+        "percolation_hint",
+        "R_critical"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "composition_sensitivity",
+      "statement": "在全温度范围区间，活化能 Ea 在 R = 0.33 附近发生显著突降，从 0.884 eV 突降至 0.151 eV，相对变化达 82.9%。这提示可能存在渗流类连通性转变，但仍需独立结构或重复实验验证。",
+      "support_metrics": {
+        "composition_variable": "R",
+        "temperature_zone": "all_T",
+        "critical_value": 0.3340714749983821,
+        "critical_value_unit": "composition",
+        "R_critical": 0.3340714749983821,
+        "comp_value": 0.3340714749983821,
+        "ea_before": 0.8836397520175577,
+        "ea_after": 0.150902566600286,
+        "jump_magnitude": -0.7327371854172717,
+        "relative_jump": -0.8292261453202622,
+        "direction": "decrease"
+      },
+      "confidence": 0.9,
+      "confidence_basis": {
+        "rule_id": "critical_jump_or_inflection",
+        "formula": "jump: min(0.90, 0.7 + abs(relative_jump) * 0.5); inflection: 0.75",
+        "inputs": {
+          "relative_jump": -0.8292261453202622,
+          "critical_value": 0.3340714749983821,
+          "composition_variable": "R"
+        },
+        "interpretation": "组分阈值证据权重；渗流仅作为假说线索"
+      },
+      "tags": [
+        "critical_breakpoint",
+        "percolation_hint",
+        "R_critical"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "composition_sensitivity",
+      "statement": "在全温度范围区间，活化能 Ea 在 R = 0.36 附近发生显著突降，从 0.475 eV 突降至 0.149 eV，相对变化达 68.7%。这提示可能存在渗流类连通性转变，但仍需独立结构或重复实验验证。",
+      "support_metrics": {
+        "composition_variable": "R",
+        "temperature_zone": "all_T",
+        "critical_value": 0.3584084621201487,
+        "critical_value_unit": "composition",
+        "R_critical": 0.3584084621201487,
+        "comp_value": 0.3584084621201487,
+        "ea_before": 0.4747836698876585,
+        "ea_after": 0.1486385563162101,
+        "jump_magnitude": -0.32614511357144843,
+        "relative_jump": -0.6869341433933893,
+        "direction": "decrease"
+      },
+      "confidence": 0.9,
+      "confidence_basis": {
+        "rule_id": "critical_jump_or_inflection",
+        "formula": "jump: min(0.90, 0.7 + abs(relative_jump) * 0.5); inflection: 0.75",
+        "inputs": {
+          "relative_jump": -0.6869341433933893,
+          "critical_value": 0.3584084621201487,
+          "composition_variable": "R"
+        },
+        "interpretation": "组分阈值证据权重；渗流仅作为假说线索"
+      },
+      "tags": [
+        "critical_breakpoint",
+        "percolation_hint",
+        "R_critical"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "composition_sensitivity",
+      "statement": "在全温度范围区间，活化能 Ea 在 R = 0.38 附近发生显著跃升，从 0.104 eV 跃升至 0.427 eV，相对变化达 310.9%。这提示可能存在渗流类连通性转变，但仍需独立结构或重复实验验证。",
+      "support_metrics": {
+        "composition_variable": "R",
+        "temperature_zone": "all_T",
+        "critical_value": 0.3797497505181546,
+        "critical_value_unit": "composition",
+        "R_critical": 0.3797497505181546,
+        "comp_value": 0.3797497505181546,
+        "ea_before": 0.1039300693486881,
+        "ea_after": 0.4270181796682048,
+        "jump_magnitude": 0.32308811031951673,
+        "relative_jump": 3.108706771238145,
+        "direction": "increase"
+      },
+      "confidence": 0.9,
+      "confidence_basis": {
+        "rule_id": "critical_jump_or_inflection",
+        "formula": "jump: min(0.90, 0.7 + abs(relative_jump) * 0.5); inflection: 0.75",
+        "inputs": {
+          "relative_jump": 3.108706771238145,
+          "critical_value": 0.3797497505181546,
+          "composition_variable": "R"
+        },
+        "interpretation": "组分阈值证据权重；渗流仅作为假说线索"
+      },
+      "tags": [
+        "critical_breakpoint",
+        "percolation_hint",
+        "R_critical"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "composition_sensitivity",
+      "statement": "在全温度范围区间，活化能 Ea 在 R = 0.39 附近发生显著跃升，从 0.146 eV 跃升至 0.389 eV，相对变化达 165.9%。这提示可能存在渗流类连通性转变，但仍需独立结构或重复实验验证。",
+      "support_metrics": {
+        "composition_variable": "R",
+        "temperature_zone": "all_T",
+        "critical_value": 0.3865699438677832,
+        "critical_value_unit": "composition",
+        "R_critical": 0.3865699438677832,
+        "comp_value": 0.3865699438677832,
+        "ea_before": 0.1463115960794947,
+        "ea_after": 0.3889742016393215,
+        "jump_magnitude": 0.2426626055598268,
+        "relative_jump": 1.6585329670519227,
+        "direction": "increase"
+      },
+      "confidence": 0.9,
+      "confidence_basis": {
+        "rule_id": "critical_jump_or_inflection",
+        "formula": "jump: min(0.90, 0.7 + abs(relative_jump) * 0.5); inflection: 0.75",
+        "inputs": {
+          "relative_jump": 1.6585329670519227,
+          "critical_value": 0.3865699438677832,
+          "composition_variable": "R"
+        },
+        "interpretation": "组分阈值证据权重；渗流仅作为假说线索"
+      },
+      "tags": [
+        "critical_breakpoint",
+        "percolation_hint",
+        "R_critical"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "composition_sensitivity",
+      "statement": "在全温度范围区间，活化能 Ea 在 R = 0.46 附近发生显著突降，从 0.441 eV 突降至 0.209 eV，相对变化达 52.5%。这提示可能存在渗流类连通性转变，但仍需独立结构或重复实验验证。",
+      "support_metrics": {
+        "composition_variable": "R",
+        "temperature_zone": "all_T",
+        "critical_value": 0.458644786705142,
+        "critical_value_unit": "composition",
+        "R_critical": 0.458644786705142,
+        "comp_value": 0.458644786705142,
+        "ea_before": 0.4406007165533412,
+        "ea_after": 0.2092259934958519,
+        "jump_magnitude": -0.23137472305748932,
+        "relative_jump": -0.5251346953483177,
+        "direction": "decrease"
+      },
+      "confidence": 0.9,
+      "confidence_basis": {
+        "rule_id": "critical_jump_or_inflection",
+        "formula": "jump: min(0.90, 0.7 + abs(relative_jump) * 0.5); inflection: 0.75",
+        "inputs": {
+          "relative_jump": -0.5251346953483177,
+          "critical_value": 0.458644786705142,
+          "composition_variable": "R"
+        },
+        "interpretation": "组分阈值证据权重；渗流仅作为假说线索"
+      },
+      "tags": [
+        "critical_breakpoint",
+        "percolation_hint",
+        "R_critical"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "composition_sensitivity",
+      "statement": "在全温度范围区间，活化能 Ea 在 R = 0.55 附近发生显著突降，从 0.209 eV 突降至 0.102 eV，相对变化达 51.0%。这提示可能存在渗流类连通性转变，但仍需独立结构或重复实验验证。",
+      "support_metrics": {
+        "composition_variable": "R",
+        "temperature_zone": "all_T",
+        "critical_value": 0.5511248511687172,
+        "critical_value_unit": "composition",
+        "R_critical": 0.5511248511687172,
+        "comp_value": 0.5511248511687172,
+        "ea_before": 0.2092259934958519,
+        "ea_after": 0.1024708018601766,
+        "jump_magnitude": -0.10675519163567529,
+        "relative_jump": -0.5102386651484191,
+        "direction": "decrease"
+      },
+      "confidence": 0.9,
+      "confidence_basis": {
+        "rule_id": "critical_jump_or_inflection",
+        "formula": "jump: min(0.90, 0.7 + abs(relative_jump) * 0.5); inflection: 0.75",
+        "inputs": {
+          "relative_jump": -0.5102386651484191,
+          "critical_value": 0.5511248511687172,
+          "composition_variable": "R"
+        },
+        "interpretation": "组分阈值证据权重；渗流仅作为假说线索"
+      },
+      "tags": [
+        "critical_breakpoint",
+        "percolation_hint",
+        "R_critical"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "composition_sensitivity",
+      "statement": "在全温度范围区间，活化能 Ea 在 R = 0.64 附近发生显著跃升，从 0.102 eV 跃升至 0.289 eV，相对变化达 182.0%。这提示可能存在渗流类连通性转变，但仍需独立结构或重复实验验证。",
+      "support_metrics": {
+        "composition_variable": "R",
+        "temperature_zone": "all_T",
+        "critical_value": 0.6367153877711904,
+        "critical_value_unit": "composition",
+        "R_critical": 0.6367153877711904,
+        "comp_value": 0.6367153877711904,
+        "ea_before": 0.1024708018601766,
+        "ea_after": 0.2890118358744416,
+        "jump_magnitude": 0.18654103401426503,
+        "relative_jump": 1.8204310947893616,
+        "direction": "increase"
+      },
+      "confidence": 0.9,
+      "confidence_basis": {
+        "rule_id": "critical_jump_or_inflection",
+        "formula": "jump: min(0.90, 0.7 + abs(relative_jump) * 0.5); inflection: 0.75",
+        "inputs": {
+          "relative_jump": 1.8204310947893616,
+          "critical_value": 0.6367153877711904,
+          "composition_variable": "R"
+        },
+        "interpretation": "组分阈值证据权重；渗流仅作为假说线索"
+      },
+      "tags": [
+        "critical_breakpoint",
+        "percolation_hint",
+        "R_critical"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "composition_sensitivity",
+      "statement": "在全温度范围区间，活化能 Ea 在 R = 1.04 附近发生显著突降，从 0.314 eV 突降至 0.107 eV，相对变化达 66.0%。这提示可能存在渗流类连通性转变，但仍需独立结构或重复实验验证。",
+      "support_metrics": {
+        "composition_variable": "R",
+        "temperature_zone": "all_T",
+        "critical_value": 1.040816326530612,
+        "critical_value_unit": "composition",
+        "R_critical": 1.040816326530612,
+        "comp_value": 1.040816326530612,
+        "ea_before": 0.3139665207649121,
+        "ea_after": 0.1067415330674011,
+        "jump_magnitude": -0.20722498769751102,
+        "relative_jump": -0.6600225628919025,
+        "direction": "decrease"
+      },
+      "confidence": 0.9,
+      "confidence_basis": {
+        "rule_id": "critical_jump_or_inflection",
+        "formula": "jump: min(0.90, 0.7 + abs(relative_jump) * 0.5); inflection: 0.75",
+        "inputs": {
+          "relative_jump": -0.6600225628919025,
+          "critical_value": 1.040816326530612,
+          "composition_variable": "R"
+        },
+        "interpretation": "组分阈值证据权重；渗流仅作为假说线索"
+      },
+      "tags": [
+        "critical_breakpoint",
+        "percolation_hint",
+        "R_critical"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "composition_sensitivity",
+      "statement": "在全温度范围区间，活化能 Ea 在 N = 1.18 附近发生显著跃升，从 0.165 eV 跃升至 0.216 eV，相对变化达 30.6%。这提示可能存在渗流类连通性转变，但仍需独立结构或重复实验验证。",
+      "support_metrics": {
+        "composition_variable": "N",
+        "temperature_zone": "all_T",
+        "critical_value": 1.182,
+        "critical_value_unit": "composition",
+        "N_critical": 1.182,
+        "comp_value": 1.182,
+        "ea_before": 0.1652308461995994,
+        "ea_after": 0.2158323371068144,
+        "jump_magnitude": 0.050601490907215,
+        "relative_jump": 0.30624724178975776,
+        "direction": "increase"
+      },
+      "confidence": 0.8531236208948788,
+      "confidence_basis": {
+        "rule_id": "critical_jump_or_inflection",
+        "formula": "jump: min(0.90, 0.7 + abs(relative_jump) * 0.5); inflection: 0.75",
+        "inputs": {
+          "relative_jump": 0.30624724178975776,
+          "critical_value": 1.182,
+          "composition_variable": "N"
+        },
+        "interpretation": "组分阈值证据权重；渗流仅作为假说线索"
+      },
+      "tags": [
+        "critical_breakpoint",
+        "percolation_hint",
+        "N_critical"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "composition_sensitivity",
+      "statement": "在全温度范围区间，活化能 Ea 在 N = 2.76 附近发生显著突降，从 0.216 eV 突降至 0.108 eV，相对变化达 50.1%。这提示可能存在渗流类连通性转变，但仍需独立结构或重复实验验证。",
+      "support_metrics": {
+        "composition_variable": "N",
+        "temperature_zone": "all_T",
+        "critical_value": 2.7580000000000005,
+        "critical_value_unit": "composition",
+        "N_critical": 2.7580000000000005,
+        "comp_value": 2.7580000000000005,
+        "ea_before": 0.2158323371068144,
+        "ea_after": 0.1077718272914408,
+        "jump_magnitude": -0.1080605098153736,
+        "relative_jump": -0.5006687656905414,
+        "direction": "decrease"
+      },
+      "confidence": 0.9,
+      "confidence_basis": {
+        "rule_id": "critical_jump_or_inflection",
+        "formula": "jump: min(0.90, 0.7 + abs(relative_jump) * 0.5); inflection: 0.75",
+        "inputs": {
+          "relative_jump": -0.5006687656905414,
+          "critical_value": 2.7580000000000005,
+          "composition_variable": "N"
+        },
+        "interpretation": "组分阈值证据权重；渗流仅作为假说线索"
+      },
+      "tags": [
+        "critical_breakpoint",
+        "percolation_hint",
+        "N_critical"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "composition_sensitivity",
+      "statement": "在全温度范围区间，活化能 Ea 在 N = 3.40 附近发生显著突降，从 0.762 eV 突降至 0.120 eV，相对变化达 84.3%。这提示可能存在渗流类连通性转变，但仍需独立结构或重复实验验证。",
+      "support_metrics": {
+        "composition_variable": "N",
+        "temperature_zone": "all_T",
+        "critical_value": 3.3986666666666667,
+        "critical_value_unit": "composition",
+        "N_critical": 3.3986666666666667,
+        "comp_value": 3.3986666666666667,
+        "ea_before": 0.7620804274742082,
+        "ea_after": 0.120013783433746,
+        "jump_magnitude": -0.6420666440404622,
+        "relative_jump": -0.8425182184096864,
+        "direction": "decrease"
+      },
+      "confidence": 0.9,
+      "confidence_basis": {
+        "rule_id": "critical_jump_or_inflection",
+        "formula": "jump: min(0.90, 0.7 + abs(relative_jump) * 0.5); inflection: 0.75",
+        "inputs": {
+          "relative_jump": -0.8425182184096864,
+          "critical_value": 3.3986666666666667,
+          "composition_variable": "N"
+        },
+        "interpretation": "组分阈值证据权重；渗流仅作为假说线索"
+      },
+      "tags": [
+        "critical_breakpoint",
+        "percolation_hint",
+        "N_critical"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "composition_sensitivity",
+      "statement": "在全温度范围区间，活化能 Ea 在 N = 3.65 附近发生显著跃升，从 0.120 eV 跃升至 0.813 eV，相对变化达 577.1%。这提示可能存在渗流类连通性转变，但仍需独立结构或重复实验验证。",
+      "support_metrics": {
+        "composition_variable": "N",
+        "temperature_zone": "all_T",
+        "critical_value": 3.645333333333333,
+        "critical_value_unit": "composition",
+        "N_critical": 3.645333333333333,
+        "comp_value": 3.645333333333333,
+        "ea_before": 0.120013783433746,
+        "ea_after": 0.8126481907800511,
+        "jump_magnitude": 0.6926344073463051,
+        "relative_jump": 5.771290492884729,
+        "direction": "increase"
+      },
+      "confidence": 0.9,
+      "confidence_basis": {
+        "rule_id": "critical_jump_or_inflection",
+        "formula": "jump: min(0.90, 0.7 + abs(relative_jump) * 0.5); inflection: 0.75",
+        "inputs": {
+          "relative_jump": 5.771290492884729,
+          "critical_value": 3.645333333333333,
+          "composition_variable": "N"
+        },
+        "interpretation": "组分阈值证据权重；渗流仅作为假说线索"
+      },
+      "tags": [
+        "critical_breakpoint",
+        "percolation_hint",
+        "N_critical"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "composition_sensitivity",
+      "statement": "在全温度范围区间，活化能 Ea 在 N = 3.88 附近发生显著突降，从 0.306 eV 突降至 0.179 eV，相对变化达 41.4%。这提示可能存在渗流类连通性转变，但仍需独立结构或重复实验验证。",
+      "support_metrics": {
+        "composition_variable": "N",
+        "temperature_zone": "all_T",
+        "critical_value": 3.881733333333334,
+        "critical_value_unit": "composition",
+        "N_critical": 3.881733333333334,
+        "comp_value": 3.881733333333334,
+        "ea_before": 0.3057543730054033,
+        "ea_after": 0.1790582740491368,
+        "jump_magnitude": -0.12669609895626652,
+        "relative_jump": -0.41437215667894156,
+        "direction": "decrease"
+      },
+      "confidence": 0.9,
+      "confidence_basis": {
+        "rule_id": "critical_jump_or_inflection",
+        "formula": "jump: min(0.90, 0.7 + abs(relative_jump) * 0.5); inflection: 0.75",
+        "inputs": {
+          "relative_jump": -0.41437215667894156,
+          "critical_value": 3.881733333333334,
+          "composition_variable": "N"
+        },
+        "interpretation": "组分阈值证据权重；渗流仅作为假说线索"
+      },
+      "tags": [
+        "critical_breakpoint",
+        "percolation_hint",
+        "N_critical"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "composition_sensitivity",
+      "statement": "在全温度范围区间，活化能 Ea 在 N = 3.89 附近发生显著跃升，从 0.179 eV 跃升至 0.352 eV，相对变化达 96.8%。这提示可能存在渗流类连通性转变，但仍需独立结构或重复实验验证。",
+      "support_metrics": {
+        "composition_variable": "N",
+        "temperature_zone": "all_T",
+        "critical_value": 3.892,
+        "critical_value_unit": "composition",
+        "N_critical": 3.892,
+        "comp_value": 3.892,
+        "ea_before": 0.1790582740491368,
+        "ea_after": 0.3523678426352971,
+        "jump_magnitude": 0.17330956858616028,
+        "relative_jump": 0.9678947789846396,
+        "direction": "increase"
+      },
+      "confidence": 0.9,
+      "confidence_basis": {
+        "rule_id": "critical_jump_or_inflection",
+        "formula": "jump: min(0.90, 0.7 + abs(relative_jump) * 0.5); inflection: 0.75",
+        "inputs": {
+          "relative_jump": 0.9678947789846396,
+          "critical_value": 3.892,
+          "composition_variable": "N"
+        },
+        "interpretation": "组分阈值证据权重；渗流仅作为假说线索"
+      },
+      "tags": [
+        "critical_breakpoint",
+        "percolation_hint",
+        "N_critical"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "composition_sensitivity",
+      "statement": "在全温度范围区间，活化能 Ea 在 N = 4.00 附近发生显著跃升，从 0.352 eV 跃升至 0.841 eV，相对变化达 138.8%。这提示可能存在渗流类连通性转变，但仍需独立结构或重复实验验证。",
+      "support_metrics": {
+        "composition_variable": "N",
+        "temperature_zone": "all_T",
+        "critical_value": 4.0,
+        "critical_value_unit": "composition",
+        "N_critical": 4.0,
+        "comp_value": 4.0,
+        "ea_before": 0.3523678426352971,
+        "ea_after": 0.841473760640406,
+        "jump_magnitude": 0.48910591800510894,
+        "relative_jump": 1.3880549210937407,
+        "direction": "increase"
+      },
+      "confidence": 0.9,
+      "confidence_basis": {
+        "rule_id": "critical_jump_or_inflection",
+        "formula": "jump: min(0.90, 0.7 + abs(relative_jump) * 0.5); inflection: 0.75",
+        "inputs": {
+          "relative_jump": 1.3880549210937407,
+          "critical_value": 4.0,
+          "composition_variable": "N"
+        },
+        "interpretation": "组分阈值证据权重；渗流仅作为假说线索"
+      },
+      "tags": [
+        "critical_breakpoint",
+        "percolation_hint",
+        "N_critical"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "composition_sensitivity",
+      "statement": "在全温度范围区间，活化能 Ea 在 N = 4.14 附近发生显著突降，从 0.841 eV 突降至 0.199 eV，相对变化达 76.4%。这提示可能存在渗流类连通性转变，但仍需独立结构或重复实验验证。",
+      "support_metrics": {
+        "composition_variable": "N",
+        "temperature_zone": "all_T",
+        "critical_value": 4.1386666666666665,
+        "critical_value_unit": "composition",
+        "N_critical": 4.1386666666666665,
+        "comp_value": 4.1386666666666665,
+        "ea_before": 0.841473760640406,
+        "ea_after": 0.1985135290390691,
+        "jump_magnitude": -0.642960231601337,
+        "relative_jump": -0.7640882718814788,
+        "direction": "decrease"
+      },
+      "confidence": 0.9,
+      "confidence_basis": {
+        "rule_id": "critical_jump_or_inflection",
+        "formula": "jump: min(0.90, 0.7 + abs(relative_jump) * 0.5); inflection: 0.75",
+        "inputs": {
+          "relative_jump": -0.7640882718814788,
+          "critical_value": 4.1386666666666665,
+          "composition_variable": "N"
+        },
+        "interpretation": "组分阈值证据权重；渗流仅作为假说线索"
+      },
+      "tags": [
+        "critical_breakpoint",
+        "percolation_hint",
+        "N_critical"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "composition_sensitivity",
+      "statement": "在全温度范围区间，活化能 Ea 在 N = 4.29 附近发生显著突降，从 0.390 eV 突降至 0.221 eV，相对变化达 43.3%。这提示可能存在渗流类连通性转变，但仍需独立结构或重复实验验证。",
+      "support_metrics": {
+        "composition_variable": "N",
+        "temperature_zone": "all_T",
+        "critical_value": 4.2860000000000005,
+        "critical_value_unit": "composition",
+        "N_critical": 4.2860000000000005,
+        "comp_value": 4.2860000000000005,
+        "ea_before": 0.3901276580440211,
+        "ea_after": 0.2211739913976937,
+        "jump_magnitude": -0.1689536666463274,
+        "relative_jump": -0.4330727728800583,
+        "direction": "decrease"
+      },
+      "confidence": 0.9,
+      "confidence_basis": {
+        "rule_id": "critical_jump_or_inflection",
+        "formula": "jump: min(0.90, 0.7 + abs(relative_jump) * 0.5); inflection: 0.75",
+        "inputs": {
+          "relative_jump": -0.4330727728800583,
+          "critical_value": 4.2860000000000005,
+          "composition_variable": "N"
+        },
+        "interpretation": "组分阈值证据权重；渗流仅作为假说线索"
+      },
+      "tags": [
+        "critical_breakpoint",
+        "percolation_hint",
+        "N_critical"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "composition_sensitivity",
+      "statement": "在全温度范围区间，活化能 Ea 在 N = 4.34 附近发生显著跃升，从 0.461 eV 跃升至 0.868 eV，相对变化达 88.4%。这提示可能存在渗流类连通性转变，但仍需独立结构或重复实验验证。",
+      "support_metrics": {
+        "composition_variable": "N",
+        "temperature_zone": "all_T",
+        "critical_value": 4.344933333333333,
+        "critical_value_unit": "composition",
+        "N_critical": 4.344933333333333,
+        "comp_value": 4.344933333333333,
+        "ea_before": 0.4606196669044425,
+        "ea_after": 0.8677804276366072,
+        "jump_magnitude": 0.40716076073216473,
+        "relative_jump": 0.8839413294453012,
+        "direction": "increase"
+      },
+      "confidence": 0.9,
+      "confidence_basis": {
+        "rule_id": "critical_jump_or_inflection",
+        "formula": "jump: min(0.90, 0.7 + abs(relative_jump) * 0.5); inflection: 0.75",
+        "inputs": {
+          "relative_jump": 0.8839413294453012,
+          "critical_value": 4.344933333333333,
+          "composition_variable": "N"
+        },
+        "interpretation": "组分阈值证据权重；渗流仅作为假说线索"
+      },
+      "tags": [
+        "critical_breakpoint",
+        "percolation_hint",
+        "N_critical"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "composition_sensitivity",
+      "statement": "在全温度范围区间，活化能 Ea 在 N = 4.42 附近发生显著突降，从 0.474 eV 突降至 0.330 eV，相对变化达 30.3%。这提示可能存在渗流类连通性转变，但仍需独立结构或重复实验验证。",
+      "support_metrics": {
+        "composition_variable": "N",
+        "temperature_zone": "all_T",
+        "critical_value": 4.418266666666667,
+        "critical_value_unit": "composition",
+        "N_critical": 4.418266666666667,
+        "comp_value": 4.418266666666667,
+        "ea_before": 0.4743423333941634,
+        "ea_after": 0.3303865224696488,
+        "jump_magnitude": -0.1439558109245146,
+        "relative_jump": -0.3034850587642826,
+        "direction": "decrease"
+      },
+      "confidence": 0.8517425293821412,
+      "confidence_basis": {
+        "rule_id": "critical_jump_or_inflection",
+        "formula": "jump: min(0.90, 0.7 + abs(relative_jump) * 0.5); inflection: 0.75",
+        "inputs": {
+          "relative_jump": -0.3034850587642826,
+          "critical_value": 4.418266666666667,
+          "composition_variable": "N"
+        },
+        "interpretation": "组分阈值证据权重；渗流仅作为假说线索"
+      },
+      "tags": [
+        "critical_breakpoint",
+        "percolation_hint",
+        "N_critical"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "composition_sensitivity",
+      "statement": "在全温度范围区间，活化能 Ea 在 N = 4.49 附近发生显著突降，从 0.957 eV 突降至 0.378 eV，相对变化达 60.4%。这提示可能存在渗流类连通性转变，但仍需独立结构或重复实验验证。",
+      "support_metrics": {
+        "composition_variable": "N",
+        "temperature_zone": "all_T",
+        "critical_value": 4.492933333333334,
+        "critical_value_unit": "composition",
+        "N_critical": 4.492933333333334,
+        "comp_value": 4.492933333333334,
+        "ea_before": 0.956682959116511,
+        "ea_after": 0.3784395366149006,
+        "jump_magnitude": -0.5782434225016104,
+        "relative_jump": -0.6044253396502574,
+        "direction": "decrease"
+      },
+      "confidence": 0.9,
+      "confidence_basis": {
+        "rule_id": "critical_jump_or_inflection",
+        "formula": "jump: min(0.90, 0.7 + abs(relative_jump) * 0.5); inflection: 0.75",
+        "inputs": {
+          "relative_jump": -0.6044253396502574,
+          "critical_value": 4.492933333333334,
+          "composition_variable": "N"
+        },
+        "interpretation": "组分阈值证据权重；渗流仅作为假说线索"
+      },
+      "tags": [
+        "critical_breakpoint",
+        "percolation_hint",
+        "N_critical"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "composition_sensitivity",
+      "statement": "在全温度范围区间，活化能 Ea 在 N = 4.53 附近发生显著跃升，从 0.378 eV 跃升至 0.942 eV，相对变化达 148.8%。这提示可能存在渗流类连通性转变，但仍需独立结构或重复实验验证。",
+      "support_metrics": {
+        "composition_variable": "N",
+        "temperature_zone": "all_T",
+        "critical_value": 4.532666666666667,
+        "critical_value_unit": "composition",
+        "N_critical": 4.532666666666667,
+        "comp_value": 4.532666666666667,
+        "ea_before": 0.3784395366149006,
+        "ea_after": 0.9416399159441312,
+        "jump_magnitude": 0.5632003793292306,
+        "relative_jump": 1.48821760106514,
+        "direction": "increase"
+      },
+      "confidence": 0.9,
+      "confidence_basis": {
+        "rule_id": "critical_jump_or_inflection",
+        "formula": "jump: min(0.90, 0.7 + abs(relative_jump) * 0.5); inflection: 0.75",
+        "inputs": {
+          "relative_jump": 1.48821760106514,
+          "critical_value": 4.532666666666667,
+          "composition_variable": "N"
+        },
+        "interpretation": "组分阈值证据权重；渗流仅作为假说线索"
+      },
+      "tags": [
+        "critical_breakpoint",
+        "percolation_hint",
+        "N_critical"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "composition_sensitivity",
+      "statement": "在全温度范围区间，活化能 Ea 在 N = 4.57 附近发生显著跃升，从 0.215 eV 跃升至 0.427 eV，相对变化达 99.0%。这提示可能存在渗流类连通性转变，但仍需独立结构或重复实验验证。",
+      "support_metrics": {
+        "composition_variable": "N",
+        "temperature_zone": "all_T",
+        "critical_value": 4.566933333333333,
+        "critical_value_unit": "composition",
+        "N_critical": 4.566933333333333,
+        "comp_value": 4.566933333333333,
+        "ea_before": 0.2148573605675573,
+        "ea_after": 0.4274753240049041,
+        "jump_magnitude": 0.21261796343734682,
+        "relative_jump": 0.9895772845561586,
+        "direction": "increase"
+      },
+      "confidence": 0.9,
+      "confidence_basis": {
+        "rule_id": "critical_jump_or_inflection",
+        "formula": "jump: min(0.90, 0.7 + abs(relative_jump) * 0.5); inflection: 0.75",
+        "inputs": {
+          "relative_jump": 0.9895772845561586,
+          "critical_value": 4.566933333333333,
+          "composition_variable": "N"
+        },
+        "interpretation": "组分阈值证据权重；渗流仅作为假说线索"
+      },
+      "tags": [
+        "critical_breakpoint",
+        "percolation_hint",
+        "N_critical"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "composition_sensitivity",
+      "statement": "在全温度范围区间，活化能 Ea 在 N = 4.66 附近发生显著突降，从 1.011 eV 突降至 0.209 eV，相对变化达 79.3%。这提示可能存在渗流类连通性转变，但仍需独立结构或重复实验验证。",
+      "support_metrics": {
+        "composition_variable": "N",
+        "temperature_zone": "all_T",
+        "critical_value": 4.656000000000001,
+        "critical_value_unit": "composition",
+        "N_critical": 4.656000000000001,
+        "comp_value": 4.656000000000001,
+        "ea_before": 1.0114213753919017,
+        "ea_after": 0.2092259934958519,
+        "jump_magnitude": -0.8021953818960498,
+        "relative_jump": -0.7931366702480637,
+        "direction": "decrease"
+      },
+      "confidence": 0.9,
+      "confidence_basis": {
+        "rule_id": "critical_jump_or_inflection",
+        "formula": "jump: min(0.90, 0.7 + abs(relative_jump) * 0.5); inflection: 0.75",
+        "inputs": {
+          "relative_jump": -0.7931366702480637,
+          "critical_value": 4.656000000000001,
+          "composition_variable": "N"
+        },
+        "interpretation": "组分阈值证据权重；渗流仅作为假说线索"
+      },
+      "tags": [
+        "critical_breakpoint",
+        "percolation_hint",
+        "N_critical"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "composition_sensitivity",
+      "statement": "在全温度范围区间，活化能 Ea 在 N = 4.69 附近发生显著突降，从 0.457 eV 突降至 0.364 eV，相对变化达 20.3%。这提示可能存在渗流类连通性转变，但仍需独立结构或重复实验验证。",
+      "support_metrics": {
+        "composition_variable": "N",
+        "temperature_zone": "all_T",
+        "critical_value": 4.690266666666666,
+        "critical_value_unit": "composition",
+        "N_critical": 4.690266666666666,
+        "comp_value": 4.690266666666666,
+        "ea_before": 0.4567351057625416,
+        "ea_after": 0.3641122034017601,
+        "jump_magnitude": -0.09262290236078152,
+        "relative_jump": -0.2027934818063592,
+        "direction": "decrease"
+      },
+      "confidence": 0.8013967409031796,
+      "confidence_basis": {
+        "rule_id": "critical_jump_or_inflection",
+        "formula": "jump: min(0.90, 0.7 + abs(relative_jump) * 0.5); inflection: 0.75",
+        "inputs": {
+          "relative_jump": -0.2027934818063592,
+          "critical_value": 4.690266666666666,
+          "composition_variable": "N"
+        },
+        "interpretation": "组分阈值证据权重；渗流仅作为假说线索"
+      },
+      "tags": [
+        "critical_breakpoint",
+        "percolation_hint",
+        "N_critical"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "composition_sensitivity",
+      "statement": "在全温度范围区间，活化能 Ea 在 N = 4.89 附近发生显著跃升，从 0.364 eV 跃升至 0.884 eV，相对变化达 142.7%。这提示可能存在渗流类连通性转变，但仍需独立结构或重复实验验证。",
+      "support_metrics": {
+        "composition_variable": "N",
+        "temperature_zone": "all_T",
+        "critical_value": 4.888888888888889,
+        "critical_value_unit": "composition",
+        "N_critical": 4.888888888888889,
+        "comp_value": 4.888888888888889,
+        "ea_before": 0.3641122034017601,
+        "ea_after": 0.8836397520175577,
+        "jump_magnitude": 0.5195275486157976,
+        "relative_jump": 1.426833662157027,
+        "direction": "increase"
+      },
+      "confidence": 0.9,
+      "confidence_basis": {
+        "rule_id": "critical_jump_or_inflection",
+        "formula": "jump: min(0.90, 0.7 + abs(relative_jump) * 0.5); inflection: 0.75",
+        "inputs": {
+          "relative_jump": 1.426833662157027,
+          "critical_value": 4.888888888888889,
+          "composition_variable": "N"
+        },
+        "interpretation": "组分阈值证据权重；渗流仅作为假说线索"
+      },
+      "tags": [
+        "critical_breakpoint",
+        "percolation_hint",
+        "N_critical"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "composition_sensitivity",
+      "statement": "在全温度范围区间，活化能 Ea 在 N = 4.91 附近发生显著跃升，从 0.152 eV 跃升至 0.441 eV，相对变化达 189.3%。这提示可能存在渗流类连通性转变，但仍需独立结构或重复实验验证。",
+      "support_metrics": {
+        "composition_variable": "N",
+        "temperature_zone": "all_T",
+        "critical_value": 4.9068,
+        "critical_value_unit": "composition",
+        "N_critical": 4.9068,
+        "comp_value": 4.9068,
+        "ea_before": 0.1523179360200124,
+        "ea_after": 0.4406007165533412,
+        "jump_magnitude": 0.2882827805333288,
+        "relative_jump": 1.892638438164318,
+        "direction": "increase"
+      },
+      "confidence": 0.9,
+      "confidence_basis": {
+        "rule_id": "critical_jump_or_inflection",
+        "formula": "jump: min(0.90, 0.7 + abs(relative_jump) * 0.5); inflection: 0.75",
+        "inputs": {
+          "relative_jump": 1.892638438164318,
+          "critical_value": 4.9068,
+          "composition_variable": "N"
+        },
+        "interpretation": "组分阈值证据权重；渗流仅作为假说线索"
+      },
+      "tags": [
+        "critical_breakpoint",
+        "percolation_hint",
+        "N_critical"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "composition_sensitivity",
+      "statement": "在全温度范围区间，活化能 Ea 在 N = 4.93 附近发生显著跃升，从 0.153 eV 跃升至 0.270 eV，相对变化达 76.1%。这提示可能存在渗流类连通性转变，但仍需独立结构或重复实验验证。",
+      "support_metrics": {
+        "composition_variable": "N",
+        "temperature_zone": "all_T",
+        "critical_value": 4.926666666666667,
+        "critical_value_unit": "composition",
+        "N_critical": 4.926666666666667,
+        "comp_value": 4.926666666666667,
+        "ea_before": 0.1530803091191467,
+        "ea_after": 0.2695539372794358,
+        "jump_magnitude": 0.11647362816028908,
+        "relative_jump": 0.7608661677684123,
+        "direction": "increase"
+      },
+      "confidence": 0.9,
+      "confidence_basis": {
+        "rule_id": "critical_jump_or_inflection",
+        "formula": "jump: min(0.90, 0.7 + abs(relative_jump) * 0.5); inflection: 0.75",
+        "inputs": {
+          "relative_jump": 0.7608661677684123,
+          "critical_value": 4.926666666666667,
+          "composition_variable": "N"
+        },
+        "interpretation": "组分阈值证据权重；渗流仅作为假说线索"
+      },
+      "tags": [
+        "critical_breakpoint",
+        "percolation_hint",
+        "N_critical"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "composition_sensitivity",
+      "statement": "在全温度范围区间，活化能 Ea 在 N = 5.17 附近发生显著突降，从 0.270 eV 突降至 0.151 eV，相对变化达 44.0%。这提示可能存在渗流类连通性转变，但仍需独立结构或重复实验验证。",
+      "support_metrics": {
+        "composition_variable": "N",
+        "temperature_zone": "all_T",
+        "critical_value": 5.173333333333333,
+        "critical_value_unit": "composition",
+        "N_critical": 5.173333333333333,
+        "comp_value": 5.173333333333333,
+        "ea_before": 0.2695539372794358,
+        "ea_after": 0.150902566600286,
+        "jump_magnitude": -0.11865137067914977,
+        "relative_jump": -0.4401767300328789,
+        "direction": "decrease"
+      },
+      "confidence": 0.9,
+      "confidence_basis": {
+        "rule_id": "critical_jump_or_inflection",
+        "formula": "jump: min(0.90, 0.7 + abs(relative_jump) * 0.5); inflection: 0.75",
+        "inputs": {
+          "relative_jump": -0.4401767300328789,
+          "critical_value": 5.173333333333333,
+          "composition_variable": "N"
+        },
+        "interpretation": "组分阈值证据权重；渗流仅作为假说线索"
+      },
+      "tags": [
+        "critical_breakpoint",
+        "percolation_hint",
+        "N_critical"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "composition_sensitivity",
+      "statement": "在全温度范围区间，活化能 Ea 在 N = 5.32 附近发生显著突降，从 1.079 eV 突降至 0.141 eV，相对变化达 87.0%。这提示可能存在渗流类连通性转变，但仍需独立结构或重复实验验证。",
+      "support_metrics": {
+        "composition_variable": "N",
+        "temperature_zone": "all_T",
+        "critical_value": 5.320666666666667,
+        "critical_value_unit": "composition",
+        "N_critical": 5.320666666666667,
+        "comp_value": 5.320666666666667,
+        "ea_before": 1.079440242279692,
+        "ea_after": 0.1405493821032535,
+        "jump_magnitude": -0.9388908601764385,
+        "relative_jump": -0.869794198327807,
+        "direction": "decrease"
+      },
+      "confidence": 0.9,
+      "confidence_basis": {
+        "rule_id": "critical_jump_or_inflection",
+        "formula": "jump: min(0.90, 0.7 + abs(relative_jump) * 0.5); inflection: 0.75",
+        "inputs": {
+          "relative_jump": -0.869794198327807,
+          "critical_value": 5.320666666666667,
+          "composition_variable": "N"
+        },
+        "interpretation": "组分阈值证据权重；渗流仅作为假说线索"
+      },
+      "tags": [
+        "critical_breakpoint",
+        "percolation_hint",
+        "N_critical"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "composition_sensitivity",
+      "statement": "在全温度范围区间，活化能 Ea 在 N = 5.56 附近发生显著跃升，从 0.439 eV 跃升至 0.938 eV，相对变化达 113.8%。这提示可能存在渗流类连通性转变，但仍需独立结构或重复实验验证。",
+      "support_metrics": {
+        "composition_variable": "N",
+        "temperature_zone": "all_T",
+        "critical_value": 5.555555555555555,
+        "critical_value_unit": "composition",
+        "N_critical": 5.555555555555555,
+        "comp_value": 5.555555555555555,
+        "ea_before": 0.4388743090487451,
+        "ea_after": 0.9383503112575826,
+        "jump_magnitude": 0.49947600220883753,
+        "relative_jump": 1.1380843943484547,
+        "direction": "increase"
+      },
+      "confidence": 0.9,
+      "confidence_basis": {
+        "rule_id": "critical_jump_or_inflection",
+        "formula": "jump: min(0.90, 0.7 + abs(relative_jump) * 0.5); inflection: 0.75",
+        "inputs": {
+          "relative_jump": 1.1380843943484547,
+          "critical_value": 5.555555555555555,
+          "composition_variable": "N"
+        },
+        "interpretation": "组分阈值证据权重；渗流仅作为假说线索"
+      },
+      "tags": [
+        "critical_breakpoint",
+        "percolation_hint",
+        "N_critical"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "composition_sensitivity",
+      "statement": "在全温度范围区间，活化能 Ea 在 N = 5.84 附近发生显著跃升，从 0.427 eV 跃升至 1.179 eV，相对变化达 176.2%。这提示可能存在渗流类连通性转变，但仍需独立结构或重复实验验证。",
+      "support_metrics": {
+        "composition_variable": "N",
+        "temperature_zone": "all_T",
+        "critical_value": 5.838000000000001,
+        "critical_value_unit": "composition",
+        "N_critical": 5.838000000000001,
+        "comp_value": 5.838000000000001,
+        "ea_before": 0.4270181796682048,
+        "ea_after": 1.1793574843209251,
+        "jump_magnitude": 0.7523393046527203,
+        "relative_jump": 1.761843735171396,
+        "direction": "increase"
+      },
+      "confidence": 0.9,
+      "confidence_basis": {
+        "rule_id": "critical_jump_or_inflection",
+        "formula": "jump: min(0.90, 0.7 + abs(relative_jump) * 0.5); inflection: 0.75",
+        "inputs": {
+          "relative_jump": 1.761843735171396,
+          "critical_value": 5.838000000000001,
+          "composition_variable": "N"
+        },
+        "interpretation": "组分阈值证据权重；渗流仅作为假说线索"
+      },
+      "tags": [
+        "critical_breakpoint",
+        "percolation_hint",
+        "N_critical"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "composition_sensitivity",
+      "statement": "在全温度范围区间，活化能 Ea 随组分 N 的变化呈现显著的非线性特征，二次拟合优于线性拟合（R2 提升: 0.000 -> 0.004），曲线呈下凹形态，表明存在复杂的组分依赖机制。",
+      "support_metrics": {
+        "composition_variable": "N",
+        "temperature_zone": "all_T",
+        "linear_r2": 0.00006807747706327749,
+        "quadratic_r2": 0.004392698704344,
+        "f_statistic": 4.456638047366345,
+        "p_value": 0.03500725997331966,
+        "quadratic_coeff": -0.010861510114657929
+      },
+      "confidence": 0.004392698704344,
+      "confidence_basis": {
+        "rule_id": "quadratic_improvement_cap",
+        "formula": "min(0.85, quadratic_r2)",
+        "inputs": {
+          "linear_r2": 0.00006807747706327749,
+          "quadratic_r2": 0.004392698704344,
+          "p_value": 0.03500725997331966
+        },
+        "interpretation": "基于二次模型相对线性模型改进的启发式证据权重"
+      },
+      "tags": [
+        "nonlinear_trend",
+        "N_dependent",
+        "all_T"
+      ]
+    },
+    {
+      "claim_level": "observation",
+      "theme": "composition_sensitivity",
+      "statement": "数据覆盖了组分 R 的宽范围（0.00 - 1.04），包含 20 个不同的 R 值，为组分敏感性分析提供了充分的数据基础。",
+      "support_metrics": {
+        "R_min": 0.0,
+        "R_max": 1.0408163265306123,
+        "R_range": 1.0408163265306123,
+        "R_unique_count": 20
+      },
+      "confidence": 0.95,
+      "confidence_basis": {
+        "rule_id": "composition_coverage",
+        "formula": "fixed 0.95 for broad R coverage",
+        "inputs": {
+          "R_range": 1.0408163265306123,
+          "R_unique_count": 20
+        },
+        "interpretation": "数据覆盖度证据，表示后续组分分析具有足够横向范围"
+      },
+      "tags": [
+        "data_coverage",
+        "R_range"
+      ]
+    },
+    {
+      "claim_level": "observation",
+      "theme": "transport_dynamics",
+      "statement": "Meyer-Neldel 诊断回归：ln(sigma0) ~ Ea，slope=50.34, intercept=-7.061, R2=0.981, n=1031",
+      "support_metrics": {
+        "slope": 50.33560211843439,
+        "intercept": -7.061398112135935,
+        "r_squared": 0.9808497999669673,
+        "p_value": 0.0,
+        "n_points": 1031,
+        "slope_positive": true,
+        "E_MN_eV": 0.01986665417545031
+      },
+      "confidence": 0.5,
+      "confidence_basis": {
+        "rule_id": "meyer_neldel_diagnostic",
+        "formula": "min(0.5, r_squared)",
+        "inputs": {
+          "r_squared": 0.9808497999669673,
+          "slope_positive": true
+        },
+        "interpretation": "始终产出的 MN 回归诊断（供作图/审计，不作为强证据）"
+      },
+      "tags": [
+        "meyer_neldel",
+        "meyer_neldel_diagnostic",
+        "transport_dynamics"
+      ]
+    },
+    {
+      "claim_level": "observation",
+      "theme": "transport_dynamics",
+      "statement": "Meyer-Neldel 补偿效应分析显示，ln(sigma0) 与 Ea 呈现显著的线性关系 (R2 = 0.981, p < 0.0000)，提取出补偿能量 E_MN = 0.020 eV。这表明体系中存在普适的能量补偿机制，不同传输通道的激活能与指前因子之间存在内在关联。",
+      "support_metrics": {
+        "E_MN_eV": 0.01986665417545031,
+        "E_MN_se": 0.00008653712208495482,
+        "slope": 50.33560211843439,
+        "intercept": -7.061398112135935,
+        "r_squared": 0.9808497999669673,
+        "p_value": 0.0,
+        "n_points": 1031
+      },
+      "confidence": 0.95,
+      "confidence_basis": {
+        "rule_id": "meyer_neldel_r2_cap",
+        "formula": "min(0.95, r_squared)",
+        "inputs": {
+          "r_squared": 0.9808497999669673,
+          "p_value": 0.0
+        },
+        "interpretation": "基于 Meyer-Neldel 线性关系强度的启发式证据权重"
+      },
+      "tags": [
+        "meyer_neldel",
+        "compensation_effect",
+        "transport_dynamics"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "transport_dynamics",
+      "statement": "极高的 Meyer-Neldel 相关性 (R2 = 0.981) 暗示体系中的离子传输通道可能共享相同的物理起源，例如共同的势垒分布或相似的局域环境结构。",
+      "support_metrics": {
+        "E_MN_eV": 0.01986665417545031,
+        "r_squared": 0.9808497999669673
+      },
+      "confidence": 0.85,
+      "confidence_basis": {
+        "rule_id": "meyer_neldel_mechanism_insight",
+        "formula": "fixed 0.85 when r_squared >= 0.95",
+        "inputs": {
+          "r_squared": 0.9808497999669673
+        },
+        "interpretation": "极高 MN 相关性触发的解释层证据"
+      },
+      "tags": [
+        "meyer_neldel",
+        "mechanism_insight"
+      ]
+    },
+    {
+      "claim_level": "observation",
+      "theme": "transport_dynamics",
+      "statement": "在宽温区数据 (T = 187.2 - 299.1 K, 跨度 112.0 K) 上，Arrhenius 模型的拟合质量优于 VTF 模型 (ΔAICC = 18.83)。",
+      "support_metrics": {
+        "arrhenius_aic": -11387.785139910682,
+        "vtf_aic": -11368.967301501863,
+        "arrhenius_aicc": -11387.773466758932,
+        "vtf_aicc": -11368.943932465836,
+        "delta_aicc": -18.829534293096003,
+        "selection_criterion": "aicc",
+        "arrhenius_r2": 0.621115487615925,
+        "vtf_r2": 0.6429106031520238,
+        "T_min": 187.15,
+        "T_max": 299.15,
+        "T_range": 111.99999999999997,
+        "n_points": 1031
+      },
+      "confidence": 0.9,
+      "confidence_basis": {
+        "rule_id": "model_comparison_observation",
+        "formula": "fixed 0.90 for successful Arrhenius/VTF information-criterion comparison",
+        "inputs": {
+          "criterion": "aicc",
+          "delta_aicc": -18.829534293096003
+        },
+        "interpretation": "模型比较观测证据；信息准则差值不等同于物理机制证明"
+      },
+      "tags": [
+        "model_comparison",
+        "arrhenius_vs_vtf"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "transport_dynamics",
+      "statement": "Arrhenius 模型显著优于 VTF 模型 (ΔAICC = 18.83 > 4.0)，表明在测量温度范围内，离子传输遵循简单的热激活机制，不存在明显的合作重排或玻璃化转变特征。",
+      "support_metrics": {
+        "delta_aicc": -18.829534293096003,
+        "selection_criterion": "aicc",
+        "arrhenius_r2": 0.621115487615925,
+        "arrhenius_Ea_eV": 0.3310892024428544
+      },
+      "confidence": 0.85,
+      "confidence_basis": {
+        "rule_id": "arrhenius_preferred_delta_ic",
+        "formula": "fixed 0.85 when Arrhenius beats VTF by threshold",
+        "inputs": {
+          "criterion": "aicc",
+          "delta_aicc": -18.829534293096003
+        },
+        "interpretation": "Arrhenius 偏好证据；用于约束机理语言"
+      },
+      "tags": [
+        "arrhenius_preferred",
+        "simple_activation"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "phase_transition",
+      "statement": "EIS 中圆弧的涌现温度 (T_arc = 191.2 K) 与 Arrhenius 折点温度 (T_break = 191.2 K) 在温度上高度同步，偏差仅为 0.0 K (< 10.0 K)。这提示电学活化能改变可能与微观结构重组或相变相关，EIS 形貌特征与热激活折点存在值得后续验证的关联。",
+      "support_metrics": {
+        "T_arc_K": 191.15,
+        "T_break_K": 191.15,
+        "delta_T_K": 0.0,
+        "alignment_threshold_K": 10.0,
+        "is_aligned": true,
+        "arc_detection_method": "boolean_flag",
+        "break_detection_method": "derivative_peak"
+      },
+      "confidence": 0.95,
+      "confidence_basis": {
+        "rule_id": "eis_arrhenius_alignment_delta_t",
+        "formula": "min(0.95, 1.0 - delta_T / alignment_threshold * 0.2)",
+        "inputs": {
+          "delta_T_K": 0.0,
+          "alignment_threshold_K": 10.0
+        },
+        "interpretation": "EIS/Arrhenius 温度对齐线索；不是等效电路或相变证明"
+      },
+      "tags": [
+        "phase_transition",
+        "eis_arrhenius_alignment",
+        "structural_reorganization"
+      ]
+    },
+    {
+      "claim_level": "interpretation",
+      "theme": "phase_transition",
+      "statement": "极高的温度对齐精度 (ΔT = 0.0 K < 5 K) 表明 EIS 形貌变化与活化能跃迁可能受同一温区内的结构或动力学变化影响，提示 T ≈ 191.2 K 附近存在需要独立验证的相变/重排线索。",
+      "support_metrics": {
+        "delta_T_K": 0.0,
+        "transition_temperature_K": 191.15
+      },
+      "confidence": 0.9,
+      "confidence_basis": {
+        "rule_id": "high_precision_eis_alignment",
+        "formula": "fixed 0.90 when delta_T < 5 K",
+        "inputs": {
+          "delta_T_K": 0.0
+        },
+        "interpretation": "高精度对齐线索；保持启发式解释边界"
+      },
+      "tags": [
+        "phase_transition",
+        "high_precision_alignment",
+        "first_order_transition"
+      ]
+    },
+    {
+      "claim_level": "question",
+      "theme": "transport_dynamics",
+      "statement": "多重离散的 Ea 数据点能塌缩到同一条 Meyer-Neldel 补偿线上 (R2 = 0.981, E_MN = 0.020 eV)，是否意味着所有 S8 样本共享同一种基础跳跃势垒机制？这种普适的补偿关系背后的物理起源是什么——是多声子辅助跃迁、还是势垒分布的统计效应？",
+      "support_metrics": {
+        "E_MN_eV": 0.01986665417545031,
+        "r_squared_max": 0.9808497999669673,
+        "n_points_total": 3093,
+        "synthesis_trigger": "meyer_neldel_universality",
+        "n_mn_evidences": 4
+      },
+      "confidence": 0.75,
+      "confidence_basis": {
+        "rule_id": "synthesis_meyer_neldel_universality",
+        "formula": "fixed 0.75 when Meyer-Neldel r_squared > 0.8",
+        "inputs": {
+          "r_squared_max": 0.9808497999669673,
+          "n_mn_evidences": 4
+        },
+        "interpretation": "MN 普适性问题，用于 Stage3 假说生成"
+      },
+      "tags": [
+        "mechanistic_question",
+        "meyer_neldel",
+        "universal_mechanism"
+      ]
+    },
+    {
+      "claim_level": "question",
+      "theme": "phase_transition",
+      "statement": "EIS 形貌特征与 Arrhenius 折点在 T ≈ 191.2 K 处的高精度对齐，强烈暗示该温度点发生了结构相变。这是一级相变（伴随潜热和体积变化）还是二级相变（连续的对称性破缺）？相变的序参量是什么——是离子配位数、氢键网络连通性，还是自由体积分数？",
+      "support_metrics": {
+        "transition_temperature_K": 191.15,
+        "delta_T_min": 0.0,
+        "synthesis_trigger": "phase_transition_mechanism",
+        "n_alignment_evidences": 4
+      },
+      "confidence": 0.8,
+      "confidence_basis": {
+        "rule_id": "synthesis_phase_alignment",
+        "formula": "fixed 0.80 when EIS/Arrhenius alignment tags and phase tags co-occur",
+        "inputs": {
+          "transition_temperature_K": 191.15,
+          "delta_T_min": 0.0
+        },
+        "interpretation": "EIS-Arrhenius 对齐触发的机理问题，不是相变证明"
+      },
+      "tags": [
+        "mechanistic_question",
+        "phase_transition",
+        "order_parameter"
+      ]
+    },
+    {
+      "claim_level": "question",
+      "theme": "transport_dynamics",
+      "statement": "传输动力学、组分敏感性和相变特征三个维度的证据相互印证，共同指向 S8 体系中存在复杂的多尺度耦合机制。如何构建一个统一的理论框架来描述这些现象之间的内在联系？是否可以用单一的序参量（如自由体积或氢键网络连通性）来统一解释？",
+      "support_metrics": {
+        "themes_involved": [
+          "transport_dynamics",
+          "composition_sensitivity",
+          "phase_transition"
+        ],
+        "high_confidence_counts": {
+          "transport_dynamics": 5,
+          "composition_sensitivity": 39,
+          "phase_transition": 2
+        },
+        "synthesis_trigger": "evidence_convergence",
+        "total_evidences": 49
+      },
+      "confidence": 0.7,
+      "confidence_basis": {
+        "rule_id": "synthesis_multitheme_convergence",
+        "formula": "fixed 0.70 when all three evidence themes contain high-confidence evidence",
+        "inputs": {
+          "themes_involved": [
+            "transport_dynamics",
+            "composition_sensitivity",
+            "phase_transition"
+          ],
+          "total_evidences": 49
+        },
+        "interpretation": "多主题证据收敛问题，用于 Stage3 构建统一解释框架"
+      },
+      "tags": [
+        "mechanistic_question",
+        "multiscale_coupling",
+        "unified_framework"
+      ]
+    },
+    {
+      "claim_level": "question",
+      "theme": "transport_dynamics",
+      "statement": "S8 数据覆盖从冷端到室温的宽温区，且同时包含 R/N 组分维度。低温区活化能抬升是否主要来自酸-水相冻结、限域水氢键网络断裂，还是来自黏土界面连通性下降？",
+      "support_metrics": {
+        "synthesis_trigger": "profile_cold_window_transport",
+        "T_min": 182.15,
+        "T_max": 299.15,
+        "T_range": 116.99999999999997,
+        "R_unique_count": 20,
+        "N_unique_count": 25
+      },
+      "confidence": 0.68,
+      "confidence_basis": {
+        "rule_id": "profile_cold_window_transport",
+        "formula": "fixed 0.68 when wide cold-to-room temperature coverage and composition axes exist",
+        "inputs": {
+          "has_low_T": true,
+          "has_high_T": true,
+          "has_composition": true
+        },
+        "interpretation": "由数据画像触发的低温传输问题"
+      },
+      "tags": [
+        "mechanistic_question",
+        "cold_window_transport",
+        "hydrogen_bond_network"
+      ]
+    },
+    {
+      "claim_level": "question",
+      "theme": "phase_transition",
+      "statement": "S8 数据同时包含 EIS 形貌特征和组分临界点线索。EIS 形貌变化是否与 R/N 阈值附近的传输通道重排同步，还是仅反映界面极化或测量窗口效应？",
+      "support_metrics": {
+        "synthesis_trigger": "profile_eis_composition_threshold",
+        "n_eis_features": 14,
+        "critical_breakpoint_count": 39
+      },
+      "confidence": 0.66,
+      "confidence_basis": {
+        "rule_id": "profile_eis_composition_threshold",
+        "formula": "fixed 0.66 when EIS features and critical_breakpoint tags co-occur",
+        "inputs": {
+          "has_eis_features": true,
+          "critical_breakpoint_count": 39
+        },
+        "interpretation": "EIS/组分阈值耦合问题，保持启发式边界"
+      },
+      "tags": [
+        "mechanistic_question",
+        "eis_composition_coupling",
+        "phase_transition"
+      ]
+    },
+    {
+      "claim_level": "question",
+      "theme": "phase_transition",
+      "statement": "S8 数据包含宽温区 EIS 形貌特征。T_arc 与 T_break 的关系是否能够区分体相传输受阻、界面极化增强和氢键网络重排这三类解释？",
+      "support_metrics": {
+        "synthesis_trigger": "profile_eis_breakpoint_disambiguation",
+        "n_eis_features": 14,
+        "T_min": 182.15,
+        "T_max": 299.15
+      },
+      "confidence": 0.65,
+      "confidence_basis": {
+        "rule_id": "profile_eis_breakpoint_disambiguation",
+        "formula": "fixed 0.65 when EIS features and wide temperature coverage exist",
+        "inputs": {
+          "has_eis_features": true,
+          "has_low_T": true,
+          "has_high_T": true
+        },
+        "interpretation": "EIS 形貌与热激活折点关系的开放问题"
+      },
+      "tags": [
+        "mechanistic_question",
+        "eis_arrhenius_disambiguation",
+        "phase_transition"
+      ]
+    },
+    {
+      "claim_level": "question",
+      "theme": "transport_dynamics",
+      "statement": "Arrhenius 与 VTF 的信息准则比较给出了动力学模型偏好。该偏好在不同 R/N 子区间是否稳定，还是由少数组分区域或低温数据点主导？",
+      "support_metrics": {
+        "synthesis_trigger": "profile_model_preference_stability",
+        "has_model_comparison": true
+      },
+      "confidence": 0.64,
+      "confidence_basis": {
+        "rule_id": "profile_model_preference_stability",
+        "formula": "fixed 0.64 when model_comparison evidence exists",
+        "inputs": {
+          "model_comparison_count": 1,
+          "arrhenius_vs_vtf_count": 1
+        },
+        "interpretation": "模型偏好稳定性问题，用于后续分区/敏感性分析"
+      },
+      "tags": [
+        "mechanistic_question",
+        "model_preference_stability",
+        "arrhenius_vs_vtf"
+      ]
+    }
+  ]
+}

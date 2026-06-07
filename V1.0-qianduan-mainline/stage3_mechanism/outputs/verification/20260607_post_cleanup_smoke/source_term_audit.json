@@ -1,0 +1,229 @@
+{
+  "discovery_mode": "broad_literature_pool_selection",
+  "final_audit": false,
+  "stage3_root": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism",
+  "output_dir": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\outputs\\verification\\20260607_post_cleanup_smoke",
+  "scan_roots": [
+    "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\src\\s8_stage3\\prompts",
+    "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\src\\s8_stage3\\contracts",
+    "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\src\\s8_stage3\\mock",
+    "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\data\\cache\\current",
+    "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\data\\validation",
+    "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\literature_workspace",
+    "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\outputs\\verification\\20260607_post_cleanup_smoke"
+  ],
+  "groups": {
+    "lotus_root_starch": {
+      "target_candidate_group": "lotus_root_starch",
+      "discovery_mode": "broad_literature_pool_selection",
+      "allowed_before_s09": [
+        "s08_literature_scout_materials",
+        "literature_workspace",
+        "audit/candidate_terms"
+      ],
+      "n_hits_total": 27,
+      "first_hit": {
+        "term": "lotus",
+        "stage": "validation_data",
+        "path": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\data\\validation\\biopolymer_validation_results.csv",
+        "line_number": 1,
+        "line_excerpt": "validation_id,candidate_id,sample_id,material_system,validation_timing,lotus_starch_g,starch_g,chitosan_g,pva_g,attapulgite_g,h3po4_85wt_g,water_g,acetic_acid_1wt_g,pva_dissolution_temp_C,gelatinization_schedule_C,drying_temp_C,seal_pressur"
+      },
+      "hits": [
+        {
+          "term": "lotus",
+          "stage": "validation_data",
+          "path": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\data\\validation\\biopolymer_validation_results.csv",
+          "line_number": 1,
+          "line_excerpt": "validation_id,candidate_id,sample_id,material_system,validation_timing,lotus_starch_g,starch_g,chitosan_g,pva_g,attapulgite_g,h3po4_85wt_g,water_g,acetic_acid_1wt_g,pva_dissolution_temp_C,gelatinization_schedule_C,drying_temp_C,seal_pressur"
+        },
+        {
+          "term": "LOTUS",
+          "stage": "validation_data",
+          "path": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\data\\validation\\biopolymer_validation_results.csv",
+          "line_number": 2,
+          "line_excerpt": "VAL-LOTUS-01,,BIO-LOTUS-01,biopolymer_clay_h3po4,prospective,3.0,0.0,0.0,0.333,0.0999,2.13,46.0,0.0,85,45-55-65-75 ramp,45,0.5,,0.1,1.96,,0.009973280842593892,0.005422658732877899,0.002036939469557314,0.00029831473522333153,6.76596575971673"
+        },
+        {
+          "term": "lotus",
+          "stage": "validation_data",
+          "path": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\data\\validation\\biopolymer_validation_results.csv",
+          "line_number": 3,
+          "line_excerpt": "VAL-STARCH-01,,BIO-STARCH-01,biopolymer_clay_h3po4,prospective,0.0,3.0,0.0,0.333,0.0999,2.13,46.0,0.0,85,45-55-65 ramp,45,0.5,,0.06,1.96,0.012346177866143539,0.005901456858471259,0.0014852521933697211,0.00029197834656064095,7.39029875502627"
+        },
+        {
+          "term": "lotus",
+          "stage": "validation_data",
+          "path": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\data\\validation\\experimental_feedback.json",
+          "line_number": 23,
+          "line_excerpt": "\"agent_allowed_wording\": \"LLM selected and recombined lotus-root-starch evidence from a broad biomass / polymer / clay literature pool.\","
+        },
+        {
+          "term": "LOTUS",
+          "stage": "validation_data",
+          "path": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\data\\validation\\experimental_feedback.json",
+          "line_number": 31,
+          "line_excerpt": "\"validation_id\": \"VAL-LOTUS-01\","
+        },
+        {
+          "term": "LOTUS",
+          "stage": "validation_data",
+          "path": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\data\\validation\\experimental_feedback.json",
+          "line_number": 34,
+          "line_excerpt": "\"sample_id\": \"BIO-LOTUS-01\","
+        },
+        {
+          "term": "lotus",
+          "stage": "validation_data",
+          "path": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\data\\validation\\experimental_feedback.json",
+          "line_number": 38,
+          "line_excerpt": "\"lotus_starch_g\": 3.0,"
+        },
+        {
+          "term": "lotus",
+          "stage": "validation_data",
+          "path": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\data\\validation\\experimental_feedback.json",
+          "line_number": 72,
+          "line_excerpt": "\"lotus_starch_g\": 0.0,"
+        },
+        {
+          "term": "lotus",
+          "stage": "validation_data",
+          "path": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\data\\validation\\experimental_feedback.json",
+          "line_number": 105,
+          "line_excerpt": "\"lotus_starch_g\": 0.0,"
+        },
+        {
+          "term": "LOTUS",
+          "stage": "validation_data",
+          "path": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\data\\validation\\experimental_feedback.json",
+          "line_number": 132,
+          "line_excerpt": "\"validation_id\": \"VAL-LOTUS-THIN-0429\","
+        },
+        {
+          "term": "LOTUS",
+          "stage": "validation_data",
+          "path": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\data\\validation\\experimental_feedback.json",
+          "line_number": 135,
+          "line_excerpt": "\"sample_id\": \"BIO-LOTUS-THIN-0429\","
+        },
+        {
+          "term": "lotus",
+          "stage": "validation_data",
+          "path": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\data\\validation\\experimental_feedback.json",
+          "line_number": 139,
+          "line_excerpt": "\"lotus_starch_g\": 3.0,"
+        },
+        {
+          "term": "lotus",
+          "stage": "validation_data",
+          "path": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\data\\validation\\experimental_feedback.json",
+          "line_number": 173,
+          "line_excerpt": "\"lotus_starch_g\": 0.0,"
+        },
+        {
+          "term": "lotus",
+          "stage": "validation_data",
+          "path": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\data\\validation\\experimental_feedback.json",
+          "line_number": 206,
+          "line_excerpt": "\"lotus_starch_g\": 0.0,"
+        },
+        {
+          "term": "lotus",
+          "stage": "validation_data",
+          "path": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\data\\validation\\experimental_feedback.json",
+          "line_number": 239,
+          "line_excerpt": "\"lotus_starch_g\": 0.0,"
+        },
+        {
+          "term": "lotus",
+          "stage": "literature_workspace",
+          "path": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\literature_workspace\\02_registry\\paper_registry.csv",
+          "line_number": 27,
+          "line_excerpt": "manual_6ca6be5f68,Structure and physicochemical properties of starches in lotus ( Nelumbo nucifera  Gaertn.) rhizome,2013,,s08_materials,pdf,carded,True,03_parsed_text\\manual_6ca6be5f68.pdf"
+        },
+        {
+          "term": "lotus",
+          "stage": "literature_workspace",
+          "path": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\literature_workspace\\02_registry\\paper_registry.json",
+          "line_number": 523,
+          "line_excerpt": "\"title\": \"Structure and physicochemical properties of starches in lotus ( Nelumbo nucifera  Gaertn.) rhizome\","
+        },
+        {
+          "term": "lotus rhizome starch",
+          "stage": "literature_workspace",
+          "path": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\literature_workspace\\08_review\\claim_review_ai_assessment.json",
+          "line_number": 8,
+          "line_excerpt": "\"component\": \"lotus rhizome starch\","
+        },
+        {
+          "term": "Lotus rhizome starch",
+          "stage": "literature_workspace",
+          "path": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\literature_workspace\\08_review\\claim_review_ai_assessment.md",
+          "line_number": 25,
+          "line_excerpt": "### Lotus rhizome starch"
+        },
+        {
+          "term": "lotus",
+          "stage": "literature_workspace",
+          "path": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\literature_workspace\\08_review\\claim_review_ai_assessment.md",
+          "line_number": 29,
+          "line_excerpt": "- Reason: The lotus starch paper supports thermal/structural properties and phase stability above the S8 window, but it does not directly support proton conductivity."
+        },
+        {
+          "term": "lotus",
+          "stage": "literature_workspace",
+          "path": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\literature_workspace\\08_review\\claim_review_ai_assessment.md",
+          "line_number": 71,
+          "line_excerpt": "- All Top-1 claims for lotus starch, PVA, attapulgite, PA, glycerol."
+        },
+        {
+          "term": "lotus",
+          "stage": "literature_workspace",
+          "path": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\literature_workspace\\04_paper_cards\\materials\\manual_6ca6be5f68_card.json",
+          "line_number": 5,
+          "line_excerpt": "\"title\": \"Structure and physicochemical properties of starches in lotus ( Nelumbo nucifera  Gaertn.) rhizome\","
+        },
+        {
+          "term": "Lotus",
+          "stage": "literature_workspace",
+          "path": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\literature_workspace\\04_paper_cards\\materials\\manual_6ca6be5f68_card.json",
+          "line_number": 10,
+          "line_excerpt": "\"base_material\": \"Lotus (Nelumbo nucifera Gaertn.) rhizome starch (cultivars Meirenhong and Wawalian)\","
+        },
+        {
+          "term": "lotus",
+          "stage": "literature_workspace",
+          "path": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\literature_workspace\\04_paper_cards\\materials\\manual_6ca6be5f68_card.json",
+          "line_number": 52,
+          "line_excerpt": "\"text_snippet\": \"ORIGINAL RESEARCH Huaguang Yu 1 , Libao Cheng 2 , Jingjing Yin 2 , Shunjun Yan 1 , Kejun Liu 1 , Fengmin Zhang 3 , Bin Xu 3 & Liangjun Li 2 Keywords Crystalline structure, lotus ( Nelumbo nucifera Gae\""
+        },
+        {
+          "term": "Lotus",
+          "stage": "literature_workspace",
+          "path": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\literature_workspace\\04_paper_cards\\materials\\manual_6ca6be5f68_card.json",
+          "line_number": 57,
+          "line_excerpt": "\"text_snippet\": \"Lotus ( Nelumbo nucifera  Gaertn.), a member of the family Nymphaeaceae, is an aquatic herb vegetable. Lotus has been wildly cultivated in China, Japan, and other South- east Asian countries for its m\""
+        },
+        {
+          "term": "lotus",
+          "stage": "literature_workspace",
+          "path": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\literature_workspace\\04_paper_cards\\materials\\manual_6ca6be5f68_card.json",
+          "line_number": 62,
+          "line_excerpt": "\"text_snippet\": \"Plant materials Two cultivars of lotus, Meirenhong and Wawalian, were obtained from the experimental base of aquatic vegetables of Yangzhou University, Yangzhou, Jiangsu Province, P. R. China. Meirenh\""
+        },
+        {
+          "term": "lotus rhizome",
+          "stage": "literature_workspace",
+          "path": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\literature_workspace\\04_paper_cards\\materials\\manual_6ca6be5f68_card.json",
+          "line_number": 67,
+          "line_excerpt": "\"text_snippet\": \"XRD patterns of starches isolated from different lotus rhizome X-ray diffraction is one of the most effective methods in studying the structure of native starch, especially in ª  2013 The Authors.  Fo\""
+        }
+      ],
+      "violations": [],
+      "allowed_claim_strength": "moderate",
+      "allowed_claim": "LLM selected and recombined lotus-root-starch evidence from a broad biomass / polymer / clay literature pool.",
+      "forbidden_claim": "Do not claim that the LLM independently invented lotus-root starch; the term was reachable via the S08 literature pool."
+    }
+  }
+}

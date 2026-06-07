@@ -1,0 +1,66 @@
+{
+  "paper_id": "manual_b197cdc3d3",
+  "stage_target": "mechanism",
+  "bibliography": {
+    "title": "Review Nanoconfined ion and water transport through nanoporous atomically thin membranes: Fabrication and mechanism",
+    "authors": "Shengping Zhang, 1   Jiaolai Jiang, 1   and Hui Deng 1, * 1 Institute of Materials, China Academy of Engineering Physics, Mianyang, China *Correspondence:  denghui@caep.cn https://doi.org/10.1016/j.xcrp.2025.102465",
+    "year": 0
+  },
+  "system_identity": {
+    "base_material": "nanoporous atomically thin membranes (NATMs)",
+    "dopant": "",
+    "form_factor": "nanopore",
+    "other": "graphene, hexagonal boron nitride (h-BN), transition metal dichalcogenides (TMDs)"
+  },
+  "measurement_scope": {
+    "temp_range": "",
+    "freq_range": "",
+    "humidity": "",
+    "other_conditions": ""
+  },
+  "mechanism_relevant_findings": [
+    "The extraordinary water flux achieved by aquaporins is three orders of magnitude higher than that predicted by classical fluid mechanics.",
+    "The presence of engineered nanopores introduces intriguing properties in ion and water transport that differ from those observed in bulk systems."
+  ],
+  "numerical_findings": [],
+  "eis_shape_findings": [],
+  "arrhenius_vtf_findings": [],
+  "limitations": [],
+  "relevance_judgement": {
+    "score": 0.8,
+    "reason": "The review emphasizes the mechanisms governing nanofluidic transport but lacks specific experimental data."
+  },
+  "supports_axes": {
+    "transport": "Grotthuss_hopping",
+    "phase_structure": "single_continuous_phase",
+    "temperature_dependence": "VTF"
+  },
+  "conflicts_axes": {},
+  "trace_spans": [
+    {
+      "page": null,
+      "section": "",
+      "text_snippet": "SUMMARY Nanofluidic transport exhibits numerous intriguing phenomena distinct from bulk systems, due to the break- down of continuum equations at nanoconfinement. Recently, nanoporous atomically thin "
+    },
+    {
+      "page": null,
+      "section": "INTRODUCTION",
+      "text_snippet": "Nanofluidic mass transport plays a ubiquitous role in almost every intercellular communication, where biological channels are crucial by finely tuning ion and water transport across liquid bilayers. F"
+    },
+    {
+      "page": null,
+      "section": "ll OPEN ACCESS",
+      "text_snippet": "transport, 12   applications, 13   and nanofluidics in other low-dimen- sion systems 14 , 15   have appeared in the literature. In this review, we start by summarizing the historical development and m"
+    },
+    {
+      "page": null,
+      "section": "Review ll OPEN ACCESS",
+      "text_snippet": "Figure 2. Fabrication of multipores in atomically thin membrane by top-down methods (A) Schematic diagram of etching via oxygen plasma. From Surwade et al. 21   Copyright 2015, Springer Nature. (B) ST"
+    },
+    {
+      "page": null,
+      "section": "Review",
+      "text_snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+target_candidate_group: lotus_root_starch
+
+# 触发审计的目标候选词（大小写不敏感）。
+terms:
+  - lotus
+  - "lotus root"
+  - "lotus rhizome"
+  - "lotus-root starch"
+  - "lotus rhizome starch"
+  - Nelumbo
+  - "Nelumbo nucifera"
+  - 藕粉
+  - 莲藕淀粉
+
+# 每个 discovery mode 下，**S09 之前**（即 S03/S04/S05/S06/S06b/S07）允许出现
+# 这些词的来源 stage / 路径前缀。stage 标签由 source_term_auditor 根据扫描
+# 路径自动归类。
+allowed_sources_by_mode:
+  blind_transfer:
+    allowed_before_s09: []
+
+  broad_literature_pool_selection:
+    allowed_before_s09:
+      - s08_literature_scout_materials
+      - literature_workspace
+      - audit/candidate_terms
+
+  human_seeded_ranking:
+    allowed_before_s09:
+      - user_candidates
+      - s08_literature_scout_materials
+      - literature_workspace
+      - audit/candidate_terms
+
+  retrospective_explanation:
+    allowed_before_s09:
+      - user_candidates
+      - validation_data
+      - s08_literature_scout_materials
+      - literature_workspace
+      - audit/candidate_terms

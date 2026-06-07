@@ -1,0 +1,57 @@
+{
+  "paper_id": "manual_c0c1101384",
+  "stage_target": "materials",
+  "bibliography": {
+    "title": "Preparation and properties of chitosan/organic-modified attapulgite composite proton exchange membranes for fuel cell applications",
+    "authors": "Funding information Hubei provincial department of education, Grant/Award Numbers: Q20192705, 2018ACA152",
+    "year": 0
+  },
+  "system_identity": {
+    "base_material": "chitosan",
+    "dopant": "organic-modified attapulgite",
+    "form_factor": "composite membrane",
+    "other": ""
+  },
+  "measurement_scope": {
+    "temp_range": "",
+    "freq_range": "",
+    "humidity": "",
+    "other_conditions": ""
+  },
+  "mechanism_relevant_findings": [
+    "The proton conductivity of the CS/QATP composite membranes is significantly higher than that of pure chitosan film."
+  ],
+  "numerical_findings": [
+    {
+      "metric": "proton conductivity",
+      "value": "higher than pure CS film",
+      "unit": "",
+      "conditions": "with 2 wt% QATP"
+    }
+  ],
+  "eis_shape_findings": [],
+  "arrhenius_vtf_findings": [],
+  "limitations": [],
+  "relevance_judgement": {
+    "score": 0.8,
+    "reason": "The study provides insights into the enhancement of proton conductivity through composite materials."
+  },
+  "supports_axes": {
+    "transport": "Grotthuss_hopping",
+    "phase_structure": "single_continuous_phase",
+    "temperature_dependence": "pure_Arrhenius"
+  },
+  "conflicts_axes": {},
+  "trace_spans": [
+    {
+      "page": null,
+      "section": "",
+      "text_snippet": "R E S E A R C H A R T I C L E Fuqiang Hu | Fei Zhong | Sheng Wen | Genwen Zheng | Chunli Gong | Caiqin Qin | Hai Liu (CS/QATP) were prepared by the incorporation of organic-modified attapulgite (QATP)"
+    },
+    {
+      "page": null,
+      "section": "REFERENCES",
+      "text_snippet": "[1] M. N. V. Ravi Kumar, R. A. A. Muzzarelli, C. Muzzarelli, H. Sashiwa, A. J. Domb,  Chem. Rev.  2004 ,  104 , 6017. [2] M. Rinaudo,  Prog. Polym. Sci.  2006 ,  31 , 603. [3] N. Shaari, S. K. Kamarud"
+    }
+  ]
+}

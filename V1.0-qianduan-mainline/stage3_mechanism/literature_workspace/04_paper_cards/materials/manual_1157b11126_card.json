@@ -1,0 +1,76 @@
+{
+  "paper_id": "manual_1157b11126",
+  "stage_target": "materials",
+  "bibliography": {
+    "title": "International   Journal   of   Biological   Macromolecules",
+    "authors": "",
+    "year": 0
+  },
+  "system_identity": {
+    "base_material": "polyvinyl alcohol",
+    "dopant": "starch",
+    "form_factor": "blend films",
+    "other": ""
+  },
+  "measurement_scope": {
+    "temp_range": "",
+    "freq_range": "",
+    "humidity": "relative humidity",
+    "other_conditions": ""
+  },
+  "mechanism_relevant_findings": [
+    "OH groups on starch and PVA formed hydrogen bonding interactions, which could improve the compatibility of the two components."
+  ],
+  "numerical_findings": [
+    {
+      "metric": "tensile strength",
+      "value": 9,
+      "unit": "MPa",
+      "conditions": "at 50% starch content"
+    },
+    {
+      "metric": "elongation at break",
+      "value": 1000,
+      "unit": "%",
+      "conditions": "at 50% starch content"
+    }
+  ],
+  "eis_shape_findings": [],
+  "arrhenius_vtf_findings": [],
+  "limitations": [
+    "The study does not quantify the exact relationship between water uptake and proton transport."
+  ],
+  "relevance_judgement": {
+    "score": 0.3,
+    "reason": "The paper discusses polymer blends but lacks detailed analysis of proton transport mechanisms."
+  },
+  "supports_axes": {},
+  "conflicts_axes": {},
+  "trace_spans": [
+    {
+      "page": null,
+      "section": "",
+      "text_snippet": "International   Journal   of   Biological   Macromolecules   96   (2017)   518–523 Contents   lists   available   at   ScienceDirect j   ourna   l   ho   me   pa   g   e:   www.elsevier.com/locate/ijb"
+    },
+    {
+      "page": null,
+      "section": "Fabrication   and   properties   of   polyvinyl   alcohol/starch   blend   films: Effect",
+      "text_snippet": ""
+    },
+    {
+      "page": null,
+      "section": "of   composition   and   humidity",
+      "text_snippet": ""
+    },
+    {
+      "page": null,
+      "section": "Huafeng   Tian   a , b ,    Jiaan   Yan   a ,    A.    Varada   Rajulu   c ,   Aimin   Xiang   a , ∗ ,    Xiaogang   Luo   d , ∗",
+      "text_snippet": "a  School   of   Material   and   Mechanical   Engineering,   Beijing   Technology   and   Business   University,   Beijing   100048,   China b  Key   Laboratory   of   Recycling   and   Eco-treatment"
+    },
+    {
+      "page": null,
+      "section": "1.   Introduction",
+      "text_snippet": "The   wide   usage   of   petroleum   based   polymers   as   packaging materials,   such   as   polyethylene,   polypropylene,   polystyrene,   etc. has   brought   serious   white   pollutions.   Na"
+    }
+  ]
+}

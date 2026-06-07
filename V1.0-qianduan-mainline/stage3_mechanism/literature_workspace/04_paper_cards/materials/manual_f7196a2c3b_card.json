@@ -1,0 +1,104 @@
+{
+  "paper_id": "manual_f7196a2c3b",
+  "stage_target": "materials",
+  "bibliography": {
+    "title": "Hydrogen ion conducting starch-chitosan blend based electrolyte for application in electrochemical devices",
+    "authors": "a  Institute of Graduate Studies, University of Malaya, 50603 Kuala Lumpur, Malaysia b  Centre for Foundation Studies in Science, University of Malaya, 50603 Kuala Lumpur, Malaysia",
+    "year": 2014
+  },
+  "system_identity": {
+    "base_material": "Starch–chitosan blend polymer electrolyte (80 wt.% starch / 20 wt.% chitosan).",
+    "dopant": "NH4Cl (proton donor) and glycerol plasticizer (highest conductivity reported at 35 wt.% glycerol in prior work referenced as P7).",
+    "form_factor": "Solution-cast solid polymer electrolyte (film).",
+    "other": "Starch dissolved in 1% acetic acid; chitosan >75% deacetylated; corn starch used."
+  },
+  "measurement_scope": {
+    "temp_range": "",
+    "freq_range": "",
+    "humidity": "",
+    "other_conditions": "Electrolytes prepared by solution casting; materials processing included 80°C dissolution for starch in 1% acetic acid for 20 min (Experimental 2.1, truncated)."
+  },
+  "mechanism_relevant_findings": [
+    "Transference number measurements indicate ions are the dominant conducting species in the electrolyte (Abstract).",
+    "The cation transference number for the highest-conducting electrolyte is reported as t+ = 0.56 (Abstract).",
+    "NH4Cl is described as a proton donor for polymer electrolytes in this system (Introduction)."
+  ],
+  "numerical_findings": [
+    {
+      "metric": "Room-temperature ionic conductivity (highest conducting electrolyte, from authors' previous work cited)",
+      "value": "5.11e-4 ± 1.60e-4",
+      "unit": "S cm^-1",
+      "conditions": "Starch–chitosan–NH4Cl plasticized with 35 wt.% glycerol (P7 electrolyte); referenced in Introduction citing previous work [19]."
+    },
+    {
+      "metric": "Cation transference number",
+      "value": 0.56,
+      "unit": "",
+      "conditions": "Highest conducting electrolyte (Abstract)."
+    },
+    {
+      "metric": "Primary proton battery open-circuit potential stability duration",
+      "value": 48,
+      "unit": "h",
+      "conditions": "OCP monitored for 48 h (Abstract)."
+    },
+    {
+      "metric": "Primary proton battery OCP",
+      "value": "1.54 ± 0.02",
+      "unit": "V",
+      "conditions": "Reported over 48 h (Abstract)."
+    },
+    {
+      "metric": "Secondary proton battery OCP",
+      "value": "1.58 ± 0.01",
+      "unit": "V",
+      "conditions": "Reported over 48 h (Abstract)."
+    },
+    {
+      "metric": "Secondary proton battery cycle count",
+      "value": 40,
+      "unit": "cycles",
+      "conditions": "Charged/discharged for 40 cycles (Abstract)."
+    }
+  ],
+  "eis_shape_findings": [],
+  "arrhenius_vtf_findings": [],
+  "limitations": [
+    "No impedance spectroscopy frequency range, temperature range, or Nyquist/Bode features are provided in the supplied truncated text.",
+    "No Arrhenius or VTF analysis (activation energy or fit form) is provided in the supplied truncated text.",
+    "Humidity/water-activity control conditions are not stated in the supplied truncated text."
+  ],
+  "relevance_judgement": {
+    "score": 0.55,
+    "reason": "The excerpt identifies a proton-donor salt system and provides ion/cation transference information and conductivity magnitude but lacks EIS/Arrhenius/VTF details needed for mechanism discrimination."
+  },
+  "supports_axes": {},
+  "conflicts_axes": {},
+  "trace_spans": [
+    {
+      "page": null,
+      "section": "",
+      "text_snippet": "A R T I C L E I N F O Article history: Received 20 October 2014 Received in revised form 19 December 2014 Accepted 27 January 2015 Available online 28 January 2015 Keywords: Solid polymer electrolyte "
+    },
+    {
+      "page": null,
+      "section": "1. Introduction",
+      "text_snippet": "Proton conducting electrolytes have long been recognized as the initiative to lithium ion conductors in electrochemical device applications  [1 – 3] . This is because of the small radius of proton (H "
+    },
+    {
+      "page": null,
+      "section": "Electrochimica Acta",
+      "text_snippet": "journal homepage:  www.elsevier.com/locate/electacta"
+    },
+    {
+      "page": null,
+      "section": "2. Experimental",
+      "text_snippet": "2.1. Electrolytes preparation From our previous report  [27] , the blend of 80 wt.% starch and 20 wt.% chitosan has been found to be the most amorphous blend compared to other ratio of starch-chitosan"
+    },
+    {
+      "page": null,
+      "section": "3. Results and Discussion",
+      "text_snippet": "3.1. Electrolytes characterization 3.1.1. XRD analysis Fig. 3  shows the XRD patterns of NH 4 Cl salt and selected electrolytes in salted system. In the XRD pattern of NH 4 Cl, crystalline peaks appea"
+    }
+  ]
+}

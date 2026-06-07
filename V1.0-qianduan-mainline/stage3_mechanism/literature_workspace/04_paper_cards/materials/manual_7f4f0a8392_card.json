@@ -1,0 +1,69 @@
+{
+  "paper_id": "manual_7f4f0a8392",
+  "stage_target": "materials",
+  "bibliography": {
+    "title": "M O Acc OH Acc OH               X M O | M O trap Acc OH Acc OH K        (11)    Association between the acceptor and protons and/or oxygen vacancies has already been addressed  in the section on hydration for doped BaCeO 3 , and it could be argued that discussion of trapping  effects rather belongs in that section since it includes thermodynamic considerations. However, it  has traditionally been discussed along with mobility.",
+    "authors": "",
+    "year": 0
+  },
+  "system_identity": {
+    "base_material": "BaCeO3",
+    "dopant": "not specified",
+    "form_factor": "not specified",
+    "other": "not specified"
+  },
+  "measurement_scope": {
+    "temp_range": "high temperatures",
+    "freq_range": "not specified",
+    "humidity": "not specified",
+    "other_conditions": "water-based environments"
+  },
+  "mechanism_relevant_findings": [
+    "Oxides dissolve protons that become mobile at high temperatures resulting in proton conduction.",
+    "Effects of grain boundaries and trapping on proton transport are outlined."
+  ],
+  "numerical_findings": [],
+  "eis_shape_findings": [],
+  "arrhenius_vtf_findings": [
+    "Proton conduction mechanisms are discussed with a basis in the thermodynamics of proton dissolution."
+  ],
+  "limitations": [
+    "The study appears to be a review and may not present original experimental results."
+  ],
+  "relevance_judgement": {
+    "score": 0.7,
+    "reason": "The paper provides valuable insights into high temperature proton conduction mechanisms."
+  },
+  "supports_axes": {
+    "transport": "Grotthuss_hopping",
+    "temperature_dependence": "VTF"
+  },
+  "conflicts_axes": {},
+  "trace_spans": [
+    {
+      "page": null,
+      "section": "High Temperature Proton Conductors – Fundamentals and",
+      "text_snippet": ""
+    },
+    {
+      "page": null,
+      "section": "Functionalities",
+      "text_snippet": "Reidar Haugsrud Department of Chemistry, Centre for Materials Science and Nanotechnology, University of Oslo, FERMiO, Gaustdalleen 21, NO-0349 Oslo, Norway reidarha@kjemi.uio.no Keywords:  high temper"
+    },
+    {
+      "page": null,
+      "section": "1. Introduction",
+      "text_snippet": "Environmental aspects are central to future energy conversion and technologies with hydrogen as  the major energy carrier should take over for today’s use of fossil based sources. Development of a  va"
+    },
+    {
+      "page": null,
+      "section": "            h OH v 2 Acc O O ' M                   (6)",
+      "text_snippet": "Diffusion Foundations Vol. 8 37 To derive thermodynamic parameters for the defect reactions of the majority defects from  experimental data, the concentration of each defect must be resolved, ideally "
+    },
+    {
+      "page": null,
+      "section": " ",
+      "text_snippet": "X M O | In measurements relying on proton transport, e.g. conductivity, trapping should be manifested in  concave temperature dependences in an Arrhenius representation. Seemingly this is difficult to"
+    }
+  ]
+}

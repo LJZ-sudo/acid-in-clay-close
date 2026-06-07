@@ -1,0 +1,9 @@
+{
+  "top1": "Starch/PVA/organic-modified attapulgite/phosphoric acid membrane",
+  "top1_score": 0.8905,
+  "top2": "Chitosan/organic-modified attapulgite/phosphoric acid composite",
+  "top2_score": 0.8435,
+  "score_gap": 0.047,
+  "ranking_robust": false,
+  "warning": "Top-1 vs Top-2 gap is only 0.047; ranking may change with small weight perturbations."
+}

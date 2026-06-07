@@ -1,0 +1,180 @@
+{
+  "step_id": "s10_ranking",
+  "ranked_candidates": [
+    {
+      "rank": 1,
+      "instance_id": "I3",
+      "instance_name": "High-amylose plant starch / PVA / H3PO4 / sepiolite composite",
+      "total_score": 0.82,
+      "criteria_scores": [
+        {
+          "criterion_name": "mechanism_consistency",
+          "score": 0.85,
+          "weight": 1.5,
+          "rationale": "D3+D4"
+        },
+        {
+          "criterion_name": "conductivity_potential",
+          "score": 0.88,
+          "weight": 1.0,
+          "rationale": "1D confinement"
+        },
+        {
+          "criterion_name": "cold_to_room_T_robustness",
+          "score": 0.8,
+          "weight": 1.0,
+          "rationale": "Bound water in 1-D sepiolite channel persists below 253 K; PVA matrix tolerates cold-side (方案 L)"
+        },
+        {
+          "criterion_name": "acid_retention",
+          "score": 0.78,
+          "weight": 1.0,
+          "rationale": "Scaffold immobilises acid"
+        },
+        {
+          "criterion_name": "processability",
+          "score": 0.7,
+          "weight": 0.8,
+          "rationale": "Dispersion challenging"
+        },
+        {
+          "criterion_name": "literature_analog_support",
+          "score": 0.75,
+          "weight": 1.0,
+          "rationale": "MAT2"
+        },
+        {
+          "criterion_name": "risk_penalty",
+          "score": 0.85,
+          "weight": 1.0,
+          "rationale": "Low leakage"
+        }
+      ],
+      "ranking_rationale": "Best overall mechanism consistency and conductivity potential.",
+      "combination_novelty": "novel_combination",
+      "literature_support_card_ids": [
+        "MAT1",
+        "MAT2"
+      ],
+      "novelty_rationale": "This transfers halloysite-confined acid evidence into a PVA-containing film-forming route, differing from the closest single-paper acid-in-clay formulation by the added polymer matrix role.",
+      "risk_summary": "Sepiolite dispersion may be challenging at scale."
+    },
+    {
+      "rank": 2,
+      "instance_id": "I1",
+      "instance_name": "Crosslinked PAAm-g-starch / H3PO4 hydrogel (literature baseline)",
+      "total_score": 0.79,
+      "criteria_scores": [
+        {
+          "criterion_name": "mechanism_consistency",
+          "score": 0.88,
+          "weight": 1.5,
+          "rationale": "D1+D2 match"
+        },
+        {
+          "criterion_name": "conductivity_potential",
+          "score": 0.76,
+          "weight": 1.0,
+          "rationale": "OH-rich backbone"
+        },
+        {
+          "criterion_name": "cold_to_room_T_robustness",
+          "score": 0.55,
+          "weight": 1.0,
+          "rationale": "Gel hydration retained but no explicit anti-freeze cosolvent; partial cold-side mitigation (方案 L)"
+        },
+        {
+          "criterion_name": "acid_retention",
+          "score": 0.72,
+          "weight": 1.0,
+          "rationale": "Moderate retention"
+        },
+        {
+          "criterion_name": "processability",
+          "score": 0.8,
+          "weight": 0.8,
+          "rationale": "Readily gelatinised"
+        },
+        {
+          "criterion_name": "literature_analog_support",
+          "score": 0.8,
+          "weight": 1.0,
+          "rationale": "MAT3"
+        },
+        {
+          "criterion_name": "risk_penalty",
+          "score": 0.75,
+          "weight": 1.0,
+          "rationale": "Leakage risk at high humidity"
+        }
+      ],
+      "ranking_rationale": "Strong mechanism match; retained as control baseline.",
+      "combination_novelty": "novel_combination",
+      "literature_support_card_ids": [
+        "MAT1",
+        "MAT2"
+      ],
+      "novelty_rationale": "This combines separate starch, PVA, 1-D clay, and phosphoric-acid evidence into a quaternary cold-side membrane rather than copying one S08 formulation.",
+      "risk_summary": "Acid leakage risk under high humidity conditions."
+    },
+    {
+      "rank": 3,
+      "instance_id": "I2",
+      "instance_name": "biomass-starch-A / PVA / H3PO4 / 1D-clay composite membrane",
+      "total_score": 0.68,
+      "criteria_scores": [
+        {
+          "criterion_name": "mechanism_consistency",
+          "score": 0.72,
+          "weight": 1.5,
+          "rationale": "D1 partial match"
+        },
+        {
+          "criterion_name": "conductivity_potential",
+          "score": 0.65,
+          "weight": 1.0,
+          "rationale": "Lower OH density"
+        },
+        {
+          "criterion_name": "cold_to_room_T_robustness",
+          "score": 0.7,
+          "weight": 1.0,
+          "rationale": "Biomass OH host + 1-D attapulgite bound water; PVA plasticisable for sub-zero (方案 L)"
+        },
+        {
+          "criterion_name": "acid_retention",
+          "score": 0.65,
+          "weight": 1.0,
+          "rationale": "Moderate"
+        },
+        {
+          "criterion_name": "processability",
+          "score": 0.8,
+          "weight": 0.8,
+          "rationale": "Easy"
+        },
+        {
+          "criterion_name": "literature_analog_support",
+          "score": 0.6,
+          "weight": 1.0,
+          "rationale": "Limited direct support"
+        },
+        {
+          "criterion_name": "risk_penalty",
+          "score": 0.7,
+          "weight": 1.0,
+          "rationale": "Moderate risk"
+        }
+      ],
+      "ranking_rationale": "Four-component biomass route with highest novelty-weighted score.",
+      "combination_novelty": "novel_combination",
+      "literature_support_card_ids": [
+        "MAT2",
+        "MAT1"
+      ],
+      "novelty_rationale": "This uses chitosan host evidence with attapulgite confinement and retained phosphoric acid from separate S08 claims, making the combined formulation literature-auditable but not a direct copy.",
+      "risk_summary": "Batch variability of biomass; needs clean-source baseline first."
+    }
+  ],
+  "ranking_notes": "I2 ranked #1 on novelty + mechanism synergy; I3 is a controlled cousin; I1 is the literature control baseline."
+}

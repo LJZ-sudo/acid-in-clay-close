@@ -1,0 +1,74 @@
+{
+  "trends_with_transitions": [
+    {
+      "trend_id": "trend::sigma_299K_interp_S_cm::R",
+      "target_metric": "sigma_299K_interp_S_cm",
+      "predictor": "R",
+      "candidate_transition_points": [
+        {
+          "predictor_value": 0.1521902146952619,
+          "slope_below": 32.053728029329754,
+          "slope_above": 0.15345749546725282,
+          "method": "segmented_regression_brute_force"
+        }
+      ],
+      "strength": "moderate"
+    },
+    {
+      "trend_id": "trend::sigma_299K_interp_S_cm::N",
+      "target_metric": "sigma_299K_interp_S_cm",
+      "predictor": "N",
+      "candidate_transition_points": [
+        {
+          "predictor_value": 4.492933333333334,
+          "slope_below": 0.6951448589269399,
+          "slope_above": 0.05625554355332902,
+          "method": "segmented_regression_brute_force"
+        }
+      ],
+      "strength": "strong"
+    },
+    {
+      "trend_id": "trend::sigma_233K_interp_S_cm::R",
+      "target_metric": "sigma_233K_interp_S_cm",
+      "predictor": "R",
+      "candidate_transition_points": [
+        {
+          "predictor_value": 0.1712623980890066,
+          "slope_below": -19.442055619320772,
+          "slope_above": -0.178780463244431,
+          "method": "segmented_regression_brute_force"
+        }
+      ],
+      "strength": "moderate"
+    },
+    {
+      "trend_id": "trend::sigma_233K_interp_S_cm::N",
+      "target_metric": "sigma_233K_interp_S_cm",
+      "predictor": "N",
+      "candidate_transition_points": [
+        {
+          "predictor_value": 3.892,
+          "slope_below": -2.9542411931927326,
+          "slope_above": 0.21283050764186726,
+          "method": "segmented_regression_brute_force"
+        }
+      ],
+      "strength": "moderate"
+    },
+    {
+      "trend_id": "trend::best_arrhenius_ea_eV::R",
+      "target_metric": "best_arrhenius_ea_eV",
+      "predictor": "R",
+      "candidate_transition_points": [
+        {
+          "predictor_value": 0.1521902146952619,
+          "slope_below": 5.255455301445202,
+          "slope_above": 0.0205378706924786,
+          "method": "segmented_regression_brute_force"
+        }
+      ],
+      "strength": "moderate"
+    }
+  ]
+}

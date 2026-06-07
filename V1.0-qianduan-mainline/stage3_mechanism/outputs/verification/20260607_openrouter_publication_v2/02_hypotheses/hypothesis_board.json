@@ -1,0 +1,111 @@
+{
+  "step_id": "s04_hypotheses",
+  "hypotheses": [
+    {
+      "hypothesis_id": "H1",
+      "mechanism_label": "Confined acid-water network with VTF-governed hybrid hopping",
+      "description": "Proton transport occurs in a continuous phosphoric-acid/water network confined within and between attapulgite fibrous channels, where structural relaxation of the hydrogen-bond network controls mobility. The dominant conductivity variation is set more by how much connected liquid-like carrier medium is loaded into the host (N) than by the acid/water ratio R alone, while a low-temperature dynamical arrest produces an apparent breakpoint.",
+      "key_prediction": "When N is increased at fixed R, conductivity should rise strongly with only modest change in fitted activation energy, and the temperature dependence should remain predominantly VTF-like with a crossover near the observed breakpoint window rather than switching to a truly different transport mechanism.",
+      "mechanism_axes": {
+        "transport": "hybrid_grotthuss_vehicular",
+        "phase_structure": "single_continuous_phase",
+        "temperature_dependence": "VTF",
+        "transition_topology": "single_transition",
+        "carrier_medium_state": "single_confined_population"
+      },
+      "supporting_evidence_ids": [
+        "V2-E2",
+        "V2-E4",
+        "V2-E6",
+        "V2-E7",
+        "V2-E10",
+        "V2-E12",
+        "E1",
+        "E2"
+      ],
+      "conflicting_evidence_ids": [
+        "V2-E11"
+      ],
+      "prior_plausibility": 0.83
+    },
+    {
+      "hypothesis_id": "H2",
+      "mechanism_label": "Two-population bound-water crossover with piecewise proton transport",
+      "description": "The carrier medium comprises at least two confined acid-water populations in attapulgite: a more weakly bound, higher-mobility population and a more strongly bound interfacial population. Above the breakpoint, proton motion uses a mixed hopping/vehicular pathway through the weakly bound network; below it, transport becomes dominated by the strongly bound population and shows a much higher apparent activation barrier.",
+      "key_prediction": "Independent probes of water state should reveal two distinct confined populations, and samples with a larger fraction of weakly bound acid-water should show both higher room-temperature conductivity and a sharper transport crossover near 230-240 K.",
+      "mechanism_axes": {
+        "transport": "hybrid_grotthuss_vehicular",
+        "phase_structure": "multi_threshold_confined_domains",
+        "temperature_dependence": "piecewise_Arrhenius",
+        "transition_topology": "single_transition",
+        "carrier_medium_state": "two_populations_strong_weak_bound"
+      },
+      "supporting_evidence_ids": [
+        "V2-E11",
+        "V2-E12",
+        "E1",
+        "E2"
+      ],
+      "conflicting_evidence_ids": [
+        "V2-E7",
+        "V2-E10"
+      ],
+      "prior_plausibility": 0.71
+    },
+    {
+      "hypothesis_id": "H3",
+      "mechanism_label": "Interfacial proton hopping on acid-decorated attapulgite surfaces",
+      "description": "Most protons move along interfacial hydrogen-bond chains anchored to attapulgite surface groups and adsorbed phosphate species, rather than through a bulk-like liquid channel. In this view, N mainly tunes the extent and connectivity of wetted surface pathways, while R has weak influence because excess acid changes speciation more than it creates new interfacial hopping sites.",
+      "key_prediction": "Conductivity should scale more strongly with accessible clay surface wetting/connectivity than with total free liquid content, and spectroscopic signatures of strongly adsorbed phosphate/water should correlate better with sigma than bulk acid composition does.",
+      "mechanism_axes": {
+        "transport": "Grotthuss_hopping",
+        "phase_structure": "core_shell_interfacial",
+        "temperature_dependence": "Arrhenius_with_MeyerNeldel_coupling",
+        "transition_topology": "single_transition",
+        "carrier_medium_state": "interfacial_only"
+      },
+      "supporting_evidence_ids": [
+        "V2-E2",
+        "V2-E3",
+        "V2-E5",
+        "V2-E6",
+        "V2-E8",
+        "V2-E12",
+        "E3"
+      ],
+      "conflicting_evidence_ids": [
+        "V2-E10",
+        "V2-E13"
+      ],
+      "prior_plausibility": 0.56
+    },
+    {
+      "hypothesis_id": "H4",
+      "mechanism_label": "Loading-driven percolation of confined acid domains with VTF relaxation",
+      "description": "The dominant physics is a percolation-like increase in connectivity of confined acid-water domains as liquid loading N increases within the attapulgite matrix. Once a connected network forms, proton transport is liquid-like and relaxation-coupled (VTF), while the low-temperature breakpoint reflects partial loss of percolation through freezing or immobilization of the most mobile links.",
+      "key_prediction": "There should be a sharper conductivity gain versus N near a connectivity threshold than versus R, and below the breakpoint the effective conducting fraction should collapse more than the intrinsic mobility of the remaining phase.",
+      "mechanism_axes": {
+        "transport": "ionic_liquid_like",
+        "phase_structure": "single_percolation_threshold",
+        "temperature_dependence": "VTF",
+        "transition_topology": "single_transition",
+        "carrier_medium_state": "single_confined_population"
+      },
+      "supporting_evidence_ids": [
+        "V2-E2",
+        "V2-E4",
+        "V2-E10",
+        "V2-E12",
+        "V2-E13",
+        "E1",
+        "E2"
+      ],
+      "conflicting_evidence_ids": [
+        "V2-E8",
+        "V2-E11"
+      ],
+      "prior_plausibility": 0.64
+    }
+  ],
+  "reasoning_notes": "The hypotheses compete mainly on transport mode (hybrid hopping/vehicular vs interfacial Grotthuss vs ionic-liquid-like), phase structure (continuous phase vs percolative confined domains vs interfacial core-shell), and interpretation of the breakpoint (relaxation crossover within one confined population vs exchange between strong/weak bound populations). VTF dominance strongly motivates relaxation-coupled pictures, while the breakpoint and split activation energies leave room for a two-population confined-medium hypothesis."
+}

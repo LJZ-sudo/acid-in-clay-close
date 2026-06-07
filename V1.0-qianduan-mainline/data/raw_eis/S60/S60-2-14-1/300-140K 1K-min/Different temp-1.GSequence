@@ -1,0 +1,42 @@
+<?xml version="1.0" standalone="yes"?>
+<GamrySequence>
+  <name>Gamry Sequence</name>
+  <element>
+    <name>Loop (Cycle)</name>
+    <classname>LOOPBYCYCLE</classname>
+    <type>loop</type>
+    <description>Causes all child experiments to be looped a user specified number of times</description>
+    <parameters>
+      <explain_iquant tag="LOOPCOUNT" desc="Loop Count (#)" value="60" variable="None" />
+    </parameters>
+    <element>
+      <name>Potentiostatic EIS</name>
+      <classname>EISPOT</classname>
+      <type>normal</type>
+      <description>Performs an impedance scan under potentiostatic control</description>
+      <parameters>
+        <explain_label tag="TITLE" desc="Test Identifier" value="Potentiostatic EIS" />
+        <explain_output tag="OUTPUT" desc="Output File" value="S60-2-14-1-300-140K 1K-min.DTA" />
+        <explain_notes tag="NOTES" desc="Notes..." value="" />
+        <explain_poten tag="VDC" desc="DC Voltage (V)" value="0" versus="1" variable="None" />
+        <explain_quant tag="FREQINIT" desc="Initial Freq. (Hz)" value="300000" variable="None" />
+        <explain_quant tag="FREQFINAL" desc="Final Freq. (Hz)" value="1" variable="None" />
+        <explain_quant tag="PTSPERDEC" desc="Points/decade" value="10" variable="None" />
+        <explain_quant tag="VAC" desc="AC Voltage (mV rms)" value="50" variable="None" />
+        <explain_quant tag="AREA" desc="Sample Area (cm^2)" value="1" variable="None" />
+        <explain_quant tag="ZGUESS" desc="Estimated Z (ohms)" value="1000" variable="None" />
+        <explain_selector tag="SPEED" desc="Optimize for:" item0="Fast" item1="Normal" item2="Low Noise" index="2" />
+      </parameters>
+    </element>
+    <element>
+      <name>Delay</name>
+      <classname>DELAY</classname>
+      <type>delay</type>
+      <description>Causes the sequence to wait a user specified period of time before continuing on to the next operation</description>
+      <parameters>
+        <explain_quant tag="DELAY" desc="Delay Amount" value="2" variable="None" />
+        <explain_selector tag="DELAYSTYLE" desc="Delay Units" item0="Hours" item1="Minutes" item2="Seconds" index="2" />
+      </parameters>
+    </element>
+  </element>
+</GamrySequence>

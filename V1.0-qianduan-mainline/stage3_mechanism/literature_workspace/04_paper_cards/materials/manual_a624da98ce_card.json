@@ -1,0 +1,104 @@
+{
+  "paper_id": "manual_a624da98ce",
+  "stage_target": "materials",
+  "bibliography": {
+    "title": "Enhanced Proton Conductivity from Phosphoric Acid-Incorporated 3D Polyacrylamide-Graft-Starch Hydrogel Materials for High-Temperature Proton Exchange Membranes",
+    "authors": "Correspondence to: Q. Tang (E - mail: tangqunwei@ouc.edu.cn) and X. Wang (E - mail: wangxinhd@ouc.edu.cn)",
+    "year": 2014
+  },
+  "system_identity": {
+    "base_material": "Polyacrylamide-graft-starch (PAAm-g-starch) hydrogel, crosslinked with N,N′-(methylene)bisacrylamide (NMBA).",
+    "dopant": "Phosphoric acid (H3PO4) incorporated/imbibed from 1–9 M aqueous solution then vacuum-dried to anhydrous state.",
+    "form_factor": "Membrane/disc (U 3-cm round-disks) dried under vacuum at 60 °C; used as high-temperature PEM.",
+    "other": "Initiator: ammonium persulfate (APS); porous 3D framework claimed to retain H3PO4 under anhydrous high-temperature conditions (Abstract; Introduction; Experimental)."
+  },
+  "measurement_scope": {
+    "temp_range": "Up to 180 °C is explicitly reported for conductivity (Abstract).",
+    "freq_range": "",
+    "humidity": "Fully anhydrous state (Abstract).",
+    "other_conditions": "H3PO4 uptake performed by soaking in 1–9 M H3PO4(aq) for 20 days to equilibrium, then vacuum-dried at 60 °C to remove water (Experimental)."
+  },
+  "mechanism_relevant_findings": [
+    "The membrane’s high-temperature conductivity is described as being dependent on H3PO4 loading retained within a 3D porous PAAm-g-starch framework (Abstract; Introduction).",
+    "Increasing NMBA crosslinker and APS initiator dosages is reported to increase H3PO4 loading and thereby increase proton conductivity (Abstract).",
+    "The 3D hydrogel framework is stated to provide interconnected microporous space that absorbs and retains H3PO4 even under pressure and in anhydrous operation (Introduction)."
+  ],
+  "numerical_findings": [
+    {
+      "metric": "Proton conductivity",
+      "value": 0.109,
+      "unit": "S cm^-1",
+      "conditions": "180 °C; fully anhydrous state; H3PO4-imbibed PAAm-g-starch hydrogel membrane (Abstract)."
+    },
+    {
+      "metric": "H3PO4 soaking concentration range",
+      "value": "1–9",
+      "unit": "M",
+      "conditions": "Immersion at room temperature for 20 days to absorption equilibrium (Experimental)."
+    },
+    {
+      "metric": "Soaking time to equilibrium",
+      "value": 20,
+      "unit": "days",
+      "conditions": "Room-temperature immersion in H3PO4(aq) (Experimental)."
+    },
+    {
+      "metric": "Vacuum drying temperature",
+      "value": 60,
+      "unit": "°C",
+      "conditions": "24 h for dried membranes; additional drying after acid incorporation to remove water (Experimental)."
+    },
+    {
+      "metric": "Crosslinker NMBA dosage (examples)",
+      "value": "0.004/0.008/0.010 (0.04/0.08/0.10)",
+      "unit": "g (wt%)",
+      "conditions": "Added during aqueous synthesis (Experimental)."
+    },
+    {
+      "metric": "Initiator APS dosage (examples)",
+      "value": "0.0075/0.015/0.025/0.03/0.0375 (0.075/0.15/0.25/0.3/0.375)",
+      "unit": "g (wt%)",
+      "conditions": "Added during aqueous synthesis (Experimental)."
+    }
+  ],
+  "eis_shape_findings": [],
+  "arrhenius_vtf_findings": [],
+  "limitations": [
+    "No EIS frequency range, equivalent circuit, or Nyquist/Bode shape information is provided in the provided excerpt.",
+    "No Arrhenius/VTF fitting, activation energy, or temperature-dependent functional form is provided in the provided excerpt.",
+    "The excerpt does not specify whether reported conductivity is in-plane or through-plane nor the measurement protocol."
+  ],
+  "relevance_judgement": {
+    "score": 0.55,
+    "reason": "The excerpt reports high anhydrous proton conductivity and composition/processing parameters but does not include EIS/Arrhenius/VTF mechanistic analysis details."
+  },
+  "supports_axes": {},
+  "conflicts_axes": {},
+  "trace_spans": [
+    {
+      "page": null,
+      "section": "",
+      "text_snippet": "KEYWORDS:  batteries; colloids; composites; crosslinking; fuel cells; functionalization of polymers Received 5 December 2013; accepted 19 February 2014 DOI: 10.1002/app.40622"
+    },
+    {
+      "page": null,
+      "section": "INTRODUCTION",
+      "text_snippet": "Proton exchange membrane fuel cells (PEMFCs) are one of the alternative solutions to ecology damage, environment pollution, and energy exhaustion because they can convert chemical energy of fuels into"
+    },
+    {
+      "page": null,
+      "section": "EXPERIMENTAL",
+      "text_snippet": "Synthesis of PAAm-g-Starch Membranes The PAAm-g-starch membranes were synthesized by an aqueous approach. In detail, a solution mixture consisting of acrylamide monomer (AAm, 10 g, analytical reagent)"
+    },
+    {
+      "page": null,
+      "section": "RESULTS AND DISCUSSIONS",
+      "text_snippet": "Synthesis of 3D PAAm-g-Starch Framework The polymerization reaction of PAAm-g-starch hydrogel mate- rial is an example process of free radical polymerization, in which APS is used as a thermal initiat"
+    },
+    {
+      "page": null,
+      "section": "CONCLUSIONS",
+      "text_snippet": "In summary, we have used a new approach to synthesize a new class of 3D framework of H 3 PO 4 -imbibed PAAm-g-starch com- posite polymers for high-temperature PEMs. The protons transfer by the Grotthu"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "paper_id": "manual_c8dafb5973",
+  "stage_target": "materials",
+  "bibliography": {
+    "title": "Functionalized clay nanocomposites for enhanced proton conductivity in  polyether-based fuel cell membranes",
+    "authors": "a  Department of Chemistry, College of Science Al-zulfi, Majmaah University, Al-Majmaah 11952, Saudi Arabia b  Become: Deep Tech  &  Nanoscience, 63 rue de Tolbiac, 75013 Paris, France",
+    "year": 0
+  },
+  "system_identity": {
+    "base_material": "sulfonated polyether sulfone (SPES)",
+    "dopant": "functionalized clays (Montmorillonite, Sepiolite, LDHs)",
+    "form_factor": "nanocomposites",
+    "other": ""
+  },
+  "measurement_scope": {
+    "temp_range": "",
+    "freq_range": "",
+    "humidity": "",
+    "other_conditions": "realistic operating conditions"
+  },
+  "mechanism_relevant_findings": [
+    "Proton transport in clay-SPES nanocomposites is governed by a combination of vehicular and Grotthuss mechanisms.",
+    "Review article\n\nFunctionalized clay nanocomposites for enhanced proton conductivity in  polyether-based fuel cell membranes\n\nYoussef O.",
+    "Keshk   b , *\n\na  Department of Chemistry, College of Science Al-zulfi, Majmaah University, Al-Majmaah 11952, Saudi Arabia b  Become: Deep Tech  &  Nanoscience, 63 rue de Tolbiac, 75013 Paris, France\n\nA R T I C L E  I N F O\n\nKeywords: Proton exchange membranes (PEMs) Sulfonated polyether sulfone (SP",
+    "SPES-based membranes offer a  tunable backbone, excellent thermal and mechanical stability, and chemical resistance, yet they often suffer from  reduced proton conductivity and hydration stability under low-humidity or high-temperature conditions.",
+    "We discuss how  these clays improve ionic domain morphology, water uptake, and mechanical reinforcement through molecular-  level interactions with sulfonic acid sites.",
+    "The review highlights scalable fabrication routes (e.g., solution casting,  electrospinning, additive manufacturing), performance under realistic operating conditions, and comparisons  with commercial Nafion membranes.",
+    "Particular attention is given to structure property relationships, transport  mechanisms, and interfacial engineering strategies that enable defect-free, high-conductivity membranes.",
+    "The  performance and longevity of PEMFCs are thus intimately linked to the  structural and functional properties of the membrane.",
+    "However,  SPES membranes often suffer from diminished proton conductivity and  poor water retention under low humidity or high temperature operating  conditions, necessitating further material optimization.",
+    "These clay-based fillers exhibit exceptional hy­ drophilicity, ion-exchange capability, and high aspect ratios, enabling  them to reinforce polymer networks and facilitate the formation of  interconnected hydration clusters that support proton hopping via  Grotthuss-type mechanisms ( El-Shafie, 2023",
+    "In addition to promoting proton conductivity, the clay architecture  contributes to improved mechanical strength and dimensional stability  under fuel cell operating conditions ( García-Salaberri, 2023 ;  Mo et al.,  2023 )."
+  ],
+  "numerical_findings": [],
+  "eis_shape_findings": [],
+  "arrhenius_vtf_findings": [],
+  "limitations": [
+    "Achieving uniform clay dispersion, strong interfacial compatibility, and long-term electrochemical stability remains difficult due to aggregation tendencies, phase separation, or processing limitations."
+  ],
+  "relevance_judgement": {
+    "score": 0.8,
+    "reason": "The article provides significant insights into proton transport mechanisms in functionalized clay nanocomposites."
+  },
+  "supports_axes": {
+    "transport": "hybrid_grotthuss_vehicular"
+  },
+  "conflicts_axes": {},
+  "trace_spans": [
+    {
+      "page": null,
+      "section": "",
+      "text_snippet": "Review article A R T I C L E  I N F O Keywords: Proton exchange membranes (PEMs) Sulfonated polyether sulfone (SPES) Functionalized clays (Montmorillonite,  Sepiolite, LDHs) Proton transport enhanceme"
+    },
+    {
+      "page": null,
+      "section": "1. Introduction",
+      "text_snippet": "Proton-exchange membrane fuel cells (PEMFCs) have attracted  increasing interest as next-generation power systems due to their high  energy efficiency and low environmental impact ( Tellez-Cruz et al."
+    },
+    {
+      "page": null,
+      "section": "Applied Clay Science",
+      "text_snippet": "journal homepage:  www.elsevier.com/locate/clay https://doi.org/10.1016/j.clay.2025.107999 Received 24 May 2025; Received in revised form 2 July 2025; Accepted 20 September 2025 Applied Clay Science 2"
+    },
+    {
+      "page": null,
+      "section": "7. Conclusion",
+      "text_snippet": "Functionalized clay/polyether sulfone (PES) composites can improve  the performance of proton exchange membranes (PEMs) used in fuel  cells. This review has highlighted the use of functionalized clays"
+    },
+    {
+      "page": null,
+      "section": "Acknowledgment",
+      "text_snippet": "The author extends the appreciation to the Deanship of Postgraduate  Studies and Scientific Research at Majmaah University for funding this  research work through the project number (R-2025-2014). App"
+    }
+  ]
+}

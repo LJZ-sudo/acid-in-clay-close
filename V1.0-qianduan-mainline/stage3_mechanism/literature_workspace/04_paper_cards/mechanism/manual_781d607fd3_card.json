@@ -1,0 +1,79 @@
+{
+  "paper_id": "manual_781d607fd3",
+  "stage_target": "mechanism",
+  "bibliography": {
+    "title": "Proton conductivity of phosphoric acid doped polybenzimidazole and its composites with inorganic proton conductors",
+    "authors": "was obtained by composite of 15 wt.% of ZrP in a PBI membrane under the same conditions. Homogeneous membranes with good mechanical strength were prepared by introducing PWA (20–30 wt.%) and SiWA (20–30 wt.%) into PBI, and their conductivity were found to be higher than or comparable with that of the PBI membrane at temperatures up to 110   ◦ C. © 2003 Elsevier B.V. All rights reserved.",
+    "year": 2003
+  },
+  "system_identity": {
+    "base_material": "polybenzimidazole",
+    "dopant": "phosphoric acid",
+    "form_factor": "membrane",
+    "other": "inorganic proton conductors including zirconium phosphate, phosphotungstic acid, and silicotungstic acid"
+  },
+  "measurement_scope": {
+    "temp_range": "up to 200 °C",
+    "freq_range": [],
+    "humidity": "5% RH",
+    "other_conditions": []
+  },
+  "mechanism_relevant_findings": [
+    "The proton conductivity of phosphoric acid doped PBI is dependent on the acid doping level, relative humidity, and temperature.",
+    "Incorporation of inorganic fillers into PBI membranes increases proton conductivity."
+  ],
+  "numerical_findings": [
+    {
+      "metric": "conductivity",
+      "value": 0.068,
+      "unit": "S cm^-1",
+      "conditions": "H3PO4 doping level of 5.6 at 200 °C and 5% RH"
+    },
+    {
+      "metric": "conductivity",
+      "value": 0.096,
+      "unit": "S cm^-1",
+      "conditions": "PBI membranes under unspecified conditions"
+    }
+  ],
+  "eis_shape_findings": [],
+  "arrhenius_vtf_findings": [],
+  "limitations": [],
+  "relevance_judgement": {
+    "score": 0.8,
+    "reason": "The paper provides significant insights into the proton transport mechanisms of doped PBI membranes."
+  },
+  "supports_axes": {
+    "transport": "Grotthuss_hopping",
+    "phase_structure": "single_continuous_phase",
+    "temperature_dependence": "pure_Arrhenius"
+  },
+  "conflicts_axes": {},
+  "trace_spans": [
+    {
+      "page": null,
+      "section": "",
+      "text_snippet": "Journal of Membrane Science 226 (2003) 169–184 Received 3 March 2003; received in revised form 2 August 2003; accepted 4 September 2003 Keywords:  Conductivity; Polybenzimidazole; Phosphoric acid; Ino"
+    },
+    {
+      "page": null,
+      "section": "1. Introduction",
+      "text_snippet": "Polymer electrolytes have received extensive at- tention, especially for polymer electrolyte membrane fuel cells (PEMFCs) operating at temperatures above 100   ◦ C. As alternatives to the currently av"
+    },
+    {
+      "page": null,
+      "section": "2. Experimental",
+      "text_snippet": "2.1. Preparation of proton conducting membranes PBI was synthesized from 3,3 ′ -diaminobenzidine tetrahydrochloride (Aldrich) and isophthalic acid (Aldrich) by polymerization in polyphosphoric acid (P"
+    },
+    {
+      "page": null,
+      "section": "3. Results and discussion",
+      "text_snippet": "3.1. Conductivity of acid doped PBI membranes—the effect of the RH In some preliminary measurements, the conductiv- ities of phosphoric acid doped PBI membranes were measured under hydrogen atmosphere"
+    },
+    {
+      "page": null,
+      "section": "0 20 40 60 80 100 Relative humidity (%)",
+      "text_snippet": ""
+    }
+  ]
+}

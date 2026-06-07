@@ -1,0 +1,84 @@
+{
+  "paper_id": "manual_3e0fc6547f",
+  "stage_target": "mechanism",
+  "bibliography": {
+    "title": "Unidirectional and Selective Proton Transport in Artificial  Heterostructured Nanochannels with Nano-to-Subnano  Confined Water Clusters",
+    "authors": "",
+    "year": 0
+  },
+  "system_identity": {
+    "base_material": "metal–organic framework (MOF)",
+    "dopant": "none",
+    "form_factor": "heterogeneous nanochannels",
+    "other": "polymer regions"
+  },
+  "measurement_scope": {
+    "temp_range": [],
+    "freq_range": [],
+    "humidity": [],
+    "other_conditions": []
+  },
+  "mechanism_relevant_findings": [
+    "The proton transport relies on the Grotthuss mechanism characterized by ordered hydrogen-bonded chains.",
+    "Proton conduction is preferentially directed from the N terminus to the C terminus.",
+    "The theoretical simulations indicate that low energy barriers facilitate proton transport between disordered and ordered water clusters."
+  ],
+  "numerical_findings": [
+    {
+      "metric": "proton conductivity enhancement",
+      "value": "up to 500",
+      "unit": "times",
+      "conditions": "in the polymer-to-MOF direction compared to the opposite direction"
+    },
+    {
+      "metric": "conductivity magnitude",
+      "value": "one to two",
+      "unit": "orders of magnitude",
+      "conditions": "compared to the conductivity of proton transport in bulk water"
+    }
+  ],
+  "eis_shape_findings": [],
+  "arrhenius_vtf_findings": [
+    "MOFs with free acidic groups exhibit low activation energy for proton transport."
+  ],
+  "limitations": [
+    "The understanding of individual water molecule arrangements in the water chains remains ambiguous."
+  ],
+  "relevance_judgement": {
+    "score": 0.9,
+    "reason": "The study provides significant insights into proton transport mechanisms in nanochannels."
+  },
+  "supports_axes": {
+    "transport": "Grotthuss_hopping",
+    "phase_structure": "single_continuous_phase",
+    "temperature_dependence": "pure_Arrhenius"
+  },
+  "conflicts_axes": {},
+  "trace_spans": [
+    {
+      "page": null,
+      "section": "",
+      "text_snippet": "2001777  (1 of 7) ©  2020 WILEY-VCH Verlag GmbH & Co. KGaA, Weinheim"
+    },
+    {
+      "page": null,
+      "section": "www.advmat.de Communication",
+      "text_snippet": ""
+    },
+    {
+      "page": null,
+      "section": "Xingya Li, Huacheng Zhang,* Hao Yu, Jun Xia, Yin-Bo Zhu, Heng-An Wu,* Jue Hou,  Jun Lu, Ranwen Ou, Christopher D. Easton, Cordelia Selomulya, Matthew R. Hill,  Lei Jiang, and Huanting Wang*",
+      "text_snippet": "DOI: 10.1002/adma.202001777 The multifunctional proton transport  properties of voltage-gated proton chan- nels depend on asymmetric nanometer- to-angstrom-sized  pore  structures, [3]   which confine"
+    },
+    {
+      "page": null,
+      "section": "Supporting Information",
+      "text_snippet": ""
+    },
+    {
+      "page": null,
+      "section": "Supporting Information is available from the Wiley Online Library or  from the author.",
+      "text_snippet": ""
+    }
+  ]
+}

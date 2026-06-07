@@ -1,0 +1,27 @@
+{
+  "input_mode": "stage2_seed_v2",
+  "stage2_seed_v2_path": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage2_statistics\\exports\\stage3_seed.json",
+  "stage2_seed_v2_sha256": "4edbd1366e75b41c7432825624545024f1468cbf08eca4d554689f6cf9bcea22",
+  "stage2_seed_v2_id": "SEED-1ad04c55",
+  "stage2_seed_v2_stage3_ready": true,
+  "stage2_seed_v2_blocking_reasons": [],
+  "sample_count": 40,
+  "segment_count": 158,
+  "composition_node_count": 25,
+  "evidence_unit_count": 13,
+  "input_hashes": {
+    "stage2_seed_v2": "4edbd1366e75b41c7432825624545024f1468cbf08eca4d554689f6cf9bcea22",
+    "csv": null,
+    "data_profile": "d9546ffd6abe274f3d3d0ecea3cd425280d59cb197f5b96f641783b22bd419b9",
+    "execution_plan": "e8c3ebe0e8c8a9f46a94f7dfc708f1a2449b0db11fd91c064b9d539acc8e9e5c",
+    "atlas": "705dc026420d412d85fa4aca0ffeb846090aad36ab5946fd031d3e948eab58f2",
+    "visualization_manifest": "a45e38c3d38e32157e9e304cdeaa93fd2e176307aa24919d213371be13a8dcc4"
+  },
+  "warnings": {
+    "missing_fields": [],
+    "invalid_values": [],
+    "atlas_csv_inconsistencies": [],
+    "unreliable_segments": [],
+    "t_arc_t_break_issues": []
+  }
+}

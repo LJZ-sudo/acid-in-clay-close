@@ -1,0 +1,90 @@
+{
+  "step_id": "s07_descriptors",
+  "descriptors": [
+    {
+      "descriptor_id": "D1",
+      "descriptor_text": "Host matrix capable of confining an aqueous proton-conducting phase within nanometric (1–10 nm) channels or pores to enforce interfacial-dominated transport.",
+      "mechanism_role": "Creates the high-surface-area confinement geometry necessary for the interfacial percolation network, suppressing bulk-like liquid transport in favor of surface/interfacial proton pathways.",
+      "required_material_features": [
+        "pore/channel diameter in the 1–10 nm regime",
+        "high aspect ratio interconnected porosity",
+        "hydrophilic internal surfaces"
+      ],
+      "priority": "critical",
+      "derived_from_mechanism": "H4: Confinement-induced multi-threshold percolation with interfacial-dominated transport"
+    },
+    {
+      "descriptor_id": "D2",
+      "descriptor_text": "The confined proton-conducting phase must retain a continuous, mobile hydrogen-bonded network across the full temperature range 182 K to 299 K, with no first-order freezing, eutectic phase separation, or abrupt crystallization that breaks percolation connectivity.",
+      "mechanism_role": "Ensures an uninterrupted interfacial proton pathway as the material is cooled from room temperature to sub-zero conditions, allowing the cluster-percolation network to persist across T_break and down to the cold limit.",
+      "required_material_features": [
+        "suppressed bulk freezing of confined aqueous/acid phase",
+        "absence of sharp phase transitions between 182 K and 299 K",
+        "continuous hydrogen-bond connectivity across the entire temperature span"
+      ],
+      "priority": "critical",
+      "derived_from_mechanism": "H4: T_break thermodynamic connectivity shift and cold-end operability requirement (182 K)"
+    },
+    {
+      "descriptor_id": "D3",
+      "descriptor_text": "The proton-conducting medium must incorporate a mobile acid species whose proton activity and local diffusivity remain high in the 182–273 K sub-zero window, avoiding the crystallization or glass-formation that immobilizes pure phosphoric acid near 315 K.",
+      "mechanism_role": "Provides the charge carriers for interfacial proton hopping; in H4, the acid must stay mobile and partly dissociated even after the bulk-like continuous film breaks apart into clusters, otherwise the low-temperature cluster percolation network loses its conducting units.",
+      "required_material_features": [
+        "acid species with depressed freezing point (well below 273 K) when confined or complexed",
+        "sustained proton dissociation equilibrium down to 182 K",
+        "resistance to phase separation or salt precipitation on cooling"
+      ],
+      "priority": "critical",
+      "derived_from_mechanism": "H4: interfacial percolation and low-T cluster network; phosphoric acid crystallization avoidance"
+    },
+    {
+      "descriptor_id": "D4",
+      "descriptor_text": "The interfacial region must exhibit proton-hopping activation energy in the low range (~0.1–0.3 eV) characteristic of highly connected hydrogen-bond networks under nanoconfinement, enabling the near-continuous low-barrier pathway observed above T_break.",
+      "mechanism_role": "Underpins the high-temperature, fully-percolating interfacial film regime where the EIS resistance is collapsed; low activation energy is the signature of the facile interfacial transport that defines H4.",
+      "required_material_features": [
+        "surface-bound water/hydroxyl groups forming an extended H-bond network",
+        "proton-transfer activation energy ≤ 0.3 eV",
+        "short proton-hopping distances along the interface"
+      ],
+      "priority": "important",
+      "derived_from_mechanism": "H4: high-T continuous interfacial film with collapsed EIS semicircle"
+    },
+    {
+      "descriptor_id": "D5",
+      "descriptor_text": "The host matrix must maintain sufficient segmental flexibility or retain an amorphous bound-water/plasticiser phase below 253 K to prevent the pore walls from becoming rigid glass, which would disrupt interfacial proton connectivity and fragment the cluster network.",
+      "mechanism_role": "Ensures the confined interface remains dynamically disordered enough for proton hopping even when the bulk-like water pool has frozen; a glassy-brittle interface would kill the low-T percolation network and eliminate the resolvable EIS semicircle entirely.",
+      "required_material_features": [
+        "polymer/gel host with glass transition temperature below 240 K or intrinsic bound-water plasticization",
+        "retention of segmental motion or fast local dynamics in the confining matrix at sub-zero temperatures",
+        "amorphous or highly disordered interfacial layer that resists crystallization"
+      ],
+      "priority": "important",
+      "derived_from_mechanism": "H4: low-T cluster percolation and EIS semicircle emergence (τ entering measurement window)"
+    },
+    {
+      "descriptor_id": "D6",
+      "descriptor_text": "The confining host must provide a distribution of interconnected, hydrophilic surface sites (e.g., silanol, hydroxyl, carboxyl groups) that can anchor and orient the proton-conducting phase into a continuous thin film above a critical hydration/acid-loading threshold.",
+      "mechanism_role": "Creates the interfacial percolation backbone; without such anchoring sites, the liquid phase would be free to coalesce into droplets rather than wetting the pore walls as a contiguous film, preventing the multi-threshold network behavior of H4.",
+      "required_material_features": [
+        "surface functional groups capable of hydrogen-bonding to water/acid",
+        "sufficient site density to maintain film connectivity",
+        "chemical stability of anchoring groups in acidic aqueous environment"
+      ],
+      "priority": "critical",
+      "derived_from_mechanism": "H4: interfacial film percolation threshold and high-T continuous pathway"
+    },
+    {
+      "descriptor_id": "D7",
+      "descriptor_text": "The overall composite must exhibit a resolvable EIS semicircle at low temperature whose characteristic relaxation time shifts systematically with cooling, reflecting the growing resistance of the isolated cluster network as percolation connectivity is progressively lost.",
+      "mechanism_role": "Provides the diagnostic signature of H4: the emergence and evolution of a low-temperature arc that corresponds to the cluster-percolation resistance entering the measurement bandwidth.",
+      "required_material_features": [
+        "measurable capacitive response at the cluster–cluster junctions",
+        "resistance increase with cooling such that the RC time constant falls within the accessible frequency range",
+        "no competing dielectric relaxations that obscure the cluster-network semicircle"
+      ],
+      "priority": "optional",
+      "derived_from_mechanism": "H4: EIS evolution from capacitive tail to resolved semicircle as T decreases"
+    }
+  ],
+  "extraction_notes": "Extracted 7 descriptors from H4 (confinement-induced multi-threshold percolation). D2 and D3 explicitly encode the cold-to-room-T operability window (182–299 K and sub-zero acid mobility) as mandated. D1 and D6 establish the confinement and surface functionalization backbone; D4 sets the interfacial hopping energy scale; D5 addresses matrix flexibility below 253 K; D7 captures the diagnostic EIS signature for experimental validation. All descriptors are framed as abstract functional requirements without naming specific material candidates."
+}

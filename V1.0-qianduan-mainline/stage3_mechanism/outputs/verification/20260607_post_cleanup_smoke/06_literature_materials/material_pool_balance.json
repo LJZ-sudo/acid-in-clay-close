@@ -1,0 +1,12 @@
+{
+  "n_cards": 6,
+  "n_component_descriptor_claims": 9,
+  "card_ids": [
+    "MAT1",
+    "MAT2",
+    "MAT3",
+    "MAT-pva",
+    "MAT-sep",
+    "MAT-biomass-A"
+  ]
+}

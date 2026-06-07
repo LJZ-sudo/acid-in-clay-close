@@ -1,0 +1,69 @@
+{
+  "paper_id": "manual_3d7d6d5d7b",
+  "stage_target": "materials",
+  "bibliography": {
+    "title": "",
+    "authors": "",
+    "year": 0
+  },
+  "system_identity": {
+    "base_material": "phosphate glass",
+    "dopant": "alkali",
+    "form_factor": "solid",
+    "other": ""
+  },
+  "measurement_scope": {
+    "temp_range": "",
+    "freq_range": "",
+    "humidity": "",
+    "other_conditions": "intermediate temperature range"
+  },
+  "mechanism_relevant_findings": [
+    "Phosphate glasses can conduct protons via strong hydrogen bonding interactions.",
+    "Protons in phosphate glasses form much stronger hydrogen bonds compared to those in silicate glasses."
+  ],
+  "numerical_findings": [],
+  "eis_shape_findings": [],
+  "arrhenius_vtf_findings": [],
+  "limitations": [
+    "Long-term stability of proton conductivity is problematic and relies on maintaining high humidity."
+  ],
+  "relevance_judgement": {
+    "score": 0.8,
+    "reason": "The paper extensively discusses proton transport mechanisms in phosphate glasses."
+  },
+  "supports_axes": {
+    "transport": "Grotthuss_hopping",
+    "phase_structure": "single_continuous_phase",
+    "temperature_dependence": "VTF",
+    "transition_topology": "single_transition"
+  },
+  "conflicts_axes": {},
+  "trace_spans": [
+    {
+      "page": null,
+      "section": "JCS",
+      "text_snippet": ""
+    },
+    {
+      "page": null,
+      "section": "- Japan",
+      "text_snippet": "第130巻　第   1   号　2022年   1   月   1   日発行（毎月1回1日発行）　 ISSN 1348-6535 CODEN: JCSJEW"
+    },
+    {
+      "page": null,
+      "section": "January",
+      "text_snippet": ""
+    },
+    {
+      "page": null,
+      "section": "2022",
+      "text_snippet": ""
+    },
+    {
+      "page": null,
+      "section": "vol. 130",
+      "text_snippet": ""
+    }
+  ]
+}

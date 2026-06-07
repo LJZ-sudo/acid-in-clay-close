@@ -1,0 +1,93 @@
+{
+  "step_id": "s14_claim_audit",
+  "run_id": "stage3-b9dd31a5a1",
+  "discovery_mode": "broad_literature_pool_selection",
+  "final_audit": false,
+  "claim_ladder": [
+    {
+      "claim_level": "closed_loop_source_system",
+      "allowed_claim": "Acid-in-clay is the closed-loop mother system and underwent prospective BO-driven optimisation over multiple real rounds.",
+      "required_evidence": [
+        "stage1_optimization/output/attapulgite_aice/closed_loop_metrics.json with closed_loop_validity=prospective_real and n_closed_loop_rounds>=3"
+      ],
+      "current_evidence_status": "closed_loop_validity=prospective_real, n_rounds=6, metrics=C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage1_optimization\\output\\attapulgite_aice\\closed_loop_metrics.json -> supported.",
+      "forbidden_overclaim": "Do not call retrospective_replay or virtual_oracle runs a 'closed-loop optimisation'.",
+      "caveats": [],
+      "is_supported": true
+    },
+    {
+      "claim_level": "mechanism_discovery",
+      "allowed_claim": "LLM-generated mechanism hypotheses, constrained by Stage2 evidence (V2 seed), yielded a winning mechanism describing confined vs bulk proton populations and an overfilling crossover.",
+      "required_evidence": [
+        "04_mechanism/mechanism_card.json",
+        "01_evidence/evidence_cards.json containing EvidenceUnitV2-derived cards"
+      ],
+      "current_evidence_status": "mechanism_card=present, v2_evidence_cards=13.",
+      "forbidden_overclaim": "Do not say 'LLM proved the mechanism'. LLMs generate and arbitrate hypotheses; proof requires experiment + statistics.",
+      "caveats": [
+        "Mechanism claim must always be hedged as 'hypothesised/supported'."
+      ],
+      "is_supported": true
+    },
+    {
+      "claim_level": "llm_transfer_candidate",
+      "allowed_claim": "LLM selected and recombined lotus-root-starch evidence from a broad biomass / polymer / clay literature pool.",
+      "required_evidence": [
+        "11_candidate_registry/prospective_candidates.json",
+        "09_ranking/candidate_audit.json and source_term_audit.json with discovery-mode consistent source-term status",
+        "09_ranking/ranking_robustness_v2.json with stable or moderately_stable ranking robustness"
+      ],
+      "current_evidence_status": "discovery_mode=broad_literature_pool_selection, claim_strength=moderate, n_candidates=5, source_term_audit_ok=True (source=09_ranking/candidate_audit.json), candidate_audit_quality_ok=True, ranking_stability_class=stable, top1_stability=0.995, top3_jaccard=0.81, bad_citation_candidates=[], low_coverage_candidates=[].",
+      "forbidden_overclaim": "Do not escalate beyond the discovery_mode allowance. broad_literature_pool_selection → 'selected / recombined', NOT 'independently discovered'.",
+      "caveats": [
+        "final_audit=False — cached LLM responses may have been reused; do not make final publication claims from this run."
+      ],
+      "is_supported": true
+    },
+    {
+      "claim_level": "prospective_validation",
+      "allowed_claim": "LLM-ranked candidates were frozen before experiment and subsequently validated by wide-temperature EIS measurements.",
+      "required_evidence": [
+        "validation_binding_report.json with >=1 link classified as prospective_validation",
+        "validation_timing=prospective and validation date > registry.preregistered_at"
+      ],
+      "current_evidence_status": "n_prospective_links=0, n_mixed_links=0, n_retrospective_links=0.",
+      "forbidden_overclaim": "If experiments preceded registry.preregistered_at, call it 'retrospective validation' only.",
+      "caveats": [
+        "No prospective validation yet; only retrospective/no bindings."
+      ],
+      "is_supported": false
+    },
+    {
+      "claim_level": "retrospective_validation",
+      "allowed_claim": "The biopolymer / PVA / 1D-clay / H3PO4 motif predicted by the evidence-constrained LLM pipeline is consistent with prior experimental measurements on the three biopolymer systems (lotus / corn starch / chitosan).",
+      "required_evidence": [
+        "validation_binding_report.json with >=1 link classified as retrospective_validation or mixed_validation"
+      ],
+      "current_evidence_status": "n_retrospective_links=0, n_mixed_links=0.",
+      "forbidden_overclaim": "Do not present retrospective_validation as 'prospective discovery'.",
+      "caveats": [
+        "If any experiment time > registry.preregistered_at, prefer prospective_validation for that specific candidate."
+      ],
+      "is_supported": false
+    }
+  ],
+  "publication_blockers": [],
+  "recommended_wording": [
+    "Core claim wording tied to discovery_mode=broad_literature_pool_selection: \"LLM selected and recombined lotus-root-starch evidence from a broad biomass / polymer / clay literature pool.\"",
+    "Ranking robustness wording gate: Single-winner wording is allowed with audit caveats."
+  ],
+  "inputs_digest": {
+    "eis_overclaim_findings_count": "0",
+    "eis_overclaim_strict": "0",
+    "source_term_audit.json": "81bd7a2c8f213a3332fe04a75dd370dd2d9ada2851f3be511d903128191ec178",
+    "candidate_audit.json": "41122a254b463d6fa528de7ffa02421de5fcd34bfc803598fac43813d18e9f94",
+    "ranking_robustness_v2.json": "56c148bdaa04179784d9053ce04705b0661531871f45c7fa6608f41c9261205c",
+    "evidence_cards.json": "35c9fa83ec8cd284bcca9a40647bbed09df6a9cdea75ac36b047fddd72a8b928",
+    "prospective_candidates.json": "1e4fcc76392eb292536cc32b173c5bb18c1296439102873c13c1237ae2b4b6c8",
+    "validation_binding_report.json": "54b6e33ad7af1b4b2d3ce61cc3e3366e7d3c3559630e8886dc56086be200ffc3",
+    "closed_loop_metrics.json": "7be24c4f3cfd2c7c4a78bd981cd7d2095993e79dd96d00785f50a3fbb0017853",
+    "closed_loop_metrics_path": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage1_optimization\\output\\attapulgite_aice\\closed_loop_metrics.json",
+    "audit_built_at": "2026-06-07T09:48:21Z"
+  }
+}

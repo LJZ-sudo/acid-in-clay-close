@@ -1,0 +1,5 @@
+{
+  "generation_mode": "llm_report_with_exception_fallback",
+  "n_sections": 3,
+  "n_top_candidates": 3
+}

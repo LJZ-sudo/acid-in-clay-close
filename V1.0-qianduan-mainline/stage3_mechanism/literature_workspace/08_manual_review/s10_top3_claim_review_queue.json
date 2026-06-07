@@ -1,0 +1,174 @@
+{
+  "review_scope": "top3_literature_support_claims",
+  "n_items": 11,
+  "items": [
+    {
+      "card_id": "manual_1157b11126",
+      "title": "International   Journal   of   Biological   Macromolecules",
+      "component": "starch",
+      "descriptor_ids": [
+        "D6"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "Starch provides a hydrogen-bond donor/acceptor landscape (D6) by forming hydrogen-bond interactions via its OH groups with the blend partner, improving compatibility (manual_1157b11126).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": "",
+      "reason": "Claim is linked to literature cards used by Top-3 ranked candidates."
+    },
+    {
+      "card_id": "manual_1157b11126",
+      "title": "International   Journal   of   Biological   Macromolecules",
+      "component": "poly(vinyl alcohol) (PVA)",
+      "descriptor_ids": [
+        "D6"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "Poly(vinyl alcohol) (PVA) provides a hydrogen-bond donor/acceptor landscape (D6) through OH-mediated hydrogen bonding with starch in the blend (manual_1157b11126).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": "",
+      "reason": "Claim is linked to literature cards used by Top-3 ranked candidates."
+    },
+    {
+      "card_id": "manual_1190463586",
+      "title": "Article Composite Proton Exchange Membranes Based on Chitosan and Phosphotungstic Acid Immobilized One-Dimensional Attapulgite for Direct Methanol Fuel Cells",
+      "component": "chitosan (CS)",
+      "descriptor_ids": [
+        "D5",
+        "D7"
+      ],
+      "quantitative_anchor": "35.3 mS/cm at 80 °C (composite membrane; 4 wt.% WQAT loading)",
+      "claim_text": "Chitosan (CS) provides a percolated, acid-interacting scaffold aiding interconnected confinement/transport-channel formation (D5) and acid immobilisation (D7), consistent with composite conductivity reaching 35.3 mS/cm at 80 °C at 4 wt.% WQAT (manual_1190463586).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": "",
+      "reason": "Claim is linked to literature cards used by Top-3 ranked candidates."
+    },
+    {
+      "card_id": "manual_1190463586",
+      "title": "Article Composite Proton Exchange Membranes Based on Chitosan and Phosphotungstic Acid Immobilized One-Dimensional Attapulgite for Direct Methanol Fuel Cells",
+      "component": "phosphotungstic acid (PWA)",
+      "descriptor_ids": [
+        "D6",
+        "D7"
+      ],
+      "quantitative_anchor": "35.3 mS/cm at 80 °C (composite membrane; 4 wt.% WQAT loading)",
+      "claim_text": "Phosphotungstic acid (PWA) provides dense proton-relay functionality (D6) while being described as immobilized within the composite (D7), with the membrane showing 35.3 mS/cm conductivity at 80 °C at 4 wt.% WQAT (manual_1190463586).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": "",
+      "reason": "Claim is linked to literature cards used by Top-3 ranked candidates."
+    },
+    {
+      "card_id": "manual_1190463586",
+      "title": "Article Composite Proton Exchange Membranes Based on Chitosan and Phosphotungstic Acid Immobilized One-Dimensional Attapulgite for Direct Methanol Fuel Cells",
+      "component": "attapulgite (1D AT; WQAT filler)",
+      "descriptor_ids": [
+        "D5",
+        "D7"
+      ],
+      "quantitative_anchor": "35.3 mS/cm at 80 °C (composite membrane; 4 wt.% WQAT loading)",
+      "claim_text": "Attapulgite (1D AT; WQAT) provides interconnected nanoconfinement and channel guidance (D5) and supports acid immobilisation (D7) as a one-dimensional host for the acid in the composite achieving 35.3 mS/cm at 80 °C at 4 wt.% WQAT (manual_1190463586).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": "",
+      "reason": "Claim is linked to literature cards used by Top-3 ranked candidates."
+    },
+    {
+      "card_id": "manual_1ca1249fc4",
+      "title": "Choline chloride-based deep eutectic solvents as electrolytes for wide  temperature range supercapacitors",
+      "component": "choline chloride (ChCl)",
+      "descriptor_ids": [
+        "D4"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "Choline chloride (ChCl) provides a complexing counter-species consistent with forming a deep eutectic with an acid (D4) when used as a ChCl/PA deep eutectic solvent electrolyte (manual_1ca1249fc4).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": "",
+      "reason": "Claim is linked to literature cards used by Top-3 ranked candidates."
+    },
+    {
+      "card_id": "manual_1ca1249fc4",
+      "title": "Choline chloride-based deep eutectic solvents as electrolytes for wide  temperature range supercapacitors",
+      "component": "phosphoric acid (PA)",
+      "descriptor_ids": [
+        "D4"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "Phosphoric acid (PA) provides an acid proton source in a deep eutectic (D4), being used as the acid component in a ChCl/PA DES electrolyte rather than as a neat acid phase (manual_1ca1249fc4).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": "",
+      "reason": "Claim is linked to literature cards used by Top-3 ranked candidates."
+    },
+    {
+      "card_id": "manual_a16330d0f5",
+      "title": "Phosphoric Acid-in-Clay Electrolyte Boosting Polybenzimidazole Membranes for High-Performance Fuel Cells",
+      "component": "halloysite nanotubes (HNTs)",
+      "descriptor_ids": [
+        "D5"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "Halloysite nanotubes (HNTs) provide nanoconfinement for the conducting fraction: the electrolyte is described as phosphoric acid hosted in HNTs (PA@HNTs), implying acid confined within the clay architecture (manual_a16330d0f5).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": "",
+      "reason": "Claim is linked to literature cards used by Top-3 ranked candidates."
+    },
+    {
+      "card_id": "manual_a16330d0f5",
+      "title": "Phosphoric Acid-in-Clay Electrolyte Boosting Polybenzimidazole Membranes for High-Performance Fuel Cells",
+      "component": "halloysite nanotubes (HNTs)",
+      "descriptor_ids": [
+        "D7"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "Halloysite nanotubes (HNTs) improve retention of the conducting phase: interaction of phosphoric acid with HNTs is stated to reduce susceptibility to phosphoric-acid leaching (manual_a16330d0f5).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": "",
+      "reason": "Claim is linked to literature cards used by Top-3 ranked candidates."
+    },
+    {
+      "card_id": "manual_a16330d0f5",
+      "title": "Phosphoric Acid-in-Clay Electrolyte Boosting Polybenzimidazole Membranes for High-Performance Fuel Cells",
+      "component": "H3PO4 (phosphoric acid)",
+      "descriptor_ids": [
+        "D6"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "H3PO4 provides a hydrogen-bonded proton-conduction medium: the PA@HNTs system is described as establishing a dense hydrogen-bonding network enabling packed-acid and Grotthuss mechanisms (manual_a16330d0f5).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": "",
+      "reason": "Claim is linked to literature cards used by Top-3 ranked candidates."
+    },
+    {
+      "card_id": "manual_a16330d0f5",
+      "title": "Phosphoric Acid-in-Clay Electrolyte Boosting Polybenzimidazole Membranes for High-Performance Fuel Cells",
+      "component": "polybenzimidazole (PBI)",
+      "descriptor_ids": [
+        "D7"
+      ],
+      "quantitative_anchor": "",
+      "claim_text": "Polybenzimidazole (PBI) is positioned as a host membrane whose performance/stability is boosted by the phosphoric-acid-in-clay electrolyte, with leaching and plasticization highlighted as concerns in the composite context (manual_a16330d0f5).",
+      "confidence": "hint",
+      "human_review_status": "pending",
+      "reviewer": "",
+      "review_notes": "",
+      "reason": "Claim is linked to literature cards used by Top-3 ranked candidates."
+    }
+  ]
+}

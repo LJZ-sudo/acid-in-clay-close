@@ -1,0 +1,67 @@
+{
+  "paper_id": "manual_261e3791d4",
+  "stage_target": "mechanism",
+  "bibliography": {
+    "title": "Meyer–Neldel rule and anti Meyer–Neldel rule of ionic conductivity Conclusions from the coupling model",
+    "authors": "",
+    "year": 0
+  },
+  "system_identity": {
+    "base_material": "AgI",
+    "dopant": "AgPO",
+    "form_factor": "solid",
+    "other": ""
+  },
+  "measurement_scope": {
+    "temp_range": "not specified",
+    "freq_range": "",
+    "humidity": "",
+    "other_conditions": "0 <= x <= 0.6"
+  },
+  "mechanism_relevant_findings": [
+    "The Meyer–Neldel rule applies to a variety of solid electrolytes including AgI.",
+    "An anti Meyer–Neldel rule is observed in the system as x increases from 0.0 to 0.5."
+  ],
+  "numerical_findings": [
+    {
+      "metric": "activation energy",
+      "value": "E",
+      "unit": "eV",
+      "conditions": "varies as x increases"
+    }
+  ],
+  "eis_shape_findings": [],
+  "arrhenius_vtf_findings": [
+    "The temperature dependence of conductivity follows Arrhenius behavior at lower temperatures.",
+    "A departure from Arrhenius behavior is seen at higher temperatures particularly for x >= 0.3."
+  ],
+  "limitations": [
+    "The study has limitations regarding the comparison of high temperature data with the Meyer–Neldel and anti Meyer–Neldel rules."
+  ],
+  "relevance_judgement": {
+    "score": 0.7,
+    "reason": "The paper discusses critical factors affecting ionic conductivity but lacks specific measurement data."
+  },
+  "supports_axes": {
+    "transport": "Grotthuss_hopping",
+    "temperature_dependence": "Arrhenius_with_MeyerNeldel_coupling"
+  },
+  "conflicts_axes": {},
+  "trace_spans": [
+    {
+      "page": null,
+      "section": "",
+      "text_snippet": "Solid State Ionics 105 (1998) 231–235"
+    },
+    {
+      "page": null,
+      "section": "K.L. Ngai",
+      "text_snippet": "Naval Research Laboratory ,  Washington ,  DC  20375-5320,  USA Keywords : Meyer–Neldel rule; Ion conductivity; Coupling model; Anti-Meyer–Neldel rule 1. Introduction s5 ( s  / T )exp( 2 E  / kT ), th"
+    },
+    {
+      "page": null,
+      "section": "2 1 2 1 2 1 n  /(1 2 n ) * log  t 5 2  log  t  / t E 2  E E * s d t 5  (1  2  n ) G (1  2  n )  t  / t t (10) s d f g ` c ` a s s ` ` c `",
+      "text_snippet": "2 1 1  log (1  2  n ) G (1  2  n ) t (12) f g ` * However, at high temperatures when  t (and also * t  ) becomes short and approaches  t  ( ¯ 2 ps) signifi- which has log  t varying with  E  faster th"
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "total_calls": 8,
+  "successes": 8,
+  "failures": 0,
+  "cache_hits": 0,
+  "llm_temperature": 0.0,
+  "llm_seed": null,
+  "configured_models": {
+    "cheap": "deepseek-v4-pro",
+    "standard": "deepseek-v4-pro",
+    "premium": "deepseek-v4-pro"
+  },
+  "total_prompt_tokens": 0,
+  "total_completion_tokens": 0,
+  "total_tokens": 0,
+  "calls": [
+    {
+      "step": "s04_hypothesis_generator",
+      "model": "mock:deepseek-v4-pro",
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "latency_ms": 0,
+      "success": true,
+      "cache_hit": false,
+      "cache_key": "",
+      "temperature": null,
+      "seed": null,
+      "error": null
+    },
+    {
+      "step": "s05_literature_mechanism",
+      "model": "mock:deepseek-v4-pro",
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "latency_ms": 0,
+      "success": true,
+      "cache_hit": false,
+      "cache_key": "",
+      "temperature": null,
+      "seed": null,
+      "error": null
+    },
+    {
+      "step": "s06_mechanism_arbiter",
+      "model": "mock:deepseek-v4-pro",
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "latency_ms": 0,
+      "success": true,
+      "cache_hit": false,
+      "cache_key": "",
+      "temperature": null,
+      "seed": null,
+      "error": null
+    },
+    {
+      "step": "s06b_design_principle_extractor",
+      "model": "mock:deepseek-v4-pro",
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "latency_ms": 0,
+      "success": true,
+      "cache_hit": false,
+      "cache_key": "",
+      "temperature": null,
+      "seed": null,
+      "error": null
+    },
+    {
+      "step": "s07_descriptor_extractor",
+      "model": "mock:deepseek-v4-pro",
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "latency_ms": 0,
+      "success": true,
+      "cache_hit": false,
+      "cache_key": "",
+      "temperature": null,
+      "seed": null,
+      "error": null
+    },
+    {
+      "step": "s08_literature_scout_materials",
+      "model": "mock:deepseek-v4-pro",
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "latency_ms": 0,
+      "success": true,
+      "cache_hit": false,
+      "cache_key": "",
+      "temperature": null,
+      "seed": null,
+      "error": null
+    },
+    {
+      "step": "s10_instance_ranker",
+      "model": "mock:deepseek-v4-pro",
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "latency_ms": 0,
+      "success": true,
+      "cache_hit": false,
+      "cache_key": "",
+      "temperature": null,
+      "seed": null,
+      "error": null
+    },
+    {
+      "step": "s11_report_compiler",
+      "model": "mock:deepseek-v4-pro",
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "latency_ms": 0,
+      "success": true,
+      "cache_hit": false,
+      "cache_key": "",
+      "temperature": null,
+      "seed": null,
+      "error": null
+    }
+  ]
+}

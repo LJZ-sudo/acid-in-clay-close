@@ -1,0 +1,73 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Test outputs
+test_data/
+test_exports/
+test_viz_output/
+
+# Exports — by default ignore generated bulk data, but explicitly keep the
+# canonical Stage2 -> Stage3 contract artifacts and the human-readable summary,
+# because the existing tracked seed (stage3_seed.json sha256
+# 3f68b832d2f29b99d0c96c99179fc92a4c9164d67aaf04de10ebe715329c6073) is referenced
+# by Stage3 verification provenance and by tests/test_stage2_current_seed_contract.py.
+exports/*.json
+exports/*.jsonl
+exports/visualizations/*.png
+exports/visualizations/*.pdf
+!exports/MANIFEST.md
+!exports/stage3_seed.json
+!exports/evidence_units.json
+!exports/s8_evidence_atlas.json
+!exports/data_profile.json
+!exports/execution_plan.json
+!exports/visualization_manifest.json
+!exports/run_summary.json
+!exports/run_summary.md
+!exports/trend_results.json
+!exports/meyer_neldel_analysis.json
+!exports/critical_transition_analysis.json
+!exports/excluded_samples.json
+!exports/visualizations/ea_vs_R_trend.png
+!exports/visualizations/meyer_neldel.png
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
