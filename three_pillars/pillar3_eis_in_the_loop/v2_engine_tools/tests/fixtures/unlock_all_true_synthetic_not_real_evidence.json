@@ -1,0 +1,11 @@
+{
+  "_marker": "synthetic_not_real_evidence",
+  "signed_hash_bound_approval": true,
+  "real_append_only_raw_eis": true,
+  "stage0_result_gate_pass": true,
+  "manual_rb_qc_acceptable": true,
+  "score_gate_pass": true,
+  "history_import_reviewed": true,
+  "stage3_rerun_claim_gate_passed": true,
+  "new_frozen_manifest_and_presubmission_pass": true
+}

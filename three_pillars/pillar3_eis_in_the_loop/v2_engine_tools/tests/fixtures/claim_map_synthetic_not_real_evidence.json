@@ -1,0 +1,9 @@
+{
+  "_marker": "synthetic_not_real_evidence",
+  "allowed_numbers": [
+    {"value": "0.0366", "unit": "eV", "sample_id": "SYNTH-5.9CS", "path": "fixtures/synthetic_arrhenius.json", "claim_id": "SYN-CL-01"},
+    {"value": "0.0185", "unit": "S cm-1", "sample_id": "SYNTH-5.9CS", "path": "fixtures/synthetic_sigma.json", "claim_id": "SYN-CL-02"},
+    {"value": "273", "unit": "K", "sample_id": "SYNTH-5.9CS", "path": "fixtures/synthetic_sigma.json", "claim_id": "SYN-CL-02"},
+    {"value": "253", "unit": "K", "sample_id": "SYNTH-5.9CS", "path": "fixtures/synthetic_sigma.json", "claim_id": "SYN-CL-02"}
+  ]
+}

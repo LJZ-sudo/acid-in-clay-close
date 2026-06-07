@@ -1,0 +1,11 @@
+{
+  "round_id": "v2-R3",
+  "status": "protocol_locked_raw_bo_recipe",
+  "recommended_parameters": {
+    "R": 0.64,
+    "N": 1.04
+  },
+  "source": "raw_bo_suggestion.json",
+  "locked_before_experiment": true,
+  "claim_boundary": "recipe only; not an experimental result"
+}

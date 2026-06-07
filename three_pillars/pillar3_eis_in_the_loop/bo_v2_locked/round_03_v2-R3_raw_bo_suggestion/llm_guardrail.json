@@ -1,0 +1,10 @@
+{
+  "artifact_type": "bo_v2_llm_guardrail_placeholder",
+  "round_id": "v2-R3",
+  "status": "NOT_APPLIED_RAW_BO_ROUND",
+  "reason": "v2-R3 intentionally preserves the raw optimizer suggestion without LLM adjustment. LLM guardrail adjustment is reserved for v2-R4.",
+  "final_parameters": {
+    "R": 0.64,
+    "N": 1.04
+  }
+}

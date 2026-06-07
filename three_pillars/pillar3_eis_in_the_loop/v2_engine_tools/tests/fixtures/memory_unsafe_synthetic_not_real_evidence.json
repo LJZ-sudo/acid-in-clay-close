@@ -1,0 +1,8 @@
+{
+  "_marker": "synthetic_not_real_evidence",
+  "records": [
+    {"seq": 0, "step": "claim", "key": "headline", "value": "this is the global optimum and a world record", "tags": [], "note": "overclaim"},
+    {"seq": 1, "step": "result", "key": "perf", "value": {"sigma_RT": 0.0185, "Ea_high": 0.0366}, "tags": [], "note": "0.0185 S cm-1 at 273 K"},
+    {"seq": 2, "step": "result", "key": "sourced_perf", "value": {"sigma_RT": 0.0185, "sample_id": "SYNTH-01", "path": "fixtures/synthetic.json"}, "tags": [], "note": "this one has provenance"}
+  ]
+}

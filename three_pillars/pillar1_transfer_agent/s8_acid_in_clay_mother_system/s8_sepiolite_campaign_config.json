@@ -1,0 +1,28 @@
+{
+  "campaign_name": "S8_Sepiolite_Wide_Temp_Optimization",
+  "domain_knowledge": "【材料学专家背景】本体系为 S8 酸-黏土复合固态电解质 (AiCE)。磷酸/水混合物被限域在海泡石 (Sepiolite) 的 0.37x1.06 nm 一维纳米通道中。传导性能受 R (酸水摩尔比) 和 N (液固质量比) 协同调控。\n【核心物理判据】：\n1. 纳米限域判定：若 N 过高，酸液将溢出通道形成体相 (Bulk phase)，在低温下极易发生冻结或相变，导致 Arrhenius 曲线断折或低温区活化能 (Ea) 剧增。\n2. 传导机制判定：理想的限域状态下，质子通过连续氢键网络进行 Grotthuss 跳跃，表现为全温域内极低且稳定的 Ea。\n【决策约束】：在推荐下一步 R/N 时，不仅要追求室温电导率，必须严密监视低温区 Ea 和相变点。如果观测到低温 Ea 异常偏高，必须建议降低 N 值以恢复强限域效应，或调整 R 优化氢键网络。",
+  "objective": {
+    "target": "combined_score",
+    "goal": "maximize",
+    "formula": "math.log10(conductivity_room_temp_S_cm) - 3.0 * ea_high_temp_eV"
+  },
+  "parameters": {
+    "R": {
+      "type": "continuous",
+      "low": 0.0,
+      "high": 1.041,
+      "desc": "酸/水摩尔比 R: n(H3PO4)/n(H2O)，决定氢键网络中供体与受体的比例。实际样品库范围: [0.0, 1.041]（与 inventory 一致，避免 Virtual Oracle 实样超出 BO 边界）"
+    },
+    "N": {
+      "type": "continuous",
+      "low": 2.5,
+      "high": 7.006,
+      "desc": "液/固质量比 N: 决定酸在限域孔道内的装载程度。扩展范围至样品库实际上限 [2.5, 7.006]，以覆盖高性能样品 S8-3-8-2 (N=7.0056, score=-2.4278)"
+    }
+  },
+  "_archive_note": "Migrated 2026-06-07 from V1.0-qianduan-mainline/stage1_optimization/campaigns/. This is the mother-system campaign for Pillar 1 transfer agent; not consumed by attapulgite BO training. The colocated history_db_s8_sepiolite.json holds the 20 retrospective trials. The storage section below uses an absolute pointer so offline-replay tools (code/stage1_tools/run_offline_loop.py) can resolve it without needing a particular CWD.",
+  "storage": {
+    "history_db": "../../../three_pillars/pillar1_transfer_agent/s8_acid_in_clay_mother_system/history_db_s8_sepiolite.json",
+    "output_dir": "../../../three_pillars/pillar1_transfer_agent/s8_acid_in_clay_mother_system/replay_output"
+  }
+}

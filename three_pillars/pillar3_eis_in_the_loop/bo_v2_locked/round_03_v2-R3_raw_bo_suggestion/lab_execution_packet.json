@@ -1,0 +1,37 @@
+{
+  "artifact_type": "bo_v2_pre_experiment_lab_packet",
+  "created_at": "2026-06-01T05:52:31.091116+00:00",
+  "round_id": "v2-R3",
+  "round_type": "raw_bo_suggestion",
+  "status": "READY_FOR_HUMAN_APPROVAL_NOT_EXECUTED",
+  "purpose": "one raw BO suggestion from frozen T2-T8 history",
+  "locked_recipe": {
+    "R": 0.64,
+    "N": 1.04
+  },
+  "reserved_sample_id_pattern": "BOv2-v2-R3-R0.64-N1.04-YYYYMMDD-rep1",
+  "material_calculation": {
+    "attapulgite_g": 1.0,
+    "target_liquid_g": 1.04,
+    "acid_solution_85wt_g": 0.950498,
+    "added_deionized_water_g": 0.089502,
+    "pure_h3po4_equiv_g": 0.807923,
+    "water_in_85wt_acid_g": 0.142575,
+    "total_water_g": 0.232077,
+    "computed_R": 0.64,
+    "computed_N": 1.04
+  },
+  "historical_repeat_anchor": {
+    "trial_id": "",
+    "sample_id": "",
+    "ao_folder": "",
+    "prep_record_path": "",
+    "note": "Used only as the locked-repeat anchor; new v2 execution must be append-only."
+  },
+  "execution_boundary": {
+    "not_a_result": true,
+    "requires_human_approval": true,
+    "requires_raw_eis_before_stage0_import": true,
+    "requires_manual_rb_qc_before_score": true
+  }
+}

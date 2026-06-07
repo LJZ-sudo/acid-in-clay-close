@@ -1,0 +1,12 @@
+{
+  "artifact_type": "memory_safety_verification",
+  "tool": "verify_memory_safe.py",
+  "verdict": "SAFE",
+  "record_count": 10,
+  "violation_count": 0,
+  "violations": [],
+  "result_like_artifact": false,
+  "note": "Memory may record provenance/flags/critic-verdicts/candidate-ids, never fabricated results, unsourced performance numbers, or claim wording.",
+  "_marker": "synthetic_not_real_evidence",
+  "_disclaimer": "dry-run only, no scientific claim, v2 remains HOLD"
+}

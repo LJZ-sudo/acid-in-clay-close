@@ -1,0 +1,8 @@
+{
+  "_marker": "synthetic_not_real_evidence",
+  "records": [
+    {"seq": 0, "step": "S09", "key": "generation_mode", "value": "deterministic_from_d4", "tags": ["flag"], "note": "deterministic path taken"},
+    {"seq": 1, "step": "S14", "key": "critic_verdict", "value": {"ok": true, "issues": []}, "tags": ["critic"], "note": "narrative passed critic clean"},
+    {"seq": 2, "step": "S08", "key": "input_hash", "value": "abc123def456", "tags": ["provenance"], "note": "descriptor sheet hash"}
+  ]
+}

@@ -1,0 +1,405 @@
+{
+  "campaign_name": "S8_Sepiolite_Wide_Temp_Optimization",
+  "trials": [
+    {
+      "trial_id": 1,
+      "timestamp": "2026-04-13T11:02:23.902625",
+      "parameters": {
+        "R": 0.30793441143316214,
+        "N": 4.492933333333334
+      },
+      "objectives": {
+        "conductivity_room_temp_S_cm": 0.005543214784619707,
+        "ea_high_temp_eV": 0.3303865224696488,
+        "ea_low_temp_eV": 0.956682959116511,
+        "n_segments": 3.0,
+        "combined_score": -3.2473978607508274
+      },
+      "metadata": {
+        "sample_id": null,
+        "source": "stage0_measurement",
+        "timestamp": "2026-04-13T11:02:23.902625"
+      }
+    },
+    {
+      "trial_id": 2,
+      "timestamp": "2026-04-13T11:03:42.788292",
+      "parameters": {
+        "R": 0.6367153877711904,
+        "N": 4.532666666666667
+      },
+      "objectives": {
+        "conductivity_room_temp_S_cm": 0.009823263392153198,
+        "ea_high_temp_eV": 0.37843953661490065,
+        "ea_low_temp_eV": 1.0562504153865548,
+        "n_segments": 3.0,
+        "combined_score": -3.143062820860017
+      },
+      "metadata": {
+        "sample_id": null,
+        "source": "stage0_measurement",
+        "timestamp": "2026-04-13T11:03:42.788292"
+      }
+    },
+    {
+      "trial_id": 3,
+      "timestamp": "2026-04-13T11:04:48.631500",
+      "parameters": {
+        "R": 0.40793878581793563,
+        "N": 4.591600000000001
+      },
+      "objectives": {
+        "conductivity_room_temp_S_cm": 0.020603216325624084,
+        "ea_high_temp_eV": 0.15304265935694808,
+        "ea_low_temp_eV": 0.922616371821352,
+        "n_segments": 3.0,
+        "combined_score": -2.1451929555931204
+      },
+      "metadata": {
+        "sample_id": null,
+        "source": "stage0_measurement",
+        "timestamp": "2026-04-13T11:04:48.630453"
+      }
+    },
+    {
+      "trial_id": 4,
+      "timestamp": "2026-04-13T11:05:22.027586",
+      "parameters": {
+        "R": 0.29967776584317934,
+        "N": 5.555555555555555
+      },
+      "objectives": {
+        "conductivity_room_temp_S_cm": 0.01425098923858196,
+        "ea_high_temp_eV": 0.14054938210325357,
+        "ea_low_temp_eV": 0.91164935894947,
+        "n_segments": 3.0,
+        "combined_score": -2.2678031341795526
+      },
+      "metadata": {
+        "sample_id": null,
+        "source": "stage0_measurement",
+        "timestamp": "2026-04-13T11:05:22.027586"
+      }
+    },
+    {
+      "trial_id": 5,
+      "timestamp": "2026-04-13T11:05:55.905793",
+      "parameters": {
+        "R": 0.38656994386778326,
+        "N": 7.005600000000001
+      },
+      "objectives": {
+        "conductivity_room_temp_S_cm": 0.020126266419902967,
+        "ea_high_temp_eV": 0.1463115960794947,
+        "ea_low_temp_eV": 1.1793574843209251,
+        "n_segments": 3.0,
+        "combined_score": -2.135171570906838
+      },
+      "metadata": {
+        "sample_id": null,
+        "source": "stage0_measurement",
+        "timestamp": "2026-04-13T11:05:55.903789"
+      }
+    },
+    {
+      "trial_id": 6,
+      "timestamp": "2026-04-13T11:06:49.206081",
+      "parameters": {
+        "R": 0.5511248511687172,
+        "N": 4.690266666666666
+      },
+      "objectives": {
+        "conductivity_room_temp_S_cm": 0.014944193418848478,
+        "ea_high_temp_eV": 0.20922599349585197,
+        "ea_low_temp_eV": 0.9810297726069506,
+        "n_segments": 3.0,
+        "combined_score": -2.453205500603479
+      },
+      "metadata": {
+        "sample_id": null,
+        "source": "stage0_measurement",
+        "timestamp": "2026-04-13T11:06:49.206081"
+      }
+    },
+    {
+      "trial_id": 7,
+      "timestamp": "2026-04-13T11:07:33.275654",
+      "parameters": {
+        "R": 0.3865699438677833,
+        "N": 3.8920000000000003
+      },
+      "objectives": {
+        "conductivity_room_temp_S_cm": 0.00936840194828418,
+        "ea_high_temp_eV": 0.17905827404913688,
+        "ea_low_temp_eV": 0.7629912258116134,
+        "n_segments": 3.0,
+        "combined_score": -2.5655093064177565
+      },
+      "metadata": {
+        "sample_id": null,
+        "source": "stage0_measurement",
+        "timestamp": "2026-04-13T11:07:33.275654"
+      }
+    },
+    {
+      "trial_id": 8,
+      "timestamp": "2026-04-13T11:08:29.031976",
+      "parameters": {
+        "R": 1.0408163265306123,
+        "N": 5.173333333333333
+      },
+      "objectives": {
+        "conductivity_room_temp_S_cm": 0.012668246124059857,
+        "ea_high_temp_eV": 0.26955393727943583,
+        "ea_low_temp_eV": 1.1069376986227135,
+        "n_segments": 3.0,
+        "combined_score": -2.705945319399035
+      },
+      "metadata": {
+        "sample_id": null,
+        "source": "stage0_measurement",
+        "timestamp": "2026-04-13T11:08:29.031976"
+      }
+    },
+    {
+      "trial_id": 9,
+      "timestamp": "2026-04-13T11:09:12.754653",
+      "parameters": {
+        "R": 0.40793878581793563,
+        "N": 4.591600000000001
+      },
+      "objectives": {
+        "conductivity_room_temp_S_cm": 0.020603216325624084,
+        "ea_high_temp_eV": 0.15304265935694808,
+        "ea_low_temp_eV": 0.922616371821352,
+        "n_segments": 3.0,
+        "combined_score": -2.1451929555931204
+      },
+      "metadata": {
+        "sample_id": null,
+        "source": "stage0_measurement",
+        "timestamp": "2026-04-13T11:09:12.754653"
+      }
+    },
+    {
+      "trial_id": 10,
+      "timestamp": "2026-04-13T11:09:46.448687",
+      "parameters": {
+        "R": 0,
+        "N": 2.7580000000000005
+      },
+      "objectives": {
+        "conductivity_room_temp_S_cm": 0.00019066445911822844,
+        "ea_high_temp_eV": 0.10622696390965428,
+        "ea_low_temp_eV": 0.2158323371068144,
+        "n_segments": 2.0,
+        "combined_score": -4.038411145968479
+      },
+      "metadata": {
+        "sample_id": null,
+        "source": "stage0_measurement",
+        "timestamp": "2026-04-13T11:09:46.448687"
+      }
+    },
+    {
+      "trial_id": 11,
+      "timestamp": "2026-05-01T10:14:52.448215",
+      "parameters": {
+        "R": 0.3865699438677832,
+        "N": 5.838000000000001
+      },
+      "objectives": {
+        "conductivity_room_temp_S_cm": 0.010226832764204274,
+        "ea_high_temp_eV": 0.19081584584272646,
+        "ea_low_temp_eV": 0.9383503112575826,
+        "n_segments": 3.0,
+        "combined_score": -2.5627063833863235
+      },
+      "metadata": {
+        "sample_id": null,
+        "source": "stage0_measurement",
+        "timestamp": "2026-05-01T10:14:52.448215"
+      }
+    },
+    {
+      "trial_id": 12,
+      "timestamp": "2026-05-01T11:17:10.524310",
+      "parameters": {
+        "R": 0.3797497505181546,
+        "N": 4.566933333333333
+      },
+      "objectives": {
+        "conductivity_room_temp_S_cm": 0.009013425031904998,
+        "ea_high_temp_eV": 0.2148573605675573,
+        "ea_low_temp_eV": 0.9416399159441312,
+        "n_segments": 3.0,
+        "combined_score": -2.689682230811638
+      },
+      "metadata": {
+        "sample_id": null,
+        "source": "stage0_measurement",
+        "timestamp": "2026-05-01T11:17:10.524310"
+      }
+    },
+    {
+      "trial_id": 13,
+      "timestamp": "2026-05-01T11:23:15.903683",
+      "parameters": {
+        "R": 0.5511248511687172,
+        "N": 4.690266666666666
+      },
+      "objectives": {
+        "conductivity_room_temp_S_cm": 0.014944193418848478,
+        "ea_high_temp_eV": 0.20922599349585197,
+        "ea_low_temp_eV": 0.9810297726069506,
+        "n_segments": 3.0,
+        "combined_score": -2.453205500603479
+      },
+      "metadata": {
+        "sample_id": null,
+        "source": "stage0_measurement",
+        "timestamp": "2026-05-01T11:23:15.903683"
+      }
+    },
+    {
+      "trial_id": 14,
+      "timestamp": "2026-05-01T11:29:18.643330",
+      "parameters": {
+        "R": 0.5511248511687172,
+        "N": 4.690266666666666
+      },
+      "objectives": {
+        "conductivity_room_temp_S_cm": 0.014944193418848478,
+        "ea_high_temp_eV": 0.20922599349585197,
+        "ea_low_temp_eV": 0.9810297726069506,
+        "n_segments": 3.0,
+        "combined_score": -2.453205500603479
+      },
+      "metadata": {
+        "sample_id": null,
+        "source": "stage0_measurement",
+        "timestamp": "2026-05-01T11:29:18.643330"
+      }
+    },
+    {
+      "trial_id": 15,
+      "timestamp": "2026-05-01T16:11:52.622803",
+      "parameters": {
+        "R": 0.40793878581793563,
+        "N": 4.591600000000001
+      },
+      "objectives": {
+        "conductivity_room_temp_S_cm": 0.020603216325624084,
+        "ea_high_temp_eV": 0.15304265935694808,
+        "ea_low_temp_eV": 0.922616371821352,
+        "n_segments": 3.0,
+        "combined_score": -2.1451929555931204
+      },
+      "metadata": {
+        "sample_id": null,
+        "source": "stage0_measurement",
+        "timestamp": "2026-05-01T16:11:52.622803"
+      }
+    },
+    {
+      "trial_id": 16,
+      "timestamp": "2026-05-01T16:17:05.322865",
+      "parameters": {
+        "R": 1.040816326530612,
+        "N": 4.1386666666666665
+      },
+      "objectives": {
+        "conductivity_room_temp_S_cm": 0.013144712090216438,
+        "ea_high_temp_eV": 0.3139665207649121,
+        "ea_low_temp_eV": 0.3139665207649121,
+        "n_segments": 1.0,
+        "combined_score": -2.8231484841383674
+      },
+      "metadata": {
+        "sample_id": null,
+        "source": "stage0_measurement",
+        "timestamp": "2026-05-01T16:17:05.321864"
+      }
+    },
+    {
+      "trial_id": 17,
+      "timestamp": "2026-05-01T16:19:58.076574",
+      "parameters": {
+        "R": 0.3865699438677833,
+        "N": 3.8920000000000003
+      },
+      "objectives": {
+        "conductivity_room_temp_S_cm": 0.00936840194828418,
+        "ea_high_temp_eV": 0.17905827404913688,
+        "ea_low_temp_eV": 0.7629912258116134,
+        "n_segments": 3.0,
+        "combined_score": -2.5655093064177565
+      },
+      "metadata": {
+        "sample_id": null,
+        "source": "stage0_measurement",
+        "timestamp": "2026-05-01T16:19:58.075569"
+      }
+    },
+    {
+      "trial_id": 18,
+      "timestamp": "2026-05-01T16:22:50.629573",
+      "parameters": {
+        "R": 0.3865699438677833,
+        "N": 3.8920000000000003
+      },
+      "objectives": {
+        "conductivity_room_temp_S_cm": 0.00936840194828418,
+        "ea_high_temp_eV": 0.17905827404913688,
+        "ea_low_temp_eV": 0.7629912258116134,
+        "n_segments": 3.0,
+        "combined_score": -2.5655093064177565
+      },
+      "metadata": {
+        "sample_id": null,
+        "source": "stage0_measurement",
+        "timestamp": "2026-05-01T16:22:50.628569"
+      }
+    },
+    {
+      "trial_id": 19,
+      "timestamp": "2026-05-01T16:26:50.964318",
+      "parameters": {
+        "R": 0.2996777658431794,
+        "N": 4
+      },
+      "objectives": {
+        "conductivity_room_temp_S_cm": 0.004468646279074192,
+        "ea_high_temp_eV": 0.3523678426352971,
+        "ea_low_temp_eV": 1.53692138704735,
+        "n_segments": 3.0,
+        "combined_score": -3.4069275489729876
+      },
+      "metadata": {
+        "sample_id": null,
+        "source": "stage0_measurement",
+        "timestamp": "2026-05-01T16:26:50.962814"
+      }
+    },
+    {
+      "trial_id": 20,
+      "timestamp": "2026-05-01T20:14:31.225595",
+      "parameters": {
+        "R": 0.29412726488993274,
+        "N": 4.2860000000000005
+      },
+      "objectives": {
+        "conductivity_room_temp_S_cm": 0.01696808726609506,
+        "ea_high_temp_eV": 0.12736601691890356,
+        "ea_low_temp_eV": 0.8645731461535073,
+        "n_segments": 3.0,
+        "combined_score": -2.1524651616858477
+      },
+      "metadata": {
+        "sample_id": null,
+        "source": "stage0_measurement",
+        "timestamp": "2026-05-01T20:14:31.225595"
+      }
+    }
+  ]
+}

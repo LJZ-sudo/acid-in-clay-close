@@ -1,0 +1,35 @@
+{
+  "artifact_type": "bo_v2_raw_bo_suggestion",
+  "round_id": "v2-R3",
+  "created_at": "2026-05-29T14:16:34.684881+00:00",
+  "status": "PROTOCOL_LOCKED_RAW_BO_SUGGESTION_NOT_EXECUTED",
+  "method": {
+    "name": "fixed-hyperparameter Gaussian-process expected improvement over score_v3",
+    "history_set": "T2-T8 primary protocol-consistent history",
+    "kernel": "RBF on normalized R,N",
+    "length_scale": 0.28,
+    "noise": 1e-05,
+    "grid_step": 0.02,
+    "min_normalized_distance_to_history": 0.08,
+    "objective": "score_v3 = log10(sigma_RT) - Ea_high - 0.2 * Ea_low_excess"
+  },
+  "selected_parameters": {
+    "R": 0.64,
+    "N": 1.04
+  },
+  "selected_rank_row": {
+    "R": 0.64,
+    "N": 1.04,
+    "min_normalized_distance_to_history": 0.220786,
+    "predicted_score_v3_mean": -1.42256821,
+    "predicted_score_v3_std": 0.15851333,
+    "expected_improvement_scaled": 0.5771460308,
+    "rank": 1
+  },
+  "input_hashes": {
+    "primary_history_csv_sha256": "d91e138b1d2f5dadd4b38a899a6a82193a3ed2402a78c6feb266be3cdf3ef811",
+    "primary_history_canonical_sha256": "6c598afdeca669fe691b0288426ec380cfbca0a115d57e0bb9befa3f0f9b6d8a",
+    "protocol_lock_sha256": "4fa033ffc397fbccc36105131b69883ae233dc3e780e43353be1659de6bc3455"
+  },
+  "claim_boundary": "This is a locked suggestion only. It is not a result and cannot support performance claims before lab execution and QC."
+}

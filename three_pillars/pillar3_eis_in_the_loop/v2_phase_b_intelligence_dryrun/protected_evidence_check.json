@@ -1,0 +1,51 @@
+{
+  "_marker": "synthetic_not_real_evidence",
+  "_disclaimer": "dry-run only, no scientific claim, v2 remains HOLD",
+  "artifact_type": "protected_evidence_check",
+  "result_like_artifact": false,
+  "verdict": "UNCHANGED",
+  "before": {
+    "files": {
+      "V1.0-qianduan-mainline/stage2_statistics/exports/stage3_seed.json": "fe7f48cc41a463c3db3348db2edadd5eceec11e49b6be2facdeec751076a100f",
+      "V1.0-qianduan-mainline/stage1_optimization/campaign_memory/history_db_attapulgite.json": "bfce2b0eef6d980f215ad9f7287f2f0d0126b12bd1e9b3c9e73caf7c1fd57ffe",
+      "V1.0-qianduan-mainline/stage3_mechanism/data/validation/experimental_feedback.json": "a7a87e30c098674d692e0bf1e632676fad1fc6a16c8e0bdfae9d88c7636c072c"
+    },
+    "dirs": {
+      "V1.0-qianduan-mainline/stage3_mechanism/outputs/verification": {
+        "exists": true,
+        "file_count": 459,
+        "rollup_sha256": "6102c63e52e963e45f2d0d0b71923bf220ae8a1cb6eb8ac927fecbfde1b72a25"
+      },
+      "V1.0-qianduan-mainline/data": {
+        "exists": true,
+        "file_count": 3921,
+        "rollup_sha256": "0c040ef4b8e3c0720879f3f21c7a8fdd99495983efce2e4def0692bf1145e55c"
+      }
+    }
+  },
+  "after": {
+    "files": {
+      "V1.0-qianduan-mainline/stage2_statistics/exports/stage3_seed.json": "fe7f48cc41a463c3db3348db2edadd5eceec11e49b6be2facdeec751076a100f",
+      "V1.0-qianduan-mainline/stage1_optimization/campaign_memory/history_db_attapulgite.json": "bfce2b0eef6d980f215ad9f7287f2f0d0126b12bd1e9b3c9e73caf7c1fd57ffe",
+      "V1.0-qianduan-mainline/stage3_mechanism/data/validation/experimental_feedback.json": "a7a87e30c098674d692e0bf1e632676fad1fc6a16c8e0bdfae9d88c7636c072c"
+    },
+    "dirs": {
+      "V1.0-qianduan-mainline/stage3_mechanism/outputs/verification": {
+        "exists": true,
+        "file_count": 459,
+        "rollup_sha256": "6102c63e52e963e45f2d0d0b71923bf220ae8a1cb6eb8ac927fecbfde1b72a25"
+      },
+      "V1.0-qianduan-mainline/data": {
+        "exists": true,
+        "file_count": 3921,
+        "rollup_sha256": "0c040ef4b8e3c0720879f3f21c7a8fdd99495983efce2e4def0692bf1145e55c"
+      }
+    }
+  },
+  "git_status_porcelain": {
+    "returncode": 0,
+    "stdout": "?? V1.0-qianduan-mainline/data/\n?? V1.0-qianduan-mainline/stage1_optimization/campaign_memory/history_db_attapulgite.json\n?? V1.0-qianduan-mainline/stage3_mechanism/data/validation/experimental_feedback.json\n?? V1.0-qianduan-mainline/stage3_mechanism/outputs/verification/",
+    "stderr": ""
+  },
+  "note": "Dry-run writes nothing into protected trees; before==after proves it."
+}

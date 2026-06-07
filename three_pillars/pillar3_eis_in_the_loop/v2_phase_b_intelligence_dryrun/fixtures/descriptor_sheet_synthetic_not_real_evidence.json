@@ -1,0 +1,24 @@
+{
+  "_marker": "synthetic_not_real_evidence",
+  "_disclaimer": "dry-run only, no scientific claim, v2 remains HOLD. Synthetic descriptor sheet; not derived from any real experiment.",
+  "descriptors": [
+    {
+      "descriptor_id": "D1",
+      "descriptor_text": "OH-rich host with dense hydrogen-bond donor sites",
+      "mechanism_role": "proton donor network",
+      "priority": "critical"
+    },
+    {
+      "descriptor_id": "D2",
+      "descriptor_text": "one-dimensional confinement channel",
+      "mechanism_role": "acid confinement",
+      "priority": "important"
+    },
+    {
+      "descriptor_id": "D3",
+      "descriptor_text": "mobile proton carrier phase",
+      "mechanism_role": "proton carrier",
+      "priority": "important"
+    }
+  ]
+}

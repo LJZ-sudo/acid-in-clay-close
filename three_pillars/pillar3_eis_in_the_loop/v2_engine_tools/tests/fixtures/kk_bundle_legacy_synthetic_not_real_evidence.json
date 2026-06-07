@@ -1,0 +1,8 @@
+{
+  "_marker": "synthetic_not_real_evidence",
+  "bundle_type": "synthetic_legacy_stage0_bundle",
+  "eis_points": [
+    {"temperature_K": 273, "kk_residual": null, "quality_flags": ["kk_residual_unavailable_legacy_record"]},
+    {"temperature_K": 253, "kk_residual": null, "quality_flags": ["kk_residual_unavailable_legacy_record"]}
+  ]
+}

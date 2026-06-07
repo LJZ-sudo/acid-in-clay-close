@@ -1,0 +1,16 @@
+{
+  "artifact_type": "bo_v2_r4_guardrail_request",
+  "created_at": "2026-05-29T14:16:34.786714+00:00",
+  "status": "PENDING_LLM_GUARDRAIL_DECISION",
+  "round_id": "v2-R4",
+  "raw_source_round": "v2-R3",
+  "raw_selected_parameters": {
+    "R": 0.64,
+    "N": 1.04
+  },
+  "outputs": {
+    "prompt": "three_pillars/pillar3_eis_in_the_loop/bo_v2_locked/round_04_v2-R4_llm_guardrail_adjusted/llm_guardrail_prompt.md",
+    "candidate_set": "three_pillars/pillar3_eis_in_the_loop/bo_v2_locked/round_04_v2-R4_llm_guardrail_adjusted/guardrail_candidate_set.csv",
+    "response_template": "three_pillars/pillar3_eis_in_the_loop/bo_v2_locked/round_04_v2-R4_llm_guardrail_adjusted/llm_guardrail_response_template.json"
+  }
+}

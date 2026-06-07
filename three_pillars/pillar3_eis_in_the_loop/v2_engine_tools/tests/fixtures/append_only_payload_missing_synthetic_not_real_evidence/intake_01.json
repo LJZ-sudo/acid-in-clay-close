@@ -1,0 +1,8 @@
+{
+  "_marker": "synthetic_not_real_evidence",
+  "seq": 1,
+  "payload_sha256": "638db9b6b2860b19f600257ae97eb80bd7750d79fbc03f2b3bc8e0654e7914a2",
+  "payload_path": "payload_01.bin",
+  "parent_hash": "5589cd428bf83cf86e7ae1aa73e1b165275ea29a7cea93b3879d9e56855f9785",
+  "entry_hash": "32c62c811eddf3f0f5b388775b702368d3d904fec6bc08719d931048454d139f"
+}

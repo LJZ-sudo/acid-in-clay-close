@@ -1,0 +1,37 @@
+{
+  "artifact_type": "bo_v2_pre_experiment_lab_packet",
+  "created_at": "2026-06-01T05:52:31.072166+00:00",
+  "round_id": "v2-R2",
+  "round_type": "locked_repeat",
+  "status": "READY_FOR_HUMAN_APPROVAL_NOT_EXECUTED",
+  "purpose": "reproduce T7 low-Ea_high endpoint",
+  "locked_recipe": {
+    "R": 0.2,
+    "N": 1.1
+  },
+  "reserved_sample_id_pattern": "BOv2-v2-R2-R0.20-N1.10-YYYYMMDD-rep1",
+  "material_calculation": {
+    "attapulgite_g": 1.0,
+    "target_liquid_g": 1.1,
+    "acid_solution_85wt_g": 0.674299,
+    "added_deionized_water_g": 0.425701,
+    "pure_h3po4_equiv_g": 0.573155,
+    "water_in_85wt_acid_g": 0.101145,
+    "total_water_g": 0.526845,
+    "computed_R": 0.2,
+    "computed_N": 1.1
+  },
+  "historical_repeat_anchor": {
+    "trial_id": 7,
+    "sample_id": "BO-R0.20-N1.10-746i-2",
+    "ao_folder": "",
+    "prep_record_path": "",
+    "note": "Used only as the locked-repeat anchor; new v2 execution must be append-only."
+  },
+  "execution_boundary": {
+    "not_a_result": true,
+    "requires_human_approval": true,
+    "requires_raw_eis_before_stage0_import": true,
+    "requires_manual_rb_qc_before_score": true
+  }
+}

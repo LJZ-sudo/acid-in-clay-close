@@ -1,0 +1,8 @@
+﻿sample_id,n_points,n_manual_points,n_main_text_candidate_points,main_window_median_abs_rb_delta_pct,cold_tail_max_abs_rb_delta_pct,sequence_direction_inferred,sequence_warning,geometry_conflict
+2026.4.25CS,37,35,0,,,nonmonotonic_or_filename_sorted,sequence_order_not_sufficient_for_hysteresis_claim,False
+2026.4.27CS,33,33,0,,,nonmonotonic_or_filename_sorted,sequence_order_not_sufficient_for_hysteresis_claim,False
+2026.4.28CS,34,34,0,,,nonmonotonic_or_filename_sorted,sequence_order_not_sufficient_for_hysteresis_claim,False
+2026.4.29CS,34,34,17,13.12,49.6,nonmonotonic_or_filename_sorted,sequence_order_not_sufficient_for_hysteresis_claim,False
+2026.4.30CS,27,27,0,,,nonmonotonic_or_filename_sorted,sequence_order_not_sufficient_for_hysteresis_claim,False
+2026.5.1CS,27,27,0,,,nonmonotonic_or_filename_sorted,sequence_order_not_sufficient_for_hysteresis_claim,False
+2026.5.9CS,35,34,18,10.77,96.65,nonmonotonic_or_filename_sorted,sequence_order_not_sufficient_for_hysteresis_claim,True

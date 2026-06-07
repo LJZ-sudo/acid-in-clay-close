@@ -1,0 +1,17 @@
+{
+  "artifact_type": "bo_v2_protocol_lock",
+  "created_at": "2026-06-01T05:52:31.044263+00:00",
+  "status": "LOCKED_BEFORE_NEW_V2_RESULTS",
+  "history_db_path": "V1.0-qianduan-mainline/stage1_optimization/campaign_memory/history_db_attapulgite.json",
+  "history_db_sha256": "bfce2b0eef6d980f215ad9f7287f2f0d0126b12bd1e9b3c9e73caf7c1fd57ffe",
+  "objective_spec_path": "three_pillars/pillar3_eis_in_the_loop/bo_v2_objective_spec_20260527.md",
+  "objective_spec_sha256": "c8eea5c79c4c48622a9d0c311b1c8d63468314a8ecd2f1a5c854f3e8f263d968",
+  "primary_history_sha256": "6c598afdeca669fe691b0288426ec380cfbca0a115d57e0bb9befa3f0f9b6d8a",
+  "primary_history_n_trials": 7,
+  "full_audit_n_trials": 8,
+  "t1_handling": "retain in full audit; exclude from primary protocol-consistent optimization analysis",
+  "primary_endpoint": "Pareto improvement over sigma_RT, Ea_high and Ea_low_excess",
+  "secondary_score": "score_v3 = log10(sigma_RT) - 1.0 * Ea_high - 0.2 * Ea_low_excess",
+  "round_templates_path": "prospective_round_templates.json",
+  "claim_boundary": "execution proof only; not the causal discovery route for LRS"
+}

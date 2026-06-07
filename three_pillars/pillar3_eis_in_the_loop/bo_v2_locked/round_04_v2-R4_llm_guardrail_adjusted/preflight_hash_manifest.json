@@ -1,0 +1,90 @@
+{
+  "artifact_type": "bo_v2_preflight_hash_manifest",
+  "files": [
+    {
+      "file": "recipe.json",
+      "exists": true,
+      "size_bytes": 315,
+      "sha256": "2268d0ddc2c8d02eb6ebae160e669e1b57efd690910b534c68580b9718ae198f"
+    },
+    {
+      "file": "round_status.json",
+      "exists": true,
+      "size_bytes": 852,
+      "sha256": "cfaf72bef12880482696fae9e92e981ea918c6a629e82872e85519376d1b0fea"
+    },
+    {
+      "file": "lab_execution_packet.json",
+      "exists": true,
+      "size_bytes": 1190,
+      "sha256": "2c270beb9a3e3add6823f94c3d957f95048d214d171ca7ce47287e4cd205c9b8"
+    },
+    {
+      "file": "lab_execution_sheet.md",
+      "exists": true,
+      "size_bytes": 1212,
+      "sha256": "66e8bc7068993d6a6aa74ceee67372b06c5a8ca3cc2fadf0339cd5504db07823"
+    },
+    {
+      "file": "material_calculation.csv",
+      "exists": true,
+      "size_bytes": 220,
+      "sha256": "cc4033e7de3270a50b0d6aea7d2ffea4549907126cdcf355b56088ae24686d29"
+    },
+    {
+      "file": "measurement_sequence_template.csv",
+      "exists": true,
+      "size_bytes": 1390,
+      "sha256": "c8d31d9b33e03bf861f62b1a9a407fb18bce7c267f11db80809be423ca1ec6fa"
+    },
+    {
+      "file": "raw_data_manifest_template.csv",
+      "exists": true,
+      "size_bytes": 1903,
+      "sha256": "c35950e0cb9d85cba6583858955c62bf9ebc5a7136da7f702190a90914fddc5e"
+    },
+    {
+      "file": "sample_label_sheet.csv",
+      "exists": true,
+      "size_bytes": 281,
+      "sha256": "c98a11932d40a6a729590630fa6ebd0e7b3d560b8e80499f6db44c271a23d52f"
+    },
+    {
+      "file": "approval_form_to_sign.md",
+      "exists": true,
+      "size_bytes": 1639,
+      "sha256": "59e88ee6a86cda81064faacdb0e7d5557745e4c686ea67f5e858e58ab951d4ae"
+    },
+    {
+      "file": "eis_acquisition_checklist.md",
+      "exists": true,
+      "size_bytes": 902,
+      "sha256": "d358dff90746ae5aabd548d003a198dcb5fbcaaf5f147a49c66081376fd4312f"
+    },
+    {
+      "file": "chi_eis_preflight_gate.json",
+      "exists": true,
+      "size_bytes": 612,
+      "sha256": "3b17b48f6f421e8de348fc0e220502b4f8e6ee8a8041efb505096f22d9200411"
+    },
+    {
+      "file": "human_approval_template.md",
+      "exists": true,
+      "size_bytes": 507,
+      "sha256": "8a557ffb0635062c19f1f1dc4204864fc157a78c8d9abef444ca120ef01580b0"
+    },
+    {
+      "file": "result_intake_template.json",
+      "exists": true,
+      "size_bytes": 1178,
+      "sha256": "5df72db4946b933dd82ae23457d89f1615a61429d9aa519312261f11181b2a8c"
+    },
+    {
+      "file": "score_template.json",
+      "exists": true,
+      "size_bytes": 449,
+      "sha256": "bcc519627610ced4f79f9d53ee415ef5601538d5e6690aa990ed78c2cb1c75a0"
+    }
+  ],
+  "status": "PASS"
+}

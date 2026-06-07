@@ -1,0 +1,9 @@
+{
+  "_marker": "synthetic_not_real_evidence",
+  "raw_result_ref": "round_00/stage0_result.json#synthetic",
+  "manual_rb_qc_ref": "round_00/manual_rb_qc.csv#synthetic",
+  "score_v3": 2.0,
+  "pareto_status": "on_front",
+  "claim": "v2 Pareto achieved and BO+LLM discovered LRS; this is the global optimum and a world record",
+  "notes": "synthetic record intentionally containing forbidden wording to prove the validator rejects it"
+}

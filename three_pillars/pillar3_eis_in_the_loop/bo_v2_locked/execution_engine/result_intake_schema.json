@@ -1,0 +1,52 @@
+{
+  "artifact_type": "bo_v2_result_intake_schema",
+  "contract_version": "bo_v2_execution_contract_v2",
+  "transition_contract": "three_pillars/pillar3_eis_in_the_loop/bo_v2_locked/execution_engine/transition_contract.json",
+  "transition_contract_csv": "three_pillars/pillar3_eis_in_the_loop/bo_v2_locked/execution_engine/transition_contract.csv",
+  "transition_contract_status": "PASS_LOCKED_PROSPECTIVE_TRANSITION_CONTRACT",
+  "transition_contract_phase_count": 10,
+  "required_before_raw_collection": [
+    "recipe.json",
+    "approval_form_to_sign.md",
+    "completed human_approval.md",
+    "manual EIS route confirmed",
+    "raw EIS folder naming resolved"
+  ],
+  "required_before_stage0": [
+    "raw_data_manifest.csv",
+    "result_intake.json",
+    "submission-grade raw EIS content QC",
+    "append-only Stage0 input staging"
+  ],
+  "required_before_import": [
+    "recipe.json",
+    "human_approval.md",
+    "raw_eis_dir",
+    "stage0_result_dir",
+    "manual_rb_qc.csv",
+    "score.json"
+  ],
+  "required_score_fields": [
+    "sigma_RT_S_cm",
+    "Ea_high_eV",
+    "Ea_low_excess_eV",
+    "score_v3",
+    "pareto_front_v2"
+  ],
+  "hard_gates": {
+    "append_only": true,
+    "hash_bound_human_approval_required": true,
+    "human_approval_required_before_raw_collection": true,
+    "no_preapproval_write_commands": true,
+    "manual_eis_only_until_chi_macrotest_dummy_cell_evidence": true,
+    "automated_chi_execution_blocked": true,
+    "raw_eis_intake_requires_submission_grade_content_qc": true,
+    "stage0_eis_submission_gate_required": true,
+    "manual_rb_qc_required": true,
+    "score_gate_required_before_history_import": true,
+    "append_only_history_after_score_gate": true,
+    "no_current_package_overwrite": true,
+    "no_hysteresis_claim_without_sequence_evidence": true,
+    "no_mechanism_proof_without_advanced_impedance_sidecar": true
+  }
+}

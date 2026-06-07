@@ -1,0 +1,9 @@
+{
+  "_marker": "synthetic_not_real_evidence",
+  "bundle_type": "synthetic_stage0_bundle",
+  "eis_points": [
+    {"temperature_K": 273, "kk_residual": 0.041, "kk_residual_metric": "mu_median_linKK", "kk_threshold": 0.05, "kk_passed": true},
+    {"temperature_K": 253, "kk_residual": 0.046, "kk_residual_metric": "mu_median_linKK", "kk_threshold": 0.05, "kk_passed": true},
+    {"temperature_K": 233, "kk_residual": 0.21, "kk_residual_metric": "mu_median_linKK", "kk_threshold": 0.05, "kk_passed": false}
+  ]
+}

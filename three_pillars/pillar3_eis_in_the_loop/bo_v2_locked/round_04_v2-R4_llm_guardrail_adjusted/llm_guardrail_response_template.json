@@ -1,0 +1,20 @@
+{
+  "artifact_type": "bo_v2_llm_guardrail_decision",
+  "round_id": "v2-R4",
+  "status": "template_only_not_a_decision",
+  "decision": "accept_raw_or_adjust",
+  "final_parameters": {
+    "R": null,
+    "N": null
+  },
+  "source_candidate_rank": null,
+  "reason": "",
+  "risks_considered": {
+    "high_N_bulk_acid_or_overflow": "",
+    "high_R_low_water_or_crystallization": "",
+    "duplicate_existing_recipe": "",
+    "claim_boundary": "recipe only; not an experimental result"
+  },
+  "model_or_reviewer": "",
+  "decision_time": ""
+}

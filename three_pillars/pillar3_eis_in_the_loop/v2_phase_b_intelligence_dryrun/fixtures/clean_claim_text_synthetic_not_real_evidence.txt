@@ -1,0 +1,8 @@
+Dry-run only, no scientific claim, v2 remains HOLD.
+
+In this synthetic scenario the placeholder conductivity is 0.0123 S cm-1 and the
+placeholder activation energy is 0.345 eV. Every value here is
+synthetic_not_real_evidence and describes no real sample, no real EIS spectrum,
+and no real Bayesian-optimization round. These numbers exist only to exercise the
+text-claim traceability gate and trace back to anchors in
+claim_map_synthetic_not_real_evidence.json.

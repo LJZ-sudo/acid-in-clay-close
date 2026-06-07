@@ -1,0 +1,16 @@
+﻿R,N,min_normalized_distance_to_history,predicted_score_v3_mean,predicted_score_v3_std,expected_improvement_scaled,rank,guardrail_hint
+0.64,1.04,0.220786,-1.42256821,0.15851333,0.5771460308,1,high-N/bulk-acid risk increases as N approaches 1.3; high-R dehydration/crystallization risk increases as R approaches 1.04
+0.66,1.02,0.214869,-1.42485868,0.16982155,0.5769030122,2,high-N/bulk-acid risk increases as N approaches 1.3; high-R dehydration/crystallization risk increases as R approaches 1.04
+0.64,1.02,0.201547,-1.42206815,0.15391947,0.576436272,3,high-N/bulk-acid risk increases as N approaches 1.3; high-R dehydration/crystallization risk increases as R approaches 1.04
+0.66,1.04,0.23301,-1.42631896,0.17429466,0.5757286725,4,high-N/bulk-acid risk increases as N approaches 1.3; high-R dehydration/crystallization risk increases as R approaches 1.04
+0.62,1.04,0.209615,-1.42360195,0.14343009,0.5687181128,5,high-N/bulk-acid risk increases as N approaches 1.3; high-R dehydration/crystallization risk increases as R approaches 1.04
+0.68,1.02,0.229032,-1.4324794,0.18611516,0.568037803,6,high-N/bulk-acid risk increases as N approaches 1.3; high-R dehydration/crystallization risk increases as R approaches 1.04
+0.68,1.04,0.246131,-1.43469475,0.19044941,0.5656036252,7,high-N/bulk-acid risk increases as N approaches 1.3; high-R dehydration/crystallization risk increases as R approaches 1.04
+0.62,1.02,0.189245,-1.4242765,0.13872781,0.5654438076,8,high-N/bulk-acid risk increases as N approaches 1.3; high-R dehydration/crystallization risk increases as R approaches 1.04
+0.64,1.06,0.220786,-1.43076396,0.16139543,0.558927688,9,high-N/bulk-acid risk increases as N approaches 1.3; high-R dehydration/crystallization risk increases as R approaches 1.04
+0.66,1.0,0.198226,-1.43146822,0.1640703,0.5585507521,10,high-N/bulk-acid risk increases as N approaches 1.3; high-R dehydration/crystallization risk increases as R approaches 1.04
+0.66,1.06,0.23301,-1.43537066,0.17728141,0.5564034192,11,high-N/bulk-acid risk increases as N approaches 1.3; high-R dehydration/crystallization risk increases as R approaches 1.04
+0.64,1.0,0.183702,-1.42975462,0.14785929,0.5554168109,12,high-N/bulk-acid risk increases as N approaches 1.3; high-R dehydration/crystallization risk increases as R approaches 1.04
+0.62,1.06,0.209615,-1.43068232,0.14616673,0.5524967895,13,high-N/bulk-acid risk increases as N approaches 1.3; high-R dehydration/crystallization risk increases as R approaches 1.04
+0.68,1.0,0.213496,-1.43816845,0.18066499,0.5519459433,14,high-N/bulk-acid risk increases as N approaches 1.3; high-R dehydration/crystallization risk increases as R approaches 1.04
+0.7,1.02,0.24389,-1.44467305,0.20250922,0.5512527085,15,high-N/bulk-acid risk increases as N approaches 1.3; high-R dehydration/crystallization risk increases as R approaches 1.04

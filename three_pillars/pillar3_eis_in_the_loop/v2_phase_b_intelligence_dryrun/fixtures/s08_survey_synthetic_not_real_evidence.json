@@ -1,0 +1,41 @@
+{
+  "_marker": "synthetic_not_real_evidence",
+  "_disclaimer": "dry-run only, no scientific claim, v2 remains HOLD. Synthetic S08 survey with hand-authored component-descriptor claims so S09 deterministic and evidence-based branches both produce output offline. Card ids are fake; not real papers.",
+  "step_id": "s08",
+  "survey_scope": "material_search",
+  "cards": [
+    {
+      "card_id": "SYN-P1",
+      "title": "synthetic starch host (not real)",
+      "component_descriptor_claims": [
+        {
+          "component": "starch",
+          "descriptor_ids": ["D1"],
+          "claim_text": "OH-rich host with hydrogen-bond sites"
+        }
+      ]
+    },
+    {
+      "card_id": "SYN-P2",
+      "title": "synthetic attapulgite confinement (not real)",
+      "component_descriptor_claims": [
+        {
+          "component": "attapulgite",
+          "descriptor_ids": ["D2", "D3"],
+          "claim_text": "1-D confinement of mobile acid phase"
+        }
+      ]
+    },
+    {
+      "card_id": "SYN-P3",
+      "title": "synthetic phosphoric acid carrier (not real)",
+      "component_descriptor_claims": [
+        {
+          "component": "phosphoric acid",
+          "descriptor_ids": ["D1", "D3"],
+          "claim_text": "proton donor and mobile carrier"
+        }
+      ]
+    }
+  ]
+}

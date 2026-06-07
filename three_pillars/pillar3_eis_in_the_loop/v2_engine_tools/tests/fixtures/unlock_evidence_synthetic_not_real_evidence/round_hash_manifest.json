@@ -1,0 +1,8 @@
+{
+  "_marker": "synthetic_not_real_evidence",
+  "artifact_type": "v2_round_hash_manifest",
+  "tool": "build_round_hash_manifest.py",
+  "complete": true,
+  "missing_files": [],
+  "rollup_sha256": "synthetic0000000000000000000000000000000000000000000000000000000000"
+}

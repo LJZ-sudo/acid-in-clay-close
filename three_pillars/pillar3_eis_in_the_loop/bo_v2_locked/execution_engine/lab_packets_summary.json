@@ -1,0 +1,36 @@
+{
+  "artifact_type": "bo_v2_lab_packets_summary",
+  "created_at": "2026-06-01T05:52:31.132164+00:00",
+  "status": "READY_FOR_HUMAN_APPROVAL_NOT_EXECUTED",
+  "n_packets": 4,
+  "packets": [
+    {
+      "round_id": "v2-R1",
+      "round_dir": "three_pillars/pillar3_eis_in_the_loop/bo_v2_locked/round_01_v2-R1_locked_repeat",
+      "status": "READY_FOR_HUMAN_APPROVAL_NOT_EXECUTED",
+      "acid_solution_85wt_g": 1.032232,
+      "added_deionized_water_g": 0.167768
+    },
+    {
+      "round_id": "v2-R2",
+      "round_dir": "three_pillars/pillar3_eis_in_the_loop/bo_v2_locked/round_02_v2-R2_locked_repeat",
+      "status": "READY_FOR_HUMAN_APPROVAL_NOT_EXECUTED",
+      "acid_solution_85wt_g": 0.674299,
+      "added_deionized_water_g": 0.425701
+    },
+    {
+      "round_id": "v2-R3",
+      "round_dir": "three_pillars/pillar3_eis_in_the_loop/bo_v2_locked/round_03_v2-R3_raw_bo_suggestion",
+      "status": "READY_FOR_HUMAN_APPROVAL_NOT_EXECUTED",
+      "acid_solution_85wt_g": 0.950498,
+      "added_deionized_water_g": 0.089502
+    },
+    {
+      "round_id": "v2-R4",
+      "round_dir": "three_pillars/pillar3_eis_in_the_loop/bo_v2_locked/round_04_v2-R4_llm_guardrail_adjusted",
+      "status": "READY_FOR_HUMAN_APPROVAL_NOT_EXECUTED",
+      "acid_solution_85wt_g": 0.932219,
+      "added_deionized_water_g": 0.087781
+    }
+  ]
+}

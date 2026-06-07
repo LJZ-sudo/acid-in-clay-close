@@ -1,0 +1,124 @@
+{
+  "artifact_type": "bo_v2_locked_prospective_transition_contract",
+  "contract_version": "bo_v2_execution_contract_v2",
+  "created_at": "2026-06-01T05:53:50.543810+00:00",
+  "status": "PASS_LOCKED_PROSPECTIVE_TRANSITION_CONTRACT",
+  "phase_count": 10,
+  "write_enabled_phase_count": 7,
+  "manual_eis_allowed": true,
+  "automated_chi_ready": false,
+  "transition_contract_csv": "three_pillars/pillar3_eis_in_the_loop/bo_v2_locked/execution_engine/transition_contract.csv",
+  "rows": [
+    {
+      "phase_order": 1,
+      "execution_phase": "PENDING_HUMAN_APPROVAL",
+      "entry_evidence_required": "locked protocol, round package schema, and hash-bound approval template",
+      "allowed_operator_action": "complete signed human_approval.md outside the pipeline",
+      "allowed_write_tool": "manual signed approval only; no pipeline write flag",
+      "write_flag_allowed": false,
+      "blocked_actions": "manual EIS acquisition, raw result intake, Stage0 staging, Stage0 QC, manual_rb_qc, score, history_after, CHI automation, manuscript claim upgrade",
+      "next_phase_after_gate": "READY_FOR_MANUAL_EIS_ACQUISITION",
+      "claim_boundary": "No prospective performance or manuscript upgrade claim is allowed."
+    },
+    {
+      "phase_order": 2,
+      "execution_phase": "READY_FOR_MANUAL_EIS_ACQUISITION",
+      "entry_evidence_required": "valid signed human_approval.md and approval/readiness gates refreshed",
+      "allowed_operator_action": "acquire raw EIS manually and preserve append-only raw exports",
+      "allowed_write_tool": "manual instrument export only; no repository write flag",
+      "write_flag_allowed": false,
+      "blocked_actions": "automated CHI execution, result_intake write, Stage0 staging, score, history_after, manuscript claim upgrade",
+      "next_phase_after_gate": "PENDING_RAW_RESULT_INTAKE",
+      "claim_boundary": "Raw acquisition alone is not performance evidence until content QC and Stage0 gates pass."
+    },
+    {
+      "phase_order": 3,
+      "execution_phase": "PENDING_RAW_RESULT_INTAKE",
+      "entry_evidence_required": "signed approval, append-only raw EIS folder, manifest, and content QC pass",
+      "allowed_operator_action": "write result_intake.json and raw_data_manifest.csv with explicit write flag",
+      "allowed_write_tool": "build_bo_v2_result_intake_from_raw.py --write-round-files",
+      "write_flag_allowed": true,
+      "blocked_actions": "Stage0 staging, score, history_after, manuscript claim upgrade",
+      "next_phase_after_gate": "READY_FOR_STAGE0_INPUT_STAGING",
+      "claim_boundary": "Result intake is metadata only and does not support manuscript claims."
+    },
+    {
+      "phase_order": 4,
+      "execution_phase": "READY_FOR_STAGE0_INPUT_STAGING",
+      "entry_evidence_required": "result_intake.json, raw_data_manifest.csv, and postlab QC worklist ready",
+      "allowed_operator_action": "stage append-only Stage0 input files",
+      "allowed_write_tool": "build_bo_v2_stage0_input_staging.py --write-stage0-input",
+      "write_flag_allowed": true,
+      "blocked_actions": "manual_rb_qc, score, history_after, manuscript claim upgrade",
+      "next_phase_after_gate": "READY_FOR_STAGE0_QC_RUN",
+      "claim_boundary": "Staged Stage0 inputs are not analyzed results."
+    },
+    {
+      "phase_order": 5,
+      "execution_phase": "READY_FOR_STAGE0_QC_RUN",
+      "entry_evidence_required": "append-only Stage0 input staging report and operator-reviewed run command",
+      "allowed_operator_action": "run Stage0 QC and refresh Stage0 result gate",
+      "allowed_write_tool": "operator-reviewed run_stage0_wrapper.py command",
+      "write_flag_allowed": true,
+      "blocked_actions": "manual_rb_qc before Stage0 result gate, score, history_after, manuscript claim upgrade",
+      "next_phase_after_gate": "READY_FOR_MANUAL_RB_QC",
+      "claim_boundary": "Stage0 output remains screening evidence until manual Rb QC is reviewed."
+    },
+    {
+      "phase_order": 6,
+      "execution_phase": "READY_FOR_MANUAL_RB_QC",
+      "entry_evidence_required": "Stage0 result gate ready for manual Rb review",
+      "allowed_operator_action": "write manual_rb_qc.csv from human-reviewed Stage0/Rb evidence",
+      "allowed_write_tool": "manual_rb_qc.csv human review only",
+      "write_flag_allowed": true,
+      "blocked_actions": "score before manual Rb QC gate, history_after, manuscript claim upgrade",
+      "next_phase_after_gate": "READY_FOR_SCORE_CALCULATION",
+      "claim_boundary": "Manual Rb QC supports scoring only after the QC gate passes."
+    },
+    {
+      "phase_order": 7,
+      "execution_phase": "READY_FOR_SCORE_CALCULATION",
+      "entry_evidence_required": "manual_rb_qc.csv accepted and score fields available",
+      "allowed_operator_action": "write score.json from the locked score_v3 formula",
+      "allowed_write_tool": "build_bo_v2_score_intake.py / score.json manual-calculation write",
+      "write_flag_allowed": true,
+      "blocked_actions": "history_after before score gate, manuscript claim upgrade",
+      "next_phase_after_gate": "READY_FOR_POSTLAB_INTAKE_GATE",
+      "claim_boundary": "Score output ranks v2 candidates only; it is not a manuscript claim by itself."
+    },
+    {
+      "phase_order": 8,
+      "execution_phase": "READY_FOR_POSTLAB_INTAKE_GATE",
+      "entry_evidence_required": "score gate ready and postlab intake/history guards refreshed",
+      "allowed_operator_action": "refresh non-destructive postlab intake and history import gates",
+      "allowed_write_tool": "non-destructive gate refresh",
+      "write_flag_allowed": false,
+      "blocked_actions": "history_after write until append-only import is ready, manuscript claim upgrade",
+      "next_phase_after_gate": "READY_FOR_HISTORY_AFTER_WRITE",
+      "claim_boundary": "Postlab intake gates authorize import review, not claims."
+    },
+    {
+      "phase_order": 9,
+      "execution_phase": "READY_FOR_HISTORY_AFTER_WRITE",
+      "entry_evidence_required": "postlab intake ready and append-only history import guard ready",
+      "allowed_operator_action": "write per-round history_after.json after human review",
+      "allowed_write_tool": "build_bo_v2_append_only_history_import.py --write-history-after",
+      "write_flag_allowed": true,
+      "blocked_actions": "manuscript claim upgrade until claim gate is ready",
+      "next_phase_after_gate": "READY_FOR_BOUNDED_CLAIM_UPGRADE_REVIEW",
+      "claim_boundary": "History import records the v2 result; it does not expand manuscript claims."
+    },
+    {
+      "phase_order": 10,
+      "execution_phase": "READY_FOR_BOUNDED_CLAIM_UPGRADE_REVIEW",
+      "entry_evidence_required": "history_after import complete and claim-upgrade gate ready",
+      "allowed_operator_action": "review bounded claim language in a new manuscript version only",
+      "allowed_write_tool": "new-version manuscript edits after claim review",
+      "write_flag_allowed": true,
+      "blocked_actions": "current-version edits, world-record claims, global optimum claims, mechanism-proof claims",
+      "next_phase_after_gate": "manuscript_upgrade_review_complete",
+      "claim_boundary": "Only bounded v2 manuscript upgrades are allowed; current small-paper baseline stays frozen."
+    }
+  ],
+  "claim_boundary": "This transition contract locks execution order and write boundaries only. It does not create approvals, raw EIS data, Stage0 outputs, scores, history imports, CHI automation readiness, or manuscript claims."
+}

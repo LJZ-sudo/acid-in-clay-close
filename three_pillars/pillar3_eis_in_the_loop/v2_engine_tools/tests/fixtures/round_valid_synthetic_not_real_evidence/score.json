@@ -1,0 +1,7 @@
+{
+  "_marker": "synthetic_not_real_evidence",
+  "raw_result_ref": "stage0_result.json",
+  "manual_rb_qc_ref": "manual_rb_qc.csv",
+  "score_v3": -1.0,
+  "pareto_status": "dominated"
+}

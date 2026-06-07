@@ -1,0 +1,22 @@
+{
+  "_marker": "synthetic_not_real_evidence",
+  "_disclaimer": "dry-run only, no scientific claim, v2 remains HOLD",
+  "_kind": "adversarial test only",
+  "_not_a_claim": true,
+  "_scan_policy": "excluded from claim scans except guardrail self-test",
+  "artifact_type": "adversarial_guardrail_fixture",
+  "result_like_artifact": false,
+  "purpose": "Holds the synthetic adversarial text used to prove the EIS/claim guardrail FIRES. This is a guardrail self-test fixture, NOT a scientific claim and NOT real evidence.",
+  "adversarial_text": "(synthetic adversarial) EIS proves the interfacial transport picture here.",
+  "critic_issue_count": 3,
+  "critic_issues": [
+    "overclaim: proves?\\b",
+    "overclaim: EIS proves?\\b",
+    "eis_overclaim: Pattern `EIS\\s+(proves?|shows?|confirms?|establishes?)\\b` matched: ...(synthetic adversarial) EIS proves the interfacial transport picture here...."
+  ],
+  "eis_guardrail_finding_count": 1,
+  "eis_guardrail_findings": [
+    "Pattern `EIS\\s+(proves?|shows?|confirms?|establishes?)\\b` matched: ...(synthetic adversarial) EIS proves the interfacial transport picture here...."
+  ],
+  "guardrail_fired": true
+}

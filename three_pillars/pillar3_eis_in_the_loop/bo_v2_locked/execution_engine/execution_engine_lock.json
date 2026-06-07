@@ -1,0 +1,68 @@
+{
+  "artifact_type": "bo_v2_locked_prospective_execution_engine",
+  "contract_version": "bo_v2_execution_contract_v2",
+  "created_at": "2026-06-01T05:53:50.545810+00:00",
+  "status": "READY_FOR_APPEND_ONLY_PROSPECTIVE_EXECUTION",
+  "hard_failures": [],
+  "protocol_lock_path": "three_pillars/pillar3_eis_in_the_loop/bo_v2_locked/protocol_lock.json",
+  "protocol_status": "LOCKED_BEFORE_NEW_V2_RESULTS",
+  "primary_history_sha256": "6c598afdeca669fe691b0288426ec380cfbca0a115d57e0bb9befa3f0f9b6d8a",
+  "locked_inputs": {
+    "protocol_lock": "three_pillars/pillar3_eis_in_the_loop/bo_v2_locked/protocol_lock.json",
+    "protocol_lock_sha256": "5a97e9e34b56cb163f89f4fd9d954a4a842effa9e11457d3ff9a6ec823881966",
+    "prospective_round_templates": "three_pillars/pillar3_eis_in_the_loop/bo_v2_locked/prospective_round_templates.json",
+    "prospective_round_templates_sha256": "f2d9bef1aa27dca59c47e3d7eb5b567322ba5a583533913456ed9f86513fd910",
+    "round_package_schema": "three_pillars/pillar3_eis_in_the_loop/bo_v2_locked/round_package_schema.json",
+    "round_package_schema_sha256": "ea74ab184d71f648fb97b55be4b79de0a7f2b9c5466a13ad29f357b6258fcb20",
+    "history_db": {
+      "path": "V1.0-qianduan-mainline/stage1_optimization/campaign_memory/history_db_attapulgite.json",
+      "expected_sha256": "bfce2b0eef6d980f215ad9f7287f2f0d0126b12bd1e9b3c9e73caf7c1fd57ffe",
+      "observed_sha256": "bfce2b0eef6d980f215ad9f7287f2f0d0126b12bd1e9b3c9e73caf7c1fd57ffe",
+      "hash_match": true
+    },
+    "objective_spec": {
+      "path": "three_pillars/pillar3_eis_in_the_loop/bo_v2_objective_spec_20260527.md",
+      "expected_sha256": "c8eea5c79c4c48622a9d0c311b1c8d63468314a8ecd2f1a5c854f3e8f263d968",
+      "observed_sha256": "c8eea5c79c4c48622a9d0c311b1c8d63468314a8ecd2f1a5c854f3e8f263d968",
+      "hash_match": true
+    }
+  },
+  "state_machine": [
+    "not_started",
+    "recipe_locked",
+    "human_approved",
+    "experiment_complete",
+    "stage0_qc_complete",
+    "manual_rb_qc_complete",
+    "scored",
+    "imported_to_v2_history",
+    "manuscript_eligible"
+  ],
+  "n_rounds": 4,
+  "execution_queue": "three_pillars/pillar3_eis_in_the_loop/bo_v2_locked/execution_engine/prospective_execution_queue.csv",
+  "result_intake_schema": "three_pillars/pillar3_eis_in_the_loop/bo_v2_locked/execution_engine/result_intake_schema.json",
+  "transition_contract": "three_pillars/pillar3_eis_in_the_loop/bo_v2_locked/execution_engine/transition_contract.json",
+  "transition_contract_csv": "three_pillars/pillar3_eis_in_the_loop/bo_v2_locked/execution_engine/transition_contract.csv",
+  "transition_contract_status": "PASS_LOCKED_PROSPECTIVE_TRANSITION_CONTRACT",
+  "transition_contract_phase_count": 10,
+  "transition_contract_write_enabled_phase_count": 7,
+  "result_schema_hard_gates": {
+    "append_only": true,
+    "hash_bound_human_approval_required": true,
+    "human_approval_required_before_raw_collection": true,
+    "no_preapproval_write_commands": true,
+    "manual_eis_only_until_chi_macrotest_dummy_cell_evidence": true,
+    "automated_chi_execution_blocked": true,
+    "raw_eis_intake_requires_submission_grade_content_qc": true,
+    "stage0_eis_submission_gate_required": true,
+    "manual_rb_qc_required": true,
+    "score_gate_required_before_history_import": true,
+    "append_only_history_after_score_gate": true,
+    "no_current_package_overwrite": true,
+    "no_hysteresis_claim_without_sequence_evidence": true,
+    "no_mechanism_proof_without_advanced_impedance_sidecar": true
+  },
+  "current_round": "v2-R1",
+  "current_blocking_item": "human approval and lab execution; no new v2 EIS result is present yet",
+  "claim_boundary": "engine readiness only; does not prove improved material performance until prospective results pass QC"
+}

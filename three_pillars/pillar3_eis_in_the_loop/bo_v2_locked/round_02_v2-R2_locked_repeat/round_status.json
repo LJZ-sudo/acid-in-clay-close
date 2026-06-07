@@ -1,0 +1,27 @@
+{
+  "artifact_type": "bo_v2_round_status",
+  "contract_version": "bo_v2_execution_contract_v2",
+  "round_id": "v2-R2",
+  "round_type": "locked_repeat",
+  "state_machine": [
+    "not_started",
+    "recipe_locked",
+    "human_approved",
+    "experiment_complete",
+    "stage0_qc_complete",
+    "manual_rb_qc_complete",
+    "scored",
+    "imported_to_v2_history",
+    "manuscript_eligible"
+  ],
+  "current_state": "recipe_locked",
+  "blocking_item": "human approval before lab execution",
+  "append_only": true,
+  "hash_bound_human_approval_required": true,
+  "manual_eis_allowed": true,
+  "automated_chi_ready": false,
+  "raw_collection_requires_human_approval": true,
+  "write_tools_enabled": false,
+  "result_like_files_allowed_before_completion": false,
+  "result_files_are_templates_until_renamed": true
+}

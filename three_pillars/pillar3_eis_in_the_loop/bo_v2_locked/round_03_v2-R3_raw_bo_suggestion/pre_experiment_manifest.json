@@ -1,0 +1,23 @@
+{
+  "artifact_type": "bo_v2_pre_experiment_manifest",
+  "round_id": "v2-R3",
+  "files": [
+    "recipe.json",
+    "round_status.json",
+    "lab_execution_packet.json",
+    "lab_execution_sheet.md",
+    "material_calculation.csv",
+    "measurement_sequence_template.csv",
+    "raw_data_manifest_template.csv",
+    "sample_label_sheet.csv",
+    "approval_form_to_sign.md",
+    "eis_acquisition_checklist.md",
+    "chi_eis_preflight_gate.json",
+    "human_approval_template.md",
+    "result_intake_template.json",
+    "score_template.json",
+    "preflight_hash_manifest.csv",
+    "preflight_hash_manifest.json"
+  ],
+  "status": "ready_for_human_approval"
+}

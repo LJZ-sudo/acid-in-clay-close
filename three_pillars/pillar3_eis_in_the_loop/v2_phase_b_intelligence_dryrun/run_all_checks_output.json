@@ -1,0 +1,80 @@
+﻿{
+  "artifact_type": "v2_all_checks_summary",
+  "tool": "run_all_checks.py",
+  "gate": "DRYRUN_ALLOWED",
+  "checks_run": 2,
+  "checks_failed": 0,
+  "failed_checks": [],
+  "checks": [
+    {
+      "check": "round_hash_manifest",
+      "ran": false,
+      "passed": null,
+      "detail": "no --round-dir"
+    },
+    {
+      "check": "approval_binding",
+      "ran": false,
+      "passed": null,
+      "detail": "no --round-dir"
+    },
+    {
+      "check": "manual_rb_qc",
+      "ran": false,
+      "passed": null,
+      "detail": "no --round-dir"
+    },
+    {
+      "check": "score_layers",
+      "ran": false,
+      "passed": null,
+      "detail": "no --round-dir"
+    },
+    {
+      "check": "append_only_chain",
+      "ran": false,
+      "passed": null,
+      "detail": "no --intake-dir"
+    },
+    {
+      "check": "kk_residual_summary",
+      "ran": false,
+      "passed": null,
+      "detail": "no --kk-bundle"
+    },
+    {
+      "check": "text_claims",
+      "ran": true,
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "untraceable": [],
+        "forbidden": []
+      }
+    },
+    {
+      "check": "memory_safe",
+      "ran": true,
+      "passed": true,
+      "detail": {
+        "verdict": "SAFE",
+        "violations": []
+      }
+    },
+    {
+      "check": "chi_preconditions",
+      "ran": false,
+      "passed": null,
+      "detail": "no --chi-evidence-dir"
+    }
+  ],
+  "claim_unlock": {
+    "mode": "evidence",
+    "verdict": "HOLD",
+    "authoritative": true
+  },
+  "v2_claims_status": "HOLD",
+  "enables_chi_automation": false,
+  "result_like_artifact": false,
+  "note": "DRYRUN_ALLOWED means safety/QC checks are green enough to attempt a Phase B intelligence dry-run. It does NOT unlock any scientific claim; v2 claims remain HOLD."
+}

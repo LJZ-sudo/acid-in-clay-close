@@ -1,0 +1,41 @@
+{
+  "artifact_type": "bo_v2_result_intake_template",
+  "contract_version": "bo_v2_execution_contract_v2",
+  "round_id": "v2-R4",
+  "round_type": "llm_guardrail_adjusted",
+  "status": "template_only_not_a_result",
+  "sample_id": "",
+  "recipe": {
+    "R": null,
+    "N": null,
+    "locked_before_experiment": false
+  },
+  "raw_eis_dir": "",
+  "stage0_result_dir": "",
+  "manual_rb_qc_csv": "",
+  "eis_submission_gate_status": "",
+  "measured_endpoints": {
+    "sigma_RT_S_cm": null,
+    "sigma_273K_S_cm": null,
+    "sigma_253K_S_cm": null,
+    "Ea_high_eV": null,
+    "Ea_low_excess_eV": null
+  },
+  "qc_flags": {
+    "manual_rb_complete": false,
+    "geometry_resolved": false,
+    "temperature_sequence_valid_for_hysteresis_claim": false,
+    "advanced_impedance_sidecar_present": false
+  },
+  "required_gate_sequence": [
+    "hash_bound_human_approval",
+    "manual_eis_raw_export",
+    "submission_grade_raw_eis_content_qc",
+    "stage0_eis_submission_qc",
+    "manual_rb_qc",
+    "score_gate",
+    "append_only_history_import",
+    "claim_gate"
+  ],
+  "import_rule": "append-only after stage0_qc_complete and manual_rb_qc_complete"
+}

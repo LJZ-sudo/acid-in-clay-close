@@ -1,0 +1,12 @@
+{
+  "round_id": "v2-R4",
+  "status": "protocol_locked_llm_guardrail_recipe",
+  "recommended_parameters": {
+    "R": 0.64,
+    "N": 1.02
+  },
+  "source": "llm_guardrail.json",
+  "source_candidate_rank": 3,
+  "locked_before_experiment": true,
+  "claim_boundary": "recipe only; not an experimental result"
+}

@@ -1,0 +1,172 @@
+{
+  "_marker": "synthetic_not_real_evidence",
+  "_disclaimer": "dry-run only, no scientific claim, v2 remains HOLD",
+  "artifact_type": "memory_critic_heartbeat_trace",
+  "result_like_artifact": false,
+  "records": [
+    {
+      "seq": 0,
+      "step": "s08_offline",
+      "key": "provider",
+      "value": "fake_offline_provider",
+      "tags": [
+        "dry_run",
+        "synthetic_not_real_evidence"
+      ],
+      "note": "offline api-mode plumbing exercised"
+    },
+    {
+      "seq": 1,
+      "step": "s08_offline",
+      "key": "n_cards",
+      "value": 3,
+      "tags": [
+        "dry_run",
+        "synthetic_not_real_evidence"
+      ],
+      "note": "synthetic card count only"
+    },
+    {
+      "seq": 2,
+      "step": "s09_baseline",
+      "key": "generation_mode",
+      "value": "deterministic_from_d4",
+      "tags": [
+        "dry_run",
+        "synthetic_not_real_evidence"
+      ],
+      "note": "flag OFF; frozen path"
+    },
+    {
+      "seq": 3,
+      "step": "s09_baseline",
+      "key": "n_instances",
+      "value": 5,
+      "tags": [
+        "dry_run",
+        "synthetic_not_real_evidence"
+      ],
+      "note": "instance count only"
+    },
+    {
+      "seq": 4,
+      "step": "s09_evidence",
+      "key": "generation_mode",
+      "value": "evidence_based_descriptor_match",
+      "tags": [
+        "dry_run",
+        "synthetic_not_real_evidence"
+      ],
+      "note": "flag ON; opt-in path"
+    },
+    {
+      "seq": 5,
+      "step": "s09_evidence",
+      "key": "n_instances",
+      "value": 3,
+      "tags": [
+        "dry_run",
+        "synthetic_not_real_evidence"
+      ],
+      "note": "instance count only"
+    },
+    {
+      "seq": 6,
+      "step": "s14_guardrail",
+      "key": "clean_text_findings",
+      "value": 0,
+      "tags": [
+        "dry_run",
+        "synthetic_not_real_evidence"
+      ],
+      "note": "EIS guardrail on clean text"
+    },
+    {
+      "seq": 7,
+      "step": "s14_guardrail",
+      "key": "adversarial_text_findings",
+      "value": 1,
+      "tags": [
+        "dry_run",
+        "synthetic_not_real_evidence"
+      ],
+      "note": "EIS guardrail flagged synthetic adversarial text (advisory)"
+    },
+    {
+      "seq": 8,
+      "step": "critic",
+      "key": "clean_text_ok",
+      "value": true,
+      "tags": [
+        "dry_run",
+        "synthetic_not_real_evidence"
+      ],
+      "note": "critic review of clean text"
+    },
+    {
+      "seq": 9,
+      "step": "critic",
+      "key": "adversarial_text_ok",
+      "value": false,
+      "tags": [
+        "dry_run",
+        "synthetic_not_real_evidence"
+      ],
+      "note": "critic review of synthetic adversarial text"
+    }
+  ],
+  "next_seq": 10,
+  "critic_summary": {
+    "clean_text_ok": true,
+    "clean_text_issue_count": 0,
+    "adversarial_text_ok": false,
+    "adversarial_text_issue_count": 3,
+    "guardrail_fired": true,
+    "adversarial_detail_file": "adversarial_guardrail_fixture_synthetic_not_real_evidence.json"
+  },
+  "heartbeat_trace": [
+    {
+      "seq": 0,
+      "step": "s08_offline",
+      "status": "ok",
+      "t": 0.0,
+      "detail": "offline api-mode plumbing"
+    },
+    {
+      "seq": 1,
+      "step": "s09_baseline",
+      "status": "ok",
+      "t": 1.0,
+      "detail": "deterministic path"
+    },
+    {
+      "seq": 2,
+      "step": "s09_evidence",
+      "status": "ok",
+      "t": 2.0,
+      "detail": "evidence-based path"
+    },
+    {
+      "seq": 3,
+      "step": "s14_guardrail",
+      "status": "ok",
+      "t": 3.0,
+      "detail": "eis guardrail"
+    },
+    {
+      "seq": 4,
+      "step": "done",
+      "status": "done",
+      "t": 4.0,
+      "detail": "dry-run complete"
+    }
+  ],
+  "heartbeat_report": {
+    "n_beats": 5,
+    "last_step": "done",
+    "last_status": "done",
+    "seconds_since_last": 1.0,
+    "stall_seconds": 300.0,
+    "stalled": false
+  }
+}

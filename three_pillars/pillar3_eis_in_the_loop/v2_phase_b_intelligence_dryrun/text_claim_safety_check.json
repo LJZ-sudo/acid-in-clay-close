@@ -1,0 +1,13 @@
+{
+  "artifact_type": "text_claim_verification",
+  "tool": "verify_text_claims.py",
+  "valid": true,
+  "performance_numbers_found": 2,
+  "allowed_anchor_count": 2,
+  "untraceable_numbers": [],
+  "forbidden_wording_hits": [],
+  "result_like_artifact": false,
+  "note": "Every performance number must trace to a claim-map anchor that has a sample_id and a data path. Untraceable numbers or forbidden wording fail.",
+  "_marker": "synthetic_not_real_evidence",
+  "_disclaimer": "dry-run only, no scientific claim, v2 remains HOLD"
+}

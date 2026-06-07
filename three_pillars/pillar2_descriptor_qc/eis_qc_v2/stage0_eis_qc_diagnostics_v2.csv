@@ -1,0 +1,11 @@
+﻿diagnostic,status,value,severity,claim_boundary
+stage0_samples_present,PASS,True,hard_fail,Required before current Stage0/EIS outputs can support manuscript-use decisions.
+temperature_points_present,PASS,True,hard_fail,Required before current Stage0/EIS outputs can support manuscript-use decisions.
+lrs_main_samples_present,PASS,True,hard_fail,Required before current Stage0/EIS outputs can support manuscript-use decisions.
+lrs_main_samples_have_manual_main_window_points,PASS,True,hard_fail,Required before current Stage0/EIS outputs can support manuscript-use decisions.
+main_window_conductivity_available,PASS,True,hard_fail,Required before current Stage0/EIS outputs can support manuscript-use decisions.
+representative_nyquist_exports_present,PASS,True,hard_fail,Required before current Stage0/EIS outputs can support manuscript-use decisions.
+sequence_warning_count,WARN,7,bounded_claim_warning,Allowed only with explicit caveats; not a basis for stronger mechanism or hysteresis claims.
+geometry_conflict_count,WARN,1,bounded_claim_warning,Allowed only with explicit caveats; not a basis for stronger mechanism or hysteresis claims.
+main_window_auto_selected_point_count,WARN,1,bounded_claim_warning,Allowed only with explicit caveats; not a basis for stronger mechanism or hysteresis claims.
+representative_nyquist_missing_export_count,PASS,0,bounded_claim_warning,Allowed only with explicit caveats; not a basis for stronger mechanism or hysteresis claims.

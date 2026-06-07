@@ -1,0 +1,18 @@
+﻿seq,reserved_sample_id_pattern,target_temperature_C,claim_tier,required_for_current_claim,notes
+1,BOv2-v2-R2-R0.20-N1.10-YYYYMMDD-rep1,20,main_window_candidate,True,
+2,BOv2-v2-R2-R0.20-N1.10-YYYYMMDD-rep1,15,main_window_candidate,True,
+3,BOv2-v2-R2-R0.20-N1.10-YYYYMMDD-rep1,10,main_window_candidate,True,
+4,BOv2-v2-R2-R0.20-N1.10-YYYYMMDD-rep1,5,main_window_candidate,True,
+5,BOv2-v2-R2-R0.20-N1.10-YYYYMMDD-rep1,0,main_window_candidate,True,273 K anchor
+6,BOv2-v2-R2-R0.20-N1.10-YYYYMMDD-rep1,-5,main_window_candidate,True,
+7,BOv2-v2-R2-R0.20-N1.10-YYYYMMDD-rep1,-10,main_window_candidate,True,
+8,BOv2-v2-R2-R0.20-N1.10-YYYYMMDD-rep1,-15,main_window_candidate,True,
+9,BOv2-v2-R2-R0.20-N1.10-YYYYMMDD-rep1,-20,main_window_candidate,True,253 K anchor
+10,BOv2-v2-R2-R0.20-N1.10-YYYYMMDD-rep1,-25,main_window_candidate,True,
+11,BOv2-v2-R2-R0.20-N1.10-YYYYMMDD-rep1,-30,main_window_candidate,True,
+12,BOv2-v2-R2-R0.20-N1.10-YYYYMMDD-rep1,-35,continuity_anchor_supplement,False,
+13,BOv2-v2-R2-R0.20-N1.10-YYYYMMDD-rep1,-40,continuity_anchor_supplement,True,233 K continuity anchor
+14,BOv2-v2-R2-R0.20-N1.10-YYYYMMDD-rep1,-50,cold_tail_exploratory,False,
+15,BOv2-v2-R2-R0.20-N1.10-YYYYMMDD-rep1,-60,cold_tail_exploratory,False,
+16,BOv2-v2-R2-R0.20-N1.10-YYYYMMDD-rep1,-70,cold_tail_exploratory,False,
+17,BOv2-v2-R2-R0.20-N1.10-YYYYMMDD-rep1,-80,cold_tail_exploratory,False,

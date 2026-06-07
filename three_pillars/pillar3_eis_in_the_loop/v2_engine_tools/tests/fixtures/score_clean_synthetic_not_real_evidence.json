@@ -1,0 +1,8 @@
+{
+  "_marker": "synthetic_not_real_evidence",
+  "raw_result_ref": "round_00/stage0_result.json#synthetic",
+  "manual_rb_qc_ref": "round_00/manual_rb_qc.csv#synthetic",
+  "score_v3": -1.234,
+  "pareto_status": "dominated",
+  "notes": "synthetic score record for tool testing only; no claim asserted"
+}

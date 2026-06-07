@@ -1,0 +1,5 @@
+round_order,round_id,round_type,current_state,R,N,next_blocking_item,round_dir
+1,v2-R1,locked_repeat,recipe_locked,0.5,1.2,human approval before lab execution,three_pillars/pillar3_eis_in_the_loop/bo_v2_locked/round_01_v2-R1_locked_repeat
+2,v2-R2,locked_repeat,recipe_locked,0.2,1.1,human approval before lab execution,three_pillars/pillar3_eis_in_the_loop/bo_v2_locked/round_02_v2-R2_locked_repeat
+3,v2-R3,raw_bo_suggestion,not_started,,,protocol-locked raw BO suggestion,three_pillars/pillar3_eis_in_the_loop/bo_v2_locked/round_03_v2-R3_raw_bo_suggestion
+4,v2-R4,llm_guardrail_adjusted,not_started,,,raw BO suggestion plus LLM guardrail adjustment,three_pillars/pillar3_eis_in_the_loop/bo_v2_locked/round_04_v2-R4_llm_guardrail_adjusted

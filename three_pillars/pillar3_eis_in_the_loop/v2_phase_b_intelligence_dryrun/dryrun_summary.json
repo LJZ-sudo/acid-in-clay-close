@@ -1,0 +1,53 @@
+{
+  "_marker": "synthetic_not_real_evidence",
+  "_disclaimer": "dry-run only, no scientific claim, v2 remains HOLD",
+  "artifact_type": "phase_b_dryrun_summary",
+  "result_like_artifact": false,
+  "s08_offline": {
+    "literature_mode": "api",
+    "provider": "fake_offline_provider",
+    "network_used": false,
+    "n_cards": 3,
+    "card_ids": [
+      "SYN-W001",
+      "SYN-W002",
+      "SYN-W003"
+    ],
+    "provider_query_count": 4
+  },
+  "s09_baseline": {
+    "s09_evidence_based_generation": false,
+    "generation_mode": "deterministic_from_d4",
+    "n_instances": 5,
+    "instance_ids": [
+      "I1",
+      "I2",
+      "I3",
+      "I4",
+      "I5"
+    ],
+    "audit_ok": true
+  },
+  "s09_evidence": {
+    "s09_evidence_based_generation": true,
+    "generation_mode": "evidence_based_descriptor_match",
+    "n_instances": 3,
+    "instance_ids": [
+      "I1",
+      "I2",
+      "I3"
+    ],
+    "audit_ok": true
+  },
+  "guardrail": {
+    "clean_text_findings": 0,
+    "adversarial_text_findings": 1,
+    "adversarial_text_is_synthetic": true,
+    "note": "S14/EIS guardrail (check_eis_absolute_claims). Advisory in dry-run; 0 findings on clean text and >=1 on the synthetic adversarial text proves it fires."
+  },
+  "text_claim_valid": true,
+  "memory_verdict": "SAFE",
+  "protected_verdict": "UNCHANGED",
+  "v2_claims_status": "HOLD",
+  "enables_chi_automation": false
+}

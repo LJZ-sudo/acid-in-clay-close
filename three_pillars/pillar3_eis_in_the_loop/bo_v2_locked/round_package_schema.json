@@ -1,0 +1,21 @@
+{
+  "artifact_type": "bo_v2_round_package_schema",
+  "required_files": [
+    "history_before.json",
+    "raw_bo_suggestion.json",
+    "llm_guardrail.json",
+    "human_approval.md",
+    "recipe.json",
+    "stage0_result.json",
+    "manual_rb_qc.csv",
+    "score.json",
+    "history_after.json"
+  ],
+  "score_fields": [
+    "sigma_RT_S_cm",
+    "Ea_high_eV",
+    "Ea_low_excess_eV",
+    "score_v3",
+    "pareto_front_v2"
+  ]
+}

@@ -1,0 +1,2 @@
+round_id,sample_id,temperature_K,Rb_ohm,thickness_cm,area_cm2,sigma_S_cm-1,rb_source,kk_mu_median,temp_sequence,reviewer,reviewed_at,qc_tier,acceptance_decision,caveat
+v2r00,synthetic_not_real_evidence,273,120.5,0.022,1.96,0.0085,manual,0.041,cooling,synthetic_reviewer,2026-06-01T00:00:00Z,main-text candidate,accepted,

@@ -1,0 +1,60 @@
+{
+  "campaign_name": "attapulgite_aice_v2_locked",
+  "source_tag": "attapulgite_aice_v2_locked",
+  "analysis_sets": {
+    "full_as_run_audit": "T1-T8",
+    "primary_protocol_consistent_set": "T2-T8",
+    "excluded_from_primary": {
+      "trial_id": 1,
+      "reason": "T1 used 1.65 g attapulgite; T2-T8 used the later fixed 1 g attapulgite protocol"
+    }
+  },
+  "parameters": {
+    "R": {
+      "type": "continuous",
+      "low": 0.0,
+      "high": 1.04
+    },
+    "N": {
+      "type": "continuous",
+      "low": 0.5,
+      "high": 1.3
+    }
+  },
+  "primary_endpoint": "Pareto improvement over sigma_RT, Ea_high and Ea_low_excess",
+  "secondary_score": "score_v3 = log10(sigma_RT) - 1.0 * Ea_high - 0.2 * Ea_low_excess",
+  "round_templates": [
+    {
+      "round_id": "v2-R1",
+      "round_type": "locked_repeat",
+      "R": 0.5,
+      "N": 1.2,
+      "purpose": "reproduce T5 highest-conductivity endpoint",
+      "status": "not_started"
+    },
+    {
+      "round_id": "v2-R2",
+      "round_type": "locked_repeat",
+      "R": 0.2,
+      "N": 1.1,
+      "purpose": "reproduce T7 low-Ea_high endpoint",
+      "status": "not_started"
+    },
+    {
+      "round_id": "v2-R3",
+      "round_type": "raw_bo_suggestion",
+      "R": null,
+      "N": null,
+      "purpose": "one raw BO suggestion from frozen T2-T8 history",
+      "status": "awaits_protocol-locked_BO_generation"
+    },
+    {
+      "round_id": "v2-R4",
+      "round_type": "llm_guardrail_adjusted",
+      "R": null,
+      "N": null,
+      "purpose": "one LLM-adjusted recommendation after physics guardrail",
+      "status": "awaits_raw_BO_and_guardrail"
+    }
+  ]
+}

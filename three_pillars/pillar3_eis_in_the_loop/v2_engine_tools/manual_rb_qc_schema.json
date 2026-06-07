@@ -1,0 +1,60 @@
+{
+  "schema_id": "manual_rb_qc_schema_v2",
+  "description": "Schema for a manual Rb QC intake row (v2 prospective rounds). Units are encoded in column names. This schema validates structure/units only; it does not certify any measurement as real evidence. v2 adds round_id, acceptance_decision, caveat, and ISO-8601 reviewed_at validation.",
+  "row_type": "manual_rb_qc_row",
+  "required_columns": [
+    "round_id",
+    "sample_id",
+    "temperature_K",
+    "Rb_ohm",
+    "thickness_cm",
+    "area_cm2",
+    "sigma_S_cm-1",
+    "rb_source",
+    "kk_mu_median",
+    "temp_sequence",
+    "reviewer",
+    "reviewed_at",
+    "qc_tier",
+    "acceptance_decision",
+    "caveat"
+  ],
+  "column_specs": {
+    "round_id": {"type": "string", "non_empty": true},
+    "sample_id": {"type": "string", "non_empty": true},
+    "temperature_K": {"type": "number", "min": 100.0, "max": 400.0},
+    "Rb_ohm": {"type": "number", "min": 0.0, "exclusive_min": true},
+    "thickness_cm": {"type": "number", "min": 0.0, "max": 1.0, "exclusive_min": true},
+    "area_cm2": {"type": "number", "min": 0.0, "max": 100.0, "exclusive_min": true},
+    "sigma_S_cm-1": {"type": "number", "min": 0.0, "exclusive_min": true},
+    "rb_source": {"type": "enum", "values": ["auto", "manual"]},
+    "kk_mu_median": {"type": "number_or_empty", "min": 0.0},
+    "temp_sequence": {"type": "enum", "values": ["cooling", "heating", "cooling_then_heating"]},
+    "reviewer": {"type": "string", "non_empty": true},
+    "reviewed_at": {"type": "iso8601"},
+    "qc_tier": {"type": "enum", "values": ["main-text candidate", "supplementary candidate", "screening/exploratory"]},
+    "acceptance_decision": {"type": "enum", "values": ["accepted", "rejected", "needs_review"]},
+    "caveat": {"type": "string", "non_empty": false}
+  },
+  "conditional_rules": [
+    {
+      "if_column": "qc_tier",
+      "equals": "main-text candidate",
+      "require_non_empty": ["reviewer", "reviewed_at", "kk_mu_median", "round_id", "acceptance_decision"],
+      "reason": "Main-text tier requires a human reviewer, an ISO review timestamp, a numeric KK residual, a round id, and an explicit acceptance decision."
+    },
+    {
+      "if_column": "acceptance_decision",
+      "equals": "accepted",
+      "forbid_value": {"column": "qc_tier", "equals": "screening/exploratory"},
+      "reason": "A screening/exploratory point must not be marked accepted; it cannot carry a headline claim."
+    },
+    {
+      "if_column": "acceptance_decision",
+      "equals": "rejected",
+      "require_non_empty": ["caveat"],
+      "reason": "A rejected row must record a caveat explaining why."
+    }
+  ],
+  "notes": "synthetic_not_real_evidence fixtures are used to test this schema; the schema itself asserts no scientific result."
+}

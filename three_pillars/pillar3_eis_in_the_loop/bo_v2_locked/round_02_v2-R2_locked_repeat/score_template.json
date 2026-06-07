@@ -1,0 +1,15 @@
+{
+  "artifact_type": "bo_v2_score_template",
+  "contract_version": "bo_v2_execution_contract_v2",
+  "round_id": "v2-R2",
+  "status": "template_only_not_a_score",
+  "formula": "score_v3 = log10(sigma_RT_S_cm) - 1.0 * Ea_high_eV - 0.2 * Ea_low_excess_eV",
+  "required_fields": [
+    "sigma_RT_S_cm",
+    "Ea_high_eV",
+    "Ea_low_excess_eV"
+  ],
+  "score_v3": null,
+  "pareto_front_v2": null,
+  "eligible_for_manuscript_upgrade": false
+}

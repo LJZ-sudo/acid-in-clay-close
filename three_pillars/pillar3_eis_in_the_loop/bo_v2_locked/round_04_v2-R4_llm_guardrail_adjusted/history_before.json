@@ -1,0 +1,85 @@
+{
+  "artifact_type": "bo_v2_history_before_llm_guardrail",
+  "round_id": "v2-R4",
+  "source": "three_pillars/pillar3_eis_in_the_loop/bo_v2_locked/round_03_v2-R3_raw_bo_suggestion/history_before.json",
+  "source_history_sha_matches_protocol": true,
+  "trials": [
+    {
+      "trial_id": 2,
+      "sample_id": "ATA-2026-5-12-R0.35-N0.95",
+      "R": 0.35,
+      "N": 0.95,
+      "sigma_RT_S_cm": 0.01845135377697845,
+      "Ea_high_eV": 0.14995566291263412,
+      "Ea_low_excess_eV": 0.48294292958580254,
+      "score_v3": -1.9805160129524704,
+      "pareto_front_v2": true
+    },
+    {
+      "trial_id": 3,
+      "sample_id": "R0.62-N0.72-2",
+      "R": 0.62,
+      "N": 0.72,
+      "sigma_RT_S_cm": 0.014103581278080361,
+      "Ea_high_eV": 0.21613537050298226,
+      "Ea_low_excess_eV": 0.5397318131090518,
+      "score_v3": -2.1747523274324054,
+      "pareto_front_v2": false
+    },
+    {
+      "trial_id": 4,
+      "sample_id": "R0.5-N0.5-2",
+      "R": 0.5,
+      "N": 0.5,
+      "sigma_RT_S_cm": 0.0026303275389835917,
+      "Ea_high_eV": 0.19513061510629912,
+      "Ea_low_excess_eV": 0.2779840112368904,
+      "score_v3": -2.830717585397705,
+      "pareto_front_v2": true
+    },
+    {
+      "trial_id": 5,
+      "sample_id": "R0.5-N1.2-2",
+      "R": 0.5,
+      "N": 1.2,
+      "sigma_RT_S_cm": 0.045981832332733924,
+      "Ea_high_eV": 0.15246822551953204,
+      "Ea_low_excess_eV": 0.7251278290701384,
+      "score_v3": -1.6349075178291868,
+      "pareto_front_v2": true
+    },
+    {
+      "trial_id": 6,
+      "sample_id": "BO-R0.64-N0.58-7ffv-2",
+      "R": 0.64,
+      "N": 0.58,
+      "sigma_RT_S_cm": 0.00824260856623812,
+      "Ea_high_eV": 0.2102309330568004,
+      "Ea_low_excess_eV": 0.4770173116314409,
+      "score_v3": -2.3895697192879313,
+      "pareto_front_v2": true
+    },
+    {
+      "trial_id": 7,
+      "sample_id": "BO-R0.20-N1.10-746i-2",
+      "R": 0.2,
+      "N": 1.1,
+      "sigma_RT_S_cm": 0.01929730581986022,
+      "Ea_high_eV": 0.06793569213003356,
+      "Ea_low_excess_eV": 0.5142515206750349,
+      "score_v3": -1.885289316751736,
+      "pareto_front_v2": true
+    },
+    {
+      "trial_id": 8,
+      "sample_id": "BO-R0.50-N0.90-23yp-2",
+      "R": 0.5,
+      "N": 0.9,
+      "sigma_RT_S_cm": 0.03221937196506944,
+      "Ea_high_eV": 0.17346737145044494,
+      "Ea_low_excess_eV": 0.532426890515513,
+      "score_v3": -1.7718356788571599,
+      "pareto_front_v2": true
+    }
+  ]
+}

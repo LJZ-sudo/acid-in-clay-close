@@ -1,0 +1,16 @@
+{
+  "artifact_type": "benchmark_condition_audit",
+  "created_at": "2026-05-29T14:16:36.535206+00:00",
+  "status": "PASS_CONTEXTUAL_ONLY",
+  "source_table": "RETIRED: paper/current/figure_data/fig5_ea_benchmark_verified.csv (closest current equivalent: three_pillars/pillar2_descriptor_qc/tables/final_benchmark_table.csv)",
+  "output_csv": "three_pillars/pillar2_descriptor_qc/benchmark_condition_audit/benchmark_condition_audit.csv",
+  "n_entries": 5,
+  "direct_ranking_allowed": false,
+  "main_conclusion": "External low-Ea entries are useful contextual anchors, but current evidence does not support direct absolute ranking across material classes, humidity, geometry and temperature windows.",
+  "required_before_stronger_claim": [
+    "full-condition extraction for each external benchmark",
+    "matched temperature/RH/geometric comparison table",
+    "additional independent LRS repeats",
+    "leakage exclusion and advanced impedance/orthogonal characterization"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "status": "PASS_STAGE0_EIS_QC_V2_SUBMISSION_READY_WITH_BOUNDED_CAVEATS",
+  "hard_failures": [],
+  "submission_readiness_checks": {
+    "stage0_samples_present": true,
+    "temperature_points_present": true,
+    "lrs_main_samples_present": true,
+    "lrs_main_samples_have_manual_main_window_points": true,
+    "main_window_conductivity_available": true,
+    "representative_nyquist_exports_present": true
+  },
+  "warning_counts": {
+    "sequence_warning_count": 7,
+    "geometry_conflict_count": 1,
+    "main_window_auto_selected_point_count": 1,
+    "representative_nyquist_missing_export_count": 0
+  },
+  "sample_count": 7,
+  "temperature_point_count": 227,
+  "manual_rb_point_count": 224,
+  "main_window_point_count": 35,
+  "main_window_manual_point_count": 34,
+  "main_window_manual_points_by_sample": {
+    "2026.4.29CS": 17,
+    "2026.5.9CS": 17
+  },
+  "main_window_max_abs_rb_delta_pct": 14.1786,
+  "representative_nyquist_export_count": 6,
+  "qc_tier_counts": {
+    "support/control": 158,
+    "screening/exploratory": 24,
+    "main-text candidate": 35,
+    "supplementary candidate": 10
+  },
+  "claim_boundary": "Diagnostics support bounded Stage0/EIS manuscript-use decisions only. Advanced impedance sidecars remain required for mechanism-proof language."
+}

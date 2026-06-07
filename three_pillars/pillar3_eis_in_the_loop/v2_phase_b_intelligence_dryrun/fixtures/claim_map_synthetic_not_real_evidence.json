@@ -1,0 +1,20 @@
+{
+  "_marker": "synthetic_not_real_evidence",
+  "_disclaimer": "dry-run only, no scientific claim, v2 remains HOLD. These anchors are fabricated placeholders for plumbing tests only; they are NOT real measurements and MUST NOT be cited.",
+  "allowed_numbers": [
+    {
+      "value": "0.0123",
+      "unit": "S cm-1",
+      "sample_id": "SYN-S1",
+      "path": "codex/v2_phase_b_intelligence_dryrun_20260602/fixtures/s08_survey_synthetic_not_real_evidence.json",
+      "claim_id": "SYN-CL-conductivity"
+    },
+    {
+      "value": "0.345",
+      "unit": "eV",
+      "sample_id": "SYN-S1",
+      "path": "codex/v2_phase_b_intelligence_dryrun_20260602/fixtures/s08_survey_synthetic_not_real_evidence.json",
+      "claim_id": "SYN-CL-activation-energy"
+    }
+  ]
+}

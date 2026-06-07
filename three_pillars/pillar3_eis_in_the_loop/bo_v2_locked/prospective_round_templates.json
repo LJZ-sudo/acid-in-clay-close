@@ -1,0 +1,34 @@
+[
+  {
+    "round_id": "v2-R1",
+    "round_type": "locked_repeat",
+    "R": 0.5,
+    "N": 1.2,
+    "purpose": "reproduce T5 highest-conductivity endpoint",
+    "status": "not_started"
+  },
+  {
+    "round_id": "v2-R2",
+    "round_type": "locked_repeat",
+    "R": 0.2,
+    "N": 1.1,
+    "purpose": "reproduce T7 low-Ea_high endpoint",
+    "status": "not_started"
+  },
+  {
+    "round_id": "v2-R3",
+    "round_type": "raw_bo_suggestion",
+    "R": null,
+    "N": null,
+    "purpose": "one raw BO suggestion from frozen T2-T8 history",
+    "status": "awaits_protocol-locked_BO_generation"
+  },
+  {
+    "round_id": "v2-R4",
+    "round_type": "llm_guardrail_adjusted",
+    "R": null,
+    "N": null,
+    "purpose": "one LLM-adjusted recommendation after physics guardrail",
+    "status": "awaits_raw_BO_and_guardrail"
+  }
+]

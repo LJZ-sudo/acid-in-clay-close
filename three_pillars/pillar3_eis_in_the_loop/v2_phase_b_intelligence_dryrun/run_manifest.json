@@ -1,0 +1,41 @@
+{
+  "_marker": "synthetic_not_real_evidence",
+  "_disclaimer": "dry-run only, no scientific claim, v2 remains HOLD",
+  "artifact_type": "phase_b_run_manifest",
+  "generated_at_utc": "2026-06-02T08:14:49.090774+00:00",
+  "python_version": "3.12.7",
+  "result_like_artifact": false,
+  "no_live_llm": true,
+  "no_network": true,
+  "synthetic_only": true,
+  "phase_b_applicable_safety_checks_only": true,
+  "manifest_excludes": [
+    "__pycache__/**",
+    "*.pyc",
+    ".pytest_cache/**"
+  ],
+  "file_count": 19,
+  "files_sha256": {
+    "adversarial_guardrail_fixture_synthetic_not_real_evidence.json": "d2fc9c5e9826386d42ceab19bdf351e57a9bd78d6b321a85125e6f1ccac57812",
+    "dryrun_summary.json": "9cf8abb2e9c2e1c5d35cde2033d21e185e3752e2eb147f1767178599d7caab60",
+    "fake_openalex_provider.py": "d9f95dc005f5de7dd302b1c411a59dd8de89c2b560419b37efb33d7d828b4785",
+    "fixtures/claim_map_synthetic_not_real_evidence.json": "e4634e4dbe8244783836be0ea095d7cacc1367d9cff181cd25dd5a9ee592f2b3",
+    "fixtures/clean_claim_text_synthetic_not_real_evidence.txt": "3b8eade133bc1726b2901efbe272735ad137765928fd7abefb3d26f428af0343",
+    "fixtures/descriptor_sheet_synthetic_not_real_evidence.json": "46acc5071f76e59d5f518186fdd3b976fc579d464b167ef013d9f76a05edaa30",
+    "fixtures/s08_survey_synthetic_not_real_evidence.json": "7e088dd06dd6fcd573a4ddc4a66340f9c4f6d2ae7d293a22ac35135efc27a7eb",
+    "memory_critic_heartbeat_trace.json": "eb4d338a57756026e3a194bbf8d566f12069af68740219cc8cb17be435569155",
+    "memory_safety_check.json": "508917e2fdcc460ea0709888cc785f462e128e5526314d3c458a2752ad5cba50",
+    "mobo_retrospective_boundary.md": "bfe5a50748018bd4cd1df6e50cceff0eb0339c5a8b0b40745bd768fd231880f9",
+    "next_phase_c_experiment_readiness.md": "ba52de6afe822c906163093d22070546829e958e59e182c34565eed3342f604f",
+    "openalex_snapshot_or_plan.md": "7795e7231697b907c82f032967a5f50f550c55fcd9401bed9d08951ede409518",
+    "PHASE_B_CLEANUP_ACCEPTANCE_NOTE.md": "4398e1e55169553ab8a2188da2ea3d9c926be5414c49a94be652bbd2028a8cf7",
+    "PHASE_B_INTELLIGENCE_DRYRUN_REPORT.md": "4b7428835df977bc87d963a3b2c3ffeec1d17aff51f9195911070494616af7bc",
+    "protected_evidence_check.json": "814a8d952f3a4cb4c514b3ed50a1c243376c84dd1ce68a5a01541ceb5f47c1f9",
+    "run_all_checks_output.json": "6b42d02fcfb0706c1520f8b3a8d924161a3f9d2cff5c63031da888dbc26dd692",
+    "run_phase_b_dryrun.py": "3f518a3feb1674d4349fef4abc6910aa66bbb807d657ea1e3e95c9d39ad8fcbd",
+    "s09_baseline_vs_evidence_based_diff.md": "57df34a10ac5e8ca9d95fce4164f66f58e5e601ce6c035591215c51a9b16d8d5",
+    "text_claim_safety_check.json": "49c1e6208db12687aa20724db345013964184176c248edd00f92f2409daddec1"
+  },
+  "v2_claims_status": "HOLD",
+  "enables_chi_automation": false
+}

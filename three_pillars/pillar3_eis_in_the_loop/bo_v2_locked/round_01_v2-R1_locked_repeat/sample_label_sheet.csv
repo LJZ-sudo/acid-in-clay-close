@@ -1,0 +1,4 @@
+﻿label_type,label_text
+sample_vial,BOv2-v2-R1-R0.50-N1.20-YYYYMMDD-rep1; R=0.5; N=1.2; not-result-before-EIS
+weighing_record,attapulgite=1.0g; 85wtH3PO4=1.032232g; DIwater=0.167768g
+raw_eis_folder,V1.0-qianduan-mainline/data/ao/<date>__BOv2-v2-R1-R0.50-N1.20-YYYYMMDD-rep1

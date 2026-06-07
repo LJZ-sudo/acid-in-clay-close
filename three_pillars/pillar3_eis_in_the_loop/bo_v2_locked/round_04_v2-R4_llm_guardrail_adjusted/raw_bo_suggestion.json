@@ -1,0 +1,20 @@
+{
+  "artifact_type": "bo_v2_raw_bo_suggestion_for_llm_guardrail",
+  "round_id": "v2-R4",
+  "source_round": "v2-R3",
+  "source_path": "three_pillars/pillar3_eis_in_the_loop/bo_v2_locked/round_03_v2-R3_raw_bo_suggestion/raw_bo_suggestion.json",
+  "selected_parameters": {
+    "R": 0.64,
+    "N": 1.04
+  },
+  "selected_rank_row": {
+    "R": 0.64,
+    "N": 1.04,
+    "min_normalized_distance_to_history": 0.220786,
+    "predicted_score_v3_mean": -1.42256821,
+    "predicted_score_v3_std": 0.15851333,
+    "expected_improvement_scaled": 0.5771460308,
+    "rank": 1
+  },
+  "candidate_set_path": "guardrail_candidate_set.csv"
+}

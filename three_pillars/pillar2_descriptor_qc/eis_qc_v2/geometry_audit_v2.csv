@@ -1,0 +1,8 @@
+﻿sample_id,formal_thickness_cm,area_cm2,manual_workbook_header_thickness_cm,geometry_conflict,geometry_decision
+2026.4.25CS,0.1,1.96,,False,use preparation/registry thickness
+2026.4.27CS,0.06,1.96,,False,use preparation/registry thickness
+2026.4.28CS,0.06,1.96,,False,use preparation/registry thickness
+2026.4.29CS,0.02,1.96,,False,use preparation/registry thickness
+2026.4.30CS,0.05,1.96,,False,use preparation/registry thickness
+2026.5.1CS,0.06,1.96,,False,use preparation/registry thickness
+2026.5.9CS,0.022,1.96,0.08,True,use 0.022 cm from preparation record/back-calculated conductivity; workbook header is inconsistent

@@ -1,0 +1,13 @@
+{
+  "artifact_type": "chi_eis_preflight_gate",
+  "round_id": "v2-R4",
+  "status": "NEEDS_REFERENCE_MACRO",
+  "missing_docs_or_registry": [
+    "docs/CHI_AUTOMATION_POLICY.md",
+    "docs/CHI_MACRO_VALIDATION.md",
+    "docs/CHI_MACRO_COMMAND_REGISTRY.md",
+    "configs/chi/macro_command_registry.yaml"
+  ],
+  "claim_boundary": "This packet does not verify CHI real-run readiness. Use archived macrotest/dummy-cell evidence before claiming automated run readiness.",
+  "manual_measurement_allowed": "Lab operator may run EIS manually, but raw exports must be archived and hashed before Stage0 import."
+}
