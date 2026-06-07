@@ -280,21 +280,24 @@ def calculate_arrhenius(req: ArrheniusCalcRequest):
             continue
 
     try:
-        from stage0_measurement.modules.measurement_pipeline import (
-            extract_arrhenius_series_from_records,
-        )
-        from stage0_measurement.modules.arrhenius_scientific import (
-            perform_arrhenius_analysis_scientific,
+        from stage0_measurement.modules.analysis.eis_pipeline import (
+            extract_valid_arrhenius_series,
+            analyze_arrhenius_series,
         )
     except ImportError:
-        extract_arrhenius_series_from_records = None
-        perform_arrhenius_analysis_scientific = None
+        extract_valid_arrhenius_series = None
+        analyze_arrhenius_series = None
 
     temps_K: list = []
     conds: list = []
 
-    if extract_arrhenius_series_from_records is not None:
-        temps_K, conds = extract_arrhenius_series_from_records(records)
+    if extract_valid_arrhenius_series is not None:
+        temps_K, conds = extract_valid_arrhenius_series(
+            records,
+            temperature_key="temperature_K",
+            conductivity_key="conductivity_S_cm",
+            rb_key="rb_ohm",
+        )
         if len(temps_K) < 5:
             return {
                 "success": False,
@@ -311,14 +314,19 @@ def calculate_arrhenius(req: ArrheniusCalcRequest):
         if len(temps_K) < 5:
             return {"success": False, "error": "Insufficient valid data points after filtering"}
 
-    if perform_arrhenius_analysis_scientific is not None:
+    if analyze_arrhenius_series is not None:
         try:
             seg_params = req.segmentation or {}
-            result = perform_arrhenius_analysis_scientific(
-                temps_K, conds,
-                max_segments=seg_params.get("max_segments", 4),
-                min_segment_points=seg_params.get("min_points", 5),
-                alpha=seg_params.get("alpha", 0.05),
+            # Canonical scientific Arrhenius analyzer (AICc-based segment selection,
+            # capped at 3 segments). Note: legacy `max_segments` and `alpha`
+            # parameters from the deprecated arrhenius_scientific module are no
+            # longer honored; the new analyzer auto-selects segments via AICc.
+            result = analyze_arrhenius_series(
+                records,
+                min_points=seg_params.get("min_points", 5),
+                temperature_key="temperature_K",
+                conductivity_key="conductivity_S_cm",
+                rb_key="rb_ohm",
             )
             if result.get("success"):
                 segments_out = []
@@ -625,15 +633,25 @@ def run_arrhenius_from_eis(payload: dict = None):
             )
 
     try:
-        from stage0_measurement.modules.measurement_pipeline import running_arrhenius_from_records
+        from stage0_measurement.modules.analysis.eis_pipeline import (
+            analyze_arrhenius_series,
+        )
     except ImportError:
         return {"success": False, "error": "Arrhenius analysis module not available"}
 
-    result = running_arrhenius_from_records(records, min_points=5)
-    if result is None:
+    result = analyze_arrhenius_series(
+        records,
+        min_points=5,
+        temperature_key="temperature_K",
+        conductivity_key="conductivity_S_cm",
+        rb_key="rb_ohm",
+    )
+    if not result or not result.get("success", False):
         return {
             "success": False,
-            "error": "Insufficient points after unified Arrhenius filter (need T_K, sigma, rb_ohm per row).",
+            "error": result.get("error")
+            if result
+            else "Insufficient points after unified Arrhenius filter (need T_K, sigma, rb_ohm per row).",
         }
     return {"success": True, **result}
 
