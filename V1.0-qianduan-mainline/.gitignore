@@ -1,0 +1,28 @@
+# Local secrets
+.env
+**/.env
+*.env.local
+
+# Python runtime/cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Node dependencies/build output
+node_modules/
+frontend/node_modules/
+frontend/dist/
+
+# Generated caches and transient logs
+stage3_mechanism/data/cache/current/
+stage3_mechanism/logs/llm_calls.jsonl
+
+# Stage3 literature workspace: large PDFs + parsed text (>250 MB)
+# Keep small structured artifacts (paper cards, evidence rows, registry) tracked,
+# but exclude raw PDFs and parsed text to avoid bloating the repo.
+stage3_mechanism/literature_workspace/01_manual_inbox/
+stage3_mechanism/literature_workspace/03_parsed_text/
+*.pdf
+
+# Local run output can be large; keep tracked manifests/fixtures explicit.
+runs/
