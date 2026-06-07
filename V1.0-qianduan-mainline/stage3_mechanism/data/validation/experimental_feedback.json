@@ -16,12 +16,15 @@
     "arrhenius_2026.5.9CS_sha256": "5AF431252F6729C64E6033AEF05392073804857B29400893F29FAE0343CCDF59"
   },
   "provenance": {
-    "agent_registry_path": "D:/acid-in-clay-close/V1.0-qianduan-mainline/stage3_mechanism/outputs/archive/20260518_legacy_stage3_outputs/stage3/11_candidate_registry/prospective_candidates.json",
+    "agent_registry_path": "./timing_reference_registry.json",
+    "agent_registry_path_original": "D:/acid-in-clay-close/V1.0-qianduan-mainline/stage3_mechanism/outputs/archive/20260518_legacy_stage3_outputs/stage3/11_candidate_registry/prospective_candidates.json",
+    "agent_registry_status": "reconstructed_from_preserved_evidence",
+    "agent_registry_reconstruction_basis": "Original registry deleted during cleanup commit 4b6ee61 ('retire legacy phase1-3 / paper / paper_figure tree'). Reconstructed anchor at ./timing_reference_registry.json restores ONLY (preregistered_at, run_id, discovery_mode) plus the 2 candidate IDs (PC-a42de8d3b4-01, PC-a42de8d3b4-05) actually bound to experiments. Timestamps recovered from preserved filename 'candidate_validation_link_20260508T132943Z.json' and from this provenance block.",
     "agent_registry_run_id": "a42de8d3b4",
     "agent_discovery_mode": "broad_literature_pool_selection",
     "agent_llm_mode": "live",
     "agent_allowed_wording": "LLM selected and recombined lotus-root-starch evidence from a broad biomass / polymer / clay literature pool.",
-    "timing_basis": "User-confirmed: these new transfer materials were prepared after the agent exploration. Later Stage3 verification timestamps are maintenance artifacts, not original discovery timestamps.",
+    "timing_basis": "User-confirmed: these new transfer materials were prepared after the agent exploration (frozen 2026-05-08T13:29:43Z), and measured on 2026-05-09. Later Stage3 verification timestamps (2026-06-07 publication V2 rerun) are maintenance artifacts, not original discovery timestamps.",
     "measured_at_policy": "The measured_at fields below are manuscript/provenance placeholders for S13 prospective binding and should be replaced by exact lab notebook timestamps before submission.",
     "bo_llm_boundary": "These records validate Stage3 transfer candidates and do not enter the attapulgite Stage1 BO training history."
   },

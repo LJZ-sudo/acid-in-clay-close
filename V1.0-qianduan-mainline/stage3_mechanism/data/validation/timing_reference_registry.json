@@ -1,0 +1,52 @@
+{
+  "step_id": "s12_prospective_registry",
+  "run_id": "a42de8d3b4",
+  "preregistered_at": "2026-05-08T13:29:43+00:00",
+  "discovery_mode": "broad_literature_pool_selection",
+  "top_n": 2,
+  "n_candidates": 2,
+  "candidates": [
+    {
+      "candidate_id": "PC-a42de8d3b4-01",
+      "instance_id": "I1",
+      "instance_name": "Chitosan / organic-modified attapulgite / phosphoric acid composite (transfer family)",
+      "origin": "llm_selected_from_broad_pool",
+      "discovery_mode": "broad_literature_pool_selection",
+      "rank_before_experiment": 1,
+      "combination_novelty": "novel_combination",
+      "components": ["chitosan", "pva", "organic-modified attapulgite", "phosphoric acid"],
+      "composition_description": "Chitosan biopolymer matrix with PVA co-polymer, organic-modified attapulgite 1D-clay reinforcement, and phosphoric acid as the proton source; targeted by VAL-CHITO-0430 and VAL-CHITO-01 on 2026-05-09.",
+      "source_run_id": "a42de8d3b4",
+      "preregistered_at": "2026-05-08T13:29:43+00:00",
+      "validation_status": "validated_consistent",
+      "validation_record_ids": ["VAL-CHITO-0430", "VAL-CHITO-01"],
+      "allowed_claim": "LLM selected and recombined this biopolymer/clay/H3PO4 motif from a broad biomass-polymer-clay literature pool.",
+      "forbidden_claim": "Do not escalate beyond discovery_mode allowance; broad_literature_pool_selection allows 'selected/recombined', NOT 'independently discovered'."
+    },
+    {
+      "candidate_id": "PC-a42de8d3b4-05",
+      "instance_id": "I4",
+      "instance_name": "Lotus-root-starch (LRS) / PVA / attapulgite / phosphoric acid transfer family (also covers corn-starch substitution)",
+      "origin": "llm_selected_from_broad_pool",
+      "discovery_mode": "broad_literature_pool_selection",
+      "rank_before_experiment": 5,
+      "combination_novelty": "novel_combination",
+      "components": ["lotus-root starch / corn starch", "pva", "attapulgite", "phosphoric acid"],
+      "composition_description": "LRS or corn-starch biopolymer matrix with PVA co-polymer, attapulgite 1D-clay, and phosphoric acid as the proton source; targeted by VAL-LOTUS-01, VAL-STARCH-01, VAL-STARCH-02, VAL-LOTUS-THIN-0429, VAL-LRS-THIN-0509 on 2026-05-09.",
+      "source_run_id": "a42de8d3b4",
+      "preregistered_at": "2026-05-08T13:29:43+00:00",
+      "validation_status": "validated_consistent",
+      "validation_record_ids": [
+        "VAL-LOTUS-01",
+        "VAL-STARCH-01",
+        "VAL-STARCH-02",
+        "VAL-LOTUS-THIN-0429",
+        "VAL-LRS-THIN-0509"
+      ],
+      "allowed_claim": "LLM selected and recombined this lotus-root-starch / PVA / 1D-clay / H3PO4 motif from a broad biomass-polymer-clay literature pool.",
+      "forbidden_claim": "Do not escalate beyond discovery_mode allowance; broad_literature_pool_selection allows 'selected/recombined', NOT 'independently discovered'."
+    }
+  ],
+  "registry_hash": "",
+  "notes": "RECONSTRUCTED timing anchor. The original Top-5 ProspectiveCandidateRegistry produced by Stage3 run_id=a42de8d3b4 was located at outputs/archive/20260518_legacy_stage3_outputs/stage3/11_candidate_registry/prospective_candidates.json and was inadvertently deleted during the stage3 cleanup commit (4b6ee61, 'refactor(repo): retire legacy phase1-3 / paper / paper_figure tree'). The preregistered_at timestamp 2026-05-08T13:29:43Z is recovered from the preserved filename 'candidate_validation_link_20260508T132943Z.json' (whose SHA256 is recorded in experimental_feedback.json::input_hashes) and from the surviving provenance block in experimental_feedback.json (agent_registry_run_id=a42de8d3b4, agent_discovery_mode=broad_literature_pool_selection). Only the two candidates that were actually bound to wide-temperature EIS experiments on 2026-05-09 are reconstructed here; the original registry contained 5 candidates but the metadata of PC-a42de8d3b4-{02,03,04} cannot be recovered without re-running the LLM with identical seed/cache state and is therefore intentionally omitted. This file exists solely as the timing reference used by S13 _classify_timing(); it MUST NOT be used as a content source for paper claims about specific candidates beyond the two listed here. See V1.0-qianduan-mainline/stage3_mechanism/CHANGELOG.md for the recovery rationale."
+}

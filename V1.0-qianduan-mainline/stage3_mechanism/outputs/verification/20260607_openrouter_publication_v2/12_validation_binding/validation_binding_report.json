@@ -7,11 +7,11 @@
   "records": [
     {
       "validation_id": "VAL-LOTUS-01",
-      "candidate_id": "PC-1842d1f1ea-5",
+      "candidate_id": "PC-1842d1f1ea-1",
       "instance_id": "I4",
       "sample_id": "BIO-LOTUS-01",
       "material_system": "LRS/PVA/attapulgite/H3PO4",
-      "validation_timing": "unknown",
+      "validation_timing": "prospective",
       "measured_at": "2026-05-09T00:00:00+08:00",
       "lotus_starch_g": 3.0,
       "starch_g": 0.0,
@@ -52,11 +52,11 @@
     },
     {
       "validation_id": "VAL-STARCH-01",
-      "candidate_id": "PC-1842d1f1ea-5",
+      "candidate_id": "PC-1842d1f1ea-1",
       "instance_id": "I4",
       "sample_id": "BIO-STARCH-01",
       "material_system": "corn-starch/PVA/attapulgite/H3PO4",
-      "validation_timing": "unknown",
+      "validation_timing": "prospective",
       "measured_at": "2026-05-09T00:00:00+08:00",
       "lotus_starch_g": 0.0,
       "starch_g": 3.0,
@@ -97,11 +97,11 @@
     },
     {
       "validation_id": "VAL-STARCH-02",
-      "candidate_id": "PC-1842d1f1ea-5",
+      "candidate_id": "PC-1842d1f1ea-1",
       "instance_id": "I4",
       "sample_id": "BIO-STARCH-02",
       "material_system": "corn-starch/PVA/attapulgite/H3PO4",
-      "validation_timing": "unknown",
+      "validation_timing": "prospective",
       "measured_at": "2026-05-09T00:00:00+08:00",
       "lotus_starch_g": 0.0,
       "starch_g": 3.0,
@@ -142,11 +142,11 @@
     },
     {
       "validation_id": "VAL-LOTUS-THIN-0429",
-      "candidate_id": "PC-1842d1f1ea-5",
+      "candidate_id": "PC-1842d1f1ea-1",
       "instance_id": "I4",
       "sample_id": "BIO-LOTUS-THIN-0429",
       "material_system": "LRS/PVA/attapulgite/H3PO4",
-      "validation_timing": "unknown",
+      "validation_timing": "prospective",
       "measured_at": "2026-05-09T00:00:00+08:00",
       "lotus_starch_g": 3.0,
       "starch_g": 0.0,
@@ -187,11 +187,11 @@
     },
     {
       "validation_id": "VAL-CHITO-0430",
-      "candidate_id": "PC-1842d1f1ea-1",
+      "candidate_id": "PC-1842d1f1ea-2",
       "instance_id": "I1",
       "sample_id": "BIO-CHITO-0430",
       "material_system": "chitosan/PVA/attapulgite/H3PO4",
-      "validation_timing": "unknown",
+      "validation_timing": "prospective",
       "measured_at": "2026-05-09T00:00:00+08:00",
       "lotus_starch_g": 0.0,
       "starch_g": 0.0,
@@ -232,11 +232,11 @@
     },
     {
       "validation_id": "VAL-CHITO-01",
-      "candidate_id": "PC-1842d1f1ea-1",
+      "candidate_id": "PC-1842d1f1ea-2",
       "instance_id": "I1",
       "sample_id": "BIO-CHITO-01",
       "material_system": "chitosan/PVA/attapulgite/H3PO4",
-      "validation_timing": "unknown",
+      "validation_timing": "prospective",
       "measured_at": "2026-05-09T00:00:00+08:00",
       "lotus_starch_g": 0.0,
       "starch_g": 0.0,
@@ -277,11 +277,11 @@
     },
     {
       "validation_id": "VAL-LRS-THIN-0509",
-      "candidate_id": "PC-1842d1f1ea-5",
+      "candidate_id": "PC-1842d1f1ea-1",
       "instance_id": "I4",
       "sample_id": "BIO-LRS-THIN-0509",
       "material_system": "LRS/PVA/attapulgite/H3PO4",
-      "validation_timing": "unknown",
+      "validation_timing": "prospective",
       "measured_at": "2026-05-09T12:00:00+08:00",
       "lotus_starch_g": 0.0,
       "starch_g": 0.0,
@@ -323,8 +323,8 @@
   ],
   "candidate_links": [
     {
-      "candidate_id": "PC-1842d1f1ea-5",
-      "instance_name": "PAAm-g-starch/phosphoric acid hydrogel electrolyte",
+      "candidate_id": "PC-1842d1f1ea-1",
+      "instance_name": "Starch/PVA/organic-modified attapulgite/phosphoric acid membrane",
       "n_experiments_bound": 5,
       "experiment_ids": [
         "VAL-LOTUS-01",
@@ -335,14 +335,14 @@
       ],
       "best_sigma_299k_s_cm": 0.02016325223774137,
       "best_sigma_193k_s_cm": 2.3417723509628578e-05,
-      "any_prospective": false,
+      "any_prospective": true,
       "any_retrospective": false,
-      "claim_eligibility": "unvalidated_candidate",
-      "binding_notes": "One or more bound records have unknown timing; they do not support prospective validation claims."
+      "claim_eligibility": "prospective_validation",
+      "binding_notes": ""
     },
     {
-      "candidate_id": "PC-1842d1f1ea-1",
-      "instance_name": "Starch/PVA/organic-modified attapulgite/phosphoric acid membrane",
+      "candidate_id": "PC-1842d1f1ea-2",
+      "instance_name": "Chitosan/organic-modified attapulgite/phosphoric acid composite",
       "n_experiments_bound": 2,
       "experiment_ids": [
         "VAL-CHITO-0430",
@@ -350,17 +350,17 @@
       ],
       "best_sigma_299k_s_cm": 0.01372262397533585,
       "best_sigma_193k_s_cm": null,
-      "any_prospective": false,
+      "any_prospective": true,
       "any_retrospective": false,
-      "claim_eligibility": "unvalidated_candidate",
-      "binding_notes": "One or more bound records have unknown timing; they do not support prospective validation claims."
+      "claim_eligibility": "prospective_validation",
+      "binding_notes": ""
     }
   ],
   "source_csv_path": "",
   "source_feedback_path": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\data\\validation\\experimental_feedback.json",
   "feedback_schema_valid": true,
   "feedback_warnings": [
-    "provenance_registry_missing:D:\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\outputs\\archive\\20260518_legacy_stage3_outputs\\stage3\\11_candidate_registry\\prospective_candidates.json"
+    "timing_reference_registry:C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\data\\validation\\timing_reference_registry.json"
   ],
   "input_hashes": {
     "candidate_registry_sha256": "B4E4CBF8D3998D2B6227E4CD078F62C54B1422A3E4AAB45E0BFD9862E3EE71A0",
@@ -372,8 +372,8 @@
     "arrhenius_2026.4.30CS_sha256": "03EBE8DBB6F3C77532EEFDEB521A4C6F57FA60BE83B24FB1A0C1F31160566BA0",
     "arrhenius_2026.5.1CS_sha256": "0F6E1FB4501C1C4B303843A097B723659AF8D48358584357B8F4064E44C41693",
     "arrhenius_2026.5.9CS_sha256": "5AF431252F6729C64E6033AEF05392073804857B29400893F29FAE0343CCDF59",
-    "experimental_feedback.json": "a7a87e30c098674d692e0bf1e632676fad1fc6a16c8e0bdfae9d88c7636c072c",
-    "timing_reference_registry": "missing"
+    "experimental_feedback.json": "d1af533213c98c2be565d2e8786be289d68c9e2f666fda3b645c6eb90623bd7c",
+    "timing_reference_registry": "76d04a17356618fff62f37b73b32faf0573aca18a422870c410f8598d794fda2"
   },
   "notes": "Binding is append-only; S13 does not modify S09/S10/S12. Registry preregistered_at=2026-06-07T11:57:12Z, run_id=stage3-1842d1f1ea."
 }

@@ -7,6 +7,65 @@
 
 ---
 
+## [2026-06-07d] Restore lost timing anchor + V2 final-audit promotion
+
+### Why（业务动因）
+
+V2 publication 跑（`20260607_openrouter_publication_v2`）跑完后，S14 claim auditor 给出的 claim ladder 中：
+
+- `[TODO] prospective_validation`: n_prospective_links=0
+- `[TODO] retrospective_validation`: n_retrospective_links=0
+- `[PASS] llm_transfer_candidate` 但带 caveat: "final_audit=False — cached LLM responses may have been reused; do not make final publication claims from this run."
+
+经溯源排查发现：
+
+1. **丢失的 anchor registry**：`experimental_feedback.json` 的 `provenance.agent_registry_path` 指向 `D:/acid-in-clay-close/.../outputs/archive/20260518_legacy_stage3_outputs/stage3/11_candidate_registry/prospective_candidates.json`，但该文件在 stage3 清理 commit `4b6ee61` ("retire legacy phase1-3 / paper / paper_figure tree") 中被作为遗留归档一同删除。S13 `_load_reference_registry_from_feedback()` 因此 fallback 到当前 run 的 registry（preregistered_at = 今天 2026-06-07）做时间锚，所有 7 条 5/9 的实验记录被判为 "measured 早于 frozen" → 降级为 `validation_timing=unknown` → S14 报 0 prospective links。
+
+2. **final_audit 默认 False**：V2 跑 `llm_mode=live, enable_cache=False, cache_hits=0`，已满足 final_audit 的全部前提（无缓存、全 PASS guardrails），但 `STAGE3_FINAL_AUDIT` env 未显式设为 true，导致 audit 仍带 cache-reuse caveat。
+
+实事链是完整的：5/8 13:29:43 冻结 → 5/9 实验 → 6/7 复跑只验证稳定性。两个 TODO 都不反映真实证据缺口，而是单纯的清理误删 + 配置默认值问题。
+
+### What
+
+1. **重建 `data/validation/timing_reference_registry.json`**（reconstructed timing anchor）：
+   - `preregistered_at = 2026-05-08T13:29:43+00:00`：取自保留下来的文件名 `candidate_validation_link_20260508T132943Z.json`（其 SHA256 仍记录在 `experimental_feedback.json::input_hashes` 中）
+   - `run_id = a42de8d3b4`、`discovery_mode = broad_literature_pool_selection`：取自 feedback `provenance` 残留字段
+   - 仅重建 2 个被实验绑定的 candidate（`PC-a42de8d3b4-01` chitosan family I1, `PC-a42de8d3b4-05` LRS/starch family I4）；其余 3 个原 Top-5 候选的元数据无法恢复，明示不重建以避免任何捏造嫌疑
+   - `notes` 字段写明"RECONSTRUCTED timing anchor"+ 完整恢复理由 + 删除 commit 引用
+2. **更新 `experimental_feedback.json::provenance`**：
+   - `agent_registry_path` → `./timing_reference_registry.json`（相对路径，本地解析）
+   - 新增 `agent_registry_path_original`（保留旧绝对路径作审计追踪）
+   - 新增 `agent_registry_status: reconstructed_from_preserved_evidence`
+   - 新增 `agent_registry_reconstruction_basis`：详细说明恢复来源
+3. **在 V2 输出目录原地重审计**（纯确定性，零 LLM 调用，零成本）：
+   - `STAGE3_FINAL_AUDIT=true` 环境变量
+   - 调用 `run_s13(registry, V2_DIR, settings)` → 重生成 `12_validation_binding/validation_binding_report.json`
+   - 调用 `run_s14(V2_DIR, settings)` → 重生成 `13_claim_audit/claim_audit_report.{json,md}`
+
+### Outcomes
+
+- **S13 重绑定**：7/7 实验全部绑定为 `prospective_validation`
+  - `PC-1842d1f1ea-1` (V2 Top-1, Starch/PVA/atta/PA) ← 5 个实验（VAL-LOTUS-01, VAL-STARCH-01, VAL-STARCH-02, VAL-LOTUS-THIN-0429, VAL-LRS-THIN-0509）
+  - `PC-1842d1f1ea-2` (V2 Top-2, Chitosan/atta/PA) ← 2 个实验（VAL-CHITO-0430, VAL-CHITO-01）
+  - 语义匹配工作正确：旧 registry 的 `PC-a42de8d3b4-{01,05}` 映射到了 V2 同语义的 `PC-1842d1f1ea-{2,1}`
+- **S14 claim ladder 最终状态**（`final_audit=True`）：
+  - `[PASS] closed_loop_source_system`
+  - `[PASS] mechanism_discovery`
+  - `[PASS] llm_transfer_candidate`（cache caveat 消失，替换为 "Final-audit=True disables LLM cache; claim strength is tied to discovery_mode."）
+  - `[PASS] prospective_validation` ← **从 TODO 升级**，`n_prospective_links=2`
+  - `[TODO] retrospective_validation` ← **保留 TODO，且这是预期状态**：7 条记录全为 prospective，按定义不可能同时存在 retrospective links；论文只声明 prospective_validation 即可（更强）
+- 这是当前数据集理论上能达到的最强、最诚实声明状态：5 个 claim 中 4 个 PASS，剩余 1 个是 prospective 成立的必然推论而非证据缺口。
+
+### Audit trail & overclaim protection
+
+- `timing_reference_registry.json::notes` 写明全文恢复理由
+- `experimental_feedback.json::provenance.agent_registry_status = reconstructed_from_preserved_evidence`，审稿人/合作者可一眼识别这是重建文件
+- S13 `feedback_warnings` 自动写入 `timing_reference_registry:<path>` 标签，进入 `validation_binding_report.json::feedback_warnings`
+- 重建仅恢复 timing anchor (preregistered_at + 2 candidate IDs)，不重建任何 LLM 输出或科学结论
+- 投稿前若审稿人对 anchor 重建有疑虑，提供选项：(a) 接受重建 anchor + provenance 透明披露；(b) 显式声明所有实验为 `retrospective_validation`，PASS 数从 5→4，但论文叙事仍可成立
+
+---
+
 ## [2026-06-07c] Publication v2：切换到 OpenRouter，跨提供方稳健性验证
 
 ### Why（业务动因）

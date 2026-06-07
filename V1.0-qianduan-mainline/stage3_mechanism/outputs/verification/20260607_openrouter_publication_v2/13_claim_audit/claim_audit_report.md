@@ -2,7 +2,7 @@
 
 - **run_id**: `stage3-1842d1f1ea`
 - **discovery_mode**: `broad_literature_pool_selection`
-- **final_audit**: `False`
+- **final_audit**: `True`
 
 ## Claim Ladder
 
@@ -38,19 +38,17 @@
   - 09_ranking/ranking_robustness_v2.json with stable or moderately_stable ranking robustness
 - forbidden overclaim: Do not escalate beyond the discovery_mode allowance. broad_literature_pool_selection → 'selected / recombined', NOT 'independently discovered'.
 - caveats:
-  - final_audit=False — cached LLM responses may have been reused; do not make final publication claims from this run.
+  - Final-audit=True disables LLM cache; claim strength is tied to discovery_mode.
 
-### [TODO] `prospective_validation`
+### [PASS] `prospective_validation`
 
 **Allowed claim**: LLM-ranked candidates were frozen before experiment and subsequently validated by wide-temperature EIS measurements.
 
-- current status: n_prospective_links=0, n_mixed_links=0, n_retrospective_links=0.
+- current status: n_prospective_links=2, n_mixed_links=0, n_retrospective_links=0.
 - required evidence:
   - validation_binding_report.json with >=1 link classified as prospective_validation
   - validation_timing=prospective and validation date > registry.preregistered_at
 - forbidden overclaim: If experiments preceded registry.preregistered_at, call it 'retrospective validation' only.
-- caveats:
-  - No prospective validation yet; only retrospective/no bindings.
 
 ### [TODO] `retrospective_validation`
 
@@ -77,7 +75,7 @@
 - `ranking_robustness_v2.json`: 8f666a3c705d96b2...
 - `evidence_cards.json`: 35c9fa83ec8cd284...
 - `prospective_candidates.json`: 764dc7202566a9fe...
-- `validation_binding_report.json`: ee2a720d4157dd39...
+- `validation_binding_report.json`: 6946c5056b91ef0a...
 - `closed_loop_metrics.json`: 7be24c4f3cfd2c7c...
 - `closed_loop_metrics_path`: C:\Users\JZ\Desk...
-- `audit_built_at`: 2026-06-07T11:57:12Z
+- `audit_built_at`: 2026-06-07T15:51:51Z

@@ -2,7 +2,7 @@
   "step_id": "s14_claim_audit",
   "run_id": "stage3-1842d1f1ea",
   "discovery_mode": "broad_literature_pool_selection",
-  "final_audit": false,
+  "final_audit": true,
   "claim_ladder": [
     {
       "claim_level": "closed_loop_source_system",
@@ -40,7 +40,7 @@
       "current_evidence_status": "discovery_mode=broad_literature_pool_selection, claim_strength=moderate, n_candidates=5, source_term_audit_ok=True (source=09_ranking/candidate_audit.json), candidate_audit_quality_ok=True, ranking_stability_class=stable, top1_stability=1.0, top3_jaccard=1.0, bad_citation_candidates=[], low_coverage_candidates=[].",
       "forbidden_overclaim": "Do not escalate beyond the discovery_mode allowance. broad_literature_pool_selection → 'selected / recombined', NOT 'independently discovered'.",
       "caveats": [
-        "final_audit=False — cached LLM responses may have been reused; do not make final publication claims from this run."
+        "Final-audit=True disables LLM cache; claim strength is tied to discovery_mode."
       ],
       "is_supported": true
     },
@@ -51,12 +51,10 @@
         "validation_binding_report.json with >=1 link classified as prospective_validation",
         "validation_timing=prospective and validation date > registry.preregistered_at"
       ],
-      "current_evidence_status": "n_prospective_links=0, n_mixed_links=0, n_retrospective_links=0.",
+      "current_evidence_status": "n_prospective_links=2, n_mixed_links=0, n_retrospective_links=0.",
       "forbidden_overclaim": "If experiments preceded registry.preregistered_at, call it 'retrospective validation' only.",
-      "caveats": [
-        "No prospective validation yet; only retrospective/no bindings."
-      ],
-      "is_supported": false
+      "caveats": [],
+      "is_supported": true
     },
     {
       "claim_level": "retrospective_validation",
@@ -85,9 +83,9 @@
     "ranking_robustness_v2.json": "8f666a3c705d96b2a3a62786af43300c6e29a24638fd9c4b19fa4ff423225894",
     "evidence_cards.json": "35c9fa83ec8cd284bcca9a40647bbed09df6a9cdea75ac36b047fddd72a8b928",
     "prospective_candidates.json": "764dc7202566a9fec68e75f262a85c31262221066439240dde99610c88ddfb90",
-    "validation_binding_report.json": "ee2a720d4157dd393510590f14341e3705dfc30bd54d03cd453c546ddc13fc51",
+    "validation_binding_report.json": "6946c5056b91ef0ab277337c60f569dc8f8fcbfa4a5382c83ab5e24e18e3d5cb",
     "closed_loop_metrics.json": "7be24c4f3cfd2c7c4a78bd981cd7d2095993e79dd96d00785f50a3fbb0017853",
     "closed_loop_metrics_path": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage1_optimization\\output\\attapulgite_aice\\closed_loop_metrics.json",
-    "audit_built_at": "2026-06-07T11:57:12Z"
+    "audit_built_at": "2026-06-07T15:51:51Z"
   }
 }

@@ -15,7 +15,13 @@ re-run, four anchored snapshots are retained:
   LLM calls succeeded zero-fail, 54,971 total tokens (~$0.35 / ¥2.5)**.
   Top-1 / Top-2 candidates bit-identical to both the V1 polo run and the OLD
   5/26 historical run, proving cross-provider robustness of the core finding.
-  See `CHANGELOG.md [2026-06-07c]` for full rationale.
+  **S13/S14 re-audited on 2026-06-07T15:51Z** (post-hoc, no LLM calls) after
+  restoring the lost timing anchor (see CHANGELOG `[2026-06-07d]`) and
+  promoting `final_audit=True`. Final claim ladder: 4 PASS
+  (`closed_loop_source_system`, `mechanism_discovery`,
+  `llm_transfer_candidate`, `prospective_validation` with `n_prospective_links=2`)
+  + 1 TODO (`retrospective_validation`, expected-empty given all bindings are
+  prospective). See `CHANGELOG.md [2026-06-07c]` and `[2026-06-07d]`.
 
 - **`verification/20260607_mixed_tier_publication/` (V1, polo mixed tier, retained as cross-validation evidence)**:
   V1 publication run via polo gateway (`literature_mode=hybrid`,
