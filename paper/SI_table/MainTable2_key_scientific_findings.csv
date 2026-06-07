@@ -1,8 +1,0 @@
-Finding,Value,Statistical_Significance,Physical_Interpretation
-"ΔEa (Low T, <230K)",0.198 ± 0.189 eV (n=39),CI95: [0.135; 0.255],Strong confinement: Vehicle mechanism hindered in nanopores
-"ΔEa (Mid T, 230-270K)",0.008 ± 0.115 eV (n=40),CI95: [-0.023; 0.045],Negligible confinement: mechanism transition zone
-"ΔEa (High T, >270K)",0.046 ± 0.097 eV (n=42),CI95: [0.017; 0.074],Weak confinement: Grotthuss dominates; less affected by pore geometry
-Low-T vs High-T,"t=4.59, p=1.8×10⁻⁵",Highly significant,Temperature-dependent confinement confirmed
-"E_MN (S8, overall)",0.0201 ± 0.0002 eV (R²=0.98),n=121; T_MN=233K,Universal compensation; T_MN coincides with low-T phase transition
-"E_MN (S8, high-T)",0.0268 ± 0.0017 eV (R²=0.86),n=42,Different high-T mechanism (E_MN 33% higher)
-Agent report quality,94.8/100,+11.5 vs GPT-5.2 Pro,"Largest advantage in Data Utilization (10/10), enabled by ML tool integration"
