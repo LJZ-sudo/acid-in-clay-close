@@ -127,18 +127,11 @@ function ProvenancePanel() {
             />
           )}
 
-          {(lineB.allowed_claim || lineB.forbidden_claim) && (
+          {lineB.allowed_claim && (
             <div style={{ marginTop: 8 }}>
-              {lineB.allowed_claim && (
-                <Paragraph style={{ margin: 0, fontSize: 12 }}>
-                  <Text type="success">✓ allowed：</Text>{lineB.allowed_claim}
-                </Paragraph>
-              )}
-              {lineB.forbidden_claim && (
-                <Paragraph style={{ margin: '4px 0 0', fontSize: 12 }}>
-                  <Text type="danger">✗ forbidden：</Text>{lineB.forbidden_claim}
-                </Paragraph>
-              )}
+              <Paragraph style={{ margin: 0, fontSize: 12 }}>
+                <Text type="success">✓ allowed：</Text>{lineB.allowed_claim}
+              </Paragraph>
             </div>
           )}
         </div>
@@ -183,11 +176,6 @@ function ProvenancePanel() {
                         {c.allowed_claim && (
                           <Paragraph style={{ margin: 0, fontSize: 12 }}>
                             <Text type="success">✓ allowed：</Text>{c.allowed_claim}
-                          </Paragraph>
-                        )}
-                        {c.forbidden_claim && (
-                          <Paragraph style={{ margin: '4px 0 0', fontSize: 12 }}>
-                            <Text type="danger">✗ forbidden：</Text>{c.forbidden_claim}
                           </Paragraph>
                         )}
                       </div>
