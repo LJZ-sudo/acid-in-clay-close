@@ -11,6 +11,7 @@ import { useTranslation } from 'react-i18next'
 import { useUIStore, useDataStore } from '../../stores'
 import { samplesApi } from '../../api/samples'
 import { campaignsApi } from '../../api/campaigns'
+import { agentApi } from '../../api/agent'
 import { DEFAULT_CAMPAIGN_SLUG } from '../../config/mainline'
 
 const DEFAULT_CAMPAIGN = DEFAULT_CAMPAIGN_SLUG
@@ -30,6 +31,7 @@ function Home() {
   const [recipe, setRecipe] = useState(null)
   const [trialsBundle, setTrialsBundle] = useState(null)
   const [healthBundle, setHealthBundle] = useState(null)
+  const [llmInfo, setLlmInfo] = useState(null)
 
   useEffect(() => {
     samplesApi.list({ limit: 500 }).then((r) => {
@@ -37,6 +39,10 @@ function Home() {
       setNSamples(all.length)
       setNClosure(all.filter(s => s.has_closure_report).length)
     }).catch(() => {})
+
+    agentApi.getStatus()
+      .then((r) => setLlmInfo(r?.data?.config || null))
+      .catch(() => {})
 
     const tryLoad = async (slug) => {
       const [m, t, h, r] = await Promise.allSettled([
@@ -159,7 +165,11 @@ function Home() {
         <Divider />
         <Row gutter={12}>
           <Col xs={24} sm={8}><MiniMetric label={t('home.mainLoop')} value="Stage0 + Stage1" /></Col>
-          <Col xs={24} sm={8}><MiniMetric label={t('home.llmModel')} value="DeepSeek v4-pro / v3.1" /></Col>
+          <Col xs={24} sm={8}><MiniMetric label={t('home.llmModel')} value={
+            llmInfo?.model
+              ? `${llmInfo.api_provider || 'openrouter'} · ${llmInfo.model}`
+              : 'OpenRouter · gpt-5.4'
+          } /></Col>
           <Col xs={24} sm={8}><MiniMetric label={t('home.rtChannel')} value="Socket.IO + SSE" /></Col>
         </Row>
       </Card>

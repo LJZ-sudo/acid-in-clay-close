@@ -47,6 +47,29 @@ score_v3 = log10(sigma_RT) - 1.0 * Ea_high - 0.2 * ea_low_excess
 
 > R1/R2 为重复端点（检验可复现性），R3/R4 为推进点。这些已是 fixed-hyperparameter GP 的**单目标 score_v3** 建议；§4 改造后由真正的 **MOBO** 重新产生 Pareto 驱动的建议。
 
+### 3.1 官方冻结的第一轮 MOBO+LLM 建议（真实闭环实跑，2026-06-08，选项 A）
+
+由 §4 改造后的真实闭环离线复现（脚本 `stage1_optimization/line_b_guardrail_run.py`，只读历史、不写库、不伪造 Stage0）。固定随机种子 `optimizer_seed=20260608` 以保证可复现。
+
+| 角色 | R | N | 来源 / 状态 |
+|---|---|---|---|
+| 左脑 raw MOBO（ParEGO，seed=20260608） | **0.0285** | **0.9841** | `mode=parego`，scalarization weights≈[0.404, 0.590, 0.006] |
+| 右脑 LLM guardrail（实时 OpenRouter `openai/gpt-5.4`，T=0.0） | **0.28** | **0.96** | confidence=0.76，safety_box=`passed`（无 violation/warning 越界） |
+
+**LLM 物理修正理由（实时调用，非事后撰写）**：raw MOBO 的 R≈0.029 在数学上探索超低酸区，但物理上质子供体严重不足，会牺牲室温电导、不利 combined_score；故在维持中等装载 N≈0.96 保证网络连续的前提下，把 R 从超低区上调到**中低酸区 R=0.28**，抑制低温结构断裂 —— 属于对 MOBO 方向的**物理修正而非否定**。
+
+**LLM provenance（写死，便于事后核验，不存 prompt 原文）**：
+```text
+provider_base_url = https://openrouter.ai/api/v1
+model             = openai/gpt-5.4
+temperature       = 0.0   max_tokens = 8000
+system_prompt_sha256 = 4d2cbb4aa8016684a39d0aa326cb8e762603062629081016e086f70eb5424c0a
+user_prompt_sha256   = 2064d73446a8455c7a904551fe145ea61923643312ddd1d7b8d46d048c7d444c
+prompt_tokens = 2098   completion_tokens = 651
+```
+
+> 这是本线**真实前瞻闭环的第一轮官方 recipe**：raw=MOBO，final=LLM 修正后 `R=0.28, N=0.96`，safety 通过。本块连同代码一并 commit + push 后即获服务器时间戳；**push 完成前不得开始合成该 (R,N)**。
+
 ## 4. ⚠ 执行前必须完成的两处代码改造（否则达不到"真实 MOBO+LLM 闭环"）
 
 主闭环现状（已核实）：`run_optimization_loop.py` / `suggest_next.py` 用的是**单目标** `optimizers/bayesian_opt.py`；`optimizers/mobo_optimizer.py` 仅被 `__init__`/测试引用，**未接入**。R4 的 guardrail 是 "Codex GPT-5 coding agent guardrail review"，**非闭环内实时 LLM API 调用**。

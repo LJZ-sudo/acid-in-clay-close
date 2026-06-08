@@ -23,7 +23,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-from backend_api.routers import control, data, agent, agents, runs, pipeline, evidence_jobs, samples, campaigns
+from backend_api.routers import control, data, agent, agents, runs, pipeline, evidence_jobs, samples, campaigns, provenance
 
 # SocketIO server (compatible with frontend socket.io-client)
 try:
@@ -81,6 +81,7 @@ fastapi_app.include_router(pipeline.router, prefix="/api/pipeline", tags=["Pipel
 fastapi_app.include_router(evidence_jobs.router, prefix="/api", tags=["Evidence & Jobs"])
 fastapi_app.include_router(samples.router, prefix="/api/samples", tags=["Samples & Closure Reports"])
 fastapi_app.include_router(campaigns.router, prefix="/api/campaigns", tags=["Campaigns"])
+fastapi_app.include_router(provenance.router, prefix="/api/provenance", tags=["Provenance"])
 
 # Compatibility aliases: some frontend clients call /api/<endpoint> directly
 @fastapi_app.post("/api/calculate_arrhenius", tags=["Data (compat)"])

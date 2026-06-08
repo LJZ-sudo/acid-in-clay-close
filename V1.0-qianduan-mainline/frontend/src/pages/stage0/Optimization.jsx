@@ -9,6 +9,7 @@ import Top3Table from '../../components/campaign/Top3Table'
 import ParetoMini from '../../components/campaign/ParetoMini'
 import CampaignHealthBar from '../../components/campaign/CampaignHealthBar'
 import TerminationPanel from '../../components/campaign/TerminationPanel'
+import ProvenancePanel from '../../components/campaign/ProvenancePanel'
 import { DEFAULT_CAMPAIGN_SLUG } from '../../config/mainline'
 
 /**
@@ -162,6 +163,10 @@ function Optimization() {
 
       <div style={{ marginTop: 16 }}>
         <CampaignHealthBar health={health} />
+      </div>
+
+      <div style={{ marginTop: 16 }}>
+        <ProvenancePanel />
       </div>
     </div>
   )

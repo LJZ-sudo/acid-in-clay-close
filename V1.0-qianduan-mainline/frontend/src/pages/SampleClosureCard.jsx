@@ -195,7 +195,7 @@ export default function SampleClosureCard({ sampleId: sampleIdProp, hideBreadcru
             disabled={generating}
             onClick={() => handleRegen(true)}
             className="px-3 py-1.5 rounded bg-amber-500 hover:bg-amber-400 text-white text-xs disabled:opacity-50"
-            title="Re-generate with LLM (DeepSeek-V4-Pro default)"
+            title="Re-generate the closure narrative with the currently configured LLM"
           >
             {generating ? '...' : 'Rebuild (LLM)'}
           </button>
@@ -239,7 +239,7 @@ export default function SampleClosureCard({ sampleId: sampleIdProp, hideBreadcru
         </div>
       )}
 
-      {/* Comprehensive analysis (v4-pro 主笔；只供研究者阅读) */}
+      {/* Comprehensive analysis (LLM 主笔；模型名来自报告 meta.llm_model；只供研究者阅读) */}
       {closure && (
         <section className="bg-white rounded-xl border border-indigo-200 p-5">
           <div className="flex items-center justify-between mb-2">
