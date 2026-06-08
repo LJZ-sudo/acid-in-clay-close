@@ -36,6 +36,52 @@ _CAMPAIGNS_DIR = STAGE1_DIR / "campaigns"
 _MEMORY_DIR = STAGE1_DIR / "campaign_memory"
 _OUTPUT_DIR = STAGE1_DIR / "output"
 
+# Frozen prospective MOBO+LLM official recipe (single source of truth produced
+# by stage1_optimization/line_b_guardrail_run.py). When present for a campaign
+# it supersedes any stale on-disk single-objective next_experiment_recipe.json.
+_LINE_B_OFFICIAL = (
+    PROJECT_ROOT.parent
+    / "prospective_2026H2" / "line_B_mobo_closed_loop" / "official_recipe.json"
+)
+
+
+def _official_recipe_for(name: str, campaign_name: Optional[str]) -> Optional[Dict[str, Any]]:
+    """Return the frozen MOBO+LLM official recipe if it belongs to this campaign."""
+    if not _LINE_B_OFFICIAL.exists():
+        return None
+    data = _load_json(_LINE_B_OFFICIAL)
+    if not data:
+        return None
+    target = str(data.get("campaign") or "")
+    if target and target not in {name, campaign_name}:
+        return None
+    return data
+
+
+def _optimizer_identity(name: str, campaign_name: Optional[str]) -> Dict[str, Any]:
+    """Declare which optimizer actually drives this campaign (BO vs MOBO+LLM).
+
+    The MOBO conversion is real once a frozen official recipe exists; otherwise
+    the mainline still runs single-objective GP+EI.
+    """
+    official = _official_recipe_for(name, campaign_name)
+    if official:
+        prov = official.get("llm_provenance") or {}
+        return {
+            "kind": "mobo",
+            "label": "MOBO (ParEGO) + LLM guardrail",
+            "llm_guardrail": bool(official.get("llm_used", True)),
+            "llm_model": prov.get("model"),
+            "source": "prospective_2026H2/line_B_mobo_closed_loop",
+        }
+    return {
+        "kind": "bo",
+        "label": "single-objective BO (GP+EI)",
+        "llm_guardrail": True,
+        "llm_model": None,
+        "source": "stage1_optimization",
+    }
+
 # Campaign names live in JSON files under campaigns/. Allow only filename-safe
 # tokens (letters / digits / underscore / hyphen / dot). The campaign_name field
 # inside the JSON itself can be richer, but the URL identifier is the slug.
@@ -373,15 +419,97 @@ def get_trials(name: str):
 
 @router.get("/{name}/next-recipe")
 def get_next_recipe(name: str):
-    """The LLM-vs-BO Recipe Card payload — pass-through plus a small safety wrapper."""
+    """The LLM-vs-BO Recipe Card payload.
+
+    Resolution order (so the UI is never ambiguous about "the next R/N"):
+      1. If a frozen prospective MOBO+LLM official recipe exists for this
+         campaign, it is authoritative — its (R, N) is returned as the
+         recommended parameters and the stale on-disk single-objective
+         next_experiment_recipe.json (if any) is reported under
+         ``superseded_ondisk`` for transparency.
+      2. Otherwise fall back to the on-disk recipe as before.
+    """
+    path = _resolve_campaign_path(name)
+    meta = _load_json(path) or {}
+    campaign_name = meta.get("campaign_name")
     paths = _campaign_storage(name)
-    recipe = _load_json(paths["next_recipe"])
-    if recipe is None:
+    ondisk = _load_json(paths["next_recipe"])
+    official = _official_recipe_for(name, campaign_name)
+
+    if official:
+        final = official.get("llm_final") or {}
+        raw = official.get("raw_mobo") or {}
+        prov = official.get("llm_provenance") or {}
+        delta_params = {}
+        for k in ("R", "N"):
+            if raw.get(k) is not None and final.get(k) is not None:
+                delta_params[k] = {
+                    "optimizer": raw.get(k),
+                    "llm": final.get(k),
+                    "delta": round(float(final[k]) - float(raw[k]), 4),
+                }
+        recipe = {
+            "schema_version": "official-1",
+            "artifact_type": "line_b_official_mobo_llm_recipe",
+            "created_at": official.get("frozen_at"),
+            "timestamp": official.get("frozen_at"),
+            "campaign_name": campaign_name or name,
+            "recipe": {
+                "recommended_parameters": {"R": final.get("R"), "N": final.get("N")},
+                "confidence_score": official.get("confidence"),
+                "reasoning": official.get("reasoning_zh"),
+            },
+            "optimizer_suggestion": raw,
+            "optimizer_vs_llm_delta": {
+                "adjusted": bool(delta_params),
+                "parameters": delta_params,
+                "adjustment_reason": official.get("reasoning_zh"),
+            },
+            "safety_box": {"passed": official.get("safety_passed")},
+            "metadata": {
+                "llm_model_info": {
+                    "model": prov.get("model"),
+                    "temperature": prov.get("temperature"),
+                },
+                "prompt_metadata": {
+                    "system_template": {"template_sha256": prov.get("system_prompt_sha256")},
+                    "user_template": {"template_sha256": prov.get("user_prompt_sha256")},
+                },
+                "bo_provenance": {
+                    "optimizer": (official.get("raw_mobo") or {}).get("mode") or "parego",
+                    "random_state": official.get("seed"),
+                },
+            },
+            "llm_provenance": prov,
+        }
+        superseded = None
+        if ondisk is not None:
+            old = (ondisk.get("recipe") or {}).get("recommended_parameters") or {}
+            superseded = {
+                "R": old.get("R"),
+                "N": old.get("N"),
+                "created_at": ondisk.get("created_at"),
+                "reason": "single-objective BO artifact predating the MOBO+LLM conversion",
+            }
+        return {
+            "requested_campaign": name,
+            "recipe": recipe,
+            "recipe_source": "line_b_official_mobo_llm",
+            "optimizer": _optimizer_identity(name, campaign_name),
+            "superseded_ondisk": superseded,
+            "history_db": str(paths["history_db"]),
+            "output_dir": str(paths["output_dir"]),
+            "next_recipe_path": str(paths["next_recipe"]),
+        }
+
+    if ondisk is None:
         raise HTTPException(404, f"{paths['next_recipe'].name} not generated yet")
-    diagnostics = _next_recipe_schema_diagnostics(recipe, paths)
+    diagnostics = _next_recipe_schema_diagnostics(ondisk, paths)
     return {
         "requested_campaign": name,
-        "recipe": recipe,
+        "recipe": ondisk,
+        "recipe_source": "ondisk_next_experiment_recipe",
+        "optimizer": _optimizer_identity(name, campaign_name),
         **diagnostics,
         "history_db": str(paths["history_db"]),
         "output_dir": str(paths["output_dir"]),
@@ -461,6 +589,7 @@ def get_stage1_readiness(name: str, cold_start_threshold: int = Query(5, ge=1, l
         "cold_start_threshold": cold_start_threshold,
         "next_mode": next_mode,
         "stage1_ready": next_mode == "bayesian",
+        "optimizer": _optimizer_identity(name, meta.get("campaign_name")),
         "history_db": str(paths["history_db"]),
         "output_dir": str(paths["output_dir"]),
     }

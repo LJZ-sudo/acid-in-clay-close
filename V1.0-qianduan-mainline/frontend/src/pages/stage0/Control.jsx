@@ -26,6 +26,13 @@ import { useUIStore, useDataStore } from '../../stores'
  */
 const COM_PORTS = ['COM1','COM2','COM3','COM4','COM5','COM6','COM7','COM8','COM9','COM10']
 
+/** Show only the last 2 path segments (e.g. campaign_memory/history_db.json) for readability. */
+function shortPath(p) {
+  if (!p) return '—'
+  const parts = String(p).replace(/\\/g, '/').split('/').filter(Boolean)
+  return parts.length <= 2 ? parts.join('/') : '…/' + parts.slice(-2).join('/')
+}
+
 function Control() {
   const navigate = useNavigate()
   const [searchParams] = useSearchParams()
@@ -264,13 +271,15 @@ function Control() {
           mode={postProc.runMode}
           onChangeMode={(v) => setPostProc((p) => ({ ...p, runMode: v }))}
           readiness={stage1Readiness}
-          onApplyRecipe={({ R, N, parent, slug }) => {
+          onApplyRecipe={({ R, N, parent, slug, source }) => {
+            const isOfficial = source === 'line_b_official_mobo_llm'
+            const tag = isOfficial ? 'MOBO+LLM' : 'BO'
             setExp((prev) => ({
               ...prev,
-              material_note: `R=${R}, N=${N} (BO from ${slug}${parent ? `, parent=${parent}` : ''})`,
+              material_note: `R=${R}, N=${N} (${tag} from ${slug}${parent ? `, parent=${parent}` : ''})`,
               sample_id: prev.sample_id || `ATA-${new Date().toISOString().slice(0, 10).replaceAll('-', '')}-R${R}-N${N}`,
             }))
-            message.success(`已加载 Stage1 推荐配方 R=${R}, N=${N}`)
+            message.success(`已加载${isOfficial ? '官方 MOBO+LLM' : ' Stage1'}推荐配方 R=${R}, N=${N}`)
           }}
         />
 
@@ -527,6 +536,7 @@ function ExperimentPhaseBanner({ mode, onChangeMode, readiness, onApplyRecipe })
         N: Number(N).toFixed(2),
         parent: wrapper?.metadata?.source_tag || null,
         slug,
+        source: r?.data?.recipe_source || null,
       })
     } catch (e) {
       message.error(
@@ -595,13 +605,17 @@ function ExperimentPhaseBanner({ mode, onChangeMode, readiness, onApplyRecipe })
         type={mode === 'formal' ? 'success' : 'warning'}
         showIcon
         style={{ marginTop: 12 }}
-        message={mode === 'formal' ? '正式优化模式：Stage 0 + Stage 1 BO + LLM' : '冷启动模式：只跑 Stage 0，积累训练点'}
+        message={
+          mode === 'formal'
+            ? `正式优化模式：Stage 0 + Stage 1（${readiness?.optimizer?.label || 'BO + LLM'}）`
+            : '冷启动模式：只跑 Stage 0，积累训练点'
+        }
         description={
           mode === 'formal' ? (
             <span>
-              本轮实验结束后，后端会调用 <code>run_optimization_loop.py</code>；仅当 Stage0 valid 时写入 <code>history_db</code>，
-              并生成下一组 R/N 推荐到 <code>{readiness?.output_dir || 'campaign output_dir'}/next_experiment_recipe.json</code>。
-              你可以在 <code>/optimization</code> 页查看，或点击右上「加载 Stage1 推荐配方」一键回填本表单。
+              本轮实验结束、且 Stage0 数据有效时，系统会自动记录到优化历史并算出
+              <strong> 下一组 R / N 推荐</strong>。推荐结果可在 <a href="/optimization">优化看板</a> 查看，
+              或点右上「加载 Stage1 推荐配方」一键回填本表单。
             </span>
           ) : (
             <span>
@@ -660,15 +674,31 @@ function Stage1ReadinessPanel({ readiness }) {
       <Descriptions column={2} size="small" bordered>
         <Descriptions.Item label="Campaign">{readiness.campaign_name}</Descriptions.Item>
         <Descriptions.Item label="参数维度">{(readiness.parameters || []).join(', ') || '—'}</Descriptions.Item>
-        <Descriptions.Item label="已积累 trial">{readiness.n_trials_total ?? 0}</Descriptions.Item>
+        <Descriptions.Item label="优化器">
+          {readiness.optimizer?.label
+            ? (
+              <Space size={4}>
+                <Tag color={readiness.optimizer.kind === 'mobo' ? 'geekblue' : 'default'}>
+                  {readiness.optimizer.label}
+                </Tag>
+                {readiness.optimizer.llm_model && (
+                  <Tag color="purple" style={{ fontFamily: 'monospace' }}>{readiness.optimizer.llm_model}</Tag>
+                )}
+              </Space>
+            )
+            : '—'}
+        </Descriptions.Item>
         <Descriptions.Item label="去重配方数">
           <strong style={{ color: ready ? '#389e0d' : '#d4380d' }}>{n}</strong> / {th}
+          <span style={{ marginLeft: 8, fontSize: 12, color: '#999' }}>（共 {readiness.n_trials_total ?? 0} 个 trial）</span>
         </Descriptions.Item>
-        <Descriptions.Item label="history_db" span={2}>
-          <code style={{ fontSize: 11 }}>{readiness.history_db}</code>
-        </Descriptions.Item>
-        <Descriptions.Item label="output_dir" span={2}>
-          <code style={{ fontSize: 11 }}>{readiness.output_dir || '—'}</code>
+        <Descriptions.Item label="数据存储" span={2}>
+          <Tooltip title={readiness.history_db}>
+            <Tag style={{ fontFamily: 'monospace', fontSize: 11 }}>history: {shortPath(readiness.history_db)}</Tag>
+          </Tooltip>
+          <Tooltip title={readiness.output_dir}>
+            <Tag style={{ fontFamily: 'monospace', fontSize: 11 }}>output: {shortPath(readiness.output_dir)}</Tag>
+          </Tooltip>
         </Descriptions.Item>
       </Descriptions>
       <div style={{ marginTop: 10 }}>
