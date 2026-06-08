@@ -1,0 +1,28 @@
+{
+  "line": "B",
+  "title": "Prospective MOBO + LLM closed loop (Attapulgite)",
+  "campaign": "attapulgite_aice_campaign",
+  "round": 1,
+  "frozen_at": "2026-06-08T12:53:38+08:00",
+  "freeze_commit": "c185379",
+  "seed": 20260608,
+  "reproducer": "stage1_optimization/line_b_guardrail_run.py",
+  "raw_mobo": { "R": 0.0285, "N": 0.9841, "mode": "parego", "weights": [0.404, 0.59, 0.006] },
+  "llm_final": { "R": 0.28, "N": 0.96 },
+  "llm_used": true,
+  "confidence": 0.76,
+  "safety_passed": true,
+  "llm_provenance": {
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4",
+    "temperature": 0.0,
+    "max_tokens": 8000,
+    "system_prompt_sha256": "4d2cbb4aa8016684a39d0aa326cb8e762603062629081016e086f70eb5424c0a",
+    "user_prompt_sha256": "2064d73446a8455c7a904551fe145ea61923643312ddd1d7b8d46d048c7d444c",
+    "prompt_tokens": 2098,
+    "completion_tokens": 651
+  },
+  "reasoning_zh": "raw MOBO 的 R\u22480.029 在数学上探索超低酸区，但质子供体严重不足、会牺牲室温电导；保留 N\u22480.96 维持网络连续，把 R 上调到中低酸区 R=0.28 抑制低温 Ea 断折 —— 属于对 MOBO 方向的物理修正而非否定。",
+  "allowed_claim": "v2 campaign \u524d\u77bb\u6027\u5730\u68c0\u9a8c\u6267\u884c\u5c42\u80fd\u5426\u5728\u771f\u5b9e\u95ed\u73af\u4e2d\u590d\u73b0/\u6269\u5c55 \u7535\u5bfc/Ea Pareto \u524d\u6cbf\uff1braw=MOBO\u3001final=LLM \u7269\u7406\u4fee\u6b63\uff0csafety \u901a\u8fc7\u3002",
+  "forbidden_claim": "BO+LLM \u53d1\u73b0\u4e86 LRS\uff1bBO+LLM \u8bc1\u660e\u4e86\u666e\u9002\u6700\u4f18\uff1b\u4e8b\u540e\u6539\u5206\u628a\u5386\u53f2 campaign \u53d8\u6210\u6210\u529f\u7684\u95ed\u73af\u53d1\u73b0\u3002"
+}

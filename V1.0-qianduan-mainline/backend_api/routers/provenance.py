@@ -24,9 +24,15 @@ router = APIRouter()
 
 # backend_api/routers/provenance.py -> parents[2] == V1.0-qianduan-mainline
 MAINLINE_ROOT = Path(__file__).resolve().parents[2]
+# repo root is one level above the mainline folder
+_REPO_ROOT = MAINLINE_ROOT.parent
 _TIMING_REGISTRY = (
     MAINLINE_ROOT
     / "stage3_mechanism" / "data" / "validation" / "timing_reference_registry.json"
+)
+_LINE_B_RECIPE = (
+    _REPO_ROOT
+    / "prospective_2026H2" / "line_B_mobo_closed_loop" / "official_recipe.json"
 )
 
 
@@ -109,6 +115,25 @@ def _prereg_info() -> Dict[str, Any]:
     }
 
 
+def _line_b_info() -> Dict[str, Any]:
+    """Surface the frozen Line-B official recipe (raw MOBO -> LLM guardrail).
+
+    This is the on-disk single-source-of-truth produced by
+    ``stage1_optimization/line_b_guardrail_run.py``; display only.
+    """
+    if not _LINE_B_RECIPE.exists():
+        return {"available": False}
+    try:
+        data = json.loads(_LINE_B_RECIPE.read_text(encoding="utf-8"))
+    except Exception:
+        return {"available": False}
+    data["available"] = True
+    data["source_file"] = (
+        str(_LINE_B_RECIPE.relative_to(_REPO_ROOT)).replace("\\", "/")
+    )
+    return data
+
+
 @router.get("")
 def get_provenance() -> Dict[str, Any]:
     """Aggregate read-only provenance: git anchor + LLM config + preregistration."""
@@ -116,4 +141,5 @@ def get_provenance() -> Dict[str, Any]:
         "git": _git_info(),
         "llm": _llm_info(),
         "preregistration": _prereg_info(),
+        "line_b": _line_b_info(),
     }

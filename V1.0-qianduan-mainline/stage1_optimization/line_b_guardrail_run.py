@@ -89,13 +89,50 @@ def main() -> None:
     if recipe.warnings:
         print("-" * 78)
         print("warnings:", recipe.warnings)
-    if getattr(recipe, "llm_provenance", None) or getattr(llm, "get_provenance", None):
-        try:
-            print("-" * 78)
-            print("llm_provenance:", json.dumps(llm.get_provenance(), ensure_ascii=False))
-        except Exception:
-            pass
+    llm_prov = {}
+    try:
+        llm_prov = llm.get_provenance()
+        print("-" * 78)
+        print("llm_provenance:", json.dumps(llm_prov, ensure_ascii=False))
+    except Exception:
+        pass
     print("=" * 78)
+
+    # Emit the official-recipe sidecar consumed by the backend /api/provenance
+    # endpoint + ProvenancePanel (single source of truth for the Line-B story).
+    sidecar = (ROOT.parent.parent / "prospective_2026H2"
+               / "line_B_mobo_closed_loop" / "official_recipe.json")
+    if sidecar.parent.exists():
+        # preserve immutable freeze anchors / claim boundaries if already frozen
+        preserved = {}
+        if sidecar.exists():
+            try:
+                old = json.loads(sidecar.read_text(encoding="utf-8"))
+                for k in ("frozen_at", "freeze_commit", "allowed_claim", "forbidden_claim"):
+                    if k in old:
+                        preserved[k] = old[k]
+            except Exception:
+                pass
+        payload = {
+            "line": "B",
+            "title": "Prospective MOBO + LLM closed loop (Attapulgite)",
+            "campaign": cfg.campaign_name,
+            "round": 1,
+            "seed": FROZEN_SEED,
+            "reproducer": "stage1_optimization/line_b_guardrail_run.py",
+            "raw_mobo": {"R": round(raw["R"], 4), "N": round(raw["N"], 4),
+                          "mode": prov.get("mode"), "weights": prov.get("weights")},
+            "llm_final": recipe.recommended_parameters,
+            "llm_used": not llm_failed,
+            "confidence": getattr(recipe, "confidence_score", None),
+            "safety_passed": bool(safety.to_dict().get("passed")),
+            "llm_provenance": {"provider": "openrouter", **llm_prov},
+            "reasoning_zh": getattr(recipe, "reasoning", ""),
+            **preserved,
+        }
+        sidecar.write_text(json.dumps(payload, ensure_ascii=False, indent=2),
+                           encoding="utf-8")
+        print(f"[sidecar] wrote {sidecar}")
 
 
 if __name__ == "__main__":

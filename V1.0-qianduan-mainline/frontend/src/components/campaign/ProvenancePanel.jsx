@@ -25,8 +25,12 @@ function ProvenancePanel() {
   const git = data.git || {}
   const llm = data.llm || {}
   const pre = data.preregistration || {}
+  const lineB = data.line_b || {}
 
   const mono = { fontFamily: 'monospace' }
+  const fmtRN = (o) => (o && o.R != null && o.N != null)
+    ? `R=${Number(o.R).toFixed(o.R < 0.1 ? 4 : 2)}, N=${Number(o.N).toFixed(2)}`
+    : '—'
 
   return (
     <Card
@@ -66,6 +70,79 @@ function ProvenancePanel() {
           </Descriptions.Item>
         )}
       </Descriptions>
+
+      {lineB.available && (
+        <div style={{ marginTop: 12, border: '1px solid #e6f4ff', background: '#f5fbff', borderRadius: 8, padding: 12 }}>
+          <Space wrap style={{ marginBottom: 8 }}>
+            <Text strong>线 B · 真实前瞻 MOBO + LLM 闭环</Text>
+            {lineB.round != null && <Tag color="blue">第 {lineB.round} 轮</Tag>}
+            {lineB.safety_passed && <Tag color="green">safety passed</Tag>}
+            {lineB.llm_used && <Tag color="purple">LLM 实时修正</Tag>}
+            {lineB.frozen_at && <Tag style={{ fontSize: 11 }}>冻结 {lineB.frozen_at}</Tag>}
+            {lineB.freeze_commit && (
+              <Tag color="geekblue" style={mono}>{lineB.freeze_commit}</Tag>
+            )}
+          </Space>
+
+          <Descriptions column={{ xs: 1, sm: 3 }} size="small" bordered>
+            <Descriptions.Item label="左脑 raw MOBO">
+              <Tag style={mono}>{fmtRN(lineB.raw_mobo)}</Tag>
+              {lineB.raw_mobo?.mode && (
+                <Text type="secondary" style={{ fontSize: 11 }}> · {lineB.raw_mobo.mode}</Text>
+              )}
+            </Descriptions.Item>
+            <Descriptions.Item label="右脑 LLM 终值">
+              <Tag color="green" style={mono}>{fmtRN(lineB.llm_final)}</Tag>
+            </Descriptions.Item>
+            <Descriptions.Item label="置信度">
+              <Text>{lineB.confidence != null ? lineB.confidence : '—'}</Text>
+            </Descriptions.Item>
+          </Descriptions>
+
+          {lineB.reasoning_zh && (
+            <Paragraph type="secondary" style={{ fontSize: 12, margin: '8px 0 0', whiteSpace: 'pre-wrap' }}>
+              <Text strong style={{ fontSize: 12 }}>物理修正理由：</Text>{lineB.reasoning_zh}
+            </Paragraph>
+          )}
+
+          {lineB.llm_provenance && (
+            <Collapse
+              size="small"
+              ghost
+              style={{ marginTop: 4 }}
+              items={[{
+                key: 'prov',
+                label: 'LLM provenance（模型 + prompt SHA256，可事后核验）',
+                children: (
+                  <Space direction="vertical" size={2} style={{ width: '100%', fontSize: 12 }}>
+                    <div style={mono}>model: {lineB.llm_provenance.model} · T={lineB.llm_provenance.temperature}</div>
+                    <div style={mono}>system_prompt_sha256: {lineB.llm_provenance.system_prompt_sha256}</div>
+                    <div style={mono}>user_prompt_sha256: {lineB.llm_provenance.user_prompt_sha256}</div>
+                    <div style={mono}>
+                      tokens: {lineB.llm_provenance.prompt_tokens} in / {lineB.llm_provenance.completion_tokens} out · seed={lineB.seed}
+                    </div>
+                  </Space>
+                ),
+              }]}
+            />
+          )}
+
+          {(lineB.allowed_claim || lineB.forbidden_claim) && (
+            <div style={{ marginTop: 8 }}>
+              {lineB.allowed_claim && (
+                <Paragraph style={{ margin: 0, fontSize: 12 }}>
+                  <Text type="success">✓ allowed：</Text>{lineB.allowed_claim}
+                </Paragraph>
+              )}
+              {lineB.forbidden_claim && (
+                <Paragraph style={{ margin: '4px 0 0', fontSize: 12 }}>
+                  <Text type="danger">✗ forbidden：</Text>{lineB.forbidden_claim}
+                </Paragraph>
+              )}
+            </div>
+          )}
+        </div>
+      )}
 
       {pre.available && (
         <div style={{ marginTop: 12 }}>
