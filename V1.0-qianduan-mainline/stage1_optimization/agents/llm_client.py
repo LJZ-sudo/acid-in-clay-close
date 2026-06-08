@@ -1,15 +1,20 @@
 """
-LLM Client for DeepSeek-R1
-大模型通信客户端：适配 PoloAPI 平台的 DeepSeek-R1 推理模型
+LLM Client (OpenRouter / gpt-5.4 by default)
+大模型通信客户端：默认走 OpenRouter 的 openai/gpt-5.4。
 
 核心特性：
-- 支持 DeepSeek-R1 的 <think>...</think> 推理输出
-- 自动提取和清洗 JSON 内容
-- 完整的思考过程日志记录
+- OpenAI 兼容接口（base_url 指向 OpenRouter）；
+- 自动提取和清洗 JSON 内容（兼容带 <think>/reasoning_content 的推理模型，
+  也兼容 gpt-5.x 这类直接给 JSON 的模型）；
+- 记录 model + prompt/system 的 SHA256 + temperature 作为 provenance，
+  供 Line-B 前瞻 MOBO+LLM 闭环的 guardrail 审计使用。
+
+向后兼容：仍可通过 .env 切回 PoloAPI/DeepSeek（LLM_BASE_URL / LLM_MODEL）。
 """
 import os
 import re
 import json
+import hashlib
 import logging
 from typing import Optional, Dict, Any
 from pathlib import Path
@@ -64,12 +69,26 @@ class LLMClient:
             timeout: 请求超时时间（秒）
         """
         # 从环境变量读取配置
+        # 注意：temperature/max_tokens/timeout 必须用 `is None` 判断，
+        # 不能用 `or`——否则显式传入的 temperature=0.0（Line-B guardrail 要求的
+        # 确定性温度）会被当成假值丢弃，退回 env 默认值。
         self.api_key = api_key or os.getenv("LLM_API_KEY")
-        self.base_url = base_url or os.getenv("LLM_BASE_URL", "https://poloai.top/v1")
-        self.model = model or os.getenv("LLM_MODEL", "DeepSeek-R1")
-        self.temperature = temperature or float(os.getenv("LLM_TEMPERATURE", "0.2"))
-        self.max_tokens = max_tokens or int(os.getenv("LLM_MAX_TOKENS", "2000"))
-        self.timeout = timeout or int(os.getenv("LLM_TIMEOUT", "60"))
+        self.base_url = base_url or os.getenv("LLM_BASE_URL", "https://openrouter.ai/api/v1")
+        self.model = model or os.getenv("LLM_MODEL", "openai/gpt-5.4")
+        self.temperature = (
+            temperature if temperature is not None
+            else float(os.getenv("LLM_TEMPERATURE", "0.0"))
+        )
+        self.max_tokens = (
+            max_tokens if max_tokens is not None
+            else int(os.getenv("LLM_MAX_TOKENS", "8000"))
+        )
+        self.timeout = (
+            timeout if timeout is not None
+            else int(os.getenv("LLM_TIMEOUT", "240"))
+        )
+        # provenance：最近一次成功调用的可审计指纹（model + prompt/system hash + temperature）
+        self.last_call_provenance: Dict[str, Any] = {}
         
         # 验证必需配置
         if not self.api_key:
@@ -328,7 +347,24 @@ class LLMClient:
                     f"输出 tokens: {response.usage.completion_tokens} | "
                     f"总计: {response.usage.total_tokens}"
                 )
-                
+
+                # 记录可审计 provenance（Line-B guardrail 用）：不保存 prompt 原文，只存 SHA256
+                self.last_call_provenance = {
+                    "provider_base_url": self.base_url,
+                    "model": self.model,
+                    "temperature": self.temperature,
+                    "max_tokens": _max_out,
+                    "system_prompt_sha256": (
+                        hashlib.sha256(system_prompt.encode("utf-8")).hexdigest()
+                        if system_prompt else None
+                    ),
+                    "user_prompt_sha256": hashlib.sha256(
+                        enhanced_prompt.encode("utf-8")
+                    ).hexdigest(),
+                    "prompt_tokens": response.usage.prompt_tokens,
+                    "completion_tokens": response.usage.completion_tokens,
+                }
+
                 return json_str
                 
             except OpenAIError as e:
@@ -469,6 +505,15 @@ class LLMClient:
             "timeout": self.timeout,
             "api_key_set": bool(self.api_key)
         }
+
+    def get_provenance(self) -> Dict[str, Any]:
+        """Return the auditable fingerprint of the most recent successful call.
+
+        Used by the Line-B prospective MOBO+LLM closed loop to record a real
+        LLM guardrail decision (model + prompt/system SHA256 + temperature),
+        replacing the previous 'Codex reviewer guardrail' provenance.
+        """
+        return dict(self.last_call_provenance)
     
     def debug_response_structure(self, prompt: str = "测试") -> None:
         """

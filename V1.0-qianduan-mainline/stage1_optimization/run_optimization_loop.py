@@ -31,6 +31,51 @@ from canonical_input.design_space import ParameterSpace
 from canonical_input.state0_parser import State0Parser
 from campaign_memory.memory_manager import MemoryManager
 from optimizers.bayesian_opt import BayesianOptimizer
+from optimizers.mobo_optimizer import MOBOOptimizer, locked_v2_objectives
+
+# v2 capability: keys as actually persisted in the attapulgite history DB
+# (Stage0 metric names), mapped onto the locked v2 objective contract
+# (three_pillars/pillar3_eis_in_the_loop/bo_v2_objective_spec_20260527.md).
+MOBO_HISTORY_OBJECTIVE_KEYS = {
+    "sigma_key": "conductivity_room_temp_S_cm",  # sigma_RT, maximize
+    "ea_high_key": "ea_high_temp_eV",            # Ea_high, minimize
+    "ea_low_excess_key": "ea_low_excess_eV",     # ea_low_excess, minimize
+}
+
+
+def build_stage1_optimizer(
+    optimizer_kind: str,
+    parameter_space,
+    memory_manager,
+    cold_start_threshold: int = 5,
+    optimizer_seed: Optional[int] = None,
+):
+    """Factory for the Stage1 optimizer (unit-testable, no orchestrator needed).
+
+    ``bo``   -> frozen single-objective :class:`BayesianOptimizer` (default;
+                preserves the frozen small-paper closed loop unchanged).
+    ``mobo`` -> :class:`MOBOOptimizer` (ParEGO) over the locked 3 objectives,
+                with history keys mapped to the attapulgite metric names. This
+                is the Line-B v2 capability and must be explicitly opted into.
+    """
+    kind = (optimizer_kind or "bo").lower()
+    if kind == "bo":
+        return BayesianOptimizer(
+            parameter_space=parameter_space,
+            memory_manager=memory_manager,
+            cold_start_threshold=cold_start_threshold,
+            acq_func="EI",
+            random_state=optimizer_seed,
+        )
+    if kind == "mobo":
+        return MOBOOptimizer(
+            parameter_space=parameter_space,
+            memory_manager=memory_manager,
+            objectives=locked_v2_objectives(**MOBO_HISTORY_OBJECTIVE_KEYS),
+            cold_start_threshold=cold_start_threshold,
+            random_state=optimizer_seed,
+        )
+    raise ValueError(f"optimizer_kind must be 'bo' or 'mobo', got {optimizer_kind!r}")
 from agents.llm_client import LLMClient
 from agents.strategy_planner import StrategyPlanner
 from contracts.next_experiment_schema import NextExperimentRecipe
@@ -64,6 +109,8 @@ class OptimizationOrchestrator:
         db_path: Optional[str] = None,
         source_mode: str = "replay",
         source_tag: Optional[str] = None,
+        optimizer_kind: str = "bo",
+        optimizer_seed: Optional[int] = None,
     ):
         """
         初始化优化编排器
@@ -77,6 +124,8 @@ class OptimizationOrchestrator:
         """
         self.source_mode = source_mode
         self.stage0_real_device = source_mode == "real"
+        self.optimizer_kind = (optimizer_kind or "bo").lower()
+        self.optimizer_seed = optimizer_seed
 
         logger.info("=" * 100)
         logger.info("🚀 自驱动实验室 (SDL) - Stage 1 优化闭环启动")
@@ -150,19 +199,24 @@ class OptimizationOrchestrator:
         self.parameter_space = ParameterSpace(self.campaign_config)
         
         # 5. 初始化优化器（左脑）
-        logger.info("🧮 初始化贝叶斯优化器（左脑）")
-        self.optimizer = BayesianOptimizer(
+        # 默认 bo = 冻结的单目标 BayesianOptimizer（不改动冻结闭环）；
+        # mobo = Line-B v2 能力：ParEGO 多目标，需显式 --optimizer mobo 开启。
+        logger.info(f"🧮 初始化优化器（左脑）: optimizer_kind={self.optimizer_kind}")
+        self.optimizer = build_stage1_optimizer(
+            optimizer_kind=self.optimizer_kind,
             parameter_space=self.parameter_space,
             memory_manager=self.memory_manager,
             # 2D (R,N)：冷启动按「去重配方数」判断，阈值 5 与 GP 常用初始设计规模一致
             cold_start_threshold=5,
-            acq_func="EI"  # 使用 Expected Improvement（默认）
+            optimizer_seed=self.optimizer_seed,
         )
         
         # 6. 初始化智能体（右脑）
         logger.info("🤖 初始化策略规划器（右脑）")
         try:
-            self.llm_client = LLMClient(temperature=0.2, max_tokens=2000)
+            # Line-B guardrail：temperature=0.0 求确定性（prereg 要求）；
+            # gpt-5.4 推理占 token，max_tokens 给足。其余配置走 .env（OpenRouter）。
+            self.llm_client = LLMClient(temperature=0.0, max_tokens=8000)
             # 测试 LLM 连接
             if not self.llm_client.test_connection():
                 logger.warning("⚠️ LLM 连接测试失败，将在需要时重试")
@@ -721,6 +775,20 @@ def main():
         help="数据来源标签（缺省时优先取 campaign JSON 里的 source_tag，再回退 campaign_name）"
     )
 
+    parser.add_argument(
+        "--optimizer",
+        choices=["bo", "mobo"],
+        default="bo",
+        help="优化器：bo=冻结单目标贝叶斯优化（默认）；mobo=Line-B 多目标 ParEGO 闭环"
+    )
+
+    parser.add_argument(
+        "--optimizer_seed",
+        type=int,
+        default=None,
+        help="优化器随机种子（用于可复现的前瞻 MOBO 轮次；缺省=动态种子）"
+    )
+
     args = parser.parse_args()
     
     # 设置日志级别
@@ -735,7 +803,9 @@ def main():
             output_dir=args.output_dir,
             db_path=args.db_path,
             source_mode=args.mode,
-            source_tag=args.source_tag
+            source_tag=args.source_tag,
+            optimizer_kind=args.optimizer,
+            optimizer_seed=args.optimizer_seed,
         )
         
         recipe = orchestrator.run_optimization_loop()

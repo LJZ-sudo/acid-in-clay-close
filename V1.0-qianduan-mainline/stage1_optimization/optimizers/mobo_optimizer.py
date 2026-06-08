@@ -352,6 +352,14 @@ class MOBOOptimizer(BaseOptimizer):
         suggestion = self.parameter_space.decode_discrete_indices(suggestion)
         return suggestion
 
+    def get_model_prediction(self, params: Dict[str, Any]) -> None:
+        """No single-objective scalar prediction exists for a multi-objective
+        suggester. Returns ``None`` so the runner's optional prediction log is
+        skipped (the loop guards with ``if prediction:``). Pareto status /
+        ``score_v3`` are reported per-round from measured objectives instead.
+        """
+        return None
+
     def get_provenance(self) -> Dict[str, Any]:
         prov: Dict[str, Any] = {
             "optimizer": "MOBOOptimizer(ParEGO)",

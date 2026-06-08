@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-智能实验决策 Agent（基于 Rb 增长监测，PoloAPI / OpenAI SDK 兼容）
+智能实验决策 Agent（基于 Rb 增长监测，OpenRouter / OpenAI SDK 兼容）
 
 这是一个基于大模型的智能决策引擎，核心基于 Rb 的直接监测。
 
@@ -38,13 +38,18 @@ from openai import OpenAI
 # 默认配置
 # ============================================================
 
-# PoloAPI 官方端点
-DEFAULT_BASE_URL = "https://poloai.top/v1"
-DEFAULT_MODEL = "deepseek-v3.1"
+# 默认走 OpenRouter（与 Stage1 / Stage3 统一）。可用 env 覆盖：
+#   PHASE_DETECT_BASE_URL / LLM_BASE_URL  -> 端点
+#   PHASE_DETECT_MODEL                    -> 模型（本步独立固定为 gpt-5.2）
+DEFAULT_BASE_URL = os.environ.get(
+    "PHASE_DETECT_BASE_URL",
+    os.environ.get("LLM_BASE_URL", "https://openrouter.ai/api/v1"),
+)
+DEFAULT_MODEL = os.environ.get("PHASE_DETECT_MODEL", "openai/gpt-5.2")
 DEFAULT_TEMPERATURE = 0.3
 DEFAULT_MAX_TOKENS = 1500
 
-# API key must be supplied by argument or POLOAPI_KEY environment variable.
+# API key must be supplied by argument, or LLM_API_KEY / POLOAPI_KEY env var.
 POLOAPI_KEY_IN_CODE: Optional[str] = None
 
 
@@ -662,7 +667,9 @@ def analyze_experiment_state(
     
     # ===== 步骤 5: API Key 获取 =====
     if api_key is None:
-        api_key = os.environ.get('POLOAPI_KEY')
+        # 统一到 OpenRouter：优先 LLM_API_KEY（与 Stage1/Stage3 同一把 OpenRouter key），
+        # 回退 POLOAPI_KEY 以兼容旧环境。
+        api_key = os.environ.get('LLM_API_KEY') or os.environ.get('POLOAPI_KEY')
     
     if not api_key:
         # 无 API key 时，使用硬编码逻辑
