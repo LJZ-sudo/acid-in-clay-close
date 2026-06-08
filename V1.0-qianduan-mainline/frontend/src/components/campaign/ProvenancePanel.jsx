@@ -127,13 +127,6 @@ function ProvenancePanel() {
             />
           )}
 
-          {lineB.allowed_claim && (
-            <div style={{ marginTop: 8 }}>
-              <Paragraph style={{ margin: 0, fontSize: 12 }}>
-                <Text type="success">✓ allowed：</Text>{lineB.allowed_claim}
-              </Paragraph>
-            </div>
-          )}
         </div>
       )}
 
@@ -173,11 +166,6 @@ function ProvenancePanel() {
                             </Tag>}
                         </Space>
                         <div style={{ fontSize: 13, marginBottom: 6 }}>{c.instance_name}</div>
-                        {c.allowed_claim && (
-                          <Paragraph style={{ margin: 0, fontSize: 12 }}>
-                            <Text type="success">✓ allowed：</Text>{c.allowed_claim}
-                          </Paragraph>
-                        )}
                       </div>
                     ))}
                   </Space>
