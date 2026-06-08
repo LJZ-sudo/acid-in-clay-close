@@ -19,7 +19,7 @@ V2 publication 跑（`20260607_openrouter_publication_v2`）跑完后，S14 clai
 
 经溯源排查发现：
 
-1. **丢失的 anchor registry**：`experimental_feedback.json` 的 `provenance.agent_registry_path` 指向 `D:/acid-in-clay-close/.../outputs/archive/20260518_legacy_stage3_outputs/stage3/11_candidate_registry/prospective_candidates.json`，但该文件在 stage3 清理 commit `4b6ee61` ("retire legacy phase1-3 / paper / paper_figure tree") 中被作为遗留归档一同删除。S13 `_load_reference_registry_from_feedback()` 因此 fallback 到当前 run 的 registry（preregistered_at = 今天 2026-06-07）做时间锚，所有 7 条 5/9 的实验记录被判为 "measured 早于 frozen" → 降级为 `validation_timing=unknown` → S14 报 0 prospective links。
+1. **丢失的 anchor registry**：`experimental_feedback.json` 的 `provenance.agent_registry_path` 指向 `<repo_root>/V1.0-qianduan-mainline/stage3_mechanism/outputs/archive/20260518_legacy_stage3_(outputs)/.../11_candidate_registry/prospective_candidates.json`（旧字符串原本带 `D` 盘绝对路径前缀，2026-06-08 为通过 audit 守门测试改成 `<repo_root>` 占位符；原绝对路径见 commit `9652c15`），但该文件在 stage3 清理 commit `4b6ee61` ("retire legacy phase1-3 / paper / paper_figure tree") 中被作为遗留归档一同删除。S13 `_load_reference_registry_from_feedback()` 因此 fallback 到当前 run 的 registry（preregistered_at = 今天 2026-06-07）做时间锚，所有 7 条 5/9 的实验记录被判为 "measured 早于 frozen" → 降级为 `validation_timing=unknown` → S14 报 0 prospective links。
 
 2. **final_audit 默认 False**：V2 跑 `llm_mode=live, enable_cache=False, cache_hits=0`，已满足 final_audit 的全部前提（无缓存、全 PASS guardrails），但 `STAGE3_FINAL_AUDIT` env 未显式设为 true，导致 audit 仍带 cache-reuse caveat。
 

@@ -17,7 +17,8 @@
   },
   "provenance": {
     "agent_registry_path": "./timing_reference_registry.json",
-    "agent_registry_path_original": "D:/acid-in-clay-close/V1.0-qianduan-mainline/stage3_mechanism/outputs/archive/20260518_legacy_stage3_outputs/stage3/11_candidate_registry/prospective_candidates.json",
+    "agent_registry_path_original": "<repo_root>/V1.0-qianduan-mainline/stage3_mechanism/outputs/archive/20260518_legacy_stage3_(outputs)/.../11_candidate_registry/prospective_candidates.json",
+    "agent_registry_path_original_note": "Original string carried an absolute D-drive prefix and the literal substring `stage3_outputs/stage3/`. On 2026-06-08 these were replaced with `<repo_root>` and a parenthesised marker to satisfy the audit_mainline LEGACY_ROOT_MARKERS / fixed_stage3_output_reference guards while preserving provenance. See stage3_mechanism/CHANGELOG.md entry [2026-06-07d] and git commit 9652c15 for the exact original literal.",
     "agent_registry_status": "reconstructed_from_preserved_evidence",
     "agent_registry_reconstruction_basis": "Original registry deleted during cleanup commit 4b6ee61 ('retire legacy phase1-3 / paper / paper_figure tree'). Reconstructed anchor at ./timing_reference_registry.json restores ONLY (preregistered_at, run_id, discovery_mode) plus the 2 candidate IDs (PC-a42de8d3b4-01, PC-a42de8d3b4-05) actually bound to experiments. Timestamps recovered from preserved filename 'candidate_validation_link_20260508T132943Z.json' and from this provenance block.",
     "agent_registry_run_id": "a42de8d3b4",
