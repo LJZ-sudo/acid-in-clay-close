@@ -136,8 +136,8 @@ checker：`three_pillars/pillar3_eis_in_the_loop/v2_engine_tools/run_all_checks.
 
 ## 10. 留痕（push 后回填）
 
-- [ ] §4 选项：改造1 完成 commit `____`；改造2 选项 `__`（A/B）完成 commit `____`
-- [ ] 预注册 commit hash：`__________`
-- [ ] push 时间（UTC）：`__________`
-- [ ] 远端 URL / Zenodo DOI：`__________`
-- [ ] 第一轮实验开始日期（须晚于 push）：`__________`
+- [x] §4 选项：改造1+改造2（选项 **A**）完成 commit `6e06793`（首轮 MOBO+LLM 闭环 + 预注册包）
+- [x] §3.1 官方第一轮 recipe 冻结 commit hash：`c185379`（含 raw MOBO + LLM guardrail + provenance）
+- [x] push 时间（UTC+8）：`2026-06-08T12:53:38+08:00`（远端 `LJZ-sudo/acid-in-clay-close`，分支 `remediation/tier3`）
+- [ ] 远端 URL / Zenodo DOI：`__________`（如需公开存档再补 DOI）
+- [ ] 第一轮实验开始日期（须晚于上面 push 时间）：`__________`
