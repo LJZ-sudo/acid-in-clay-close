@@ -70,6 +70,14 @@ function CampaignHealthBar({ health }) {
         </div>
       </div>
 
+      {health.closed_loop_meta_describes === 'single_objective_bo_history' && (
+        <div className="text-[11px] text-blue-700 bg-blue-50 border border-blue-200 rounded px-2 py-1">
+          ℹ️ 上方「closed-loop rounds / validity / best R-N」描述的是<strong>已记录的单目标 BO 历史</strong>
+          {health.generated_at ? `（缓存生成于 ${String(health.generated_at).slice(0, 10)}）` : ''}。
+          当前 MOBO + LLM 前瞻闭环的下一组推荐与留痕请见<strong>优化看板的 Provenance 面板</strong>（线 B）。
+        </div>
+      )}
+
       {Array.isArray(health.limitations) && health.limitations.length > 0 && (
         <details className="text-[11px] text-gray-600">
           <summary className="cursor-pointer text-gray-500 hover:text-gray-700">

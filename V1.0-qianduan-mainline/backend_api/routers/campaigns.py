@@ -520,10 +520,20 @@ def get_next_recipe(name: str):
 @router.get("/{name}/health")
 def get_health(name: str):
     """Closed-loop health bar payload (best score, convergence, limitations)."""
+    path = _resolve_campaign_path(name)
+    meta = _load_json(path) or {}
     paths = _campaign_storage(name)
     metrics = _load_json(paths["metrics"]) or {}
     history = _load_json(paths["history_db"]) or {}
-    return _health_payload(metrics, history)
+    payload = _health_payload(metrics, history)
+    payload["optimizer"] = _optimizer_identity(name, meta.get("campaign_name"))
+    # When a MOBO+LLM official recipe exists, the cached closed-loop meta
+    # (rounds / validity / best R-N) describes the *recorded single-objective
+    # BO campaign* that predates the conversion — flag that so the UI can label
+    # it instead of implying these are MOBO+LLM prospective rounds.
+    if payload["optimizer"]["kind"] == "mobo":
+        payload["closed_loop_meta_describes"] = "single_objective_bo_history"
+    return payload
 
 
 @router.get("/{name}/termination")

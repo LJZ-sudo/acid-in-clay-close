@@ -38,7 +38,7 @@ function BORecipeCard({ wrapper, anchorSampleId = null, campaignSlug = null }) {
     return (
       <div className="bg-white border border-gray-200 rounded-lg p-6 text-sm text-gray-400">
         next_experiment_recipe.json not generated yet — run
-        <code className="mx-1 px-1 bg-gray-100 rounded">stage1_optimization/run_closed_loop.py</code>
+        <code className="mx-1 px-1 bg-gray-100 rounded">stage1_optimization/run_optimization_loop.py</code>
         to produce a recommendation.
       </div>
     )
