@@ -1,0 +1,287 @@
+{
+  "generated_at": "2026-06-08T09:22:26",
+  "project_root": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline",
+  "stage1_recipe": {
+    "path": "stage1_optimization/output/attapulgite_aice/next_experiment_recipe.json",
+    "exists": true,
+    "schema_version": "0.2.0",
+    "artifact_type": "stage1_next_experiment_recipe",
+    "history_db": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage1_optimization\\campaign_memory\\history_db_attapulgite.json",
+    "expected_history_db": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage1_optimization\\campaign_memory\\history_db_attapulgite.json",
+    "schema_valid": true,
+    "warnings": []
+  },
+  "llm_config": {
+    "stage1_env_exists": true,
+    "stage3_env_exists": true,
+    "stage1_key": {
+      "present": true,
+      "length": 51,
+      "sha256_prefix": "ecd20b5bfc9d"
+    },
+    "stage3_key": {
+      "present": true,
+      "length": 73,
+      "sha256_prefix": "890e9c2bd73d"
+    },
+    "stage1_model": "deepseek-v4-pro",
+    "stage3_models": {
+      "cheap": "openai/gpt-5.2",
+      "standard": "openai/gpt-5.2",
+      "premium": "openai/gpt-5.4"
+    },
+    "models_aligned": false
+  },
+  "stage2_seed": {
+    "path": "stage2_statistics/exports/stage3_seed.json",
+    "exists": true,
+    "sha256": "4edbd1366e75b41c7432825624545024f1468cbf08eca4d554689f6cf9bcea22",
+    "schema_version": "0.2.0",
+    "stage3_ready": true,
+    "blocking_reasons": [],
+    "sample_count": 40,
+    "segment_count": 158,
+    "evidence_unit_count": 13,
+    "warnings": []
+  },
+  "stage3_manifests": {
+    "manifest_count_seen": 4,
+    "latest_manifests": [
+      {
+        "path": "stage3_mechanism/outputs/verification/20260607_openrouter_publication_v2/run_manifest.json",
+        "stage2_seed_path_resolved": "stage2_statistics/exports/stage3_seed.json",
+        "stage2_seed_path_exists": true,
+        "stage2_seed_path_legacy_root": false,
+        "stage2_seed_sha256": "4edbd1366e75b41c7432825624545024f1468cbf08eca4d554689f6cf9bcea22",
+        "output_dir_resolved": "stage3_mechanism/outputs/verification/20260607_openrouter_publication_v2",
+        "output_dir_exists": true,
+        "output_dir_legacy_root": false,
+        "strict_real_input": true
+      },
+      {
+        "path": "stage3_mechanism/outputs/verification/20260607_mixed_tier_publication/run_manifest.json",
+        "stage2_seed_path_resolved": "stage2_statistics/exports/stage3_seed.json",
+        "stage2_seed_path_exists": true,
+        "stage2_seed_path_legacy_root": false,
+        "stage2_seed_sha256": "4edbd1366e75b41c7432825624545024f1468cbf08eca4d554689f6cf9bcea22",
+        "output_dir_resolved": "stage3_mechanism/outputs/verification/20260607_mixed_tier_publication",
+        "output_dir_exists": true,
+        "output_dir_legacy_root": false,
+        "strict_real_input": true
+      },
+      {
+        "path": "stage3_mechanism/outputs/verification/20260607_post_cleanup_smoke/run_manifest.json",
+        "stage2_seed_path_resolved": "stage2_statistics/exports/stage3_seed.json",
+        "stage2_seed_path_exists": true,
+        "stage2_seed_path_legacy_root": false,
+        "stage2_seed_sha256": "4edbd1366e75b41c7432825624545024f1468cbf08eca4d554689f6cf9bcea22",
+        "output_dir_resolved": "stage3_mechanism/outputs/verification/20260607_post_cleanup_smoke",
+        "output_dir_exists": true,
+        "output_dir_legacy_root": false,
+        "strict_real_input": true
+      },
+      {
+        "path": "stage3_mechanism/outputs/verification/20260526_final_audit_cacheoff_full/run_manifest.json",
+        "stage2_seed_path_resolved": "stage2_statistics/exports/stage3_seed.json",
+        "stage2_seed_path_exists": true,
+        "stage2_seed_path_legacy_root": true,
+        "stage2_seed_sha256": "fe7f48cc41a463c3db3348db2edadd5eceec11e49b6be2facdeec751076a100f",
+        "output_dir_resolved": "stage3_mechanism/outputs/verification/20260526_final_audit_cacheoff_full",
+        "output_dir_exists": true,
+        "output_dir_legacy_root": true,
+        "strict_real_input": true
+      }
+    ],
+    "matching_current_stage2_seed": [
+      {
+        "path": "stage3_mechanism/outputs/verification/20260607_openrouter_publication_v2/run_manifest.json",
+        "stage2_seed_path_resolved": "stage2_statistics/exports/stage3_seed.json",
+        "stage2_seed_path_exists": true,
+        "stage2_seed_path_legacy_root": false,
+        "stage2_seed_sha256": "4edbd1366e75b41c7432825624545024f1468cbf08eca4d554689f6cf9bcea22",
+        "output_dir_resolved": "stage3_mechanism/outputs/verification/20260607_openrouter_publication_v2",
+        "output_dir_exists": true,
+        "output_dir_legacy_root": false,
+        "strict_real_input": true
+      },
+      {
+        "path": "stage3_mechanism/outputs/verification/20260607_mixed_tier_publication/run_manifest.json",
+        "stage2_seed_path_resolved": "stage2_statistics/exports/stage3_seed.json",
+        "stage2_seed_path_exists": true,
+        "stage2_seed_path_legacy_root": false,
+        "stage2_seed_sha256": "4edbd1366e75b41c7432825624545024f1468cbf08eca4d554689f6cf9bcea22",
+        "output_dir_resolved": "stage3_mechanism/outputs/verification/20260607_mixed_tier_publication",
+        "output_dir_exists": true,
+        "output_dir_legacy_root": false,
+        "strict_real_input": true
+      },
+      {
+        "path": "stage3_mechanism/outputs/verification/20260607_post_cleanup_smoke/run_manifest.json",
+        "stage2_seed_path_resolved": "stage2_statistics/exports/stage3_seed.json",
+        "stage2_seed_path_exists": true,
+        "stage2_seed_path_legacy_root": false,
+        "stage2_seed_sha256": "4edbd1366e75b41c7432825624545024f1468cbf08eca4d554689f6cf9bcea22",
+        "output_dir_resolved": "stage3_mechanism/outputs/verification/20260607_post_cleanup_smoke",
+        "output_dir_exists": true,
+        "output_dir_legacy_root": false,
+        "strict_real_input": true
+      }
+    ],
+    "warnings": []
+  },
+  "experimental_feedback": {
+    "path": "stage3_mechanism/data/validation/experimental_feedback.json",
+    "exists": true,
+    "sha256": "ff88079732d05ec169c09f0db32a45034cfddbb74595fdc5da8983e3b83681a1",
+    "schema_version": "0.1.0",
+    "artifact_type": "stage3_experimental_feedback",
+    "n_validation_records": 7,
+    "schema_valid": true,
+    "warnings": []
+  },
+  "stage3_current_artifacts": {
+    "output_dir": "stage3_mechanism/outputs/verification/20260607_openrouter_publication_v2",
+    "ranking_robustness": {
+      "path": "stage3_mechanism/outputs/verification/20260607_openrouter_publication_v2/09_ranking/ranking_robustness_v2.json",
+      "exists": true,
+      "sha256": "8f666a3c705d96b2a3a62786af43300c6e29a24638fd9c4b19fa4ff423225894",
+      "status": "ok",
+      "stability_class": "stable",
+      "top1_stability_rate": 1.0,
+      "top3_jaccard_mean": 1.0
+    },
+    "validation_binding": {
+      "path": "stage3_mechanism/outputs/verification/20260607_openrouter_publication_v2/12_validation_binding/validation_binding_report.json",
+      "exists": true,
+      "sha256": "6946c5056b91ef0ab277337c60f569dc8f8fcbfa4a5382c83ab5e24e18e3d5cb",
+      "n_records": 7,
+      "n_bound": 7,
+      "feedback_schema_valid": true,
+      "source_feedback_path_resolved": "stage3_mechanism/data/validation/experimental_feedback.json",
+      "source_feedback_path_exists": true,
+      "source_feedback_path_legacy_root": false
+    },
+    "claim_audit": {
+      "path": "stage3_mechanism/outputs/verification/20260607_openrouter_publication_v2/13_claim_audit/claim_audit_report.json",
+      "exists": true,
+      "sha256": "907880be0700c4ab30b5fcafbdfe31f54b5ffeba23133d9827d49eb1cc8f834d",
+      "claim_paths_relative": true,
+      "publication_blocker_count": 0
+    },
+    "warnings": []
+  },
+  "scans": {
+    "possible_api_key": [],
+    "run_pipeline_reference": [
+      {
+        "path": "backend_api/routers/pipeline.py",
+        "line": 4,
+        "text": "The current mainline no longer has a repo-root ``run_pipeline.py`` entrypoint."
+      },
+      {
+        "path": "backend_api/routers/pipeline.py",
+        "line": 20,
+        "text": "RUN_PIPELINE = PROJECT_ROOT / \"run_pipeline.py\""
+      },
+      {
+        "path": "backend_api/routers/pipeline.py",
+        "line": 22,
+        "text": "\"The legacy /api/pipeline trigger is disabled because run_pipeline.py is \""
+      },
+      {
+        "path": "backend_api/tests/test_pipeline_router_contracts.py",
+        "line": 17,
+        "text": "assert \"run_pipeline.py\" in body[\"stage2\"][\"message\"]"
+      }
+    ],
+    "root_next_recipe_reference": [],
+    "legacy_history_db_reference": [],
+    "fixed_stage3_output_reference": [
+      {
+        "path": "scripts/audit_mainline.py",
+        "line": 362,
+        "text": "claim_paths_relative = \"outputs/stage3/\" not in claim_text.replace(\"\\\\\", \"/\")"
+      },
+      {
+        "path": "stage3_mechanism/CHANGELOG.md",
+        "line": 289,
+        "text": "- `outputs/stage3/10_reports/stage3_report_advisor.md` & `stage3_report_advisor_EN.md`: 论文式重写，Abstract / Methods / Results / Discussion / Appendices 完整结构，中英双版；`scripts/export_advisor_pdf.py` 新增 CLI 参数支持双语 PDF 出版。"
+      },
+      {
+        "path": "stage3_mechanism/CHANGELOG.md",
+        "line": 290,
+        "text": "- 旧 `outputs/stage3/` 归档至 `outputs/stage3_preLD4_20260420_094753/` 以便回溯对照。"
+      },
+      {
+        "path": "stage3_mechanism/CHANGELOG.md",
+        "line": 349,
+        "text": "- `outputs/stage3/10_reports/stage3_report_advisor.md / .pdf`：主榜 Top 5 → Top 7，设计哲学、§4 全部 Rank、§5 实验路径、§7 文献支撑说明、附录 C 全部改写为 D2 叙事。"
+      },
+      {
+        "path": "stage3_mechanism/CHANGELOG.md",
+        "line": 391,
+        "text": "- 对照实验完整输出：`outputs/stage3_noLit/`（与主榜单 `outputs/stage3/` 同级）。"
+      },
+      {
+        "path": "stage3_mechanism/CHANGELOG.md",
+        "line": 459,
+        "text": "- 重写 `outputs/stage3/10_reports/stage3_report_advisor.md` 以反映新 Top-list；去掉所有\"证据层 / literature_backed / mechanism_analog\"表述；突出\"Top-4 全是新组合路线\"的事实；实验路径建议改为\"首选 Rank 1（主力）+ Rank 2（机理验证）+ Rank 4（生物质特色 / 藕粉）并行\"；重导出 PDF。"
+      },
+      {
+        "path": "stage3_mechanism/CHANGELOG.md",
+        "line": 466,
+        "text": "- **`outputs/stage3/10_reports/stage3_report_advisor.md` / `.pdf`**"
+      },
+      {
+        "path": "stage3_mechanism/README.md",
+        "line": 44,
+        "text": "`outputs/stage3/` is now only an example or archived run location, not an"
+      },
+      {
+        "path": "stage3_mechanism/README.md",
+        "line": 138,
+        "text": "- Do not treat historical `outputs/stage3/` reports as current unless the run"
+      },
+      {
+        "path": "stage3_mechanism/stage3-SDL.md",
+        "line": 406,
+        "text": "| 运行成本 | `run_cost_summary.json` | `outputs/stage3/` |"
+      },
+      {
+        "path": "stage3_mechanism/stage3-SDL.md",
+        "line": 456,
+        "text": "1. **结构完整**：`outputs/stage3/{00..10}_*/` 所有目录均有对应 JSON；`run_cost_summary.json` 存在"
+      },
+      {
+        "path": "stage3_mechanism/tests/test_stage3_deep_chain_contracts.py",
+        "line": 740,
+        "text": "assert not any(\"outputs/stage3/\" in ref for ref in required)"
+      },
+      {
+        "path": "stage3_mechanism/literature_workspace/08_review/claim_review_ai_assessment.json",
+        "line": 4,
+        "text": "\"source\": \"outputs/stage3/06_literature_materials/literature_cards_materials.json\","
+      },
+      {
+        "path": "stage3_mechanism/literature_workspace/08_review/claim_review_ai_assessment.md",
+        "line": 9,
+        "text": "This review assesses high-impact material literature claims that support the current Top-3 candidate routes in `outputs/stage3/09_ranking/ranked_top_list.json`."
+      }
+    ]
+  },
+  "summary": {
+    "stage1_recipe_valid": true,
+    "llm_keys_present": true,
+    "stage3_model_aligned": false,
+    "stage2_ready": true,
+    "stage3_manifest_matches_current_seed": true,
+    "feedback_schema_valid_or_absent": true,
+    "latest_robustness_present": true,
+    "claim_audit_paths_relative": true,
+    "possible_api_key_hits": 0,
+    "run_pipeline_reference_hits": 4,
+    "root_next_recipe_reference_hits": 0,
+    "legacy_history_db_reference_hits": 0,
+    "fixed_stage3_output_reference_hits": 14
+  }
+}
