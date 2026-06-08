@@ -25,7 +25,21 @@ QC 双闸门下的 EIS-in-the-loop 执行"**。原则：**真实闭环、不过�
 - `attapulgite_aice_v2_*.json` / `history_*.json` — 历史审计快照
 - `prospective_round_template_*.json` — 前瞻轮次模板
 - `round_01_v2-R1_locked_repeat/` ... `round_04_v2-R4_llm_guardrail_adjusted/`
-  — 已完成的 **4 轮**真实执行包（含每轮 LLM 决策、protocol diff、QC 报告）
+  — **V2-locked 协议下的 4 个轮次执行包**（含每轮 LLM 决策、protocol diff、QC 报告）。
+
+> **关于"几轮"的三个数字** —— 三者各自正确，不要混淆：
+> - **`bo_v2_locked/round_01–04` = 4 轮**：V2-locked 协议下、需要 lab 端
+>   走 approval / preflight gate 的 prospective lab handoff 包。
+> - **`closed_loop_metrics.json::n_closed_loop_rounds = 6`**：BO 真闭环已完成的
+>   全部"agent 建议 → 真机测量 → 回写"循环次数（T2–T7 都满足
+>   `measured_after_suggestion_hash != null` 的因果链）。
+> - **`closed_loop_metrics.json::n_history_trials = 8`**：含 T1 cold-start
+>   先验（无前置 suggestion）+ T2–T7 BO 闭环 + T8 收尾共 8 个 trial。
+>
+> 与之配套的诚实声明：`closed_loop_validity = prospective_real`，
+> `termination_status.verdict = continue`（**未触发收敛**），
+> `convergence.triggered = false`，且 `limitations` 字段自陈
+> "7 trial 用了显式厚度修复"——三者共同支撑"真闭环 + 不过度声称收敛"的 Pillar 3 立场。
 - `execution_engine/` — 轮次包构造器 + lab 集成 + tracker（append-only、可回放）
 
 ## `v2_engine_tools/` — Claim 审计 + QC 工具链

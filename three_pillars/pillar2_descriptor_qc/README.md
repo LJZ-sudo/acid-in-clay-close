@@ -7,6 +7,11 @@
 > 计算管线代码仍在 `V1.0-qianduan-mainline/stage0_measurement/` 与
 > `V1.0-qianduan-mainline/stage2_statistics/` 中；本目录只保留 QC-gated 结果。
 
+> **Paper-facing 描述符数学定义**：见
+> [`descriptor_definition.md`](./descriptor_definition.md) —— 包含特征向量、
+> QC 闸门、三级 claim band、LRS / CHITO 边界验证设计、以及"本描述符不声称什么"。
+> 这是 Pillar 2 写作时的单一事实源（公式 + 阈值 + 物理解释）。
+
 ---
 
 ## 子目录与文件

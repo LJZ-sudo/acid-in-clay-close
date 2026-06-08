@@ -1,8 +1,90 @@
 # Acid-in-Clay Close 项目说明书（代码依据版）
 
-生成日期：2026-06-04  
-项目根目录：`C:\Users\JZ\Desktop\paper\acid-in-clay-close`  
-主要代码目录：`C:\Users\JZ\Desktop\paper\acid-in-clay-close\V1.0-qianduan-mainline`
+生成日期：2026-06-04（正文）+ 2026-06-08（追加变更摘要）
+项目根目录：`<repo_root>`（原文档以 `C:\Users\JZ\Desktop\paper\acid-in-clay-close` 撰写；
+若仓库换位置，下面所有路径相对 `<repo_root>` 解释）
+主要代码目录：`V1.0-qianduan-mainline/`
+
+---
+
+## 0-pre. 2026-06-05 ~ 06-08 变更增量摘要（必读）
+
+本文档正文（第 0 节起）写于 2026-06-04，此后 4 天里 mainline 发生了以下结构性变化，
+**阅读正文时请同时叠加下面这层**，旧描述与新事实冲突时以本摘要为准：
+
+### 0-pre.1 顶层目录已不存在 `paper/` 和 `codex/`
+
+正文 §3 "顶层目录结构" 列出的 `paper/current/` 和 `codex/` 两个目录
+**已于 2026-06-05 整体删除**。其中最小必要资产被抽取到新的
+`three_pillars/` 目录下：
+
+- `three_pillars/pillar1_transfer_agent/` —— Evidence-constrained transfer agent
+- `three_pillars/pillar2_descriptor_qc/` —— Cooling-resilient pathway continuity descriptor
+- `three_pillars/pillar3_eis_in_the_loop/` —— Physics/QC-gated EIS-in-the-loop execution
+
+V1.0 内部任何 Python 代码都不再 import `codex` / `paper`，唯一一处运行期
+对 `mobo_optimizer.py` 目标定义的引用已改指
+`three_pillars/pillar3_eis_in_the_loop/bo_v2_objective_spec_20260527.md`。
+
+### 0-pre.2 Stage3 已完成 V2 OpenRouter publication-grade 跑数
+
+- 历史只用 `deepseek-v4-pro` 的 mock + 部分 hybrid 跑数已被取代；
+- 当前 authoritative snapshot:
+  `stage3_mechanism/outputs/verification/20260607_openrouter_publication_v2/`
+  - 混合 tier：`STAGE3_MODEL_CHEAP=openai/gpt-5.2`、`STANDARD=openai/gpt-5.2`、
+    `PREMIUM=openai/gpt-5.4`（API 走 OpenRouter）；
+  - `cache_hits=0`、`STAGE3_FINAL_AUDIT=true`、`hybrid` literature mode；
+  - S13/S14 claim audit 出具：`llm_transfer_candidate=PASS`（无 cache 复用 caveat）、
+    `prospective_validation=PASS`（2 条候选 `PC-a42de8d3b4-01` / `-05`）、
+    `closed_loop_source_system` 支持 `prospective_real` + `n_rounds=6` 的诚实声明。
+
+### 0-pre.3 Timing anchor 已重建（prospective_validation 从 TODO → PASS）
+
+正文 §2.2 / §3 列出的"prospective evidence 尚未具备"已部分缓解：
+
+- 原始 anchor registry 在 commit `4b6ee61` 中被作为遗留归档误删；
+- 2026-06-07e 据保留的文件名时间戳 `candidate_validation_link_20260508T132943Z.json`
+  与 `experimental_feedback.json::provenance.agent_registry_run_id="a42de8d3b4"` 等
+  证据透明重建 `stage3_mechanism/data/validation/timing_reference_registry.json`，
+  `preregistered_at = 2026-05-08T13:29:43+00:00` 早于 5/9 的 7 项 transfer-validation 实验；
+- 重建过程在 `stage3_mechanism/CHANGELOG.md` 条目 [2026-06-07d] / [2026-06-07e]
+  与 `outputs/MANIFEST.md` 中完整文档化。
+
+### 0-pre.4 `data/` 已分出归档区
+
+- 2026-06-08 commit `7d5b5c0`: 把 3 块零代码消费者的老 phase1 三件套
+  （`phase1_results/` + `canonical_inputs/` + `knowledge_base/`，共 117 文件 / ~14 MB）
+  `git mv` 到 `data/archive/legacy_phase1_s60_20260608/`，配 README 说明溯源；
+- `data/raw_eis/{S6,S13-S16,S60,S95-S97}/`（5-6 年前的老 CHI 文件）**保留不动**；
+- `data/MANIFEST.md` 已重写为 live / archive 两分。
+
+### 0-pre.5 backend_api 已修两处遗留 import bug
+
+正文 §2.2 列出的 "data.py legacy import 问题（C2）"已修复（commit `b634c88`）：
+两个 Arrhenius endpoint（`/api/data/calculate_arrhenius`、
+`/api/data/run_arrhenius_from_eis`）现在正确导入
+`stage0_measurement.modules.analysis.eis_pipeline.{extract_valid_arrhenius_series, analyze_arrhenius_series}`，
+软死亡和软兜底都已清除。
+
+### 0-pre.6 output/ 和 runs/ 本地做了清理
+
+- `output/{agent_ops, cross_domain_validation, stage1_reports, stage2_statistics,
+  stage3_mechanism}/` 5 个 stale 子目录已本地删除（gitignored，不进 git）；
+- `runs/` 19 个 BO 会话清理到 8 个 `completed`（删 5 `running` + 6 `failed`），
+  对应 5 个唯一 sample，回填 `closed_loop_metrics.json::n_closed_loop_rounds=6`
+  的真实闭环计数。
+
+### 0-pre.7 三创新点 readiness（2026-06-08 状态）
+
+| Pillar | 代码 | 数据 | 文档 | Claim Audit | 综合 |
+|---|---|---|---|---|---|
+| 1 Evidence-constrained transfer agent | A | A | A（README 已更新） | A（PASS+final_audit） | **A** |
+| 2 Cooling-resilient pathway continuity descriptor | A | A | A（新建 `descriptor_definition.md`） | — | **A** |
+| 3 Physics/QC-gated EIS-in-the-loop execution | A | A | A（README 已澄清 4/6/8） | A（诚实声明全到位） | **A** |
+
+正文以下章节（§1 ~ §6）的多数判断仍然成立，但请用上面 7 条增量"覆盖式"阅读。
+
+---
 
 ## 0. 阅读原则
 
