@@ -70,6 +70,33 @@ prompt_tokens = 2098   completion_tokens = 651
 
 > 这是本线**真实前瞻闭环的第一轮官方 recipe**：raw=MOBO，final=LLM 修正后 `R=0.28, N=0.96`，safety 通过。本块连同代码一并 commit + push 后即获服务器时间戳；**push 完成前不得开始合成该 (R,N)**。
 
+### 3.2 第一轮实测结果 + 官方第二轮 MOBO+LLM 建议（2026-06-10）
+
+**第一轮已合成并实测**（`R=0.28, N=0.96`，样品 `BO-R0.28-N0.96-w96y-1`，EIS 实测 2026-06-10 01:34，CHI660E；几何实测 厚度=0.0783cm、面积=1.96cm²）。Stage0 QC 后入库为 **trial 9**：
+
+| 指标 | 值 |
+|---|---|
+| σ_RT | 9.43×10⁻³ S/cm |
+| Ea_high | **0.0594 eV**（T2–T9 全场最低） |
+| ea_low_excess | 0.322 eV |
+| KK 通过率 | 0%（`KK_WARN_HIGH` → 仅 screening，冷尾 Ea 留 exploratory） |
+| score_v3 | **-2.1494** |
+| **Pareto 状态** | **`pareto`（非支配点，扩展了前沿；primary set 前沿 6 点）** |
+
+> 对照 §5 性能阈值：σ_RT 0.0094 ❌ / Ea_high 0.0594 ✅ / ea_low_excess 0.322 ❌ → **未达绝对阈值**（诚实 null）；但在多目标 Pareto 口径下，该点**非支配**、在低 Ea_high 轴上扩展了前沿。两条都如实记录，不得只报其一。
+> ⚠ 程序说明：昨晚消化 trial 9、给出下一轮建议的主闭环用的是**冻结的单目标 BayesianOptimizer**（`optimization_mode=bayesian`）；本 §3.2 的 score_v3/Pareto 与下方第二轮建议由**真正的 MOBO（ParEGO）** 复算（`line_b_round2_run.py`，只读、不写库）。
+
+**官方第二轮 MOBO+LLM 建议**（reproducer：`stage1_optimization/line_b_round2_run.py`，固定 `seed=20260610`）：
+
+| 角色 | R | N | 来源 / 状态 |
+|---|---|---|---|
+| 左脑 raw MOBO（ParEGO，seed=20260610） | **0.2447** | **0.9228** | `mode=parego`，weights≈[0.199, 0.294, 0.507]，pareto_front_size=5 |
+| 右脑 LLM guardrail（实时 OpenRouter `openai/gpt-5.4`，T=0.0） | **0.42** | **1.02** | confidence=0.76，safety_box=`passed` |
+
+**LLM provenance**（实时调用，写入 `official_recipe_round2.json`）：`model=openai/gpt-5.4`，`temperature=0.0`，`system_prompt_sha256=4d2cbb4a…`，`user_prompt_sha256=76932a37…`，`prompt_tokens=2100`，`completion_tokens=617`。
+
+> 这是**第二轮官方 recipe**：raw=MOBO `R=0.2447/N=0.9228`，final=LLM 修正后 **`R=0.42, N=1.02`**，safety 通过。本块连同 `official_recipe_round2.json` + `line_b_round2_run.py` 一并 commit + push 后即获服务器时间戳；**push 完成前不得开始合成该 (R,N)**。第一轮记录 `official_recipe.json` 不可改动。
+
 ## 4. ⚠ 执行前必须完成的两处代码改造（否则达不到"真实 MOBO+LLM 闭环"）
 
 主闭环现状（已核实）：`run_optimization_loop.py` / `suggest_next.py` 用的是**单目标** `optimizers/bayesian_opt.py`；`optimizers/mobo_optimizer.py` 仅被 `__init__`/测试引用，**未接入**。R4 的 guardrail 是 "Codex GPT-5 coding agent guardrail review"，**非闭环内实时 LLM API 调用**。
@@ -140,4 +167,9 @@ checker：`three_pillars/pillar3_eis_in_the_loop/v2_engine_tools/run_all_checks.
 - [x] §3.1 官方第一轮 recipe 冻结 commit hash：`c185379`（含 raw MOBO + LLM guardrail + provenance）
 - [x] push 时间（UTC+8）：`2026-06-08T12:53:38+08:00`（远端 `LJZ-sudo/acid-in-clay-close`，分支 `remediation/tier3`）
 - [ ] 远端 URL / Zenodo DOI：`__________`（如需公开存档再补 DOI）
-- [ ] 第一轮实验开始日期（须晚于上面 push 时间）：`__________`
+- [x] 第一轮实验开始日期（晚于 push 时间 2026-06-08T12:53）：`2026-06-10T01:34`（CHI660E，样品 `BO-R0.28-N0.96-w96y-1`）✅ 前瞻顺序成立
+
+### 第二轮（§3.2，R=0.42/N=1.02）留痕
+- [ ] 第二轮冻结 commit hash：`__________`（含 `official_recipe_round2.json` + `line_b_round2_run.py` + 本预注册更新 + trial 9 实测结果）
+- [ ] push 时间（UTC+8）：`__________`（远端 `LJZ-sudo/acid-in-clay-close`，分支 `remediation/tier3`）
+- [ ] 第二轮实验开始日期（**须晚于上面 push 时间**）：`__________`

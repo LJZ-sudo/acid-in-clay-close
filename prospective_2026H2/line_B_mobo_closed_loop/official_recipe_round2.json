@@ -1,0 +1,54 @@
+{
+  "line": "B",
+  "title": "Prospective MOBO + LLM closed loop (Attapulgite) — Round 2",
+  "campaign": "Attapulgite_AiCE_Wide_Temp_Optimization",
+  "round": 2,
+  "frozen_at": "",
+  "freeze_commit": "",
+  "seed": 20260610,
+  "reproducer": "stage1_optimization/line_b_round2_run.py",
+  "round1_outcome": {
+    "sample_id": "BO-R0.28-N0.96-w96y-1",
+    "R": 0.28,
+    "N": 0.96,
+    "sigma_RT_S_cm": 0.009426641593712379,
+    "Ea_high_eV": 0.05936764912047879,
+    "ea_low_excess_eV": 0.3218126584482773,
+    "score_v3": -2.1494,
+    "pareto_status": "pareto",
+    "pareto_front_size_primary_set": 6,
+    "note": "Single-objective morning loop ingested T9; this is the multi-objective (score_v3/Pareto) reading over T2..T9."
+  },
+  "raw_mobo": {
+    "R": 0.2447,
+    "N": 0.9228,
+    "mode": "parego",
+    "weights": [
+      0.19909187175645868,
+      0.2937253838230793,
+      0.507182744420462
+    ],
+    "pareto_front_size": 5
+  },
+  "llm_final": {
+    "R": 0.42,
+    "N": 1.02
+  },
+  "llm_used": true,
+  "confidence": 0.76,
+  "safety_passed": true,
+  "llm_provenance": {
+    "provider": "openrouter",
+    "provider_base_url": "https://openrouter.ai/api/v1",
+    "model": "openai/gpt-5.4",
+    "temperature": 0.0,
+    "max_tokens": 8000,
+    "system_prompt_sha256": "4d2cbb4aa8016684a39d0aa326cb8e762603062629081016e086f70eb5424c0a",
+    "user_prompt_sha256": "76932a3754677662a9243bafafc60af619734d1fd24e66e245583cb4b2210103",
+    "prompt_tokens": 2100,
+    "completion_tokens": 617
+  },
+  "reasoning_zh": "当前样品 R=0.28、N=0.96 的室温电导率仅 9.43e-3 S/cm，且 Ea_high 很低(0.0594 eV)，说明高温段质子迁移本身并不差；真正瓶颈在低温段，Ea_low=0.4109 eV、ea_low_excess=0.3218 eV，明显超过理想限域判据，且出现 3 段 Arrhenius，提示酸水网络在降温时发生重排/局部相变，可能是限域网络连续性不足与局部体相化并存。结合近几次结果看，低 R 区(0.2-0.28)即使 N 接近 1 也未给出更优 combined_score，而 R=0.5、N=1.2 反而更接近当前最优，说明适度提高酸度有助于增强氢键网络和质子供体密度。BO 给出的 R=0.245、N=0.923 在数学上接近当前差点附近，物理上过于保守，较可能重复低酸导致的低温退化，不是最优探索方向。我建议将 R 提升到中等偏高、同时将 N 控制在 1.00 左右，避免 N 过高引发通道外体相酸液。该点兼顾增强网络连续性与维持强限域，有望降低低温额外活化能并提升综合评分。",
+  "allowed_claim": "Round 2 前瞻性地检验执行层能否在多目标(MOBO/ParEGO)下扩展 电导/Ea Pareto 前沿；raw=MOBO、final=LLM 物理修正、safety 通过。",
+  "forbidden_claim": "BO+LLM 发现了 LRS；BO+LLM 证明了普适最优；事后改分把历史 campaign 变成成功的闭环发现。"
+}

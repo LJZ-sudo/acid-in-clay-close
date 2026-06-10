@@ -276,6 +276,34 @@
           "note": "Repaired after bug in process_ao_stage0._parse_geometry (silent fallback to 0.022cm)"
         }
       }
+    },
+    {
+      "trial_id": 9,
+      "timestamp": "2026-06-10T07:51:11.922059",
+      "parameters": {
+        "R": 0.28,
+        "N": 0.96
+      },
+      "objectives": {
+        "conductivity_room_temp_S_cm": 0.009426641593712379,
+        "ea_high_temp_eV": 0.05936764912047879,
+        "ea_low_temp_eV": 0.4108641321289955,
+        "n_segments": 3.0,
+        "ea_low_excess_eV": 0.3218126584482773,
+        "combined_score": -2.364652281314058
+      },
+      "metadata": {
+        "sample_id": "BO-R0.28-N0.96-w96y-1",
+        "source": "stage0_measurement",
+        "source_mode": "real",
+        "source_tag": "attapulgite_aice",
+        "input_bundle_hash": "d678d1bf4399411159d3daea392a955f304e12a5cf6adcf0abc18d78aace13cf",
+        "objective_valid": true,
+        "invalid_reasons": [],
+        "parser_mode": "bundle",
+        "stage0_bundle_path": "E:\\acid-in-clay-close\\V1.0-qianduan-mainline\\output\\ao_stage0_results\\2026.6.10__BO-R0.28-N0.96-w96y-1\\stage0_result_bundle.json",
+        "timestamp": "2026-06-10T07:51:11.921064"
+      }
     }
   ]
 }
