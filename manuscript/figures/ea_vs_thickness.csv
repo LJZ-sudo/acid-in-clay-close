@@ -1,0 +1,7 @@
+﻿sample_id,material_branch,role,thickness_cm,ea_high_eV,n_success,n_kk_warning,family
+2026.4.27CS,corn-starch/PVA/attapulgite/H3PO4,STARCH control main,0.06,0.2160145696516316,55,19,corn-starch control
+2026.4.28CS,corn-starch/PVA/attapulgite/H3PO4,STARCH replicate/processing control,0.06,0.2118,37,14,corn-starch control
+2026.4.29CS,LRS/PVA/attapulgite/H3PO4,LRS thin-film validation,0.02,0.0424810842227651,34,24,LRS (lotus-root starch)
+2026.4.30CS,chitosan/PVA/attapulgite/H3PO4,CHITO main failure-mode branch,0.05,0.0501,29,6,chitosan (CHITO)
+2026.5.1CS,chitosan/PVA/attapulgite/H3PO4,CHITO replicate failure-mode branch,0.06,0.099248519061674,28,4,chitosan (CHITO)
+2026.5.9CS,LRS/PVA/attapulgite/H3PO4,Main LRS record-level validation,0.022,0.0365925556881336,35,27,LRS (lotus-root starch)

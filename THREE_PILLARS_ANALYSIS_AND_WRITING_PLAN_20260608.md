@@ -1,5 +1,11 @@
 # 三创新点 · 架构 / 对应 / 子刊写作方案（代码与数据依据版）
 
+> ⚠ **KK 符号更正（2026-06-10）**：本文中凡涉及"KK 警告""高温窗口非 KK 干净""headline 样品 KK 最脏"
+> 的推理均**已被取代**。查明根因为一处复数阻抗符号约定 bug（`Z = Zr − jZi` 应为 `Z = Zr + jZi`），
+> 修正 + 高频感性尾裁剪后全样 220 条谱 KK 警告由 133 降为 0、μ_median≈0.007，**数据 KK 干净**。
+> Eₐ/σ 与 KK 无关、数值不变。最新结论见 `manuscript/build_draft_v1.py` 4.2 节与
+> `three_pillars/pillar2_descriptor_qc/figure_data/KK_SIGN_CORRECTION.md`。
+
 生成日期：2026-06-08
 分析对象：`acid-in-clay-close`（清理后只剩 `V1.0-qianduan-mainline/` + `three_pillars/` + 本类说明文档）
 分析方法：**不以历史计划文档为证据**，逐条核对当前文件系统中的源码、配置、QC 报告、claim audit 输出与真实数据。本文中每个数字 / 路径都来自实际读取。

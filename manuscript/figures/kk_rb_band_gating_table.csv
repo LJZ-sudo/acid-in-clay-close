@@ -1,0 +1,12 @@
+﻿sample_id,band,n_points,T_min_C,T_max_C,median_abs_rb_delta_pct,max_abs_rb_delta_pct
+2026.4.25CS,screening/exploratory (cold tail),37,-84,18,1.66,51.86
+2026.4.27CS,screening/exploratory (cold tail),33,-69,24,1.47,11.01
+2026.4.28CS,screening/exploratory (cold tail),34,-81,18,4.48,12.29
+2026.4.29CS,main-text (high-T window),17,-29,18,13.12,14.18
+2026.4.29CS,screening/exploratory (cold tail),12,-74,25,8.24,49.6
+2026.4.29CS,supplementary (233 K anchor),5,-44,-32,6.6,13.12
+2026.4.30CS,screening/exploratory (cold tail),27,-60,18,4.03,37.06
+2026.5.1CS,screening/exploratory (cold tail),27,-60,18,1.19,15.05
+2026.5.9CS,main-text (high-T window),18,-30,20,10.77,11.86
+2026.5.9CS,screening/exploratory (cold tail),12,-81,-48,13.62,96.65
+2026.5.9CS,supplementary (233 K anchor),5,-45,-33,4.25,6.92

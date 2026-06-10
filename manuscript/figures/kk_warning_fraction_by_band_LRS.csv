@@ -1,0 +1,4 @@
+﻿claim_band,n_spectra,n_kk_warn,mean_mu_median,kk_warn_fraction
+main-text (high-T window),35,0,0.007,0.0
+screening/exploratory (cold tail),26,0,0.012,0.0
+supplementary (233 K anchor),10,0,0.005,0.0

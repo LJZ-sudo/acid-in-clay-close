@@ -50,7 +50,8 @@ def validate_kk_consistency(
     c=0.5,
     max_M=100,
     fit_type='complex',
-    preprocess=True
+    preprocess=True,
+    trim_inductive_tail=True
 ):
     """
     执行 Kramers-Kronig 一致性校验（基于 impedance 库，深冷固态电池优化版）
@@ -190,13 +191,33 @@ def validate_kk_consistency(
     
     # 执行 linKK 校验
     try:
-        # 构建复数阻抗（注意符号：电化学阻抗虚部为负）
-        Z = zreal - 1j * zimag
-        
+        # 符号约定（修正版）：本项目解析器（chi_parser）把数据文件第 3 列原样读入 z_imag，
+        # 该列即真实虚部 Im(Z)——容抗弧区为负、(高频)感抗尾为正。lin-KK 以因果 RC(Voigt)
+        # 串联拟合，要求容性数据 Im(Z)<0，故正确的复数阻抗为 Z = zreal + 1j*zimag。
+        #   历史 bug：曾用 Z = zreal - 1j*zimag，等于把每条谱翻成反因果共轭，使 lin-KK
+        #   残差被系统性抬高、产生大量假 KK 警告（实测全样 220 条谱中 133 条假报警，
+        #   符号修正后 μ_median 由 ~0.21-0.28 降至 ~0.005-0.010）。已修正。
+        # 本修复仅影响 KK 质检；Rb/σ/Arrhenius 用过零点/相位拟合，不受符号影响。
+        freq_fit = freq
+        zreal_fit = zreal
+        zimag_fit = zimag
+        n_inductive_trimmed = 0
+        if trim_inductive_tail:
+            # 高频感抗尾(Im(Z)>0)与非物理负实部(Zr<=0)无法由容性 RC 模型表达，
+            # KK 校验前剔除（仅用于 KK，不改变上游 Rb/σ 计算所用的原始谱）。
+            cap_mask = (zimag_fit < 0) & (zreal_fit > 0)
+            if int(np.sum(cap_mask)) >= min_points:
+                n_inductive_trimmed = int(len(freq_fit) - int(np.sum(cap_mask)))
+                freq_fit = freq_fit[cap_mask]
+                zreal_fit = zreal_fit[cap_mask]
+                zimag_fit = zimag_fit[cap_mask]
+
+        Z = zreal_fit + 1j * zimag_fit
+
         # 调用 impedance.validation.linKK
         # 返回：M (基函数数量), mu (总残差), Z_fit (拟合的阻抗), 
         #       res_real (实部残差数组), res_imag (虚部残差数组)
-        M, mu, Z_fit, res_real, res_imag = linKK(freq, Z, c=c, max_M=max_M, fit_type=fit_type)
+        M, mu, Z_fit, res_real, res_imag = linKK(freq_fit, Z, c=c, max_M=max_M, fit_type=fit_type)
         
         # ===== 增强残差统计（使用残差数组而非单个 mu 值） =====
         
@@ -256,7 +277,10 @@ def validate_kk_consistency(
                 'mu_median_imag': mu_median_imag,
                 'mu_max_real': mu_max_real,
                 'mu_max_imag': mu_max_imag,
-                'n_points': len(freq),
+                'n_points': len(freq_fit),
+                'n_points_input': len(freq),
+                'n_inductive_trimmed': n_inductive_trimmed,
+                'sign_convention': 'Z = Zr + 1j*Zi (Im(Z)<0 capacitive)',
                 'threshold': residual_threshold,
                 'fit_type': fit_type,
                 'c': c,
