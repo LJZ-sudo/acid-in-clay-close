@@ -170,6 +170,6 @@ checker：`three_pillars/pillar3_eis_in_the_loop/v2_engine_tools/run_all_checks.
 - [x] 第一轮实验开始日期（晚于 push 时间 2026-06-08T12:53）：`2026-06-10T01:34`（CHI660E，样品 `BO-R0.28-N0.96-w96y-1`）✅ 前瞻顺序成立
 
 ### 第二轮（§3.2，R=0.42/N=1.02）留痕
-- [ ] 第二轮冻结 commit hash：`__________`（含 `official_recipe_round2.json` + `line_b_round2_run.py` + 本预注册更新 + trial 9 实测结果）
-- [ ] push 时间（UTC+8）：`__________`（远端 `LJZ-sudo/acid-in-clay-close`，分支 `remediation/tier3`）
-- [ ] 第二轮实验开始日期（**须晚于上面 push 时间**）：`__________`
+- [x] 第二轮冻结 commit hash：`367e16a`（含 `official_recipe_round2.json` + `line_b_round2_run.py` + 本预注册更新 + trial 9 实测结果与原始 EIS）
+- [x] push 时间（UTC+8）：`2026-06-10T09:55:54+08:00`（远端 `LJZ-sudo/acid-in-clay-close`，分支 `remediation/tier3`，`ff705f2..367e16a`）
+- [ ] 第二轮实验开始日期（**须晚于上面 push 时间**）：`__________`（合成 R=0.42/N=1.02 前回填，须晚于 09:55）

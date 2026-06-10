@@ -3,8 +3,8 @@
   "title": "Prospective MOBO + LLM closed loop (Attapulgite) — Round 2",
   "campaign": "Attapulgite_AiCE_Wide_Temp_Optimization",
   "round": 2,
-  "frozen_at": "",
-  "freeze_commit": "",
+  "frozen_at": "2026-06-10T09:55:54+08:00",
+  "freeze_commit": "367e16a",
   "seed": 20260610,
   "reproducer": "stage1_optimization/line_b_round2_run.py",
   "round1_outcome": {
