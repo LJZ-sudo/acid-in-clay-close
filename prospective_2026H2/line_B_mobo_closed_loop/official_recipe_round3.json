@@ -1,0 +1,56 @@
+{
+  "line": "B",
+  "title": "Prospective MOBO + LLM closed loop (Attapulgite) — Round 3",
+  "campaign": "Attapulgite_AiCE_Wide_Temp_Optimization",
+  "round": 3,
+  "status": "frozen",
+  "frozen_at": "2026-06-11T11:45:23+08:00",
+  "freeze_commit": "",
+  "generated_at": "2026-06-11T08:56:57+08:00",
+  "seed": 20260612,
+  "reproducer": "stage1_optimization/line_b_round_run.py",
+  "previous_round_outcome": {
+    "sample_id": "BO-R0.42-N1.02-ljjo-2",
+    "trial_id": 10,
+    "R": 0.42,
+    "N": 1.02,
+    "sigma_RT_S_cm": 0.012169678425917011,
+    "Ea_high_eV": 0.13941224859609994,
+    "ea_low_excess_eV": 0.32518058926992033,
+    "score_v3": -2.1192,
+    "pareto_status": "pareto",
+    "pareto_front_size_primary_set": 7
+  },
+  "raw_mobo": {
+    "R": 0.3479,
+    "N": 0.8325,
+    "mode": "parego",
+    "weights": [
+      0.45098093715903065,
+      0.37393505779208364,
+      0.17508400504888563
+    ],
+    "pareto_front_size": 5
+  },
+  "llm_final": {
+    "R": 0.36,
+    "N": 0.84
+  },
+  "llm_used": true,
+  "confidence": 0.78,
+  "safety_passed": true,
+  "llm_provenance": {
+    "provider": "openrouter",
+    "provider_base_url": "https://openrouter.ai/api/v1",
+    "model": "openai/gpt-5.4",
+    "temperature": 0.0,
+    "max_tokens": 8000,
+    "system_prompt_sha256": "4d2cbb4aa8016684a39d0aa326cb8e762603062629081016e086f70eb5424c0a",
+    "user_prompt_sha256": "8c2df8fc5112a7cb005876f5c527d8a01c2ffc170ade61959fbd8f5e6bc6aa15",
+    "prompt_tokens": 2098,
+    "completion_tokens": 682
+  },
+  "reasoning_zh": "当前样品 R=0.42、N=1.02 的主要瓶颈不是高温质子迁移，而是低温限域失效。其 ea_high=0.1394 eV 仍处于可接受区间，说明中高温下氢键网络尚可支持 Grotthuss 传导；但 ea_low=0.5343 eV、ea_low_excess=0.3252 eV 且出现 3 段 Arrhenius，表明低温发生明显相变或局部体相酸液/富水域冻结，属于 N 偏高导致通道外溢或限域不均一的典型信号。最近数据也支持这一判断：N≈1.0 以上并未带来更高 combined_score，而 N=0.58 虽避免过量装载，却因网络不连续导致性能更差，因此下一步应在中等 R 下把 N 从 1.02 下调到 0.8–0.9 区间，平衡连续网络与强限域。优化器建议 R=0.348、N=0.832 在物理上是合理的：较低 R 可保留足够水分抑制焦磷酸化/低温结晶，N=0.83 有望减少通道外体相并恢复更均匀的限域酸网络。考虑当前样品低温退化较强，我建议仅对 BO 做小幅保守修正，取 R=0.36、N=0.84，以保持与已测 R=0.35、0.42 之间的连续性并提高信息增益。",
+  "allowed_claim": "Round 3 前瞻性地检验执行层能否在多目标(MOBO/ParEGO)下扩展 电导/Ea Pareto 前沿；raw=MOBO、final=LLM 物理修正、safety 通过。",
+  "forbidden_claim": "BO+LLM 发现了 LRS；BO+LLM 证明了普适最优；事后改分把历史 campaign 变成成功的闭环发现。"
+}
