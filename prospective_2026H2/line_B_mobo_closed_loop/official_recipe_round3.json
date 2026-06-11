@@ -5,7 +5,7 @@
   "round": 3,
   "status": "frozen",
   "frozen_at": "2026-06-11T11:45:23+08:00",
-  "freeze_commit": "",
+  "freeze_commit": "e798754",
   "generated_at": "2026-06-11T08:56:57+08:00",
   "seed": 20260612,
   "reproducer": "stage1_optimization/line_b_round_run.py",
