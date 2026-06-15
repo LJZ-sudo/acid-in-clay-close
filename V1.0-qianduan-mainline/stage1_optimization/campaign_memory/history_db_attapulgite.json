@@ -304,6 +304,38 @@
         "stage0_bundle_path": "E:\\acid-in-clay-close\\V1.0-qianduan-mainline\\output\\ao_stage0_results\\2026.6.10__BO-R0.28-N0.96-w96y-1\\stage0_result_bundle.json",
         "timestamp": "2026-06-10T07:51:11.921064"
       }
+    },
+    {
+      "trial_id": 10,
+      "timestamp": "2026-06-11T00:00:00",
+      "parameters": {
+        "R": 0.42,
+        "N": 1.02
+      },
+      "objectives": {
+        "conductivity_room_temp_S_cm": 0.012169678425917011,
+        "ea_high_temp_eV": 0.1394122487754435,
+        "ea_low_temp_eV": 0.534298962582809,
+        "n_segments": 3.0,
+        "ea_low_excess_eV": 0.445298962582809,
+        "combined_score": -2.555607125122668
+      },
+      "metadata": {
+        "sample_id": "BO-R0.42-N1.02-ljjo-2",
+        "source": "stage0_measurement",
+        "source_mode": "real",
+        "source_tag": "attapulgite_aice",
+        "campaign_slug": "attapulgite_aice_campaign",
+        "ao_folder": "2026.6.11R0.42-N1.02",
+        "roomT_C_actual": 21.0,
+        "thickness_cm": 0.0697,
+        "formula_version": "v2.combined_score=log10(sigma_room)-3.0*Ea_high-0.5*ea_low_excess_eV",
+        "prospective": true,
+        "freeze_commit": "367e16a",
+        "frozen_at": "2026-06-10T09:55:54+08:00",
+        "round": 2,
+        "note": "Line B round-2 prospective MOBO+LLM recipe (raw MOBO R=0.245/N=0.923 -> LLM gpt-5.4 final R=0.42/N=1.02). Frozen+pushed 2026-06-10, synthesized 2026-06-11 (measured-after-freeze). Does NOT beat campaign best (trial 1 R0.186/N1.029, score -1.94); honest prospective execution, not a discovery."
+      }
     }
   ]
 }
