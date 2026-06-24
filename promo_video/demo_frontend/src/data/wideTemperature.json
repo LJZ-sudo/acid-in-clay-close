@@ -1,0 +1,73 @@
+{
+  "_source": "three_pillars/pillar2_descriptor_qc/figure_data/wide_temperature_performance_summary.csv",
+  "_note": "宽温 σ(T) 锚点（单位 S/cm，温度 °C）。真实数值，未改动。曲线用于 log10(σ) vs T 展示。",
+  "samples": [
+    {
+      "id": "2026.5.9CS",
+      "label": "LRS 薄膜（headline，0.022 cm）",
+      "branch": "莲藕淀粉 LRS",
+      "role": "正验证",
+      "color": "#34d399",
+      "ea_high_eV": 0.0366,
+      "thickness_cm": 0.022,
+      "curve": [
+        { "tempC": 18, "sigma": 1.982e-2 },
+        { "tempC": 0, "sigma": 1.854e-2 },
+        { "tempC": -21, "sigma": 1.559e-2 },
+        { "tempC": -39, "sigma": 4.141e-3 },
+        { "tempC": -60, "sigma": 8.03e-5 },
+        { "tempC": -81, "sigma": 2.342e-5 }
+      ]
+    },
+    {
+      "id": "2026.4.29CS",
+      "label": "LRS 薄膜（重复，0.02 cm）",
+      "branch": "莲藕淀粉 LRS",
+      "role": "正验证",
+      "color": "#22d3ee",
+      "ea_high_eV": 0.0425,
+      "thickness_cm": 0.02,
+      "curve": [
+        { "tempC": 22, "sigma": 2.016e-2 },
+        { "tempC": 1, "sigma": 1.841e-2 },
+        { "tempC": -20, "sigma": 1.529e-2 },
+        { "tempC": -41, "sigma": 3.801e-3 },
+        { "tempC": -59, "sigma": 1.298e-4 },
+        { "tempC": -74, "sigma": 3.862e-6 }
+      ]
+    },
+    {
+      "id": "2026.4.30CS",
+      "label": "CHITO（0.05 cm）",
+      "branch": "壳聚糖 CHITO",
+      "role": "边界验证",
+      "color": "#f59e0b",
+      "ea_high_eV": null,
+      "thickness_cm": 0.05,
+      "curve": [
+        { "tempC": 6, "sigma": 1.285e-2 },
+        { "tempC": 0, "sigma": 1.149e-2 },
+        { "tempC": -21, "sigma": 8.790e-3 },
+        { "tempC": -39, "sigma": 4.326e-5 },
+        { "tempC": -60, "sigma": 2.199e-6 }
+      ]
+    },
+    {
+      "id": "2026.5.1CS",
+      "label": "CHITO（重复，0.06 cm）",
+      "branch": "壳聚糖 CHITO",
+      "role": "边界验证",
+      "color": "#fb7185",
+      "ea_high_eV": null,
+      "thickness_cm": 0.06,
+      "curve": [
+        { "tempC": 15, "sigma": 1.372e-2 },
+        { "tempC": 0, "sigma": 1.121e-2 },
+        { "tempC": -21, "sigma": 8.001e-3 },
+        { "tempC": -39, "sigma": 7.246e-5 },
+        { "tempC": -60, "sigma": 2.703e-6 }
+      ]
+    }
+  ],
+  "collapse_note": "壳聚糖在约 -40 °C 附近电导率骤降约 100×；莲藕淀粉却平滑延伸到 -81 °C，依然保持导电。"
+}

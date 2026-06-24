@@ -1,0 +1,75 @@
+total cards: 31
+
+  manual_1157b11126  y=0     [TITLE]
+      title: International   Journal   of   Biological   Macromolecules
+  manual_1190463586  y=0     [TITLE]
+      title: Article Composite Proton Exchange Membranes Based on Chitosan and Phosphotungstic Acid Immobilized O
+  manual_1ca1249fc4  y=0     [TITLE]
+      title: Choline chloride-based deep eutectic solvents as electrolytes for wide  temperature range supercapac
+  manual_26f0dcfc01  y=0     [NONE]
+      title: Journal of Materials Chemistry A
+  manual_3d7d6d5d7b  y=0     [NONE]
+      title: 
+  manual_42051140ac  y=0     [TITLE]
+      title: Effect of deep eutectic solvent in proton conduction and thermal behaviour of chitosan-based membran
+  manual_529c072730  y=0     [TITLE]
+      title: Design Strategies for Anti-Freeze Electrolytes in Aqueous Energy Storage Devices at Low Temperatures
+  manual_58ec9a6c2e  y=0     [NONE]
+      title: Chemical Science
+  manual_6138017199  y=0     [NONE]
+      title: 
+  manual_7f4f0a8392  y=0     [TITLE]
+      title: M O Acc OH Acc OH ? ? ?     ? ?? ? ? ? ? ? X M O | M O trap Acc OH Acc OH K ? ? ? ?    (11)    Assoc
+  manual_89488460eb  y=0     [TITLE]
+      title: Enhancing proton conductivity at subzero temperature through  constructing the well-ordered structur
+  manual_8d58a81c9e_1  y=0     [TITLE]
+      title: An effective strategy to enhance phosphoric acid retention and proton  conductivity stability: Const
+  manual_8d58a81c9e  y=0     [TITLE]
+      title: An effective strategy to enhance phosphoric acid retention and proton  conductivity stability: Const
+  manual_a16330d0f5  y=0     [TITLE]
+      title: Phosphoric Acid-in-Clay Electrolyte Boosting Polybenzimidazole Membranes for High-Performance Fuel C
+  manual_a624da98ce  y=2014  [TITLE]
+      title: Enhanced Proton Conductivity from Phosphoric Acid-Incorporated 3D Polyacrylamide-Graft-Starch Hydrog
+  manual_b9c3d1711d  y=0     [TITLE]
+      title: Enhanced Proton Conductivity by the Influence of Modified  Montmorillonite on Poly (Vinyl alcohol) B
+  manual_c0c1101384  y=0     [TITLE]
+      title: Preparation and properties of chitosan/organic-modified attapulgite composite proton exchange membra
+  manual_c8dafb5973  y=0     [TITLE]
+      title: Functionalized clay nanocomposites for enhanced proton conductivity in  polyether-based fuel cell me
+  manual_e2d7aef1a8  y=0     [TITLE]
+      title: =  c 0,H +  exp ?
+  manual_f56a2b0129  y=0     [TITLE]
+      title: ABSTRACT:  Growing concern regarding the impact of fossil fuels has led to demands for the developme
+  manual_f5f9ab95ca  y=2018  [TITLE]
+      title: Improving the ionic conductivity in nanostructured membranes based on poly(vinyl alcohol) (PVA), chi
+  manual_f7196a2c3b  y=2014  [TITLE]
+      title: Hydrogen ion conducting starch-chitosan blend based electrolyte for application in electrochemical d
+  openalex_w1608495915  y=0     [NONE]
+      title: 
+  W2566581454  y=2016  [DOI,TITLE]
+      title: Recent progress in layered transition metal carbides and/or nitrides (MXenes) and their composites: 
+      doi  : 10.1039/c6ta06772g
+  W2559171777  y=2016  [DOI,TITLE]
+      title: Hierarchically porous materials: synthesis strategies and structure design
+      doi  : 10.1039/c6cs00829a
+  W2324366651  y=2016  [DOI,TITLE]
+      title: Polymer Nanocomposites?A Comparison between Carbon Nanotubes, Graphene, and Clay as Nanofillers
+      doi  : 10.3390/ma9040262
+  W3176022823  y=2021  [DOI,TITLE]
+      title: Layered double hydroxide-based electrocatalysts for the oxygen evolution reaction: identification an
+      doi  : 10.1039/d1cs00186h
+  W3201994217  y=2021  [DOI,TITLE]
+      title: Hydrogen production, storage, utilisation and environmental impacts: a review
+      doi  : 10.1007/s10311-021-01322-8
+  W2005927954  y=2012  [DOI,TITLE]
+      title: Bottom-up assembly of photonic crystals
+      doi  : 10.1039/c2cs35309a
+  W2792636844  y=2018  [DOI,TITLE]
+      title: Materials for supercapacitors: When Li-ion battery power is not enough
+      doi  : 10.1016/j.mattod.2018.01.035
+  W2787667840  y=2018  [DOI,TITLE]
+      title: Ionic liquids and derived materials for lithium and sodium batteries
+      doi  : 10.1039/c7cs00464h
+
+fetchable by DOI   : 8/31
+fetchable by title : 26/31

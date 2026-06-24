@@ -66,11 +66,19 @@ def test_get_next_recipe(client: TestClient) -> None:
         body = resp.json()
         assert body["requested_campaign"] == CAMPAIGN_SLUG
         assert "recipe" in body
-        assert "schema_valid" in body
-        assert isinstance(body["schema_warnings"], list)
+        # 公共包装字段（两种来源都应有）
         assert "history_db" in body
         assert "output_dir" in body
         assert "next_recipe_path" in body
+        assert "recipe_source" in body
+        # schema 诊断仅出现在 ondisk 单目标 recipe 分支；
+        # 当冻结的线 B 官方 MOBO+LLM recipe 权威时，走 official 形状（无 schema 诊断）。
+        if body["recipe_source"] == "ondisk_next_experiment_recipe":
+            assert "schema_valid" in body
+            assert isinstance(body["schema_warnings"], list)
+        else:
+            assert body["recipe_source"] == "line_b_official_mobo_llm"
+            assert "optimizer_vs_llm_delta" in body["recipe"]
         rec = body["recipe"]["recipe"]
         assert "recommended_parameters" in rec
 

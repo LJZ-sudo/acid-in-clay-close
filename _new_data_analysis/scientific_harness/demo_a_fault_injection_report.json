@@ -1,0 +1,86 @@
+{
+  "demo": "A - tri-commit physical belief-state harness",
+  "scenarios": [
+    {
+      "scenario": "healthy",
+      "fault": "NONE",
+      "physical_commit": "EFFECT_OBSERVED",
+      "metrological_commit": "VALID",
+      "epistemic_commit": "PRIMARY_EVIDENCE",
+      "entered_bo": true,
+      "expected_entered_bo": true,
+      "match": true,
+      "blind_retry_count": 0,
+      "reconciled": false
+    },
+    {
+      "scenario": "ack_lost_file_ok",
+      "fault": "TIMEOUT_ACK_LOST_FILE_OK",
+      "physical_commit": "RECONSTRUCTED",
+      "metrological_commit": "VALID",
+      "epistemic_commit": "PRIMARY_EVIDENCE",
+      "entered_bo": true,
+      "expected_entered_bo": true,
+      "match": true,
+      "blind_retry_count": 0,
+      "reconciled": true
+    },
+    {
+      "scenario": "timeout_no_effect",
+      "fault": "TIMEOUT_NO_EFFECT",
+      "physical_commit": "FAILED",
+      "metrological_commit": "INVALID",
+      "epistemic_commit": "REJECTED",
+      "entered_bo": false,
+      "expected_entered_bo": false,
+      "match": true,
+      "blind_retry_count": 0,
+      "reconciled": true
+    },
+    {
+      "scenario": "temp_not_equilibrated",
+      "fault": "TEMP_NOT_EQUILIBRATED",
+      "physical_commit": "EFFECT_OBSERVED",
+      "metrological_commit": "INVALID",
+      "epistemic_commit": "REJECTED",
+      "entered_bo": false,
+      "expected_entered_bo": false,
+      "match": true,
+      "blind_retry_count": 0,
+      "reconciled": false
+    },
+    {
+      "scenario": "calibration_expired",
+      "fault": "CALIBRATION_EXPIRED",
+      "physical_commit": "EFFECT_OBSERVED",
+      "metrological_commit": "INVALID",
+      "epistemic_commit": "REJECTED",
+      "entered_bo": false,
+      "expected_entered_bo": false,
+      "match": true,
+      "blind_retry_count": 0,
+      "reconciled": false
+    },
+    {
+      "scenario": "kk_fail",
+      "fault": "KK_FAIL",
+      "physical_commit": "EFFECT_OBSERVED",
+      "metrological_commit": "INVALID",
+      "epistemic_commit": "REJECTED",
+      "entered_bo": false,
+      "expected_entered_bo": false,
+      "match": true,
+      "blind_retry_count": 0,
+      "reconciled": false
+    }
+  ],
+  "acceptance": {
+    "blind_retry_count": 0,
+    "invalid_into_bo_count": 0,
+    "physical_state_reconstructed_correctly": true,
+    "all_scenarios_match_expectation": true,
+    "event_chain_valid": true
+  },
+  "acceptance_pass": true,
+  "n_events": 32
+}

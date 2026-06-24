@@ -1,0 +1,42 @@
+# 证据准入策略 v2（冻结配置）— M1-4
+# ---------------------------------------------------------------------------
+# 把 Stage0 单一 status 拆成多维状态，并按"用途"分级（诊断/敏感性/主分析/BO/主张）。
+# 对应 evidence_admission.py :: assess_admissibility。
+# 阈值取自真实代码：KK v5.0 中位数判据 0.2；QA 致命 250kΩ / 低频反向>=3 次。
+admission_policy_version: "evidence-policy-v2.0.0"
+created: "2026-06-22"
+frozen: true
+
+# KK 一致性（kk_validation.py :: validate_kk_consistency，中位数判据）
+kk:
+  mu_median_threshold: 0.20      # >= 视为 KK 警告（WARN）
+  mu_median_fail: 0.50           # >= 视为 KK 不一致（FAIL，仅诊断）
+  # KK 警告但 Rb 一致时，允许进敏感性分析，但方差按下面倍数膨胀
+  warn_variance_multiplier: 2.0
+
+# QA 致命判据（data_quality.py，一票否决）
+qa:
+  max_impedance_fatal_ohm: 250000.0   # > 量程触顶 → REJECTED
+  noise_reversal_fatal: 3             # 低频 Z' 反向减小 >= 3 次 → REJECTED
+
+# Rb 可提取性（基于 M1-1 方法间一致性）
+rb_extractability:
+  method_spread_strong_dex: 0.15      # < STRONG
+  method_spread_weak_dex: 0.30        # [0.15,0.30) WEAK；>= 0.30 视为方法严重不一致
+
+# 准入矩阵：状态 -> 各用途是否可用
+# 列：diagnostic / arrhenius_primary / bo_training / scientific_claim
+admission_matrix:
+  qa_fail:        { diagnostic: true,  arrhenius_primary: false, bo_training: false, scientific_claim: false }
+  kk_fail:        { diagnostic: true,  arrhenius_primary: false, bo_training: false, scientific_claim: false }
+  kk_warn_rb_ok:  { diagnostic: true,  arrhenius_primary: "sensitivity", bo_training: "variance_inflated", scientific_claim: false }
+  rb_disagree:    { diagnostic: true,  arrhenius_primary: "sensitivity", bo_training: false, scientific_claim: false }
+  clean:          { diagnostic: true,  arrhenius_primary: true,  bo_training: true,  scientific_claim: true }
+
+# objective_valid 派生规则：必须 PRIMARY 且不确定度有限
+objective_valid_rule: "scientific_admissibility == PRIMARY and uncertainty_status in [QUANTIFIED, PARTIAL]"
+
+# 坏数据分库（不删除，供故障学习/Skill 失效分析）
+data_partitions:
+  diagnostic_store: "diagnostic_observations.jsonl"
+  scientific_store: "scientific_observations.jsonl"

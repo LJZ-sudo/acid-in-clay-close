@@ -1,0 +1,208 @@
+{
+  "generated_at": "2026-06-24T09:40:24.412612+08:00",
+  "project_root": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline",
+  "n_hits": 27,
+  "by_role": {
+    "ADAPTER_SINK": 6,
+    "DRIVER_DEFINITION": 2,
+    "HARNESS_SHADOW": 3,
+    "LEGACY_ONLINE": 11,
+    "OPERATOR_MANUAL": 4,
+    "TEST": 1
+  },
+  "autonomous_bypass_count": 0,
+  "autonomous_bypass_sites": [],
+  "allowlist": [],
+  "hits": [
+    {
+      "file": "stage0_measurement/run_online.py",
+      "line": 365,
+      "token": "TemperatureDriver_ctor",
+      "code": "temp_driver = TemperatureDriver(",
+      "role": "LEGACY_ONLINE"
+    },
+    {
+      "file": "stage0_measurement/run_online.py",
+      "line": 379,
+      "token": "ChiExecutor_ctor",
+      "code": "chi_executor = ChiExecutor()",
+      "role": "LEGACY_ONLINE"
+    },
+    {
+      "file": "tests/test_stage0_stage1_contracts.py",
+      "line": 213,
+      "token": "ChiExecutor_ctor",
+      "code": "executor = mod.ChiExecutor(config={\"wait_times\": {}, \"measurement_time_mapping\": {}})",
+      "role": "TEST"
+    },
+    {
+      "file": "backend_api/routers/control.py",
+      "line": 124,
+      "token": "hw_start",
+      "code": "return hw.start(",
+      "role": "OPERATOR_MANUAL"
+    },
+    {
+      "file": "backend_api/routers/control.py",
+      "line": 205,
+      "token": "hw_stop",
+      "code": "return hw.stop()",
+      "role": "OPERATOR_MANUAL"
+    },
+    {
+      "file": "backend_api/routers/control.py",
+      "line": 217,
+      "token": "set_temperature",
+      "code": "return hw.set_temperature(req.effective_target)",
+      "role": "OPERATOR_MANUAL"
+    },
+    {
+      "file": "backend_api/routers/control.py",
+      "line": 224,
+      "token": "trigger_measurement",
+      "code": "return hw.trigger_measurement()",
+      "role": "OPERATOR_MANUAL"
+    },
+    {
+      "file": "backend_api/services/hardware_adapter.py",
+      "line": 581,
+      "token": "TemperatureDriver_ctor",
+      "code": "self._workflow = TemperatureDriver(port=port)",
+      "role": "ADAPTER_SINK"
+    },
+    {
+      "file": "backend_api/services/hardware_adapter.py",
+      "line": 596,
+      "token": "ChiExecutor_ctor",
+      "code": "self._chi_executor = ChiExecutor()",
+      "role": "ADAPTER_SINK"
+    },
+    {
+      "file": "backend_api/services/hardware_adapter.py",
+      "line": 1024,
+      "token": "set_temperature",
+      "code": "res = self._workflow.set_temperature(target)",
+      "role": "ADAPTER_SINK"
+    },
+    {
+      "file": "backend_api/services/hardware_adapter.py",
+      "line": 1423,
+      "token": "set_temperature",
+      "code": "res = self._workflow.set_temperature(target_C)",
+      "role": "ADAPTER_SINK"
+    },
+    {
+      "file": "backend_api/services/hardware_adapter.py",
+      "line": 2750,
+      "token": "set_temperature",
+      "code": "set_res = self._workflow.set_temperature(t_start)",
+      "role": "ADAPTER_SINK"
+    },
+    {
+      "file": "backend_api/services/hardware_adapter.py",
+      "line": 2781,
+      "token": "set_temperature",
+      "code": "set_res = self._workflow.set_temperature(t)",
+      "role": "ADAPTER_SINK"
+    },
+    {
+      "file": "stage0_measurement/controllers/online_workflow.py",
+      "line": 586,
+      "token": "set_temperature",
+      "code": "result = self.temp_driver.set_temperature(",
+      "role": "LEGACY_ONLINE"
+    },
+    {
+      "file": "stage0_measurement/controllers/online_workflow.py",
+      "line": 691,
+      "token": "set_temperature",
+      "code": "result = self.temp_driver.set_temperature(",
+      "role": "LEGACY_ONLINE"
+    },
+    {
+      "file": "stage0_measurement/controllers/online_workflow.py",
+      "line": 748,
+      "token": "set_temperature",
+      "code": "result = self.temp_driver.set_temperature(new_target_C, is_cooling=False)",
+      "role": "LEGACY_ONLINE"
+    },
+    {
+      "file": "stage0_measurement/controllers/online_workflow.py",
+      "line": 774,
+      "token": "set_temperature",
+      "code": "result = self.temp_driver.set_temperature(new_target_C, is_cooling=is_cooling_down)",
+      "role": "LEGACY_ONLINE"
+    },
+    {
+      "file": "stage0_measurement/controllers/online_workflow.py",
+      "line": 819,
+      "token": "set_temperature",
+      "code": "self.temp_driver.set_temperature(current_temp + 5, is_cooling=False)",
+      "role": "LEGACY_ONLINE"
+    },
+    {
+      "file": "stage0_measurement/controllers/online_workflow.py",
+      "line": 942,
+      "token": "set_temperature",
+      "code": "result = self.temp_driver.set_temperature(target_temp, is_cooling=False)",
+      "role": "LEGACY_ONLINE"
+    },
+    {
+      "file": "stage0_measurement/controllers/online_workflow.py",
+      "line": 945,
+      "token": "set_temperature",
+      "code": "result = self.temp_driver.set_temperature(target_temp, is_cooling=True)",
+      "role": "LEGACY_ONLINE"
+    },
+    {
+      "file": "stage0_measurement/controllers/online_workflow.py",
+      "line": 1403,
+      "token": "set_temperature",
+      "code": "self.temp_driver.set_temperature(current_temp, is_cooling=False)",
+      "role": "LEGACY_ONLINE"
+    },
+    {
+      "file": "stage0_measurement/controllers/online_workflow.py",
+      "line": 1515,
+      "token": "set_temperature",
+      "code": "self.temp_driver.set_temperature(18.0, is_cooling=False)",
+      "role": "LEGACY_ONLINE"
+    },
+    {
+      "file": "stage0_measurement/modules/automation/chi_executor.py",
+      "line": 845,
+      "token": "ChiExecutor_ctor",
+      "code": "executor = ChiExecutor(config)",
+      "role": "DRIVER_DEFINITION"
+    },
+    {
+      "file": "stage0_measurement/modules/hardware/temp_driver.py",
+      "line": 267,
+      "token": "set_temperature",
+      "code": "self.set_temperature(target_temp, is_cooling=False)",
+      "role": "DRIVER_DEFINITION"
+    },
+    {
+      "file": "stage1_optimization/scientific_harness/action_gate.py",
+      "line": 4,
+      "token": "enqueue_command",
+      "code": "GPT-3 + P0-5 审计指出:自主路径 `/api/agent` 直连 `hw.enqueue_command(...)`,绕过 SciTX。",
+      "role": "HARNESS_SHADOW"
+    },
+    {
+      "file": "stage1_optimization/scientific_harness/commit_controller.py",
+      "line": 75,
+      "token": "instrument_dispatch",
+      "code": "dispatch = instrument.dispatch(command_id)",
+      "role": "HARNESS_SHADOW"
+    },
+    {
+      "file": "stage1_optimization/scientific_harness/transaction.py",
+      "line": 94,
+      "token": "instrument_dispatch",
+      "code": "dispatch = instrument.dispatch(command_id)",
+      "role": "HARNESS_SHADOW"
+    }
+  ],
+  "note": "autonomous_bypass = 自主决策环直连硬件、绕过 SciTX 的位置;WP4 cutover 后应清零。其余角色(OPERATOR_MANUAL/ADAPTER_SINK/LEGACY_ONLINE/HARNESS_SHADOW/DRIVER_DEFINITION)属允许或非真硬件路径。"
+}

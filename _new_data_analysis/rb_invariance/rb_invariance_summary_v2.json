@@ -1,0 +1,185 @@
+{
+  "provenance": {
+    "analysis_version": "stage0-eis-v2.0.0",
+    "admission_policy_version": "evidence-policy-v2.0.0",
+    "objective_registry_version": "objective-registry-v2.0.0",
+    "rb_method_policy_version": "rb-method-v2.0.0",
+    "config_sha256": {
+      "stage0_v2_policy": "da45db8ed5327d9d45407e314014ed811eca46f00baf8165bf601348454be1af",
+      "rb_method_policy": "43949a81157d42afe6e16713ece534dcd99c3cafd03712e05cbb6b640ede117a",
+      "evidence_admission_v2": "4931d6e794f1056445f8621de5c39702466c82d3c39f9f050e00b9e397a45960",
+      "objective_registry": "193a65c7b5d39235ef29a8e29c72429e965490dfa8424dc216d169269ab7fac5"
+    },
+    "git_commit": "fb17c68",
+    "generated_at": "2026-06-22T14:37:32.950567+08:00",
+    "kind": "lineA",
+    "n_boot": 0
+  },
+  "n_datasets": 16,
+  "risk_counts": {
+    "medium": 8,
+    "low": 8
+  },
+  "datasets": [
+    {
+      "dataset": "lineA_CHITO_0430CS",
+      "n_points": 29,
+      "method_spread_dex_median": 0.0004533493271863207,
+      "method_spread_dex_max": 2.146176777893845,
+      "routing_artifact_risk": "medium",
+      "n_traj_with_transition": 3,
+      "n_traj_assessed": 3,
+      "breakpoint_spread_K": 18.901844961636726
+    },
+    {
+      "dataset": "lineA_CHITO_0501CS",
+      "n_points": 28,
+      "method_spread_dex_median": 0.00039014316351603136,
+      "method_spread_dex_max": 1.932191768910619,
+      "routing_artifact_risk": "medium",
+      "n_traj_with_transition": 3,
+      "n_traj_assessed": 3,
+      "breakpoint_spread_K": 43.67123489208154
+    },
+    {
+      "dataset": "lineA_LRS_0429CS",
+      "n_points": 34,
+      "method_spread_dex_median": 0.0009999621876463222,
+      "method_spread_dex_max": 2.119842036790584,
+      "routing_artifact_risk": "low",
+      "n_traj_with_transition": 3,
+      "n_traj_assessed": 3,
+      "breakpoint_spread_K": 0.00028938805081679675
+    },
+    {
+      "dataset": "lineA_LRS_0509CS",
+      "n_points": 35,
+      "method_spread_dex_median": 0.0010184133830814688,
+      "method_spread_dex_max": 1.970910644790788,
+      "routing_artifact_risk": "low",
+      "n_traj_with_transition": 3,
+      "n_traj_assessed": 3,
+      "breakpoint_spread_K": 1.4325040947124705
+    },
+    {
+      "dataset": "lineA_LRS_0615_s2",
+      "n_points": 37,
+      "method_spread_dex_median": 0.0007059490115333594,
+      "method_spread_dex_max": 2.365735476272334,
+      "routing_artifact_risk": "low",
+      "n_traj_with_transition": 3,
+      "n_traj_assessed": 3,
+      "breakpoint_spread_K": 5.49965585393025
+    },
+    {
+      "dataset": "lineA_LRS_0616_s3",
+      "n_points": 46,
+      "method_spread_dex_median": 0.00038174600720852883,
+      "method_spread_dex_max": 2.347964399547149,
+      "routing_artifact_risk": "medium",
+      "n_traj_with_transition": 3,
+      "n_traj_assessed": 4,
+      "breakpoint_spread_K": 12.67557106312205
+    },
+    {
+      "dataset": "lineA_LRS_0617_s3b",
+      "n_points": 40,
+      "method_spread_dex_median": 0.0014851521296824184,
+      "method_spread_dex_max": 2.321916798633829,
+      "routing_artifact_risk": "medium",
+      "n_traj_with_transition": 3,
+      "n_traj_assessed": 4,
+      "breakpoint_spread_K": 0.9924568036200299
+    },
+    {
+      "dataset": "lineA_LRS_6.12",
+      "n_points": 37,
+      "method_spread_dex_median": 0.0004381995008132997,
+      "method_spread_dex_max": 2.3471845183260083,
+      "routing_artifact_risk": "low",
+      "n_traj_with_transition": 3,
+      "n_traj_assessed": 3,
+      "breakpoint_spread_K": 4.4317559513901585
+    },
+    {
+      "dataset": "lineA_LRS_6.15_merged",
+      "n_points": 59,
+      "method_spread_dex_median": 0.0006541708935573537,
+      "method_spread_dex_max": 2.220758971940769,
+      "routing_artifact_risk": "low",
+      "n_traj_with_transition": 3,
+      "n_traj_assessed": 3,
+      "breakpoint_spread_K": 3.998498024083716
+    },
+    {
+      "dataset": "lineA_LRS_6.15_s1",
+      "n_points": 18,
+      "method_spread_dex_median": 0.0004321871307144086,
+      "method_spread_dex_max": 2.220758971940769,
+      "routing_artifact_risk": "medium",
+      "n_traj_with_transition": 2,
+      "n_traj_assessed": 3,
+      "breakpoint_spread_K": 2.6905411232291954e-07
+    },
+    {
+      "dataset": "lineA_LRS_6.15_s2",
+      "n_points": 26,
+      "method_spread_dex_median": 0.0007211807612919115,
+      "method_spread_dex_max": 0.0024870920463282357,
+      "routing_artifact_risk": "low",
+      "n_traj_with_transition": 0,
+      "n_traj_assessed": 3,
+      "breakpoint_spread_K": 0.0
+    },
+    {
+      "dataset": "lineA_LRS_6.15_s3",
+      "n_points": 15,
+      "method_spread_dex_median": 0.0006145152178307736,
+      "method_spread_dex_max": 0.0017406485717260474,
+      "routing_artifact_risk": "low",
+      "n_traj_with_transition": 0,
+      "n_traj_assessed": 3,
+      "breakpoint_spread_K": 0.0
+    },
+    {
+      "dataset": "lineA_starch_0427CS",
+      "n_points": 55,
+      "method_spread_dex_median": 0.0002892235259927468,
+      "method_spread_dex_max": 1.9525254590960086,
+      "routing_artifact_risk": "medium",
+      "n_traj_with_transition": 3,
+      "n_traj_assessed": 3,
+      "breakpoint_spread_K": 10.928719771286808
+    },
+    {
+      "dataset": "lineA_starch_0428CS",
+      "n_points": 37,
+      "method_spread_dex_median": 0.00018794773180092798,
+      "method_spread_dex_max": 1.9489576579491814,
+      "routing_artifact_risk": "low",
+      "n_traj_with_transition": 3,
+      "n_traj_assessed": 3,
+      "breakpoint_spread_K": 0.7520386132736689
+    },
+    {
+      "dataset": "lineA_starch_6.11",
+      "n_points": 38,
+      "method_spread_dex_median": 0.00022116169352626587,
+      "method_spread_dex_max": 2.2781956831564307,
+      "routing_artifact_risk": "medium",
+      "n_traj_with_transition": 3,
+      "n_traj_assessed": 3,
+      "breakpoint_spread_K": 14.837941532060626
+    },
+    {
+      "dataset": "lineA_starch_6.13",
+      "n_points": 34,
+      "method_spread_dex_median": 0.00012502045693976035,
+      "method_spread_dex_max": 2.346065311485748,
+      "routing_artifact_risk": "medium",
+      "n_traj_with_transition": 3,
+      "n_traj_assessed": 3,
+      "breakpoint_spread_K": 12.655565656228504
+    }
+  ]
+}

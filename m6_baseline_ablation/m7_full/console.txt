@@ -1,0 +1,18 @@
+[cfg] model=openai/gpt-5.4 n_seeds=5 s09_det=False
+[A0_governed_full seed1] inst=5 distract=0.0 ontopic=1.0 evidence=1.0
+[A0_governed_full seed2] inst=5 distract=0.0 ontopic=1.0 evidence=1.0
+[A0_governed_full seed3] inst=5 distract=0.0 ontopic=0.938 evidence=1.0
+[A0_governed_full seed4] inst=5 distract=0.0 ontopic=0.882 evidence=1.0
+[A0_governed_full seed5] inst=5 distract=0.0 ontopic=0.938 evidence=1.0
+[A1_ablate_evidence seed1] inst=6 distract=0.0 ontopic=0.92 evidence=1.0
+[A1_ablate_evidence seed2] inst=6 distract=0.0 ontopic=0.96 evidence=1.0
+[A1_ablate_evidence seed3] inst=6 distract=0.0 ontopic=0.8 evidence=1.0
+[A1_ablate_evidence seed4] inst=6 distract=0.0 ontopic=0.852 evidence=1.0
+[A1_ablate_evidence seed5] inst=6 distract=0.0 ontopic=0.852 evidence=1.0
+[A2_distractor_injected seed1] inst=5 distract=0.0 ontopic=1.0 evidence=1.0
+[A2_distractor_injected seed2] inst=5 distract=0.0 ontopic=1.0 evidence=1.0
+[A2_distractor_injected seed3] inst=5 distract=0.0 ontopic=1.0 evidence=1.0
+[A2_distractor_injected seed4] inst=5 distract=0.0 ontopic=1.0 evidence=1.0
+[A2_distractor_injected seed5] inst=5 distract=0.0 ontopic=0.938 evidence=1.0
+[baseline A0_pool] popularity_top=['starch', 'phosphate glass (APS proton-substituted / protonated phosphate network)', 'H3PO4 (phosphoric acid)', 'poly(vinyl alcohol) (PVA)', 'chitosan (CS)', 'phosphotungstic acid (PWA)']
+[baseline A2_pool] popularity_top=['LiFePO4', 'silicon anode', 'Ti3C2 MXene', 'CsPbI3 perovskite solar', 'MoS2', 'Pt/C catalyst']

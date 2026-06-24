@@ -256,6 +256,176 @@ def fit_rb_and_conductivity(
 
 
 # ============================================================
+# 公共接口：全方法并行 Rb 提取（M1-1 / G2 方法不变性）
+# ============================================================
+
+def fit_all_rb_methods(
+    frequencies,
+    z_real,
+    z_imag,
+    thickness_cm,
+    area_cm2,
+    temperature_K,
+    fit_params=None,
+    credible_margin=0.25,
+):
+    """对单条谱**并行尝试全部 4 种 Rb 方法**，返回每法估计 + 方法间一致性。
+
+    与 :func:`fit_rb_and_conductivity` 共享同一 ``_preprocess_and_analyze`` 与四个
+    ``_method_*`` 实现，保证 freq/z 符号约定、平滑、频率截止完全一致；区别在于
+    **不做温区路由**——四法各自独立给出结果或显式失败原因。用于证明所谓"亚零度转变"
+    不是 legacy 温区方法切换（深冷→平台法，其余→级联）造成的算法伪影。
+
+    方法权重只由"单谱内部信息"（fit_quality）决定，**不使用跨温平滑性**，避免把真实
+    转变当异常压平（见 configs/rb_method_policy.yaml）。
+
+    Args:
+        frequencies, z_real, z_imag: 单温点 EIS 谱
+        thickness_cm, area_cm2: 几何（用于换算 σ）
+        temperature_K: 温度（仅记录）
+        fit_params: 同 get_default_fit_params()
+
+    Returns:
+        dict:
+            - success: bool（至少一种方法成功）
+            - temperature_K: float
+            - methods: {method_name: {applicable, rb_ohm, log10_rb, fit_quality, failure_reason}}
+            - applicable_methods: list[str]
+            - n_applicable: int
+            - ensemble: {rb_ohm, log10_rb, conductivity_s_per_cm,
+                         method_spread_dex, rb_range_dex, weight_scheme}
+            - legacy: {method, rb_ohm}（legacy 温区路由会选哪个，用于对照）
+            - error: str or None
+    """
+    fail = lambda msg: {  # noqa: E731
+        "success": False, "temperature_K": temperature_K, "methods": {},
+        "applicable_methods": [], "n_applicable": 0,
+        "ensemble": {"rb_ohm": None, "log10_rb": None, "conductivity_s_per_cm": None,
+                     "method_spread_dex": None, "rb_range_dex": None, "weight_scheme": None},
+        "legacy": {"method": None, "rb_ohm": None}, "error": msg,
+    }
+
+    try:
+        freq = np.array(frequencies, dtype=float)
+        zreal = np.array(z_real, dtype=float)
+        zimag = np.array(z_imag, dtype=float)
+    except Exception as e:
+        return fail(f"Input conversion error: {e}")
+
+    if len(freq) != len(zreal) or len(freq) != len(zimag):
+        return fail("Array length mismatch")
+    if len(freq) < 5:
+        return fail(f"Insufficient data points: {len(freq)} < 5")
+    if thickness_cm <= 0 or area_cm2 <= 0:
+        return fail(f"Invalid geometry: thickness={thickness_cm}, area={area_cm2}")
+
+    if fit_params is None:
+        fit_params = get_default_fit_params()
+
+    prep = _preprocess_and_analyze(freq, zreal, zimag, fit_params)
+    if not prep.get("success"):
+        return fail(f"Preprocessing failed: {prep.get('error')}")
+
+    f = prep["freq_filtered"]
+    zr = prep["zreal_filtered"]
+    zi_smooth = prep["zimag_smooth"]
+    zi_raw = prep["zimag_raw"]
+    phase = prep["phase"]
+
+    # 四法各自独立执行（与 _reverse_search_rb 调用签名一致）
+    raw_methods = {
+        "reverse_zero_crossing": _method_reverse_zero_crossing(f, zr, zi_raw, fit_params),
+        "reverse_valley": _method_reverse_valley(f, zr, zi_smooth, fit_params),
+        "low_freq_plateau": _method_low_freq_plateau(f, zr, phase, fit_params),
+        "equivalent_circuit": _method_equivalent_circuit(f, zr, zi_smooth, fit_params),
+    }
+
+    methods = {}
+    applicable = []
+    for name, res in raw_methods.items():
+        ok = bool(res.get("success")) and res.get("rb_ohm") is not None and res.get("rb_ohm", 0) > 0
+        rb = float(res["rb_ohm"]) if ok else None
+        methods[name] = {
+            "applicable": ok,
+            "rb_ohm": rb,
+            "log10_rb": float(np.log10(rb)) if ok else None,
+            "fit_quality": float(res.get("fit_quality") or 0.0),
+            "failure_reason": None if ok else (res.get("error") or "not applicable"),
+            "credible": False,  # 下面按 fit_quality 标注
+        }
+        if ok:
+            applicable.append(name)
+
+    # 可信集：fit_quality 在最优值 credible_margin 内的方法（排除明显不适用于该谱的方法，
+    # 例如对一条干净 Nyquist 半圆强行套 low_freq_plateau / equivalent_circuit 会给出离谱 Rb）。
+    # 方法间一致性只在可信集内度量 —— 这才是"对该谱拟合相当好的方法之间是否分歧"。
+    credible = []
+    if applicable:
+        best_q = max(methods[m]["fit_quality"] for m in applicable)
+        credible = [m for m in applicable if methods[m]["fit_quality"] >= best_q - credible_margin]
+        for m in credible:
+            methods[m]["credible"] = True
+
+    # 集成：对数域加权中位数（权重 = fit_quality），在可信集内算
+    ensemble = {"rb_ohm": None, "log10_rb": None, "conductivity_s_per_cm": None,
+                "method_spread_dex": None, "method_spread_all_dex": None,
+                "rb_range_dex": None, "n_credible": len(credible),
+                "weight_scheme": "fit_quality_within_credible_margin"}
+    if applicable:
+        logs_all = np.array([methods[m]["log10_rb"] for m in applicable], dtype=float)
+        ensemble["method_spread_all_dex"] = (
+            float(np.std(logs_all)) if len(logs_all) > 1 else 0.0)
+        logs = np.array([methods[m]["log10_rb"] for m in credible], dtype=float)
+        wts = np.array([max(methods[m]["fit_quality"], 1e-6) for m in credible], dtype=float)
+        log_rb_ens = _weighted_median(logs, wts)
+        rb_ens = float(10.0 ** log_rb_ens)
+        ensemble["rb_ohm"] = rb_ens
+        ensemble["log10_rb"] = float(log_rb_ens)
+        ensemble["conductivity_s_per_cm"] = float(thickness_cm / (rb_ens * area_cm2))
+        ensemble["rb_range_dex"] = float(logs.max() - logs.min()) if len(logs) > 1 else 0.0
+        if len(logs) > 1:
+            wmean = float(np.average(logs, weights=wts))
+            wvar = float(np.average((logs - wmean) ** 2, weights=wts))
+            ensemble["method_spread_dex"] = float(np.sqrt(max(wvar, 0.0)))
+        else:
+            ensemble["method_spread_dex"] = 0.0
+
+    # legacy 温区路由会选哪个（对照）：直接复用 _reverse_search_rb
+    legacy = {"method": None, "rb_ohm": None}
+    try:
+        leg = _reverse_search_rb(f, zr, zi_smooth, zi_raw, phase, prep["z_magnitude"], fit_params)
+        if leg.get("success"):
+            legacy = {"method": leg.get("method"), "rb_ohm": float(leg["rb_ohm"])}
+    except Exception:
+        pass
+
+    return {
+        "success": len(applicable) > 0,
+        "temperature_K": float(temperature_K) if temperature_K is not None else None,
+        "methods": methods,
+        "applicable_methods": applicable,
+        "n_applicable": len(applicable),
+        "ensemble": ensemble,
+        "legacy": legacy,
+        "error": None if applicable else "no method applicable",
+    }
+
+
+def _weighted_median(values, weights):
+    """对数域加权中位数（纯函数）。values/weights 为等长一维数组。"""
+    values = np.asarray(values, dtype=float)
+    weights = np.asarray(weights, dtype=float)
+    order = np.argsort(values)
+    v = values[order]
+    w = weights[order]
+    cum = np.cumsum(w)
+    cutoff = 0.5 * cum[-1]
+    idx = int(np.searchsorted(cum, cutoff))
+    idx = min(idx, len(v) - 1)
+    return float(v[idx])
+
+
+# ============================================================
 # 内部函数：步骤 1 - 全局平滑与基础判定
 # ============================================================
 

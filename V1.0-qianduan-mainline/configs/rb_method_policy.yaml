@@ -1,0 +1,40 @@
+# Rb 提取方法策略（冻结配置）— M1-1 / G2
+# ---------------------------------------------------------------------------
+# 单一真相源：四方法的拟合参数 + v2 "全方法并行"时各方法的可用性判据。
+# 数值与 rb_fitting.py :: get_default_fit_params() 对齐（如有偏离以本表为准并记 delta）。
+rb_method_policy_version: "rb-method-v2.0.0"
+created: "2026-06-22"
+frozen: true
+
+# 与 rb_fitting.get_default_fit_params() 一致（冻结复刻，便于 v2 复算可追溯）
+fit_params:
+  smooth_window: 9
+  smooth_poly: 3
+  phase_threshold_deep_cold: -50.0
+  phase_threshold_stable: 10.0
+  valley_prominence: 0.15
+  zero_crossing_tol: 0.5
+  low_freq_plateau_points: 5
+  high_freq_cutoff_khz: 500.0
+
+# v2 全方法并行：每种方法"是否适用于该谱"的内部判据（不看跨温平滑性）
+applicability:
+  reverse_zero_crossing:
+    requires_sign_change: true        # 需 Z'' 由负转正
+  reverse_valley:
+    min_points: 5
+  low_freq_plateau:
+    max_low_freq_phase_deg: 20.0      # 低频相位均值 < 20° 才算平台
+  equivalent_circuit:
+    min_r_squared: 0.0                # 兜底，R²>0 即给出（质量上限 0.7）
+
+# 方法间一致性 → routing_artifact_risk 分级（与 stage0_v2_policy 对齐）
+method_spread_warn_dex: 0.15
+method_spread_high_dex: 0.30
+
+# 固定策略轨迹（每样品至少产出这几条，用于证明转变方法不变）
+fixed_trajectories:
+  - legacy_routed         # 复刻 legacy 温区路由（对照基线）
+  - fixed_plateau         # 全温区强制 low_freq_plateau
+  - fixed_zero_crossing   # 全温区强制 reverse_zero_crossing（适用时）
+  - method_ensemble       # 对数域加权中位数 + 方法间方差

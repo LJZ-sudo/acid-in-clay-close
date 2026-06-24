@@ -335,7 +335,20 @@ class OptimizationOrchestrator:
         
         objective_name = self.campaign_config.get_objective_target()
         goal = self.campaign_config.get_objective_goal()
-        
+
+        # 〔G7 口径漂移守卫〕campaign 目标必须与目标注册表 training 角色一致,
+        # 否则立即报错(杜绝"优化一个目标键、用另一个宣布成功")。注册表缺失时降级为告警,
+        # 不阻断离线/回放。
+        try:
+            from objectives.registry import assert_campaign_matches_role
+            obj_stamp = assert_campaign_matches_role(objective_name, goal, role="training")
+            logger.info(f"✅ 目标口径一致(G7): {obj_stamp['objective_definition_id']} "
+                        f"sha={obj_stamp['objective_definition_sha256'][:12]}…")
+        except ValueError:
+            raise
+        except Exception as _e:
+            logger.warning(f"⚠️ 目标注册表未校验(降级,不阻断): {_e}")
+
         best_trial = self.memory_manager.get_best_trial(objective_name, goal)
         
         if best_trial:

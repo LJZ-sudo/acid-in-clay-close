@@ -1,0 +1,164 @@
+{
+  "provenance": {
+    "analysis_version": "stage0-eis-v2.0.0",
+    "admission_policy_version": "evidence-policy-v2.0.0",
+    "objective_registry_version": "objective-registry-v2.0.0",
+    "rb_method_policy_version": "rb-method-v2.0.0",
+    "config_sha256": {
+      "stage0_v2_policy": "da45db8ed5327d9d45407e314014ed811eca46f00baf8165bf601348454be1af",
+      "rb_method_policy": "43949a81157d42afe6e16713ece534dcd99c3cafd03712e05cbb6b640ede117a",
+      "evidence_admission_v2": "4931d6e794f1056445f8621de5c39702466c82d3c39f9f050e00b9e397a45960",
+      "objective_registry": "5fe3cd0476730dcb1a31776be30cf83cbfb0de252d327aa871b32b129345fa0c"
+    },
+    "git_commit": "fb17c68",
+    "generated_at": "2026-06-22T14:07:31.652872+08:00",
+    "kind": "lineA"
+  },
+  "n_datasets": 16,
+  "datasets": [
+    {
+      "dataset": "lineA_CHITO_0430CS",
+      "n_points": 29,
+      "n_anomalies": 4,
+      "n_segments_all": 3,
+      "loo_preserve_frac": 1.0,
+      "loo_transition_frac": 1.0,
+      "ea_robust_vs_ols_delta": 0.21608710397953718
+    },
+    {
+      "dataset": "lineA_CHITO_0501CS",
+      "n_points": 28,
+      "n_anomalies": 2,
+      "n_segments_all": 3,
+      "loo_preserve_frac": 1.0,
+      "loo_transition_frac": 1.0,
+      "ea_robust_vs_ols_delta": 0.005958723786350761
+    },
+    {
+      "dataset": "lineA_LRS_0429CS",
+      "n_points": 34,
+      "n_anomalies": 2,
+      "n_segments_all": 3,
+      "loo_preserve_frac": 1.0,
+      "loo_transition_frac": 1.0,
+      "ea_robust_vs_ols_delta": 0.008616455444306274
+    },
+    {
+      "dataset": "lineA_LRS_0509CS",
+      "n_points": 35,
+      "n_anomalies": 2,
+      "n_segments_all": 3,
+      "loo_preserve_frac": 1.0,
+      "loo_transition_frac": 1.0,
+      "ea_robust_vs_ols_delta": 0.06173519935158341
+    },
+    {
+      "dataset": "lineA_LRS_0615_s2",
+      "n_points": 37,
+      "n_anomalies": 4,
+      "n_segments_all": 3,
+      "loo_preserve_frac": 1.0,
+      "loo_transition_frac": 1.0,
+      "ea_robust_vs_ols_delta": 0.02049903041497747
+    },
+    {
+      "dataset": "lineA_LRS_0616_s3",
+      "n_points": 46,
+      "n_anomalies": 11,
+      "n_segments_all": 3,
+      "loo_preserve_frac": 1.0,
+      "loo_transition_frac": 1.0,
+      "ea_robust_vs_ols_delta": 0.0016402695897106134
+    },
+    {
+      "dataset": "lineA_LRS_0617_s3b",
+      "n_points": 40,
+      "n_anomalies": 4,
+      "n_segments_all": 3,
+      "loo_preserve_frac": 1.0,
+      "loo_transition_frac": 1.0,
+      "ea_robust_vs_ols_delta": 0.016738300145914098
+    },
+    {
+      "dataset": "lineA_LRS_6.12",
+      "n_points": 37,
+      "n_anomalies": 6,
+      "n_segments_all": 3,
+      "loo_preserve_frac": 1.0,
+      "loo_transition_frac": 1.0,
+      "ea_robust_vs_ols_delta": 0.08038017565898095
+    },
+    {
+      "dataset": "lineA_LRS_6.15_merged",
+      "n_points": 59,
+      "n_anomalies": 15,
+      "n_segments_all": 3,
+      "loo_preserve_frac": 1.0,
+      "loo_transition_frac": 1.0,
+      "ea_robust_vs_ols_delta": 0.012652138878570918
+    },
+    {
+      "dataset": "lineA_LRS_6.15_s1",
+      "n_points": 18,
+      "n_anomalies": 2,
+      "n_segments_all": 3,
+      "loo_preserve_frac": 0.9444444444444444,
+      "loo_transition_frac": 0.9444444444444444,
+      "ea_robust_vs_ols_delta": 0.004723847015532967
+    },
+    {
+      "dataset": "lineA_LRS_6.15_s2",
+      "n_points": 26,
+      "n_anomalies": 8,
+      "n_segments_all": 1,
+      "loo_preserve_frac": 0.9230769230769231,
+      "loo_transition_frac": 0.07692307692307693,
+      "ea_robust_vs_ols_delta": 0.01279278501324125
+    },
+    {
+      "dataset": "lineA_LRS_6.15_s3",
+      "n_points": 15,
+      "n_anomalies": 5,
+      "n_segments_all": 1,
+      "loo_preserve_frac": 1.0,
+      "loo_transition_frac": 0.0,
+      "ea_robust_vs_ols_delta": 0.004248643653032791
+    },
+    {
+      "dataset": "lineA_starch_0427CS",
+      "n_points": 55,
+      "n_anomalies": 13,
+      "n_segments_all": 3,
+      "loo_preserve_frac": 1.0,
+      "loo_transition_frac": 1.0,
+      "ea_robust_vs_ols_delta": 0.0016113722512829942
+    },
+    {
+      "dataset": "lineA_starch_0428CS",
+      "n_points": 37,
+      "n_anomalies": 2,
+      "n_segments_all": 3,
+      "loo_preserve_frac": 1.0,
+      "loo_transition_frac": 1.0,
+      "ea_robust_vs_ols_delta": 0.011770269802574007
+    },
+    {
+      "dataset": "lineA_starch_6.11",
+      "n_points": 38,
+      "n_anomalies": 1,
+      "n_segments_all": 3,
+      "loo_preserve_frac": 1.0,
+      "loo_transition_frac": 1.0,
+      "ea_robust_vs_ols_delta": 0.0011153103264252007
+    },
+    {
+      "dataset": "lineA_starch_6.13",
+      "n_points": 34,
+      "n_anomalies": 0,
+      "n_segments_all": 3,
+      "loo_preserve_frac": 1.0,
+      "loo_transition_frac": 1.0,
+      "ea_robust_vs_ols_delta": 0.002511497586831113
+    }
+  ]
+}

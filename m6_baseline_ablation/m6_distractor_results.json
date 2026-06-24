@@ -1,0 +1,204 @@
+{
+  "experiment": "M6_distractor_augmented_pool",
+  "scorer_agent": "REAL audit_candidates() (deterministic_from_candidate_audit)",
+  "citation_source": "REAL OpenAlex cited_by_count (already in S08 pool)",
+  "read_only_source": "V1.0-qianduan-mainline\\stage3_mechanism\\outputs\\verification\\20260607_openrouter_publication_v2",
+  "pool_size_N": 752,
+  "n_near_family": 477,
+  "n_distractor": 270,
+  "n_real_anchors": 5,
+  "winner": "I1",
+  "selectors": {
+    "popularity_citation_REAL": {
+      "winner_rank": 295,
+      "winner_top10": false,
+      "distractor_share_top10": 1.0,
+      "distractor_share_top20": 1.0,
+      "top10": [
+        [
+          "SYN498",
+          "distractor",
+          "hierarchically porous material + choline c"
+        ],
+        [
+          "SYN487",
+          "distractor",
+          "hierarchically porous material + phosphori"
+        ],
+        [
+          "SYN493",
+          "distractor",
+          "hierarchically porous material + phosphori"
+        ],
+        [
+          "SYN480",
+          "distractor",
+          "hierarchically porous material + attapulgi"
+        ],
+        [
+          "SYN499",
+          "distractor",
+          "hierarchically porous material + choline c"
+        ],
+        [
+          "SYN495",
+          "distractor",
+          "hierarchically porous material + choline c"
+        ],
+        [
+          "SYN489",
+          "distractor",
+          "hierarchically porous material + phosphori"
+        ],
+        [
+          "SYN494",
+          "distractor",
+          "hierarchically porous material + phosphori"
+        ],
+        [
+          "SYN492",
+          "distractor",
+          "hierarchically porous material + phosphori"
+        ],
+        [
+          "SYN481",
+          "distractor",
+          "hierarchically porous material + attapulgi"
+        ]
+      ]
+    },
+    "popularity_freq": {
+      "winner_rank": 1,
+      "winner_top10": true,
+      "distractor_share_top10": 0.0,
+      "top10": [
+        [
+          "I1",
+          "real",
+          "Starch/PVA/organic-modified attapulgite/ph"
+        ],
+        [
+          "SYN006",
+          "near_family",
+          "starch + phosphoric acid (PA) + attapulgit"
+        ],
+        [
+          "SYN007",
+          "near_family",
+          "starch + phosphoric acid (PA) + attapulgit"
+        ],
+        [
+          "I5",
+          "real",
+          "PVA/chitosan/Nb2O5/H3PO4 defect-assisted c"
+        ],
+        [
+          "SYN005",
+          "near_family",
+          "starch + phosphoric acid (PA) + attapulgit"
+        ],
+        [
+          "SYN163",
+          "near_family",
+          "chitosan (CS) + phosphoric acid (PA) + att"
+        ],
+        [
+          "SYN165",
+          "near_family",
+          "chitosan (CS) + phosphoric acid (PA) + att"
+        ],
+        [
+          "SYN164",
+          "near_family",
+          "chitosan (CS) + phosphoric acid (PA) + att"
+        ],
+        [
+          "SYN004",
+          "near_family",
+          "starch + phosphoric acid (PA) + attapulgit"
+        ],
+        [
+          "SYN014",
+          "near_family",
+          "starch + phosphoric acid (PA) + protonated"
+        ]
+      ]
+    },
+    "real_agent": {
+      "winner_rank": 1,
+      "winner_top1": true,
+      "winner_top10": true,
+      "distractor_share_top10": 0.0,
+      "distractor_share_top20": 0.0,
+      "top10": [
+        [
+          "I1",
+          "real",
+          "Starch/PVA/organic-modified attapulgite/ph",
+          0.8833
+        ],
+        [
+          "SYN461",
+          "near_family",
+          "polyacrylamide-graft-starch (PAAm-g-starch",
+          0.8825
+        ],
+        [
+          "SYN462",
+          "near_family",
+          "polyacrylamide-graft-starch (PAAm-g-starch",
+          0.8825
+        ],
+        [
+          "SYN463",
+          "near_family",
+          "polyacrylamide-graft-starch (PAAm-g-starch",
+          0.8825
+        ],
+        [
+          "SYN464",
+          "near_family",
+          "polyacrylamide-graft-starch (PAAm-g-starch",
+          0.8825
+        ],
+        [
+          "SYN465",
+          "near_family",
+          "polyacrylamide-graft-starch (PAAm-g-starch",
+          0.8825
+        ],
+        [
+          "SYN466",
+          "near_family",
+          "polyacrylamide-graft-starch (PAAm-g-starch",
+          0.8825
+        ],
+        [
+          "SYN467",
+          "near_family",
+          "polyacrylamide-graft-starch (PAAm-g-starch",
+          0.8825
+        ],
+        [
+          "SYN468",
+          "near_family",
+          "polyacrylamide-graft-starch (PAAm-g-starch",
+          0.8825
+        ],
+        [
+          "SYN469",
+          "near_family",
+          "polyacrylamide-graft-starch (PAAm-g-starch",
+          0.8825
+        ]
+      ]
+    }
+  },
+  "honest_findings": [
+    "Pool widened to N=752 (477 near-family + 270 off-topic distractors + 5 real anchors).",
+    "REAL-citation popularity: winner I1 falls to rank 295; 100% of its top-10 are off-topic distractors -> the 'pick what's hot' rule is dragged off-topic by high-citation noise.",
+    "REAL agent (mechanism/evidence/low-T scorer): winner I1 rank 1, distractors in top-10 = 0% -> immune to citation hype because off-topic materials carry no descriptor/low-T evidence.",
+    "Net: when the pool is realistically wide+noisy, popularity FAILS while the agent HOLDS the validated winner. THIS gap (not raw top-1 retrieval) is the defensible evidence of agent value.",
+    "Caveat: distractor candidates were given empty proton-conductor evidence by construction (faithful to the claim pool, which has no descriptor claims for these off-topic materials). A full proof still needs the real S09 LLM to generate candidates over the widened pool."
+  ]
+}

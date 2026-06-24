@@ -1,0 +1,74 @@
+{
+  "policy": "REAL 10-point Line-B pool; random vs plain BO (GP Matern-2.5 + UCB); closed loop = BO + recorded LLM safety screening. No new experiments.",
+  "PART_A_pool_backtest": {
+    "n_points": 10,
+    "best_trial_index0": 0,
+    "best_combined_score": -1.9407287999780058,
+    "experiments_to_find_best": {
+      "BO_mean": 4.06375,
+      "BO_median": 4.0,
+      "random_mean": 5.49125,
+      "random_median": 5.0
+    },
+    "regret_area_lower_better": {
+      "BO": 1.2804474511103257,
+      "random": 1.5702182993581817,
+      "BO_better_by": 0.28977084824785604
+    },
+    "best_found_at_n": {
+      "1": {
+        "BO": -2.4905712518722267,
+        "random": -2.494588546124434
+      },
+      "2": {
+        "BO": -2.246592660812168,
+        "random": -2.2489990412943173
+      },
+      "3": {
+        "BO": -2.172857863281649,
+        "random": -2.1541469518339027
+      },
+      "5": {
+        "BO": -2.0097871677512633,
+        "random": -2.0576654269992325
+      }
+    }
+  },
+  "PART_B_closed_loop_vs_plainBO": {
+    "plain_BO_unconstrained_UCB_optimum": {
+      "R": 0.02,
+      "N": 1.2
+    },
+    "plain_BO_unconstrained_mean_optimum": {
+      "R": 0.05189873417721519,
+      "N": 1.2
+    },
+    "on_low_R_edge": true,
+    "recorded_raw_MOBO": [
+      {
+        "round": 1,
+        "R": 0.0285,
+        "N": 0.9841
+      },
+      {
+        "round": 2,
+        "R": 0.245,
+        "N": 0.923
+      }
+    ],
+    "recorded_LLM_screened": [
+      {
+        "round": 1,
+        "R": 0.28,
+        "N": 0.96
+      },
+      {
+        "round": 2,
+        "R": 0.42,
+        "N": 1.02
+      }
+    ],
+    "interpretation": "Plain BO drives the proposal toward the low-R edge of the box, matching the recorded raw-MOBO proposal (R~0.03); the language-model screening pulls it back to a synthesisable R (0.28-0.42, the regime where the measured campaign best at R=0.186 actually exists). The closed-loop value is feasibility/safety, not a better objective."
+  },
+  "verdict": "On the 10-point pool, plain BO reaches the campaign optimum in 4.1 experiments on average vs 5.5 for random (regret-area 1.28 vs 1.57). Surrogate guidance helps locate the optimum faster than random because the objective varies monotonically with R; but the leading candidates still lie within the reproducibility floor (Fig. 3), so 'found fastest' does NOT mean 'reliably better'. The language-model arm contributes feasibility/safety (Part B), not an objective gain. Net: consistent with the honest-null narrative, now with an explicit random/BO/closed-loop contrast."
+}

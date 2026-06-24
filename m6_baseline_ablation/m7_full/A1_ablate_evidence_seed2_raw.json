@@ -1,0 +1,575 @@
+{
+  "families": [
+    {
+      "family_id": "F1",
+      "family_name": "OH-rich biopolymer matrix + water-processable film-forming co-binder + 1-D clay nanochannel + complexed phosphoric acid",
+      "family_description": "This quaternary archetype targets the cold-side regime by combining a hydroxyl-rich biopolymer host, a flexible water-processable co-binder, and a 1-D fibrous or tubular inorganic phase that can retain bound water and acid within nanometric channels. A plasticised or partially complexed phosphoric-acid phase is used to suppress bulk crystallisation while preserving a dense hydrogen-bond network for proton transfer.",
+      "descriptor_match": [
+        "D1: Multiphasic but percolated hydrogen-bond network can remain continuous if acid is complexed/plasticised and retained at polymer-clay interfaces rather than forming bulk crystallites.",
+        "D2: OH-rich biopolymers, PVA-like binders, and 1-D clays all support bound-water continuity and can host anti-freeze co-solvents down to sub-zero temperatures.",
+        "D3: Film-forming co-binders and plasticisers reduce brittle glass formation of the biopolymer-rich matrix below 253 K.",
+        "D4: Phosphoric acid is used in buffered/complexed/plasticised form rather than as a neat phase, improving cold stability.",
+        "D5: 1-D fibrous/tubular clays provide nanoconfined, potentially interconnected acid-water domains.",
+        "D6: Biopolymer OH groups, co-binder OH/amide groups, clay silanols/aluminols, and phosphate species create dense proton relay sites.",
+        "D7: Polymer-clay interfacial adsorption can retain acid/water while remaining less trapping than fully covalent acid fixation."
+      ],
+      "literature_support_card_ids": [
+        "manual_1157b11126",
+        "manual_26f0dcfc01",
+        "manual_6138017199",
+        "manual_8d58a81c9e"
+      ]
+    },
+    {
+      "family_id": "F2",
+      "family_name": "Water-soluble synthetic polymer + 1-D clay confinement host + phosphate-containing anti-freeze conducting phase",
+      "family_description": "This family removes the biomass host and relies on a water-processable synthetic matrix to ensure film integrity while a 1-D clay supplies nanoconfinement and acid retention. The proton-conducting phase is deliberately anti-freeze-modified, for example by glycerol, ethylene glycol, or choline-containing eutectic partners, to preserve mobility below 253 K.",
+      "descriptor_match": [
+        "D1: A synthetic polymer/clay composite can maintain continuity if the acid-rich phase is distributed as an interfacial nanoconfined network.",
+        "D2: Anti-freeze co-solvents directly address low-temperature polar-fluid continuity.",
+        "D3: Low-Tg or strongly plasticised water-soluble polymers are better positioned than rigid engineering polymers for sub-zero flexibility.",
+        "D4: Phosphate species are intentionally complexed with co-solvents rather than present as neat H3PO4.",
+        "D5: 1-D clay contributes confined percolating transport domains.",
+        "D6: Polymer functional groups plus phosphate and retained water provide mixed vehicular/Grotthuss transport pathways.",
+        "D7: Clay-polymer interfacial adsorption should suppress leakage relative to unsupported acid-water mixtures."
+      ],
+      "literature_support_card_ids": [
+        "manual_3d7d6d5d7b",
+        "manual_42051140ac",
+        "manual_f5f9ab95ca"
+      ]
+    },
+    {
+      "family_id": "F3",
+      "family_name": "OH-rich biopolymer or cellulose-derivative host + layered nanofiller + plasticised phosphate network",
+      "family_description": "This archetype uses a softer polymer-rich conduction matrix with 2-D layered fillers to modulate water retention, reduce crystallinity, and increase acid hold-up. It is less geometrically channelised than the 1-D-clay family, but still offers nanoconfined interfacial domains and can be attractive as a fabrication-friendly cold-side membrane route.",
+      "descriptor_match": [
+        "D1: Polymer-rich continuous phases can remain percolated if acid-plasticiser domains are interfacially dispersed and freezing is suppressed.",
+        "D2: Cellulose derivatives and glycerol-rich phosphate phases can sustain bound polar fluid at low temperature.",
+        "D3: Plasticised polysaccharide/cellulose-derivative matrices can remain less brittle than unmodified starch-like hosts.",
+        "D4: Buffered or plasticised phosphate species are more suitable than neat acid for 182–299 K operation.",
+        "D5: Layered fillers provide interfacial nanoconfinement, though generally less 1-D directional than fibrous clays.",
+        "D6: Dense OH-rich environments plus phosphate/water networks support contiguous proton hopping sites.",
+        "D7: Filler surfaces and polymer polarity can improve acid retention while limiting gross leaching."
+      ],
+      "literature_support_card_ids": [
+        "manual_529c072730",
+        "manual_a16330d0f5",
+        "manual_c8dafb5973"
+      ]
+    },
+    {
+      "family_id": "F4",
+      "family_name": "High-acid aromatic polymer complex as high-temperature control baseline",
+      "family_description": "This family is included only as a control baseline because aromatic basic polymers complexed with phosphoric acid are well-known proton conductors but are usually optimized for much higher temperatures than the present cold-side window. It helps benchmark how much the cold-focused hybrid formulations gain from bound-water continuity and anti-freeze nanoconfinement.",
+      "descriptor_match": [
+        "D1: Acid-base complexation can create a continuous proton pathway, but cold-side continuity is less reliable than in hydrated/plasticised hosts.",
+        "D2: Bound-water continuity is not the natural strength of this family and often requires deliberate humidification or plasticisation.",
+        "D3: Rigid aromatic backbones are disadvantaged for sub-zero flexibility.",
+        "D4: Acid is complexed rather than fully free, which helps retention but does not by itself guarantee non-crystallising low-temperature speciation.",
+        "D5: Nanoconfinement is weak unless a secondary filler is introduced.",
+        "D6: Basic sites and phosphate groups provide dense proton transfer sites.",
+        "D7: Acid retention is generally strong due to acid-base interactions, but over-binding/proton trapping is a risk."
+      ],
+      "literature_support_card_ids": [
+        "openalex_w1608495915",
+        "W2566581454"
+      ]
+    }
+  ],
+  "instances": [
+    {
+      "instance_id": "I1",
+      "family_id": "F1",
+      "instance_name": "Chitosan / PVA / attapulgite / phosphoric acid / glycerol membrane",
+      "composition_description": "Approximate casting formulation: chitosan as OH/NH-rich biopolymer matrix, poly(vinyl alcohol) as film-forming co-binder, attapulgite as 1-D fibrous clay channel phase, phosphoric acid as proton donor, and glycerol as anti-freeze plasticiser. A practical starting window is polymer solids with chitosan:PVA around 60:40, attapulgite 5–20 wt% of total solids, H3PO4 at 0.5–1.5 mol per repeat-unit basic site equivalent, and glycerol 10–30 wt% of total nonvolatile content.",
+      "components": [
+        "chitosan",
+        "poly(vinyl alcohol)",
+        "attapulgite",
+        "phosphoric acid",
+        "glycerol"
+      ],
+      "expected_properties": [
+        "conductivity_range: potentially 10^-5 to 10^-2 S cm^-1 across 182–299 K depending on acid loading and retained bound water",
+        "acid_retention: moderate to high via chitosan/PVA hydrogen bonding plus attapulgite adsorption",
+        "operating_temp: targeted for cold-to-room window with anti-freeze mitigation",
+        "mechanical_state: flexible film expected if glycerol and PVA sufficiently depress brittleness"
+      ],
+      "risk_flags": [
+        "free phosphoric acid requires anti-crystallisation mitigation below room temperature",
+        "excess acid may over-soften the film or cause leaching",
+        "attapulgite aggregation could reduce pathway continuity if not well dispersed"
+      ],
+      "combination_novelty": "novel_combination",
+      "element_evidence": [
+        {
+          "component": "chitosan",
+          "role_in_formulation": "OH/NH-rich biopolymer matrix that complexes acid, retains bound water, and supplies proton relay sites.",
+          "descriptor_satisfied": [
+            "D2",
+            "D3",
+            "D6",
+            "D7"
+          ],
+          "analog_paper_ids": [
+            "manual_1157b11126"
+          ],
+          "analog_reason": "Chitosan is a common proton-conducting biopolymer host in the S08-type literature pool and is a direct analog for acid-complexing, hydrogen-bond-rich matrices."
+        },
+        {
+          "component": "poly(vinyl alcohol)",
+          "role_in_formulation": "Water-processable film-forming co-binder that improves film integrity, compatibility, and low-temperature flexibility while contributing OH groups.",
+          "descriptor_satisfied": [
+            "D2",
+            "D3",
+            "D6",
+            "D7"
+          ],
+          "analog_paper_ids": [
+            "manual_26f0dcfc01"
+          ],
+          "analog_reason": "PVA is a standard hydrophilic film-former and proton-membrane co-binder analog in the S08 pool."
+        },
+        {
+          "component": "attapulgite",
+          "role_in_formulation": "1-D fibrous clay providing nanoconfined interfacial channels for acid-water retention and percolation.",
+          "descriptor_satisfied": [
+            "D1",
+            "D2",
+            "D5",
+            "D7"
+          ],
+          "analog_paper_ids": [
+            "manual_6138017199"
+          ],
+          "analog_reason": "Attapulgite/palygorskite is a direct 1-D clay analog for nanoconfinement and water-retaining fibrous pathways."
+        },
+        {
+          "component": "phosphoric acid",
+          "role_in_formulation": "Primary proton donor forming a hydrogen-bonded phosphate network with the polymer and retained water/plasticiser.",
+          "descriptor_satisfied": [
+            "D4",
+            "D6"
+          ],
+          "analog_paper_ids": [
+            "manual_8d58a81c9e"
+          ],
+          "analog_reason": "Phosphoric acid is the canonical proton donor in acid-doped membrane literature within the S08 pool."
+        },
+        {
+          "component": "glycerol",
+          "role_in_formulation": "Anti-freeze plasticiser used to suppress rigidification/crystallisation of the acid-water phase and maintain sub-zero mobility.",
+          "descriptor_satisfied": [
+            "D1",
+            "D2",
+            "D3",
+            "D4"
+          ],
+          "analog_paper_ids": [
+            "manual_f5f9ab95ca"
+          ],
+          "analog_reason": "Glycerol is a standard low-temperature plasticiser/anti-freeze additive analog for hydrophilic proton-conducting membranes."
+        }
+      ],
+      "novelty_rationale": "Relative to the closest single-paper archetypes represented by chitosan-acid membranes, PVA-based proton films, or attapulgite composite membranes in separate S08 cards, this route is new in explicitly combining all four required roles plus a cold-side anti-freeze plasticiser in one membrane. The mechanistic value is that chitosan supplies acid-complexing sites, PVA suppresses brittle failure and improves film formation, attapulgite contributes 1-D nanoconfinement, and glycerol specifically addresses the 182–253 K continuity problem. Each component has its own element-level analog in the S08 pool, but the assembled cold-focused quaternary-plus-plasticiser formulation is proposed here as a new combination rather than a copy."
+    },
+    {
+      "instance_id": "I2",
+      "family_id": "F1",
+      "instance_name": "Corn starch / PVA / halloysite nanotube / phosphoric acid / ethylene glycol membrane",
+      "composition_description": "Approximate formulation: gelatinised corn starch as OH-rich biopolymer host, PVA as co-binder, halloysite nanotubes as 1-D tubular confinement phase, phosphoric acid as proton source, and ethylene glycol as anti-freeze co-solvent/plasticiser. A starting formulation can use starch:PVA around 50:50 to 70:30, halloysite 5–15 wt% of solids, moderate phosphoric acid loading, and ethylene glycol 10–25 wt% of total membrane content.",
+      "components": [
+        "corn starch",
+        "poly(vinyl alcohol)",
+        "halloysite nanotubes",
+        "phosphoric acid",
+        "ethylene glycol"
+      ],
+      "expected_properties": [
+        "conductivity_range: potentially 10^-6 to 10^-3 S cm^-1 over the cold-to-room range with strong dependence on water and acid speciation",
+        "acid_retention: moderate via starch/PVA hydrogen bonding and halloysite lumen/surface adsorption",
+        "operating_temp: intended for 182–299 K with ethylene-glycol-assisted freeze suppression",
+        "mechanical_state: more flexible than neat starch films due to PVA and ethylene glycol"
+      ],
+      "risk_flags": [
+        "starch retrogradation may reduce long-term pathway continuity",
+        "halloysite lumen filling may be incomplete without good dispersion",
+        "acid-rich starch systems can embrittle if plasticiser content is too low"
+      ],
+      "combination_novelty": "novel_combination",
+      "element_evidence": [
+        {
+          "component": "corn starch",
+          "role_in_formulation": "OH-rich biopolymer host providing bound-water sites and a dense hydrogen-bond network.",
+          "descriptor_satisfied": [
+            "D2",
+            "D6",
+            "D7"
+          ],
+          "analog_paper_ids": [
+            "manual_529c072730"
+          ],
+          "analog_reason": "Starch-type biopolymers are represented in the S08 pool as hydrophilic proton-conducting matrix analogs."
+        },
+        {
+          "component": "poly(vinyl alcohol)",
+          "role_in_formulation": "Film-forming co-binder that reduces brittleness and improves membrane continuity.",
+          "descriptor_satisfied": [
+            "D2",
+            "D3",
+            "D6"
+          ],
+          "analog_paper_ids": [
+            "manual_26f0dcfc01"
+          ],
+          "analog_reason": "PVA is a standard water-processable co-binder analog for hydrophilic proton membranes."
+        },
+        {
+          "component": "halloysite nanotubes",
+          "role_in_formulation": "1-D tubular clay providing nanoconfined acid-water domains and improved retention.",
+          "descriptor_satisfied": [
+            "D1",
+            "D2",
+            "D5",
+            "D7"
+          ],
+          "analog_paper_ids": [
+            "manual_c8dafb5973"
+          ],
+          "analog_reason": "Halloysite nanotubes are a direct tubular clay analog for confined transport domains in polymer composites."
+        },
+        {
+          "component": "phosphoric acid",
+          "role_in_formulation": "Proton donor that forms mobile phosphate-rich hydrogen-bond networks when diluted and complexed.",
+          "descriptor_satisfied": [
+            "D4",
+            "D6"
+          ],
+          "analog_paper_ids": [
+            "manual_8d58a81c9e"
+          ],
+          "analog_reason": "Phosphoric acid is the established proton donor analog across acid-doped membrane literature."
+        },
+        {
+          "component": "ethylene glycol",
+          "role_in_formulation": "Anti-freeze co-solvent that suppresses freezing and preserves low-temperature plasticity of the conducting phase.",
+          "descriptor_satisfied": [
+            "D1",
+            "D2",
+            "D3",
+            "D4"
+          ],
+          "analog_paper_ids": [
+            "manual_42051140ac"
+          ],
+          "analog_reason": "Ethylene glycol is a standard low-temperature cryoprotective/plasticising analog for hydrogen-bonded fluid phases."
+        }
+      ],
+      "novelty_rationale": "Relative to closest single-paper starch membranes, PVA-clay films, or halloysite-filled proton membranes in the S08 pool, this route differs by integrating a plant-derived OH-rich host with a tubular 1-D clay and an explicit anti-freeze phosphoric-acid phase. The mechanistic value is that halloysite offers lumen/surface confinement distinct from fibrous clays, which could change acid retention and sub-zero mobility relative to attapulgite-based systems. Each component has an element-level analog, but the full cold-side starch/PVA/HNT/phosphoric-acid/ethylene-glycol combination is proposed as a new formulation."
+    },
+    {
+      "instance_id": "I3",
+      "family_id": "F2",
+      "instance_name": "PVA / sepiolite / phosphoric acid / choline chloride-glycerol deep-eutectic-like conducting phase",
+      "composition_description": "Approximate formulation: PVA as the main film-forming matrix, sepiolite as a 1-D fibrous nanochannel host, phosphoric acid as proton source, and a choline chloride:glycerol co-solvent phase used in small proportion to complex the acid and depress freezing. A practical starting point is PVA with 5–20 wt% sepiolite, phosphoric acid below the point of gross exudation, and a choline chloride:glycerol ratio near common eutectic compositions.",
+      "components": [
+        "poly(vinyl alcohol)",
+        "sepiolite",
+        "phosphoric acid",
+        "choline chloride",
+        "glycerol"
+      ],
+      "expected_properties": [
+        "conductivity_range: potentially 10^-5 to 10^-3 S cm^-1 with improved sub-zero persistence relative to neat PA-water systems",
+        "acid_retention: high if sepiolite dispersion is good and the DES-like phase remains interfacial",
+        "operating_temp: specifically targeted to 182–299 K",
+        "mechanical_state: flexible cast film expected with adequate plasticiser balance"
+      ],
+      "risk_flags": [
+        "DES-like phase compatibility with PVA must be validated to avoid exudation",
+        "excess choline chloride may reduce proton mobility by dilution/ion pairing",
+        "sepiolite bundling could compromise uniformity"
+      ],
+      "combination_novelty": "novel_combination",
+      "element_evidence": [
+        {
+          "component": "poly(vinyl alcohol)",
+          "role_in_formulation": "Primary film-forming hydrophilic polymer supporting acid/plasticiser compatibility and low-temperature flexibility.",
+          "descriptor_satisfied": [
+            "D2",
+            "D3",
+            "D6",
+            "D7"
+          ],
+          "analog_paper_ids": [
+            "manual_26f0dcfc01"
+          ],
+          "analog_reason": "PVA is an established hydrophilic proton-membrane matrix analog."
+        },
+        {
+          "component": "sepiolite",
+          "role_in_formulation": "1-D fibrous clay supplying nanoconfinement and interfacial bound-water layers.",
+          "descriptor_satisfied": [
+            "D1",
+            "D2",
+            "D5",
+            "D7"
+          ],
+          "analog_paper_ids": [
+            "manual_3d7d6d5d7b"
+          ],
+          "analog_reason": "Sepiolite is a direct 1-D fibrous clay analog for channel-like confinement and water retention."
+        },
+        {
+          "component": "phosphoric acid",
+          "role_in_formulation": "Mobile proton donor incorporated into a complexed, non-neat conducting phase.",
+          "descriptor_satisfied": [
+            "D4",
+            "D6"
+          ],
+          "analog_paper_ids": [
+            "manual_8d58a81c9e"
+          ],
+          "analog_reason": "Phosphoric acid is the standard proton donor analog in the S08 pool."
+        },
+        {
+          "component": "choline chloride",
+          "role_in_formulation": "Hydrogen-bond acceptor salt partner used to form a low-freezing DES-like environment around the acid/plasticiser phase.",
+          "descriptor_satisfied": [
+            "D1",
+            "D2",
+            "D4"
+          ],
+          "analog_paper_ids": [
+            "manual_f56a2b0129"
+          ],
+          "analog_reason": "Choline chloride is a known deep-eutectic component analog for low-freezing polar media in proton-conducting systems."
+        },
+        {
+          "component": "glycerol",
+          "role_in_formulation": "Hydrogen-bond donor plasticiser that depresses freezing and preserves low-temperature mobility.",
+          "descriptor_satisfied": [
+            "D1",
+            "D2",
+            "D3",
+            "D4"
+          ],
+          "analog_paper_ids": [
+            "manual_f5f9ab95ca"
+          ],
+          "analog_reason": "Glycerol is a standard anti-freeze plasticiser analog for hydrophilic ion-conducting membranes."
+        }
+      ],
+      "novelty_rationale": "Relative to nearest single-paper PVA-acid films or sepiolite composite membranes, this proposal is new in making the conducting phase explicitly deep-eutectic-like to address the 182–200 K regime rather than only room-temperature hydration. The mechanistic value is that sepiolite confines the conducting phase while choline chloride/glycerol helps prevent phosphate-water crystallisation and preserves polar-fluid continuity. The individual components all have element-level precedent, but their combination into a cold-side PVA/sepiolite/phosphate/DES-like membrane is combination-level novel."
+    },
+    {
+      "instance_id": "I4",
+      "family_id": "F3",
+      "instance_name": "Hydroxyethyl cellulose / montmorillonite / phosphoric acid / glycerol membrane",
+      "composition_description": "Approximate formulation: hydroxyethyl cellulose as a water-soluble cellulose-derivative host, montmorillonite as layered nanofiller, phosphoric acid as proton donor, and glycerol as plasticiser/anti-freeze additive. A reasonable starting point is hydroxyethyl cellulose as the continuous phase, montmorillonite at 3–10 wt% of solids, moderate acid loading, and glycerol at 10–30 wt% to suppress brittleness and freezing.",
+      "components": [
+        "hydroxyethyl cellulose",
+        "montmorillonite",
+        "phosphoric acid",
+        "glycerol"
+      ],
+      "expected_properties": [
+        "conductivity_range: potentially 10^-6 to 10^-3 S cm^-1 depending on acid and water content",
+        "acid_retention: moderate through cellulose-phosphate hydrogen bonding and layered silicate adsorption",
+        "operating_temp: suited to exploratory cold-side screening, though likely less directional than 1-D clay systems",
+        "mechanical_state: flexible if sufficiently glycerol-plasticised"
+      ],
+      "risk_flags": [
+        "2-D filler does not satisfy the mandatory 1-D-channel role for the main archetype",
+        "montmorillonite swelling may create heterogeneity",
+        "excess glycerol may cause tackiness"
+      ],
+      "combination_novelty": "novel_combination",
+      "element_evidence": [
+        {
+          "component": "hydroxyethyl cellulose",
+          "role_in_formulation": "OH-rich cellulose-derivative host providing a flexible, hydrogen-bonded polymer matrix.",
+          "descriptor_satisfied": [
+            "D2",
+            "D3",
+            "D6",
+            "D7"
+          ],
+          "analog_paper_ids": [
+            "manual_a16330d0f5"
+          ],
+          "analog_reason": "Cellulose-derivative proton membranes are represented in the S08 pool as hydrophilic acid-hosting matrices."
+        },
+        {
+          "component": "montmorillonite",
+          "role_in_formulation": "Layered nanofiller that increases interfacial confinement and acid/water retention.",
+          "descriptor_satisfied": [
+            "D2",
+            "D5",
+            "D7"
+          ],
+          "analog_paper_ids": [
+            "manual_c8dafb5973"
+          ],
+          "analog_reason": "Layered clay nanofillers are established analogs for interfacial confinement and transport modulation in polymer membranes."
+        },
+        {
+          "component": "phosphoric acid",
+          "role_in_formulation": "Proton donor forming a hydrogen-bonded phosphate network with the cellulose derivative and retained polar fluid.",
+          "descriptor_satisfied": [
+            "D4",
+            "D6"
+          ],
+          "analog_paper_ids": [
+            "manual_8d58a81c9e"
+          ],
+          "analog_reason": "Phosphoric acid is the canonical acid dopant analog in the S08 pool."
+        },
+        {
+          "component": "glycerol",
+          "role_in_formulation": "Plasticiser and anti-freeze additive preserving matrix softness and polar-fluid continuity at sub-zero temperature.",
+          "descriptor_satisfied": [
+            "D1",
+            "D2",
+            "D3",
+            "D4"
+          ],
+          "analog_paper_ids": [
+            "manual_f5f9ab95ca"
+          ],
+          "analog_reason": "Glycerol is a direct analog for cold-side plasticisation and freeze suppression."
+        }
+      ],
+      "novelty_rationale": "Relative to nearest single-paper cellulose-derivative acid membranes or clay-filled hydrophilic films, this route is new in explicitly tuning for the cold-side window with glycerol-assisted phosphoric-acid plasticisation. The mechanistic value is a simpler, easy-to-cast benchmark that tests whether layered-clay interfacial confinement can compete with the stronger geometric confinement of 1-D clays. Each component has literature-level analog support, but the specific hydroxyethyl-cellulose/MMT/phosphoric-acid/glycerol combination is proposed as a new screening composition."
+    },
+    {
+      "instance_id": "I5",
+      "family_id": "F1",
+      "instance_name": "Chitosan / PVA / attapulgite / phosphoric acid membrane without anti-freeze co-solvent",
+      "composition_description": "Approximate formulation: chitosan as the primary biopolymer matrix, PVA as film-forming co-binder, attapulgite as 1-D channel phase, and phosphoric acid as proton donor, intentionally omitting an added anti-freeze co-solvent to provide an ablation comparison against I1. Starting ratios can mirror I1 but without glycerol, with conservative acid loading to limit exudation.",
+      "components": [
+        "chitosan",
+        "poly(vinyl alcohol)",
+        "attapulgite",
+        "phosphoric acid"
+      ],
+      "expected_properties": [
+        "conductivity_range: potentially good near room temperature but more likely to drop sharply below 253 K than I1",
+        "acid_retention: moderate to high due to polymer-clay interactions",
+        "operating_temp: useful as a cold-side ablation control rather than a best-case candidate",
+        "mechanical_state: stiffer and more brittle than the glycerol-containing variant"
+      ],
+      "risk_flags": [
+        "higher risk of acid/water rigidification or partial freezing at low temperature",
+        "greater brittle-film risk below 253 K",
+        "possible room-temperature success but cold-end failure"
+      ],
+      "combination_novelty": "close_variant",
+      "element_evidence": [
+        {
+          "component": "chitosan",
+          "role_in_formulation": "Biopolymer acid-hosting matrix with dense OH/NH functionality.",
+          "descriptor_satisfied": [
+            "D2",
+            "D6",
+            "D7"
+          ],
+          "analog_paper_ids": [
+            "manual_1157b11126"
+          ],
+          "analog_reason": "Chitosan is a direct biopolymer host analog in the S08 pool."
+        },
+        {
+          "component": "poly(vinyl alcohol)",
+          "role_in_formulation": "Film-forming co-binder that improves composite continuity and processability.",
+          "descriptor_satisfied": [
+            "D2",
+            "D3",
+            "D6"
+          ],
+          "analog_paper_ids": [
+            "manual_26f0dcfc01"
+          ],
+          "analog_reason": "PVA is an established co-binder analog for water-cast proton membranes."
+        },
+        {
+          "component": "attapulgite",
+          "role_in_formulation": "1-D fibrous clay used to create nanoconfined acid-water pathways.",
+          "descriptor_satisfied": [
+            "D1",
+            "D2",
+            "D5",
+            "D7"
+          ],
+          "analog_paper_ids": [
+            "manual_6138017199"
+          ],
+          "analog_reason": "Attapulgite is a direct fibrous-clay confinement analog."
+        },
+        {
+          "component": "phosphoric acid",
+          "role_in_formulation": "Proton donor acid phase hydrogen-bonded to the polymer/clay network.",
+          "descriptor_satisfied": [
+            "D4",
+            "D6"
+          ],
+          "analog_paper_ids": [
+            "manual_8d58a81c9e"
+          ],
+          "analog_reason": "Phosphoric acid is the standard acid dopant analog in the pool."
+        }
+      ],
+      "novelty_rationale": "This is a close variant of the quaternary cold-side archetype because it differs from I1 by only one omitted component, the anti-freeze plasticiser. That difference is mechanistically valuable because it creates an ablation control for D1-D4, letting the team isolate whether sub-zero continuity comes mainly from glycerol-mediated suppression of crystallisation or already from the chitosan/PVA/attapulgite nanoconfined acid network. It is therefore worth surfacing even though it is intentionally less optimized for the lowest temperatures."
+    },
+    {
+      "instance_id": "I6",
+      "family_id": "F4",
+      "instance_name": "Polybenzimidazole / phosphoric acid membrane",
+      "composition_description": "Conventional phosphoric-acid-doped polybenzimidazole membrane used as a high-temperature proton-conduction control. No low-temperature anti-freeze co-solvent or nanoconfining filler is included; this is intentionally a simple baseline rather than a cold-optimized design.",
+      "components": [
+        "polybenzimidazole",
+        "phosphoric acid"
+      ],
+      "expected_properties": [
+        "conductivity_range: often respectable at elevated temperature but likely poor or strongly reduced in the 182–253 K range",
+        "acid_retention: high because of strong acid-base complexation",
+        "operating_temp: included as a high-temperature control baseline, not a preferred cold-side candidate",
+        "mechanical_state: robust film but relatively rigid at low temperature"
+      ],
+      "risk_flags": [
+        "not naturally optimized for cold-side bound-water continuity",
+        "possible proton trapping or low mobility due to strong acid-base binding",
+        "serves mainly as a control, not a lead candidate"
+      ],
+      "combination_novelty": "exact_match",
+      "element_evidence": [
+        {
+          "component": "polybenzimidazole",
+          "role_in_formulation": "Basic aromatic polymer that complexes phosphoric acid and anchors the proton source.",
+          "descriptor_satisfied": [
+            "D6",
+            "D7"
+          ],
+          "analog_paper_ids": [
+            "openalex_w1608495915"
+          ],
+          "analog_reason": "PBI is a canonical acid-complexing proton-membrane polymer in the S08 pool."
+        },
+        {
+          "component": "phosphoric acid",
+          "role_in_formulation": "Acid dopant supplying protons through acid-base complexation and hydrogen-bonding.",
+          "descriptor_satisfied": [
+            "D4",
+            "D6"
+          ],
+          "analog_paper_ids": [
+            "W2566581454"
+          ],
+          "analog_reason": "Phosphoric acid is the standard dopant analog in PBI-type proton membranes."
+        }
+      ],
+      "novelty_rationale": "This is intentionally included as an exact-match-style control baseline rather than a novel material. Its value is to anchor the top-list in a well-known proton-conducting reference point and to demonstrate, in a direct experimental comparison, why cold-side descriptors D1-D5 motivate softer, hydrated, anti-freeze, nanoconfined architectures. If the new cold-focused formulations outperform this baseline below 253 K, that result will be much easier to interpret and defend."
+    }
+  ]
+}

@@ -1,0 +1,1715 @@
+{
+  "dataset": "lineA_LRS_0429CS",
+  "provenance": {
+    "analysis_version": "stage0-eis-v2.0.0",
+    "admission_policy_version": "evidence-policy-v2.0.0",
+    "objective_registry_version": "objective-registry-v2.0.0",
+    "rb_method_policy_version": "rb-method-v2.0.0",
+    "config_sha256": {
+      "stage0_v2_policy": "da45db8ed5327d9d45407e314014ed811eca46f00baf8165bf601348454be1af",
+      "rb_method_policy": "43949a81157d42afe6e16713ece534dcd99c3cafd03712e05cbb6b640ede117a",
+      "evidence_admission_v2": "4931d6e794f1056445f8621de5c39702466c82d3c39f9f050e00b9e397a45960",
+      "objective_registry": "193a65c7b5d39235ef29a8e29c72429e965490dfa8424dc216d169269ab7fac5"
+    },
+    "git_commit": "fb17c68",
+    "generated_at": "2026-06-22T14:36:51.878574+08:00",
+    "geom_ratio_t_over_A": 0.010204081632653062,
+    "n_boot": 0
+  },
+  "n_points": 34,
+  "method_spread_dex_median": 0.0009999621876463222,
+  "method_spread_dex_max": 2.119842036790584,
+  "spread_warn_threshold": 0.15,
+  "spread_high_threshold": 0.3,
+  "trajectories": {
+    "legacy_routed": {
+      "success": true,
+      "n_points": 34,
+      "n_segments": 3,
+      "has_transition": true,
+      "best_model_type": "continuous_3",
+      "confidence": 0.9994,
+      "transition_temps_K": [
+        294.82193527121143,
+        238.8883303197926
+      ],
+      "ea_eV": [
+        -0.7716903163318378,
+        0.053509064239822615,
+        0.8179592347222661
+      ]
+    },
+    "fixed_plateau": {
+      "success": false,
+      "n_points": 0,
+      "error": "insufficient points"
+    },
+    "fixed_zero_crossing": {
+      "success": true,
+      "n_points": 30,
+      "n_segments": 3,
+      "has_transition": true,
+      "best_model_type": "continuous_3",
+      "confidence": 1.0,
+      "transition_temps_K": [
+        294.8222244088685,
+        239.29200347592385
+      ],
+      "ea_eV": [
+        -0.7717574396812323,
+        0.05350822882422385,
+        0.7941944325305902
+      ]
+    },
+    "method_ensemble": {
+      "success": true,
+      "n_points": 34,
+      "n_segments": 3,
+      "has_transition": true,
+      "best_model_type": "continuous_3",
+      "confidence": 0.9994,
+      "transition_temps_K": [
+        294.82222465926225,
+        238.88835044653376
+      ],
+      "ea_eV": [
+        -0.7717574948933437,
+        0.053508227698348725,
+        0.817959204932172
+      ]
+    }
+  },
+  "transition_invariance": {
+    "routing_artifact_risk": "low",
+    "verdict": "method-invariant (transition robust to Rb extraction strategy or consistently absent)",
+    "n_trajectories_with_transition": 3,
+    "n_trajectories_assessed": 3,
+    "transition_by_trajectory": {
+      "legacy_routed": true,
+      "fixed_zero_crossing": true,
+      "method_ensemble": true
+    },
+    "breakpoint_spread_K": 0.00028938805081679675
+  },
+  "legacy_delta": {
+    "legacy_n_segments": 3,
+    "legacy_transition_temps_K": [
+      240.15578306482323,
+      223.150000122334
+    ],
+    "v2_ensemble_n_segments": 3,
+    "v2_ensemble_transition_temps_K": [
+      294.82222465926225,
+      238.88835044653376
+    ],
+    "segments_match": true
+  },
+  "points": [
+    {
+      "temperature_C": -11.0,
+      "temperature_K": 262.15,
+      "legacy_method": "reverse_zero_crossing",
+      "legacy_rb_ohm": 0.6399256394066815,
+      "ensemble_rb_ohm": 0.6399256394066815,
+      "method_spread_dex": 0.001910925245480024,
+      "rb_range_dex": 0.0038232473369598785,
+      "applicable_methods": [
+        "reverse_zero_crossing",
+        "reverse_valley"
+      ],
+      "methods": {
+        "reverse_zero_crossing": {
+          "applicable": true,
+          "rb_ohm": 0.6399256394066815,
+          "log10_rb": -0.1938704889405068,
+          "fit_quality": 0.95,
+          "failure_reason": null,
+          "credible": true
+        },
+        "reverse_valley": {
+          "applicable": true,
+          "rb_ohm": 0.645584,
+          "log10_rb": -0.1900472416035469,
+          "fit_quality": 0.8999960632348483,
+          "failure_reason": null,
+          "credible": true
+        },
+        "low_freq_plateau": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Low-freq phase not near zero: mean=76.2° > 20.0°",
+          "credible": false
+        },
+        "equivalent_circuit": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Curve fit failed: `x0` is infeasible.",
+          "credible": false
+        }
+      }
+    },
+    {
+      "temperature_C": -14.0,
+      "temperature_K": 259.15,
+      "legacy_method": "reverse_zero_crossing",
+      "legacy_rb_ohm": 0.632037721943491,
+      "ensemble_rb_ohm": 0.632037721943491,
+      "method_spread_dex": 0.0030536890028703256,
+      "rb_range_dex": 0.006109610194751092,
+      "applicable_methods": [
+        "reverse_zero_crossing",
+        "reverse_valley"
+      ],
+      "methods": {
+        "reverse_zero_crossing": {
+          "applicable": true,
+          "rb_ohm": 0.632037721943491,
+          "log10_rb": -0.19925700092170004,
+          "fit_quality": 0.95,
+          "failure_reason": null,
+          "credible": true
+        },
+        "reverse_valley": {
+          "applicable": true,
+          "rb_ohm": 0.640992,
+          "log10_rb": -0.19314739072694895,
+          "fit_quality": 0.8999959887157764,
+          "failure_reason": null,
+          "credible": true
+        },
+        "low_freq_plateau": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Low-freq phase not near zero: mean=76.1° > 20.0°",
+          "credible": false
+        },
+        "equivalent_circuit": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Curve fit failed: `x0` is infeasible.",
+          "credible": false
+        }
+      }
+    },
+    {
+      "temperature_C": -17.0,
+      "temperature_K": 256.15,
+      "legacy_method": "reverse_zero_crossing",
+      "legacy_rb_ohm": 0.6563945039247894,
+      "ensemble_rb_ohm": 0.6563945039247894,
+      "method_spread_dex": 0.002584346821475445,
+      "rb_range_dex": 0.005170582728780848,
+      "applicable_methods": [
+        "reverse_zero_crossing",
+        "reverse_valley"
+      ],
+      "methods": {
+        "reverse_zero_crossing": {
+          "applicable": true,
+          "rb_ohm": 0.6563945039247894,
+          "log10_rb": -0.18283506400701424,
+          "fit_quality": 0.95,
+          "failure_reason": null,
+          "credible": true
+        },
+        "reverse_valley": {
+          "applicable": true,
+          "rb_ohm": 0.648626,
+          "log10_rb": -0.1880056467357951,
+          "fit_quality": 0.8999962837409751,
+          "failure_reason": null,
+          "credible": true
+        },
+        "low_freq_plateau": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Low-freq phase not near zero: mean=75.7° > 20.0°",
+          "credible": false
+        },
+        "equivalent_circuit": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Curve fit failed: `x0` is infeasible.",
+          "credible": false
+        }
+      }
+    },
+    {
+      "temperature_C": -2.0,
+      "temperature_K": 271.15,
+      "legacy_method": "reverse_zero_crossing",
+      "legacy_rb_ohm": 0.5997487444408777,
+      "ensemble_rb_ohm": 0.5997487444408777,
+      "method_spread_dex": 0.001332966018232746,
+      "rb_range_dex": 0.00266690634003397,
+      "applicable_methods": [
+        "reverse_zero_crossing",
+        "reverse_valley"
+      ],
+      "methods": {
+        "reverse_zero_crossing": {
+          "applicable": true,
+          "rb_ohm": 0.5997487444408777,
+          "log10_rb": -0.22203065254390716,
+          "fit_quality": 0.95,
+          "failure_reason": null,
+          "credible": true
+        },
+        "reverse_valley": {
+          "applicable": true,
+          "rb_ohm": 0.603443,
+          "log10_rb": -0.2193637462038732,
+          "fit_quality": 0.8999977223501832,
+          "failure_reason": null,
+          "credible": true
+        },
+        "low_freq_plateau": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Low-freq phase not near zero: mean=77.3° > 20.0°",
+          "credible": false
+        },
+        "equivalent_circuit": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Curve fit failed: `x0` is infeasible.",
+          "credible": false
+        }
+      }
+    },
+    {
+      "temperature_C": -20.0,
+      "temperature_K": 253.14999999999998,
+      "legacy_method": "reverse_zero_crossing",
+      "legacy_rb_ohm": 0.6675234462841001,
+      "ensemble_rb_ohm": 0.6675234462841001,
+      "method_spread_dex": 0.0024998657856270035,
+      "rb_range_dex": 0.005001558858383159,
+      "applicable_methods": [
+        "reverse_zero_crossing",
+        "reverse_valley"
+      ],
+      "methods": {
+        "reverse_zero_crossing": {
+          "applicable": true,
+          "rb_ohm": 0.6675234462841001,
+          "log10_rb": -0.1755334754121129,
+          "fit_quality": 0.95,
+          "failure_reason": null,
+          "credible": true
+        },
+        "reverse_valley": {
+          "applicable": true,
+          "rb_ohm": 0.65988,
+          "log10_rb": -0.18053503427049605,
+          "fit_quality": 0.8999968883333613,
+          "failure_reason": null,
+          "credible": true
+        },
+        "low_freq_plateau": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Low-freq phase not near zero: mean=75.2° > 20.0°",
+          "credible": false
+        },
+        "equivalent_circuit": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Curve fit failed: `x0` is infeasible.",
+          "credible": false
+        }
+      }
+    },
+    {
+      "temperature_C": -23.0,
+      "temperature_K": 250.14999999999998,
+      "legacy_method": "reverse_zero_crossing",
+      "legacy_rb_ohm": 0.6973030802977549,
+      "ensemble_rb_ohm": 0.6973030802977549,
+      "method_spread_dex": 0.0021706158014461836,
+      "rb_range_dex": 0.004342818198879356,
+      "applicable_methods": [
+        "reverse_zero_crossing",
+        "reverse_valley"
+      ],
+      "methods": {
+        "reverse_zero_crossing": {
+          "applicable": true,
+          "rb_ohm": 0.6973030802977549,
+          "log10_rb": -0.15657841631901281,
+          "fit_quality": 0.95,
+          "failure_reason": null,
+          "credible": true
+        },
+        "reverse_valley": {
+          "applicable": true,
+          "rb_ohm": 0.690365,
+          "log10_rb": -0.16092123451789217,
+          "fit_quality": 0.8999972643162472,
+          "failure_reason": null,
+          "credible": true
+        },
+        "low_freq_plateau": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Low-freq phase not near zero: mean=74.8° > 20.0°",
+          "credible": false
+        },
+        "equivalent_circuit": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Curve fit failed: `x0` is infeasible.",
+          "credible": false
+        }
+      }
+    },
+    {
+      "temperature_C": -26.0,
+      "temperature_K": 247.14999999999998,
+      "legacy_method": "reverse_zero_crossing",
+      "legacy_rb_ohm": 0.7363545211098679,
+      "ensemble_rb_ohm": 0.7363545211098679,
+      "method_spread_dex": 0.0016391534375010633,
+      "rb_range_dex": 0.0032795049894422668,
+      "applicable_methods": [
+        "reverse_zero_crossing",
+        "reverse_valley"
+      ],
+      "methods": {
+        "reverse_zero_crossing": {
+          "applicable": true,
+          "rb_ohm": 0.7363545211098679,
+          "log10_rb": -0.1329130423311881,
+          "fit_quality": 0.95,
+          "failure_reason": null,
+          "credible": true
+        },
+        "reverse_valley": {
+          "applicable": true,
+          "rb_ohm": 0.730815,
+          "log10_rb": -0.13619254732063038,
+          "fit_quality": 0.8999975274839898,
+          "failure_reason": null,
+          "credible": true
+        },
+        "low_freq_plateau": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Low-freq phase not near zero: mean=74.3° > 20.0°",
+          "credible": false
+        },
+        "equivalent_circuit": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Curve fit failed: `x0` is infeasible.",
+          "credible": false
+        }
+      }
+    },
+    {
+      "temperature_C": -29.0,
+      "temperature_K": 244.14999999999998,
+      "legacy_method": "reverse_zero_crossing",
+      "legacy_rb_ohm": 0.7818180813780587,
+      "ensemble_rb_ohm": 0.7818180813780587,
+      "method_spread_dex": 0.0015078626228727972,
+      "rb_range_dex": 0.0030168273711864563,
+      "applicable_methods": [
+        "reverse_zero_crossing",
+        "reverse_valley"
+      ],
+      "methods": {
+        "reverse_zero_crossing": {
+          "applicable": true,
+          "rb_ohm": 0.7818180813780587,
+          "log10_rb": -0.10689428970844037,
+          "fit_quality": 0.95,
+          "failure_reason": null,
+          "credible": true
+        },
+        "reverse_valley": {
+          "applicable": true,
+          "rb_ohm": 0.776406,
+          "log10_rb": -0.10991111707962682,
+          "fit_quality": 0.8999980564461942,
+          "failure_reason": null,
+          "credible": true
+        },
+        "low_freq_plateau": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Low-freq phase not near zero: mean=73.7° > 20.0°",
+          "credible": false
+        },
+        "equivalent_circuit": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Curve fit failed: `x0` is infeasible.",
+          "credible": false
+        }
+      }
+    },
+    {
+      "temperature_C": -32.0,
+      "temperature_K": 241.14999999999998,
+      "legacy_method": "reverse_zero_crossing",
+      "legacy_rb_ohm": 0.8175752508243052,
+      "ensemble_rb_ohm": 0.8175752508243052,
+      "method_spread_dex": 0.0013231050396598897,
+      "rb_range_dex": 0.0026471771448068337,
+      "applicable_methods": [
+        "reverse_zero_crossing",
+        "reverse_valley"
+      ],
+      "methods": {
+        "reverse_zero_crossing": {
+          "applicable": true,
+          "rb_ohm": 0.8175752508243052,
+          "log10_rb": -0.08747226372736577,
+          "fit_quality": 0.95,
+          "failure_reason": null,
+          "credible": true
+        },
+        "reverse_valley": {
+          "applicable": true,
+          "rb_ohm": 0.812607,
+          "log10_rb": -0.09011944087217261,
+          "fit_quality": 0.8999984872957452,
+          "failure_reason": null,
+          "credible": true
+        },
+        "low_freq_plateau": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Low-freq phase not near zero: mean=73.2° > 20.0°",
+          "credible": false
+        },
+        "equivalent_circuit": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Curve fit failed: `x0` is infeasible.",
+          "credible": false
+        }
+      }
+    },
+    {
+      "temperature_C": -35.0,
+      "temperature_K": 238.14999999999998,
+      "legacy_method": "reverse_zero_crossing",
+      "legacy_rb_ohm": 0.954951020831309,
+      "ensemble_rb_ohm": 0.954951020831309,
+      "method_spread_dex": 0.0002586078116350485,
+      "rb_range_dex": 0.0005174046316484514,
+      "applicable_methods": [
+        "reverse_zero_crossing",
+        "reverse_valley"
+      ],
+      "methods": {
+        "reverse_zero_crossing": {
+          "applicable": true,
+          "rb_ohm": 0.954951020831309,
+          "log10_rb": -0.020018902686602343,
+          "fit_quality": 0.95,
+          "failure_reason": null,
+          "credible": true
+        },
+        "reverse_valley": {
+          "applicable": true,
+          "rb_ohm": 0.953814,
+          "log10_rb": -0.020536307318250794,
+          "fit_quality": 0.8999997278000084,
+          "failure_reason": null,
+          "credible": true
+        },
+        "low_freq_plateau": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Low-freq phase not near zero: mean=70.4° > 20.0°",
+          "credible": false
+        },
+        "equivalent_circuit": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Curve fit failed: `x0` is infeasible.",
+          "credible": false
+        }
+      }
+    },
+    {
+      "temperature_C": -38.0,
+      "temperature_K": 235.14999999999998,
+      "legacy_method": "reverse_zero_crossing",
+      "legacy_rb_ohm": 1.802550543990094,
+      "ensemble_rb_ohm": 1.802550543990094,
+      "method_spread_dex": 0.00011811183563426704,
+      "rb_range_dex": 0.00023630999544560494,
+      "applicable_methods": [
+        "reverse_zero_crossing",
+        "reverse_valley"
+      ],
+      "methods": {
+        "reverse_zero_crossing": {
+          "applicable": true,
+          "rb_ohm": 1.802550543990094,
+          "log10_rb": 0.2558874512933988,
+          "fit_quality": 0.95,
+          "failure_reason": null,
+          "credible": true
+        },
+        "reverse_valley": {
+          "applicable": true,
+          "rb_ohm": 1.80157,
+          "log10_rb": 0.2556511412979532,
+          "fit_quality": 0.8999997495897458,
+          "failure_reason": null,
+          "credible": true
+        },
+        "low_freq_plateau": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Low-freq phase not near zero: mean=68.4° > 20.0°",
+          "credible": false
+        },
+        "equivalent_circuit": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Curve fit failed: `x0` is infeasible.",
+          "credible": false
+        }
+      }
+    },
+    {
+      "temperature_C": -41.0,
+      "temperature_K": 232.14999999999998,
+      "legacy_method": "reverse_zero_crossing",
+      "legacy_rb_ohm": 2.684400055719722,
+      "ensemble_rb_ohm": 2.684400055719722,
+      "method_spread_dex": 8.088230276708781e-05,
+      "rb_range_dex": 0.00016182371965711706,
+      "applicable_methods": [
+        "reverse_zero_crossing",
+        "reverse_valley",
+        "equivalent_circuit"
+      ],
+      "methods": {
+        "reverse_zero_crossing": {
+          "applicable": true,
+          "rb_ohm": 2.684400055719722,
+          "log10_rb": 0.42884723915884526,
+          "fit_quality": 0.95,
+          "failure_reason": null,
+          "credible": true
+        },
+        "reverse_valley": {
+          "applicable": true,
+          "rb_ohm": 2.6834,
+          "log10_rb": 0.42868541543918814,
+          "fit_quality": 0.8999998215560285,
+          "failure_reason": null,
+          "credible": true
+        },
+        "low_freq_plateau": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Low-freq phase not near zero: mean=68.1° > 20.0°",
+          "credible": false
+        },
+        "equivalent_circuit": {
+          "applicable": true,
+          "rb_ohm": 10316.713108599723,
+          "log10_rb": 4.013541353670063,
+          "fit_quality": 0.6941055923202487,
+          "failure_reason": null,
+          "credible": false
+        }
+      }
+    },
+    {
+      "temperature_C": -44.0,
+      "temperature_K": 229.14999999999998,
+      "legacy_method": "reverse_zero_crossing",
+      "legacy_rb_ohm": 4.141713445048554,
+      "ensemble_rb_ohm": 4.141713445048554,
+      "method_spread_dex": 0.00037576243877300824,
+      "rb_range_dex": 0.000751799517633045,
+      "applicable_methods": [
+        "reverse_zero_crossing",
+        "reverse_valley",
+        "equivalent_circuit"
+      ],
+      "methods": {
+        "reverse_zero_crossing": {
+          "applicable": true,
+          "rb_ohm": 4.141713445048554,
+          "log10_rb": 0.6171800478313971,
+          "fit_quality": 0.95,
+          "failure_reason": null,
+          "credible": true
+        },
+        "reverse_valley": {
+          "applicable": true,
+          "rb_ohm": 4.13455,
+          "log10_rb": 0.6164282483137641,
+          "fit_quality": 0.8999991034343718,
+          "failure_reason": null,
+          "credible": true
+        },
+        "low_freq_plateau": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Low-freq phase not near zero: mean=68.7° > 20.0°",
+          "credible": false
+        },
+        "equivalent_circuit": {
+          "applicable": true,
+          "rb_ohm": 13438.140972368974,
+          "log10_rb": 4.128339192729368,
+          "fit_quality": 0.6978340291152185,
+          "failure_reason": null,
+          "credible": false
+        }
+      }
+    },
+    {
+      "temperature_C": -47.0,
+      "temperature_K": 226.14999999999998,
+      "legacy_method": "reverse_zero_crossing",
+      "legacy_rb_ohm": 7.0991841975695085,
+      "ensemble_rb_ohm": 7.099184197569509,
+      "method_spread_dex": 0.0008942231888779442,
+      "rb_range_dex": 0.001789100046281411,
+      "applicable_methods": [
+        "reverse_zero_crossing",
+        "reverse_valley",
+        "equivalent_circuit"
+      ],
+      "methods": {
+        "reverse_zero_crossing": {
+          "applicable": true,
+          "rb_ohm": 7.0991841975695085,
+          "log10_rb": 0.8512084446556664,
+          "fit_quality": 0.95,
+          "failure_reason": null,
+          "credible": true
+        },
+        "reverse_valley": {
+          "applicable": true,
+          "rb_ohm": 7.12849,
+          "log10_rb": 0.8529975447019478,
+          "fit_quality": 0.8999956813914121,
+          "failure_reason": null,
+          "credible": true
+        },
+        "low_freq_plateau": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Low-freq phase not near zero: mean=70.2° > 20.0°",
+          "credible": false
+        },
+        "equivalent_circuit": {
+          "applicable": true,
+          "rb_ohm": 20459.065163518433,
+          "log10_rb": 4.310885785602884,
+          "fit_quality": 0.6996031783260126,
+          "failure_reason": null,
+          "credible": false
+        }
+      }
+    },
+    {
+      "temperature_C": -5.0,
+      "temperature_K": 268.15,
+      "legacy_method": "reverse_zero_crossing",
+      "legacy_rb_ohm": 0.6088138803397707,
+      "ensemble_rb_ohm": 0.6088138803397707,
+      "method_spread_dex": 0.0014169421404770636,
+      "rb_range_dex": 0.002834919979407241,
+      "applicable_methods": [
+        "reverse_zero_crossing",
+        "reverse_valley"
+      ],
+      "methods": {
+        "reverse_zero_crossing": {
+          "applicable": true,
+          "rb_ohm": 0.6088138803397707,
+          "log10_rb": -0.21551545465034344,
+          "fit_quality": 0.95,
+          "failure_reason": null,
+          "credible": true
+        },
+        "reverse_valley": {
+          "applicable": true,
+          "rb_ohm": 0.612801,
+          "log10_rb": -0.2126805346709362,
+          "fit_quality": 0.8999973864584757,
+          "failure_reason": null,
+          "credible": true
+        },
+        "low_freq_plateau": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Low-freq phase not near zero: mean=77.1° > 20.0°",
+          "credible": false
+        },
+        "equivalent_circuit": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Curve fit failed: `x0` is infeasible.",
+          "credible": false
+        }
+      }
+    },
+    {
+      "temperature_C": -50.0,
+      "temperature_K": 223.14999999999998,
+      "legacy_method": "reverse_zero_crossing",
+      "legacy_rb_ohm": 11.581883092827672,
+      "ensemble_rb_ohm": 11.581883092827674,
+      "method_spread_dex": 0.000256930466041754,
+      "rb_range_dex": 0.000514048722664473,
+      "applicable_methods": [
+        "reverse_zero_crossing",
+        "reverse_valley",
+        "equivalent_circuit"
+      ],
+      "methods": {
+        "reverse_zero_crossing": {
+          "applicable": true,
+          "rb_ohm": 11.581883092827672,
+          "log10_rb": 1.0637791768643141,
+          "fit_quality": 0.95,
+          "failure_reason": null,
+          "credible": true
+        },
+        "reverse_valley": {
+          "applicable": true,
+          "rb_ohm": 11.5956,
+          "log10_rb": 1.0642932255869786,
+          "fit_quality": 0.8999986755142384,
+          "failure_reason": null,
+          "credible": true
+        },
+        "low_freq_plateau": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Low-freq phase not near zero: mean=72.1° > 20.0°",
+          "credible": false
+        },
+        "equivalent_circuit": {
+          "applicable": true,
+          "rb_ohm": 37287.6581365253,
+          "log10_rb": 4.571565108211881,
+          "fit_quality": 0.6994588860279621,
+          "failure_reason": null,
+          "credible": false
+        }
+      }
+    },
+    {
+      "temperature_C": -53.0,
+      "temperature_K": 220.14999999999998,
+      "legacy_method": "reverse_zero_crossing",
+      "legacy_rb_ohm": 21.563063362148323,
+      "ensemble_rb_ohm": 21.56306336214832,
+      "method_spread_dex": 0.0006478829488611674,
+      "rb_range_dex": 0.0012962395079760825,
+      "applicable_methods": [
+        "reverse_zero_crossing",
+        "reverse_valley",
+        "equivalent_circuit"
+      ],
+      "methods": {
+        "reverse_zero_crossing": {
+          "applicable": true,
+          "rb_ohm": 21.563063362148323,
+          "log10_rb": 1.3337104590550866,
+          "fit_quality": 0.95,
+          "failure_reason": null,
+          "credible": true
+        },
+        "reverse_valley": {
+          "applicable": true,
+          "rb_ohm": 21.4988,
+          "log10_rb": 1.3324142195471105,
+          "fit_quality": 0.8999949586842448,
+          "failure_reason": null,
+          "credible": true
+        },
+        "low_freq_plateau": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Low-freq phase not near zero: mean=74.2° > 20.0°",
+          "credible": false
+        },
+        "equivalent_circuit": {
+          "applicable": true,
+          "rb_ohm": 203966.81289361947,
+          "log10_rb": 5.309559509829508,
+          "fit_quality": 0.6981252753586868,
+          "failure_reason": null,
+          "credible": false
+        }
+      }
+    },
+    {
+      "temperature_C": -56.0,
+      "temperature_K": 217.14999999999998,
+      "legacy_method": "reverse_zero_crossing",
+      "legacy_rb_ohm": 39.20264142118773,
+      "ensemble_rb_ohm": 39.202641421187735,
+      "method_spread_dex": 1.860143798338424e-05,
+      "rb_range_dex": 3.7216472458245775e-05,
+      "applicable_methods": [
+        "reverse_zero_crossing",
+        "reverse_valley",
+        "equivalent_circuit"
+      ],
+      "methods": {
+        "reverse_zero_crossing": {
+          "applicable": true,
+          "rb_ohm": 39.20264142118773,
+          "log10_rb": 1.5933153301836838,
+          "fit_quality": 0.95,
+          "failure_reason": null,
+          "credible": true
+        },
+        "reverse_valley": {
+          "applicable": true,
+          "rb_ohm": 39.206001,
+          "log10_rb": 1.593352546656142,
+          "fit_quality": 0.8999974354687251,
+          "failure_reason": null,
+          "credible": true
+        },
+        "low_freq_plateau": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Low-freq phase not near zero: mean=75.6° > 20.0°",
+          "credible": false
+        },
+        "equivalent_circuit": {
+          "applicable": true,
+          "rb_ohm": 7018145.709667499,
+          "log10_rb": 6.84622238072858,
+          "fit_quality": 0.6974844244090225,
+          "failure_reason": null,
+          "credible": false
+        }
+      }
+    },
+    {
+      "temperature_C": -59.0,
+      "temperature_K": 214.14999999999998,
+      "legacy_method": "reverse_zero_crossing",
+      "legacy_rb_ohm": 78.64370880548711,
+      "ensemble_rb_ohm": 78.64370880548712,
+      "method_spread_dex": 7.479580583386491e-06,
+      "rb_range_dex": 1.4964627987446022e-05,
+      "applicable_methods": [
+        "reverse_zero_crossing",
+        "reverse_valley",
+        "equivalent_circuit"
+      ],
+      "methods": {
+        "reverse_zero_crossing": {
+          "applicable": true,
+          "rb_ohm": 78.64370880548711,
+          "log10_rb": 1.8956639864590819,
+          "fit_quality": 0.95,
+          "failure_reason": null,
+          "credible": true
+        },
+        "reverse_valley": {
+          "applicable": true,
+          "rb_ohm": 78.640999,
+          "log10_rb": 1.8956490218310944,
+          "fit_quality": 0.8999987101540213,
+          "failure_reason": null,
+          "credible": true
+        },
+        "low_freq_plateau": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Low-freq phase not near zero: mean=76.1° > 20.0°",
+          "credible": false
+        },
+        "equivalent_circuit": {
+          "applicable": true,
+          "rb_ohm": 6951387.915866828,
+          "log10_rb": 6.8420715245936075,
+          "fit_quality": 0.6959493140984049,
+          "failure_reason": null,
+          "credible": false
+        }
+      }
+    },
+    {
+      "temperature_C": -62.0,
+      "temperature_K": 211.14999999999998,
+      "legacy_method": "reverse_zero_crossing",
+      "legacy_rb_ohm": 145.92362559152014,
+      "ensemble_rb_ohm": 145.92362559152008,
+      "method_spread_dex": 0.0006489712503040647,
+      "rb_range_dex": 0.0012984168802598894,
+      "applicable_methods": [
+        "reverse_zero_crossing",
+        "reverse_valley",
+        "equivalent_circuit"
+      ],
+      "methods": {
+        "reverse_zero_crossing": {
+          "applicable": true,
+          "rb_ohm": 145.92362559152014,
+          "log10_rb": 2.164125611519085,
+          "fit_quality": 0.95,
+          "failure_reason": null,
+          "credible": true
+        },
+        "reverse_valley": {
+          "applicable": true,
+          "rb_ohm": 145.488007,
+          "log10_rb": 2.162827194638825,
+          "fit_quality": 0.899996300566489,
+          "failure_reason": null,
+          "credible": true
+        },
+        "low_freq_plateau": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Low-freq phase not near zero: mean=75.2° > 20.0°",
+          "credible": false
+        },
+        "equivalent_circuit": {
+          "applicable": true,
+          "rb_ohm": 6482934.008086992,
+          "log10_rb": 6.811771600799335,
+          "fit_quality": 0.6937086745978766,
+          "failure_reason": null,
+          "credible": false
+        }
+      }
+    },
+    {
+      "temperature_C": -65.0,
+      "temperature_K": 208.14999999999998,
+      "legacy_method": "reverse_valley",
+      "legacy_rb_ohm": 276.083008,
+      "ensemble_rb_ohm": 276.08300800000006,
+      "method_spread_dex": 2.119842036790584,
+      "rb_range_dex": 4.2770703595538,
+      "applicable_methods": [
+        "reverse_valley",
+        "equivalent_circuit"
+      ],
+      "methods": {
+        "reverse_zero_crossing": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "No zero crossing found in zimag",
+          "credible": false
+        },
+        "reverse_valley": {
+          "applicable": true,
+          "rb_ohm": 276.083008,
+          "log10_rb": 2.441039678066555,
+          "fit_quality": 0.8998401491524751,
+          "failure_reason": null,
+          "credible": true
+        },
+        "low_freq_plateau": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Low-freq phase not near zero: mean=72.0° > 20.0°",
+          "credible": false
+        },
+        "equivalent_circuit": {
+          "applicable": true,
+          "rb_ohm": 5225285.658052324,
+          "log10_rb": 6.718110037620355,
+          "fit_quality": 0.6900803584839329,
+          "failure_reason": null,
+          "credible": true
+        }
+      }
+    },
+    {
+      "temperature_C": -68.0,
+      "temperature_K": 205.14999999999998,
+      "legacy_method": "reverse_valley",
+      "legacy_rb_ohm": 594.554993,
+      "ensemble_rb_ohm": 594.5549930000002,
+      "method_spread_dex": 1.864917437072408,
+      "rb_range_dex": 3.76517794105409,
+      "applicable_methods": [
+        "reverse_valley",
+        "equivalent_circuit"
+      ],
+      "methods": {
+        "reverse_zero_crossing": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "No zero crossing found in zimag",
+          "credible": false
+        },
+        "reverse_valley": {
+          "applicable": true,
+          "rb_ohm": 594.554993,
+          "log10_rb": 2.774192030614728,
+          "fit_quality": 0.8995432083641773,
+          "failure_reason": null,
+          "credible": true
+        },
+        "low_freq_plateau": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Low-freq phase not near zero: mean=67.1° > 20.0°",
+          "credible": false
+        },
+        "equivalent_circuit": {
+          "applicable": true,
+          "rb_ohm": 3462342.061179233,
+          "log10_rb": 6.539369971668818,
+          "fit_quality": 0.6831912378705169,
+          "failure_reason": null,
+          "credible": true
+        }
+      }
+    },
+    {
+      "temperature_C": -71.0,
+      "temperature_K": 202.14999999999998,
+      "legacy_method": "reverse_valley",
+      "legacy_rb_ohm": 1014.299988,
+      "ensemble_rb_ohm": 1014.2999880000001,
+      "method_spread_dex": 1.4922263003933638,
+      "rb_range_dex": 3.023079594244121,
+      "applicable_methods": [
+        "reverse_valley",
+        "equivalent_circuit"
+      ],
+      "methods": {
+        "reverse_zero_crossing": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "No zero crossing found in zimag",
+          "credible": false
+        },
+        "reverse_valley": {
+          "applicable": true,
+          "rb_ohm": 1014.299988,
+          "log10_rb": 3.006166420347372,
+          "fit_quality": 0.8992003476098065,
+          "failure_reason": null,
+          "credible": true
+        },
+        "low_freq_plateau": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Low-freq phase not near zero: mean=60.7° > 20.0°",
+          "credible": false
+        },
+        "equivalent_circuit": {
+          "applicable": true,
+          "rb_ohm": 1069660.6377944257,
+          "log10_rb": 6.029246014591493,
+          "fit_quality": 0.6520182921425072,
+          "failure_reason": null,
+          "credible": true
+        }
+      }
+    },
+    {
+      "temperature_C": -74.0,
+      "temperature_K": 199.14999999999998,
+      "legacy_method": "reverse_valley",
+      "legacy_rb_ohm": 2641.840088,
+      "ensemble_rb_ohm": 2641.840088,
+      "method_spread_dex": 1.581098796965619,
+      "rb_range_dex": 3.1873306119340037,
+      "applicable_methods": [
+        "reverse_valley",
+        "equivalent_circuit"
+      ],
+      "methods": {
+        "reverse_zero_crossing": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "No zero crossing found in zimag",
+          "credible": false
+        },
+        "reverse_valley": {
+          "applicable": true,
+          "rb_ohm": 2641.840088,
+          "log10_rb": 3.421906525995754,
+          "fit_quality": 0.8974051722679868,
+          "failure_reason": null,
+          "credible": true
+        },
+        "low_freq_plateau": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Low-freq phase not near zero: mean=46.1° > 20.0°",
+          "credible": false
+        },
+        "equivalent_circuit": {
+          "applicable": true,
+          "rb_ohm": 4066653.2012411794,
+          "log10_rb": 6.609237137929758,
+          "fit_quality": 0.6975095011213456,
+          "failure_reason": null,
+          "credible": true
+        }
+      }
+    },
+    {
+      "temperature_C": -8.0,
+      "temperature_K": 265.15,
+      "legacy_method": "reverse_zero_crossing",
+      "legacy_rb_ohm": 0.6268178996931487,
+      "ensemble_rb_ohm": 0.6268178996931487,
+      "method_spread_dex": 0.0016205480640101642,
+      "rb_range_dex": 0.0032422806705614537,
+      "applicable_methods": [
+        "reverse_zero_crossing",
+        "reverse_valley"
+      ],
+      "methods": {
+        "reverse_zero_crossing": {
+          "applicable": true,
+          "rb_ohm": 0.6268178996931487,
+          "log10_rb": -0.20285861011830705,
+          "fit_quality": 0.95,
+          "failure_reason": null,
+          "credible": true
+        },
+        "reverse_valley": {
+          "applicable": true,
+          "rb_ohm": 0.631515,
+          "log10_rb": -0.1996163294477456,
+          "fit_quality": 0.8999969643291712,
+          "failure_reason": null,
+          "credible": true
+        },
+        "low_freq_plateau": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Low-freq phase not near zero: mean=76.8° > 20.0°",
+          "credible": false
+        },
+        "equivalent_circuit": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Curve fit failed: `x0` is infeasible.",
+          "credible": false
+        }
+      }
+    },
+    {
+      "temperature_C": 1.0,
+      "temperature_K": 274.15,
+      "legacy_method": "reverse_zero_crossing",
+      "legacy_rb_ohm": 0.5542216649589619,
+      "ensemble_rb_ohm": 0.5542216649589619,
+      "method_spread_dex": 0.0014619734052075692,
+      "rb_range_dex": 0.0029250154063215628,
+      "applicable_methods": [
+        "reverse_zero_crossing",
+        "reverse_valley"
+      ],
+      "methods": {
+        "reverse_zero_crossing": {
+          "applicable": true,
+          "rb_ohm": 0.5542216649589619,
+          "log10_rb": -0.2563165013105114,
+          "fit_quality": 0.95,
+          "failure_reason": null,
+          "credible": true
+        },
+        "reverse_valley": {
+          "applicable": true,
+          "rb_ohm": 0.557967,
+          "log10_rb": -0.25339148590418986,
+          "fit_quality": 0.8999977885418151,
+          "failure_reason": null,
+          "credible": true
+        },
+        "low_freq_plateau": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Low-freq phase not near zero: mean=77.4° > 20.0°",
+          "credible": false
+        },
+        "equivalent_circuit": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Curve fit failed: `x0` is infeasible.",
+          "credible": false
+        }
+      }
+    },
+    {
+      "temperature_C": 10.0,
+      "temperature_K": 283.15,
+      "legacy_method": "reverse_zero_crossing",
+      "legacy_rb_ohm": 0.5327363177570094,
+      "ensemble_rb_ohm": 0.5327363177570094,
+      "method_spread_dex": 0.0006963213505543678,
+      "rb_range_dex": 0.0013931516383731135,
+      "applicable_methods": [
+        "reverse_zero_crossing",
+        "reverse_valley"
+      ],
+      "methods": {
+        "reverse_zero_crossing": {
+          "applicable": true,
+          "rb_ohm": 0.5327363177570094,
+          "log10_rb": -0.27348769543625856,
+          "fit_quality": 0.95,
+          "failure_reason": null,
+          "credible": true
+        },
+        "reverse_valley": {
+          "applicable": true,
+          "rb_ohm": 0.534448,
+          "log10_rb": -0.27209454379788545,
+          "fit_quality": 0.8999988806315186,
+          "failure_reason": null,
+          "credible": true
+        },
+        "low_freq_plateau": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Low-freq phase not near zero: mean=78.0° > 20.0°",
+          "credible": false
+        },
+        "equivalent_circuit": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Curve fit failed: `x0` is infeasible.",
+          "credible": false
+        }
+      }
+    },
+    {
+      "temperature_C": 13.0,
+      "temperature_K": 286.15,
+      "legacy_method": "reverse_zero_crossing",
+      "legacy_rb_ohm": 0.5307031102911899,
+      "ensemble_rb_ohm": 0.5307031102911899,
+      "method_spread_dex": 0.0004073648341663608,
+      "rb_range_dex": 0.0008150274080969133,
+      "applicable_methods": [
+        "reverse_zero_crossing",
+        "reverse_valley"
+      ],
+      "methods": {
+        "reverse_zero_crossing": {
+          "applicable": true,
+          "rb_ohm": 0.5307031102911899,
+          "log10_rb": -0.2751483670939184,
+          "fit_quality": 0.95,
+          "failure_reason": null,
+          "credible": true
+        },
+        "reverse_valley": {
+          "applicable": true,
+          "rb_ohm": 0.5317,
+          "log10_rb": -0.27433333968582146,
+          "fit_quality": 0.8999989498195865,
+          "failure_reason": null,
+          "credible": true
+        },
+        "low_freq_plateau": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Low-freq phase not near zero: mean=78.0° > 20.0°",
+          "credible": false
+        },
+        "equivalent_circuit": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Curve fit failed: `x0` is infeasible.",
+          "credible": false
+        }
+      }
+    },
+    {
+      "temperature_C": 16.0,
+      "temperature_K": 289.15,
+      "legacy_method": "reverse_zero_crossing",
+      "legacy_rb_ohm": 0.5193004098316059,
+      "ensemble_rb_ohm": 0.5193004098316059,
+      "method_spread_dex": 0.00019745317193129854,
+      "rb_range_dex": 0.0003950506567593215,
+      "applicable_methods": [
+        "reverse_zero_crossing",
+        "reverse_valley"
+      ],
+      "methods": {
+        "reverse_zero_crossing": {
+          "applicable": true,
+          "rb_ohm": 0.5193004098316059,
+          "log10_rb": -0.2845813346598355,
+          "fit_quality": 0.95,
+          "failure_reason": null,
+          "credible": true
+        },
+        "reverse_valley": {
+          "applicable": true,
+          "rb_ohm": 0.519773,
+          "log10_rb": -0.28418628400307616,
+          "fit_quality": 0.89999963745734,
+          "failure_reason": null,
+          "credible": true
+        },
+        "low_freq_plateau": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Low-freq phase not near zero: mean=78.2° > 20.0°",
+          "credible": false
+        },
+        "equivalent_circuit": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Curve fit failed: `x0` is infeasible.",
+          "credible": false
+        }
+      }
+    },
+    {
+      "temperature_C": 18.0,
+      "temperature_K": 291.15,
+      "legacy_method": "reverse_zero_crossing",
+      "legacy_rb_ohm": 0.5158849938436607,
+      "ensemble_rb_ohm": 0.5158849938436607,
+      "method_spread_dex": 0.00014259610773984424,
+      "rb_range_dex": 0.0002852964351676146,
+      "applicable_methods": [
+        "reverse_zero_crossing",
+        "reverse_valley"
+      ],
+      "methods": {
+        "reverse_zero_crossing": {
+          "applicable": true,
+          "rb_ohm": 0.5158849938436607,
+          "log10_rb": -0.2874471047796806,
+          "fit_quality": 0.95,
+          "failure_reason": null,
+          "credible": true
+        },
+        "reverse_valley": {
+          "applicable": true,
+          "rb_ohm": 0.516224,
+          "log10_rb": -0.287161808344513,
+          "fit_quality": 0.8999995776482265,
+          "failure_reason": null,
+          "credible": true
+        },
+        "low_freq_plateau": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Low-freq phase not near zero: mean=78.2° > 20.0°",
+          "credible": false
+        },
+        "equivalent_circuit": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Curve fit failed: `x0` is infeasible.",
+          "credible": false
+        }
+      }
+    },
+    {
+      "temperature_C": 22.0,
+      "temperature_K": 295.15,
+      "legacy_method": "reverse_zero_crossing",
+      "legacy_rb_ohm": 0.5060732024942467,
+      "ensemble_rb_ohm": 0.5060732024942467,
+      "method_spread_dex": 8.846361968356573e-05,
+      "rb_range_dex": 0.00017699189423403539,
+      "applicable_methods": [
+        "reverse_zero_crossing",
+        "reverse_valley"
+      ],
+      "methods": {
+        "reverse_zero_crossing": {
+          "applicable": true,
+          "rb_ohm": 0.5060732024942467,
+          "log10_rb": -0.2957866587730123,
+          "fit_quality": 0.95,
+          "failure_reason": null,
+          "credible": true
+        },
+        "reverse_valley": {
+          "applicable": true,
+          "rb_ohm": 0.505867,
+          "log10_rb": -0.29596365066724634,
+          "fit_quality": 0.8999998902680345,
+          "failure_reason": null,
+          "credible": true
+        },
+        "low_freq_plateau": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Low-freq phase not near zero: mean=78.3° > 20.0°",
+          "credible": false
+        },
+        "equivalent_circuit": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Curve fit failed: `x0` is infeasible.",
+          "credible": false
+        }
+      }
+    },
+    {
+      "temperature_C": 25.0,
+      "temperature_K": 298.15,
+      "legacy_method": "reverse_zero_crossing",
+      "legacy_rb_ohm": 0.6867804572051679,
+      "ensemble_rb_ohm": 0.6867804572051679,
+      "method_spread_dex": 0.0003924207838708314,
+      "rb_range_dex": 0.0007851283760084149,
+      "applicable_methods": [
+        "reverse_zero_crossing",
+        "reverse_valley"
+      ],
+      "methods": {
+        "reverse_zero_crossing": {
+          "applicable": true,
+          "rb_ohm": 0.6867804572051679,
+          "log10_rb": -0.16318207147371822,
+          "fit_quality": 0.95,
+          "failure_reason": null,
+          "credible": true
+        },
+        "reverse_valley": {
+          "applicable": true,
+          "rb_ohm": 0.68554,
+          "log10_rb": -0.16396719984972663,
+          "fit_quality": 0.8999997139475436,
+          "failure_reason": null,
+          "credible": true
+        },
+        "low_freq_plateau": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Low-freq phase not near zero: mean=78.4° > 20.0°",
+          "credible": false
+        },
+        "equivalent_circuit": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Curve fit failed: `x0` is infeasible.",
+          "credible": false
+        }
+      }
+    },
+    {
+      "temperature_C": 4.0,
+      "temperature_K": 277.15,
+      "legacy_method": "reverse_zero_crossing",
+      "legacy_rb_ohm": 0.5494669828351217,
+      "ensemble_rb_ohm": 0.5494669828351217,
+      "method_spread_dex": 0.0011057011864147002,
+      "rb_range_dex": 0.0022122105484046473,
+      "applicable_methods": [
+        "reverse_zero_crossing",
+        "reverse_valley"
+      ],
+      "methods": {
+        "reverse_zero_crossing": {
+          "applicable": true,
+          "rb_ohm": 0.5494669828351217,
+          "log10_rb": -0.260058398969922,
+          "fit_quality": 0.95,
+          "failure_reason": null,
+          "credible": true
+        },
+        "reverse_valley": {
+          "applicable": true,
+          "rb_ohm": 0.552273,
+          "log10_rb": -0.25784618842151735,
+          "fit_quality": 0.8999981296158205,
+          "failure_reason": null,
+          "credible": true
+        },
+        "low_freq_plateau": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Low-freq phase not near zero: mean=77.6° > 20.0°",
+          "credible": false
+        },
+        "equivalent_circuit": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Curve fit failed: `x0` is infeasible.",
+          "credible": false
+        }
+      }
+    },
+    {
+      "temperature_C": 7.0,
+      "temperature_K": 280.15,
+      "legacy_method": "reverse_zero_crossing",
+      "legacy_rb_ohm": 0.5371217626947308,
+      "ensemble_rb_ohm": 0.5371217626947308,
+      "method_spread_dex": 0.0008833444535790607,
+      "rb_range_dex": 0.0017673345474567559,
+      "applicable_methods": [
+        "reverse_zero_crossing",
+        "reverse_valley"
+      ],
+      "methods": {
+        "reverse_zero_crossing": {
+          "applicable": true,
+          "rb_ohm": 0.5371217626947308,
+          "log10_rb": -0.26992725085153874,
+          "fit_quality": 0.95,
+          "failure_reason": null,
+          "credible": true
+        },
+        "reverse_valley": {
+          "applicable": true,
+          "rb_ohm": 0.539312,
+          "log10_rb": -0.268159916304082,
+          "fit_quality": 0.8999985442938899,
+          "failure_reason": null,
+          "credible": true
+        },
+        "low_freq_plateau": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Low-freq phase not near zero: mean=77.8° > 20.0°",
+          "credible": false
+        },
+        "equivalent_circuit": {
+          "applicable": false,
+          "rb_ohm": null,
+          "log10_rb": null,
+          "fit_quality": 0.0,
+          "failure_reason": "Curve fit failed: `x0` is infeasible.",
+          "credible": false
+        }
+      }
+    }
+  ]
+}

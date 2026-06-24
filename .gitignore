@@ -41,3 +41,9 @@ data/raw_eis/
 *.bak
 *.zip
 
+# Large media (exceed GitHub 100MB limit; keep local only)
+*.mp4
+*.mov
+*.avi
+*.mkv
+

@@ -1,0 +1,356 @@
+[
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.13藕粉-1_T-11.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-11.0C_seq001.txt",
+    "temperature_C": -11.0,
+    "seq": 1
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.13藕粉-1_T-14.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-14.0C_seq002.txt",
+    "temperature_C": -14.0,
+    "seq": 2
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.13藕粉-1_T-17.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-17.0C_seq003.txt",
+    "temperature_C": -17.0,
+    "seq": 3
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.13藕粉-1_T-2.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-2.0C_seq004.txt",
+    "temperature_C": -2.0,
+    "seq": 4
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.13藕粉-1_T-20.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-20.0C_seq005.txt",
+    "temperature_C": -20.0,
+    "seq": 5
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.13藕粉-1_T-22.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-22.0C_seq006.txt",
+    "temperature_C": -22.0,
+    "seq": 6
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.13藕粉-1_T-23.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-23.0C_seq007.txt",
+    "temperature_C": -23.0,
+    "seq": 7
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.13藕粉-1_T-23.0_f0.1_1000000_V0_#1.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-23.0C_seq008.txt",
+    "temperature_C": -23.0,
+    "seq": 8
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.13藕粉-1_T-24.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-24.0C_seq009.txt",
+    "temperature_C": -24.0,
+    "seq": 9
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.13藕粉-1_T-25.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-25.0C_seq010.txt",
+    "temperature_C": -25.0,
+    "seq": 10
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.13藕粉-1_T-26.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-26.0C_seq011.txt",
+    "temperature_C": -26.0,
+    "seq": 11
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.13藕粉-1_T-26.0_f0.1_1000000_V0_#1.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-26.0C_seq012.txt",
+    "temperature_C": -26.0,
+    "seq": 12
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.13藕粉-1_T-27.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-27.0C_seq013.txt",
+    "temperature_C": -27.0,
+    "seq": 13
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.13藕粉-1_T-28.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-28.0C_seq014.txt",
+    "temperature_C": -28.0,
+    "seq": 14
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.13藕粉-1_T-29.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-29.0C_seq015.txt",
+    "temperature_C": -29.0,
+    "seq": 15
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.13藕粉-1_T-32.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-32.0C_seq016.txt",
+    "temperature_C": -32.0,
+    "seq": 16
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.13藕粉-1_T-5.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-5.0C_seq017.txt",
+    "temperature_C": -5.0,
+    "seq": 17
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.13藕粉-1_T-8.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-8.0C_seq018.txt",
+    "temperature_C": -8.0,
+    "seq": 18
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.13藕粉-1_T1.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T1.0C_seq019.txt",
+    "temperature_C": 1.0,
+    "seq": 19
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.13藕粉-1_T10.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T10.0C_seq020.txt",
+    "temperature_C": 10.0,
+    "seq": 20
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.13藕粉-1_T13.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T13.0C_seq021.txt",
+    "temperature_C": 13.0,
+    "seq": 21
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.13藕粉-1_T16.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T16.0C_seq022.txt",
+    "temperature_C": 16.0,
+    "seq": 22
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.13藕粉-1_T19.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T19.0C_seq023.txt",
+    "temperature_C": 19.0,
+    "seq": 23
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.13藕粉-1_T22.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T22.0C_seq024.txt",
+    "temperature_C": 22.0,
+    "seq": 24
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.13藕粉-1_T4.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T4.0C_seq025.txt",
+    "temperature_C": 4.0,
+    "seq": 25
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.13藕粉-1_T7.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T7.0C_seq026.txt",
+    "temperature_C": 7.0,
+    "seq": 26
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.14藕粉-1_T-28.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-28.0C_seq027.txt",
+    "temperature_C": -28.0,
+    "seq": 27
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.14藕粉-1_T-31.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-31.0C_seq028.txt",
+    "temperature_C": -31.0,
+    "seq": 28
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.14藕粉-1_T-34.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-34.0C_seq029.txt",
+    "temperature_C": -34.0,
+    "seq": 29
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.14藕粉-1_T-36.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-36.0C_seq030.txt",
+    "temperature_C": -36.0,
+    "seq": 30
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.14藕粉-1_T-37.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-37.0C_seq031.txt",
+    "temperature_C": -37.0,
+    "seq": 31
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.14藕粉-1_T-38.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-38.0C_seq032.txt",
+    "temperature_C": -38.0,
+    "seq": 32
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.14藕粉-1_T-39.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-39.0C_seq033.txt",
+    "temperature_C": -39.0,
+    "seq": 33
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.14藕粉-1_T-40.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-40.0C_seq034.txt",
+    "temperature_C": -40.0,
+    "seq": 34
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.14藕粉-1_T-41.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-41.0C_seq035.txt",
+    "temperature_C": -41.0,
+    "seq": 35
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.14藕粉-1_T-42.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-42.0C_seq036.txt",
+    "temperature_C": -42.0,
+    "seq": 36
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.14藕粉-1_T-43.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-43.0C_seq037.txt",
+    "temperature_C": -43.0,
+    "seq": 37
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.14藕粉-1_T-44.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-44.0C_seq038.txt",
+    "temperature_C": -44.0,
+    "seq": 38
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.14藕粉-1_T-45.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-45.0C_seq039.txt",
+    "temperature_C": -45.0,
+    "seq": 39
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.14藕粉-1_T-46.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-46.0C_seq040.txt",
+    "temperature_C": -46.0,
+    "seq": 40
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\6.14藕粉-1_T-47.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-47.0C_seq041.txt",
+    "temperature_C": -47.0,
+    "seq": 41
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\藕粉-1_T-45.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-45.0C_seq042.txt",
+    "temperature_C": -45.0,
+    "seq": 42
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\藕粉-1_T-47.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-47.0C_seq043.txt",
+    "temperature_C": -47.0,
+    "seq": 43
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\藕粉-1_T-48.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-48.0C_seq044.txt",
+    "temperature_C": -48.0,
+    "seq": 44
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\藕粉-1_T-49.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-49.0C_seq045.txt",
+    "temperature_C": -49.0,
+    "seq": 45
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\藕粉-1_T-51.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-51.0C_seq046.txt",
+    "temperature_C": -51.0,
+    "seq": 46
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\藕粉-1_T-54.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-54.0C_seq047.txt",
+    "temperature_C": -54.0,
+    "seq": 47
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\藕粉-1_T-57.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-57.0C_seq048.txt",
+    "temperature_C": -57.0,
+    "seq": 48
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\藕粉-1_T-58.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-58.0C_seq049.txt",
+    "temperature_C": -58.0,
+    "seq": 49
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\藕粉-1_T-61.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-61.0C_seq050.txt",
+    "temperature_C": -61.0,
+    "seq": 50
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\藕粉-1_T-64.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-64.0C_seq051.txt",
+    "temperature_C": -64.0,
+    "seq": 51
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\藕粉-1_T-67.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-67.0C_seq052.txt",
+    "temperature_C": -67.0,
+    "seq": 52
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\藕粉-1_T-70.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-70.0C_seq053.txt",
+    "temperature_C": -70.0,
+    "seq": 53
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\藕粉-1_T-73.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-73.0C_seq054.txt",
+    "temperature_C": -73.0,
+    "seq": 54
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\藕粉-1_T-76.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-76.0C_seq055.txt",
+    "temperature_C": -76.0,
+    "seq": 55
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\藕粉-1_T-79.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-79.0C_seq056.txt",
+    "temperature_C": -79.0,
+    "seq": 56
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\藕粉-1_T-82.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-82.0C_seq057.txt",
+    "temperature_C": -82.0,
+    "seq": 57
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\藕粉-1_T-85.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-85.0C_seq058.txt",
+    "temperature_C": -85.0,
+    "seq": 58
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉\\藕粉-1_T-88.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.15藕粉\\2026.6.15藕粉_T-88.0C_seq059.txt",
+    "temperature_C": -88.0,
+    "seq": 59
+  }
+]

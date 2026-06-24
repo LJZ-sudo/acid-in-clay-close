@@ -1,0 +1,86 @@
+{
+  "experiment": "M6_real_ranker_on_enlarged_pool",
+  "scorer": "REAL production audit_candidates() from s8_stage3.scoring.candidate_audit",
+  "published_ranking_mode": "deterministic_from_candidate_audit (NOT an LLM ranker)",
+  "read_only_source": "V1.0-qianduan-mainline\\stage3_mechanism\\outputs\\verification\\20260607_openrouter_publication_v2",
+  "pool_size_N": 482,
+  "winner": "I1",
+  "winner_frozen_score": 0.8833,
+  "boundary": "I2",
+  "results": {
+    "real_deterministic_ranker": {
+      "winner_rank": 1,
+      "winner_in_top1": true,
+      "winner_in_top3": true,
+      "winner_in_top5": true,
+      "boundary_rank": 54,
+      "winner_score": 0.8833,
+      "top10": [
+        [
+          "I1",
+          "Starch/PVA/organic-modified attapulgite/phosphor",
+          0.8833
+        ],
+        [
+          "SYN461",
+          "polyacrylamide-graft-starch (PAAm-g-starch) hydr",
+          0.8825
+        ],
+        [
+          "SYN462",
+          "polyacrylamide-graft-starch (PAAm-g-starch) hydr",
+          0.8825
+        ],
+        [
+          "SYN463",
+          "polyacrylamide-graft-starch (PAAm-g-starch) hydr",
+          0.8825
+        ],
+        [
+          "SYN464",
+          "polyacrylamide-graft-starch (PAAm-g-starch) hydr",
+          0.8825
+        ],
+        [
+          "SYN465",
+          "polyacrylamide-graft-starch (PAAm-g-starch) hydr",
+          0.8825
+        ],
+        [
+          "SYN466",
+          "polyacrylamide-graft-starch (PAAm-g-starch) hydr",
+          0.8825
+        ],
+        [
+          "SYN467",
+          "polyacrylamide-graft-starch (PAAm-g-starch) hydr",
+          0.8825
+        ],
+        [
+          "SYN468",
+          "polyacrylamide-graft-starch (PAAm-g-starch) hydr",
+          0.8825
+        ],
+        [
+          "SYN469",
+          "polyacrylamide-graft-starch (PAAm-g-starch) hydr",
+          0.8825
+        ]
+      ]
+    },
+    "popularity_freq": {
+      "winner_rank": 1,
+      "winner_in_top3": true
+    },
+    "random": {
+      "p_top1": 0.0021,
+      "p_top3": 0.0062,
+      "p_top5": 0.0104
+    }
+  },
+  "honest_findings": [
+    "The published ranker is DETERMINISTIC code, not an LLM, so this faithful comparison needs no API key and is fully reproducible.",
+    "Synthetic candidates get element_evidence deterministically mapped from the real S08 claim pool, so they are scored by the exact same production function as the real I1-I5; this is a fair, leakage-controlled enlarged-pool test.",
+    "LLM 'intelligence' in the real pipeline lives at S09 (which components to combine + how to justify them). This test holds that fixed and asks: does the real deterministic scorer still surface the validated winner I1 in a large pool?"
+  ]
+}

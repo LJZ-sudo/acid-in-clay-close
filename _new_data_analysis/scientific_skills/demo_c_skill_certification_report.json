@@ -1,0 +1,179 @@
+{
+  "demo": "C - certified scientific skills + dual-account governance",
+  "certified_skill": {
+    "skill_id": "eis-point-analysis",
+    "version": "2.0.0",
+    "applicability_domain": {
+      "temperature_C": [
+        -90.0,
+        30.0
+      ]
+    },
+    "validators_passed": [
+      "rb_method_invariance",
+      "evidence_admission",
+      "synthetic_fpr"
+    ],
+    "risk_estimate": 0.04,
+    "risk_upper_bound": 0.1,
+    "contract_hash": "ffb0b6b140e396ef1fec1dd786f4c6d57c261035e33ce4134a95a31bb04c043c",
+    "code_hash": "demo",
+    "lifecycle_state": "VALIDATED",
+    "expiry": null
+  },
+  "checks": {
+    "skill_certified_validated": true,
+    "control_plane_only_validated_and_in_domain": true,
+    "out_of_cert_reject_reason": "out_of_certified_domain",
+    "not_validated_reject_reason": "not_validated(state=DRAFT)",
+    "composition_post_models_pre": true,
+    "broken_chain_missing": [
+      {
+        "skill": "objective-extraction",
+        "missing_preconditions": [
+          "sigma_per_point",
+          "ea_segments"
+        ],
+        "ok": false
+      }
+    ],
+    "dual_account_separated_confidence_not_authority": true,
+    "overconfident_agent_penalized": true,
+    "risk_coverage_nontrivial_vs_const_hold": true
+  },
+  "risk_coverage": {
+    "n_claims": 12,
+    "curve": [
+      {
+        "threshold": 0.0,
+        "coverage": 1.0,
+        "risk": 0.4167,
+        "n_released": 12
+      },
+      {
+        "threshold": 0.05,
+        "coverage": 1.0,
+        "risk": 0.4167,
+        "n_released": 12
+      },
+      {
+        "threshold": 0.1,
+        "coverage": 1.0,
+        "risk": 0.4167,
+        "n_released": 12
+      },
+      {
+        "threshold": 0.15,
+        "coverage": 1.0,
+        "risk": 0.4167,
+        "n_released": 12
+      },
+      {
+        "threshold": 0.2,
+        "coverage": 1.0,
+        "risk": 0.4167,
+        "n_released": 12
+      },
+      {
+        "threshold": 0.25,
+        "coverage": 1.0,
+        "risk": 0.4167,
+        "n_released": 12
+      },
+      {
+        "threshold": 0.3,
+        "coverage": 1.0,
+        "risk": 0.4167,
+        "n_released": 12
+      },
+      {
+        "threshold": 0.35,
+        "coverage": 0.9167,
+        "risk": 0.3636,
+        "n_released": 11
+      },
+      {
+        "threshold": 0.4,
+        "coverage": 0.9167,
+        "risk": 0.3636,
+        "n_released": 11
+      },
+      {
+        "threshold": 0.45,
+        "coverage": 0.8333,
+        "risk": 0.3,
+        "n_released": 10
+      },
+      {
+        "threshold": 0.5,
+        "coverage": 0.8333,
+        "risk": 0.3,
+        "n_released": 10
+      },
+      {
+        "threshold": 0.55,
+        "coverage": 0.75,
+        "risk": 0.3333,
+        "n_released": 9
+      },
+      {
+        "threshold": 0.6,
+        "coverage": 0.6667,
+        "risk": 0.25,
+        "n_released": 8
+      },
+      {
+        "threshold": 0.65,
+        "coverage": 0.6667,
+        "risk": 0.25,
+        "n_released": 8
+      },
+      {
+        "threshold": 0.7,
+        "coverage": 0.5833,
+        "risk": 0.1429,
+        "n_released": 7
+      },
+      {
+        "threshold": 0.75,
+        "coverage": 0.5,
+        "risk": 0.1667,
+        "n_released": 6
+      },
+      {
+        "threshold": 0.8,
+        "coverage": 0.5,
+        "risk": 0.1667,
+        "n_released": 6
+      },
+      {
+        "threshold": 0.85,
+        "coverage": 0.4167,
+        "risk": 0.0,
+        "n_released": 5
+      },
+      {
+        "threshold": 0.9,
+        "coverage": 0.3333,
+        "risk": 0.0,
+        "n_released": 4
+      },
+      {
+        "threshold": 0.95,
+        "coverage": 0.1667,
+        "risk": 0.0,
+        "n_released": 2
+      },
+      {
+        "threshold": 1.0,
+        "coverage": 0.0,
+        "risk": 0.0,
+        "n_released": 0
+      }
+    ],
+    "max_coverage_at_risk_0.05": 0.4167,
+    "max_coverage_at_risk_0.10": 0.4167,
+    "const_hold_coverage": 0.0
+  },
+  "acceptance_pass": true
+}

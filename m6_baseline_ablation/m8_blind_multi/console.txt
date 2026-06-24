@@ -1,0 +1,10 @@
+[judge] anthropic/claude-3.5-sonnet unreachable: [LLMGateway] All retries failed for step=judge_smoke: Error code: 404 - {'error'
+[judge] deepseek/deepseek-chat unreachable: [LLMGateway] All retries failed for step=judge_smoke: Error code: 429 - {'error'
+[judge] x-ai/grok-2-1212 unreachable: [LLMGateway] All retries failed for step=judge_smoke: Error code: 404 - {'error'
+[cfg] gen=openai/gpt-5.4 judges=['google/gemini-2.5-flash', 'meta-llama/llama-3.3-70b-instruct'] seeds=[1, 2, 3]
+  judge=google/gemini-2.5-flash seed=1: scored 11
+  judge=meta-llama/llama-3.3-70b-instruct seed=1: scored 11
+  judge=google/gemini-2.5-flash seed=2: scored 11
+  judge=meta-llama/llama-3.3-70b-instruct seed=2: scored 11
+  judge=google/gemini-2.5-flash seed=3: scored 11
+  judge=meta-llama/llama-3.3-70b-instruct seed=3: scored 11

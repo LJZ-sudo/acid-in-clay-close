@@ -1,0 +1,40 @@
+{
+  "_source": "stage3_mechanism/outputs/verification/20260607_openrouter_publication_v2/13_claim_audit/claim_audit_report.json",
+  "_note": "确定性 claim 审计阶梯。is_supported 与措辞均为真实输出。",
+  "run_id": "stage3-1842d1f1ea",
+  "publication_blockers": 0,
+  "ladder": [
+    {
+      "level": "closed_loop_source_system",
+      "label": "闭环母体系",
+      "allowed_zh": "酸-黏土是闭环母体系，经历了多轮真实前瞻 BO 优化。",
+      "supported": true
+    },
+    {
+      "level": "mechanism_discovery",
+      "label": "机理发现",
+      "allowed_zh": "受 Stage2 证据约束的 LLM 机理假设，给出'受限相 vs 体相质子 + 过饱和交叉'的获胜机理。",
+      "forbidden_zh": "禁止说'LLM 证明了机理'；证明需要实验 + 统计。",
+      "supported": true
+    },
+    {
+      "level": "llm_transfer_candidate",
+      "label": "迁移候选",
+      "allowed_zh": "LLM 从广义文献池中选择并重组了莲藕淀粉证据。",
+      "forbidden_zh": "禁止升级为'独立发现'：broad_literature_pool_selection → 只能说'选择 / 重组'。",
+      "robustness": "stable（top1=1.0，top3 Jaccard=1.0）",
+      "supported": true
+    },
+    {
+      "level": "prospective_validation",
+      "label": "前瞻验证",
+      "allowed_zh": "LLM 排名候选在实验前被冻结，随后由宽温 EIS 验证。",
+      "supported": true
+    }
+  ],
+  "highlight": {
+    "from": "AI 独立发现了新材料",
+    "to": "AI 选择并重组了已有证据（可审计）",
+    "caption": "确定性审计当场拦截过度声称 —— 玻璃箱，而非黑箱"
+  }
+}

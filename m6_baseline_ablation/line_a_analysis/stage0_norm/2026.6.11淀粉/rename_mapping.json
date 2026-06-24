@@ -1,0 +1,230 @@
+[
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.11淀粉\\淀粉-2-0.628_T-12.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.11淀粉\\2026.6.11淀粉_T-12.0C_seq001.txt",
+    "temperature_C": -12.0,
+    "seq": 1
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.11淀粉\\淀粉-2-0.628_T-15.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.11淀粉\\2026.6.11淀粉_T-15.0C_seq002.txt",
+    "temperature_C": -15.0,
+    "seq": 2
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.11淀粉\\淀粉-2-0.628_T-18.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.11淀粉\\2026.6.11淀粉_T-18.0C_seq003.txt",
+    "temperature_C": -18.0,
+    "seq": 3
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.11淀粉\\淀粉-2-0.628_T-21.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.11淀粉\\2026.6.11淀粉_T-21.0C_seq004.txt",
+    "temperature_C": -21.0,
+    "seq": 4
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.11淀粉\\淀粉-2-0.628_T-24.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.11淀粉\\2026.6.11淀粉_T-24.0C_seq005.txt",
+    "temperature_C": -24.0,
+    "seq": 5
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.11淀粉\\淀粉-2-0.628_T-27.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.11淀粉\\2026.6.11淀粉_T-27.0C_seq006.txt",
+    "temperature_C": -27.0,
+    "seq": 6
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.11淀粉\\淀粉-2-0.628_T-3.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.11淀粉\\2026.6.11淀粉_T-3.0C_seq007.txt",
+    "temperature_C": -3.0,
+    "seq": 7
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.11淀粉\\淀粉-2-0.628_T-30.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.11淀粉\\2026.6.11淀粉_T-30.0C_seq008.txt",
+    "temperature_C": -30.0,
+    "seq": 8
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.11淀粉\\淀粉-2-0.628_T-33.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.11淀粉\\2026.6.11淀粉_T-33.0C_seq009.txt",
+    "temperature_C": -33.0,
+    "seq": 9
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.11淀粉\\淀粉-2-0.628_T-36.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.11淀粉\\2026.6.11淀粉_T-36.0C_seq010.txt",
+    "temperature_C": -36.0,
+    "seq": 10
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.11淀粉\\淀粉-2-0.628_T-39.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.11淀粉\\2026.6.11淀粉_T-39.0C_seq011.txt",
+    "temperature_C": -39.0,
+    "seq": 11
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.11淀粉\\淀粉-2-0.628_T-42.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.11淀粉\\2026.6.11淀粉_T-42.0C_seq012.txt",
+    "temperature_C": -42.0,
+    "seq": 12
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.11淀粉\\淀粉-2-0.628_T-45.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.11淀粉\\2026.6.11淀粉_T-45.0C_seq013.txt",
+    "temperature_C": -45.0,
+    "seq": 13
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.11淀粉\\淀粉-2-0.628_T-48.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.11淀粉\\2026.6.11淀粉_T-48.0C_seq014.txt",
+    "temperature_C": -48.0,
+    "seq": 14
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.11淀粉\\淀粉-2-0.628_T-51.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.11淀粉\\2026.6.11淀粉_T-51.0C_seq015.txt",
+    "temperature_C": -51.0,
+    "seq": 15
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.11淀粉\\淀粉-2-0.628_T-54.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.11淀粉\\2026.6.11淀粉_T-54.0C_seq016.txt",
+    "temperature_C": -54.0,
+    "seq": 16
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.11淀粉\\淀粉-2-0.628_T-57.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.11淀粉\\2026.6.11淀粉_T-57.0C_seq017.txt",
+    "temperature_C": -57.0,
+    "seq": 17
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.11淀粉\\淀粉-2-0.628_T-6.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.11淀粉\\2026.6.11淀粉_T-6.0C_seq018.txt",
+    "temperature_C": -6.0,
+    "seq": 18
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.11淀粉\\淀粉-2-0.628_T-60.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.11淀粉\\2026.6.11淀粉_T-60.0C_seq019.txt",
+    "temperature_C": -60.0,
+    "seq": 19
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.11淀粉\\淀粉-2-0.628_T-63.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.11淀粉\\2026.6.11淀粉_T-63.0C_seq020.txt",
+    "temperature_C": -63.0,
+    "seq": 20
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.11淀粉\\淀粉-2-0.628_T-66.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.11淀粉\\2026.6.11淀粉_T-66.0C_seq021.txt",
+    "temperature_C": -66.0,
+    "seq": 21
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.11淀粉\\淀粉-2-0.628_T-69.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.11淀粉\\2026.6.11淀粉_T-69.0C_seq022.txt",
+    "temperature_C": -69.0,
+    "seq": 22
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.11淀粉\\淀粉-2-0.628_T-72.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.11淀粉\\2026.6.11淀粉_T-72.0C_seq023.txt",
+    "temperature_C": -72.0,
+    "seq": 23
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.11淀粉\\淀粉-2-0.628_T-75.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.11淀粉\\2026.6.11淀粉_T-75.0C_seq024.txt",
+    "temperature_C": -75.0,
+    "seq": 24
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.11淀粉\\淀粉-2-0.628_T-78.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.11淀粉\\2026.6.11淀粉_T-78.0C_seq025.txt",
+    "temperature_C": -78.0,
+    "seq": 25
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.11淀粉\\淀粉-2-0.628_T-81.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.11淀粉\\2026.6.11淀粉_T-81.0C_seq026.txt",
+    "temperature_C": -81.0,
+    "seq": 26
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.11淀粉\\淀粉-2-0.628_T-84.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.11淀粉\\2026.6.11淀粉_T-84.0C_seq027.txt",
+    "temperature_C": -84.0,
+    "seq": 27
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.11淀粉\\淀粉-2-0.628_T-87.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.11淀粉\\2026.6.11淀粉_T-87.0C_seq028.txt",
+    "temperature_C": -87.0,
+    "seq": 28
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.11淀粉\\淀粉-2-0.628_T-9.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.11淀粉\\2026.6.11淀粉_T-9.0C_seq029.txt",
+    "temperature_C": -9.0,
+    "seq": 29
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.11淀粉\\淀粉-2-0.628_T-90.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.11淀粉\\2026.6.11淀粉_T-90.0C_seq030.txt",
+    "temperature_C": -90.0,
+    "seq": 30
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.11淀粉\\淀粉-2-0.628_T0.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.11淀粉\\2026.6.11淀粉_T0.0C_seq031.txt",
+    "temperature_C": 0.0,
+    "seq": 31
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.11淀粉\\淀粉-2-0.628_T12.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.11淀粉\\2026.6.11淀粉_T12.0C_seq032.txt",
+    "temperature_C": 12.0,
+    "seq": 32
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.11淀粉\\淀粉-2-0.628_T15.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.11淀粉\\2026.6.11淀粉_T15.0C_seq033.txt",
+    "temperature_C": 15.0,
+    "seq": 33
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.11淀粉\\淀粉-2-0.628_T18.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.11淀粉\\2026.6.11淀粉_T18.0C_seq034.txt",
+    "temperature_C": 18.0,
+    "seq": 34
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.11淀粉\\淀粉-2-0.628_T21.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.11淀粉\\2026.6.11淀粉_T21.0C_seq035.txt",
+    "temperature_C": 21.0,
+    "seq": 35
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.11淀粉\\淀粉-2-0.628_T3.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.11淀粉\\2026.6.11淀粉_T3.0C_seq036.txt",
+    "temperature_C": 3.0,
+    "seq": 36
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.11淀粉\\淀粉-2-0.628_T6.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.11淀粉\\2026.6.11淀粉_T6.0C_seq037.txt",
+    "temperature_C": 6.0,
+    "seq": 37
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.11淀粉\\淀粉-2-0.628_T9.0_f0.1_1000000_V0.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.11淀粉\\2026.6.11淀粉_T9.0C_seq038.txt",
+    "temperature_C": 9.0,
+    "seq": 38
+  }
+]

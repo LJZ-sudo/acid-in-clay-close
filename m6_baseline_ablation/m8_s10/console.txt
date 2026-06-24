@@ -1,0 +1,11 @@
+[cfg] model=openai/gpt-5.4 s10_det=False (real LLM ranker)
+[input] governed=5 distractors=3 total=8
+[s10] calling real LLM ranker ...
+  #1 [governed  ] score=0.77 I2 Starch/PVA/choline chloride-phosphoric acid eute
+  #2 [governed  ] score=0.76 I1 Chitosan/PVA/attapulgite/phosphoric acid quatern
+  #3 [governed  ] score=0.74 I4 Chitosan/halloysite/phosphoric acid composite me
+  #4 [governed  ] score=0.63 I3 Phosphoric acid in halloysite nanotubes
+  #5 [governed  ] score=0.62 I5 Phosphate glass/starch/PVA hybrid membrane
+  #6 [DISTRACTOR] score=0.27 X1 LiFePO4 lithium-ion battery cathode
+  #7 [DISTRACTOR] score=0.27 X2 Silicon nanostructured Li-ion anode
+  #8 [DISTRACTOR] score=0.27 X3 CsPbI3 perovskite solar absorber

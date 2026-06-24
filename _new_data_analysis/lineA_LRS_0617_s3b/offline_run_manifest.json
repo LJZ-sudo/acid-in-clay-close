@@ -1,0 +1,19 @@
+{
+  "generated_at": "2026-06-21T19:43:56.196287",
+  "mode": "offline",
+  "material": "lineA_LRS_0617_s3b",
+  "data_dir": "c:/Users/JZ/Desktop/paper/acid-in-clay-close/V1.0-qianduan-mainline/data/新材料/2026.6.17",
+  "output_dir": "c:/Users/JZ/Desktop/paper/acid-in-clay-close/_new_data_analysis/lineA_LRS_0617_s3b",
+  "chi_pattern": "*.txt",
+  "dta_dir": null,
+  "dta_pattern": "*.dta",
+  "strict_mode": false,
+  "arrhenius_enabled": true,
+  "reporting_enabled": false,
+  "total_files": 41,
+  "successful_files": 40,
+  "failed_files": 1,
+  "duration_seconds": 1.212692,
+  "report_paths": [],
+  "arrhenius_success": true
+}

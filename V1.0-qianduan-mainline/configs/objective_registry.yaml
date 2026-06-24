@@ -1,0 +1,48 @@
+# 目标函数注册表（冻结配置）— M1-6 / G7
+# ---------------------------------------------------------------------------
+# 消除评分口径漂移：把"训练目标"与"审计/展示目标"显式隔离、各带冻结哈希。
+# 对应 stage1_optimization/objectives/registry.py。
+# 两式物理量相同、变量名不同（campaign 用 conductivity_room_temp_S_cm/ea_high_temp_eV，
+# Pareto 审计用 sigma_RT/Ea_high），故必须在 schema/论文里明确"哪个用于什么"。
+objective_registry_version: "objective-registry-v2.0.0"
+created: "2026-06-22"
+frozen: true
+
+objectives:
+  - id: attapulgite_combined_score_v1
+    role: optimization_primary          # 训练 / best trial / 终止 / 复现地板比较
+    direction: maximize
+    trial_objective_key: combined_score # trial.objectives 里的实际键名
+    # 来源：attapulgite_aice_campaign.json :: objective.formula（逐字一致）
+    expression: "math.log10(conductivity_room_temp_S_cm) - 3.0 * ea_high_temp_eV - 0.5 * ea_low_excess_eV"
+    variables: [conductivity_room_temp_S_cm, ea_high_temp_eV, ea_low_excess_eV]
+    units: dimensionless
+    frozen: true
+    source: "stage1_optimization/campaigns/attapulgite_aice_campaign.json"
+
+  - id: audit_score_v3
+    role: diagnostic_only               # 仅 Pareto 标注 / 展示，绝不用于训练或宣布成功
+    direction: maximize
+    trial_objective_key: score_v3       # mobo_optimizer.annotate_pareto 标注的键名
+    # 来源：optimizers/mobo_optimizer.py :: score_v3（locked v2 objective spec）
+    expression: "log10(sigma_RT) - 1.0 * Ea_high - 0.2 * ea_low_excess"
+    variables: [sigma_RT, Ea_high, ea_low_excess]
+    units: dimensionless
+    frozen: true
+    source: "three_pillars/pillar3_eis_in_the_loop/bo_v2_objective_spec_20260527.md"
+
+# 各用途绑定（论文/代码引用此表，避免"优化一个目标、用另一个宣布成功"）
+role_bindings:
+  training:                 attapulgite_combined_score_v1
+  best_trial:               attapulgite_combined_score_v1
+  termination:              attapulgite_combined_score_v1
+  reproducibility_floor:    attapulgite_combined_score_v1
+  paper_main_figure:        attapulgite_combined_score_v1
+  pareto_annotation:        audit_score_v3
+  display_only:             audit_score_v3
+
+# 物理量等价映射（两式同物理量、异变量名）
+variable_aliases:
+  conductivity_room_temp_S_cm: sigma_RT
+  ea_high_temp_eV: Ea_high
+  ea_low_excess_eV: ea_low_excess

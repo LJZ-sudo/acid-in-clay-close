@@ -1,0 +1,43 @@
+{
+  "success": true,
+  "n_points": 37,
+  "base_model_type": "continuous_3",
+  "base_n_segments": 3,
+  "base_transition_temps_K": [
+    239.27794132402013,
+    184.46051550557942
+  ],
+  "n_boot_ok": 150,
+  "model_probabilities": {
+    "continuous_3": 1.0
+  },
+  "p_any_break": 1.0,
+  "breakpoint_median_K": 239.2851115521322,
+  "breakpoint_ci95_K": [
+    237.3670551119705,
+    241.1500000943651
+  ],
+  "breakpoint_ci95_width_K": 3.7829449823946106,
+  "slope_change_median": -6.715984858609794,
+  "slope_change_ci95": [
+    -7.086331720627023,
+    -6.297513405205303
+  ],
+  "practical_identifiability": "robust_empirical_transition",
+  "dataset": "lineA_LRS_6.12",
+  "provenance": {
+    "analysis_version": "stage0-eis-v2.0.0",
+    "admission_policy_version": "evidence-policy-v2.0.0",
+    "objective_registry_version": "objective-registry-v2.0.0",
+    "rb_method_policy_version": "rb-method-v2.0.0",
+    "config_sha256": {
+      "stage0_v2_policy": "da45db8ed5327d9d45407e314014ed811eca46f00baf8165bf601348454be1af",
+      "rb_method_policy": "43949a81157d42afe6e16713ece534dcd99c3cafd03712e05cbb6b640ede117a",
+      "evidence_admission_v2": "4931d6e794f1056445f8621de5c39702466c82d3c39f9f050e00b9e397a45960",
+      "objective_registry": "193a65c7b5d39235ef29a8e29c72429e965490dfa8424dc216d169269ab7fac5"
+    },
+    "git_commit": "fb17c68",
+    "generated_at": "2026-06-22T14:20:33.860196+08:00",
+    "n_boot": 150
+  }
+}

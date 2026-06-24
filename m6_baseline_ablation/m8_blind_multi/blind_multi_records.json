@@ -1,0 +1,530 @@
+[
+  {
+    "seed": 1,
+    "judge": "google/gemini-2.5-flash",
+    "id": "C01",
+    "source": "governed",
+    "plausibility": 5.0,
+    "groundedness": 5.0
+  },
+  {
+    "seed": 1,
+    "judge": "google/gemini-2.5-flash",
+    "id": "C02",
+    "source": "random",
+    "plausibility": 3.0,
+    "groundedness": 4.0
+  },
+  {
+    "seed": 1,
+    "judge": "google/gemini-2.5-flash",
+    "id": "C03",
+    "source": "popularity",
+    "plausibility": 1.0,
+    "groundedness": 1.0
+  },
+  {
+    "seed": 1,
+    "judge": "google/gemini-2.5-flash",
+    "id": "C04",
+    "source": "random",
+    "plausibility": 2.0,
+    "groundedness": 2.0
+  },
+  {
+    "seed": 1,
+    "judge": "google/gemini-2.5-flash",
+    "id": "C05",
+    "source": "popularity",
+    "plausibility": 1.0,
+    "groundedness": 1.0
+  },
+  {
+    "seed": 1,
+    "judge": "google/gemini-2.5-flash",
+    "id": "C06",
+    "source": "random",
+    "plausibility": 2.0,
+    "groundedness": 3.0
+  },
+  {
+    "seed": 1,
+    "judge": "google/gemini-2.5-flash",
+    "id": "C07",
+    "source": "governed",
+    "plausibility": 5.0,
+    "groundedness": 5.0
+  },
+  {
+    "seed": 1,
+    "judge": "google/gemini-2.5-flash",
+    "id": "C08",
+    "source": "governed",
+    "plausibility": 5.0,
+    "groundedness": 5.0
+  },
+  {
+    "seed": 1,
+    "judge": "google/gemini-2.5-flash",
+    "id": "C09",
+    "source": "governed",
+    "plausibility": 4.0,
+    "groundedness": 5.0
+  },
+  {
+    "seed": 1,
+    "judge": "google/gemini-2.5-flash",
+    "id": "C10",
+    "source": "governed",
+    "plausibility": 3.0,
+    "groundedness": 4.0
+  },
+  {
+    "seed": 1,
+    "judge": "google/gemini-2.5-flash",
+    "id": "C11",
+    "source": "popularity",
+    "plausibility": 1.0,
+    "groundedness": 1.0
+  },
+  {
+    "seed": 1,
+    "judge": "meta-llama/llama-3.3-70b-instruct",
+    "id": "C01",
+    "source": "governed",
+    "plausibility": 5.0,
+    "groundedness": 5.0
+  },
+  {
+    "seed": 1,
+    "judge": "meta-llama/llama-3.3-70b-instruct",
+    "id": "C02",
+    "source": "random",
+    "plausibility": 3.0,
+    "groundedness": 4.0
+  },
+  {
+    "seed": 1,
+    "judge": "meta-llama/llama-3.3-70b-instruct",
+    "id": "C03",
+    "source": "popularity",
+    "plausibility": 1.0,
+    "groundedness": 1.0
+  },
+  {
+    "seed": 1,
+    "judge": "meta-llama/llama-3.3-70b-instruct",
+    "id": "C04",
+    "source": "random",
+    "plausibility": 2.0,
+    "groundedness": 2.0
+  },
+  {
+    "seed": 1,
+    "judge": "meta-llama/llama-3.3-70b-instruct",
+    "id": "C05",
+    "source": "popularity",
+    "plausibility": 1.0,
+    "groundedness": 1.0
+  },
+  {
+    "seed": 1,
+    "judge": "meta-llama/llama-3.3-70b-instruct",
+    "id": "C06",
+    "source": "random",
+    "plausibility": 3.0,
+    "groundedness": 3.0
+  },
+  {
+    "seed": 1,
+    "judge": "meta-llama/llama-3.3-70b-instruct",
+    "id": "C07",
+    "source": "governed",
+    "plausibility": 5.0,
+    "groundedness": 5.0
+  },
+  {
+    "seed": 1,
+    "judge": "meta-llama/llama-3.3-70b-instruct",
+    "id": "C08",
+    "source": "governed",
+    "plausibility": 5.0,
+    "groundedness": 5.0
+  },
+  {
+    "seed": 1,
+    "judge": "meta-llama/llama-3.3-70b-instruct",
+    "id": "C09",
+    "source": "governed",
+    "plausibility": 5.0,
+    "groundedness": 5.0
+  },
+  {
+    "seed": 1,
+    "judge": "meta-llama/llama-3.3-70b-instruct",
+    "id": "C10",
+    "source": "governed",
+    "plausibility": 4.0,
+    "groundedness": 5.0
+  },
+  {
+    "seed": 1,
+    "judge": "meta-llama/llama-3.3-70b-instruct",
+    "id": "C11",
+    "source": "popularity",
+    "plausibility": 1.0,
+    "groundedness": 1.0
+  },
+  {
+    "seed": 2,
+    "judge": "google/gemini-2.5-flash",
+    "id": "C01",
+    "source": "governed",
+    "plausibility": 4.0,
+    "groundedness": 5.0
+  },
+  {
+    "seed": 2,
+    "judge": "google/gemini-2.5-flash",
+    "id": "C02",
+    "source": "governed",
+    "plausibility": 4.0,
+    "groundedness": 5.0
+  },
+  {
+    "seed": 2,
+    "judge": "google/gemini-2.5-flash",
+    "id": "C03",
+    "source": "governed",
+    "plausibility": 4.0,
+    "groundedness": 5.0
+  },
+  {
+    "seed": 2,
+    "judge": "google/gemini-2.5-flash",
+    "id": "C04",
+    "source": "popularity",
+    "plausibility": 1.0,
+    "groundedness": 1.0
+  },
+  {
+    "seed": 2,
+    "judge": "google/gemini-2.5-flash",
+    "id": "C05",
+    "source": "random",
+    "plausibility": 1.0,
+    "groundedness": 2.0
+  },
+  {
+    "seed": 2,
+    "judge": "google/gemini-2.5-flash",
+    "id": "C06",
+    "source": "random",
+    "plausibility": 2.0,
+    "groundedness": 3.0
+  },
+  {
+    "seed": 2,
+    "judge": "google/gemini-2.5-flash",
+    "id": "C07",
+    "source": "random",
+    "plausibility": 3.0,
+    "groundedness": 4.0
+  },
+  {
+    "seed": 2,
+    "judge": "google/gemini-2.5-flash",
+    "id": "C08",
+    "source": "governed",
+    "plausibility": 5.0,
+    "groundedness": 5.0
+  },
+  {
+    "seed": 2,
+    "judge": "google/gemini-2.5-flash",
+    "id": "C09",
+    "source": "popularity",
+    "plausibility": 1.0,
+    "groundedness": 1.0
+  },
+  {
+    "seed": 2,
+    "judge": "google/gemini-2.5-flash",
+    "id": "C10",
+    "source": "popularity",
+    "plausibility": 1.0,
+    "groundedness": 1.0
+  },
+  {
+    "seed": 2,
+    "judge": "google/gemini-2.5-flash",
+    "id": "C11",
+    "source": "governed",
+    "plausibility": 3.0,
+    "groundedness": 5.0
+  },
+  {
+    "seed": 2,
+    "judge": "meta-llama/llama-3.3-70b-instruct",
+    "id": "C01",
+    "source": "governed",
+    "plausibility": 4.0,
+    "groundedness": 5.0
+  },
+  {
+    "seed": 2,
+    "judge": "meta-llama/llama-3.3-70b-instruct",
+    "id": "C02",
+    "source": "governed",
+    "plausibility": 4.0,
+    "groundedness": 5.0
+  },
+  {
+    "seed": 2,
+    "judge": "meta-llama/llama-3.3-70b-instruct",
+    "id": "C03",
+    "source": "governed",
+    "plausibility": 4.0,
+    "groundedness": 5.0
+  },
+  {
+    "seed": 2,
+    "judge": "meta-llama/llama-3.3-70b-instruct",
+    "id": "C04",
+    "source": "popularity",
+    "plausibility": 1.0,
+    "groundedness": 1.0
+  },
+  {
+    "seed": 2,
+    "judge": "meta-llama/llama-3.3-70b-instruct",
+    "id": "C05",
+    "source": "random",
+    "plausibility": 2.0,
+    "groundedness": 2.0
+  },
+  {
+    "seed": 2,
+    "judge": "meta-llama/llama-3.3-70b-instruct",
+    "id": "C06",
+    "source": "random",
+    "plausibility": 2.0,
+    "groundedness": 2.0
+  },
+  {
+    "seed": 2,
+    "judge": "meta-llama/llama-3.3-70b-instruct",
+    "id": "C07",
+    "source": "random",
+    "plausibility": 3.0,
+    "groundedness": 3.0
+  },
+  {
+    "seed": 2,
+    "judge": "meta-llama/llama-3.3-70b-instruct",
+    "id": "C08",
+    "source": "governed",
+    "plausibility": 4.0,
+    "groundedness": 5.0
+  },
+  {
+    "seed": 2,
+    "judge": "meta-llama/llama-3.3-70b-instruct",
+    "id": "C09",
+    "source": "popularity",
+    "plausibility": 1.0,
+    "groundedness": 1.0
+  },
+  {
+    "seed": 2,
+    "judge": "meta-llama/llama-3.3-70b-instruct",
+    "id": "C10",
+    "source": "popularity",
+    "plausibility": 1.0,
+    "groundedness": 1.0
+  },
+  {
+    "seed": 2,
+    "judge": "meta-llama/llama-3.3-70b-instruct",
+    "id": "C11",
+    "source": "governed",
+    "plausibility": 4.0,
+    "groundedness": 5.0
+  },
+  {
+    "seed": 3,
+    "judge": "google/gemini-2.5-flash",
+    "id": "C01",
+    "source": "random",
+    "plausibility": 1.0,
+    "groundedness": 1.0
+  },
+  {
+    "seed": 3,
+    "judge": "google/gemini-2.5-flash",
+    "id": "C02",
+    "source": "governed",
+    "plausibility": 4.0,
+    "groundedness": 5.0
+  },
+  {
+    "seed": 3,
+    "judge": "google/gemini-2.5-flash",
+    "id": "C03",
+    "source": "governed",
+    "plausibility": 4.0,
+    "groundedness": 5.0
+  },
+  {
+    "seed": 3,
+    "judge": "google/gemini-2.5-flash",
+    "id": "C04",
+    "source": "popularity",
+    "plausibility": 1.0,
+    "groundedness": 1.0
+  },
+  {
+    "seed": 3,
+    "judge": "google/gemini-2.5-flash",
+    "id": "C05",
+    "source": "popularity",
+    "plausibility": 1.0,
+    "groundedness": 1.0
+  },
+  {
+    "seed": 3,
+    "judge": "google/gemini-2.5-flash",
+    "id": "C06",
+    "source": "random",
+    "plausibility": 1.0,
+    "groundedness": 1.0
+  },
+  {
+    "seed": 3,
+    "judge": "google/gemini-2.5-flash",
+    "id": "C07",
+    "source": "random",
+    "plausibility": 1.0,
+    "groundedness": 1.0
+  },
+  {
+    "seed": 3,
+    "judge": "google/gemini-2.5-flash",
+    "id": "C08",
+    "source": "popularity",
+    "plausibility": 1.0,
+    "groundedness": 1.0
+  },
+  {
+    "seed": 3,
+    "judge": "google/gemini-2.5-flash",
+    "id": "C09",
+    "source": "governed",
+    "plausibility": 3.0,
+    "groundedness": 5.0
+  },
+  {
+    "seed": 3,
+    "judge": "google/gemini-2.5-flash",
+    "id": "C10",
+    "source": "governed",
+    "plausibility": 4.0,
+    "groundedness": 5.0
+  },
+  {
+    "seed": 3,
+    "judge": "google/gemini-2.5-flash",
+    "id": "C11",
+    "source": "governed",
+    "plausibility": 4.0,
+    "groundedness": 5.0
+  },
+  {
+    "seed": 3,
+    "judge": "meta-llama/llama-3.3-70b-instruct",
+    "id": "C01",
+    "source": "random",
+    "plausibility": 2.0,
+    "groundedness": 1.0
+  },
+  {
+    "seed": 3,
+    "judge": "meta-llama/llama-3.3-70b-instruct",
+    "id": "C02",
+    "source": "governed",
+    "plausibility": 5.0,
+    "groundedness": 5.0
+  },
+  {
+    "seed": 3,
+    "judge": "meta-llama/llama-3.3-70b-instruct",
+    "id": "C03",
+    "source": "governed",
+    "plausibility": 5.0,
+    "groundedness": 5.0
+  },
+  {
+    "seed": 3,
+    "judge": "meta-llama/llama-3.3-70b-instruct",
+    "id": "C04",
+    "source": "popularity",
+    "plausibility": 1.0,
+    "groundedness": 1.0
+  },
+  {
+    "seed": 3,
+    "judge": "meta-llama/llama-3.3-70b-instruct",
+    "id": "C05",
+    "source": "popularity",
+    "plausibility": 1.0,
+    "groundedness": 1.0
+  },
+  {
+    "seed": 3,
+    "judge": "meta-llama/llama-3.3-70b-instruct",
+    "id": "C06",
+    "source": "random",
+    "plausibility": 2.0,
+    "groundedness": 1.0
+  },
+  {
+    "seed": 3,
+    "judge": "meta-llama/llama-3.3-70b-instruct",
+    "id": "C07",
+    "source": "random",
+    "plausibility": 2.0,
+    "groundedness": 1.0
+  },
+  {
+    "seed": 3,
+    "judge": "meta-llama/llama-3.3-70b-instruct",
+    "id": "C08",
+    "source": "popularity",
+    "plausibility": 1.0,
+    "groundedness": 1.0
+  },
+  {
+    "seed": 3,
+    "judge": "meta-llama/llama-3.3-70b-instruct",
+    "id": "C09",
+    "source": "governed",
+    "plausibility": 4.0,
+    "groundedness": 5.0
+  },
+  {
+    "seed": 3,
+    "judge": "meta-llama/llama-3.3-70b-instruct",
+    "id": "C10",
+    "source": "governed",
+    "plausibility": 5.0,
+    "groundedness": 5.0
+  },
+  {
+    "seed": 3,
+    "judge": "meta-llama/llama-3.3-70b-instruct",
+    "id": "C11",
+    "source": "governed",
+    "plausibility": 5.0,
+    "groundedness": 5.0
+  }
+]

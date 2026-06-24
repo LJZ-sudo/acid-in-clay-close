@@ -1,0 +1,76 @@
+{
+  "experiment": "M6_expanded_pool",
+  "read_only_source": "V1.0-qianduan-mainline\\stage3_mechanism\\outputs\\verification\\20260607_openrouter_publication_v2",
+  "pool_size_N": 482,
+  "n_real_anchors": 5,
+  "winner": "I1",
+  "selectors": {
+    "deterministic_proxy_governance_NOT_the_real_agent": {
+      "winner_rank": 155,
+      "winner_top1": false,
+      "winner_in_top3": false,
+      "winner_in_top5": false,
+      "top5": [
+        "SYN129",
+        "SYN087",
+        "SYN125",
+        "SYN090",
+        "SYN094"
+      ],
+      "_note": "hand-built deterministic feature weighting; it does NOT represent the production S10 LLM ranker. Its poor rank here shows that a naive deterministic proxy is worse than popularity, and that fairly scoring an enlarged pool REQUIRES re-running the real LLM ranker (needs key + cost), not just more literature."
+    },
+    "popularity_freq": {
+      "winner_rank": 1,
+      "winner_top1": true,
+      "winner_in_top3": true,
+      "winner_in_top5": true,
+      "top5": [
+        "I1",
+        "SYN005",
+        "SYN164",
+        "SYN007",
+        "I5"
+      ]
+    },
+    "random": {
+      "p_top1": 0.0021,
+      "p_top3": 0.0062,
+      "p_top5": 0.0104,
+      "mc_p_top1": 0.0024,
+      "mc_p_top3": 0.0063,
+      "mc_p_top5": 0.0098
+    }
+  },
+  "bucket_frequency": {
+    "starch": 3,
+    "pva": 2,
+    "chitosan": 3,
+    "pwa": 1,
+    "attapulgite": 2,
+    "des": 2,
+    "phosphoric_acid": 6,
+    "phosphate_glass": 2,
+    "carbon_dots": 1,
+    "halloysite": 1,
+    "pbi": 1,
+    "paam_graft_starch": 1,
+    "montmorillonite": 1,
+    "peg": 1,
+    "spes": 1,
+    "nb2o5": 1
+  },
+  "bucket_lowT_support": {
+    "carbon_dots": 1,
+    "phosphoric_acid": 1
+  },
+  "caveats": [
+    "Pool enlarged by combinatorial enumeration of existing S08 components; synthetic candidates are not LLM-vetted instances, they exist only to create a realistic negative background so random/popularity baselines are no longer trivially correct.",
+    "Scoring is a deterministic proxy (no LLM sub-scores), chosen so the whole comparison is reproducible; it is NOT the exact production S10 LLM ranker.",
+    "Only I1 (positive) / I2 (boundary) have experimental ground truth, so the metric is winner-retrieval rank, not a powered multi-point precision claim."
+  ],
+  "honest_findings": [
+    "GOOD: enlarging the pool to N=482 pushed the random baseline's P(top1) from 0.20 (N=5) down to 0.002 -- the methodological step works and needs no experiments, only literature/enumeration.",
+    "BAD-for-story: pure popularity (component literature frequency) still ranks the validated winner I1 at #1, so 'selecting the LRS route' is NOT a capability unique to the agent at any pool size.",
+    "BLOCKER: a hand-built deterministic proxy is worse than popularity; to fairly compare the REAL governed agent against baselines in the enlarged pool, the production LLM ranker must score all 482 candidates. That is an LLM-cost step (not a physical experiment), and is the true remaining gap."
+  ]
+}

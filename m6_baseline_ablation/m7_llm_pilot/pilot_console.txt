@@ -1,0 +1,20 @@
+[cfg] llm_mode=live base=https://openrouter.ai/api/v1 model=openai/gpt-5.4
+[cfg] s09_deterministic_from_d4=False s09_evidence_based=False structured=False cache=False
+[cfg] key=sk-or-v1-b... (len=73)
+[route] s09 -> openai/gpt-5.4
+[smoke] pinging endpoint ...
+[smoke] reachable=True
+[input] descriptors=7 cards=31 d4_claims=39
+[s09] packing frozen evidence + calling real LLM ...
+[s09] prompt=s09_family_generator_compact payload_chars=11647
+[s09] backfilled role_in_formulation on 15 element_evidence entries
+[s09] families=3 instances=5
+  FAMILY F1: 
+  FAMILY F2: 
+  FAMILY F3: 
+  INST I1:  | comps=['chitosan', 'poly(vinyl alcohol) (PVA)', 'attapulgite', 'phosphoric acid']
+  INST I2:  | comps=['starch', 'poly(vinyl alcohol) (PVA)', 'choline chloride', 'phosphoric acid']
+  INST I3:  | comps=['chitosan', 'halloysite nanotubes (HNTs)', 'phosphoric acid']
+  INST I4:  | comps=['phosphate glass']
+  INST I5:  | comps=['chitosan', 'deep eutectic solvent (DES)', 'phosphoric acid']
+[cost] calls=1 ok=1 fail=0 tokens=6126

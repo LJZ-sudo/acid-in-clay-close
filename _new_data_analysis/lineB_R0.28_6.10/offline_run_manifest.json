@@ -1,0 +1,19 @@
+{
+  "generated_at": "2026-06-15T10:34:27.029118",
+  "mode": "offline",
+  "material": "lineB_R0.28_6.10",
+  "data_dir": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\ao\\2026.6.10__BO-R0.28-N0.96-w96y-1",
+  "output_dir": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\_new_data_analysis\\lineB_R0.28_6.10",
+  "chi_pattern": "*.txt",
+  "dta_dir": null,
+  "dta_pattern": "*.dta",
+  "strict_mode": false,
+  "arrhenius_enabled": true,
+  "reporting_enabled": false,
+  "total_files": 36,
+  "successful_files": 35,
+  "failed_files": 1,
+  "duration_seconds": 0.500139,
+  "report_paths": [],
+  "arrhenius_success": true
+}

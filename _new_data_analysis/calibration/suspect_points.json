@@ -1,0 +1,67 @@
+{
+  "tol_dex": 0.3,
+  "n_total_points": 241,
+  "n_suspect": 4,
+  "suspect_points": [
+    {
+      "dataset": "lineA_LRS_6.12",
+      "group": "A_LRS",
+      "T_C": -89.0,
+      "log10_sigma": -3.6752085858063186,
+      "kk_score": 0.9423917571020674,
+      "kk_mu_max": 0.1603132189135057,
+      "rb_ohm": 178.0,
+      "rb_method": "reverse_valley",
+      "isotonic_resid_dex": 0.876767854257591,
+      "local_resid_dex": 1.7772728177287975,
+      "self_consistent": 0,
+      "conf_v0_naiveKK": 0.9423917571020674,
+      "conf_v1_physics": 0.14135876356531013
+    },
+    {
+      "dataset": "lineA_LRS_6.15_merged",
+      "group": "A_LRS",
+      "T_C": -88.0,
+      "log10_sigma": -3.9262572888293885,
+      "kk_score": 0.9264625895080941,
+      "kk_mu_max": 0.08456113864526318,
+      "rb_ohm": 301.8,
+      "rb_method": "reverse_valley",
+      "isotonic_resid_dex": 0.8689715037637127,
+      "local_resid_dex": 1.8446423716189777,
+      "self_consistent": 0,
+      "conf_v0_naiveKK": 0.9264625895080941,
+      "conf_v1_physics": 0.13896938842621415
+    },
+    {
+      "dataset": "lineA_LRS_6.15_merged",
+      "group": "A_LRS",
+      "T_C": -85.0,
+      "log10_sigma": -5.406294726380812,
+      "kk_score": 0.939248231768558,
+      "kk_mu_max": 0.06201525225870253,
+      "rb_ohm": 9115.0,
+      "rb_method": "reverse_valley",
+      "isotonic_resid_dex": 0.6110659337877111,
+      "local_resid_dex": 0.9076150281829802,
+      "self_consistent": 0,
+      "conf_v0_naiveKK": 0.939248231768558,
+      "conf_v1_physics": 0.14088723476528373
+    },
+    {
+      "dataset": "lineA_LRS_6.12",
+      "group": "A_LRS",
+      "T_C": -86.0,
+      "log10_sigma": -5.141125871386973,
+      "kk_score": 0.9481800683818427,
+      "kk_mu_max": 0.11244403317140955,
+      "rb_ohm": 5204.0,
+      "rb_method": "reverse_valley",
+      "isotonic_resid_dex": 0.5891494313230634,
+      "local_resid_dex": 0.8743916360800341,
+      "self_consistent": 0,
+      "conf_v0_naiveKK": 0.9481800683818427,
+      "conf_v1_physics": 0.1422270102572764
+    }
+  ]
+}

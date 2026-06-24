@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-06-15T12:12:04.777508",
+  "mode": "offline",
+  "material": "2026.5.1CS",
+  "data_dir": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.5.1CS",
+  "output_dir": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_out\\2026.5.1CS",
+  "chi_pattern": "*.txt",
+  "dta_dir": null,
+  "dta_pattern": "*.dta",
+  "strict_mode": false,
+  "arrhenius_enabled": true,
+  "reporting_enabled": true,
+  "total_files": 28,
+  "successful_files": 28,
+  "failed_files": 0,
+  "duration_seconds": 1.45244,
+  "report_paths": [
+    "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_out\\2026.5.1CS\\conductivity_trend.png",
+    "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_out\\2026.5.1CS\\arrhenius_plot.png"
+  ],
+  "arrhenius_success": true
+}

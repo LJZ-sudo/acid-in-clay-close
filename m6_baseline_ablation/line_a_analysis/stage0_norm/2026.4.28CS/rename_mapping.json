@@ -1,0 +1,224 @@
+[
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.4.28CS\\2-dian--12℃-1.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.4.28CS\\2026.4.28CS_T-12.0C_seq001.txt",
+    "temperature_C": -12.0,
+    "seq": 1
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.4.28CS\\2-dian--15℃-1.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.4.28CS\\2026.4.28CS_T-15.0C_seq002.txt",
+    "temperature_C": -15.0,
+    "seq": 2
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.4.28CS\\2-dian--18℃-1.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.4.28CS\\2026.4.28CS_T-18.0C_seq003.txt",
+    "temperature_C": -18.0,
+    "seq": 3
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.4.28CS\\2-dian--21℃-1.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.4.28CS\\2026.4.28CS_T-21.0C_seq004.txt",
+    "temperature_C": -21.0,
+    "seq": 4
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.4.28CS\\2-dian--24℃-1.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.4.28CS\\2026.4.28CS_T-24.0C_seq005.txt",
+    "temperature_C": -24.0,
+    "seq": 5
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.4.28CS\\2-dian--27℃-1.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.4.28CS\\2026.4.28CS_T-27.0C_seq006.txt",
+    "temperature_C": -27.0,
+    "seq": 6
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.4.28CS\\2-dian--30℃-1.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.4.28CS\\2026.4.28CS_T-30.0C_seq007.txt",
+    "temperature_C": -30.0,
+    "seq": 7
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.4.28CS\\2-dian--33℃-1.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.4.28CS\\2026.4.28CS_T-33.0C_seq008.txt",
+    "temperature_C": -33.0,
+    "seq": 8
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.4.28CS\\2-dian--36℃-1.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.4.28CS\\2026.4.28CS_T-36.0C_seq009.txt",
+    "temperature_C": -36.0,
+    "seq": 9
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.4.28CS\\2-dian--39℃-1.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.4.28CS\\2026.4.28CS_T-39.0C_seq010.txt",
+    "temperature_C": -39.0,
+    "seq": 10
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.4.28CS\\2-dian--3℃-1.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.4.28CS\\2026.4.28CS_T-3.0C_seq011.txt",
+    "temperature_C": -3.0,
+    "seq": 11
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.4.28CS\\2-dian--42℃-1.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.4.28CS\\2026.4.28CS_T-42.0C_seq012.txt",
+    "temperature_C": -42.0,
+    "seq": 12
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.4.28CS\\2-dian--45℃-1.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.4.28CS\\2026.4.28CS_T-45.0C_seq013.txt",
+    "temperature_C": -45.0,
+    "seq": 13
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.4.28CS\\2-dian--48℃-1.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.4.28CS\\2026.4.28CS_T-48.0C_seq014.txt",
+    "temperature_C": -48.0,
+    "seq": 14
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.4.28CS\\2-dian--51℃-1.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.4.28CS\\2026.4.28CS_T-51.0C_seq015.txt",
+    "temperature_C": -51.0,
+    "seq": 15
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.4.28CS\\2-dian--54℃-1.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.4.28CS\\2026.4.28CS_T-54.0C_seq016.txt",
+    "temperature_C": -54.0,
+    "seq": 16
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.4.28CS\\2-dian--57℃-1.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.4.28CS\\2026.4.28CS_T-57.0C_seq017.txt",
+    "temperature_C": -57.0,
+    "seq": 17
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.4.28CS\\2-dian--60℃-1.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.4.28CS\\2026.4.28CS_T-60.0C_seq018.txt",
+    "temperature_C": -60.0,
+    "seq": 18
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.4.28CS\\2-dian--63℃-1.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.4.28CS\\2026.4.28CS_T-63.0C_seq019.txt",
+    "temperature_C": -63.0,
+    "seq": 19
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.4.28CS\\2-dian--66℃-1.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.4.28CS\\2026.4.28CS_T-66.0C_seq020.txt",
+    "temperature_C": -66.0,
+    "seq": 20
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.4.28CS\\2-dian--69℃-1.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.4.28CS\\2026.4.28CS_T-69.0C_seq021.txt",
+    "temperature_C": -69.0,
+    "seq": 21
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.4.28CS\\2-dian--6℃-1.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.4.28CS\\2026.4.28CS_T-6.0C_seq022.txt",
+    "temperature_C": -6.0,
+    "seq": 22
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.4.28CS\\2-dian--72℃-1.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.4.28CS\\2026.4.28CS_T-72.0C_seq023.txt",
+    "temperature_C": -72.0,
+    "seq": 23
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.4.28CS\\2-dian--75℃-1.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.4.28CS\\2026.4.28CS_T-75.0C_seq024.txt",
+    "temperature_C": -75.0,
+    "seq": 24
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.4.28CS\\2-dian--78℃-1.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.4.28CS\\2026.4.28CS_T-78.0C_seq025.txt",
+    "temperature_C": -78.0,
+    "seq": 25
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.4.28CS\\2-dian--78℃-2.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.4.28CS\\2026.4.28CS_T-78.0C_seq026.txt",
+    "temperature_C": -78.0,
+    "seq": 26
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.4.28CS\\2-dian--81℃-1.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.4.28CS\\2026.4.28CS_T-81.0C_seq027.txt",
+    "temperature_C": -81.0,
+    "seq": 27
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.4.28CS\\2-dian--81℃-2.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.4.28CS\\2026.4.28CS_T-81.0C_seq028.txt",
+    "temperature_C": -81.0,
+    "seq": 28
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.4.28CS\\2-dian--9℃-1.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.4.28CS\\2026.4.28CS_T-9.0C_seq029.txt",
+    "temperature_C": -9.0,
+    "seq": 29
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.4.28CS\\2-dian-0℃-1.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.4.28CS\\2026.4.28CS_T0.0C_seq030.txt",
+    "temperature_C": 0.0,
+    "seq": 30
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.4.28CS\\2-dian-12℃-1.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.4.28CS\\2026.4.28CS_T12.0C_seq031.txt",
+    "temperature_C": 12.0,
+    "seq": 31
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.4.28CS\\2-dian-15℃-1.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.4.28CS\\2026.4.28CS_T15.0C_seq032.txt",
+    "temperature_C": 15.0,
+    "seq": 32
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.4.28CS\\2-dian-18℃-1.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.4.28CS\\2026.4.28CS_T18.0C_seq033.txt",
+    "temperature_C": 18.0,
+    "seq": 33
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.4.28CS\\2-dian-18℃-2.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.4.28CS\\2026.4.28CS_T18.0C_seq034.txt",
+    "temperature_C": 18.0,
+    "seq": 34
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.4.28CS\\2-dian-3℃-1.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.4.28CS\\2026.4.28CS_T3.0C_seq035.txt",
+    "temperature_C": 3.0,
+    "seq": 35
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.4.28CS\\2-dian-6℃-1.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.4.28CS\\2026.4.28CS_T6.0C_seq036.txt",
+    "temperature_C": 6.0,
+    "seq": 36
+  },
+  {
+    "source_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.4.28CS\\2-dian-9℃-1.txt",
+    "normalized_file": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.4.28CS\\2026.4.28CS_T9.0C_seq037.txt",
+    "temperature_C": 9.0,
+    "seq": 37
+  }
+]

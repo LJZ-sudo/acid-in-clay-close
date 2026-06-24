@@ -1,0 +1,251 @@
+{
+  "provenance": {
+    "analysis_version": "stage0-eis-v2.0.0",
+    "admission_policy_version": "evidence-policy-v2.0.0",
+    "objective_registry_version": "objective-registry-v2.0.0",
+    "rb_method_policy_version": "rb-method-v2.0.0",
+    "config_sha256": {
+      "stage0_v2_policy": "da45db8ed5327d9d45407e314014ed811eca46f00baf8165bf601348454be1af",
+      "rb_method_policy": "43949a81157d42afe6e16713ece534dcd99c3cafd03712e05cbb6b640ede117a",
+      "evidence_admission_v2": "4931d6e794f1056445f8621de5c39702466c82d3c39f9f050e00b9e397a45960",
+      "objective_registry": "193a65c7b5d39235ef29a8e29c72429e965490dfa8424dc216d169269ab7fac5"
+    },
+    "git_commit": "fb17c68",
+    "generated_at": "2026-06-22T14:28:12.753052+08:00"
+  },
+  "floors": [
+    {
+      "metric_id": "log10_sigma_room",
+      "scope": "BETWEEN_SPECIMEN",
+      "sd_dex": 0.2521098108065045,
+      "ci95": [
+        0.12890771904758397,
+        0.317779269968393
+      ],
+      "mean": -1.5479567096543612,
+      "n": 7,
+      "source_datasets": [
+        "lineA_LRS_0429CS",
+        "lineA_LRS_0509CS",
+        "lineA_LRS_6.12",
+        "lineA_LRS_6.15_merged",
+        "lineA_LRS_0615_s2",
+        "lineA_LRS_0616_s3",
+        "lineA_LRS_0617_s3b"
+      ],
+      "applicable_materials": [
+        "LRS"
+      ]
+    },
+    {
+      "metric_id": "log10_sigma_room",
+      "scope": "BETWEEN_SPECIMEN_JUNE_STD",
+      "sd_dex": 0.23110082289265074,
+      "ci95": [
+        0.038785020167180155,
+        0.3228326236885086
+      ],
+      "mean": -1.4508763963961195,
+      "n": 5,
+      "source_datasets": [
+        "lineA_LRS_6.12",
+        "lineA_LRS_6.15_merged",
+        "lineA_LRS_0615_s2",
+        "lineA_LRS_0616_s3",
+        "lineA_LRS_0617_s3b"
+      ],
+      "applicable_materials": [
+        "LRS"
+      ]
+    },
+    {
+      "metric_id": "log10_sigma_room",
+      "scope": "BETWEEN_SPECIMEN_APRIL_THIN",
+      "sd_dex": 0.05287251149830083,
+      "ci95": [
+        0.0,
+        0.05287251149830083
+      ],
+      "mean": -1.7906574927999643,
+      "n": 2,
+      "source_datasets": [
+        "lineA_LRS_0429CS",
+        "lineA_LRS_0509CS"
+      ],
+      "applicable_materials": [
+        "LRS"
+      ]
+    },
+    {
+      "metric_id": "ea_high_eV",
+      "scope": "BETWEEN_SPECIMEN",
+      "sd_dex": 0.01858646907474711,
+      "ci95": [
+        0.008789495570260061,
+        0.023797239058431337
+      ],
+      "mean": 0.03690968261767946,
+      "n": 7,
+      "source_datasets": [
+        "lineA_LRS_0429CS",
+        "lineA_LRS_0509CS",
+        "lineA_LRS_6.12",
+        "lineA_LRS_6.15_merged",
+        "lineA_LRS_0615_s2",
+        "lineA_LRS_0616_s3",
+        "lineA_LRS_0617_s3b"
+      ],
+      "applicable_materials": [
+        "LRS"
+      ]
+    },
+    {
+      "metric_id": "ea_high_eV",
+      "scope": "BETWEEN_SPECIMEN_JUNE_STD",
+      "sd_dex": 0.022557065671215733,
+      "ci95": [
+        0.009090727947846388,
+        0.02745486541829816
+      ],
+      "mean": 0.035846908173186955,
+      "n": 5,
+      "source_datasets": [
+        "lineA_LRS_6.12",
+        "lineA_LRS_6.15_merged",
+        "lineA_LRS_0615_s2",
+        "lineA_LRS_0616_s3",
+        "lineA_LRS_0617_s3b"
+      ],
+      "applicable_materials": [
+        "LRS"
+      ]
+    },
+    {
+      "metric_id": "ea_high_eV",
+      "scope": "BETWEEN_SPECIMEN_APRIL_THIN",
+      "sd_dex": 0.004205957990680025,
+      "ci95": [
+        0.0,
+        0.004205957990680025
+      ],
+      "mean": 0.03956661872891074,
+      "n": 2,
+      "source_datasets": [
+        "lineA_LRS_0429CS",
+        "lineA_LRS_0509CS"
+      ],
+      "applicable_materials": [
+        "LRS"
+      ]
+    },
+    {
+      "metric_id": "log10_sigma_room",
+      "scope": "CROSS_BATCH",
+      "april_thin_mean": -1.7906574927999643,
+      "june_std_mean": -1.4508763963961195,
+      "batch_mean_diff_dex": 0.3397810964038448,
+      "note": "4月薄片(~0.02cm) vs 6月标准化(~0.07cm);差异含厚度/接触/几何混杂"
+    },
+    {
+      "metric_id": "log10_sigma_room",
+      "scope": "CROSS_SYSTEM_PROXY",
+      "sd_dex": 0.2521098108065045,
+      "ci95": [
+        0.12890771904758397,
+        0.317779269968393
+      ],
+      "mean": -1.5479567096543612,
+      "n": 7,
+      "source_datasets": [
+        "lineA_LRS_0429CS",
+        "lineA_LRS_0509CS",
+        "lineA_LRS_6.12",
+        "lineA_LRS_6.15_merged",
+        "lineA_LRS_0615_s2",
+        "lineA_LRS_0616_s3",
+        "lineA_LRS_0617_s3b"
+      ],
+      "applicable_materials": [
+        "attapulgite(line B) — PROXY from LRS"
+      ],
+      "caveat": "LRS 地板代理凹凸棒土;G1 实测后应替换为 LINE_B_LOCAL_DIRECT"
+    }
+  ],
+  "line_b_distinguishability_demo": {
+    "available": true,
+    "top1_combined_score": -1.9407287999780058,
+    "top2_combined_score": -2.1573823175892928,
+    "delta": 0.21665351761128693,
+    "floor_basis": "log10_sigma_room BETWEEN_SPECIMEN sd (lower-bound; Ea floor would widen)",
+    "observed_delta": 0.21665351761128693,
+    "floor_sd_dex": 0.2521098108065045,
+    "diff_scale_dex": 0.3565371136498738,
+    "delta_meaningful": 0.2521098108065045,
+    "p_abs_delta_gt_meaningful": 0.554686030254008,
+    "p_indistinguishable": 0.4453139697459921
+  },
+  "per_dataset": {
+    "all": {
+      "lineA_LRS_0429CS": {
+        "log10_sigma_room": -1.8280440042187767,
+        "ea_high_eV": 0.042540680145506334
+      },
+      "lineA_LRS_0509CS": {
+        "log10_sigma_room": -1.7532709813811522,
+        "ea_high_eV": 0.03659255731231515
+      },
+      "lineA_LRS_6.12": {
+        "log10_sigma_room": -1.5003530515241839,
+        "ea_high_eV": 0.008388933756031232
+      },
+      "lineA_LRS_6.15_merged": {
+        "log10_sigma_room": -1.4536616707876229,
+        "ea_high_eV": 0.05447332492836975
+      },
+      "lineA_LRS_0615_s2": {
+        "log10_sigma_room": -1.3913239814077616,
+        "ea_high_eV": 0.035756088231572475
+      },
+      "lineA_LRS_0616_s3": {
+        "log10_sigma_room": -1.7767029533701935,
+        "ea_high_eV": 0.061457428255649205
+      },
+      "lineA_LRS_0617_s3b": {
+        "log10_sigma_room": -1.1323403248908364,
+        "ea_high_eV": 0.019158765694312095
+      }
+    },
+    "april_thin": {
+      "lineA_LRS_0429CS": {
+        "log10_sigma_room": -1.8280440042187767,
+        "ea_high_eV": 0.042540680145506334
+      },
+      "lineA_LRS_0509CS": {
+        "log10_sigma_room": -1.7532709813811522,
+        "ea_high_eV": 0.03659255731231515
+      }
+    },
+    "june_std": {
+      "lineA_LRS_6.12": {
+        "log10_sigma_room": -1.5003530515241839,
+        "ea_high_eV": 0.008388933756031232
+      },
+      "lineA_LRS_6.15_merged": {
+        "log10_sigma_room": -1.4536616707876229,
+        "ea_high_eV": 0.05447332492836975
+      },
+      "lineA_LRS_0615_s2": {
+        "log10_sigma_room": -1.3913239814077616,
+        "ea_high_eV": 0.035756088231572475
+      },
+      "lineA_LRS_0616_s3": {
+        "log10_sigma_room": -1.7767029533701935,
+        "ea_high_eV": 0.061457428255649205
+      },
+      "lineA_LRS_0617_s3b": {
+        "log10_sigma_room": -1.1323403248908364,
+        "ea_high_eV": 0.019158765694312095
+      }
+    }
+  }
+}

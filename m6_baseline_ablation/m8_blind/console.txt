@@ -1,0 +1,17 @@
+[judge] google/gemini-2.5-flash reachable
+[cfg] gen_model=openai/gpt-5.4 judge_model=google/gemini-2.5-flash cross_model=True
+[blind] judging 11 anonymized candidates with google/gemini-2.5-flash ...
+  C04 [governed  ] plaus=4.0 ground=5.0 Chitosan, halloysite nanotubes, and phosphoric acid are all 
+  C07 [governed  ] plaus=5.0 ground=5.0 Halloysite nanotubes for nanoconfinement of phosphoric acid 
+  C09 [governed  ] plaus=4.0 ground=5.0 Starch, PVA, choline chloride, and phosphoric acid form a pl
+  C10 [governed  ] plaus=3.0 ground=4.0 Phosphate glass can be a proton conductor, and its combinati
+  C11 [governed  ] plaus=4.0 ground=5.0 Chitosan, PVA, attapulgite, and phosphoric acid form a coher
+  C03 [popularity] plaus=1.0 ground=1.0 CsPbI3 perovskite solar and Pt/C catalyst are components typ
+  C05 [popularity] plaus=1.0 ground=1.0 LiFePO4 and silicon anode are typical components of Li-ion b
+  C08 [popularity] plaus=1.0 ground=1.0 Silicon anode and CsPbI3 perovskite solar are components fro
+  C01 [random    ] plaus=2.0 ground=3.0 Starch, cellulose, and phosphoric acid can contribute to pro
+  C02 [random    ] plaus=3.0 ground=4.0 Phosphoric acid, PVA, choline chloride (often used in deep e
+  C06 [random    ] plaus=2.0 ground=3.0 Glycerol, chitosan, cellulose, and attapulgite can all contr
+[avg] random     plausibility=2.33 groundedness=3.33 (n=3)
+[avg] popularity plausibility=1.0 groundedness=1.0 (n=3)
+[avg] governed   plausibility=4.0 groundedness=4.8 (n=5)

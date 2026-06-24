@@ -1,0 +1,75 @@
+{
+  "dataset": "lineA_LRS_6.12",
+  "provenance": {
+    "analysis_version": "stage0-eis-v2.0.0",
+    "admission_policy_version": "evidence-policy-v2.0.0",
+    "objective_registry_version": "objective-registry-v2.0.0",
+    "rb_method_policy_version": "rb-method-v2.0.0",
+    "config_sha256": {
+      "stage0_v2_policy": "da45db8ed5327d9d45407e314014ed811eca46f00baf8165bf601348454be1af",
+      "rb_method_policy": "43949a81157d42afe6e16713ece534dcd99c3cafd03712e05cbb6b640ede117a",
+      "evidence_admission_v2": "4931d6e794f1056445f8621de5c39702466c82d3c39f9f050e00b9e397a45960",
+      "objective_registry": "193a65c7b5d39235ef29a8e29c72429e965490dfa8424dc216d169269ab7fac5"
+    },
+    "git_commit": "fb17c68",
+    "generated_at": "2026-06-22T14:34:08.206648+08:00",
+    "n_draws": 300
+  },
+  "n_points": 37,
+  "T_range_C": [
+    -89.0,
+    19.0
+  ],
+  "confusion": {
+    "n_draws": 300,
+    "noise_sd_ln": 0.959644043021454,
+    "labels": [
+      "arrhenius",
+      "mott",
+      "vtf"
+    ],
+    "matrix_counts": {
+      "arrhenius": {
+        "arrhenius": 171,
+        "mott": 113,
+        "vtf": 16
+      },
+      "mott": {
+        "arrhenius": 99,
+        "mott": 191,
+        "vtf": 10
+      },
+      "vtf": {
+        "arrhenius": 31,
+        "mott": 0,
+        "vtf": 269
+      }
+    },
+    "matrix_rates": {
+      "arrhenius": {
+        "arrhenius": 0.57,
+        "mott": 0.37666666666666665,
+        "vtf": 0.05333333333333334
+      },
+      "mott": {
+        "arrhenius": 0.33,
+        "mott": 0.6366666666666667,
+        "vtf": 0.03333333333333333
+      },
+      "vtf": {
+        "arrhenius": 0.10333333333333333,
+        "mott": 0.0,
+        "vtf": 0.8966666666666666
+      }
+    },
+    "mean_correct_rate": 0.701111111111111,
+    "self_identification_rate": {
+      "arrhenius": 0.57,
+      "mott": 0.6366666666666667,
+      "vtf": 0.8966666666666666
+    },
+    "real_best_model": "vtf"
+  },
+  "identifiability_verdict": "partially_identifiable",
+  "wording": "在当前温区/采样点/噪声下,这些经验传导律实践上不可辨识(design-conditional)"
+}

@@ -1,0 +1,8 @@
+[cfg] model=openai/gpt-5.4 agent_loop(critic+memory)
+
+=== ARM: naive ===
+  [naive] round0: issues=40 ok=False ['overclaim: proves?\\b', 'overclaim: proves?\\b', 'overclaim: proves?\\b']
+  [naive] round1: issues=0 ok=True []
+
+=== ARM: governed ===
+  [governed] round0: issues=0 ok=True []

@@ -1,0 +1,29 @@
+# FactoryLab 演示站点 —— 静态托管配置（Apache / 宝塔）
+# 放在网站根目录 /www/wwwroot/factorylab.online/.htaccess
+
+# 默认首页用 index.html
+DirectoryIndex index.html
+
+# 确保视频/配音/脚本的 MIME 类型正确，浏览器才能内联播放、正常加载
+AddType video/mp4 .mp4
+AddType audio/mpeg .mp3
+AddType audio/wav .wav
+AddType text/javascript .js
+AddType text/css .css
+AddType image/svg+xml .svg
+
+# 让视频可以拖动进度（断点续传 / Range 请求）
+<IfModule mod_headers.c>
+  Header set Accept-Ranges bytes
+</IfModule>
+
+# 缓存策略：带 hash 的静态资源长缓存；index.html 不缓存（更新后立刻生效）
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType video/mp4    "access plus 30 days"
+  ExpiresByType audio/mpeg   "access plus 30 days"
+  ExpiresByType audio/wav    "access plus 30 days"
+  ExpiresByType text/javascript "access plus 30 days"
+  ExpiresByType text/css     "access plus 30 days"
+  ExpiresByType text/html    "access plus 0 seconds"
+</IfModule>

@@ -57,12 +57,21 @@ def test_mobo_path_returns_parego(parameter_space_and_memory):
 
 
 def test_mobo_reads_full_multiobjective_history(parameter_space_and_memory):
-    """关键：键映射正确 => 8 条历史全部可用于 ParEGO（不是 0、不是全程冷启动）。"""
+    """关键：键映射正确 => 全部历史均可用于 ParEGO（不是 0、不是全程冷启动）。
+
+    断言不再硬编码具体条数（真实 history DB 会随前瞻轮增长，如 8→10），
+    而是守住真正的不变量：提取到的多目标训练点 == 全部历史，且已越过冷启动阈值。
+    """
     ps, mm = parameter_space_and_memory
-    opt = build_stage1_optimizer("mobo", ps, mm, cold_start_threshold=5, optimizer_seed=7)
+    cold_start_threshold = 5
+    opt = build_stage1_optimizer("mobo", ps, mm,
+                                 cold_start_threshold=cold_start_threshold, optimizer_seed=7)
     param_names = list(ps.campaign_config.parameters.keys())
     X, P = opt._extract_multiobjective_training(param_names)
-    assert len(P) == len(mm.get_history()) == 8
+    history_len = len(mm.get_history())
+    assert len(P) == history_len, "键映射应让全部历史进入多目标训练集"
+    assert len(P) == len(X)
+    assert history_len > cold_start_threshold, "历史应已越过冷启动阈值（走 ParEGO 而非全程冷启动）"
     for row in P:
         assert set(row.keys()) == {
             MOBO_HISTORY_OBJECTIVE_KEYS["sigma_key"],

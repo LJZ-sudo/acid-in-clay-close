@@ -1,0 +1,43 @@
+# Line A — frozen-then-validated verdict (preregistration §4)
+
+scorer: mainline stage0 QC (KK + manual-Rb), recomputed; thresholds = preregistered, unchanged.
+
+
+## Per-sample descriptors
+   folder   material       band        thk      Ea_hi       KKhi     coldEa        sRT       s273       s253       s233       r253       r233       Tmin
+  .4.27CS   CORN_old      thick       0.06      0.216        1.0      0.705   1.08e-02   5.90e-03   1.61e-03   2.59e-04      0.273      0.044      216.1
+  .4.28CS   CORN_old      thick       0.06     0.2118        1.0      0.922        n/a   9.43e-03   4.55e-03   1.24e-03      0.482     0.1311      198.1
+  .4.29CS        LRS       thin       0.02     0.0425        1.0       0.85   1.49e-02   1.79e-02   1.53e-02   4.34e-03      0.852     0.2421      202.1
+  .4.30CS      CHITO          -       0.05     0.0501        1.0      0.637        n/a   1.15e-02   8.94e-03   3.93e-05      0.778     0.0034      225.1
+  6.5.1CS      CHITO          -       0.06     0.0992        1.0      0.639        n/a   1.12e-02   8.18e-03   5.85e-05      0.729     0.0052      222.1
+  6.5.9CS        LRS       thin      0.022     0.0366        1.0       0.78        n/a   1.85e-02   1.57e-02   3.63e-03      0.847     0.1958      192.1
+  .6.11淀粉       CORN      thick     0.0628     0.1672        1.0      0.682        n/a   1.14e-02   6.06e-03   1.96e-03      0.533     0.1729      189.1
+  .6.12藕粉        LRS      thick     0.0737     0.0084        1.0      0.585        n/a   3.07e-02   3.03e-02   1.09e-02      0.987     0.3558      184.1
+  .6.13淀粉       CORN      thick     0.0737     0.1119        1.0      0.719        n/a   9.08e-03   5.37e-03   1.73e-03      0.591       0.19      190.1
+  .6.15藕粉        LRS      thick     0.0701     0.0536        1.0      0.618   3.52e-02   3.48e-02   3.21e-02   1.04e-02      0.923     0.2994      185.1
+
+## Verdicts vs preregistered predictions
+
+[4.2 CHITO boundary] 2026.4.30CS: BOUNDARY-CONFIRMED
+    PASS  4.2 sigma233/273<=0.1 (>=1 decade drop)
+    FAIL  4.2 cold-seg Ea>1eV
+
+[4.2 CHITO boundary] 2026.5.1CS: BOUNDARY-CONFIRMED
+    PASS  4.2 sigma233/273<=0.1 (>=1 decade drop)
+    FAIL  4.2 cold-seg Ea>1eV
+
+[4.1 LRS positive] 2026.6.12藕粉 (thick 0.0737cm): CONFIRMED
+    PASS  4.1a Ea_high<=0.06eV
+    PASS  4.1b sigma253/273>=0.5
+    PASS  4.1c sigma(<=233K)>1e-5
+
+[4.1 LRS positive] 2026.6.15藕粉 (thick 0.0701cm): CONFIRMED
+    PASS  4.1a Ea_high<=0.06eV
+    PASS  4.1b sigma253/273>=0.5
+    PASS  4.1c sigma(<=233K)>1e-5
+
+[4.3 corn-starch generalisation] corn sigma273~1.02e-02 vs LRS sigma273~3.27e-02; same order = True
+    corn cold-continuity sigma233/273~0.181 vs LRS~0.328 -> corn decays earlier = True (matches 4.3 prediction)
+
+[4.4 thickness control] LRS-thin Ea_high=0.0396eV (n=2, ~0.02cm) vs LRS-thick Ea_high=0.0310eV (n=2, ~0.07cm)
+    => thick NOT >> thin -> supports INTRINSIC low-Ea (stronger claim allowed)

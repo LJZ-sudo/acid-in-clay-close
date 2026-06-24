@@ -1,0 +1,65 @@
+{
+  "n_seeds": 5,
+  "suppression_hit_rate": "5/5",
+  "avg_governed_score_mean_std": [
+    0.721,
+    0.02
+  ],
+  "avg_distractor_score_mean_std": [
+    0.171,
+    0.05
+  ],
+  "score_gap_mean": 0.55,
+  "per_seed": [
+    {
+      "all_distractors_below_all_governed": true,
+      "worst_governed_rank": 5,
+      "best_distractor_rank": 6,
+      "avg_governed_score": 0.752,
+      "avg_distractor_score": 0.12,
+      "n_governed": 5,
+      "n_distractors": 3,
+      "seed": 1
+    },
+    {
+      "all_distractors_below_all_governed": true,
+      "worst_governed_rank": 5,
+      "best_distractor_rank": 6,
+      "avg_governed_score": 0.732,
+      "avg_distractor_score": 0.261,
+      "n_governed": 5,
+      "n_distractors": 3,
+      "seed": 2
+    },
+    {
+      "all_distractors_below_all_governed": true,
+      "worst_governed_rank": 5,
+      "best_distractor_rank": 6,
+      "avg_governed_score": 0.698,
+      "avg_distractor_score": 0.187,
+      "n_governed": 5,
+      "n_distractors": 3,
+      "seed": 3
+    },
+    {
+      "all_distractors_below_all_governed": true,
+      "worst_governed_rank": 5,
+      "best_distractor_rank": 6,
+      "avg_governed_score": 0.718,
+      "avg_distractor_score": 0.14,
+      "n_governed": 5,
+      "n_distractors": 3,
+      "seed": 4
+    },
+    {
+      "all_distractors_below_all_governed": true,
+      "worst_governed_rank": 5,
+      "best_distractor_rank": 6,
+      "avg_governed_score": 0.704,
+      "avg_distractor_score": 0.147,
+      "n_governed": 5,
+      "n_distractors": 3,
+      "seed": 5
+    }
+  ]
+}

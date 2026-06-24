@@ -1,0 +1,363 @@
+{
+  "families": [
+    {
+      "family_id": "F1",
+      "family_name": "Plasticised polysaccharide acid-network composites",
+      "family_description": "OH-rich biopolymer matrices combined with retained acid and plasticising polar phases to preserve proton pathways into the cold window.",
+      "descriptor_match": [
+        "D2: DES or bound polar phases support low-temperature fluid continuity in polymer films.",
+        "D3: biopolymer/polyol-like blends are plausibly less brittle than dry neat hosts under subambient operation.",
+        "D4: phosphoric-acid-containing eutectic or confined acid states are supported as non-crystallising proton-source environments.",
+        "D6: starch/chitosan/PVA provide dense hydrogen-bonding landscapes for hybrid proton transfer.",
+        "D7: chitosan and low-level phosphoric-acid strategies support acid/water retention."
+      ],
+      "literature_support_card_ids": [
+        "manual_1157b11126",
+        "manual_42051140ac",
+        "manual_1ca1249fc4",
+        "manual_8d58a81c9e",
+        "manual_8d58a81c9e_1"
+      ]
+    },
+    {
+      "family_id": "F2",
+      "family_name": "Fibrous-clay confined acid conduits",
+      "family_description": "One-dimensional mineral hosts confine and retain hydrated acid domains while guiding interconnected nanoscale transport pathways.",
+      "descriptor_match": [
+        "D4: phosphoric acid is supported as a mobile proton source, including eutectic-like acid environments.",
+        "D5: attapulgite and halloysite nanotubes explicitly provide interconnected nanoconfinement.",
+        "D6: phosphoric acid supplies hydrogen-bond-mediated proton relay.",
+        "D7: fibrous/tubular clays are reported to reduce acid loss and improve retention."
+      ],
+      "literature_support_card_ids": [
+        "manual_1190463586",
+        "manual_a16330d0f5",
+        "manual_89488460eb",
+        "manual_1ca1249fc4"
+      ]
+    },
+    {
+      "family_id": "F3",
+      "family_name": "Amorphous inorganic-organic proton reservoirs",
+      "family_description": "Amorphous proton-bearing inorganic phases blended with hydrogen-bonding hosts aim to deliver continuous transport without crystallisation-driven disruption.",
+      "descriptor_match": [
+        "D1: protonated phosphate glass is directly described as an amorphous continuous proton-transport medium.",
+        "D4: retained phosphoric-acid-like or protonated phosphate states avoid neat crystalline acid domains.",
+        "D6: phosphate networks and OH-rich polymers both provide dense donor/acceptor landscapes.",
+        "D7: confinement or network incorporation can retain the conducting phase, though some glass systems show stability caveats."
+      ],
+      "literature_support_card_ids": [
+        "manual_26f0dcfc01",
+        "manual_3d7d6d5d7b",
+        "manual_1157b11126",
+        "manual_1190463586"
+      ]
+    }
+  ],
+  "instances": [
+    {
+      "instance_id": "I1",
+      "family_id": "F1",
+      "instance_name": "Chitosan/PVA/attapulgite/phosphoric acid quaternary film",
+      "composition_description": "Chitosan-rich film blended with PVA, loaded with 1-D attapulgite and doped with retained phosphoric acid at moderate level.",
+      "components": [
+        "chitosan",
+        "poly(vinyl alcohol) (PVA)",
+        "attapulgite",
+        "phosphoric acid"
+      ],
+      "expected_properties": [
+        "cold_window: plausible bound-water and acid continuity within OH-rich film",
+        "nanoconfinement: 1-D clay may preserve interconnected acid channels",
+        "retention: chitosan-clay interactions may suppress phosphoric-acid loss"
+      ],
+      "risk_flags": [
+        "no direct subzero proof for this exact quaternary blend",
+        "excess acid may still plasticise too strongly or leach"
+      ],
+      "combination_novelty": "novel_combination",
+      "element_evidence": [
+        {
+          "component": "chitosan",
+          "descriptor_satisfied": [
+            "D5",
+            "D7"
+          ],
+          "analog_paper_ids": [
+            "manual_1190463586",
+            "manual_42051140ac"
+          ],
+          "reason": "Chitosan is reported as an acid-interacting scaffold aiding confinement and retention, and DES-containing chitosan films tolerate high water uptake without disintegration."
+        },
+        {
+          "component": "poly(vinyl alcohol) (PVA)",
+          "descriptor_satisfied": [
+            "D6"
+          ],
+          "analog_paper_ids": [
+            "manual_1157b11126"
+          ],
+          "reason": "PVA contributes OH-mediated hydrogen bonding and compatibility in polysaccharide blends, analogously supporting proton-relay landscapes."
+        },
+        {
+          "component": "attapulgite",
+          "descriptor_satisfied": [
+            "D5",
+            "D7"
+          ],
+          "analog_paper_ids": [
+            "manual_1190463586"
+          ],
+          "reason": "Attapulgite is directly reported to provide 1-D nanoconfinement and acid immobilisation in a proton-conducting composite."
+        },
+        {
+          "component": "phosphoric acid",
+          "descriptor_satisfied": [
+            "D4",
+            "D6"
+          ],
+          "analog_paper_ids": [
+            "manual_1ca1249fc4",
+            "manual_89488460eb"
+          ],
+          "reason": "Phosphoric acid is supported as a mobile proton source in complexed environments and as the hydrogen-bond-mediated conducting medium at low temperature."
+        }
+      ],
+      "novelty_rationale": "This is the requested quaternary synergy motif assembled from separately supported roles rather than a directly reported exact formulation. Novelty lies in combining biopolymer retention, PVA film flexibility, 1-D clay confinement, and phosphoric-acid conduction in one cold-targeted membrane."
+    },
+    {
+      "instance_id": "I2",
+      "family_id": "F1",
+      "instance_name": "Starch/PVA/choline chloride-phosphoric acid eutectic membrane",
+      "composition_description": "Starch-PVA blend plasticised and protonated by a choline chloride/phosphoric acid deep eutectic phase.",
+      "components": [
+        "starch",
+        "poly(vinyl alcohol) (PVA)",
+        "choline chloride",
+        "phosphoric acid"
+      ],
+      "expected_properties": [
+        "cold_window: eutectic phase may resist freezing better than neat water-rich acid",
+        "flexibility: plasticised starch/PVA matrix may remain less brittle below room temperature",
+        "proton_relay: dense OH network plus acid complex supports hybrid transport"
+      ],
+      "risk_flags": [
+        "eutectic uptake may over-soften the film",
+        "acid retention versus humidity cycling is not directly proven"
+      ],
+      "combination_novelty": "novel_combination",
+      "element_evidence": [
+        {
+          "component": "starch",
+          "descriptor_satisfied": [
+            "D5",
+            "D6"
+          ],
+          "analog_paper_ids": [
+            "manual_1157b11126",
+            "manual_8d58a81c9e",
+            "manual_8d58a81c9e_1"
+          ],
+          "reason": "Starch is reported to provide dense hydrogen-bonding functionality and channel-like transport pathways in proton-conducting blends."
+        },
+        {
+          "component": "poly(vinyl alcohol) (PVA)",
+          "descriptor_satisfied": [
+            "D6"
+          ],
+          "analog_paper_ids": [
+            "manual_1157b11126"
+          ],
+          "reason": "PVA supplies OH-rich hydrogen-bonding interactions that improve compatibility and plausibly sustain relay pathways."
+        },
+        {
+          "component": "choline chloride",
+          "descriptor_satisfied": [
+            "D4"
+          ],
+          "analog_paper_ids": [
+            "manual_1ca1249fc4"
+          ],
+          "reason": "Choline chloride is directly supported as the complexing partner in a ChCl/PA deep eutectic proton-carrier environment."
+        },
+        {
+          "component": "phosphoric acid",
+          "descriptor_satisfied": [
+            "D4",
+            "D6"
+          ],
+          "analog_paper_ids": [
+            "manual_1ca1249fc4",
+            "manual_89488460eb"
+          ],
+          "reason": "Phosphoric acid is supported both as the acid component of the eutectic and as a hydrogen-bond-mediated proton-conducting phase."
+        }
+      ],
+      "novelty_rationale": "The novelty is the transfer of a ChCl/PA eutectic motif into a starch/PVA OH-rich film aimed at subambient continuity. Evidence supports each role individually, but this exact combined membrane was not directly claimed in the pool."
+    },
+    {
+      "instance_id": "I3",
+      "family_id": "F2",
+      "instance_name": "Phosphoric acid in halloysite nanotubes",
+      "composition_description": "Tubular halloysite host loaded with phosphoric acid as a confined proton-conducting phase.",
+      "components": [
+        "halloysite nanotubes (HNTs)",
+        "phosphoric acid"
+      ],
+      "expected_properties": [
+        "nanoconfinement: tubular lumen can localise the acid phase",
+        "retention: clay-acid interaction may reduce leaching",
+        "cold_window: confined acid may avoid bulk-like freezing behavior"
+      ],
+      "risk_flags": [
+        "standalone powder or brittle compact may need a binder for membrane use"
+      ],
+      "combination_novelty": "exact_match",
+      "element_evidence": [
+        {
+          "component": "halloysite nanotubes (HNTs)",
+          "descriptor_satisfied": [
+            "D5",
+            "D7"
+          ],
+          "analog_paper_ids": [
+            "manual_a16330d0f5"
+          ],
+          "reason": "HNTs are directly described as hosting phosphoric acid with confinement and reduced leaching."
+        },
+        {
+          "component": "phosphoric acid",
+          "descriptor_satisfied": [
+            "D4",
+            "D6"
+          ],
+          "analog_paper_ids": [
+            "manual_1ca1249fc4",
+            "manual_89488460eb"
+          ],
+          "reason": "Phosphoric acid is supported as a mobile proton source and as the hydrogen-bond-mediated conducting phase."
+        }
+      ],
+      "novelty_rationale": "This is retained as a control because the PA@HNT motif is directly represented by the claim pool. It anchors the candidate set with one low-novelty benchmark for confined-acid transport."
+    },
+    {
+      "instance_id": "I4",
+      "family_id": "F2",
+      "instance_name": "Chitosan/halloysite/phosphoric acid composite membrane",
+      "composition_description": "Chitosan matrix embedding phosphoric-acid-loaded halloysite nanotubes to couple polymer retention with tubular confinement.",
+      "components": [
+        "chitosan",
+        "halloysite nanotubes (HNTs)",
+        "phosphoric acid"
+      ],
+      "expected_properties": [
+        "retention: chitosan plus HNTs may jointly suppress acid loss",
+        "nanostructure: dispersed tubes can create connected confined pathways",
+        "cold_window: bound acid-water domains are plausible within the composite"
+      ],
+      "risk_flags": [
+        "tube aggregation could break pathway continuity",
+        "subzero conductivity remains inferential"
+      ],
+      "combination_novelty": "novel_combination",
+      "element_evidence": [
+        {
+          "component": "chitosan",
+          "descriptor_satisfied": [
+            "D5",
+            "D7"
+          ],
+          "analog_paper_ids": [
+            "manual_1190463586",
+            "manual_42051140ac"
+          ],
+          "reason": "Chitosan is evidenced as an acid-interacting scaffold with retention benefits and tolerance to hydrated/plasticised states."
+        },
+        {
+          "component": "halloysite nanotubes (HNTs)",
+          "descriptor_satisfied": [
+            "D5",
+            "D7"
+          ],
+          "analog_paper_ids": [
+            "manual_a16330d0f5"
+          ],
+          "reason": "HNTs directly provide phosphoric-acid confinement and reduced susceptibility to leaching."
+        },
+        {
+          "component": "phosphoric acid",
+          "descriptor_satisfied": [
+            "D4",
+            "D6"
+          ],
+          "analog_paper_ids": [
+            "manual_1ca1249fc4",
+            "manual_89488460eb"
+          ],
+          "reason": "Phosphoric acid is supported as the proton source and hydrogen-bond-mediated conducting phase."
+        }
+      ],
+      "novelty_rationale": "This candidate extends the proven PA@HNT confinement motif by embedding it in a chitosan retention scaffold. The combination is novel relative to the pool but built from directly compatible component-level claims."
+    },
+    {
+      "instance_id": "I5",
+      "family_id": "F3",
+      "instance_name": "Phosphate glass/starch/PVA hybrid membrane",
+      "composition_description": "Fine protonated phosphate-glass phase dispersed through a starch/PVA hydrogen-bonding film to form an amorphous hybrid proton reservoir.",
+      "components": [
+        "phosphate glass",
+        "starch",
+        "poly(vinyl alcohol) (PVA)"
+      ],
+      "expected_properties": [
+        "pathway_continuity: amorphous glass can provide non-crystalline proton domains",
+        "proton_relay: polymer OH groups may bridge inorganic and organic transport sites",
+        "retention: inorganic phase may reduce volatility of the conducting fraction"
+      ],
+      "risk_flags": [
+        "glass-polymer interfacial brittleness may emerge at high loading",
+        "glass conductivity stability is condition-dependent"
+      ],
+      "combination_novelty": "novel_combination",
+      "element_evidence": [
+        {
+          "component": "phosphate glass",
+          "descriptor_satisfied": [
+            "D1",
+            "D6",
+            "D7"
+          ],
+          "analog_paper_ids": [
+            "manual_26f0dcfc01",
+            "manual_3d7d6d5d7b"
+          ],
+          "reason": "Protonated phosphate glass is directly described as amorphous and proton-conducting with strong hydrogen bonding, though retention/stability can be conditional."
+        },
+        {
+          "component": "starch",
+          "descriptor_satisfied": [
+            "D5",
+            "D6"
+          ],
+          "analog_paper_ids": [
+            "manual_1157b11126",
+            "manual_8d58a81c9e",
+            "manual_8d58a81c9e_1"
+          ],
+          "reason": "Starch provides OH-rich channel-forming and hydrogen-bond-dense functionality that can analogously couple to the glass phase."
+        },
+        {
+          "component": "poly(vinyl alcohol) (PVA)",
+          "descriptor_satisfied": [
+            "D6"
+          ],
+          "analog_paper_ids": [
+            "manual_1157b11126"
+          ],
+          "reason": "PVA contributes an OH-rich flexible film-forming network that can analogously bridge proton-relay sites around dispersed glass."
+        }
+      ],
+      "novelty_rationale": "The novelty is the hybridisation of an amorphous inorganic proton reservoir with a starch/PVA soft host to target continuity across 182–299 K. Evidence exists for each component role, but the integrated cold-oriented hybrid is not directly reported in the pool."
+    }
+  ]
+}

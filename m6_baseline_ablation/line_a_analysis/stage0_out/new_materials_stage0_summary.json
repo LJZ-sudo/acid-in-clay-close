@@ -1,0 +1,347 @@
+{
+  "input_dir": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料",
+  "output_dir": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_out",
+  "normalized_dir": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm",
+  "n_folders": 10,
+  "folders": [
+    {
+      "folder": "2026.4.27CS",
+      "status": "success",
+      "warnings": [],
+      "thickness_cm": 0.06,
+      "area_cm2": 1.96,
+      "n_normalized_files": 55,
+      "arrhenius_min_segment_points": 3,
+      "manual_excel": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\手动拟合Rb-4.27.xlsx",
+      "rb_display_strategy": "avg_per_temp",
+      "code_temp_replicate_summary": {
+        "n_total_points": 55,
+        "n_unique_temps": 33,
+        "n_duplicate_temps": 21,
+        "duplicate_temps": [
+          {
+            "temperature_C": -36.0,
+            "n_repeats": 2
+          },
+          {
+            "temperature_C": -33.0,
+            "n_repeats": 2
+          },
+          {
+            "temperature_C": -30.0,
+            "n_repeats": 2
+          },
+          {
+            "temperature_C": -27.0,
+            "n_repeats": 2
+          },
+          {
+            "temperature_C": -24.0,
+            "n_repeats": 2
+          },
+          {
+            "temperature_C": -21.0,
+            "n_repeats": 2
+          },
+          {
+            "temperature_C": -18.0,
+            "n_repeats": 3
+          },
+          {
+            "temperature_C": -15.0,
+            "n_repeats": 2
+          },
+          {
+            "temperature_C": -12.0,
+            "n_repeats": 2
+          },
+          {
+            "temperature_C": -9.0,
+            "n_repeats": 2
+          },
+          {
+            "temperature_C": -6.0,
+            "n_repeats": 2
+          },
+          {
+            "temperature_C": -3.0,
+            "n_repeats": 2
+          },
+          {
+            "temperature_C": 0.0,
+            "n_repeats": 2
+          },
+          {
+            "temperature_C": 3.0,
+            "n_repeats": 2
+          },
+          {
+            "temperature_C": 6.0,
+            "n_repeats": 2
+          },
+          {
+            "temperature_C": 9.0,
+            "n_repeats": 2
+          },
+          {
+            "temperature_C": 12.0,
+            "n_repeats": 2
+          },
+          {
+            "temperature_C": 15.0,
+            "n_repeats": 2
+          },
+          {
+            "temperature_C": 18.0,
+            "n_repeats": 2
+          },
+          {
+            "temperature_C": 21.0,
+            "n_repeats": 2
+          },
+          {
+            "temperature_C": 24.0,
+            "n_repeats": 2
+          }
+        ]
+      },
+      "rb_compare_metrics": {
+        "mae_ohm": 62.098435696913455,
+        "rmse_ohm": 266.2380737465459,
+        "mape_pct": 1.9870981253990596,
+        "n_overlap_temps": 33
+      }
+    },
+    {
+      "folder": "2026.4.28CS",
+      "status": "success",
+      "warnings": [],
+      "thickness_cm": 0.06,
+      "area_cm2": 1.96,
+      "n_normalized_files": 37,
+      "arrhenius_min_segment_points": 3,
+      "manual_excel": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\手动拟合Rb-4.28.xlsx",
+      "rb_display_strategy": "avg_per_temp",
+      "code_temp_replicate_summary": {
+        "n_total_points": 37,
+        "n_unique_temps": 34,
+        "n_duplicate_temps": 3,
+        "duplicate_temps": [
+          {
+            "temperature_C": -81.0,
+            "n_repeats": 2
+          },
+          {
+            "temperature_C": -78.0,
+            "n_repeats": 2
+          },
+          {
+            "temperature_C": 18.0,
+            "n_repeats": 2
+          }
+        ]
+      },
+      "rb_compare_metrics": {
+        "mae_ohm": 33.17411899196014,
+        "rmse_ohm": 152.4714315428285,
+        "mape_pct": 4.380818996179473,
+        "n_overlap_temps": 34
+      }
+    },
+    {
+      "folder": "2026.4.29CS",
+      "status": "success",
+      "warnings": [],
+      "thickness_cm": 0.02,
+      "area_cm2": 1.96,
+      "n_normalized_files": 39,
+      "excluded_temps_C": [
+        -80.0,
+        -77.0
+      ],
+      "arrhenius_min_segment_points": 3,
+      "manual_excel": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\手动拟合Rb-4.29.xlsx",
+      "rb_display_strategy": "avg_per_temp",
+      "code_temp_replicate_summary": {
+        "n_total_points": 34,
+        "n_unique_temps": 34,
+        "n_duplicate_temps": 0,
+        "duplicate_temps": []
+      },
+      "rb_compare_metrics": {
+        "mae_ohm": 89.34052039018835,
+        "rmse_ohm": 449.0043667543228,
+        "mape_pct": 12.104196478577222,
+        "n_overlap_temps": 34
+      }
+    },
+    {
+      "folder": "2026.4.30CS",
+      "status": "success",
+      "warnings": [],
+      "thickness_cm": 0.05,
+      "area_cm2": 1.96,
+      "n_normalized_files": 29,
+      "arrhenius_min_segment_points": 3,
+      "manual_excel": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\手动拟合Rb-4.30.xlsx",
+      "rb_display_strategy": "avg_per_temp",
+      "code_temp_replicate_summary": {
+        "n_total_points": 29,
+        "n_unique_temps": 27,
+        "n_duplicate_temps": 2,
+        "duplicate_temps": [
+          {
+            "temperature_C": -30.0,
+            "n_repeats": 2
+          },
+          {
+            "temperature_C": -27.0,
+            "n_repeats": 2
+          }
+        ]
+      },
+      "rb_compare_metrics": {
+        "mae_ohm": 16.877388032176682,
+        "rmse_ohm": 37.08118268265408,
+        "mape_pct": 4.611817436253937,
+        "n_overlap_temps": 27
+      }
+    },
+    {
+      "folder": "2026.5.1CS",
+      "status": "success",
+      "warnings": [],
+      "thickness_cm": 0.06,
+      "area_cm2": 1.96,
+      "n_normalized_files": 28,
+      "arrhenius_min_segment_points": 3,
+      "manual_excel": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\手动拟合Rb-5.1.xlsx",
+      "rb_display_strategy": "avg_per_temp",
+      "code_temp_replicate_summary": {
+        "n_total_points": 28,
+        "n_unique_temps": 27,
+        "n_duplicate_temps": 1,
+        "duplicate_temps": [
+          {
+            "temperature_C": -39.0,
+            "n_repeats": 2
+          }
+        ]
+      },
+      "rb_compare_metrics": {
+        "mae_ohm": 13.547412051577535,
+        "rmse_ohm": 31.375798376830364,
+        "mape_pct": 2.291413277511571,
+        "n_overlap_temps": 27
+      }
+    },
+    {
+      "folder": "2026.5.9CS",
+      "status": "success",
+      "warnings": [],
+      "thickness_cm": 0.022,
+      "area_cm2": 1.96,
+      "n_normalized_files": 35,
+      "arrhenius_min_segment_points": 3,
+      "manual_excel": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\手动Rb拟合-5.9.xlsx",
+      "rb_display_strategy": "avg_per_temp",
+      "code_temp_replicate_summary": {
+        "n_total_points": 35,
+        "n_unique_temps": 35,
+        "n_duplicate_temps": 0,
+        "duplicate_temps": []
+      },
+      "rb_compare_metrics": {
+        "mae_ohm": 651.1837991315995,
+        "rmse_ohm": 2660.2141693310887,
+        "mape_pct": 15.635639470360866,
+        "n_overlap_temps": 34
+      }
+    },
+    {
+      "folder": "2026.6.11淀粉",
+      "status": "success",
+      "warnings": [],
+      "thickness_cm": 0.0628,
+      "area_cm2": 1.96,
+      "n_normalized_files": 38,
+      "arrhenius_min_segment_points": 3,
+      "rb_display_strategy": "avg_per_temp",
+      "code_temp_replicate_summary": {
+        "n_total_points": 38,
+        "n_unique_temps": 38,
+        "n_duplicate_temps": 0,
+        "duplicate_temps": []
+      }
+    },
+    {
+      "folder": "2026.6.12藕粉",
+      "status": "success",
+      "warnings": [],
+      "thickness_cm": 0.0737,
+      "area_cm2": 1.96,
+      "n_normalized_files": 37,
+      "arrhenius_min_segment_points": 3,
+      "rb_display_strategy": "avg_per_temp",
+      "code_temp_replicate_summary": {
+        "n_total_points": 37,
+        "n_unique_temps": 37,
+        "n_duplicate_temps": 0,
+        "duplicate_temps": []
+      }
+    },
+    {
+      "folder": "2026.6.13淀粉",
+      "status": "success",
+      "warnings": [],
+      "thickness_cm": 0.0737,
+      "area_cm2": 1.96,
+      "n_normalized_files": 34,
+      "arrhenius_min_segment_points": 3,
+      "rb_display_strategy": "avg_per_temp",
+      "code_temp_replicate_summary": {
+        "n_total_points": 34,
+        "n_unique_temps": 34,
+        "n_duplicate_temps": 0,
+        "duplicate_temps": []
+      }
+    },
+    {
+      "folder": "2026.6.15藕粉",
+      "status": "success",
+      "warnings": [],
+      "thickness_cm": 0.0701,
+      "area_cm2": 1.96,
+      "n_normalized_files": 59,
+      "arrhenius_min_segment_points": 3,
+      "rb_display_strategy": "avg_per_temp",
+      "code_temp_replicate_summary": {
+        "n_total_points": 59,
+        "n_unique_temps": 54,
+        "n_duplicate_temps": 5,
+        "duplicate_temps": [
+          {
+            "temperature_C": -47.0,
+            "n_repeats": 2
+          },
+          {
+            "temperature_C": -45.0,
+            "n_repeats": 2
+          },
+          {
+            "temperature_C": -28.0,
+            "n_repeats": 2
+          },
+          {
+            "temperature_C": -26.0,
+            "n_repeats": 2
+          },
+          {
+            "temperature_C": -23.0,
+            "n_repeats": 2
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-06-15T12:12:19.108998",
+  "mode": "offline",
+  "material": "2026.6.12藕粉",
+  "data_dir": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_norm\\2026.6.12藕粉",
+  "output_dir": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_out\\2026.6.12藕粉",
+  "chi_pattern": "*.txt",
+  "dta_dir": null,
+  "dta_pattern": "*.dta",
+  "strict_mode": false,
+  "arrhenius_enabled": true,
+  "reporting_enabled": true,
+  "total_files": 37,
+  "successful_files": 37,
+  "failed_files": 0,
+  "duration_seconds": 1.598504,
+  "report_paths": [
+    "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_out\\2026.6.12藕粉\\conductivity_trend.png",
+    "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\m6_baseline_ablation\\line_a_analysis\\stage0_out\\2026.6.12藕粉\\arrhenius_plot.png"
+  ],
+  "arrhenius_success": true
+}

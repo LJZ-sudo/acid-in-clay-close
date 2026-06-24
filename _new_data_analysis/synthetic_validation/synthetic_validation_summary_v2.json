@@ -1,0 +1,51 @@
+{
+  "provenance": {
+    "analysis_version": "stage0-eis-v2.0.0",
+    "admission_policy_version": "evidence-policy-v2.0.0",
+    "objective_registry_version": "objective-registry-v2.0.0",
+    "rb_method_policy_version": "rb-method-v2.0.0",
+    "config_sha256": {
+      "stage0_v2_policy": "da45db8ed5327d9d45407e314014ed811eca46f00baf8165bf601348454be1af",
+      "rb_method_policy": "43949a81157d42afe6e16713ece534dcd99c3cafd03712e05cbb6b640ede117a",
+      "evidence_admission_v2": "4931d6e794f1056445f8621de5c39702466c82d3c39f9f050e00b9e397a45960",
+      "objective_registry": "193a65c7b5d39235ef29a8e29c72429e965490dfa8424dc216d169269ab7fac5"
+    },
+    "git_commit": "fb17c68",
+    "generated_at": "2026-06-22T14:30:06.600365+08:00",
+    "n_draws": 80
+  },
+  "datasets": [
+    {
+      "dataset": "lineA_LRS_0509CS",
+      "real_n_segments": 3,
+      "fpr_break": 0.2125,
+      "false_bp_median_K": 210.32923222252728,
+      "injected_detection_rate": 1.0,
+      "interpretation": "real transition above a moderate FPR; report FPR alongside"
+    },
+    {
+      "dataset": "lineA_LRS_6.12",
+      "real_n_segments": 3,
+      "fpr_break": 0.1375,
+      "false_bp_median_K": 274.7099521779291,
+      "injected_detection_rate": 1.0,
+      "interpretation": "real transition above a moderate FPR; report FPR alongside"
+    },
+    {
+      "dataset": "lineA_LRS_6.15_merged",
+      "real_n_segments": 3,
+      "fpr_break": 0.0625,
+      "false_bp_median_K": 199.8829507454166,
+      "injected_detection_rate": 1.0,
+      "interpretation": "real transition exceeds pipeline false-positive floor (FPR<=0.10)"
+    },
+    {
+      "dataset": "lineA_LRS_0615_s2",
+      "real_n_segments": 3,
+      "fpr_break": 0.2375,
+      "false_bp_median_K": 271.67138275030595,
+      "injected_detection_rate": 1.0,
+      "interpretation": "real transition above a moderate FPR; report FPR alongside"
+    }
+  ]
+}

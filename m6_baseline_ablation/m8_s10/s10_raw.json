@@ -1,0 +1,644 @@
+{
+  "step_id": "s10_ranking",
+  "ranked_candidates": [
+    {
+      "rank": 1,
+      "instance_id": "I2",
+      "instance_name": "Starch/PVA/choline chloride-phosphoric acid eutectic membrane",
+      "total_score": 0.77,
+      "criteria_scores": [
+        {
+          "criterion_name": "mechanism_consistency",
+          "score": 0.88,
+          "weight": 1.5,
+          "rationale": "Strong fit to a confined acid-water / hybrid hopping mechanism: the ChCl/PA eutectic directly supports acid complexation and reduced crystallisation tendency, while starch/PVA supplies dense OH-rich hydrogen-bond relays."
+        },
+        {
+          "criterion_name": "conductivity_potential",
+          "score": 0.72,
+          "weight": 1.0,
+          "rationale": "Moderate-to-good conductivity is plausible from the DES-like proton carrier plus OH-rich matrix, but direct quantitative evidence for this exact membrane architecture is limited and most anchors are indirect."
+        },
+        {
+          "criterion_name": "cold_to_room_T_robustness",
+          "score": 0.82,
+          "weight": 1.0,
+          "rationale": "Scores well for the 182–299 K window because (a) it has an explicit anti-freeze / eutectic strategy, (b) starch/PVA is a plasticised low-temperature-capable host rather than a brittle HT-PEM matrix, and (c) the acid is complexed rather than neat free PA. For (d), the descriptor pool supports the ChCl/PA eutectic motif, but quantitative conductivity anchors are mainly above room temperature; therefore this is strong but not maximal."
+        },
+        {
+          "criterion_name": "acid_retention",
+          "score": 0.62,
+          "weight": 1.0,
+          "rationale": "Retention is plausible through hydrogen bonding and eutectic complexation, but humidity-cycling retention versus acid leaching is not directly demonstrated for this exact starch/PVA-ChCl/PA combination."
+        },
+        {
+          "criterion_name": "processability",
+          "score": 0.86,
+          "weight": 0.8,
+          "rationale": "All components are compatible with solution blending / casting and do not imply demanding thermal processing."
+        },
+        {
+          "criterion_name": "evidence_support",
+          "score": 0.9,
+          "weight": 1.0,
+          "rationale": "Independent D4 audit is strong: all declared (component, descriptor) pairs are backed in the upstream pool with direct matches for starch D5/D6, PVA D6, ChCl D4, and PA D4; only PA D6 is analog-indirect rather than exact, so support remains high."
+        },
+        {
+          "criterion_name": "risk_penalty",
+          "score": 0.67,
+          "weight": 1.0,
+          "rationale": "Main risks are over-softening from eutectic loading and uncertain long-term retention under humidity cycling, but no obvious show-stopper is evident."
+        },
+        {
+          "criterion_name": "s8_proximity",
+          "score": 0.42,
+          "weight": 0.3,
+          "rationale": "Shares the phosphoric-acid family logic and low-temperature target, but replaces the clay-centered S8 mother system with an eutectic/polymer route."
+        },
+        {
+          "criterion_name": "experimental_feasibility",
+          "score": 0.9,
+          "weight": 0.8,
+          "rationale": "Typical university-lab feasible: commodity reagents, likely solution processing, no glove box implied."
+        },
+        {
+          "criterion_name": "biomass_accessibility",
+          "score": 0.95,
+          "weight": 0.5,
+          "rationale": "Starch is biomass-derived and widely available; the rest are common chemicals."
+        },
+        {
+          "criterion_name": "combination_novelty",
+          "score": 0.92,
+          "weight": 1.2,
+          "rationale": "novel_combination: closest support is the ChCl/PA eutectic paper manual_1ca1249fc4, but that does not report this starch/PVA membrane integration; the transfer into an OH-rich film for cold-window operation is the differentiating step."
+        }
+      ],
+      "ranking_rationale": "Ranked first because its combination_novelty is high as a true novel_combination, and it is one of the strongest candidates on cold_to_room_T_robustness due to the explicit ChCl/PA eutectic anti-freeze strategy. It also scores very well on experimental_feasibility, making the novelty-versus-feasibility balance attractive even though S8 proximity is only moderate.",
+      "combination_novelty": "novel_combination",
+      "literature_support_card_ids": [],
+      "novelty_rationale": "The novelty is the transfer of a ChCl/PA eutectic motif into a starch/PVA OH-rich film aimed at subambient continuity. Evidence supports each role individually, but this exact combined membrane was not directly claimed in the pool.",
+      "risk_summary": "Good low-temperature concept and easy processing, but film over-softening and acid retention under humidity cycling remain the main development risks."
+    },
+    {
+      "rank": 2,
+      "instance_id": "I1",
+      "instance_name": "Chitosan/PVA/attapulgite/phosphoric acid quaternary film",
+      "total_score": 0.76,
+      "criteria_scores": [
+        {
+          "criterion_name": "mechanism_consistency",
+          "score": 0.91,
+          "weight": 1.5,
+          "rationale": "Very strong match to the winning mechanism: attapulgite offers 1-D confinement, chitosan/PVA provide dense hydrogen-bonded relay media, and PA is the proton source for hybrid hopping in confined domains."
+        },
+        {
+          "criterion_name": "conductivity_potential",
+          "score": 0.78,
+          "weight": 1.0,
+          "rationale": "Component analogs suggest meaningful conductivity is achievable, especially given the attapulgite/chitosan precedent and PA-mediated transport; however, the exact quaternary blend lacks direct low-temperature performance proof."
+        },
+        {
+          "criterion_name": "cold_to_room_T_robustness",
+          "score": 0.64,
+          "weight": 1.0,
+          "rationale": "Moderately good for 182–299 K: (a) OH-rich hydrated film plausibly preserves bound-water continuity, but there is no explicit anti-freeze co-solvent; (b) polymer blend continuity should be better than brittle HT-PEM hosts; (c) free PA has only partial mitigation via clay/polymer interactions, so acid cold-stability is intermediate; (d) there is a PA quantitative anchor at −30 °C in the pool, but not for this exact chemistry. Hence a solid but not top-tier low-T score."
+        },
+        {
+          "criterion_name": "acid_retention",
+          "score": 0.78,
+          "weight": 1.0,
+          "rationale": "Chitosan-clay interactions and attapulgite confinement provide a credible route to suppress PA loss relative to unconfined acid-doped films."
+        },
+        {
+          "criterion_name": "processability",
+          "score": 0.84,
+          "weight": 0.8,
+          "rationale": "Likely accessible by aqueous or mixed-solvent casting with conventional blending and filler dispersion."
+        },
+        {
+          "criterion_name": "evidence_support",
+          "score": 0.84,
+          "weight": 1.0,
+          "rationale": "Independent D4 audit is good: chitosan D5/D7, attapulgite D5/D7, and PVA D6 are backed directly in the pool. PA D4 is directly backed, while PA D6 is analog-backed via H3PO4/PA variants and related low-temperature PA literature, so overall coverage is strong but not perfect."
+        },
+        {
+          "criterion_name": "risk_penalty",
+          "score": 0.68,
+          "weight": 1.0,
+          "rationale": "Risks are mainly balancing enough PA for conductivity without excessive plasticisation or leaching, plus the lack of direct subzero data for the exact quaternary formulation."
+        },
+        {
+          "criterion_name": "s8_proximity",
+          "score": 0.95,
+          "weight": 0.3,
+          "rationale": "This is a minimal perturbation of the phosphoric-acid-in-clay S8 family, adding film-forming biopolymers around a clay-confined acid motif."
+        },
+        {
+          "criterion_name": "experimental_feasibility",
+          "score": 0.88,
+          "weight": 0.8,
+          "rationale": "Uses commodity polymers, clay filler, and phosphoric acid; standard membrane casting and drying should suffice."
+        },
+        {
+          "criterion_name": "biomass_accessibility",
+          "score": 0.9,
+          "weight": 0.5,
+          "rationale": "Chitosan is biomass-derived and broadly accessible; other components are also common."
+        },
+        {
+          "criterion_name": "combination_novelty",
+          "score": 0.9,
+          "weight": 1.2,
+          "rationale": "novel_combination: closest support is the chitosan/1-D attapulgite proton-transport literature around manual_1190463586 and related chitosan-attapulgite work, but the exact CS/PVA/attapulgite/PA cold-targeted quaternary film is not directly reported."
+        }
+      ],
+      "ranking_rationale": "This candidate ranks near the top because its combination_novelty is high and its mechanism consistency is among the best in the set. Its cold_to_room_T_robustness is good but lower than the eutectic-based design because it lacks an explicit anti-freeze co-solvent. It remains highly attractive thanks to strong s8_proximity and excellent experimental_feasibility.",
+      "combination_novelty": "novel_combination",
+      "literature_support_card_ids": [],
+      "novelty_rationale": "This is the requested quaternary synergy motif assembled from separately supported roles rather than a directly reported exact formulation. Novelty lies in combining biopolymer retention, PVA film flexibility, 1-D clay confinement, and phosphoric-acid conduction in one cold-targeted membrane.",
+      "risk_summary": "Mechanistically strong and close to the S8 family, but low-temperature continuity is still inferential and free-PA overloading could cause softness or leaching."
+    },
+    {
+      "rank": 3,
+      "instance_id": "I4",
+      "instance_name": "Chitosan/halloysite/phosphoric acid composite membrane",
+      "total_score": 0.74,
+      "criteria_scores": [
+        {
+          "criterion_name": "mechanism_consistency",
+          "score": 0.89,
+          "weight": 1.5,
+          "rationale": "Very good match to the confined acid-water hybrid-hopping mechanism: HNTs provide direct confinement and chitosan adds acid-interacting retention and hydrated transport continuity."
+        },
+        {
+          "criterion_name": "conductivity_potential",
+          "score": 0.73,
+          "weight": 1.0,
+          "rationale": "Reasonable conductivity is plausible from HNT-confined PA plus a chitosan host, but there is no direct quantitative anchor for this exact ternary membrane in the target temperature window."
+        },
+        {
+          "criterion_name": "cold_to_room_T_robustness",
+          "score": 0.62,
+          "weight": 1.0,
+          "rationale": "Moderate score for the 182–299 K window: (a) hydrated chitosan can support bound-water continuity but no explicit anti-freeze additive is present; (b) the matrix is softer than HT-PEM controls; (c) PA is only partially stabilised by confinement and polymer interaction; (d) low-temperature PA-related analog evidence exists in the pool, but not for this exact HNT/chitosan system."
+        },
+        {
+          "criterion_name": "acid_retention",
+          "score": 0.82,
+          "weight": 1.0,
+          "rationale": "Retention should be relatively strong because both HNT confinement and chitosan acid interaction work in the same direction against leaching."
+        },
+        {
+          "criterion_name": "processability",
+          "score": 0.83,
+          "weight": 0.8,
+          "rationale": "Composite membrane casting is straightforward, though HNT dispersion control matters."
+        },
+        {
+          "criterion_name": "evidence_support",
+          "score": 0.92,
+          "weight": 1.0,
+          "rationale": "Independent D4 audit is very strong: chitosan D5/D7, HNT D5/D7, and PA D4/D6 all have direct or near-direct upstream backing, with little unsupported descriptor inflation."
+        },
+        {
+          "criterion_name": "risk_penalty",
+          "score": 0.7,
+          "weight": 1.0,
+          "rationale": "Primary risks are HNT aggregation and the absence of direct subzero conductivity validation, but the concept is otherwise coherent."
+        },
+        {
+          "criterion_name": "s8_proximity",
+          "score": 0.9,
+          "weight": 0.3,
+          "rationale": "Still very close to the phosphoric-acid-in-clay S8 family, differing mainly by use of HNTs and a chitosan binder/scaffold."
+        },
+        {
+          "criterion_name": "experimental_feasibility",
+          "score": 0.87,
+          "weight": 0.8,
+          "rationale": "No unusual equipment implied; standard dispersion and casting methods should be sufficient."
+        },
+        {
+          "criterion_name": "biomass_accessibility",
+          "score": 0.9,
+          "weight": 0.5,
+          "rationale": "Chitosan is biomass-derived and widely accessible."
+        },
+        {
+          "criterion_name": "combination_novelty",
+          "score": 0.89,
+          "weight": 1.2,
+          "rationale": "novel_combination: closest paper is the PA@HNT motif in manual_a16330d0f5, but embedding that motif into a chitosan retention scaffold is the new combination-level step."
+        }
+      ],
+      "ranking_rationale": "This candidate is ranked highly because its combination_novelty is strong while remaining closely tied to an already validated PA@HNT confinement motif. Its cold_to_room_T_robustness is only moderate since it lacks an explicit anti-freeze strategy, but that is partly offset by high evidence_support and excellent experimental_feasibility.",
+      "combination_novelty": "novel_combination",
+      "literature_support_card_ids": [],
+      "novelty_rationale": "This candidate extends the proven PA@HNT confinement motif by embedding it in a chitosan retention scaffold. The combination is novel relative to the pool but built from directly compatible component-level claims.",
+      "risk_summary": "Good retention logic and strong audit support, with main risks centered on nanotube dispersion and unproven subzero transport."
+    },
+    {
+      "rank": 4,
+      "instance_id": "I3",
+      "instance_name": "Phosphoric acid in halloysite nanotubes",
+      "total_score": 0.63,
+      "criteria_scores": [
+        {
+          "criterion_name": "mechanism_consistency",
+          "score": 0.86,
+          "weight": 1.5,
+          "rationale": "Directly consistent with the mechanism through acid confinement in nanotubular clay and dense hydrogen-bonded PA domains."
+        },
+        {
+          "criterion_name": "conductivity_potential",
+          "score": 0.71,
+          "weight": 1.0,
+          "rationale": "Good intrinsic conductivity potential is supported by the PA@HNT literature, though the architecture is less complete as a stand-alone membrane system."
+        },
+        {
+          "criterion_name": "cold_to_room_T_robustness",
+          "score": 0.48,
+          "weight": 1.0,
+          "rationale": "Confinement may help the cold end, but this is still mostly a free-PA/clay motif without an explicit anti-freeze co-solvent or soft polymer host. There is no direct 182–299 K quantitative anchor for this specific motif, so the low-temperature robustness is capped at a middling level."
+        },
+        {
+          "criterion_name": "acid_retention",
+          "score": 0.83,
+          "weight": 1.0,
+          "rationale": "One of the strongest features: HNT confinement is directly supported as reducing PA leaching."
+        },
+        {
+          "criterion_name": "processability",
+          "score": 0.58,
+          "weight": 0.8,
+          "rationale": "As supplied, this is better viewed as a confined-acid additive or powder motif than a complete membrane, so processability into a robust free-standing film is less straightforward."
+        },
+        {
+          "criterion_name": "evidence_support",
+          "score": 0.9,
+          "weight": 1.0,
+          "rationale": "Independent D4 audit is strong with direct upstream support for HNT D5/D7 and PA D4/D6 via the pool."
+        },
+        {
+          "criterion_name": "risk_penalty",
+          "score": 0.64,
+          "weight": 1.0,
+          "rationale": "Main risk is practical: brittle compact / powder handling and likely need for a binder or matrix for real membrane deployment."
+        },
+        {
+          "criterion_name": "s8_proximity",
+          "score": 0.95,
+          "weight": 0.3,
+          "rationale": "Extremely close to the phosphoric-acid-in-clay mother system."
+        },
+        {
+          "criterion_name": "experimental_feasibility",
+          "score": 0.7,
+          "weight": 0.8,
+          "rationale": "Impregnation/loading is feasible, but forming a practical membrane typically needs an added support or binder."
+        },
+        {
+          "criterion_name": "biomass_accessibility",
+          "score": 0.5,
+          "weight": 0.5,
+          "rationale": "Neutral default for a non-biomass route."
+        },
+        {
+          "criterion_name": "combination_novelty",
+          "score": 0.3,
+          "weight": 1.2,
+          "rationale": "exact_match: this is intentionally a control baseline, closest to manual_a16330d0f5 and directly represented in the pool, so novelty is explicitly penalised."
+        }
+      ],
+      "ranking_rationale": "This exact_match control stays in the list because it is mechanistically relevant and experimentally grounded, but it does not out-rank the better argued novel combinations. Its cold_to_room_T_robustness is only moderate and its processability as a standalone membrane is weaker, although s8_proximity is excellent.",
+      "combination_novelty": "exact_match",
+      "literature_support_card_ids": [],
+      "novelty_rationale": "This is retained as a control because the PA@HNT motif is directly represented by the claim pool. It anchors the candidate set with one low-novelty benchmark for confined-acid transport.",
+      "risk_summary": "Useful as a benchmark confined-acid control, but likely needs a binder/matrix and is not the most persuasive low-temperature membrane on its own."
+    },
+    {
+      "rank": 5,
+      "instance_id": "I5",
+      "instance_name": "Phosphate glass/starch/PVA hybrid membrane",
+      "total_score": 0.62,
+      "criteria_scores": [
+        {
+          "criterion_name": "mechanism_consistency",
+          "score": 0.68,
+          "weight": 1.5,
+          "rationale": "Partially aligned: the amorphous phosphate glass can provide proton-conducting domains, but this is less clearly a confined acid-water network than the clay/PA or eutectic candidates."
+        },
+        {
+          "criterion_name": "conductivity_potential",
+          "score": 0.63,
+          "weight": 1.0,
+          "rationale": "Phosphate glass has real proton-conducting precedent, but the integrated polymer/glass interfacial pathway quality is uncertain and the component literature is not targeted to the exact cold hydrated regime."
+        },
+        {
+          "criterion_name": "cold_to_room_T_robustness",
+          "score": 0.34,
+          "weight": 1.0,
+          "rationale": "This scores low for the 182–299 K window: there is no explicit anti-freeze/bound-water mitigation, glassy domains may not ensure mechanical/electrical continuity at 200 K, and the literature anchors are predominantly high-temperature or condition-unspecified. Because the support is closer to HT proton-conducting archetypes than explicit cold-end operation, the score is capped low."
+        },
+        {
+          "criterion_name": "acid_retention",
+          "score": 0.67,
+          "weight": 1.0,
+          "rationale": "The inorganic phase may help immobilise protonic species, but stability is reported as condition-dependent and interface-driven failure is plausible."
+        },
+        {
+          "criterion_name": "processability",
+          "score": 0.63,
+          "weight": 0.8,
+          "rationale": "Hybridising a brittle inorganic glass with soft biopolymers is feasible but less straightforward than simple solution-cast polymer/clay systems."
+        },
+        {
+          "criterion_name": "evidence_support",
+          "score": 0.98,
+          "weight": 1.0,
+          "rationale": "Independent D4 audit is excellent: all claimed descriptor pairs for phosphate glass, starch, and PVA are directly represented in the upstream claim pool."
+        },
+        {
+          "criterion_name": "risk_penalty",
+          "score": 0.5,
+          "weight": 1.0,
+          "rationale": "Interfacial brittleness, unclear low-temperature continuity, and condition-sensitive conductivity stability are meaningful risks."
+        },
+        {
+          "criterion_name": "s8_proximity",
+          "score": 0.25,
+          "weight": 0.3,
+          "rationale": "It shares proton-conduction descriptors but moves well away from the phosphoric-acid-in-clay mother family."
+        },
+        {
+          "criterion_name": "experimental_feasibility",
+          "score": 0.62,
+          "weight": 0.8,
+          "rationale": "Still lab-accessible, but preparing and integrating protonated phosphate glass is a moderate barrier compared with commodity aqueous casting."
+        },
+        {
+          "criterion_name": "biomass_accessibility",
+          "score": 0.95,
+          "weight": 0.5,
+          "rationale": "Starch is widely available, with PVA also common."
+        },
+        {
+          "criterion_name": "combination_novelty",
+          "score": 0.9,
+          "weight": 1.2,
+          "rationale": "novel_combination: closest support is the phosphate-glass literature manual_26f0dcfc01/manual_3d7d6d5d7b plus starch/PVA support, but the cold-oriented glass/starch/PVA hybrid membrane itself is not directly reported."
+        }
+      ],
+      "ranking_rationale": "The candidate is novel at the combination level and very well supported by the independent descriptor audit, but its cold_to_room_T_robustness is clearly weaker than the top polymer/clay or eutectic designs because its anchors are mainly outside the explicit 182–299 K target regime. Experimental_feasibility is acceptable but not as simple as the leading options.",
+      "combination_novelty": "novel_combination",
+      "literature_support_card_ids": [],
+      "novelty_rationale": "The novelty is the hybridisation of an amorphous inorganic proton reservoir with a starch/PVA soft host to target continuity across 182–299 K. Evidence exists for each component role, but the integrated cold-oriented hybrid is not directly reported in the pool.",
+      "risk_summary": "Interesting high-novelty hybrid, but glass/polymer compatibility and weak direct low-temperature support make it a riskier cold-window candidate."
+    },
+    {
+      "rank": 6,
+      "instance_id": "X1",
+      "instance_name": "LiFePO4 lithium-ion battery cathode",
+      "total_score": 0.27,
+      "criteria_scores": [
+        {
+          "criterion_name": "mechanism_consistency",
+          "score": 0.02,
+          "weight": 1.5,
+          "rationale": "Essentially inconsistent with the selected proton-conducting confined acid-water mechanism; this is an off-topic battery cathode."
+        },
+        {
+          "criterion_name": "conductivity_potential",
+          "score": 0.05,
+          "weight": 1.0,
+          "rationale": "Its relevant conductivity is electronic/electrochemical in a battery context, not proton conductivity in the target membrane mechanism."
+        },
+        {
+          "criterion_name": "cold_to_room_T_robustness",
+          "score": 0.02,
+          "weight": 1.0,
+          "rationale": "No meaningful relevance to the 182–299 K proton-conducting membrane window; there is no bound-water/acid continuity concept here."
+        },
+        {
+          "criterion_name": "acid_retention",
+          "score": 0.0,
+          "weight": 1.0,
+          "rationale": "Not an acid-containing candidate for the target system."
+        },
+        {
+          "criterion_name": "processability",
+          "score": 0.3,
+          "weight": 0.8,
+          "rationale": "Battery electrode fabrication is feasible in general, but not relevant to the membrane problem."
+        },
+        {
+          "criterion_name": "evidence_support",
+          "score": 0.05,
+          "weight": 1.0,
+          "rationale": "Independent descriptor audit is effectively unsupported for the claimed proton-transport descriptors within the target literature pool."
+        },
+        {
+          "criterion_name": "risk_penalty",
+          "score": 0.0,
+          "weight": 1.0,
+          "rationale": "Show-stopper for this task because it is outside the application domain."
+        },
+        {
+          "criterion_name": "s8_proximity",
+          "score": 0.0,
+          "weight": 0.3,
+          "rationale": "Entirely different materials family and device class."
+        },
+        {
+          "criterion_name": "experimental_feasibility",
+          "score": 0.25,
+          "weight": 0.8,
+          "rationale": "Would require battery-specific fabrication and is not a relevant membrane route."
+        },
+        {
+          "criterion_name": "biomass_accessibility",
+          "score": 0.5,
+          "weight": 0.5,
+          "rationale": "Neutral default for a non-biomass route."
+        },
+        {
+          "criterion_name": "combination_novelty",
+          "score": 0.2,
+          "weight": 1.2,
+          "rationale": "exact_match: exact known battery material, and not a novel candidate in the selected mechanism space."
+        }
+      ],
+      "ranking_rationale": "Although retained for completeness, this exact_match distractor ranks very low because its combination_novelty is low in this context and its cold_to_room_T_robustness is irrelevant to the selected proton-membrane window. Its s8_proximity is zero and it is fundamentally off-mechanism.",
+      "combination_novelty": "exact_match",
+      "literature_support_card_ids": [
+        "distractor_lifepo4"
+      ],
+      "novelty_rationale": "Famous, highly cited material from a different application domain.",
+      "risk_summary": "Off-topic battery electrode; not suitable for the selected mechanism or target experiment window."
+    },
+    {
+      "rank": 7,
+      "instance_id": "X2",
+      "instance_name": "Silicon nanostructured Li-ion anode",
+      "total_score": 0.27,
+      "criteria_scores": [
+        {
+          "criterion_name": "mechanism_consistency",
+          "score": 0.02,
+          "weight": 1.5,
+          "rationale": "Does not match the confined acid-water proton conduction mechanism; this is an anode material for a different device class."
+        },
+        {
+          "criterion_name": "conductivity_potential",
+          "score": 0.05,
+          "weight": 1.0,
+          "rationale": "Any conductivity relevance is outside the target protonic membrane context."
+        },
+        {
+          "criterion_name": "cold_to_room_T_robustness",
+          "score": 0.02,
+          "weight": 1.0,
+          "rationale": "No relevance to acid/plasticised membrane continuity in 182–299 K."
+        },
+        {
+          "criterion_name": "acid_retention",
+          "score": 0.0,
+          "weight": 1.0,
+          "rationale": "Not an acid-bearing candidate in the target sense."
+        },
+        {
+          "criterion_name": "processability",
+          "score": 0.28,
+          "weight": 0.8,
+          "rationale": "Nanostructured silicon processing is not aligned with the intended membrane fabrication route."
+        },
+        {
+          "criterion_name": "evidence_support",
+          "score": 0.05,
+          "weight": 1.0,
+          "rationale": "Independent descriptor audit does not support it for the target proton-conduction descriptors."
+        },
+        {
+          "criterion_name": "risk_penalty",
+          "score": 0.0,
+          "weight": 1.0,
+          "rationale": "Show-stopper by domain mismatch."
+        },
+        {
+          "criterion_name": "s8_proximity",
+          "score": 0.0,
+          "weight": 0.3,
+          "rationale": "Entirely outside the phosphoric-acid-in-clay family."
+        },
+        {
+          "criterion_name": "experimental_feasibility",
+          "score": 0.22,
+          "weight": 0.8,
+          "rationale": "Specialised anode fabrication is not the relevant experimental route here."
+        },
+        {
+          "criterion_name": "biomass_accessibility",
+          "score": 0.5,
+          "weight": 0.5,
+          "rationale": "Neutral default for a non-biomass route."
+        },
+        {
+          "criterion_name": "combination_novelty",
+          "score": 0.2,
+          "weight": 1.2,
+          "rationale": "exact_match: known off-topic battery formulation, retained only as a low-ranking distractor."
+        }
+      ],
+      "ranking_rationale": "This exact_match distractor remains near the bottom because its combination_novelty is irrelevant to the chosen mechanism and its cold_to_room_T_robustness score is effectively null in the membrane context. Experimental_feasibility also does not translate to the intended S8-like route.",
+      "combination_novelty": "exact_match",
+      "literature_support_card_ids": [
+        "distractor_silicon"
+      ],
+      "novelty_rationale": "Famous, highly cited material from a different application domain.",
+      "risk_summary": "Off-topic Li-ion anode; unsuitable for proton-conducting membrane evaluation."
+    },
+    {
+      "rank": 8,
+      "instance_id": "X3",
+      "instance_name": "CsPbI3 perovskite solar absorber",
+      "total_score": 0.27,
+      "criteria_scores": [
+        {
+          "criterion_name": "mechanism_consistency",
+          "score": 0.01,
+          "weight": 1.5,
+          "rationale": "No substantive alignment with the winning proton-transport mechanism; this is a photovoltaic absorber."
+        },
+        {
+          "criterion_name": "conductivity_potential",
+          "score": 0.04,
+          "weight": 1.0,
+          "rationale": "Not relevant to proton conductivity in the target electrolyte system."
+        },
+        {
+          "criterion_name": "cold_to_room_T_robustness",
+          "score": 0.02,
+          "weight": 1.0,
+          "rationale": "No relevance to bound-water continuity, acid stability, or protonic transport in 182–299 K."
+        },
+        {
+          "criterion_name": "acid_retention",
+          "score": 0.0,
+          "weight": 1.0,
+          "rationale": "Not an acid-retaining electrolyte candidate."
+        },
+        {
+          "criterion_name": "processability",
+          "score": 0.25,
+          "weight": 0.8,
+          "rationale": "Thin-film solar processing is not the target fabrication route and often requires stricter handling."
+        },
+        {
+          "criterion_name": "evidence_support",
+          "score": 0.05,
+          "weight": 1.0,
+          "rationale": "Independent descriptor audit does not support this as a target proton-conducting material."
+        },
+        {
+          "criterion_name": "risk_penalty",
+          "score": 0.0,
+          "weight": 1.0,
+          "rationale": "Show-stopper due to domain mismatch."
+        },
+        {
+          "criterion_name": "s8_proximity",
+          "score": 0.0,
+          "weight": 0.3,
+          "rationale": "Entirely different family from phosphoric-acid-in-clay electrolytes."
+        },
+        {
+          "criterion_name": "experimental_feasibility",
+          "score": 0.2,
+          "weight": 0.8,
+          "rationale": "Requires unrelated optoelectronic processing and is not a relevant route for the target study."
+        },
+        {
+          "criterion_name": "biomass_accessibility",
+          "score": 0.5,
+          "weight": 0.5,
+          "rationale": "Neutral default for a non-biomass route."
+        },
+        {
+          "criterion_name": "combination_novelty",
+          "score": 0.2,
+          "weight": 1.2,
+          "rationale": "exact_match: known perovskite solar material, irrelevant to the selected mechanism and therefore strongly penalised in ranking."
+        }
+      ],
+      "ranking_rationale": "Retained only for completeness, this exact_match distractor ranks last-tier because its combination_novelty is irrelevant here and its cold_to_room_T_robustness does not address the target proton-membrane window at all. Its s8_proximity is zero and it is outside the problem domain.",
+      "combination_novelty": "exact_match",
+      "literature_support_card_ids": [
+        "distractor_cspbi3"
+      ],
+      "novelty_rationale": "Famous, highly cited material from a different application domain.",
+      "risk_summary": "Off-topic solar absorber; not a candidate for the selected proton-conducting mechanism."
+    }
+  ],
+  "ranking_notes": "All candidates were retained because each has a non-empty novelty_rationale, but X1/X2/X3 are obvious off-topic distractors and therefore rank at the bottom on mechanism consistency, cold-to-room-temperature robustness, and S8 proximity. Evidence-support scoring used the upstream descriptor_claim_pool (D4 audit) rather than self-reported claims. For several candidates, literature anchors inside the explicit 182–299 K window are sparse; where only elevated-temperature or condition-unspecified component analogs exist, cold_to_room_T_robustness was capped accordingly."
+}

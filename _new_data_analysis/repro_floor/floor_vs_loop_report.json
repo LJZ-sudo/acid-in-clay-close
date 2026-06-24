@@ -1,0 +1,160 @@
+{
+  "policy": "REAL data only; Line-A LRS floor used as proxy for Line-B attapulgite (flagged); no new experiments; tests whether loop resolves below the floor.",
+  "lineA_floor": {
+    "d_sigma_jun_dex": 0.24475547039199286,
+    "d_sigma_all_dex": 0.32061877982283105,
+    "std_ea_high_eV": 0.01858646907474711,
+    "std_ea_low_eV": 0.06862147240527695,
+    "between_pellet_d_ea_high_eV": 0.026285236642135473,
+    "between_pellet_d_excess_eV": 0.10054216337173891,
+    "combined_score_floor_tight": 0.2620126808547071,
+    "combined_score_floor_loose": 0.33397875174469693,
+    "sigma_floor_tight_dex": 0.24475547039199286,
+    "sigma_floor_loose_dex": 0.32061877982283105
+  },
+  "combined_score_floor_used": {
+    "tight_June_proxy": 0.2620126808547071,
+    "loose_all_proxy": 0.33397875174469693
+  },
+  "lineB_best": {
+    "trial_id": 1,
+    "R": 0.186,
+    "N": 1.029,
+    "combined_score": -1.9407287999780058
+  },
+  "ranked_candidates": [
+    {
+      "trial_id": 1,
+      "R": 0.186,
+      "N": 1.029,
+      "combined_score": -1.941,
+      "gap_to_best_combined": 0.0,
+      "within_loose_floor": false,
+      "log10_sigma": -1.593,
+      "gap_to_best_sigma_dex": 0.256,
+      "prospective": false
+    },
+    {
+      "trial_id": 5,
+      "R": 0.5,
+      "N": 1.2,
+      "combined_score": -2.157,
+      "gap_to_best_combined": 0.217,
+      "within_loose_floor": true,
+      "log10_sigma": -1.337,
+      "gap_to_best_sigma_dex": 0.0,
+      "prospective": false
+    },
+    {
+      "trial_id": 7,
+      "R": 0.2,
+      "N": 1.1,
+      "combined_score": -2.175,
+      "gap_to_best_combined": 0.235,
+      "within_loose_floor": true,
+      "log10_sigma": -1.715,
+      "gap_to_best_sigma_dex": 0.377,
+      "prospective": false
+    },
+    {
+      "trial_id": 8,
+      "R": 0.5,
+      "N": 0.9,
+      "combined_score": -2.278,
+      "gap_to_best_combined": 0.338,
+      "within_loose_floor": false,
+      "log10_sigma": -1.492,
+      "gap_to_best_sigma_dex": 0.154,
+      "prospective": false
+    },
+    {
+      "trial_id": 9,
+      "R": 0.28,
+      "N": 0.96,
+      "combined_score": -2.365,
+      "gap_to_best_combined": 0.424,
+      "within_loose_floor": false,
+      "log10_sigma": -2.026,
+      "gap_to_best_sigma_dex": 0.688,
+      "prospective": false
+    },
+    {
+      "trial_id": 2,
+      "R": 0.35,
+      "N": 0.95,
+      "combined_score": -2.425,
+      "gap_to_best_combined": 0.485,
+      "within_loose_floor": false,
+      "log10_sigma": -1.734,
+      "gap_to_best_sigma_dex": 0.397,
+      "prospective": false
+    },
+    {
+      "trial_id": 10,
+      "R": 0.42,
+      "N": 1.02,
+      "combined_score": -2.556,
+      "gap_to_best_combined": 0.615,
+      "within_loose_floor": false,
+      "log10_sigma": -1.915,
+      "gap_to_best_sigma_dex": 0.577,
+      "prospective": true
+    },
+    {
+      "trial_id": 3,
+      "R": 0.62,
+      "N": 0.72,
+      "combined_score": -2.769,
+      "gap_to_best_combined": 0.828,
+      "within_loose_floor": false,
+      "log10_sigma": -1.851,
+      "gap_to_best_sigma_dex": 0.513,
+      "prospective": false
+    },
+    {
+      "trial_id": 6,
+      "R": 0.64,
+      "N": 0.58,
+      "combined_score": -2.953,
+      "gap_to_best_combined": 1.012,
+      "within_loose_floor": false,
+      "log10_sigma": -2.084,
+      "gap_to_best_sigma_dex": 0.747,
+      "prospective": false
+    },
+    {
+      "trial_id": 4,
+      "R": 0.5,
+      "N": 0.5,
+      "combined_score": -3.304,
+      "gap_to_best_combined": 1.364,
+      "within_loose_floor": false,
+      "log10_sigma": -2.58,
+      "gap_to_best_sigma_dex": 1.243,
+      "prospective": false
+    }
+  ],
+  "n_candidates_within_loose_floor_of_best": 2,
+  "n_candidates_within_tight_floor_of_best": 2,
+  "sigma_only_crosscheck": {
+    "best_sigma_trial": 5,
+    "top3_sigma_span_dex": 0.256,
+    "sigma_floor_tight_dex": 0.24475547039199286,
+    "sigma_floor_loose_dex": 0.32061877982283105
+  },
+  "lineB_internal_fabrication_evidence": {
+    "thickness_range_cm": [
+      0.0697,
+      0.1033
+    ],
+    "thickness_induced_sigma_dex": 0.17086754342161117,
+    "historical_0.022cm_parse_bug": "9/10 trials needed ~4x thickness repair (see thickness_repair in history) -> shows a ~0.6 dex systematic was once present",
+    "roomT_range_C": [
+      17.0,
+      24.0
+    ],
+    "roomT_comparability_median_dex": 0.01621698141340376,
+    "roomT_comparability_max_dex": 0.03841900201545867
+  },
+  "verdict": "Floor on a candidate-vs-candidate combined_score difference ≈ 0.26 (June-standardized proxy) to 0.33 (all-repeats proxy) dex-equivalent. 2 of 9 non-best candidates sit WITHIN the loose floor of the campaign best (gaps 0.22, 0.23, 0.34...). => The loop's top candidates are NOT reliably distinguishable from the best given the fabrication reproducibility floor; this quantitatively explains the P4 honest null (prospective rounds did not beat the best, front did not expand). NOT a claim that the loop is wrong — a claim that the landscape near the optimum is flatter than the floor."
+}

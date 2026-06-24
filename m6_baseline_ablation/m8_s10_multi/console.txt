@@ -1,0 +1,6 @@
+[cfg] model=openai/gpt-5.4 seeds=[1, 2, 3, 4, 5] s10_det=False
+  seed1: all_below=True gov_avg=0.752 dis_avg=0.12 worst_gov_rank=5 best_dis_rank=6
+  seed2: all_below=True gov_avg=0.732 dis_avg=0.261 worst_gov_rank=5 best_dis_rank=6
+  seed3: all_below=True gov_avg=0.698 dis_avg=0.187 worst_gov_rank=5 best_dis_rank=6
+  seed4: all_below=True gov_avg=0.718 dis_avg=0.14 worst_gov_rank=5 best_dis_rank=6
+  seed5: all_below=True gov_avg=0.704 dis_avg=0.147 worst_gov_rank=5 best_dis_rank=6

@@ -1,0 +1,77 @@
+{
+  "naive": {
+    "n_rounds": 2,
+    "overclaim_round0": 40,
+    "overclaim_final": 0,
+    "converged_clean": true,
+    "rounds": [
+      {
+        "round": 0,
+        "ok": false,
+        "n_issues": 40,
+        "issues": [
+          "overclaim: proves?\\b",
+          "overclaim: proves?\\b",
+          "overclaim: proves?\\b",
+          "overclaim: proves?\\b",
+          "overclaim: proves?\\b",
+          "overclaim: proves?\\b",
+          "overclaim: proves?\\b",
+          "overclaim: proves?\\b",
+          "overclaim: proves?\\b",
+          "overclaim: proves?\\b",
+          "overclaim: confirms?\\b",
+          "overclaim: confirms?\\b",
+          "overclaim: confirms?\\b",
+          "overclaim: confirms?\\b",
+          "overclaim: confirms?\\b",
+          "overclaim: confirms?\\b",
+          "overclaim: confirms?\\b",
+          "overclaim: confirms?\\b",
+          "overclaim: confirms?\\b",
+          "overclaim: confirms?\\b",
+          "overclaim: establishes?\\b",
+          "overclaim: establishes?\\b",
+          "overclaim: establishes?\\b",
+          "overclaim: establishes?\\b",
+          "overclaim: establishes?\\b",
+          "overclaim: establishes?\\b",
+          "overclaim: establishes?\\b",
+          "overclaim: establishes?\\b",
+          "overclaim: establishes?\\b",
+          "overclaim: establishes?\\b",
+          "overclaim: definitively\\b",
+          "overclaim: definitively\\b",
+          "overclaim: definitively\\b",
+          "overclaim: definitively\\b",
+          "overclaim: definitively\\b",
+          "overclaim: definitively\\b",
+          "overclaim: definitively\\b",
+          "overclaim: definitively\\b",
+          "overclaim: definitively\\b",
+          "overclaim: definitively\\b"
+        ]
+      },
+      {
+        "round": 1,
+        "ok": true,
+        "n_issues": 0,
+        "issues": []
+      }
+    ]
+  },
+  "governed": {
+    "n_rounds": 1,
+    "overclaim_round0": 0,
+    "overclaim_final": 0,
+    "converged_clean": true,
+    "rounds": [
+      {
+        "round": 0,
+        "ok": true,
+        "n_issues": 0,
+        "issues": []
+      }
+    ]
+  }
+}

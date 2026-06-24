@@ -1,0 +1,16 @@
+{
+  "_source": "manuscript/figures/ea_vs_thickness.csv + 三支柱写作方案对标值",
+  "_note": "高温段 Eₐ (eV)。真实数值。对标为已报道文献值。",
+  "ours": [
+    { "id": "2026.5.9CS", "label": "LRS 薄膜 (headline)", "ea_eV": 0.0366, "thickness_cm": 0.022, "kind": "ours_lrs" },
+    { "id": "2026.4.29CS", "label": "LRS 薄膜 (重复)", "ea_eV": 0.0425, "thickness_cm": 0.02, "kind": "ours_lrs" },
+    { "id": "2026.4.27CS", "label": "玉米淀粉对照", "ea_eV": 0.2160, "thickness_cm": 0.06, "kind": "ours_control" }
+  ],
+  "benchmarks": [
+    { "label": "本研究 LRS 薄膜", "ea_eV": 0.0366, "kind": "ours_lrs" },
+    { "label": "POP-2020 (已报道)", "ea_eV": 0.039, "kind": "ref" },
+    { "label": "MFM-300(Cr) (已报道)", "ea_eV": 0.040, "kind": "ref" },
+    { "label": "母体系 AiCE 海泡石", "ea_eV": 0.12, "kind": "mother" }
+  ],
+  "wording": "逼近已报道的最低势垒（record-level / comparable to lowest reported barriers）—— 禁用'世界纪录'。"
+}

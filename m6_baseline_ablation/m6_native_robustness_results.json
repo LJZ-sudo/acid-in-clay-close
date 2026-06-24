@@ -1,0 +1,110 @@
+{
+  "experiment": "M6_native_robustness_on_frozen_run",
+  "needs_key": false,
+  "n_cards_total": 31,
+  "n_off_topic_cards": 12,
+  "n_off_topic_adopted_by_agent": 0,
+  "n_on_topic_cards": 19,
+  "n_on_topic_adopted_by_agent": 7,
+  "max_off_topic_citation": 1391,
+  "off_topic_cards_ranked_by_citation": [
+    {
+      "card_id": "W2559171777",
+      "title": "Hierarchically porous materials: synthesis strategies and structure de",
+      "has_descriptor_claims": false,
+      "off_topic": true,
+      "real_citations": 1391,
+      "adopted_by_agent": false
+    },
+    {
+      "card_id": "W3201994217",
+      "title": "Hydrogen production, storage, utilisation and environmental impacts: a",
+      "has_descriptor_claims": false,
+      "off_topic": true,
+      "real_citations": 971,
+      "adopted_by_agent": false
+    },
+    {
+      "card_id": "W2566581454",
+      "title": "Recent progress in layered transition metal carbides and/or nitrides (",
+      "has_descriptor_claims": false,
+      "off_topic": true,
+      "real_citations": 784,
+      "adopted_by_agent": false
+    },
+    {
+      "card_id": "W2324366651",
+      "title": "Polymer Nanocomposites—A Comparison between Carbon Nanotubes, Graphene",
+      "has_descriptor_claims": false,
+      "off_topic": true,
+      "real_citations": 731,
+      "adopted_by_agent": false
+    },
+    {
+      "card_id": "W2005927954",
+      "title": "Bottom-up assembly of photonic crystals",
+      "has_descriptor_claims": false,
+      "off_topic": true,
+      "real_citations": 715,
+      "adopted_by_agent": false
+    },
+    {
+      "card_id": "W3176022823",
+      "title": "Layered double hydroxide-based electrocatalysts for the oxygen evoluti",
+      "has_descriptor_claims": false,
+      "off_topic": true,
+      "real_citations": 699,
+      "adopted_by_agent": false
+    },
+    {
+      "card_id": "W2787667840",
+      "title": "Ionic liquids and derived materials for lithium and sodium batteries",
+      "has_descriptor_claims": false,
+      "off_topic": true,
+      "real_citations": 597,
+      "adopted_by_agent": false
+    },
+    {
+      "card_id": "W2792636844",
+      "title": "Materials for supercapacitors: When Li-ion battery power is not enough",
+      "has_descriptor_claims": false,
+      "off_topic": true,
+      "real_citations": 465,
+      "adopted_by_agent": false
+    },
+    {
+      "card_id": "manual_f56a2b0129",
+      "title": "ABSTRACT:  Growing concern regarding the impact of fossil fuels has le",
+      "has_descriptor_claims": false,
+      "off_topic": true,
+      "real_citations": 386,
+      "adopted_by_agent": false
+    },
+    {
+      "card_id": "manual_58ec9a6c2e",
+      "title": "Chemical Science",
+      "has_descriptor_claims": false,
+      "off_topic": true,
+      "real_citations": 0,
+      "adopted_by_agent": false
+    },
+    {
+      "card_id": "manual_6138017199",
+      "title": "",
+      "has_descriptor_claims": false,
+      "off_topic": true,
+      "real_citations": 0,
+      "adopted_by_agent": false
+    },
+    {
+      "card_id": "manual_e2d7aef1a8",
+      "title": "=  c 0,H +  exp �",
+      "has_descriptor_claims": false,
+      "off_topic": true,
+      "real_citations": 0,
+      "adopted_by_agent": false
+    }
+  ],
+  "interpretation": "The frozen S08 pool fed to S09 contained 12 off-topic cards (no proton-conductor descriptor claim), several with very high REAL citations (up to 1391). The real LLM agent adopted 0 of them into any family/instance/registry. So the published pipeline did NOT chase citation hype — but note this is the COMBINED effect of (a) the evidence-constrained architecture (off-topic cards carry no descriptor claim, so they are hard to select by construction) AND (b) the LLM. It is NOT proof of standalone LLM judgement, because the off-topic cards were structurally evidence-empty.",
+  "honest_limit": "To prove standalone LLM resistance you would have to feed the LLM off-topic cards that ALSO carry (fabricated) proton-conductor descriptor claims and see if it rejects them. That requires fabricating literature evidence, which violates the project's honesty guardrails, so it must NOT be done."
+}

@@ -1,0 +1,22 @@
+{
+  "n_candidates": 8,
+  "n_governed": 5,
+  "n_distractors": 3,
+  "distractor_ranks": [
+    6,
+    7,
+    8
+  ],
+  "governed_ranks": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "worst_governed_rank": 5,
+  "best_distractor_rank": 6,
+  "all_distractors_below_all_governed": true,
+  "avg_distractor_score": 0.27,
+  "avg_governed_score": 0.704
+}

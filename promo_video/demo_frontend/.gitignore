@@ -1,0 +1,6 @@
+node_modules/
+dist/
+# 硬件录屏体积大，不入库；放在 src/assets/hardware_demo.mp4
+src/assets/*.mp4
+src/assets/*.mov
+src/assets/*.webm

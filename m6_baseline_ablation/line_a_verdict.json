@@ -1,0 +1,275 @@
+{
+  "samples": [
+    {
+      "folder": "2026.4.27CS",
+      "material": "CORN_old",
+      "role": "corn starch (Apr)",
+      "geometry_band": "thick",
+      "thickness_cm": 0.06,
+      "n_temps": 33,
+      "Ea_high_eV": 0.216,
+      "Ea_high_segment_K": [
+        270.1,
+        297.1
+      ],
+      "KK_passrate_highT": 1.0,
+      "cold_segment_maxEa_eV": 0.705,
+      "sigma_RT": 0.010842178823121123,
+      "sigma_273K": 0.005901456858471261,
+      "sigma_253K": 0.0016090366827221753,
+      "sigma_233K": 0.000259370248707201,
+      "ratio_sigma253_273": 0.273,
+      "ratio_sigma233_273": 0.044,
+      "min_measurable_T_K": 216.1
+    },
+    {
+      "folder": "2026.4.28CS",
+      "material": "CORN_old",
+      "role": "corn starch (Apr)",
+      "geometry_band": "thick",
+      "thickness_cm": 0.06,
+      "n_temps": 34,
+      "Ea_high_eV": 0.2118,
+      "Ea_high_segment_K": [
+        243.1,
+        291.1
+      ],
+      "KK_passrate_highT": 1.0,
+      "cold_segment_maxEa_eV": 0.922,
+      "sigma_RT": null,
+      "sigma_273K": 0.009432216979001009,
+      "sigma_253K": 0.004550583619509754,
+      "sigma_233K": 0.001236671720832384,
+      "ratio_sigma253_273": 0.482,
+      "ratio_sigma233_273": 0.1311,
+      "min_measurable_T_K": 198.1
+    },
+    {
+      "folder": "2026.4.29CS",
+      "material": "LRS",
+      "role": "lotus-root starch",
+      "geometry_band": "thin",
+      "thickness_cm": 0.02,
+      "n_temps": 34,
+      "Ea_high_eV": 0.0425,
+      "Ea_high_segment_K": [
+        241.2,
+        298.1
+      ],
+      "KK_passrate_highT": 1.0,
+      "cold_segment_maxEa_eV": 0.85,
+      "sigma_RT": 0.014857850897764703,
+      "sigma_273K": 0.017933365889435168,
+      "sigma_253K": 0.01528647673644436,
+      "sigma_233K": 0.0043409016644875365,
+      "ratio_sigma253_273": 0.852,
+      "ratio_sigma233_273": 0.2421,
+      "min_measurable_T_K": 202.1
+    },
+    {
+      "folder": "2026.4.30CS",
+      "material": "CHITO",
+      "role": "chitosan",
+      "geometry_band": "-",
+      "thickness_cm": 0.05,
+      "n_temps": 27,
+      "Ea_high_eV": 0.0501,
+      "Ea_high_segment_K": [
+        252.1,
+        291.1
+      ],
+      "KK_passrate_highT": 1.0,
+      "cold_segment_maxEa_eV": 0.637,
+      "sigma_RT": null,
+      "sigma_273K": 0.01149017689281638,
+      "sigma_253K": 0.008941253514067759,
+      "sigma_233K": 3.934612729657967e-05,
+      "ratio_sigma253_273": 0.778,
+      "ratio_sigma233_273": 0.0034,
+      "min_measurable_T_K": 225.1
+    },
+    {
+      "folder": "2026.5.1CS",
+      "material": "CHITO",
+      "role": "chitosan",
+      "geometry_band": "-",
+      "thickness_cm": 0.06,
+      "n_temps": 27,
+      "Ea_high_eV": 0.0992,
+      "Ea_high_segment_K": [
+        243.1,
+        291.1
+      ],
+      "KK_passrate_highT": 1.0,
+      "cold_segment_maxEa_eV": 0.639,
+      "sigma_RT": null,
+      "sigma_273K": 0.01120841379404757,
+      "sigma_253K": 0.008175551959567555,
+      "sigma_233K": 5.851765414723355e-05,
+      "ratio_sigma253_273": 0.729,
+      "ratio_sigma233_273": 0.0052,
+      "min_measurable_T_K": 222.1
+    },
+    {
+      "folder": "2026.5.9CS",
+      "material": "LRS",
+      "role": "lotus-root starch",
+      "geometry_band": "thin",
+      "thickness_cm": 0.022,
+      "n_temps": 35,
+      "Ea_high_eV": 0.0366,
+      "Ea_high_segment_K": [
+        243.1,
+        293.1
+      ],
+      "KK_passrate_highT": 1.0,
+      "cold_segment_maxEa_eV": 0.78,
+      "sigma_RT": null,
+      "sigma_273K": 0.01854141675577137,
+      "sigma_253K": 0.015704969918904348,
+      "sigma_233K": 0.0036305067011338787,
+      "ratio_sigma253_273": 0.847,
+      "ratio_sigma233_273": 0.1958,
+      "min_measurable_T_K": 192.1
+    },
+    {
+      "folder": "2026.6.11淀粉",
+      "material": "CORN",
+      "role": "corn starch",
+      "geometry_band": "thick",
+      "thickness_cm": 0.0628,
+      "n_temps": 38,
+      "Ea_high_eV": 0.1672,
+      "Ea_high_segment_K": [
+        246.1,
+        294.1
+      ],
+      "KK_passrate_highT": 1.0,
+      "cold_segment_maxEa_eV": 0.682,
+      "sigma_RT": null,
+      "sigma_273K": 0.011362237683497681,
+      "sigma_253K": 0.006058973011649434,
+      "sigma_233K": 0.001964412276582788,
+      "ratio_sigma253_273": 0.533,
+      "ratio_sigma233_273": 0.1729,
+      "min_measurable_T_K": 189.1
+    },
+    {
+      "folder": "2026.6.12藕粉",
+      "material": "LRS",
+      "role": "lotus-root starch",
+      "geometry_band": "thick",
+      "thickness_cm": 0.0737,
+      "n_temps": 37,
+      "Ea_high_eV": 0.0084,
+      "Ea_high_segment_K": [
+        241.2,
+        292.1
+      ],
+      "KK_passrate_highT": 1.0,
+      "cold_segment_maxEa_eV": 0.585,
+      "sigma_RT": null,
+      "sigma_273K": 0.03067707292921172,
+      "sigma_253K": 0.030285068464206227,
+      "sigma_233K": 0.010914631619108528,
+      "ratio_sigma253_273": 0.987,
+      "ratio_sigma233_273": 0.3558,
+      "min_measurable_T_K": 184.1
+    },
+    {
+      "folder": "2026.6.13淀粉",
+      "material": "CORN",
+      "role": "corn starch",
+      "geometry_band": "thick",
+      "thickness_cm": 0.0737,
+      "n_temps": 34,
+      "Ea_high_eV": 0.1119,
+      "Ea_high_segment_K": [
+        250.1,
+        292.1
+      ],
+      "KK_passrate_highT": 1.0,
+      "cold_segment_maxEa_eV": 0.719,
+      "sigma_RT": null,
+      "sigma_273K": 0.009081786345796872,
+      "sigma_253K": 0.005369449974884059,
+      "sigma_233K": 0.0017257960809867112,
+      "ratio_sigma253_273": 0.591,
+      "ratio_sigma233_273": 0.19,
+      "min_measurable_T_K": 190.1
+    },
+    {
+      "folder": "2026.6.15藕粉",
+      "material": "LRS",
+      "role": "lotus-root starch",
+      "geometry_band": "thick",
+      "thickness_cm": 0.0701,
+      "n_temps": 54,
+      "Ea_high_eV": 0.0536,
+      "Ea_high_segment_K": [
+        241.2,
+        295.1
+      ],
+      "KK_passrate_highT": 1.0,
+      "cold_segment_maxEa_eV": 0.618,
+      "sigma_RT": 0.03518344239984852,
+      "sigma_273K": 0.034756716985362666,
+      "sigma_253K": 0.03206908798395338,
+      "sigma_233K": 0.01040474314397006,
+      "ratio_sigma253_273": 0.923,
+      "ratio_sigma233_273": 0.2994,
+      "min_measurable_T_K": 185.1
+    }
+  ],
+  "verdicts": {
+    "4.2_CHITO_boundary": [
+      {
+        "folder": "2026.4.30CS",
+        "verdict": "BOUNDARY-CONFIRMED",
+        "checks": {
+          "4.2 sigma233/273<=0.1 (>=1 decade drop)": true,
+          "4.2 cold-seg Ea>1eV": false
+        }
+      },
+      {
+        "folder": "2026.5.1CS",
+        "verdict": "BOUNDARY-CONFIRMED",
+        "checks": {
+          "4.2 sigma233/273<=0.1 (>=1 decade drop)": true,
+          "4.2 cold-seg Ea>1eV": false
+        }
+      }
+    ],
+    "4.1_LRS_positive": [
+      {
+        "folder": "2026.6.12藕粉",
+        "verdict": "CONFIRMED",
+        "checks": {
+          "4.1a Ea_high<=0.06eV": true,
+          "4.1b sigma253/273>=0.5": true,
+          "4.1c sigma(<=233K)>1e-5": true
+        }
+      },
+      {
+        "folder": "2026.6.15藕粉",
+        "verdict": "CONFIRMED",
+        "checks": {
+          "4.1a Ea_high<=0.06eV": true,
+          "4.1b sigma253/273>=0.5": true,
+          "4.1c sigma(<=233K)>1e-5": true
+        }
+      }
+    ],
+    "4.3_corn_generalisation": {
+      "corn_sigma273_mean": 0.010222012014647276,
+      "lrs_sigma273_mean": 0.03271689495728719,
+      "same_order_high_T": true,
+      "corn_decays_earlier_cold": true
+    },
+    "4.4_thickness_control": {
+      "thin_Ea_mean": 0.03955,
+      "thick_Ea_mean": 0.031,
+      "conclusion": "thick NOT >> thin -> supports INTRINSIC low-Ea (stronger claim allowed)"
+    }
+  }
+}

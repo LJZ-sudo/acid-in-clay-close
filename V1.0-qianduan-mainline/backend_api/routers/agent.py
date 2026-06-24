@@ -24,6 +24,25 @@ from backend_api.services.hardware_adapter import get_hardware_adapter
 
 router = APIRouter()
 
+
+def _build_action_gate(hw):
+    """WP4 Cutover:自主硬件命令的唯一受控入口(ActionGate)。
+
+    把 stage1_optimization 加入 path 后按 scientific_harness.* 顶层导入(绕开包 __init__ 的重依赖)。
+    默认 shadow(行为与 legacy 一致);SCITX_HARNESS_MODE=enforce 时按策略拦截 allowlist 外命令。
+    导入失败时返回 None,调用方回退 legacy 直连(fail-safe,不阻断 backend)。
+    """
+    import sys as _sys
+    from pathlib import Path as _Path
+    stage1_dir = _Path(__file__).resolve().parents[2] / "stage1_optimization"
+    if str(stage1_dir) not in _sys.path:
+        _sys.path.insert(0, str(stage1_dir))
+    try:
+        from scientific_harness.action_gate import ActionGate
+        return ActionGate(enqueue_fn=hw.enqueue_command)
+    except Exception:
+        return None
+
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 _AGENT_STATE_DIR = _PROJECT_ROOT / "runs" / "_agent_state"
 _DECISIONS_FILE = _AGENT_STATE_DIR / "decisions.jsonl"
@@ -234,12 +253,23 @@ def _orchestrator_decide(proposal: Dict[str, Any], critic: Dict[str, Any], ctx: 
 
     hw = get_hardware_adapter()
 
-    if final_action == "TRIGGER_FINE_SCAN":
-        hw.enqueue_command("TRIGGER_FINE_SCAN")
-    elif final_action == "BACKTRACK":
-        hw.enqueue_command("BACKTRACK", {"backtrack_delta": 10.0})
-    elif final_action == "RE_MEASURE":
-        hw.enqueue_command("RE_MEASURE")
+    # WP4 Cutover:自主硬件命令统一经 ActionGate 受控入口(不再直连 enqueue_command)。
+    # 默认 shadow → 行为与 legacy 完全一致;enforce 模式下 allowlist 外命令会被阻断。
+    _params = {"TRIGGER_FINE_SCAN": None, "BACKTRACK": {"backtrack_delta": 10.0},
+               "RE_MEASURE": None}
+    gate_decision = None
+    if final_action in _params:
+        gate = _build_action_gate(hw)
+        if gate is not None:
+            from scientific_harness.action_gate import ActionProposal
+            dec = gate.submit(ActionProposal(command=final_action, params=_params[final_action],
+                                             source="autonomous", rationale=reason))
+            gate_decision = dec.to_dict()
+        else:
+            # fail-closed:gate 不可用时**不**直连硬件(自主路径绝不绕过 SciTX)。
+            # action_gate 为纯 stdlib、导入可靠,此分支实际不触发;留作权威性硬约束。
+            gate_decision = {"command": final_action, "decision": "BLOCKED",
+                             "dispatched": False, "reasons": ["action_gate_unavailable_fail_closed"]}
 
     return {
         "role": "orchestrator",
@@ -249,6 +279,7 @@ def _orchestrator_decide(proposal: Dict[str, Any], critic: Dict[str, Any], ctx: 
         "proposal_action": proposal["action"],
         "critic_approved": critic["approved"],
         "confidence": (proposal["confidence"] + critic["confidence"]) / 2,
+        "gate_decision": gate_decision,
     }
 
 

@@ -221,6 +221,36 @@ def _classify_nyquist_morphology(eis_points: List[dict]) -> Optional[str]:
     return "mixed"
 
 
+def _extract_drt_peaks(bundle: dict) -> List[DRTPeak]:
+    """Expose DRT peaks ONLY if the bundle carries a *reliable* DRT result.
+
+    Reliability gate (R^2 > 0.8) is intentional: on the current LRS spectra the
+    canonical Tikhonov DRT is unreliable (reconstruction R^2 < 0 — blocking-electrode
+    low-frequency capacitive tail is beyond a pure relaxation kernel; see
+    ``_new_data_analysis/drt/relaxation_evolution.json``). So we surface no relaxation
+    peaks rather than untrustworthy ones. When the bundle later carries a DRT result
+    that passes the gate, peaks flow through automatically. Accepts both the compact
+    (``bundle['drt']``) and full (``bundle['drt_result']``) shapes.
+    """
+    drt = bundle.get("drt") or bundle.get("drt_result")
+    if not isinstance(drt, dict) or not drt.get("success"):
+        return []
+    fit_quality = drt.get("fit_quality") or {}
+    r2 = fit_quality.get("r_squared")
+    if r2 is None or float(r2) < 0.8:  # reliability gate
+        return []
+    peaks: List[DRTPeak] = []
+    for p in (drt.get("peaks") or [])[:5]:
+        tau = p.get("tau", p.get("tau_s"))
+        inten = p.get("relative_intensity")
+        if inten is None:
+            inten = p.get("intensity")
+        if tau is None or inten is None:
+            continue
+        peaks.append(DRTPeak(tau_s=float(tau), intensity=float(inten)))
+    return peaks
+
+
 def build_quality_card(bundle: dict) -> QualityCard:
     eis_points = bundle.get("eis_points") or []
     n_total = len(eis_points)
@@ -258,7 +288,7 @@ def build_quality_card(bundle: dict) -> QualityCard:
         rb_confidence_p75=p75,
         qc_distribution=qc_dist,
         nyquist_morphology_auto=_classify_nyquist_morphology(eis_points),
-        drt_peaks=[],  # bundle does not currently expose DRT peaks
+        drt_peaks=_extract_drt_peaks(bundle),  # gated: empty unless a reliable DRT (R^2>0.8) is present
         verdict_zh="",
     )
 

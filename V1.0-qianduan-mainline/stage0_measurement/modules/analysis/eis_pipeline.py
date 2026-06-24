@@ -446,13 +446,20 @@ def extract_valid_arrhenius_series(
 ):
     """
     从测量记录序列提取有效的 Arrhenius 数据点（纯函数版）
-    
+
+    ⚠️ SUPERSEDED (M1-3 / G2, 2026-06-22):
+        本函数第 5 条"沿降温链要求 Rb 非减（抑制反常跳点）"会**按预期趋势删点**，
+        在研究低温转变时有把"真异常"和"分析伪影"一起删掉的风险。新代码请改用
+        :func:`flag_sequence_anomalies`（保留所有点，只打标 + 稳健回归），本函数仅
+        为向后兼容保留；live 离线管线（code/stage0_processing/process_new_materials_
+        stage0.py 的重建路径）并不调用它。
+
     过滤规则：
     1. 丢弃 success=False 的记录
     2. 必须同时具有温度、Rb、电导率
     3. 物理范围：T > 0，1e-10 < σ < 1 (S/cm)，Rb > 0.5 Ω
     4. 按温度从高到低排序
-    5. 沿降温链要求 Rb 非减（抑制反常跳点）
+    5. 沿降温链要求 Rb 非减（抑制反常跳点）  ← 已被 M1-3 判定为"按预期删点"，勿用于转变研究
     
     Args:
         records: 测量记录列表
@@ -536,6 +543,75 @@ def extract_valid_arrhenius_series(
         prev_rb = rb
     
     return valid_temps, valid_conductivities
+
+
+def flag_sequence_anomalies(
+    records,
+    temperature_key='temperature_K',
+    conductivity_key='conductivity_s_per_cm',
+    rb_key='rb_ohm',
+    success_key='success',
+):
+    """M1-3 / G2：标记序列异常但**绝不删点**（替代 extract_valid_arrhenius_series 的单调删点）。
+
+    研究低温转变时，"沿降温链 Rb 不单调"既可能是真实异常行为，也可能是分析伪影——
+    两者都不应被悄悄删掉。本函数保留所有 QA 合格点，逐点标注：
+      - included_in_primary_fit: True（默认全部参与主拟合，用稳健回归抗离群）
+      - sequence_anomaly: bool（降温链上 Rb 反常下降）
+      - anomaly_reason: str | None
+      - raw_qc_valid: bool（success 且物理范围内）
+
+    Returns:
+        dict:
+          - points: list[{temperature_K, conductivity_s_per_cm, rb_ohm,
+                          included_in_primary_fit, sequence_anomaly, anomaly_reason, raw_qc_valid}]
+            （按温度从高到低排序）
+          - n_total / n_anomalies / anomaly_temps_K
+    """
+    points = []
+    for r in records or []:
+        if success_key in r and r[success_key] is False:
+            continue
+        temp_K = r.get(temperature_key) or r.get('temperature_k') or r.get('temp_K') or r.get('temp_k')
+        rb = r.get(rb_key) or r.get('rb') or r.get('Rb') or r.get('rb_value')
+        conductivity = (r.get(conductivity_key) or r.get('conductivity_S_per_cm')
+                        or r.get('conductivity') or r.get('sigma_s_per_cm') or r.get('sigma'))
+        if temp_K is None or rb is None or conductivity is None:
+            continue
+        try:
+            temp_K = float(temp_K); rb = float(rb); conductivity = float(conductivity)
+        except (TypeError, ValueError):
+            continue
+        raw_qc_valid = bool(temp_K > 0 and 1e-10 < conductivity < 1.0 and rb > 0.5)
+        points.append({
+            'temperature_K': temp_K,
+            'conductivity_s_per_cm': conductivity,
+            'rb_ohm': rb,
+            'included_in_primary_fit': True,
+            'sequence_anomaly': False,
+            'anomaly_reason': None,
+            'raw_qc_valid': raw_qc_valid,
+        })
+
+    # 按温度从高到低排序，沿降温链检测 Rb 反常下降（仅标记，不删）
+    points.sort(key=lambda p: p['temperature_K'], reverse=True)
+    prev_rb = None
+    n_anom = 0
+    anomaly_temps = []
+    for p in points:
+        if prev_rb is not None and prev_rb > 0 and p['rb_ohm'] < prev_rb:
+            p['sequence_anomaly'] = True
+            p['anomaly_reason'] = 'rb_decreased_on_cooling'
+            n_anom += 1
+            anomaly_temps.append(p['temperature_K'])
+        prev_rb = p['rb_ohm']
+
+    return {
+        'points': points,
+        'n_total': len(points),
+        'n_anomalies': n_anom,
+        'anomaly_temps_K': anomaly_temps,
+    }
 
 
 # ============================================================

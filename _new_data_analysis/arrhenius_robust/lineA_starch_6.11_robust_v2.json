@@ -1,0 +1,56 @@
+{
+  "dataset": "lineA_starch_6.11",
+  "provenance": {
+    "analysis_version": "stage0-eis-v2.0.0",
+    "admission_policy_version": "evidence-policy-v2.0.0",
+    "objective_registry_version": "objective-registry-v2.0.0",
+    "rb_method_policy_version": "rb-method-v2.0.0",
+    "config_sha256": {
+      "stage0_v2_policy": "da45db8ed5327d9d45407e314014ed811eca46f00baf8165bf601348454be1af",
+      "rb_method_policy": "43949a81157d42afe6e16713ece534dcd99c3cafd03712e05cbb6b640ede117a",
+      "evidence_admission_v2": "4931d6e794f1056445f8621de5c39702466c82d3c39f9f050e00b9e397a45960",
+      "objective_registry": "5fe3cd0476730dcb1a31776be30cf83cbfb0de252d327aa871b32b129345fa0c"
+    },
+    "git_commit": "fb17c68",
+    "generated_at": "2026-06-22T14:07:16.837531+08:00"
+  },
+  "n_points_kept": 38,
+  "n_sequence_anomalies": 1,
+  "anomaly_temps_K": [
+    291.15
+  ],
+  "deleted_any_point": false,
+  "all_admissible_points": {
+    "success": true,
+    "n_points": 38,
+    "n_segments": 3,
+    "has_transition": true,
+    "transition_temps_K": [
+      245.04135431647032,
+      196.6692761272204
+    ],
+    "ea_eV": [
+      0.16722729298015174,
+      0.37682691627459286,
+      0.6822509157734105
+    ]
+  },
+  "robust_regression": {
+    "available": true,
+    "n_dominant_points": 23,
+    "ea_eV_robust_studentt": 0.21186387282875777,
+    "ea_eV_ols": 0.21297918315518297,
+    "ea_eV_abs_delta": 0.0011153103264252007
+  },
+  "leave_one_point_out": {
+    "n_runs": 38,
+    "n_segments_mode": 3,
+    "fraction_preserving_n_segments": 1.0,
+    "breakpoint_median_K": 245.04137152663012,
+    "breakpoint_ci95_K": [
+      244.54210399698692,
+      247.34988028597937
+    ],
+    "fraction_with_transition": 1.0
+  }
+}

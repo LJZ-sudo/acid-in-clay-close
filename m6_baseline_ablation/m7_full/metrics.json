@@ -1,0 +1,193 @@
+{
+  "arms": {
+    "A0_governed_full": {
+      "n_runs": 5,
+      "avg_distractor_inclusion_rate": 0.0,
+      "avg_ontopic_rate": 0.952,
+      "avg_evidence_audit_rate": 1.0,
+      "seed_stability_jaccard": 0.653,
+      "per_seed": [
+        {
+          "n_instances": 5,
+          "n_components_total": 15,
+          "distractor_inclusion_rate": 0.0,
+          "ontopic_rate": 1.0,
+          "evidence_audit_rate": 1.0,
+          "n_evidence_entries": 15
+        },
+        {
+          "n_instances": 5,
+          "n_components_total": 13,
+          "distractor_inclusion_rate": 0.0,
+          "ontopic_rate": 1.0,
+          "evidence_audit_rate": 1.0,
+          "n_evidence_entries": 13
+        },
+        {
+          "n_instances": 5,
+          "n_components_total": 16,
+          "distractor_inclusion_rate": 0.0,
+          "ontopic_rate": 0.938,
+          "evidence_audit_rate": 1.0,
+          "n_evidence_entries": 16
+        },
+        {
+          "n_instances": 5,
+          "n_components_total": 17,
+          "distractor_inclusion_rate": 0.0,
+          "ontopic_rate": 0.882,
+          "evidence_audit_rate": 1.0,
+          "n_evidence_entries": 17
+        },
+        {
+          "n_instances": 5,
+          "n_components_total": 16,
+          "distractor_inclusion_rate": 0.0,
+          "ontopic_rate": 0.938,
+          "evidence_audit_rate": 1.0,
+          "n_evidence_entries": 16
+        }
+      ]
+    },
+    "A1_ablate_evidence": {
+      "n_runs": 5,
+      "avg_distractor_inclusion_rate": 0.0,
+      "avg_ontopic_rate": 0.877,
+      "avg_evidence_audit_rate": 1.0,
+      "seed_stability_jaccard": 0.579,
+      "per_seed": [
+        {
+          "n_instances": 6,
+          "n_components_total": 25,
+          "distractor_inclusion_rate": 0.0,
+          "ontopic_rate": 0.92,
+          "evidence_audit_rate": 1.0,
+          "n_evidence_entries": 25
+        },
+        {
+          "n_instances": 6,
+          "n_components_total": 25,
+          "distractor_inclusion_rate": 0.0,
+          "ontopic_rate": 0.96,
+          "evidence_audit_rate": 1.0,
+          "n_evidence_entries": 25
+        },
+        {
+          "n_instances": 6,
+          "n_components_total": 30,
+          "distractor_inclusion_rate": 0.0,
+          "ontopic_rate": 0.8,
+          "evidence_audit_rate": 1.0,
+          "n_evidence_entries": 30
+        },
+        {
+          "n_instances": 6,
+          "n_components_total": 27,
+          "distractor_inclusion_rate": 0.0,
+          "ontopic_rate": 0.852,
+          "evidence_audit_rate": 1.0,
+          "n_evidence_entries": 27
+        },
+        {
+          "n_instances": 6,
+          "n_components_total": 27,
+          "distractor_inclusion_rate": 0.0,
+          "ontopic_rate": 0.852,
+          "evidence_audit_rate": 1.0,
+          "n_evidence_entries": 27
+        }
+      ]
+    },
+    "A2_distractor_injected": {
+      "n_runs": 5,
+      "avg_distractor_inclusion_rate": 0.0,
+      "avg_ontopic_rate": 0.988,
+      "avg_evidence_audit_rate": 1.0,
+      "seed_stability_jaccard": 0.614,
+      "per_seed": [
+        {
+          "n_instances": 5,
+          "n_components_total": 16,
+          "distractor_inclusion_rate": 0.0,
+          "ontopic_rate": 1.0,
+          "evidence_audit_rate": 1.0,
+          "n_evidence_entries": 16
+        },
+        {
+          "n_instances": 5,
+          "n_components_total": 15,
+          "distractor_inclusion_rate": 0.0,
+          "ontopic_rate": 1.0,
+          "evidence_audit_rate": 1.0,
+          "n_evidence_entries": 15
+        },
+        {
+          "n_instances": 5,
+          "n_components_total": 18,
+          "distractor_inclusion_rate": 0.0,
+          "ontopic_rate": 1.0,
+          "evidence_audit_rate": 1.0,
+          "n_evidence_entries": 18
+        },
+        {
+          "n_instances": 5,
+          "n_components_total": 17,
+          "distractor_inclusion_rate": 0.0,
+          "ontopic_rate": 1.0,
+          "evidence_audit_rate": 1.0,
+          "n_evidence_entries": 17
+        },
+        {
+          "n_instances": 5,
+          "n_components_total": 16,
+          "distractor_inclusion_rate": 0.0,
+          "ontopic_rate": 0.938,
+          "evidence_audit_rate": 1.0,
+          "n_evidence_entries": 16
+        }
+      ]
+    }
+  },
+  "baselines": {
+    "random@A0_pool": {
+      "n_instances": 5,
+      "n_components_total": 20,
+      "distractor_inclusion_rate": 0.0,
+      "ontopic_rate": 0.8
+    },
+    "popularity@A0_pool": {
+      "n_instances": 5,
+      "n_components_total": 20,
+      "distractor_inclusion_rate": 0.0,
+      "ontopic_rate": 1.0,
+      "top_components": [
+        "starch",
+        "phosphate glass (APS proton-substituted / protonated phosphate network)",
+        "H3PO4 (phosphoric acid)",
+        "poly(vinyl alcohol) (PVA)",
+        "chitosan (CS)",
+        "phosphotungstic acid (PWA)"
+      ]
+    },
+    "random@A2_pool": {
+      "n_instances": 5,
+      "n_components_total": 20,
+      "distractor_inclusion_rate": 0.1,
+      "ontopic_rate": 0.7
+    },
+    "popularity@A2_pool": {
+      "n_instances": 5,
+      "n_components_total": 20,
+      "distractor_inclusion_rate": 1.0,
+      "ontopic_rate": 0.0,
+      "top_components": [
+        "LiFePO4",
+        "silicon anode",
+        "Ti3C2 MXene",
+        "CsPbI3 perovskite solar",
+        "MoS2",
+        "Pt/C catalyst"
+      ]
+    }
+  }
+}

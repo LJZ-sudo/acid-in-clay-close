@@ -1,0 +1,120 @@
+{
+  "provenance": {
+    "campaign": "V1.0-qianduan-mainline\\stage1_optimization\\campaigns\\attapulgite_aice_campaign.json",
+    "official_recipe": "prospective_2026H2\\line_B_mobo_closed_loop\\official_recipe.json",
+    "freeze_commit": "c185379",
+    "observed_R_range": [
+      0.186,
+      0.64
+    ],
+    "raw_mobo": {
+      "R": 0.0285,
+      "N": 0.9841
+    },
+    "llm_final": {
+      "R": 0.28,
+      "N": 0.96
+    }
+  },
+  "results": [
+    {
+      "policy": "RAW_MOBO",
+      "recipe": {
+        "R": 0.0285,
+        "N": 0.9841
+      },
+      "changed": {},
+      "safety_passed": true,
+      "n_violations": 0,
+      "n_warnings": 0,
+      "R_below_observed_floor": true,
+      "R_extrapolation_distance": 0.1575,
+      "in_observed_R_region": false
+    },
+    {
+      "policy": "HARD_CONSTRAINED_MOBO",
+      "recipe": {
+        "R": 0.0285,
+        "N": 0.9841
+      },
+      "changed": {},
+      "safety_passed": true,
+      "n_violations": 0,
+      "n_warnings": 0,
+      "R_below_observed_floor": true,
+      "R_extrapolation_distance": 0.1575,
+      "in_observed_R_region": false
+    },
+    {
+      "policy": "DETERMINISTIC_PROJECTION",
+      "recipe": {
+        "R": 0.186,
+        "N": 0.9841
+      },
+      "changed": {
+        "R": {
+          "from": 0.0285,
+          "to": 0.186,
+          "reason": "project_to_observed_R_range"
+        }
+      },
+      "safety_passed": true,
+      "n_violations": 0,
+      "n_warnings": 0,
+      "R_below_observed_floor": false,
+      "R_extrapolation_distance": 0.0,
+      "in_observed_R_region": true
+    },
+    {
+      "policy": "RULE_BASED_RISK_REPAIR",
+      "recipe": {
+        "R": 0.186,
+        "N": 0.9841
+      },
+      "changed": {
+        "R": {
+          "from": 0.0285,
+          "to": 0.186,
+          "reason": "R_below_observed_floor_rule"
+        }
+      },
+      "safety_passed": true,
+      "n_violations": 0,
+      "n_warnings": 0,
+      "R_below_observed_floor": false,
+      "R_extrapolation_distance": 0.0,
+      "in_observed_R_region": true
+    },
+    {
+      "policy": "LLM_TOPK_SELECTION",
+      "recipe": {
+        "R": 0.28,
+        "N": 0.96
+      },
+      "changed": {
+        "R": {
+          "from": 0.0285,
+          "to": 0.28,
+          "reason": "llm_physical_correction"
+        },
+        "N": {
+          "from": 0.9841,
+          "to": 0.96
+        }
+      },
+      "safety_passed": true,
+      "n_violations": 0,
+      "n_warnings": 0,
+      "R_below_observed_floor": false,
+      "R_extrapolation_distance": 0.0,
+      "in_observed_R_region": true
+    }
+  ],
+  "key_findings": {
+    "hard_box_passes_raw_low_R": true,
+    "hard_constraint_misses_low_R": true,
+    "deterministic_rule_repairs_direction": true,
+    "llm_in_observed_region": true
+  },
+  "verdict": "硬安全箱/硬约束抓不到 raw 的超低酸外推(R=0.0285 仍判通过);确定性投影/规则可把 R 拉回观测可行域,方向与 LLM 一致 → LLM 的安全修正**可被确定性规则替代**(但该规则当前不在安全箱中)。应表述为'LLM 完成了一次合理的领域修正',不写'LLM 提供了独特安全能力'。"
+}

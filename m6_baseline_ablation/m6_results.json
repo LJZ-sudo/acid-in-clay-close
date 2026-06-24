@@ -1,0 +1,220 @@
+{
+  "experiment": "M6_baseline_ablation",
+  "generated_for": "Nature-Communications system-innovation angle stress test",
+  "read_only_source": "V1.0-qianduan-mainline\\stage3_mechanism\\outputs\\verification\\20260607_openrouter_publication_v2",
+  "n_candidate_instances": 5,
+  "n_families": 3,
+  "n_literature_cards": 31,
+  "winner_instance": "I1",
+  "boundary_instance": "I2",
+  "score_reproduction_check": {
+    "I1": {
+      "recomputed": 0.8833,
+      "frozen": 0.8833,
+      "match": true
+    },
+    "I2": {
+      "recomputed": 0.8233,
+      "frozen": 0.8233,
+      "match": true
+    },
+    "I3": {
+      "recomputed": 0.8192,
+      "frozen": 0.8192,
+      "match": true
+    },
+    "I5": {
+      "recomputed": 0.7381,
+      "frozen": 0.7381,
+      "match": true
+    },
+    "I4": {
+      "recomputed": 0.7078,
+      "frozen": 0.7078,
+      "match": true
+    }
+  },
+  "component_literature_frequency": {
+    "starch": 3,
+    "pva": 2,
+    "chitosan": 3,
+    "phosphotungstic acid (pw": 1,
+    "attapulgite": 2,
+    "choline chloride (chcl)": 1,
+    "phosphoric_acid": 6,
+    "phosphate_glass": 2,
+    "des": 1,
+    "water": 1,
+    "doped baceo3 (acceptor-d": 1,
+    "carbon dots (cds)": 1,
+    "halloysite": 1,
+    "polybenzimidazole (pbi)": 1,
+    "paam_graft": 1,
+    "mmt": 1,
+    "poly(ethylene glycol) (p": 1,
+    "functionalized clay (nan": 1,
+    "sulfonated polyether sul": 1,
+    "nb2o5": 1,
+    "nh4cl": 1,
+    "la6w2o15": 1
+  },
+  "M6A_selector_comparison": {
+    "n_monte_carlo": 20000,
+    "selectors": {
+      "random": {
+        "p_winner_top1": 0.2001,
+        "p_winner_top2": 0.3973,
+        "p_winner_and_boundary_top2": 0.1007
+      },
+      "popularity_freq": {
+        "p_winner_top1": 1.0,
+        "p_winner_top2": 1.0,
+        "p_winner_and_boundary_top2": 0.0
+      },
+      "naive_shallow_llm": {
+        "p_winner_top1": 0.2521,
+        "p_winner_top2": 0.5019,
+        "p_winner_and_boundary_top2": 0.1649
+      },
+      "full_governed_agent": {
+        "p_winner_top1": 1.0,
+        "p_winner_top2": 1.0,
+        "p_winner_and_boundary_top2": 1.0
+      }
+    },
+    "analytic_random_reference": {
+      "p_winner_top1": 0.2,
+      "p_winner_top2": 0.4,
+      "p_winner_and_boundary_top2": 0.1
+    }
+  },
+  "M6B_leave_one_weight_out": {
+    "baseline_order": [
+      "I1",
+      "I2",
+      "I3",
+      "I5",
+      "I4"
+    ],
+    "leave_one_out": {
+      "mechanism_fit": {
+        "dropped_weight": 0.2,
+        "new_top1": "I1",
+        "winner_still_top1": true,
+        "new_order": [
+          "I1",
+          "I2",
+          "I3",
+          "I5",
+          "I4"
+        ],
+        "spearman_vs_baseline": 1.0
+      },
+      "evidence_quality": {
+        "dropped_weight": 0.18,
+        "new_top1": "I1",
+        "winner_still_top1": true,
+        "new_order": [
+          "I1",
+          "I2",
+          "I3",
+          "I5",
+          "I4"
+        ],
+        "spearman_vs_baseline": 1.0
+      },
+      "formulation_completeness": {
+        "dropped_weight": 0.18,
+        "new_top1": "I1",
+        "winner_still_top1": true,
+        "new_order": [
+          "I1",
+          "I2",
+          "I3",
+          "I5",
+          "I4"
+        ],
+        "spearman_vs_baseline": 1.0
+      },
+      "low_temperature_plausibility": {
+        "dropped_weight": 0.14,
+        "new_top1": "I1",
+        "winner_still_top1": true,
+        "new_order": [
+          "I1",
+          "I2",
+          "I3",
+          "I5",
+          "I4"
+        ],
+        "spearman_vs_baseline": 1.0
+      },
+      "processability": {
+        "dropped_weight": 0.11,
+        "new_top1": "I1",
+        "winner_still_top1": true,
+        "new_order": [
+          "I1",
+          "I2",
+          "I3",
+          "I5",
+          "I4"
+        ],
+        "spearman_vs_baseline": 1.0
+      },
+      "novelty": {
+        "dropped_weight": 0.05,
+        "new_top1": "I1",
+        "winner_still_top1": true,
+        "new_order": [
+          "I1",
+          "I2",
+          "I3",
+          "I5",
+          "I4"
+        ],
+        "spearman_vs_baseline": 1.0
+      },
+      "citation": {
+        "dropped_weight": 0.04,
+        "new_top1": "I1",
+        "winner_still_top1": true,
+        "new_order": [
+          "I1",
+          "I2",
+          "I3",
+          "I5",
+          "I4"
+        ],
+        "spearman_vs_baseline": 1.0
+      },
+      "one_minus_risk": {
+        "dropped_weight": 0.1,
+        "new_top1": "I1",
+        "winner_still_top1": true,
+        "new_order": [
+          "I1",
+          "I3",
+          "I2",
+          "I5",
+          "I4"
+        ],
+        "spearman_vs_baseline": 0.9
+      }
+    }
+  },
+  "M6C_robustness_reference": {
+    "source": "09_ranking/ranking_robustness_v2.json",
+    "n_seeds": 200,
+    "weight_jitter_sigma": 0.05,
+    "top1_stability_rate": 1.0,
+    "top3_jaccard_mean": 1.0,
+    "spearman_to_default_mean": 0.9475,
+    "default_top1": "I1"
+  },
+  "statistical_caveats": [
+    "Candidate pool at the scoring stage is only N=5 instances (3 families); Monte-Carlo / analytic random baselines therefore have wide intervals.",
+    "Literature pool is 31 cards with NO citation counts available, so the 'popularity' baseline is a component literature-frequency proxy, not true citations.",
+    "Experimental ground truth exists only for I1 (positive) and I2 (boundary); I3/I4/I5 are unvalidated, so this is a mechanistic attribution, not a powered head-to-head superiority claim."
+  ]
+}

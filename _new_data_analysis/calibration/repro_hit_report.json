@@ -1,0 +1,142 @@
+{
+  "label_definition": "independent-replication HIT = |dlog10 sigma(T)| <= 0.1 dex (~1.26x) between two INDEPENDENT repeat measurements (LRS 6.12 vs 6.15_merged; starch 6.11 vs 6.13). This REPLACES the v0 within-curve self-consistency proxy.",
+  "n_samples": 71,
+  "n_hit": 46,
+  "overall_hit_rate": 0.647887323943662,
+  "hit_rate_by_group": {
+    "A_LRS": 0.5135135135135135,
+    "A_starch": 0.7941176470588235
+  },
+  "tolerance_sensitivity": {
+    "tol_main_dex": 0.1,
+    "hit_rate_main": 0.647887323943662,
+    "tol_sens_dex": 0.15,
+    "hit_rate_sens": 0.7464788732394366,
+    "auroc_v1_main": 0.7095652173913044,
+    "auroc_v1_sens": 0.6781970649895178
+  },
+  "calibration_vs_replication_hit": {
+    "conf_v0_naiveKK": {
+      "ECE": 0.326689016890633,
+      "Brier": 0.3207502337970759,
+      "AUROC": 0.7078260869565217,
+      "bins": [
+        {
+          "n": 15,
+          "mean_confidence": 0.9430944318347462,
+          "observed_hit_rate": 0.13333333333333333
+        },
+        {
+          "n": 14,
+          "mean_confidence": 0.9565084801147752,
+          "observed_hit_rate": 0.7142857142857143
+        },
+        {
+          "n": 14,
+          "mean_confidence": 0.9579240529407297,
+          "observed_hit_rate": 1.0
+        },
+        {
+          "n": 14,
+          "mean_confidence": 0.9638677260948191,
+          "observed_hit_rate": 0.7142857142857143
+        },
+        {
+          "n": 14,
+          "mean_confidence": 0.9695838268535463,
+          "observed_hit_rate": 0.7142857142857143
+        }
+      ]
+    },
+    "conf_v1_physics": {
+      "ECE": 0.30405541052920587,
+      "Brier": 0.2961454895231734,
+      "AUROC": 0.7095652173913044,
+      "bins": [
+        {
+          "n": 15,
+          "mean_confidence": 0.8359620283906579,
+          "observed_hit_rate": 0.13333333333333333
+        },
+        {
+          "n": 14,
+          "mean_confidence": 0.9565084801147752,
+          "observed_hit_rate": 0.7142857142857143
+        },
+        {
+          "n": 14,
+          "mean_confidence": 0.9579240529407297,
+          "observed_hit_rate": 1.0
+        },
+        {
+          "n": 14,
+          "mean_confidence": 0.9638677260948191,
+          "observed_hit_rate": 0.7142857142857143
+        },
+        {
+          "n": 14,
+          "mean_confidence": 0.9695838268535463,
+          "observed_hit_rate": 0.7142857142857143
+        }
+      ]
+    }
+  },
+  "learning_curve_v1_ECE_vs_data": [
+    {
+      "train_size": 10,
+      "mean_ECE": 0.1588089307772356,
+      "std_ECE": 0.08127974387956544,
+      "n_seed_used": 40
+    },
+    {
+      "train_size": 15,
+      "mean_ECE": 0.15288738843638278,
+      "std_ECE": 0.07329940108270976,
+      "n_seed_used": 40
+    },
+    {
+      "train_size": 20,
+      "mean_ECE": 0.15108499428210095,
+      "std_ECE": 0.05843517230573639,
+      "n_seed_used": 40
+    },
+    {
+      "train_size": 25,
+      "mean_ECE": 0.14867792372112013,
+      "std_ECE": 0.07691824452420594,
+      "n_seed_used": 40
+    },
+    {
+      "train_size": 30,
+      "mean_ECE": 0.14797467238707,
+      "std_ECE": 0.07418773707730951,
+      "n_seed_used": 40
+    },
+    {
+      "train_size": 35,
+      "mean_ECE": 0.14206625519916388,
+      "std_ECE": 0.06485822425961399,
+      "n_seed_used": 40
+    },
+    {
+      "train_size": 40,
+      "mean_ECE": 0.13861271442664366,
+      "std_ECE": 0.07080998714921746,
+      "n_seed_used": 40
+    },
+    {
+      "train_size": 45,
+      "mean_ECE": 0.13620526364110658,
+      "std_ECE": 0.07686106001226699,
+      "n_seed_used": 40
+    },
+    {
+      "train_size": 50,
+      "mean_ECE": 0.1652237881634909,
+      "std_ECE": 0.07413419415455558,
+      "n_seed_used": 40
+    }
+  ],
+  "uncalibrated_baseline_ECE_v1": 0.30405541052920587,
+  "honesty_notes": "Label is now a TRUE independent-replication hit (not a self-consistency proxy). N is small (two repeat pairs, ~71 matched points): metrics are an estimate, reported with per-bin n. The learning curve is calibration sample-efficiency on real repeat labels, NOT online agent self-improvement. If AUROC ~0.5, the honest reading is: current single-curve QC confidence has limited power to predict cross-run reproducibility -> motivates more repeat pairs (see experiment list)."
+}

@@ -1,0 +1,38 @@
+{
+  "policy": "REAL repeats; calibration OFF=raw KK, ON=isotonic leave-one-dataset-out; no leakage, no fabrication.",
+  "G2_calibration_ablation": {
+    "n_samples": 882,
+    "replication_rate": 0.18480725623582767,
+    "OFF_raw_KK": {
+      "ECE": 0.7751350948400364,
+      "MCE": 0.9419966077158914,
+      "Brier": 0.7512614373497686,
+      "overconfidence": 0.7751350948400364
+    },
+    "ON_isotonic_LODO": {
+      "ECE": 0.12599042212507858,
+      "MCE": 0.2683283885791031,
+      "Brier": 0.1603109297824943,
+      "overconfidence": -0.0022304189245648254
+    },
+    "delta_ECE": 0.6491446727149578,
+    "murphy_OFF": {
+      "reliability": 0.6115555670624436,
+      "resolution": 0.010891432569838596,
+      "uncertainty": 0.15065353427841283
+    },
+    "murphy_ON": {
+      "reliability": 0.021917857162358764,
+      "resolution": 0.011849607638569076,
+      "uncertainty": 0.15065353427841283
+    }
+  },
+  "G3_auroc_diagnosis": {
+    "pooled_rawKK_AUROC": 0.5222232651006425,
+    "within_dataset_AUROC_mean": 0.5309874615785678,
+    "within_dataset_AUROC_n": 10,
+    "per_dataset_meanKK_vs_repRate_spearman": -0.19590028045862823,
+    "per_dataset_spearman_p": 0.5637442329087623,
+    "interpretation": "Within a dataset KK barely ranks reproducibility (mean within-AUROC near 0.5); across datasets the per-dataset mean KK is NEGATIVELY related to replication rate (Spearman -0.20), so a model that transfers KK across datasets scores BELOW chance. => KK encodes single-curve validity, which is largely orthogonal to (and here mildly anti-correlated with) cross-pellet reproducibility; this is the diagnosis of AUROC<0.5."
+  }
+}

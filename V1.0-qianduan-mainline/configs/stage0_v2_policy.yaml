@@ -1,0 +1,55 @@
+# Stage0 v2 分析策略（冻结配置）
+# ---------------------------------------------------------------------------
+# 用途：OPTIMIZATION_EXECUTION_PLAN_20260622.md 的 M1 阶段分析。
+# 纪律：阈值改动前先 git commit 盖时间戳；本文件被 stage0_v2.versions 计入 sha256 锚定。
+# 它不改写 legacy 冻结管线（stage0_measurement/* 与 process_new_materials_stage0.py），
+# 只驱动 _new_data_analysis/stage0_v2/* 的并行重算（产物一律 *_v2）。
+analysis_version: "stage0-eis-v2.0.0"
+created: "2026-06-22"
+frozen: true
+
+# --- M1-1 Rb 方法不变性 ---
+rb_method_invariance:
+  # 每个温点并行尝试的四种方法（与 rb_fitting.py 内部 _method_* 一一对应）
+  methods:
+    - reverse_zero_crossing
+    - reverse_valley
+    - low_freq_plateau
+    - equivalent_circuit
+  # 方法间一致性阈值（log10(Rb) 标准差，dex）。超过即标 routing_artifact_risk 升级
+  method_spread_warn_dex: 0.15
+  method_spread_high_dex: 0.30
+  # 方法权重只能由"单谱内部信息"决定，禁止用跨温平滑性（防止把真实转变当异常压平）
+  forbid_cross_temperature_smoothing: true
+
+# --- M1-3 序列异常：只标记不删点 ---
+sequence_anomaly:
+  delete_points: false          # 关键：不再按 Rb 单调性删点
+  robust_residual: student_t    # 主拟合用 Student-t 稳健残差
+  student_t_dof: 4
+  emit_sensitivities:           # 同时输出三条敏感性轨迹
+    - all_admissible_points
+    - robust_regression
+    - leave_one_point_out
+
+# --- M1-5 断点不确定度（谱级 bootstrap）---
+breakpoint_uncertainty:
+  spectral_bootstrap_draws: 400
+  random_seed: 20260622
+  ci_level: 0.95
+  # 转变主张分级阈值
+  p_break_low: 0.50             # < 0.50 无证据支持稳定断点
+  p_break_high: 0.90            # >= 0.90 且方法稳定 → 稳健经验转变
+
+# --- legacy 路由（仅作记录，用于和 v2 对照；不在 v2 中复用其温区切换）---
+legacy_routing_note: >
+  legacy fit_rb_and_conductivity 在深冷高阻区优先 low_freq_plateau，其余温区级联
+  zero_crossing -> valley -> plateau -> equivalent_circuit；T_break 恰落在深冷附近，
+  故 v2 必须证明转变不是该温区方法切换造成的算法伪影。
+
+# --- 硬编码温度剔除（来自 process_new_materials_stage0.py，v2 必须显式审计）---
+legacy_excluded_temps_by_folder:
+  "2026.4.29CS": [-80.0, -77.0]
+excluded_temps_policy: >
+  v2 默认保留所有原始 QA 合格点；上面这些 legacy 剔除点在 v2 里改为"标记 sequence_anomaly
+  并纳入 leave-one-point-out 敏感性"，只有原始谱有可证 QA 问题才允许真正排除。

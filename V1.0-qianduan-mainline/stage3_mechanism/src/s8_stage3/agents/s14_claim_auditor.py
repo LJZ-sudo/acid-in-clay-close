@@ -133,6 +133,44 @@ def _ranking_robustness_gate(output_dir: Path) -> dict:
     }
 
 
+# --- C0–C5 + four-state alignment (additive 2026-06-21; see THREE_INNOVATIONS §8).
+#     Pure derivation from already-decided fields. NEVER mutates is_supported,
+#     caveats, publication_blockers, or recommended_wording. ---
+_CLEVEL_BY_CLAIM = {
+    "closed_loop_source_system": "C1",   # single (mother) system measurement/optimisation fact
+    "retrospective_validation": "C2",    # cross-batch relative consistency
+    "llm_transfer_candidate": "C2",      # cross-system transfer (select/recombine level)
+    "prospective_validation": "C3",      # frozen-then-measured empirical validation
+    "mechanism_consistency": "C4",       # 首选命名(M2-5/G6):机理一致/相容(封顶;保留替代解释)
+    "mechanism_discovery": "C4",         # DEPRECATED 别名:命名暗示超额,仍映射 C4 以向后兼容
+    "unsupported": "C0",
+}
+_C_ORDER = ["C0", "C1", "C2", "C3", "C4", "C5"]
+_C4_CAP = "C4"  # EIS transport-only must never auto-emit C5 (structure/causal)
+
+
+def _assign_c_level_and_status(item: ClaimLadderItem, applicability_domain: str) -> None:
+    """Fill the additive C0–C5 / four-state fields on a ladder item, in place.
+
+    Hard cap at C4 for EIS-only evidence. 'refuted' is intentionally NOT assigned
+    here (no explicit falsification signal in this deterministic auditor; it is
+    reserved for the P3 critic). Unsupported -> invalid; supported -> supported;
+    otherwise inconclusive (valid but insufficient / unidentifiable).
+    """
+    base = _CLEVEL_BY_CLAIM.get(item.claim_level, "C1")
+    if _C_ORDER.index(base) > _C_ORDER.index(_C4_CAP):
+        base = _C4_CAP
+    item.claim_level_c = base  # type: ignore[assignment]
+    if item.claim_level == "unsupported":
+        item.status = "invalid"
+    elif item.is_supported:
+        item.status = "supported"
+    else:
+        item.status = "inconclusive"
+    item.falsifier = item.forbidden_overclaim or ""
+    item.applicability_domain = applicability_domain
+
+
 def run_s14(
     output_dir: Path,
     settings,
@@ -560,6 +598,13 @@ def run_s14(
                 eis_overclaim_findings[0],
             )
 
+    # === C0–C5 + four-state alignment (additive; does not change blockers/wording) ===
+    _applicability = (
+        f"EIS transport-only; biopolymer/clay/H3PO4 transfer; discovery_mode={discovery_mode}"
+    )
+    for _it in ladder:
+        _assign_c_level_and_status(_it, _applicability)
+
     report = ClaimAuditReport(
         run_id=(registry or {}).get("run_id", "") if isinstance(registry, dict) else "",
         discovery_mode=discovery_mode,
@@ -621,7 +666,8 @@ def _render_markdown(report: ClaimAuditReport) -> str:
     lines.append("## Claim Ladder\n")
     for item in report.claim_ladder:
         mark = "PASS" if item.is_supported else "TODO"
-        lines.append(f"### [{mark}] `{item.claim_level}`\n")
+        c_tag = f" · {item.claim_level_c}/{item.status}" if item.claim_level_c else ""
+        lines.append(f"### [{mark}{c_tag}] `{item.claim_level}`\n")
         lines.append(f"**Allowed claim**: {item.allowed_claim}\n")
         lines.append(f"- current status: {item.current_evidence_status}")
         lines.append("- required evidence:")

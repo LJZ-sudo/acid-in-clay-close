@@ -1,0 +1,19 @@
+{
+  "generated_at": "2026-06-15T10:27:16.334230",
+  "mode": "offline",
+  "material": "lineA_LRS_6.15_s2",
+  "data_dir": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline\\data\\新材料\\2026.6.15藕粉",
+  "output_dir": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\_new_data_analysis\\lineA_LRS_6.15_s2",
+  "chi_pattern": "6.13藕粉-1_T*.txt",
+  "dta_dir": null,
+  "dta_pattern": "*.dta",
+  "strict_mode": false,
+  "arrhenius_enabled": true,
+  "reporting_enabled": false,
+  "total_files": 26,
+  "successful_files": 26,
+  "failed_files": 0,
+  "duration_seconds": 0.372818,
+  "report_paths": [],
+  "arrhenius_success": true
+}

@@ -1,0 +1,38 @@
+{
+  "dataset": "lineA_LRS_6.15_merged",
+  "n_points_total": 59,
+  "low_T_branch_K_max": 240.0,
+  "n_points_low_T": 31,
+  "descriptor_identifiable": {
+    "model_probabilities": {
+      "single": 0.0,
+      "continuous_2": 0.0,
+      "continuous_3": 1.0
+    },
+    "n_segments_selected": 3,
+    "confidence": 1.0,
+    "verdict": "Descriptor level (sigma, Ea, T_break, #segments) IS structurally identifiable: AICc decisively selects the transition model (P(3-seg)=1.0)."
+  },
+  "mechanism_nonidentifiable": {
+    "fits": {
+      "Arrhenius (simple activation)": {
+        "R2": 0.9322350504598387,
+        "Ea_eV": 0.5522916239538894,
+        "param": "Ea=0.552 eV"
+      },
+      "Mott 3D VRH (T^-1/4)": {
+        "R2": 0.9350697674589252,
+        "T0_Mott_K": null,
+        "param": "b=-463.3"
+      },
+      "VTF / glassy (1/(T-T0))": {
+        "R2": 0.928692309599823,
+        "B_K": 3714.608144040056,
+        "T0_K": 50.00000000000011,
+        "param": "B=3715K, T0=50K"
+      }
+    },
+    "R2_spread_across_laws": 0.006377457859102265,
+    "verdict": "Three physically DISTINCT conduction laws fit the low-T branch with R^2 within 0.006 of each other -> sigma(T) alone cannot select the microscopic mechanism. Non-identifiable. Reinforced by DRT R^2<0 (0/59 reliable). => claim ladder must cap at DESCRIPTOR, not MECHANISM."
+  }
+}

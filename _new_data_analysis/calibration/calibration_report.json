@@ -1,0 +1,101 @@
+{
+  "n_datasets": 6,
+  "n_points": 241,
+  "n_suspect": 4,
+  "self_consistent_tol_dex": 0.3,
+  "calibration_v0_naiveKK": {
+    "confidence_key": "conf_v0_naiveKK",
+    "n_points": 241,
+    "ECE": 0.03428633576174712,
+    "Brier": 0.01627416974180642,
+    "AUROC_suspect_discrimination": 0.9556962025316456,
+    "bins": [
+      {
+        "bin": 0,
+        "n": 49,
+        "mean_confidence": 0.9451243073005733,
+        "observed_consistency": 0.9183673469387755,
+        "gap": 0.026756960361797755
+      },
+      {
+        "bin": 1,
+        "n": 48,
+        "mean_confidence": 0.9568030496451927,
+        "observed_consistency": 1.0,
+        "gap": -0.043196950354807306
+      },
+      {
+        "bin": 2,
+        "n": 48,
+        "mean_confidence": 0.9608899511940073,
+        "observed_consistency": 1.0,
+        "gap": -0.03911004880599267
+      },
+      {
+        "bin": 3,
+        "n": 48,
+        "mean_confidence": 0.9665857766025111,
+        "observed_consistency": 1.0,
+        "gap": -0.033414223397488896
+      },
+      {
+        "bin": 4,
+        "n": 48,
+        "mean_confidence": 0.9708896421238521,
+        "observed_consistency": 1.0,
+        "gap": -0.029110357876147908
+      }
+    ]
+  },
+  "calibration_v1_physics_aware": {
+    "confidence_key": "conf_v1_physics",
+    "n_points": 241,
+    "ECE": 0.03665421183764047,
+    "Brier": 0.001965890446179355,
+    "AUROC_suspect_discrimination": 1.0,
+    "bins": [
+      {
+        "bin": 0,
+        "n": 49,
+        "mean_confidence": 0.8799643022037064,
+        "observed_consistency": 0.9183673469387755,
+        "gap": -0.03840304473506917
+      },
+      {
+        "bin": 1,
+        "n": 48,
+        "mean_confidence": 0.9568030496451927,
+        "observed_consistency": 1.0,
+        "gap": -0.043196950354807306
+      },
+      {
+        "bin": 2,
+        "n": 48,
+        "mean_confidence": 0.9608899511940073,
+        "observed_consistency": 1.0,
+        "gap": -0.03911004880599267
+      },
+      {
+        "bin": 3,
+        "n": 48,
+        "mean_confidence": 0.9665857766025111,
+        "observed_consistency": 1.0,
+        "gap": -0.033414223397488896
+      },
+      {
+        "bin": 4,
+        "n": 48,
+        "mean_confidence": 0.9708896421238521,
+        "observed_consistency": 1.0,
+        "gap": -0.029110357876147908
+      }
+    ]
+  },
+  "suspect_discrimination": {
+    "mean_conf_v0_on_suspect": 0.9390706616901405,
+    "mean_conf_v1_on_suspect": 0.1408605992535211,
+    "mean_conf_v0_on_good": 0.9603497575954202,
+    "mean_conf_v1_on_good": 0.9603497575954202
+  },
+  "interpretation": "Base rate is high (98% self-consistent), so AUROC (suspect discrimination) is the headline metric, not ECE. conf_v0 = raw KK score (naive agent that equates 'KK-valid' with 'trustworthy'); it CANNOT separate the 4 physical bad points (they pass KK at 0.93-0.95). conf_v1 keeps normal points == KK but lowers confidence only on significant local log-sigma jumps (>0.2 dex), which raises AUROC and lowers Brier. Honesty: v1 ECE may rise slightly because penalising bad points makes the mean confidence under-confident against the 98% base rate; this is expected and reported, not hidden. Label is isotonic-monotonicity self-consistency (transport-only proxy), NOT an independent-replication hit. Small N (~6 curves, 241 pts): v0 estimate."
+}

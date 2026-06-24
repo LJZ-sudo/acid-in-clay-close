@@ -165,7 +165,29 @@ def parse_arguments():
         action="store_true",
         help="从默认状态文件断点续测（需存在 online_experiment_state.json）"
     )
-    
+
+    # M5-A / SciTX 三重提交 Harness（默认关，开启则只记录不影响真实测量）
+    parser.add_argument(
+        "--shadow_harness",
+        action="store_true",
+        help="[兼容别名] 等价于 --harness_mode shadow（只记录、不夺仪器控制权、fail-safe）"
+    )
+    parser.add_argument(
+        "--harness_mode",
+        type=str,
+        choices=["off", "shadow", "canary", "enforce"],
+        default=None,
+        help=("Harness 模式。run_online 是人工启动的定温扫描,**只有 shadow 对它有意义**"
+              "(旁路记录、不夺控制权);canary/enforce 属自主控制路径(backend agent + SciTX 事务,"
+              "见 WP4),在本脚本会**安全降级为 shadow 记录并显式告警**,绝不在此假装 enforce。")
+    )
+    parser.add_argument(
+        "--shadow_harness_dir",
+        type=str,
+        default=None,
+        help="shadow 记录输出目录（默认 <chi_data_dir>/shadow_harness）"
+    )
+
     return parser.parse_args()
 
 
@@ -209,14 +231,18 @@ def create_experiment_config(args, state_path: str):
     return experiment_config
 
 
-def create_eis_analyzer():
-    """创建 EIS 分析器"""
+def create_eis_analyzer(shadow_recorder=None):
+    """创建 EIS 分析器。
+
+    shadow_recorder 非空时,在真实分析返回后**旁路**喂给三重提交 Harness(M5-A)记录,
+    完全 fail-safe:不改变返回值、不向实时回路抛错。
+    """
     from modules.analysis import eis_pipeline
     
     def analyzer(frequencies, z_real, z_imag, temperature_K, thickness_cm, area_cm2):
         # 注意：eis_pipeline.analyze_eis_point 使用 temperature_C 参数
         temperature_C = temperature_K - 273.15
-        return eis_pipeline.analyze_eis_point(
+        result = eis_pipeline.analyze_eis_point(
             frequencies=frequencies,
             z_real=z_real,
             z_imag=z_imag,
@@ -224,8 +250,51 @@ def create_eis_analyzer():
             thickness_cm=thickness_cm,
             area_cm2=area_cm2,
         )
+        # —— M5-A shadow 旁路（只记录，永不影响真实流程）——
+        if shadow_recorder is not None:
+            try:
+                shadow_recorder.record(
+                    result, freq=frequencies, z_real=z_real, z_imag=z_imag,
+                    temperature_K=temperature_K)
+            except Exception:
+                pass
+        return result
     
     return analyzer
+
+
+def _resolve_harness_mode(args) -> str:
+    """归一 --harness_mode 与兼容别名 --shadow_harness;canary/enforce 在本脚本降级 shadow。"""
+    mode = getattr(args, "harness_mode", None)
+    if mode is None:
+        mode = "shadow" if getattr(args, "shadow_harness", False) else "off"
+    if mode in ("canary", "enforce"):
+        # 诚实:run_online 是人工定温扫描,无自主决策可被 SciTX 事务接管 → 降级 shadow 记录
+        print(f"   ⚠️ harness_mode={mode} 属自主控制路径(backend agent + SciTX,见 WP4);"
+              f"本脚本无自主动作可接管 → 安全降级为 shadow 记录(绝不在此假装 {mode})。")
+        mode = "shadow"
+    return mode
+
+
+def _maybe_build_shadow_recorder(args):
+    """按 harness_mode 构造 shadow 记录器;任何失败都返回 None(不影响主流程)。"""
+    if _resolve_harness_mode(args) != "shadow":
+        return None
+    try:
+        # 把 stage1_optimization 加到 path,按 scientific_harness.* 顶层导入,
+        # 避免触发 stage1_optimization/__init__.py(其内有 canonical_input/optimizers 等重依赖绝对导入,
+        # 任一失败都会让 shadow 被 try/except 静默禁用)。
+        stage1_dir = Path(__file__).resolve().parent.parent / "stage1_optimization"
+        if str(stage1_dir) not in sys.path:
+            sys.path.insert(0, str(stage1_dir))
+        from scientific_harness.shadow import ShadowHarnessRecorder
+        out_dir = args.shadow_harness_dir or str(Path(args.chi_data_dir) / "shadow_harness")
+        rec = ShadowHarnessRecorder(out_dir=out_dir, sample_id=args.material)
+        print(f"   🛰️ 三重提交 Harness shadow 已开启 → {out_dir}（只记录，不接管仪器）")
+        return rec
+    except Exception as e:
+        print(f"   ⚠️ shadow Harness 初始化失败（不影响主流程）: {e}")
+        return None
 
 
 def create_phase_detector():
@@ -325,9 +394,10 @@ def main():
     else:
         print(f"     ✅ 状态控制器初始化成功")
     
-    # 3.4 分析器
+    # 3.4 分析器（可选挂 M5-A shadow 旁路）
     print(f"   - EIS 分析器...")
-    eis_analyzer = create_eis_analyzer()
+    shadow_recorder = _maybe_build_shadow_recorder(args)
+    eis_analyzer = create_eis_analyzer(shadow_recorder=shadow_recorder)
     print(f"     ✅ EIS 分析器创建成功")
     
     # 3.5 相变检测器（可选）

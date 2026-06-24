@@ -1,0 +1,31 @@
+{
+  "total_calls": 1,
+  "successes": 1,
+  "failures": 0,
+  "cache_hits": 0,
+  "llm_temperature": 0.2,
+  "llm_seed": null,
+  "configured_models": {
+    "cheap": "openai/gpt-5.4",
+    "standard": "openai/gpt-5.4",
+    "premium": "openai/gpt-5.4"
+  },
+  "total_prompt_tokens": 3745,
+  "total_completion_tokens": 2381,
+  "total_tokens": 6126,
+  "calls": [
+    {
+      "step": "s09_candidate_family_generator",
+      "model": "openai/gpt-5.4",
+      "prompt_tokens": 3745,
+      "completion_tokens": 2381,
+      "latency_ms": 21172.00000002049,
+      "success": true,
+      "cache_hit": false,
+      "cache_key": "2629c088cd7477ba67b963a7",
+      "temperature": 0.2,
+      "seed": null,
+      "error": null
+    }
+  ]
+}

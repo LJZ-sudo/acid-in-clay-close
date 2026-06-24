@@ -1,0 +1,95 @@
+{
+  "@context": "https://w3id.org/ro/crate/1.1/context",
+  "@graph": [
+    {
+      "@type": "CreativeWork",
+      "@id": "ro-crate-metadata.json",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.1"
+      },
+      "about": {
+        "@id": "./"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "@id": "./",
+      "name": "Proton-conductor agentic discovery — reproducibility crate",
+      "description": "Evidence-governed semi-closed-loop discovery: code, configs, certs, reports.",
+      "datePublished": "2026-06-24T16:40:54.028055+08:00",
+      "hasPart": [
+        {
+          "@id": "configs/objective_registry.yaml"
+        },
+        {
+          "@id": "configs/dataset_registry.yaml"
+        },
+        {
+          "@id": "configs/evidence_admission_v2.yaml"
+        },
+        {
+          "@id": "configs/terminology_aliases.yaml"
+        },
+        {
+          "@id": "scripts/reports/direct_hardware_call_report.json"
+        },
+        {
+          "@id": "stage1_optimization/campaign_memory/history_db_attapulgite.json"
+        }
+      ]
+    },
+    {
+      "@type": "File",
+      "@id": "configs/objective_registry.yaml",
+      "description": "目标函数注册表(冻结)",
+      "present": true,
+      "sha256": "193a65c7b5d39235ef29a8e29c72429e965490dfa8424dc216d169269ab7fac5",
+      "contentSize": 2529
+    },
+    {
+      "@type": "File",
+      "@id": "configs/dataset_registry.yaml",
+      "description": "数据集注册表(15/13 口径)",
+      "present": true,
+      "sha256": "6799cba7b79f5b21d014b7554b003c2238af4326c84fb1d33ac03e6d70f4b072",
+      "contentSize": 5720
+    },
+    {
+      "@type": "File",
+      "@id": "configs/evidence_admission_v2.yaml",
+      "description": "证据准入策略 v2",
+      "present": true,
+      "sha256": "4931d6e794f1056445f8621de5c39702466c82d3c39f9f050e00b9e397a45960",
+      "contentSize": 2408
+    },
+    {
+      "@type": "File",
+      "@id": "configs/terminology_aliases.yaml",
+      "description": "术语别名(命名降温)",
+      "present": true,
+      "sha256": "b20da7da115bb1af0789a3e3132a17949a420b3b38c3212392cd15e817050f0b",
+      "contentSize": 2591
+    },
+    {
+      "@type": "File",
+      "@id": "scripts/reports/direct_hardware_call_report.json",
+      "description": "硬件写路径审计(autonomous_bypass=0)",
+      "present": true,
+      "sha256": "c55b5f95169df1c1a11bea7ded85104a86ba5f1a7907d7fee0cf26661e534926",
+      "contentSize": 6982
+    },
+    {
+      "@type": "Dataset",
+      "@id": "stage1_optimization/campaign_memory/history_db_attapulgite.json",
+      "description": "线 B 真实 trial 历史",
+      "present": true,
+      "sha256": "ea006aebe18cd5ed1b3a5d37e8018ced5c8f9259d10a37a4c988e4aeee66d3da",
+      "contentSize": 12870
+    }
+  ],
+  "_summary": {
+    "n_artifacts": 6,
+    "n_present": 6,
+    "generated_at": "2026-06-24T16:40:54.028055+08:00"
+  }
+}

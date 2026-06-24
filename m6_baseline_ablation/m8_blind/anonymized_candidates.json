@@ -1,0 +1,151 @@
+[
+  {
+    "id": "C01",
+    "name": "Random formulation 2",
+    "components": [
+      "starch",
+      "cellulose",
+      "Ti3C2 MXene",
+      "phosphoric acid"
+    ],
+    "expected_properties": [
+      "randomly combined"
+    ]
+  },
+  {
+    "id": "C02",
+    "name": "Random formulation 1",
+    "components": [
+      "phosphoric acid",
+      "poly(vinyl alcohol) (PVA)",
+      "choline chloride",
+      "chitosan"
+    ],
+    "expected_properties": [
+      "randomly combined"
+    ]
+  },
+  {
+    "id": "C03",
+    "name": "High-frequency formulation 3",
+    "components": [
+      "Ti3C2 MXene",
+      "CsPbI3 perovskite solar",
+      "MoS2",
+      "Pt/C catalyst"
+    ],
+    "expected_properties": [
+      "selected by literature frequency"
+    ]
+  },
+  {
+    "id": "C04",
+    "name": "Chitosan/halloysite/phosphoric acid composite membrane",
+    "components": [
+      "chitosan",
+      "halloysite nanotubes (HNTs)",
+      "phosphoric acid"
+    ],
+    "expected_properties": [
+      "retention: chitosan plus HNTs may jointly suppress acid loss",
+      "nanostructure: dispersed tubes can create connected confined pathways",
+      "cold_window: bound acid-water domains are plausible within the composite"
+    ]
+  },
+  {
+    "id": "C05",
+    "name": "High-frequency formulation 1",
+    "components": [
+      "LiFePO4",
+      "silicon anode",
+      "Ti3C2 MXene",
+      "CsPbI3 perovskite solar"
+    ],
+    "expected_properties": [
+      "selected by literature frequency"
+    ]
+  },
+  {
+    "id": "C06",
+    "name": "Random formulation 3",
+    "components": [
+      "glycerol",
+      "chitosan",
+      "cellulose",
+      "attapulgite"
+    ],
+    "expected_properties": [
+      "randomly combined"
+    ]
+  },
+  {
+    "id": "C07",
+    "name": "Phosphoric acid in halloysite nanotubes",
+    "components": [
+      "halloysite nanotubes (HNTs)",
+      "phosphoric acid"
+    ],
+    "expected_properties": [
+      "nanoconfinement: tubular lumen can localise the acid phase",
+      "retention: clay-acid interaction may reduce leaching",
+      "cold_window: confined acid may avoid bulk-like freezing behavior"
+    ]
+  },
+  {
+    "id": "C08",
+    "name": "High-frequency formulation 2",
+    "components": [
+      "silicon anode",
+      "Ti3C2 MXene",
+      "CsPbI3 perovskite solar",
+      "MoS2"
+    ],
+    "expected_properties": [
+      "selected by literature frequency"
+    ]
+  },
+  {
+    "id": "C09",
+    "name": "Starch/PVA/choline chloride-phosphoric acid eutectic membrane",
+    "components": [
+      "starch",
+      "poly(vinyl alcohol) (PVA)",
+      "choline chloride",
+      "phosphoric acid"
+    ],
+    "expected_properties": [
+      "cold_window: eutectic phase may resist freezing better than neat water-rich acid",
+      "flexibility: plasticised starch/PVA matrix may remain less brittle below room temperature",
+      "proton_relay: dense OH network plus acid complex supports hybrid transport"
+    ]
+  },
+  {
+    "id": "C10",
+    "name": "Phosphate glass/starch/PVA hybrid membrane",
+    "components": [
+      "phosphate glass",
+      "starch",
+      "poly(vinyl alcohol) (PVA)"
+    ],
+    "expected_properties": [
+      "pathway_continuity: amorphous glass can provide non-crystalline proton domains",
+      "proton_relay: polymer OH groups may bridge inorganic and organic transport sites",
+      "retention: inorganic phase may reduce volatility of the conducting fraction"
+    ]
+  },
+  {
+    "id": "C11",
+    "name": "Chitosan/PVA/attapulgite/phosphoric acid quaternary film",
+    "components": [
+      "chitosan",
+      "poly(vinyl alcohol) (PVA)",
+      "attapulgite",
+      "phosphoric acid"
+    ],
+    "expected_properties": [
+      "cold_window: plausible bound-water and acid continuity within OH-rich film",
+      "nanoconfinement: 1-D clay may preserve interconnected acid channels",
+      "retention: chitosan-clay interactions may suppress phosphoric-acid loss"
+    ]
+  }
+]

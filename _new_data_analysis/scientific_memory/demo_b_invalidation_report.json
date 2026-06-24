@@ -1,0 +1,69 @@
+{
+  "demo": "B - counterfactual proof-carrying memory",
+  "real_events": [
+    "KK sign bug (Z=zreal-1j*zimag -> +1j)",
+    "ECE random-split leak (0.05 -> LODO 0.13)"
+  ],
+  "report": {
+    "invalidated_evidence": [
+      "E_kk_buggy",
+      "E_ece_randsplit",
+      "E_lrs_615merged"
+    ],
+    "claim_status_before": {
+      "C_kk_fail": "CONTESTED",
+      "D_exclude": "UNKNOWN",
+      "C_ece_005": "SUPPORTED",
+      "C_ece_013": "SUPPORTED",
+      "D_manuscript_ece": "UNKNOWN",
+      "C_transition": "SUPPORTED"
+    },
+    "claim_status_after": {
+      "C_kk_fail": "REFUTED",
+      "D_exclude": "UNKNOWN",
+      "C_ece_005": "UNKNOWN",
+      "C_ece_013": "SUPPORTED",
+      "D_manuscript_ece": "UNKNOWN",
+      "C_transition": "SUPPORTED"
+    },
+    "downgraded_claims": [
+      "C_kk_fail",
+      "C_ece_005"
+    ],
+    "affected_claims": [
+      "D_exclude",
+      "D_manuscript_ece"
+    ],
+    "surviving_independent_support": [
+      "C_ece_013",
+      "C_transition"
+    ],
+    "metrics": {
+      "invalidated_evidence_retrieval_rate": 0.0,
+      "downstream_claim_recomputation_rate": 1.0,
+      "independent_support_preservation_rate": 1.0,
+      "n_evidence_invalidated": 3,
+      "n_claims_touched": 3,
+      "n_claims_with_independent_support": 2
+    }
+  },
+  "narrative_checks": {
+    "C_kk_fail_before": "CONTESTED",
+    "C_kk_fail_after": "REFUTED",
+    "D_exclude_affected": true,
+    "C_ece_005_before": "SUPPORTED",
+    "C_ece_005_after": "UNKNOWN",
+    "D_manuscript_ece_affected": true,
+    "C_ece_013_stays_supported": true,
+    "C_transition_survives_via_independent_support": true
+  },
+  "acceptance": {
+    "invalidated_evidence_retrieval_rate": 0.0,
+    "downstream_claim_recomputation_rate": 1.0,
+    "independent_support_preservation_rate": 1.0,
+    "n_evidence_invalidated": 3,
+    "n_claims_touched": 3,
+    "n_claims_with_independent_support": 2
+  },
+  "acceptance_pass": true
+}

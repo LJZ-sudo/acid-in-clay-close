@@ -1,0 +1,211 @@
+{
+  "policy": "retrospective backtest on REAL history; no new experiments; no fabrication; short trajectory => no convergence/Pareto-expansion claim",
+  "n_real_trials": 10,
+  "n_prospective_rounds": 2,
+  "campaign_best": {
+    "trial_id": 1,
+    "params": {
+      "R": 0.186,
+      "N": 1.029
+    },
+    "combined_score": -1.9407287999780058
+  },
+  "q1_pareto_hypervolume_trajectory": [
+    {
+      "n_trials": 1,
+      "pareto_front_size": 1,
+      "dominated_hypervolume": 0.0010000000000000002,
+      "best_combined_score": -1.9407287999780058
+    },
+    {
+      "n_trials": 2,
+      "pareto_front_size": 1,
+      "dominated_hypervolume": 0.00017544380484476568,
+      "best_combined_score": -1.9407287999780058
+    },
+    {
+      "n_trials": 3,
+      "pareto_front_size": 1,
+      "dominated_hypervolume": 0.0006678647148103807,
+      "best_combined_score": -1.9407287999780058
+    },
+    {
+      "n_trials": 4,
+      "pareto_front_size": 1,
+      "dominated_hypervolume": 0.0013403157730255872,
+      "best_combined_score": -1.9407287999780058
+    },
+    {
+      "n_trials": 5,
+      "pareto_front_size": 2,
+      "dominated_hypervolume": 0.0023836252617639065,
+      "best_combined_score": -1.9407287999780058
+    },
+    {
+      "n_trials": 6,
+      "pareto_front_size": 2,
+      "dominated_hypervolume": 0.0023836252617639065,
+      "best_combined_score": -1.9407287999780058
+    },
+    {
+      "n_trials": 7,
+      "pareto_front_size": 3,
+      "dominated_hypervolume": 0.002466388261001437,
+      "best_combined_score": -1.9407287999780058
+    },
+    {
+      "n_trials": 8,
+      "pareto_front_size": 4,
+      "dominated_hypervolume": 0.0025412785928132214,
+      "best_combined_score": -1.9407287999780058
+    },
+    {
+      "n_trials": 9,
+      "pareto_front_size": 5,
+      "dominated_hypervolume": 0.0026222986321796675,
+      "best_combined_score": -1.9407287999780058
+    },
+    {
+      "n_trials": 10,
+      "pareto_front_size": 5,
+      "dominated_hypervolume": 0.0026222986321796675,
+      "best_combined_score": -1.9407287999780058
+    }
+  ],
+  "q2_surrogate_backtest": {
+    "kernel": "Matern(nu=2.5)  (same as MOBOOptimizer surrogate)",
+    "cold_start": 3,
+    "n_backtest_points": 7,
+    "MAE_combined_score": 0.3346552196468369,
+    "MAE_naive_mean_baseline": 0.3840339133204466,
+    "skill_vs_naive": true,
+    "spearman_pred_vs_actual": 0.21428571428571427,
+    "rows": [
+      {
+        "predict_trial_id": 4,
+        "n_train": 3,
+        "R": 0.5,
+        "N": 0.5,
+        "predicted_combined_score": -2.378327210000857,
+        "predicted_std": 0.33974508288395144,
+        "actual_combined_score": -3.3043740189813704,
+        "abs_error": 0.9260468089805136
+      },
+      {
+        "predict_trial_id": 5,
+        "n_train": 4,
+        "R": 0.5,
+        "N": 1.2,
+        "predicted_combined_score": -2.523217327874614,
+        "predicted_std": 0.47007976163768356,
+        "actual_combined_score": -2.1573823175892928,
+        "abs_error": 0.36583501028532117
+      },
+      {
+        "predict_trial_id": 6,
+        "n_train": 5,
+        "R": 0.64,
+        "N": 0.58,
+        "predicted_combined_score": -3.006707738032892,
+        "predicted_std": 0.2157789473417462,
+        "actual_combined_score": -2.9531367788909644,
+        "abs_error": 0.053570959141927776
+      },
+      {
+        "predict_trial_id": 7,
+        "n_train": 6,
+        "R": 0.2,
+        "N": 1.1,
+        "predicted_combined_score": -1.8806693967314208,
+        "predicted_std": 0.11254675754750532,
+        "actual_combined_score": -2.1754361572143135,
+        "abs_error": 0.29476676048289274
+      },
+      {
+        "predict_trial_id": 8,
+        "n_train": 7,
+        "R": 0.5,
+        "N": 0.9,
+        "predicted_combined_score": -2.6041223590440676,
+        "predicted_std": 0.30030669221957595,
+        "actual_combined_score": -2.278498488912704,
+        "abs_error": 0.3256238701313636
+      },
+      {
+        "predict_trial_id": 9,
+        "n_train": 8,
+        "R": 0.28,
+        "N": 0.96,
+        "predicted_combined_score": -2.250805454107368,
+        "predicted_std": 0.13373999164593048,
+        "actual_combined_score": -2.364652281314058,
+        "abs_error": 0.11384682720668993
+      },
+      {
+        "predict_trial_id": 10,
+        "n_train": 9,
+        "R": 0.42,
+        "N": 1.02,
+        "predicted_combined_score": -2.2927108238235183,
+        "predicted_std": 0.20549207289735003,
+        "actual_combined_score": -2.555607125122668,
+        "abs_error": 0.26289630129914965
+      }
+    ]
+  },
+  "q3_llm_correction_eval": {
+    "campaign_best_combined_score": -1.9407287999780058,
+    "rounds": [
+      {
+        "round": 1,
+        "raw_mobo": {
+          "R": 0.0285,
+          "N": 0.9841,
+          "mode": "parego",
+          "weights": [
+            0.404,
+            0.59,
+            0.006
+          ]
+        },
+        "llm_final": {
+          "R": 0.28,
+          "N": 0.96
+        },
+        "llm_provenance_model": "openai/gpt-5.4",
+        "measured_trial_id": 9,
+        "measured_combined_score": -2.364652281314058,
+        "measured_score_v3": -2.1493731855386167,
+        "on_pareto_front_full10": true,
+        "beat_campaign_best": false,
+        "gap_to_best": -0.42392348133605195
+      },
+      {
+        "round": 2,
+        "raw_mobo": {
+          "R": 0.2447,
+          "N": 0.9228,
+          "mode": "parego",
+          "weights": [
+            0.19909187175645868,
+            0.2937253838230793,
+            0.507182744420462
+          ],
+          "pareto_front_size": 5
+        },
+        "llm_final": {
+          "R": 0.42,
+          "N": 1.02
+        },
+        "llm_provenance_model": "openai/gpt-5.4",
+        "measured_trial_id": 10,
+        "measured_combined_score": -2.555607125122668,
+        "measured_score_v3": -2.1431929387969384,
+        "on_pareto_front_full10": false,
+        "beat_campaign_best": false,
+        "gap_to_best": -0.6148783251446621
+      }
+    ],
+    "verdict": "Neither prospective round beat the campaign best (honest null). LLM moved R off the raw-MOBO extreme-low-acid point on physical grounds; outcome competitive but not record (matches recipe allowed_claim)."
+  }
+}

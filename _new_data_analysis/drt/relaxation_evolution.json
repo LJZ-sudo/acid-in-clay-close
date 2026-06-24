@@ -1,0 +1,605 @@
+{
+  "dataset": "lineA_LRS_6.15_merged",
+  "n_points": 59,
+  "n_parse_fail": 0,
+  "n_apex_fail": 57,
+  "drt_reliability": {
+    "n_drt_reliable_r2_gt_0p8": 0,
+    "drt_r2_min": -190.95710441327444,
+    "drt_r2_max": -0.17989964521531587,
+    "verdict": "Standard Tikhonov DRT is UNRELIABLE on these spectra (all R^2 < 0.8; blocking-electrode low-f capacitive tail beyond a pure relaxation kernel). DRT peaks are NOT used as evidence."
+  },
+  "method_note": "f_peak = argmax_f(-Z'') of the bulk arc apex (model-free, no inversion). Its temperature shift is a transport-side relaxation signature, NOT a microscopic-structure claim.",
+  "by_temperature": [
+    {
+      "T_C": -88.0,
+      "T_K": 185.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": 21530.0,
+      "minus_Zpp_peak_ohm": 7936.0,
+      "drt_r_squared": -0.17989964521531587,
+      "drt_reliable": false,
+      "p0_suspect": true
+    },
+    {
+      "T_C": -85.0,
+      "T_K": 188.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": 46440.0,
+      "minus_Zpp_peak_ohm": 3386.0,
+      "drt_r_squared": -2.506677269344433,
+      "drt_reliable": false,
+      "p0_suspect": true
+    },
+    {
+      "T_C": -82.0,
+      "T_K": 191.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -2.97200349473877,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -79.0,
+      "T_K": 194.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -4.098918236836954,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -76.0,
+      "T_K": 197.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -5.070902594259835,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -73.0,
+      "T_K": 200.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -7.791298982593881,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -70.0,
+      "T_K": 203.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -6.112786270293928,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -67.0,
+      "T_K": 206.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -7.520594480202806,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -64.0,
+      "T_K": 209.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -7.2908984558287955,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -61.0,
+      "T_K": 212.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -40.99316748182037,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -58.0,
+      "T_K": 215.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -87.35344002212388,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -57.0,
+      "T_K": 216.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -49.35571188540398,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -54.0,
+      "T_K": 219.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -190.95710441327444,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -51.0,
+      "T_K": 222.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -17.910651753418897,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -49.0,
+      "T_K": 224.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -16.2030620221523,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -48.0,
+      "T_K": 225.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -42.4105058789486,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -47.0,
+      "T_K": 226.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -15.908479792427187,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -47.0,
+      "T_K": 226.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -16.592988658996205,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -46.0,
+      "T_K": 227.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -11.540519691536414,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -45.0,
+      "T_K": 228.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -13.361170180079379,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -45.0,
+      "T_K": 228.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -12.665486146293132,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -44.0,
+      "T_K": 229.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -12.429543858253515,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -43.0,
+      "T_K": 230.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -11.330187779991403,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -42.0,
+      "T_K": 231.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -11.996773947645792,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -41.0,
+      "T_K": 232.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -12.572594250475918,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -40.0,
+      "T_K": 233.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -10.03609507248463,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -39.0,
+      "T_K": 234.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -12.665405021179724,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -38.0,
+      "T_K": 235.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -11.016043434915023,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -37.0,
+      "T_K": 236.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -13.095726471748714,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -36.0,
+      "T_K": 237.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -15.36963085402083,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -34.0,
+      "T_K": 239.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -10.583497042373258,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -32.0,
+      "T_K": 241.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -13.858473628721717,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -31.0,
+      "T_K": 242.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -25.446544503881757,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -29.0,
+      "T_K": 244.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -21.286964985804957,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -28.0,
+      "T_K": 245.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -13.140707962546797,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -28.0,
+      "T_K": 245.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -13.610636808581004,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -27.0,
+      "T_K": 246.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -16.35892489878009,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -26.0,
+      "T_K": 247.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -14.838710241651501,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -26.0,
+      "T_K": 247.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -12.984863471916327,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -25.0,
+      "T_K": 248.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -17.54076916140459,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -24.0,
+      "T_K": 249.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -19.021601997560104,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -23.0,
+      "T_K": 250.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -14.002131255296415,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -23.0,
+      "T_K": 250.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -11.209660681144634,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -22.0,
+      "T_K": 251.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -18.832944530954308,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -20.0,
+      "T_K": 253.14999999999998,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -14.2817094525436,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -17.0,
+      "T_K": 256.15,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -11.660984623622277,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -14.0,
+      "T_K": 259.15,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -10.79067834745843,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -11.0,
+      "T_K": 262.15,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -11.557187984231332,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -8.0,
+      "T_K": 265.15,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -10.790441606360066,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -5.0,
+      "T_K": 268.15,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -7.23196349052415,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": -2.0,
+      "T_K": 271.15,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -7.290499856377506,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": 1.0,
+      "T_K": 274.15,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -5.467599538759546,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": 4.0,
+      "T_K": 277.15,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -6.0424317279424535,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": 7.0,
+      "T_K": 280.15,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -5.041234330372791,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": 10.0,
+      "T_K": 283.15,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -3.2345262714593677,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": 13.0,
+      "T_K": 286.15,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -2.027597243203039,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": 16.0,
+      "T_K": 289.15,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -1.512261292017234,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": 19.0,
+      "T_K": 292.15,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -0.9197954079218547,
+      "drt_reliable": false,
+      "p0_suspect": false
+    },
+    {
+      "T_C": 22.0,
+      "T_K": 295.15,
+      "n_freq": 84,
+      "f_peak_Hz": null,
+      "minus_Zpp_peak_ohm": null,
+      "drt_r_squared": -1.2278674142686996,
+      "drt_reliable": false,
+      "p0_suspect": false
+    }
+  ]
+}

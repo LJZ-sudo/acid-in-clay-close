@@ -1,0 +1,55 @@
+{
+  "step_id": "s09_families",
+  "families": [
+    {
+      "family_id": "F1",
+      "family_name": "Plasticised biopolymer acid-network composites",
+      "family_description": "OH-rich biopolymer/film matrices combined with retained proton donors and optional plasticised phases target cold-flexible, hydrogen-bonded transport networks.",
+      "descriptor_match": [
+        "D2: DES or retained polar phases support bound-fluid continuity at low temperature.",
+        "D3: biopolymer/PVA-like matrices are analogously suited to avoid brittle channel disconnection when plasticised.",
+        "D6: starch, chitosan, and PVA all supply dense OH-rich proton-relay landscapes.",
+        "D7: chitosan and low-loaded phosphoric-acid strategies support conducting-phase retention."
+      ],
+      "literature_support_card_ids": [
+        "manual_1157b11126",
+        "manual_42051140ac",
+        "manual_8d58a81c9e",
+        "manual_8d58a81c9e_1",
+        "manual_1ca1249fc4"
+      ]
+    },
+    {
+      "family_id": "F2",
+      "family_name": "One-dimensional confined acid-guiding hybrids",
+      "family_description": "Tubular or fibrous inorganic hosts embedded in polymeric scaffolds can confine and align hydrated acid domains for stable proton pathways.",
+      "descriptor_match": [
+        "D4: phosphoric-acid or acid-complex environments can remain non-crystallising under confinement or DES-like association.",
+        "D5: attapulgite, halloysite, and analogous nanofillers provide interconnected confinement and channel guidance.",
+        "D7: clay hosts are explicitly linked to acid immobilisation and reduced leaching.",
+        "D6: retained phosphoric acid supplies proton-relay functionality within the confined network."
+      ],
+      "literature_support_card_ids": [
+        "manual_1190463586",
+        "manual_a16330d0f5",
+        "manual_89488460eb",
+        "manual_1ca1249fc4"
+      ]
+    },
+    {
+      "family_id": "F3",
+      "family_name": "Amorphous proton-glass continua",
+      "family_description": "Amorphous phosphate-rich networks offer intrinsically continuous proton-conducting domains with strong hydrogen-bond participation and high retention.",
+      "descriptor_match": [
+        "D1: protonated phosphate glass is directly described as an amorphous continuous transport medium.",
+        "D6: phosphate glasses provide strong hydrogen-bond-mediated proton mobility.",
+        "D7: the conducting phase is structurally retained in the glass network, though durability can be conditional.",
+        "D3: amorphous glass avoids liquid freezing but may trade against low-temperature mechanical compliance."
+      ],
+      "literature_support_card_ids": [
+        "manual_26f0dcfc01",
+        "manual_3d7d6d5d7b"
+      ]
+    }
+  ]
+}

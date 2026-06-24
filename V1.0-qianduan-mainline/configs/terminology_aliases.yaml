@@ -1,0 +1,45 @@
+# 术语别名注册表（命名降温,WP0 / P0-3 / G6）
+# ---------------------------------------------------------------------------
+# 单一真相源：规范术语(手稿/UI/报告对外用)↔ legacy 代码名(事件/字段/文件,保留不改)。
+# 目的：在 EIS-only、封顶 C4 的治理下,**对外措辞不暗示"相变/发现机理"**,
+# 同时**不破坏**冻结在线管线与既有事件消费者(代码仍可用 legacy 名)。
+#
+# 边界(诚实)：本表只统一"对外措辞 + 提供映射",**不**对 200+ 处 legacy 代码做 blanket 改名
+# (那会触及冻结 Stage0 在线管线、WS 事件名与大量测试,属高风险,留 WP1 专项带测试迁移)。
+# claim 层(mechanism_discovery→mechanism_consistency)已在 contracts/claim_audit.py
+# 的 CLAIM_LEVEL_PREFERRED 落地;本表与之交叉校验(见 tests/test_terminology_aliases.py)。
+terminology_aliases_version: "terminology-aliases-v1.0.0"
+created: "2026-06-23"
+frozen: false   # 随 WP1 代码迁移推进可更新;legacy 名永远保留为兼容入口
+
+# canonical(对外规范) -> { legacy: [...代码名...], rationale, max_claim_level }
+aliases:
+  transport_regime_change:
+    legacy: [phase_transition, phase_detect, phase_jump]
+    rationale: >
+      EIS-only 无 DSC/XRD/NMR,不能断言热力学相变;观测到的是 logσ(1/T) 的传导区间转变
+      (两段 Arrhenius + 断点)。对外一律用 transport_regime_change / conductivity_breakpoint。
+    max_claim_level: C3
+
+  conductivity_breakpoint:
+    legacy: [transition_temp, T_break, transition_temps_K]
+    rationale: 断点是描述性温度坐标,不蕴含微观机理;带不确定度区间报告。
+    max_claim_level: C3
+
+  mechanistic_consistency:
+    legacy: [mechanism_discovery]
+    rationale: >
+      EIS-only 仅能到"结果与某机制的可观测预测一致/相容",不能"发现/证明"机理。
+      与 contracts/claim_audit.py::CLAIM_LEVEL_PREFERRED 一致(mechanism_discovery→mechanism_consistency)。
+    max_claim_level: C4
+
+# 已落地的代码层迁移(供审计核对)
+code_migration_status:
+  claim_level:
+    done: true
+    where: "stage3_mechanism/.../contracts/claim_audit.py::CLAIM_LEVEL_PREFERRED"
+    note: "mechanism_consistency 为首选,mechanism_discovery 保留为 DEPRECATED 兼容名"
+  phase_transition_events_fields:
+    done: false
+    deferred_to: "WP1（带测试的专项迁移;不在 P0 内做 blanket 改名）"
+    note: "WS 事件名/Stage0 字段/phase_detect.py 仍用 legacy 名;对外报告/手稿用 transport_regime_change"

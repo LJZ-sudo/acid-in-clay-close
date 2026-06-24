@@ -1,0 +1,686 @@
+{
+  "dataset": "lineA_LRS_0509CS",
+  "provenance": {
+    "analysis_version": "stage0-eis-v2.0.0",
+    "admission_policy_version": "evidence-policy-v2.0.0",
+    "objective_registry_version": "objective-registry-v2.0.0",
+    "rb_method_policy_version": "rb-method-v2.0.0",
+    "config_sha256": {
+      "stage0_v2_policy": "da45db8ed5327d9d45407e314014ed811eca46f00baf8165bf601348454be1af",
+      "rb_method_policy": "43949a81157d42afe6e16713ece534dcd99c3cafd03712e05cbb6b640ede117a",
+      "evidence_admission_v2": "4931d6e794f1056445f8621de5c39702466c82d3c39f9f050e00b9e397a45960",
+      "objective_registry": "193a65c7b5d39235ef29a8e29c72429e965490dfa8424dc216d169269ab7fac5"
+    },
+    "git_commit": "fb17c68",
+    "generated_at": "2026-06-22T19:37:40.766780+08:00",
+    "geom_ratio_t_over_A": 0.011224489795918367,
+    "geometry_uncertainty_status": "UNKNOWN"
+  },
+  "n_points": 35,
+  "room_temp_estimate": {
+    "temperature_C": 20.0,
+    "temperature_K": 293.15,
+    "log10_sigma_mean": -1.753270981381152,
+    "log10_sigma_sd": 8.217777451377378e-07,
+    "ci95": [
+      -1.7532725920655325,
+      -1.7532693706967715
+    ],
+    "variance_components": {
+      "var_log10_rb_method": 6.753186624036647e-13,
+      "var_log10_thickness": "UNKNOWN",
+      "var_log10_area": "UNKNOWN",
+      "n_credible_methods": 2
+    },
+    "method": "method_ensemble",
+    "uncertainty_scope": "RB_AND_METHOD"
+  },
+  "combined_score_distribution": {
+    "combined_score_mean": -1.866613153198516,
+    "combined_score_sd": 0.05801859193005639,
+    "combined_score_ci95": [
+      -1.9804430697894642,
+      -1.752084061721963
+    ],
+    "n_mc": 20000,
+    "inputs": {
+      "log10_sigma_room_mean": -1.753270981381152,
+      "log10_sigma_room_sd": 8.217777451377378e-07,
+      "ea_high_mean": 0.03659255731231515,
+      "ea_high_sd": 0.019,
+      "ea_low_excess_mean": 0.0
+    }
+  },
+  "points": [
+    {
+      "temperature_C": -12.0,
+      "temperature_K": 261.15,
+      "log10_sigma_mean": -1.7678886882775406,
+      "log10_sigma_sd": 0.00238176474291895,
+      "ci95": [
+        -1.7725569471736617,
+        -1.7632204293814195
+      ],
+      "variance_components": {
+        "var_log10_rb_method": 5.672803290611772e-06,
+        "var_log10_thickness": "UNKNOWN",
+        "var_log10_area": "UNKNOWN",
+        "n_credible_methods": 2
+      },
+      "method": "method_ensemble",
+      "uncertainty_scope": "RB_AND_METHOD"
+    },
+    {
+      "temperature_C": -15.0,
+      "temperature_K": 258.15,
+      "log10_sigma_mean": -1.7818883329522823,
+      "log10_sigma_sd": 0.0023284124054789245,
+      "ci95": [
+        -1.786452021267021,
+        -1.7773246446375437
+      ],
+      "variance_components": {
+        "var_log10_rb_method": 5.421504329988152e-06,
+        "var_log10_thickness": "UNKNOWN",
+        "var_log10_area": "UNKNOWN",
+        "n_credible_methods": 2
+      },
+      "method": "method_ensemble",
+      "uncertainty_scope": "RB_AND_METHOD"
+    },
+    {
+      "temperature_C": -18.0,
+      "temperature_K": 255.14999999999998,
+      "log10_sigma_mean": -1.7977654446162794,
+      "log10_sigma_sd": 0.0018976726383431817,
+      "ci95": [
+        -1.8014848829874321,
+        -1.7940460062451267
+      ],
+      "variance_components": {
+        "var_log10_rb_method": 3.601161442316372e-06,
+        "var_log10_thickness": "UNKNOWN",
+        "var_log10_area": "UNKNOWN",
+        "n_credible_methods": 2
+      },
+      "method": "method_ensemble",
+      "uncertainty_scope": "RB_AND_METHOD"
+    },
+    {
+      "temperature_C": -21.0,
+      "temperature_K": 252.14999999999998,
+      "log10_sigma_mean": -1.8070616143519052,
+      "log10_sigma_sd": 0.0018641015699019437,
+      "ci95": [
+        -1.810715253428913,
+        -1.8034079752748973
+      ],
+      "variance_components": {
+        "var_log10_rb_method": 3.4748746629108914e-06,
+        "var_log10_thickness": "UNKNOWN",
+        "var_log10_area": "UNKNOWN",
+        "n_credible_methods": 2
+      },
+      "method": "method_ensemble",
+      "uncertainty_scope": "RB_AND_METHOD"
+    },
+    {
+      "temperature_C": -24.0,
+      "temperature_K": 249.14999999999998,
+      "log10_sigma_mean": -1.8187995858697756,
+      "log10_sigma_sd": 0.0016424552965862416,
+      "ci95": [
+        -1.8220187982510847,
+        -1.8155803734884666
+      ],
+      "variance_components": {
+        "var_log10_rb_method": 2.6976594012841986e-06,
+        "var_log10_thickness": "UNKNOWN",
+        "var_log10_area": "UNKNOWN",
+        "n_credible_methods": 2
+      },
+      "method": "method_ensemble",
+      "uncertainty_scope": "RB_AND_METHOD"
+    },
+    {
+      "temperature_C": -27.0,
+      "temperature_K": 246.14999999999998,
+      "log10_sigma_mean": -1.827327900788012,
+      "log10_sigma_sd": 0.0014061241109137924,
+      "ci95": [
+        -1.830083904045403,
+        -1.824571897530621
+      ],
+      "variance_components": {
+        "var_log10_rb_method": 1.9771850152931033e-06,
+        "var_log10_thickness": "UNKNOWN",
+        "var_log10_area": "UNKNOWN",
+        "n_credible_methods": 2
+      },
+      "method": "method_ensemble",
+      "uncertainty_scope": "RB_AND_METHOD"
+    },
+    {
+      "temperature_C": -3.0,
+      "temperature_K": 270.15,
+      "log10_sigma_mean": -1.738605061211548,
+      "log10_sigma_sd": 0.0015942743800875525,
+      "ci95": [
+        -1.7417298389965197,
+        -1.7354802834265763
+      ],
+      "variance_components": {
+        "var_log10_rb_method": 2.54171079900355e-06,
+        "var_log10_thickness": "UNKNOWN",
+        "var_log10_area": "UNKNOWN",
+        "n_credible_methods": 2
+      },
+      "method": "method_ensemble",
+      "uncertainty_scope": "RB_AND_METHOD"
+    },
+    {
+      "temperature_C": -30.0,
+      "temperature_K": 243.14999999999998,
+      "log10_sigma_mean": -1.8414588238350627,
+      "log10_sigma_sd": 0.0011552791030994339,
+      "ci95": [
+        -1.8437231708771376,
+        -1.8391944767929878
+      ],
+      "variance_components": {
+        "var_log10_rb_method": 1.3346698060582323e-06,
+        "var_log10_thickness": "UNKNOWN",
+        "var_log10_area": "UNKNOWN",
+        "n_credible_methods": 2
+      },
+      "method": "method_ensemble",
+      "uncertainty_scope": "RB_AND_METHOD"
+    },
+    {
+      "temperature_C": -33.0,
+      "temperature_K": 240.14999999999998,
+      "log10_sigma_mean": -2.067390200906994,
+      "log10_sigma_sd": 0.001269432423428646,
+      "ci95": [
+        -2.0698782884569145,
+        -2.064902113357074
+      ],
+      "variance_components": {
+        "var_log10_rb_method": 1.611458677651925e-06,
+        "var_log10_thickness": "UNKNOWN",
+        "var_log10_area": "UNKNOWN",
+        "n_credible_methods": 2
+      },
+      "method": "method_ensemble",
+      "uncertainty_scope": "RB_AND_METHOD"
+    },
+    {
+      "temperature_C": -36.0,
+      "temperature_K": 237.14999999999998,
+      "log10_sigma_mean": -2.2319598318025373,
+      "log10_sigma_sd": 0.0023139239436420727,
+      "ci95": [
+        -2.2364951227320757,
+        -2.227424540872999
+      ],
+      "variance_components": {
+        "var_log10_rb_method": 5.354244016960082e-06,
+        "var_log10_thickness": "UNKNOWN",
+        "var_log10_area": "UNKNOWN",
+        "n_credible_methods": 2
+      },
+      "method": "method_ensemble",
+      "uncertainty_scope": "RB_AND_METHOD"
+    },
+    {
+      "temperature_C": -39.0,
+      "temperature_K": 234.14999999999998,
+      "log10_sigma_mean": -2.3828827708371176,
+      "log10_sigma_sd": 0.0009204978517932655,
+      "ci95": [
+        -2.3846869466266325,
+        -2.3810785950476028
+      ],
+      "variance_components": {
+        "var_log10_rb_method": 8.473162951560166e-07,
+        "var_log10_thickness": "UNKNOWN",
+        "var_log10_area": "UNKNOWN",
+        "n_credible_methods": 2
+      },
+      "method": "method_ensemble",
+      "uncertainty_scope": "RB_AND_METHOD"
+    },
+    {
+      "temperature_C": -42.0,
+      "temperature_K": 231.14999999999998,
+      "log10_sigma_mean": -2.5543327302015197,
+      "log10_sigma_sd": 0.00043161736083949454,
+      "ci95": [
+        -2.5551787002287654,
+        -2.553486760174274
+      ],
+      "variance_components": {
+        "var_log10_rb_method": 1.8629354617805044e-07,
+        "var_log10_thickness": "UNKNOWN",
+        "var_log10_area": "UNKNOWN",
+        "n_credible_methods": 2
+      },
+      "method": "method_ensemble",
+      "uncertainty_scope": "RB_AND_METHOD"
+    },
+    {
+      "temperature_C": -45.0,
+      "temperature_K": 228.14999999999998,
+      "log10_sigma_mean": -2.7999627365344635,
+      "log10_sigma_sd": 0.0010184133830814688,
+      "ci95": [
+        -2.8019588267653033,
+        -2.7979666463036237
+      ],
+      "variance_components": {
+        "var_log10_rb_method": 1.0371658188394426e-06,
+        "var_log10_thickness": "UNKNOWN",
+        "var_log10_area": "UNKNOWN",
+        "n_credible_methods": 2
+      },
+      "method": "method_ensemble",
+      "uncertainty_scope": "RB_AND_METHOD"
+    },
+    {
+      "temperature_C": -48.0,
+      "temperature_K": 225.14999999999998,
+      "log10_sigma_mean": -3.04223474064137,
+      "log10_sigma_sd": 0.0008370869184098187,
+      "ci95": [
+        -3.0438754310014535,
+        -3.0405940502812867
+      ],
+      "variance_components": {
+        "var_log10_rb_method": 7.007145089728465e-07,
+        "var_log10_thickness": "UNKNOWN",
+        "var_log10_area": "UNKNOWN",
+        "n_credible_methods": 2
+      },
+      "method": "method_ensemble",
+      "uncertainty_scope": "RB_AND_METHOD"
+    },
+    {
+      "temperature_C": -51.0,
+      "temperature_K": 222.14999999999998,
+      "log10_sigma_mean": -3.2646720199899937,
+      "log10_sigma_sd": 0.0001457905834767646,
+      "ci95": [
+        -3.2649577695336083,
+        -3.264386270446379
+      ],
+      "variance_components": {
+        "var_log10_rb_method": 2.1254894230495466e-08,
+        "var_log10_thickness": "UNKNOWN",
+        "var_log10_area": "UNKNOWN",
+        "n_credible_methods": 2
+      },
+      "method": "method_ensemble",
+      "uncertainty_scope": "RB_AND_METHOD"
+    },
+    {
+      "temperature_C": -54.0,
+      "temperature_K": 219.14999999999998,
+      "log10_sigma_mean": -3.695142708019207,
+      "log10_sigma_sd": 0.0009242374097385886,
+      "ci95": [
+        -3.696954213342295,
+        -3.693331202696119
+      ],
+      "variance_components": {
+        "var_log10_rb_method": 8.542147895602958e-07,
+        "var_log10_thickness": "UNKNOWN",
+        "var_log10_area": "UNKNOWN",
+        "n_credible_methods": 2
+      },
+      "method": "method_ensemble",
+      "uncertainty_scope": "RB_AND_METHOD"
+    },
+    {
+      "temperature_C": -57.0,
+      "temperature_K": 216.14999999999998,
+      "log10_sigma_mean": -3.861966855808145,
+      "log10_sigma_sd": 0.0006462860078264898,
+      "ci95": [
+        -3.863233576383485,
+        -3.860700135232805
+      ],
+      "variance_components": {
+        "var_log10_rb_method": 4.1768560391230167e-07,
+        "var_log10_thickness": "UNKNOWN",
+        "var_log10_area": "UNKNOWN",
+        "n_credible_methods": 2
+      },
+      "method": "method_ensemble",
+      "uncertainty_scope": "RB_AND_METHOD"
+    },
+    {
+      "temperature_C": -6.0,
+      "temperature_K": 267.15,
+      "log10_sigma_mean": -1.7422191090470134,
+      "log10_sigma_sd": 0.0017468584131123308,
+      "ci95": [
+        -1.7456429515367136,
+        -1.7387952665573132
+      ],
+      "variance_components": {
+        "var_log10_rb_method": 3.0515143154613304e-06,
+        "var_log10_thickness": "UNKNOWN",
+        "var_log10_area": "UNKNOWN",
+        "n_credible_methods": 2
+      },
+      "method": "method_ensemble",
+      "uncertainty_scope": "RB_AND_METHOD"
+    },
+    {
+      "temperature_C": -60.0,
+      "temperature_K": 213.14999999999998,
+      "log10_sigma_mean": -4.095264065072332,
+      "log10_sigma_sd": 0.00017016635981884987,
+      "ci95": [
+        -4.095597591137577,
+        -4.094930539007087
+      ],
+      "variance_components": {
+        "var_log10_rb_method": 2.8956590013998282e-08,
+        "var_log10_thickness": "UNKNOWN",
+        "var_log10_area": "UNKNOWN",
+        "n_credible_methods": 2
+      },
+      "method": "method_ensemble",
+      "uncertainty_scope": "RB_AND_METHOD"
+    },
+    {
+      "temperature_C": -63.0,
+      "temperature_K": 210.14999999999998,
+      "log10_sigma_mean": -4.38977999217698,
+      "log10_sigma_sd": 1.970910644790788,
+      "ci95": [
+        -8.252764855966923,
+        -0.5267951283870351
+      ],
+      "variance_components": {
+        "var_log10_rb_method": 3.8844887697496397,
+        "var_log10_thickness": "UNKNOWN",
+        "var_log10_area": "UNKNOWN",
+        "n_credible_methods": 2
+      },
+      "method": "method_ensemble",
+      "uncertainty_scope": "RB_AND_METHOD"
+    },
+    {
+      "temperature_C": -66.0,
+      "temperature_K": 207.14999999999998,
+      "log10_sigma_mean": -4.634501051698935,
+      "log10_sigma_sd": 1.7758883611830416,
+      "ci95": [
+        -8.115242239617697,
+        -1.1537598637801736
+      ],
+      "variance_components": {
+        "var_log10_rb_method": 3.153779471385389,
+        "var_log10_thickness": "UNKNOWN",
+        "var_log10_area": "UNKNOWN",
+        "n_credible_methods": 2
+      },
+      "method": "method_ensemble",
+      "uncertainty_scope": "RB_AND_METHOD"
+    },
+    {
+      "temperature_C": -69.0,
+      "temperature_K": 204.14999999999998,
+      "log10_sigma_mean": -4.8303697544699915,
+      "log10_sigma_sd": 1.486121984426439,
+      "ci95": [
+        -7.743168843945812,
+        -1.9175706649941708
+      ],
+      "variance_components": {
+        "var_log10_rb_method": 2.2085585525955773,
+        "var_log10_thickness": "UNKNOWN",
+        "var_log10_area": "UNKNOWN",
+        "n_credible_methods": 2
+      },
+      "method": "method_ensemble",
+      "uncertainty_scope": "RB_AND_METHOD"
+    },
+    {
+      "temperature_C": -72.0,
+      "temperature_K": 201.14999999999998,
+      "log10_sigma_mean": -5.1260086163638245,
+      "log10_sigma_sd": 0.0,
+      "ci95": [
+        -5.1260086163638245,
+        -5.1260086163638245
+      ],
+      "variance_components": {
+        "var_log10_rb_method": 0.0,
+        "var_log10_thickness": "UNKNOWN",
+        "var_log10_area": "UNKNOWN",
+        "n_credible_methods": 1
+      },
+      "method": "method_ensemble",
+      "uncertainty_scope": "RB_AND_METHOD"
+    },
+    {
+      "temperature_C": -75.0,
+      "temperature_K": 198.14999999999998,
+      "log10_sigma_mean": -5.356160629320466,
+      "log10_sigma_sd": 0.0,
+      "ci95": [
+        -5.356160629320466,
+        -5.356160629320466
+      ],
+      "variance_components": {
+        "var_log10_rb_method": 0.0,
+        "var_log10_thickness": "UNKNOWN",
+        "var_log10_area": "UNKNOWN",
+        "n_credible_methods": 1
+      },
+      "method": "method_ensemble",
+      "uncertainty_scope": "RB_AND_METHOD"
+    },
+    {
+      "temperature_C": -78.0,
+      "temperature_K": 195.14999999999998,
+      "log10_sigma_mean": -4.628675765301635,
+      "log10_sigma_sd": 0.0,
+      "ci95": [
+        -4.628675765301635,
+        -4.628675765301635
+      ],
+      "variance_components": {
+        "var_log10_rb_method": 0.0,
+        "var_log10_thickness": "UNKNOWN",
+        "var_log10_area": "UNKNOWN",
+        "n_credible_methods": 1
+      },
+      "method": "method_ensemble",
+      "uncertainty_scope": "RB_AND_METHOD"
+    },
+    {
+      "temperature_C": -81.0,
+      "temperature_K": 192.14999999999998,
+      "log10_sigma_mean": -4.630455325969896,
+      "log10_sigma_sd": 0.0,
+      "ci95": [
+        -4.630455325969896,
+        -4.630455325969896
+      ],
+      "variance_components": {
+        "var_log10_rb_method": 0.0,
+        "var_log10_thickness": "UNKNOWN",
+        "var_log10_area": "UNKNOWN",
+        "n_credible_methods": 1
+      },
+      "method": "method_ensemble",
+      "uncertainty_scope": "RB_AND_METHOD"
+    },
+    {
+      "temperature_C": -9.0,
+      "temperature_K": 264.15,
+      "log10_sigma_mean": -1.747183472637025,
+      "log10_sigma_sd": 0.0019348377649276896,
+      "ci95": [
+        -1.7509757546562832,
+        -1.7433911906177668
+      ],
+      "variance_components": {
+        "var_log10_rb_method": 3.7435971765903773e-06,
+        "var_log10_thickness": "UNKNOWN",
+        "var_log10_area": "UNKNOWN",
+        "n_credible_methods": 2
+      },
+      "method": "method_ensemble",
+      "uncertainty_scope": "RB_AND_METHOD"
+    },
+    {
+      "temperature_C": 0.0,
+      "temperature_K": 273.15,
+      "log10_sigma_mean": -1.7318570843389929,
+      "log10_sigma_sd": 0.0013059491366206025,
+      "ci95": [
+        -1.7344167446467693,
+        -1.7292974240312164
+      ],
+      "variance_components": {
+        "var_log10_rb_method": 1.705503147440097e-06,
+        "var_log10_thickness": "UNKNOWN",
+        "var_log10_area": "UNKNOWN",
+        "n_credible_methods": 2
+      },
+      "method": "method_ensemble",
+      "uncertainty_scope": "RB_AND_METHOD"
+    },
+    {
+      "temperature_C": 12.0,
+      "temperature_K": 285.15,
+      "log10_sigma_mean": -1.713380458129575,
+      "log10_sigma_sd": 0.0006149660784120418,
+      "ci95": [
+        -1.7145857916432627,
+        -1.7121751246158874
+      ],
+      "variance_components": {
+        "var_log10_rb_method": 3.781832775974856e-07,
+        "var_log10_thickness": "UNKNOWN",
+        "var_log10_area": "UNKNOWN",
+        "n_credible_methods": 2
+      },
+      "method": "method_ensemble",
+      "uncertainty_scope": "RB_AND_METHOD"
+    },
+    {
+      "temperature_C": 15.0,
+      "temperature_K": 288.15,
+      "log10_sigma_mean": -1.704750915354446,
+      "log10_sigma_sd": 0.0004586869743053345,
+      "ci95": [
+        -1.7056499418240845,
+        -1.7038518888848075
+      ],
+      "variance_components": {
+        "var_log10_rb_method": 2.103937403973826e-07,
+        "var_log10_thickness": "UNKNOWN",
+        "var_log10_area": "UNKNOWN",
+        "n_credible_methods": 2
+      },
+      "method": "method_ensemble",
+      "uncertainty_scope": "RB_AND_METHOD"
+    },
+    {
+      "temperature_C": 18.0,
+      "temperature_K": 291.15,
+      "log10_sigma_mean": -1.7028772386564597,
+      "log10_sigma_sd": 0.0004566329353583004,
+      "ci95": [
+        -1.7037722392097618,
+        -1.7019822381031575
+      ],
+      "variance_components": {
+        "var_log10_rb_method": 2.0851363765393777e-07,
+        "var_log10_thickness": "UNKNOWN",
+        "var_log10_area": "UNKNOWN",
+        "n_credible_methods": 2
+      },
+      "method": "method_ensemble",
+      "uncertainty_scope": "RB_AND_METHOD"
+    },
+    {
+      "temperature_C": 20.0,
+      "temperature_K": 293.15,
+      "log10_sigma_mean": -1.753270981381152,
+      "log10_sigma_sd": 8.217777451377378e-07,
+      "ci95": [
+        -1.7532725920655325,
+        -1.7532693706967715
+      ],
+      "variance_components": {
+        "var_log10_rb_method": 6.753186624036647e-13,
+        "var_log10_thickness": "UNKNOWN",
+        "var_log10_area": "UNKNOWN",
+        "n_credible_methods": 2
+      },
+      "method": "method_ensemble",
+      "uncertainty_scope": "RB_AND_METHOD"
+    },
+    {
+      "temperature_C": 3.0,
+      "temperature_K": 276.15,
+      "log10_sigma_mean": -1.7251107310218372,
+      "log10_sigma_sd": 0.0010188965086606124,
+      "ci95": [
+        -1.727107768178812,
+        -1.7231136938648624
+      ],
+      "variance_components": {
+        "var_log10_rb_method": 1.0381500953607854e-06,
+        "var_log10_thickness": "UNKNOWN",
+        "var_log10_area": "UNKNOWN",
+        "n_credible_methods": 2
+      },
+      "method": "method_ensemble",
+      "uncertainty_scope": "RB_AND_METHOD"
+    },
+    {
+      "temperature_C": 6.0,
+      "temperature_K": 279.15,
+      "log10_sigma_mean": -1.7238617387172084,
+      "log10_sigma_sd": 0.000931909234486367,
+      "ci95": [
+        -1.7256882808168017,
+        -1.722035196617615
+      ],
+      "variance_components": {
+        "var_log10_rb_method": 8.684548213209667e-07,
+        "var_log10_thickness": "UNKNOWN",
+        "var_log10_area": "UNKNOWN",
+        "n_credible_methods": 2
+      },
+      "method": "method_ensemble",
+      "uncertainty_scope": "RB_AND_METHOD"
+    },
+    {
+      "temperature_C": 9.0,
+      "temperature_K": 282.15,
+      "log10_sigma_mean": -1.7161262035895208,
+      "log10_sigma_sd": 0.0007294932822644215,
+      "ci95": [
+        -1.7175560104227592,
+        -1.7146963967562825
+      ],
+      "variance_components": {
+        "var_log10_rb_method": 5.321604488689189e-07,
+        "var_log10_thickness": "UNKNOWN",
+        "var_log10_area": "UNKNOWN",
+        "n_credible_methods": 2
+      },
+      "method": "method_ensemble",
+      "uncertainty_scope": "RB_AND_METHOD"
+    }
+  ]
+}

@@ -52,14 +52,23 @@ def get_evidence_by_id(evidence_id: str, download: int = 0):
 
 @router.post("/jobs/threshold_sweep")
 def threshold_sweep(payload: Optional[dict] = None):
-    """Threshold sweep analysis (placeholder)."""
-    return {"ok": True, "message": "Threshold sweep not yet implemented", "results": []}
+    """Threshold/method sensitivity (M1-8 / G2): 转变对 Rb 方法 / KK 阈值 / 管线假阳性的稳健性。
+
+    只读 stage0_v2 真实产物(rb_invariance + breakpoint_uncertainty + synthetic_validation);
+    产物缺失时返回 generated=False + 生成命令(不伪造)。
+    """
+    from backend_api.services.sensitivity_jobs import run_threshold_sweep
+    return run_threshold_sweep(payload)
 
 
 @router.post("/jobs/ablation")
 def ablation(payload: Optional[dict] = None):
-    """Ablation study (placeholder)."""
-    return {"ok": True, "message": "Ablation not yet implemented", "results": []}
+    """Ablation (M1-8): Rb 提取策略消融(4 轨迹)+ 稳健回归消融(全点/稳健/留一)。
+
+    只读 stage0_v2 真实产物(rb_invariance + arrhenius_robust);缺失返回生成命令。
+    """
+    from backend_api.services.sensitivity_jobs import run_ablation
+    return run_ablation(payload)
 
 
 @router.post("/jobs/report_scores")

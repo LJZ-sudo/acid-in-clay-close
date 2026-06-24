@@ -1,0 +1,192 @@
+# 数据集注册表（冻结配置）— WP0 / P0-2
+# ---------------------------------------------------------------------------
+# 单一真相源：澄清"15 个数据集 / 13 个出现转变"的口径，供手稿、图、E-Mem 共用,
+# 杜绝审稿人"13 还是 15?"的计数质疑(GPT-3 §2 指出的风险)。
+#
+# 全部数值由 _new_data_analysis/regularity/build_regularity.py 对真实 stage0 产物
+# (aggregated_results.json + arrhenius_analysis.json)实跑提取,**未人工编造**。
+# 复跑：python _new_data_analysis/regularity/build_regularity.py
+#
+# 转变判据(与 build_regularity 一致,非事后挑选)：
+#   has_transition = (seg0_npts >= 4) AND (seg1_npts >= 4)
+#   即高温段与低温段各至少 4 个 Arrhenius 点,才算"真实两段转变";
+#   单点尾段(pwlf 在最冷点的常见伪影)不计入 Ea。
+dataset_registry_version: "dataset-registry-v1.0.0"
+created: "2026-06-23"
+frozen: true
+generated_by: "_new_data_analysis/regularity/build_regularity.py"
+
+summary:
+  total_datasets: 15
+  with_transition: 13          # 7 LRS + 4 starch + 2 line-B ATP
+  without_transition: 2        # 2 CHITO(负类/边界,seg1 仅 2 点、Ea_low 4.6–5.3 eV 荒谬)
+  qc_excluded: 0               # 无数据集被 QC 排除;CHITO 保留但标 has_transition=false
+  positive_count_phrasing: "13/15"   # 论文统一措辞:15 个数据集中 13 个出现传导区间转变
+  honest_note: >
+    "13/15" 不是计数错误:15 = 13 条 line-A(7 LRS + 4 starch + 2 CHITO)+ 2 条 line-B
+    凹凸棒土前瞻点;其中 13 个出现真实两段转变(LRS×7 + starch×4 + line-B×2),
+    2 个 CHITO 为负类/边界(无干净低温段)。CHITO 计入总数但不计入"出现转变"。
+
+datasets:
+  # ---- LRS 藕粉(line A,正类,7 次独立重复)----
+  - label: lineA_LRS_0429CS
+    material: LRS
+    line: A
+    batch: Apr-thin
+    thickness_cm: 0.020
+    has_transition: true
+    t_break_C: -33.0
+    ea_high_eV: 0.043
+    ea_low_eV: 0.743
+    role: primary_positive
+  - label: lineA_LRS_0509CS
+    material: LRS
+    line: A
+    batch: Apr-thin
+    thickness_cm: 0.022
+    has_transition: true
+    t_break_C: -30.5
+    ea_high_eV: 0.037
+    ea_low_eV: 0.780
+    role: primary_positive
+  - label: lineA_LRS_6.12
+    material: LRS
+    line: A
+    batch: Jun-std
+    thickness_cm: 0.0737
+    has_transition: true
+    t_break_C: -33.9
+    ea_high_eV: 0.008
+    ea_low_eV: 0.585
+    seg_tail_artifact: true
+    role: primary_positive
+  - label: lineA_LRS_6.15_merged
+    material: LRS
+    line: A
+    batch: Jun-std
+    thickness_cm: 0.0701
+    has_transition: true
+    t_break_C: -33.0
+    ea_high_eV: 0.054
+    ea_low_eV: 0.618
+    seg_tail_artifact: true
+    role: primary_positive
+  - label: lineA_LRS_0615_s2
+    material: LRS
+    line: A
+    batch: Jun-std
+    thickness_cm: 0.0778
+    has_transition: true
+    t_break_C: -31.0
+    ea_high_eV: 0.036
+    ea_low_eV: 0.690
+    role: primary_positive
+  - label: lineA_LRS_0616_s3
+    material: LRS
+    line: A
+    batch: Jun-std
+    thickness_cm: 0.0734
+    has_transition: true
+    t_break_C: -39.4
+    ea_high_eV: 0.061
+    ea_low_eV: 0.717
+    role: primary_positive
+  - label: lineA_LRS_0617_s3b
+    material: LRS
+    line: A
+    batch: Jun-std
+    thickness_cm: 0.0734
+    has_transition: true
+    t_break_C: -26.6
+    ea_high_eV: 0.019
+    ea_low_eV: 0.712
+    role: primary_positive
+
+  # ---- starch 淀粉(line A,正类,4 次)----
+  - label: lineA_starch_0427CS
+    material: starch
+    line: A
+    batch: Apr
+    thickness_cm: 0.060
+    has_transition: true
+    t_break_C: -4.9          # 离群(其余 starch/LRS 在 -25~-39℃);手稿应单列说明
+    ea_high_eV: 0.216
+    ea_low_eV: 0.462
+    role: positive
+    flags: [t_break_outlier]
+  - label: lineA_starch_0428CS
+    material: starch
+    line: A
+    batch: Apr
+    thickness_cm: 0.060
+    has_transition: true
+    t_break_C: -30.9
+    ea_high_eV: 0.212
+    ea_low_eV: 0.448
+    role: positive
+  - label: lineA_starch_6.11
+    material: starch
+    line: A
+    batch: Jun
+    thickness_cm: 0.0628
+    has_transition: true
+    t_break_C: -28.1
+    ea_high_eV: 0.167
+    ea_low_eV: 0.377
+    role: positive
+  - label: lineA_starch_6.13
+    material: starch
+    line: A
+    batch: Jun
+    thickness_cm: 0.0737
+    has_transition: true
+    t_break_C: -24.6
+    ea_high_eV: 0.112
+    ea_low_eV: 0.384
+    role: positive
+
+  # ---- CHITO 壳聚糖(line A,负类/边界,2 次,无干净转变)----
+  - label: lineA_CHITO_0430CS
+    material: CHITO
+    line: A
+    batch: Apr
+    thickness_cm: 0.050
+    has_transition: false      # seg1 仅 2 点;Ea_low≈4.636 eV(非物理)→ 不算真实转变
+    ea_high_eV: 0.050
+    ea_low_eV: 4.636
+    role: negative_boundary
+  - label: lineA_CHITO_0501CS
+    material: CHITO
+    line: A
+    batch: Apr
+    thickness_cm: 0.060
+    has_transition: false      # seg1 仅 2 点;Ea_low≈5.292 eV(非物理)
+    ea_high_eV: 0.099
+    ea_low_eV: 5.292
+    role: negative_boundary
+
+  # ---- line B 凹凸棒土(前瞻点,正类,2 次;R/N 不同配方)----
+  - label: lineB_R0.28_6.10
+    material: ATP
+    line: B
+    batch: prospective
+    R: 0.28
+    N: 0.96
+    thickness_cm: 0.0783
+    has_transition: true
+    t_break_C: -28.9
+    ea_high_eV: 0.059
+    ea_low_eV: 0.238
+    role: prospective_positive
+  - label: lineB_R0.42_6.11
+    material: ATP
+    line: B
+    batch: prospective
+    R: 0.42
+    N: 1.02
+    thickness_cm: 0.0697
+    has_transition: true
+    t_break_C: -34.2
+    ea_high_eV: 0.139
+    ea_low_eV: 0.293
+    role: prospective_positive

@@ -1,0 +1,21 @@
+{
+  "judge_model": "google/gemini-2.5-flash",
+  "cross_model": true,
+  "by_source": {
+    "random": {
+      "n": 3,
+      "avg_plausibility": 2.33,
+      "avg_groundedness": 3.33
+    },
+    "popularity": {
+      "n": 3,
+      "avg_plausibility": 1.0,
+      "avg_groundedness": 1.0
+    },
+    "governed": {
+      "n": 5,
+      "avg_plausibility": 4.0,
+      "avg_groundedness": 4.8
+    }
+  }
+}

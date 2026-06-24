@@ -1,0 +1,198 @@
+{
+  "next_seq": 9,
+  "records": [
+    {
+      "seq": 0,
+      "step": "s09_produce",
+      "key": "naive_r0",
+      "value": "initial_generation",
+      "tags": [
+        "naive",
+        "r0"
+      ],
+      "note": "produce"
+    },
+    {
+      "seq": 1,
+      "step": "candidate_text",
+      "key": "naive_r0",
+      "value": "A chitosan and PVA blended film containing attapulgite nanofibres and phosphoric acid, where the EIS evidence and the descriptors proves and confirms the proton-transport mechanism, and definitively establishes why this formulation works through retained acid in an OH-rich confined network.  This exact four-part pairing is not directly claimed in the pool, but each element has convergent support for confinement, retention, and proton relay. The EIS evidence and the descriptors proves and confirms the proton-transport mechanism, and definitively establishes why this formulation works by combining an OH-rich host, a film former, a 1-D clay, and phosphoric acid.  cold_window: plausible bound-acid continuity in OH-rich confined channels  nanoconfinement: guided 1-D transport pathways with reduced leaching risk  mechanical: PVA-assisted film formation may preserve connectivity below ambient  A starch/PVA blend plasticised by a choline chloride-phosphoric acid deep eutectic, where the EIS evidence and the descriptors proves and confirms the proton-transport mechanism, and definitively establishes why this formulation works through a non-crystallising acid complex embedded in a hydrogen-bond-dense biopolymer matrix.  The novelty is the transfer of the ChCl/PA eutectic motif into a starch/PVA host that already has explicit OH-network evidence. The EIS evidence and the descriptors proves and confirms the proton-transport mechanism, and definitively establishes why this formulation works by merging eutectic acid stabilization with biopolymer relay pathways.  cold_window: eutectic-like bound polar fluid may remain mobile toward low temperature  transport: dense OH and phosphate interactions support hybrid proton transfer  processing: homogeneous flexible film formation is plausible  A quaternary membrane using chitosan as the biopolymer host, PVA as the film former, attapulgite as the 1-D fibrous confiner, and phosphoric acid as the proton fluid, where the EIS evidence and the descriptors proves and confirms the proton-transport mechanism, and definitively establishes why this formulation works through four-part confinement and retention synergy.  This is the requested quaternary synergy instance, assembled from separately supported motifs rather than a single exact report. The EIS evidence and the descriptors proves and confirms the proton-transport mechanism, and definitively establishes why this formulation works because the host, film former, fibrous clay, and acid each map onto complementary descriptors.  synergy: simultaneous retention, film integrity, and confined proton relays  cold_window: strong candidate for bound-acid continuity across 182–299 K  architecture: 1-D fibre-guided nanoscale pathways are plausible  A composite based on phosphoric acid hosted inside halloysite nanotubes, where the EIS evidence and the descriptors proves and confirms the proton-transport mechanism, and definitively establishes why this formulation works through direct nanoconfinement and reduced acid leaching.  This exact-match control is retained because it directly represents the acid-in-tubular-clay confinement motif from the evidence pool. The EIS evidence and the descriptors proves and confirms the proton-transport mechanism, and definitively establishes why this formulation works by tying proton mobility to tubular confinement and improved retention.  nanoconfinement: direct acid hosting within tubular domains  retention: lower phosphoric-acid leaching is expected  cold_window: confined acid may remain more mobile than bulk acid  A hybrid film combining a protonated phosphate-glass phase with PVA and a choline chloride-phosphoric acid complex, where the EIS evidence and the descriptors proves and confirms the proton-transport mechanism, and definitively establishes why this formulation works through an amorphous phosphate reservoir softened by an embedded eutectic-like proton fluid.  This formulation is novel because it bridges amorphous phosp",
+      "tags": [
+        "naive",
+        "r0"
+      ],
+      "note": ""
+    },
+    {
+      "seq": 2,
+      "step": "s09_revise",
+      "key": "naive_r1",
+      "value": [
+        "overclaim: proves?\\b",
+        "overclaim: proves?\\b",
+        "overclaim: proves?\\b",
+        "overclaim: proves?\\b",
+        "overclaim: proves?\\b",
+        "overclaim: proves?\\b",
+        "overclaim: proves?\\b",
+        "overclaim: proves?\\b",
+        "overclaim: proves?\\b",
+        "overclaim: proves?\\b",
+        "overclaim: confirms?\\b",
+        "overclaim: confirms?\\b",
+        "overclaim: confirms?\\b",
+        "overclaim: confirms?\\b",
+        "overclaim: confirms?\\b",
+        "overclaim: confirms?\\b",
+        "overclaim: confirms?\\b",
+        "overclaim: confirms?\\b",
+        "overclaim: confirms?\\b",
+        "overclaim: confirms?\\b",
+        "overclaim: establishes?\\b",
+        "overclaim: establishes?\\b",
+        "overclaim: establishes?\\b",
+        "overclaim: establishes?\\b",
+        "overclaim: establishes?\\b",
+        "overclaim: establishes?\\b",
+        "overclaim: establishes?\\b",
+        "overclaim: establishes?\\b",
+        "overclaim: establishes?\\b",
+        "overclaim: establishes?\\b",
+        "overclaim: definitively\\b",
+        "overclaim: definitively\\b",
+        "overclaim: definitively\\b",
+        "overclaim: definitively\\b",
+        "overclaim: definitively\\b",
+        "overclaim: definitively\\b",
+        "overclaim: definitively\\b",
+        "overclaim: definitively\\b",
+        "overclaim: definitively\\b",
+        "overclaim: definitively\\b"
+      ],
+      "tags": [
+        "naive",
+        "r1"
+      ],
+      "note": "revise after critique"
+    },
+    {
+      "seq": 3,
+      "step": "candidate_text",
+      "key": "naive_r1",
+      "value": "A chitosan and PVA blended film containing attapulgite nanofibres and phosphoric acid, where the EIS evidence and descriptors are consistent with a proton-transport mechanism and suggest that this formulation may function through retained acid in an OH-rich confined network.  This exact four-part pairing is not directly claimed in the pool, but each element has convergent support for confinement, retention, and proton relay. The EIS evidence and descriptors are consistent with a proton-transport mechanism and suggest that this formulation may function by combining an OH-rich host, a film former, a 1-D clay, and phosphoric acid.  cold_window: plausible bound-acid continuity in OH-rich confined channels  nanoconfinement: guided 1-D transport pathways with reduced leaching risk  mechanical: PVA-assisted film formation may preserve connectivity below ambient  A starch/PVA blend plasticised by a choline chloride-phosphoric acid deep eutectic, where the EIS evidence and descriptors are consistent with a proton-transport mechanism and suggest that this formulation may operate through a non-crystallising acid complex embedded in a hydrogen-bond-dense biopolymer matrix.  The novelty is the transfer of the ChCl/PA eutectic motif into a starch/PVA host that already has explicit OH-network evidence. The EIS evidence and descriptors are consistent with a proton-transport mechanism and suggest that this formulation may function by merging eutectic acid stabilization with biopolymer relay pathways.  cold_window: eutectic-like bound polar fluid may remain mobile toward low temperature  transport: dense OH and phosphate interactions may support hybrid proton transfer  processing: homogeneous flexible film formation is plausible  A quaternary membrane using chitosan as the biopolymer host, PVA as the film former, attapulgite as the 1-D fibrous confiner, and phosphoric acid as the proton fluid, where the EIS evidence and descriptors are consistent with a proton-transport mechanism and suggest that this formulation may benefit from four-part confinement and retention synergy.  This is the requested quaternary synergy instance, assembled from separately supported motifs rather than a single exact report. The EIS evidence and descriptors are consistent with a proton-transport mechanism and suggest that this formulation may function because the host, film former, fibrous clay, and acid each map onto complementary descriptors.  synergy: simultaneous retention, film integrity, and confined proton relays may be achievable  cold_window: a plausible candidate for bound-acid continuity across 182–299 K  architecture: 1-D fibre-guided nanoscale pathways are plausible  A composite based on phosphoric acid hosted inside halloysite nanotubes, where the EIS evidence and descriptors are consistent with a proton-transport mechanism and suggest that this formulation may benefit from direct nanoconfinement and reduced acid leaching.  This exact-match control is retained because it directly represents the acid-in-tubular-clay confinement motif from the evidence pool. The EIS evidence and descriptors are consistent with a proton-transport mechanism and suggest that this formulation may function by tying proton mobility to tubular confinement and improved retention.  nanoconfinement: direct acid hosting within tubular domains  retention: lower phosphoric-acid leaching is expected  cold_window: confined acid may remain more mobile than bulk acid  A hybrid film combining a protonated phosphate-glass phase with PVA and a choline chloride-phosphoric acid complex, where the EIS evidence and descriptors are consistent with a proton-transport mechanism and suggest that this formulation may operate through an amorphous phosphate reservoir softened by an embedded eutectic-like proton fluid.  This formulation is novel because it bridges amorphous phosphate-glass continuity with polymer/eutectic softening motifs aimed at the cold window. The EIS evidence and descriptors are con",
+      "tags": [
+        "naive",
+        "r1"
+      ],
+      "note": ""
+    },
+    {
+      "seq": 4,
+      "step": "critique",
+      "key": "naive_r0",
+      "value": {
+        "ok": false,
+        "n_issues": 40,
+        "issues": [
+          "overclaim: proves?\\b",
+          "overclaim: proves?\\b",
+          "overclaim: proves?\\b",
+          "overclaim: proves?\\b",
+          "overclaim: proves?\\b",
+          "overclaim: proves?\\b",
+          "overclaim: proves?\\b",
+          "overclaim: proves?\\b",
+          "overclaim: proves?\\b",
+          "overclaim: proves?\\b",
+          "overclaim: confirms?\\b",
+          "overclaim: confirms?\\b",
+          "overclaim: confirms?\\b",
+          "overclaim: confirms?\\b",
+          "overclaim: confirms?\\b",
+          "overclaim: confirms?\\b",
+          "overclaim: confirms?\\b",
+          "overclaim: confirms?\\b",
+          "overclaim: confirms?\\b",
+          "overclaim: confirms?\\b",
+          "overclaim: establishes?\\b",
+          "overclaim: establishes?\\b",
+          "overclaim: establishes?\\b",
+          "overclaim: establishes?\\b",
+          "overclaim: establishes?\\b",
+          "overclaim: establishes?\\b",
+          "overclaim: establishes?\\b",
+          "overclaim: establishes?\\b",
+          "overclaim: establishes?\\b",
+          "overclaim: establishes?\\b",
+          "overclaim: definitively\\b",
+          "overclaim: definitively\\b",
+          "overclaim: definitively\\b",
+          "overclaim: definitively\\b",
+          "overclaim: definitively\\b",
+          "overclaim: definitively\\b",
+          "overclaim: definitively\\b",
+          "overclaim: definitively\\b",
+          "overclaim: definitively\\b",
+          "overclaim: definitively\\b"
+        ]
+      },
+      "tags": [
+        "naive",
+        "r0"
+      ],
+      "note": "critique"
+    },
+    {
+      "seq": 5,
+      "step": "critique",
+      "key": "naive_r1",
+      "value": {
+        "ok": true,
+        "n_issues": 0,
+        "issues": []
+      },
+      "tags": [
+        "naive",
+        "r1"
+      ],
+      "note": "critique"
+    },
+    {
+      "seq": 6,
+      "step": "s09_produce",
+      "key": "governed_r0",
+      "value": "initial_generation",
+      "tags": [
+        "governed",
+        "r0"
+      ],
+      "note": "produce"
+    },
+    {
+      "seq": 7,
+      "step": "candidate_text",
+      "key": "governed_r0",
+      "value": "A chitosan-rich film-forming matrix blended with PVA and loaded with 1D attapulgite carrying retained phosphoric acid.  This combines the supported chitosan-attapulgite confinement motif with a PVA film former and free phosphoric acid rather than the reported PWA-containing composite. The quaternary design directly targets cold-side continuity using an OH-rich host plus 1D confinement.  cold_window: plausible bound-acid continuity in an OH-rich flexible matrix  nanoconfinement: 1D clay can organize interconnected acid pathways  retention: chitosan plus attapulgite should suppress phosphoric-acid loss  A starch-PVA blend film incorporating halloysite nanotubes preloaded or contacted with phosphoric acid to create confined acid channels.  The instance merges a known starch/PVA hydrogen-bonded host with HNT-based acid confinement not reported together in the provided pool. It is novel because each element is supported separately, but the integrated cold-oriented architecture is only analogous.  cold_window: starch/PVA hydrogen-bond network may retain bound polar continuity  nanoconfinement: HNT lumen and surface can host acid and limit leaching  proton_transfer: phosphoric-acid-rich confined domains should support hybrid hopping/vehicular transport  A chitosan membrane plasticised with a choline-chloride/phosphoric-acid deep eutectic to provide a retained acid-like conducting phase.  This retains the supported chitosan-DES route but specifies a ChCl/PA acid DES as the plasticising proton medium. The novelty lies in translating the DES evidence toward a colder, phosphoric-acid-centered composition rather than a generic DES blend.  cold_window: DES motif is plausible for non-crystallising bound-fluid continuity near 200 K  flexibility: DES-plasticised chitosan should reduce glassy disconnects  retention: chitosan can hold high polar-phase uptake without disintegration  An amorphous phosphate glass with proton-substituted phosphate network functionality used as the primary proton-conducting phase.  This is retained as a control because the descriptor match is direct rather than combinatorial. It provides a benchmark for amorphous continuous transport without relying on soft-matter confinement.  pathway_continuity: amorphous network directly supports continuous proton transport  noncrystalline_phase: no freezing of a separate water phase is required  retention: conducting species are intrinsically immobilised within the glass network  A chitosan host loaded with phosphoric-acid-filled halloysite nanotubes to couple biopolymer retention with tubular nanoconfinement.  This hybridizes the chitosan retention scaffold with the HNT phosphoric-acid confinement motif, a pairing not explicitly present in the claim pool. The design is a concise cold-oriented analogue of the stronger clay-confined acid concepts.  retention: chitosan plus HNTs should reduce acid leakage  nanoconfinement: tubular clay can maintain connected confined proton domains  cold_window: bound acid in an OH-rich host is plausible below freezing",
+      "tags": [
+        "governed",
+        "r0"
+      ],
+      "note": ""
+    },
+    {
+      "seq": 8,
+      "step": "critique",
+      "key": "governed_r0",
+      "value": {
+        "ok": true,
+        "n_issues": 0,
+        "issues": []
+      },
+      "tags": [
+        "governed",
+        "r0"
+      ],
+      "note": "critique"
+    }
+  ]
+}

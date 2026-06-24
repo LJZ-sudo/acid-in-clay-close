@@ -1,0 +1,69 @@
+{
+  "provenance": {
+    "analysis_version": "stage0-eis-v2.0.0",
+    "admission_policy_version": "evidence-policy-v2.0.0",
+    "objective_registry_version": "objective-registry-v2.0.0",
+    "rb_method_policy_version": "rb-method-v2.0.0",
+    "config_sha256": {
+      "stage0_v2_policy": "da45db8ed5327d9d45407e314014ed811eca46f00baf8165bf601348454be1af",
+      "rb_method_policy": "43949a81157d42afe6e16713ece534dcd99c3cafd03712e05cbb6b640ede117a",
+      "evidence_admission_v2": "4931d6e794f1056445f8621de5c39702466c82d3c39f9f050e00b9e397a45960",
+      "objective_registry": "193a65c7b5d39235ef29a8e29c72429e965490dfa8424dc216d169269ab7fac5"
+    },
+    "git_commit": "fb17c68",
+    "generated_at": "2026-06-22T14:22:52.581350+08:00",
+    "n_boot": 150
+  },
+  "datasets": [
+    {
+      "dataset": "lineA_LRS_0429CS",
+      "p_any_break": 1.0,
+      "breakpoint_median_K": 294.89500704062044,
+      "breakpoint_ci95_K": [
+        246.5332422382466,
+        297.8240105599476
+      ],
+      "practical_identifiability": "weak_or_wide_break"
+    },
+    {
+      "dataset": "lineA_LRS_0509CS",
+      "p_any_break": 1.0,
+      "breakpoint_median_K": 242.7902207470341,
+      "breakpoint_ci95_K": [
+        241.37525493762809,
+        244.10468651960048
+      ],
+      "practical_identifiability": "robust_empirical_transition"
+    },
+    {
+      "dataset": "lineA_LRS_6.12",
+      "p_any_break": 1.0,
+      "breakpoint_median_K": 239.2851115521322,
+      "breakpoint_ci95_K": [
+        237.3670551119705,
+        241.1500000943651
+      ],
+      "practical_identifiability": "robust_empirical_transition"
+    },
+    {
+      "dataset": "lineA_LRS_6.15_merged",
+      "p_any_break": 1.0,
+      "breakpoint_median_K": 240.0713146187041,
+      "breakpoint_ci95_K": [
+        238.86489642944244,
+        240.97862335925694
+      ],
+      "practical_identifiability": "robust_empirical_transition"
+    },
+    {
+      "dataset": "lineA_LRS_0615_s2",
+      "p_any_break": 1.0,
+      "breakpoint_median_K": 242.06309814538048,
+      "breakpoint_ci95_K": [
+        239.86232654499338,
+        245.38508049379476
+      ],
+      "practical_identifiability": "robust_empirical_transition"
+    }
+  ]
+}

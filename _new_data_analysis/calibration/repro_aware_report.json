@@ -1,0 +1,18 @@
+{
+  "all_repeats": {
+    "n_samples": 882,
+    "hit_rate": 0.18480725623582767,
+    "M0_conf_v1_physics_AUROC": 0.5229400069967661,
+    "M1_kk_only_AUROC_looDS": 0.30745667551217176,
+    "M2_plus_Rb_T_AUROC_looDS": 0.4283386093500686,
+    "M3_full_AUROC_looDS": 0.5232130515286227
+  },
+  "june_std": {
+    "n_samples": 456,
+    "hit_rate": 0.3815789473684211,
+    "M0_conf_v1_physics_AUROC": 0.5812953452351839,
+    "M1_kk_only_AUROC_looDS": 0.3760699437515285,
+    "M2_plus_Rb_T_AUROC_looDS": 0.5669275291432297,
+    "M3_full_AUROC_looDS": 0.5369487242194506
+  }
+}

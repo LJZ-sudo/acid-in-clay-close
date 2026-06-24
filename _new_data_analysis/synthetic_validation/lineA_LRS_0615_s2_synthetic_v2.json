@@ -1,0 +1,60 @@
+{
+  "dataset": "lineA_LRS_0615_s2",
+  "provenance": {
+    "analysis_version": "stage0-eis-v2.0.0",
+    "admission_policy_version": "evidence-policy-v2.0.0",
+    "objective_registry_version": "objective-registry-v2.0.0",
+    "rb_method_policy_version": "rb-method-v2.0.0",
+    "config_sha256": {
+      "stage0_v2_policy": "da45db8ed5327d9d45407e314014ed811eca46f00baf8165bf601348454be1af",
+      "rb_method_policy": "43949a81157d42afe6e16713ece534dcd99c3cafd03712e05cbb6b640ede117a",
+      "evidence_admission_v2": "4931d6e794f1056445f8621de5c39702466c82d3c39f9f050e00b9e397a45960",
+      "objective_registry": "193a65c7b5d39235ef29a8e29c72429e965490dfa8424dc216d169269ab7fac5"
+    },
+    "git_commit": "fb17c68",
+    "generated_at": "2026-06-22T14:30:06.559830+08:00",
+    "n_draws": 80
+  },
+  "n_points": 37,
+  "real_n_segments": 3,
+  "real_transition_temps_K": [
+    242.1648772150445,
+    191.29644056675437
+  ],
+  "smooth_null": {
+    "n_draws_ok": 80,
+    "false_positive_rate_break": 0.2375,
+    "false_breakpoint_median_K": 271.67138275030595,
+    "false_breakpoint_temps_K": [
+      286.2745702292812,
+      196.27519472031298,
+      239.96231990517964,
+      271.67138275030595,
+      187.4752969077685,
+      279.6155391171038,
+      190.26186215441567,
+      274.15,
+      253.14999999999998,
+      193.8029448267662,
+      291.7226651654943,
+      193.14999999999998,
+      292.131583922497,
+      275.75701988657966,
+      282.08073010323153,
+      199.14999999999995,
+      291.0333086238608,
+      283.0350841109658,
+      258.29729449521363
+    ],
+    "noise_sd_dex": 0.10558007755104135
+  },
+  "injected_break": {
+    "injected_break_x_invK": 4.199034222128911,
+    "injected_break_T_K": 238.14999999999998,
+    "delta_slope": 2.0,
+    "n_draws_ok": 80,
+    "detection_rate": 1.0,
+    "breakpoint_bias_invK_median": 0.20560304801516116
+  },
+  "interpretation": "real transition above a moderate FPR; report FPR alongside"
+}

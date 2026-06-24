@@ -1,0 +1,82 @@
+{
+  "success": true,
+  "best_model_type": "continuous_3",
+  "confidence": 0.9612,
+  "n_segments": 3,
+  "transition_temps_K": [
+    240.15578306482323,
+    223.150000122334
+  ],
+  "segments": [
+    {
+      "segment_id": 0,
+      "start_idx": 0,
+      "end_idx": 20,
+      "n_points": 20,
+      "slope": -0.4936898633436588,
+      "intercept": -2.257958831421038,
+      "Ea_kJ_per_mol": 4.104537523839179,
+      "Ea_eV": 0.042540680145506334,
+      "temp_range_K": [
+        241.15,
+        298.15
+      ],
+      "r_squared": null
+    },
+    {
+      "segment_id": 1,
+      "start_idx": 20,
+      "end_idx": 25,
+      "n_points": 5,
+      "slope": -8.623036240494594,
+      "intercept": 31.592345639309322,
+      "Ea_kJ_per_mol": 71.69192330347205,
+      "Ea_eV": 0.7430369829867032,
+      "temp_range_K": [
+        226.14999999999998,
+        238.14999999999998
+      ],
+      "r_squared": null
+    },
+    {
+      "segment_id": 2,
+      "start_idx": 25,
+      "end_idx": 34,
+      "n_points": 9,
+      "slope": -9.863443298209518,
+      "intercept": 37.15097013868156,
+      "Ea_kJ_per_mol": 82.00466758131392,
+      "Ea_eV": 0.8499214134975791,
+      "temp_range_K": [
+        199.14999999999995,
+        223.14999999999998
+      ],
+      "r_squared": null
+    }
+  ],
+  "model_probabilities": {
+    "single": 0.0,
+    "continuous_2": 0.0388,
+    "continuous_3": 0.9612
+  },
+  "model_details": {
+    "single": {
+      "aicc": 11.047670514932681,
+      "rss": 41.357746854800624,
+      "k": 2
+    },
+    "continuous_2": {
+      "aicc": -159.79940236122602,
+      "rss": 0.23469136540191982,
+      "k": 4
+    },
+    "continuous_3": {
+      "aicc": -166.2176187460833,
+      "rss": 0.16417252664754922,
+      "k": 6
+    }
+  },
+  "n_points_used": 34,
+  "has_transition": true,
+  "chow_test": null
+}
