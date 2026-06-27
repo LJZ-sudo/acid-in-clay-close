@@ -71,9 +71,22 @@ EIS 协议：CHI660E，1 MHz→0.1 Hz，Amplitude 0.005 V，Init E 0 V；逐温�
 
 ---
 
-## 5. 留痕（push 后回填）
+## 5. 留痕（已回填）
 
-- [ ] 本块冻结 commit hash：`__________`
-- [ ] push 时间（UTC+8，服务器盖戳）：`__________`（远端 `LJZ-sudo/acid-in-clay-close`，分支 `remediation/tier3`）
-- [ ] 三批谱文件 SHA256 清单 / `g1_transaction_manifest`：`__________`
-- [ ] 分析产物（bundle / aggregated / closure / `LINE_B_LOCAL_DIRECT`）落盘路径：`__________`
+- [x] 本块冻结 commit hash：`e2bcbe9`（仅含本预注册；分析产物在随后的 commit）
+- [x] push 时间（UTC+8，服务器盖戳）：`2026-06-27T21:11:21+08:00`（远端 `LJZ-sudo/acid-in-clay-close`，分支 `remediation/tier3`，`f215938..e2bcbe9`）
+- [x] 三批谱文件 SHA256 清单 / `g1_transaction_manifest`：`V1.0-qianduan-mainline/output/e1_floor/g1_transaction_manifest.json`（109 条原始谱：A33 / B34 / C42）
+- [x] 分析产物落盘路径：
+  - `V1.0-qianduan-mainline/output/e1_floor/LINE_B_LOCAL_DIRECT.json`（直接复现地板）
+  - `V1.0-qianduan-mainline/output/stage0_results/ATP-R0.186-N1.029-batch{A,B,C}-*/stage0_result_bundle.json` + `closure_report.json`
+  - `V1.0-qianduan-mainline/output/e1_floor/rb_act_delta_report.json` + `b_track_measurement_txn_evidence.json`（B 轨离线证据）
+  - 复算脚本：`_new_data_analysis/e1_floor_analysis.py`、`_new_data_analysis/e1_btrack_evidence.py`
+
+## 6. 本轮结果摘要（诚实，含 null）
+
+- **直接复现地板 `LINE_B_LOCAL_DIRECT`**（两两批次 `|Δlog10σ|`，3 片独立）：
+  - WARM（T≥−20 °C）：median 0.106 / p90 0.146 dex → **比代理地板 0.262 紧**。
+  - COLD（T<−20 °C）：median 0.158 / p90 **0.356** dex → **冷段 p90 超过代理 0.262（更松）**，重做 §11.3 对照时冷段判据更严（诚实限制，写入 Discussion）。
+- 三批相变温度一致（256/254/257 K 与 226/222/227 K）；RT σ：0.0219 / 0.0162 / 0.0176 S/cm。
+- **B 轨（离线，R0→R1）**：measurement_txn 准入语义符合预期（clean→进 BO、blind_retry=0；坏谱/样品错配→全 REJECT）；
+  Rb-ACT R1 双跑 92 配对点 `|Δlog10 Rb|` median=p90=0.0000 dex、**0 未解释翻转**，弃权 17/109（增量价值在弃权+不确定度）；**legacy 数值链零改动**。

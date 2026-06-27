@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "sample_id": "ATP-R0.186-N1.029-batchC-0626",
+    "run_id": null,
+    "generated_at": "2026-06-27T13:17:13.785617+00:00",
+    "schema_version": "0.1.0",
+    "llm_used": false,
+    "llm_provider": null,
+    "llm_model": null,
+    "prompt_version": "0.2.0",
+    "prompt_sha256": "d039c1145ec970112a465b5a1983cf01",
+    "seed": null,
+    "input_summary_sha256": "3ae48ebc3218dd8d213a7186f563ea07",
+    "fallback_reason": "use_llm=False"
+  },
+  "identity": {
+    "sample_id": "ATP-R0.186-N1.029-batchC-0626",
+    "material_system": "acid_in_clay",
+    "R": 0.186,
+    "N": 1.029,
+    "acid_type": "H3PO4",
+    "clay_type": "sepiolite",
+    "thickness_cm": 0.0564,
+    "area_cm2": 1.96,
+    "user_prep_text_sha256": null,
+    "user_prep_summary": null
+  },
+  "performance_card": {
+    "sigma_RT_S_per_cm": 0.017570020651735928,
+    "sigma_max_S_per_cm": 0.017570020651735928,
+    "T_at_sigma_max_C": 19.0,
+    "T_min_measured_C": -80.0,
+    "sigma_at_T_min_S_per_cm": 2.871807405596969e-6,
+    "transport_model": "continuous_3",
+    "n_segments": 3,
+    "transition_temps_C": [
+      -46.395702262783544,
+      -15.729939356060697
+    ],
+    "segments": [
+      {
+        "idx": 0,
+        "T_low_C": -15.729939356060697,
+        "T_high_C": 19.0,
+        "Ea_eV": 0.11409825502249189,
+        "Ea_kJ_per_mol": 11.008808030535254,
+        "R2": null,
+        "n_points": 12
+      },
+      {
+        "idx": 1,
+        "T_low_C": -46.395702262783544,
+        "T_high_C": -15.729939356060697,
+        "Ea_eV": 0.24860674650513662,
+        "Ea_kJ_per_mol": 23.986904504643647,
+        "R2": null,
+        "n_points": 10
+      },
+      {
+        "idx": 2,
+        "T_low_C": -80.0,
+        "T_high_C": -46.395702262783544,
+        "Ea_eV": 0.7212639925921037,
+        "Ea_kJ_per_mol": 69.59139587383373,
+        "R2": null,
+        "n_points": 20
+      }
+    ],
+    "arrhenius_confidence": 0.9147,
+    "highlight_zh": ""
+  },
+  "quality_card": {
+    "n_eis_points": 42,
+    "n_eis_ok": 42,
+    "n_eis_rejected": 0,
+    "KK_pass_rate": 0.0,
+    "rb_confidence_p25": 0.9124915536563214,
+    "rb_confidence_p50": 0.95,
+    "rb_confidence_p75": 0.95,
+    "qc_distribution": {
+      "A": 31,
+      "B": 11,
+      "C": 0,
+      "D": 0
+    },
+    "nyquist_morphology_auto": "tail_dominant",
+    "drt_peaks": [],
+    "verdict_zh": ""
+  },
+  "phase_transitions": [
+    {
+      "T_C": -15.73,
+      "type_zh": "不确定",
+      "type_code": "uncertain",
+      "confidence": "medium",
+      "note_zh": ""
+    },
+    {
+      "T_C": -46.4,
+      "type_zh": "不确定",
+      "type_code": "uncertain",
+      "confidence": "high",
+      "note_zh": ""
+    }
+  ],
+  "mechanism_note": {
+    "primary_zh": "（未启用 LLM 或 LLM 不可用，按确定性事实呈现）",
+    "supporting_segment_ids": [],
+    "caveat_zh": "此报告未经 LLM 复述，机理段留空"
+  },
+  "risks_warnings": [
+    {
+      "code": "KK_WARN_HIGH",
+      "severity": "warn",
+      "human_zh": "KK 警告比例偏高，建议复核高频部分"
+    },
+    {
+      "code": "USER_PREP_MISSING",
+      "severity": "info",
+      "human_zh": "未提供制备表单，仅基于配方推断身份"
+    }
+  ],
+  "campaign_comparison": {
+    "rank_by_sigma_RT": null,
+    "delta_vs_best_pct": -19.94,
+    "one_liner_zh": "室温 σ 比当前最佳低 19.9%"
+  },
+  "comprehensive_analysis_zh": "",
+  "do_not_overclaim": [
+    "不要预测或推荐下一步实验参数（R/N/温度等）",
+    "不要引用未在输入中给出的样品 / 文献 / 邻居样品",
+    "不要修改任何数字（σ、Ea、相变 T、KK pass rate、置信度）",
+    "不要使用'显著突破/远超/世界领先'之类的夸张措辞",
+    "comprehensive_analysis_zh 里的每一条因果话术必须能落到具体数字或段 idx"
+  ]
+}

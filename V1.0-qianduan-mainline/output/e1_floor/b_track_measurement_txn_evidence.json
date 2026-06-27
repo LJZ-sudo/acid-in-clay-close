@@ -1,0 +1,113 @@
+{
+  "note": "U1-U6 admission semantics on real bundles; clean enters BO, qa-fail & sample-mismatch fully REJECT.",
+  "rows": [
+    {
+      "batch": "A",
+      "sample_id": "ATP-R0.186-N1.029-batchA-0624",
+      "clean": {
+        "physical_occurred": "confirmed",
+        "entered_bo": true,
+        "blind_retry_count": 0,
+        "evidence_id_present": true,
+        "admissions": {
+          "U1": "ADMIT",
+          "U2": "ADMIT",
+          "U3": "CONDITIONAL",
+          "U4": "CONDITIONAL",
+          "U5": "ADMIT",
+          "U6": "REJECT"
+        }
+      },
+      "degraded_qa_fail": {
+        "entered_bo": false,
+        "all_reject": true,
+        "admissions": {
+          "U1": "REJECT",
+          "U2": "REJECT",
+          "U3": "REJECT",
+          "U4": "REJECT",
+          "U5": "REJECT",
+          "U6": "REJECT"
+        }
+      },
+      "sample_mismatch": {
+        "physical_occurred": "unknown",
+        "entered_bo": false,
+        "all_reject": true,
+        "blind_retry_count": 0
+      }
+    },
+    {
+      "batch": "B",
+      "sample_id": "ATP-R0.186-N1.029-batchB-0625",
+      "clean": {
+        "physical_occurred": "confirmed",
+        "entered_bo": true,
+        "blind_retry_count": 0,
+        "evidence_id_present": true,
+        "admissions": {
+          "U1": "ADMIT",
+          "U2": "ADMIT",
+          "U3": "CONDITIONAL",
+          "U4": "CONDITIONAL",
+          "U5": "ADMIT",
+          "U6": "REJECT"
+        }
+      },
+      "degraded_qa_fail": {
+        "entered_bo": false,
+        "all_reject": true,
+        "admissions": {
+          "U1": "REJECT",
+          "U2": "REJECT",
+          "U3": "REJECT",
+          "U4": "REJECT",
+          "U5": "REJECT",
+          "U6": "REJECT"
+        }
+      },
+      "sample_mismatch": {
+        "physical_occurred": "unknown",
+        "entered_bo": false,
+        "all_reject": true,
+        "blind_retry_count": 0
+      }
+    },
+    {
+      "batch": "C",
+      "sample_id": "ATP-R0.186-N1.029-batchC-0626",
+      "clean": {
+        "physical_occurred": "confirmed",
+        "entered_bo": true,
+        "blind_retry_count": 0,
+        "evidence_id_present": true,
+        "admissions": {
+          "U1": "ADMIT",
+          "U2": "ADMIT",
+          "U3": "CONDITIONAL",
+          "U4": "CONDITIONAL",
+          "U5": "ADMIT",
+          "U6": "REJECT"
+        }
+      },
+      "degraded_qa_fail": {
+        "entered_bo": false,
+        "all_reject": true,
+        "admissions": {
+          "U1": "REJECT",
+          "U2": "REJECT",
+          "U3": "REJECT",
+          "U4": "REJECT",
+          "U5": "REJECT",
+          "U6": "REJECT"
+        }
+      },
+      "sample_mismatch": {
+        "physical_occurred": "unknown",
+        "entered_bo": false,
+        "all_reject": true,
+        "blind_retry_count": 0
+      }
+    }
+  ]
+}

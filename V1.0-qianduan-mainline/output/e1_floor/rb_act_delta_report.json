@@ -1,0 +1,805 @@
+{
+  "gate": "R1 (online/offline double-run; legacy values STILL adopted; numbers unchanged)",
+  "policy": "Rb-ACT observe-only; legacy rb_fitting untouched.",
+  "n_paired_points": 92,
+  "delta_log10_rb": {
+    "median": 0.0,
+    "p90": 0.0,
+    "max": 0.0
+  },
+  "flip_threshold_dex": 0.3,
+  "n_unexplained_flips": 0,
+  "unexplained_flips": [],
+  "per_batch": [
+    {
+      "batch": "A",
+      "n_spectra": 33,
+      "n_report": 28,
+      "n_conditional": 1,
+      "n_abstain": 4,
+      "items": [
+        {
+          "T_C": -12.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 2.734847889184456,
+          "rbact_rb_ohm": 2.734847889184456,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -15.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 2.9352576767436322,
+          "rbact_rb_ohm": 2.9352576767436322,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -18.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 3.1996682380671775,
+          "rbact_rb_ohm": 3.1996682380671775,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -21.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 3.577613603134686,
+          "rbact_rb_ohm": 3.577613603134686,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -24.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 3.943642794708933,
+          "rbact_rb_ohm": 3.943642794708933,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -27.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 4.4740317240583725,
+          "rbact_rb_ohm": 4.4740317240583725,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -3.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 2.164216587233696,
+          "rbact_rb_ohm": 2.164216587233696,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -30.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 5.079514676646006,
+          "rbact_rb_ohm": 5.0795146766460055,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -33.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 5.82374409916794,
+          "rbact_rb_ohm": 5.823744099167939,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -36.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 6.85981197910879,
+          "rbact_rb_ohm": 6.859811979108789,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -39.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 8.105245808200985,
+          "rbact_rb_ohm": 8.105245808200985,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -42.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 9.600705108186483,
+          "rbact_rb_ohm": 9.600705108186483,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -45.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 11.966490577695398,
+          "rbact_rb_ohm": 11.9664905776954,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -48.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 14.705756967110219,
+          "rbact_rb_ohm": 14.705756967110215,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -51.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 20.324175511494513,
+          "rbact_rb_ohm": 20.324175511494516,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -54.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 36.68518204542985,
+          "rbact_rb_ohm": 36.68518204542985,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -57.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 59.73443105486206,
+          "rbact_rb_ohm": 59.73443105486204,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -6.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 2.2956066449124886,
+          "rbact_rb_ohm": 2.2956066449124886,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -60.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 92.20959953434226,
+          "rbact_rb_ohm": 92.20959953434225,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -63.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 143.86300776313414,
+          "rbact_rb_ohm": 143.86300776313408,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -66.0,
+          "decision": "ABSTAIN",
+          "legacy_rb_ohm": 231.6,
+          "rbact_rb_ohm": 231.59999999999997,
+          "abs_dlog10_rb": null
+        },
+        {
+          "T_C": -69.0,
+          "decision": "ABSTAIN",
+          "legacy_rb_ohm": 383.9,
+          "rbact_rb_ohm": 383.9000000000001,
+          "abs_dlog10_rb": null
+        },
+        {
+          "T_C": -72.0,
+          "decision": "ABSTAIN",
+          "legacy_rb_ohm": 635.6,
+          "rbact_rb_ohm": 635.6,
+          "abs_dlog10_rb": null
+        },
+        {
+          "T_C": -75.0,
+          "decision": "ABSTAIN",
+          "legacy_rb_ohm": 1151.0,
+          "rbact_rb_ohm": 1150.9999999999995,
+          "abs_dlog10_rb": null
+        },
+        {
+          "T_C": -78.0,
+          "decision": "REPORT_CONDITIONAL",
+          "legacy_rb_ohm": 2544.0,
+          "rbact_rb_ohm": 2544.0000000000005,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -9.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 2.489044488244404,
+          "rbact_rb_ohm": 2.489044488244404,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": 0.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 2.049109471094711,
+          "rbact_rb_ohm": 2.049109471094711,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": 12.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 1.7169691754029104,
+          "rbact_rb_ohm": 1.7169691754029104,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": 15.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 1.6656597323012419,
+          "rbact_rb_ohm": 1.6656597323012419,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": 18.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 1.6552620740377544,
+          "rbact_rb_ohm": 1.6552620740377544,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": 3.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 1.9468739474987617,
+          "rbact_rb_ohm": 1.9468739474987617,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": 6.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 1.867918485237484,
+          "rbact_rb_ohm": 1.867918485237484,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": 9.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 1.7871432584269662,
+          "rbact_rb_ohm": 1.7871432584269662,
+          "abs_dlog10_rb": 0.0
+        }
+      ]
+    },
+    {
+      "batch": "B",
+      "n_spectra": 34,
+      "n_report": 27,
+      "n_conditional": 2,
+      "n_abstain": 5,
+      "items": [
+        {
+          "T_C": -11.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 3.255006244146113,
+          "rbact_rb_ohm": 3.255006244146113,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -14.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 3.697041104982853,
+          "rbact_rb_ohm": 3.697041104982853,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -17.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 4.0234102470930235,
+          "rbact_rb_ohm": 4.0234102470930235,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -2.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 2.730713606089439,
+          "rbact_rb_ohm": 2.730713606089439,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -20.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 4.528477207977208,
+          "rbact_rb_ohm": 4.528477207977208,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -23.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 5.023059683604986,
+          "rbact_rb_ohm": 5.023059683604986,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -26.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 5.734757649372433,
+          "rbact_rb_ohm": 5.734757649372433,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -29.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 6.515447603286246,
+          "rbact_rb_ohm": 6.515447603286245,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -32.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 7.690081909381546,
+          "rbact_rb_ohm": 7.690081909381546,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -35.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 8.946585554600173,
+          "rbact_rb_ohm": 8.946585554600173,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -38.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 10.692292124945006,
+          "rbact_rb_ohm": 10.692292124945006,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -41.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 13.01950409030376,
+          "rbact_rb_ohm": 13.019504090303757,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -44.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 15.978975440337384,
+          "rbact_rb_ohm": 15.978975440337384,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -47.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 20.054369585159513,
+          "rbact_rb_ohm": 20.05436958515951,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -5.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 2.8930088172313893,
+          "rbact_rb_ohm": 2.8930088172313893,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -50.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 26.184666080843584,
+          "rbact_rb_ohm": 26.184666080843588,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -53.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 36.055777082093606,
+          "rbact_rb_ohm": 36.055777082093606,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -56.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 60.48101449275362,
+          "rbact_rb_ohm": 60.48101449275362,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -59.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 109.40541603360444,
+          "rbact_rb_ohm": 109.40541603360445,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -62.0,
+          "decision": "ABSTAIN",
+          "legacy_rb_ohm": 188.4,
+          "rbact_rb_ohm": 188.40000000000006,
+          "abs_dlog10_rb": null
+        },
+        {
+          "T_C": -65.0,
+          "decision": "ABSTAIN",
+          "legacy_rb_ohm": 326.5,
+          "rbact_rb_ohm": 326.4999999999999,
+          "abs_dlog10_rb": null
+        },
+        {
+          "T_C": -68.0,
+          "decision": "ABSTAIN",
+          "legacy_rb_ohm": 548.8,
+          "rbact_rb_ohm": 548.8000000000001,
+          "abs_dlog10_rb": null
+        },
+        {
+          "T_C": -71.0,
+          "decision": "ABSTAIN",
+          "legacy_rb_ohm": 913.5,
+          "rbact_rb_ohm": 913.4999999999998,
+          "abs_dlog10_rb": null
+        },
+        {
+          "T_C": -74.0,
+          "decision": "ABSTAIN",
+          "legacy_rb_ohm": 1639.0,
+          "rbact_rb_ohm": 1638.9999999999995,
+          "abs_dlog10_rb": null
+        },
+        {
+          "T_C": -77.0,
+          "decision": "REPORT_CONDITIONAL",
+          "legacy_rb_ohm": 3526.0,
+          "rbact_rb_ohm": 3526.000000000001,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -8.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 3.094489546053871,
+          "rbact_rb_ohm": 3.094489546053871,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -80.0,
+          "decision": "REPORT_CONDITIONAL",
+          "legacy_rb_ohm": 8867.0,
+          "rbact_rb_ohm": 8866.999999999996,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": 1.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 2.581375897535416,
+          "rbact_rb_ohm": 2.581375897535416,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": 10.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 2.2335112423948504,
+          "rbact_rb_ohm": 2.2335112423948504,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": 13.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 2.151285617482636,
+          "rbact_rb_ohm": 2.151285617482636,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": 16.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 2.0926350589441314,
+          "rbact_rb_ohm": 2.0926350589441314,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": 19.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 2.0659453756984405,
+          "rbact_rb_ohm": 2.0659453756984405,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": 4.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 2.4226649367499187,
+          "rbact_rb_ohm": 2.4226649367499187,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": 7.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 2.3121557158538497,
+          "rbact_rb_ohm": 2.3121557158538497,
+          "abs_dlog10_rb": 0.0
+        }
+      ]
+    },
+    {
+      "batch": "C",
+      "n_spectra": 42,
+      "n_report": 31,
+      "n_conditional": 3,
+      "n_abstain": 8,
+      "items": [
+        {
+          "T_C": -11.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 2.653507462686567,
+          "rbact_rb_ohm": 2.653507462686567,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -14.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 2.955849406715476,
+          "rbact_rb_ohm": 2.955849406715476,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -17.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 3.193860599949584,
+          "rbact_rb_ohm": 3.193860599949584,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -2.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 2.152020233463035,
+          "rbact_rb_ohm": 2.152020233463035,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -20.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 3.570518815400519,
+          "rbact_rb_ohm": 3.570518815400519,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -23.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 3.968116861030126,
+          "rbact_rb_ohm": 3.968116861030126,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -26.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 4.4729375486497815,
+          "rbact_rb_ohm": 4.472937548649781,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -29.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 5.077580144424859,
+          "rbact_rb_ohm": 5.077580144424859,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -32.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 5.885277979608579,
+          "rbact_rb_ohm": 5.885277979608578,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -35.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 6.89445348637999,
+          "rbact_rb_ohm": 6.89445348637999,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -38.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 8.210471893172517,
+          "rbact_rb_ohm": 8.210471893172517,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -41.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 9.708599574769668,
+          "rbact_rb_ohm": 9.708599574769668,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -44.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 12.336583315134309,
+          "rbact_rb_ohm": 12.336583315134309,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -47.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 15.335845091868846,
+          "rbact_rb_ohm": 15.335845091868842,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -5.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 2.2876637848222865,
+          "rbact_rb_ohm": 2.2876637848222865,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -50.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 20.089711778809363,
+          "rbact_rb_ohm": 20.08971177880936,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -53.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 28.329214916584885,
+          "rbact_rb_ohm": 28.32921491658489,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -55.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 67.81305131559819,
+          "rbact_rb_ohm": 67.8130513155982,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -56.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 47.33728330102465,
+          "rbact_rb_ohm": 47.33728330102465,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -56.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 86.80155405405405,
+          "rbact_rb_ohm": 86.80155405405407,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -57.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 103.2740990990991,
+          "rbact_rb_ohm": 103.27409909909908,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -58.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 122.89255652173912,
+          "rbact_rb_ohm": 122.8925565217391,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -59.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 86.9813320246775,
+          "rbact_rb_ohm": 86.98133202467751,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -60.0,
+          "decision": "ABSTAIN",
+          "legacy_rb_ohm": 170.8,
+          "rbact_rb_ohm": 170.79999999999995,
+          "abs_dlog10_rb": null
+        },
+        {
+          "T_C": -62.0,
+          "decision": "ABSTAIN",
+          "legacy_rb_ohm": 162.7,
+          "rbact_rb_ohm": 162.7,
+          "abs_dlog10_rb": null
+        },
+        {
+          "T_C": -62.0,
+          "decision": "ABSTAIN",
+          "legacy_rb_ohm": 238.1,
+          "rbact_rb_ohm": 238.09999999999997,
+          "abs_dlog10_rb": null
+        },
+        {
+          "T_C": -63.0,
+          "decision": "ABSTAIN",
+          "legacy_rb_ohm": 304.8,
+          "rbact_rb_ohm": 304.7999999999999,
+          "abs_dlog10_rb": null
+        },
+        {
+          "T_C": -65.0,
+          "decision": "ABSTAIN",
+          "legacy_rb_ohm": 295.2,
+          "rbact_rb_ohm": 295.2,
+          "abs_dlog10_rb": null
+        },
+        {
+          "T_C": -65.0,
+          "decision": "ABSTAIN",
+          "legacy_rb_ohm": 442.6,
+          "rbact_rb_ohm": 442.60000000000014,
+          "abs_dlog10_rb": null
+        },
+        {
+          "T_C": -68.0,
+          "decision": "ABSTAIN",
+          "legacy_rb_ohm": 570.1,
+          "rbact_rb_ohm": 570.1000000000003,
+          "abs_dlog10_rb": null
+        },
+        {
+          "T_C": -71.0,
+          "decision": "ABSTAIN",
+          "legacy_rb_ohm": 1001.0,
+          "rbact_rb_ohm": 1001.0000000000003,
+          "abs_dlog10_rb": null
+        },
+        {
+          "T_C": -74.0,
+          "decision": "REPORT_CONDITIONAL",
+          "legacy_rb_ohm": 1749.0,
+          "rbact_rb_ohm": 1749.0000000000007,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -77.0,
+          "decision": "REPORT_CONDITIONAL",
+          "legacy_rb_ohm": 3893.0,
+          "rbact_rb_ohm": 3893.000000000001,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -8.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 2.4530198356164385,
+          "rbact_rb_ohm": 2.4530198356164385,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": -80.0,
+          "decision": "REPORT_CONDITIONAL",
+          "legacy_rb_ohm": 10020.0,
+          "rbact_rb_ohm": 10020.000000000005,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": 1.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 2.0432147558018707,
+          "rbact_rb_ohm": 2.0432147558018707,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": 10.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 1.7843555425023077,
+          "rbact_rb_ohm": 1.7843555425023077,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": 13.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 1.7180460681741478,
+          "rbact_rb_ohm": 1.7180460681741478,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": 16.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 1.6683077836187892,
+          "rbact_rb_ohm": 1.6683077836187892,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": 19.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 1.6377618885290608,
+          "rbact_rb_ohm": 1.6377618885290608,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": 4.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 1.9340752,
+          "rbact_rb_ohm": 1.9340752,
+          "abs_dlog10_rb": 0.0
+        },
+        {
+          "T_C": 7.0,
+          "decision": "REPORT",
+          "legacy_rb_ohm": 1.8535413801472373,
+          "rbact_rb_ohm": 1.8535413801472373,
+          "abs_dlog10_rb": 0.0
+        }
+      ]
+    }
+  ]
+}
