@@ -30,3 +30,8 @@ from .history_bridge import (  # noqa: F401
     materialize_committed_view, view_to_training_arrays, load_trials, evidence_id_for_trial,
 )
 from .bo_retrain_bridge import CommittedMemoryView, rebuild_and_resuggest  # noqa: F401
+# ESAS-OS 2.0（§10.2）：R²-Memory 角色隔离/可撤销/多轮记忆（旁挂，不替换证据图）
+from .agent_memory import (  # noqa: F401
+    AgentMemory, MemoryItem, RoundState, Role, Use, UsageViolation,
+)
+from .agent_memory import bench as agent_memory_bench  # noqa: F401

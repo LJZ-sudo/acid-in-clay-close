@@ -22,6 +22,10 @@ from .witness import (  # noqa: F401
     infer_physical_effect, witnesses_from_instrument,
 )
 from .transaction import EvidenceTransaction, ClaimRequest, TransactionResult  # noqa: F401
+# ESAS-OS 2.0（§10.1）：测量提交路径事务化（离线可测 helper）
+from .measurement_txn import (  # noqa: F401
+    ReplayInstrument, build_measurement_signals_from_bundle, submit_measurement_offline,
+)
 # WP4 Cutover：自主硬件命令的唯一受控入口
 from .action_gate import (  # noqa: F401
     ActionGate, ActionProposal, GateDecision, resolve_mode,

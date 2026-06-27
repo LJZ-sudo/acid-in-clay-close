@@ -28,7 +28,7 @@
 | 轴 | A 轨 | B 轨 | 依据 |
 |---|---|---|---|
 | 科学问题定位 | **4.5** | **4** | "复现地板↔可辨识天花板↔主张封顶"是真方法学贡献,不是材料数字 |
-| 真实基础 | **3.5** | **2.5** | A:多批真实 EIS,但线 B 无同配方重复;B:208 测试真,但仍是软件层(未经真机故障对照) |
+| 真实基础 | **3.5** | **2.5** | A:多批真实 EIS,但线 B 无同配方重复;B:410 测试真,但仍是软件层(未经真机故障对照) |
 | 技术稳健性 | **4** | **3** | A:M0–M2 分析门已落地;B:跨层失效闭环互联 + 端到端演示,但无真机对照 |
 | 原创性 | **3.5** | **4(潜力)** | A:组合视角新;B:三提交/反事实失效/双账户在 EIS 场景有独特价值 |
 | 主张诚信 | **4.5** | **4** | C0–C5 封顶 C4、负结果不藏;B 已诚实标"软件层、未经真机" |
@@ -92,6 +92,10 @@ A 轨给出前两项(观测与统计边界),B 轨给出后两项(执行与治理
 | PC-Skills(`scientific_skills`) | **R2→R3** | R4 | 6 真实 Skill + 三层证书(由检查产生,小样本 provisional)+ 漂移/撤销;待真机成功率 + canary 灰度 |
 | 三者端到端集成 | **R3** | R4 | 跨层失效闭环互联 + 端到端撤销演示(B0/B2/B4/B5 真实臂);待 enforce 生产启用 |
 
+> **ESAS-OS 2.0(本轮纯代码升级已落地软件 v1,见 `OPTIMIZATION_EXECUTION_PLAN §10`)**:在上表底座上叠三个 **v2 插件**——
+> SciTX→**C³-Harness**(`scientific_convergence/`,收敛动作组合)、E-Mem→**R²-Memory**(`scientific_memory/agent_memory/`,角色隔离/可撤销/多轮记忆)、PC-Skills→**Rb-ACT**(`stage0_measurement/rb_act/`,主动/标定/可弃权的 Rb 动态 Skill)+ 闭合测量提交路径(`scientific_harness/measurement_txn.py`)。
+> 四者**软件 v1 + 单测均已落地并跑绿**(本轮 +30 测试,合计 410);它们**提升保真度**(C_M 真正消费 EIS 不确定度、记忆多轮多角色化、收敛由信息价值驱动),但**默认 shadow/只记录、legacy 永不覆盖**;**本身不改变档次**——档次仍由真机故障对照决定(§4.4)。Rb-ACT 是唯一会改写数值链者,走五级接入门,本轮仅到 R0(离线 shadow + 合成验证)。
+
 ### 4.2 B 轨的核心命题：取得"系统权威性"（命令路径已达成）
 
 GPT 第三轮评审最尖锐的一刀是:**曾有一条绕过治理内核的物理执行路径**
@@ -115,16 +119,25 @@ GPT 第三轮评审最尖锐的一刀是:**曾有一条绕过治理内核的物�
 | **PC-Skills** | `scientific_skills/`:6 真实 Skill + **三层证书(Wilson 下界,小样本 provisional)** + 漂移/撤销 + 双账户 | 证书由检查产生不可手填;自信≠执行权 |
 | **端到端演示** | `scientific_e2e/`:故障→拦截→撤销→BO 重建→下一动作变;B0/B2/B4/B5 真实臂 + 场景族 | governed 严格优于 ungoverned;跨场景不变 |
 
-> **测试**:全量 `tests/+backend_api/tests/` = **208 passed, 0 failed**;botorch 真实后端已激活;跨层闭环(Skill 撤销→E-Mem 失效→BO 重建→**GP 重训**)+ 端到端撤销演示(governed 严格优于 ungoverned)已互联并测试覆盖。
+> **测试**:全量 `tests/+backend_api/tests/+stage3_mechanism/tests/` = **410 passed, 0 failed**(本轮 ESAS-OS 2.0 v2 插件 +30:测量事务化 9 / R²-Memory 11 / C³-Harness 10);botorch 真实后端已激活;跨层闭环(Skill 撤销→E-Mem 失效→BO 重建→**GP 重训**)+ 端到端撤销演示(governed 严格优于 ungoverned)已互联并测试覆盖。
 
 ### 4.4 距 Tier S 还差什么（必须做,不能用"软件通过"预支）
 
-软件层的权威语义、跨层失效闭环与端到端演示均已落地(命令旁路清零、C_P 多见证、C_M 用途/C_E 主张分级、三层证书、失效→BO→GP 重训、压缩证书、端到端撤销演示 governed 严格优于 ungoverned)。**剩余的是真机证据**:
-1. **真机故障对照(需 G1)**:把软件演示在真机重放——shadow 记录 + 安全故障注入(ACK 丢失/文件延迟/校准失效/样品 ID 错配),报"挡住了哪些错误"。
-2. **enforce 生产灰度**:命令路径已可 enforce;测量提交路径接 `EvidenceTransaction`,真机 canary→enforce。
-3. **统计证书去 provisional**:小样本下证书为窄包络/provisional,需真机成功率累积。
+软件层的权威语义、跨层失效闭环与端到端演示均已落地(命令旁路清零、C_P 多见证、C_M 用途/C_E 主张分级、三层证书、失效→BO→GP 重训、压缩证书、端到端撤销演示 governed 严格优于 ungoverned)。
 
-> 详见 `OPTIMIZATION_EXECUTION_PLAN §9` 遗留项统一排序。**结论不变:B 轨距 Tier S 投稿仍差真机证据,软件 Demo/测试通过不预支档次。**
+**A. 本轮纯代码深化已落地(提升保真度,不预支档次)** — ESAS-OS 2.0 v2 插件(`OPTIMIZATION_EXECUTION_PLAN §10`):
+- ✅ 测量提交路径接 `EvidenceTransaction`(`measurement_txn.py` 离线 helper),使测量证据也走多见证→C_P→C_M→C_E;同 bundle 改谱质量 → U1–U6 准入随之变,¬C_P⇒全拒、blind_retry=0;
+- ✅ **Rb-ACT**(`rb_act/`)让 C_M 真正消费 Rb 不确定度(方法分歧/谱质量)、能弃权(ABSTAIN)、能主动建议补测;合成谱(阻塞电极/半圆)REPORT 点估 <0.05 dex、非弃权用例 95% 区间覆盖真值;**仅 R0 离线 shadow,legacy `rb_fitting` 逐位未改**;
+- ✅ **R²-Memory**(`agent_memory/`)补多轮 RoundState/多角色投影/来源域守卫(S8 作训练标签**拦截率 100%**)+ 写入门(stale 拒)+ 压缩决策保持;**C³-Harness**(`scientific_convergence/`)把收敛升级为信息价值驱动的动作组合,**C³ 停 ⊆ legacy 停**(永不更早停),shadow 比 legacy 更少错误提前停止。
+这些**提高系统保真度与可投性**,均默认 shadow / 旁挂、legacy 永不覆盖。
+
+**B. 仍只能靠真机取得(决定档次的硬证据,保留给 G1)**:
+1. **真机故障对照(需 G1)**:把软件演示在真机重放——shadow 记录 + 安全故障注入(ACK 丢失/文件延迟/校准失效/样品 ID 错配),报"挡住了哪些错误"。
+2. **enforce 生产灰度**:命令路径已可 enforce;测量提交路径在真机 canary→enforce。
+3. **统计证书去 provisional**:小样本下证书为窄包络/provisional,需真机成功率累积。
+4. **Rb-ACT R1→R4 解锁**:在线双跑→审计接入→噪声接入→正式接入,逐级需真机覆盖率/校准与预注册。
+
+> **结论不变:B 轨距 Tier S 投稿仍差真机证据;v2 插件是纯代码保真度增益,软件 Demo/测试/v2 通过都不预支档次。**
 
 ---
 
@@ -152,7 +165,7 @@ GPT 第三轮评审最尖锐的一刀是:**曾有一条绕过治理内核的物�
 
 **A 轨**:① 线 B 地板仍是代理(G1 前);② 复现感知是负结果(单曲线 QC 测不准复现);③ 闭环轨迹短(不声称收敛);④ 材料类不新(新意全在转变+治理+边界);⑤ 机理被自身可辨识性封顶 C4。
 
-**B 轨**:① 全程软件层(无真机故障对照);② enforce 非运行默认(shadow 保行为);③ 基线 B0/B5 真实运行、B2/B4 亦真实臂(已去投影);④ 统计证书成功率仍为合成历史(真机前 provisional)。
+**B 轨**:① 全程软件层(无真机故障对照);② enforce 非运行默认(shadow 保行为);③ 基线 B0/B5 真实运行、B2/B4 亦真实臂(已去投影);④ 统计证书成功率仍为合成历史(真机前 provisional);⑤ **Rb-ACT 会改写 Rb→σ→断点→BO 数值链**——风险已由 **`*_v2`+delta(legacy 永不覆盖)+ 五级接入门(本轮已落地 R0 离线 shadow + 合成验证,R1–R4 保留给 G1)+ 合成谱覆盖率验证 + 预注册** 控制(见 §10.3/§10.4);C³(`scientific_convergence`)/R²(`agent_memory`)为只读 shadow/旁挂层,对既有数值结论风险低(已单测验证 C³ 停 ⊆ legacy 停、R² 不改 trial DB/σ)。
 
 **P0(WP0,2026-06-23 完成)**:
 1. ✅ 13/15 数据集口径已澄清 — `configs/dataset_registry.yaml`(15=13 lineA[7LRS+4starch+2CHITO]+2 lineB;13 出转变、2 CHITO 负类;扣 `build_regularity` 实跑)。
@@ -167,6 +180,7 @@ GPT 第三轮评审最尖锐的一刀是:**曾有一条绕过治理内核的物�
 
 > **A 轨(证据治理案例)做完 G1 + 写作 + 措辞收口 → 稳投 Tier B;B 轨(Agent 方法学)
 > 经 WP0–WP5 已取得"命令路径系统权威性"(自主旁路清零)+ 跨层失效闭环(撤销→失效→BO 重建→GP 重训)+ 端到端撤销演示,
-> 208 测试全覆盖;距 Tier S 投稿仍差"真机故障对照(需 G1,软件替代不了)+ enforce 生产灰度",
+> 并于本轮叠加 ESAS-OS 2.0 三个 v2 插件(测量事务化 / Rb-ACT R0 / R²-Memory / C³-Harness,纯代码软件 v1),
+> 410 测试全覆盖;距 Tier S 投稿仍差"真机故障对照(需 G1,软件替代不了)+ enforce 生产灰度 + Rb-ACT R1–R4 解锁",
 > 这是必要条件,不能用"软件 Demo/测试通过"预支。两轨都必须做、并行推进、持续深化——
 > 缺任何一轨,"受限观测下自主科学能声称什么"这条主线都不完整。**

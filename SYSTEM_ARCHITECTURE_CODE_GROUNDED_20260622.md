@@ -111,9 +111,10 @@
   审计: scripts/audit_mainline.py(只读) 扫残留绝对路径 + schema/泄漏正则
 ```
 
-## B 轨 Agent 方法学创新（WP0-WP5 已落地,Tier S 目标）  (stage1_optimization/scientific_*/)
+## B 轨 Agent 方法学创新（WP0-WP5 + ESAS-OS 2.0 v2 已落地,Tier S 目标）  (stage1_optimization/scientific_*/ + stage0_measurement/rb_act/)
 
 > 与冻结闭环互补;**软件层,未经真机故障对照,不擅自计入档次**。
+> ESAS-OS 2.0 v2 插件叠在三件套底座上(C³-Harness/R²-Memory/Rb-ACT + 测量路径事务化),默认 shadow/旁挂、legacy 永不覆盖。
 
 ```text
 -- SciTX 三重提交 Harness  scientific_harness/
@@ -146,7 +147,31 @@
    认证 Skill->SciTX 事务(含故障点)->无效不进 BO->撤销 Skill->E-Mem 失效->BO 视图重建->best E1->E3
    governed 严格优于 ungoverned(无效准入/BO 污染/错误最优存活 全 0 vs 基线 1);真实 B0/B2/B4/B5 臂 + 场景族
    ro_crate.py: RO-Crate 复现包
-验证: 全量 tests/+backend_api/tests/ = **208 passed**;硬件写路径审计 autonomous_bypass=0
+== ESAS-OS 2.0 v2 插件(本轮纯代码软件 v1;默认 shadow/旁挂,legacy 永不覆盖)==
+-- 测量路径事务化(P0)  scientific_harness/measurement_txn.py
+   build_measurement_signals_from_bundle(Stage0 bundle->U1-U6 信号,可注入 rb_act_signals)
+   ReplayInstrument(file_hashes=RAW_FILE 见证 + DONE 状态 + sample_id) -> EvidenceTransaction.process
+   submit_measurement_offline: 同 bundle 改谱质量->准入随之变;not C_P(样品错配/无文件)=>全拒;blind_retry=0
+-- Rb-ACT 动态分析 Skill(P1,R0)  stage0_measurement/rb_act/   (不改 rb_fitting.py)
+   features.py: 谱质量特征 + Savitzky-Golay 相对噪声 -> u_data_dex
+   skill.py: 在 fit_all_rb_methods 之上做对数域贝叶斯模型平均 -> RbPosterior(点估+95%区间+
+        u_method/u_data 分解)+ 决策 REPORT/REPORT_CONDITIONAL/ABSTAIN + 主动建议(扩频/加温点/重测)
+   synthetic.py: 阻塞电极/Randles 合成谱(已知 Rb);shadow.py: 双跑 legacy↔Rb-ACT delta + 合成覆盖率验证
+   其 σ 天然喂 admission.assess_use(rb_method_spread_dex)=> C_M 真正消费 EIS 质量;仅 R0,R1-R4 留 G1
+-- R²-Memory 角色隔离/可撤销/多轮记忆(P2)  scientific_memory/agent_memory/
+   models.py: MemoryItem(allowed/forbidden_uses,visible/writable_by,topic/polarity,claim_level)+ RoundState
+   store.py: L0 不可变事件层(version=事件数)+ 写门(无写权/用途自相矛盾=>DENY;stale=>REBASE;
+        同 topic 反极性=>双方 CONTESTED)+ assert_use 来源域守卫(S8 作 training_label 拦截率 100%)+
+        角色投影 read(role,use)+ invalidate 无泄漏 + verify_compression(决策保持,接 compression.py)
+   bench.py: ProtonAgentMemoryBench(跨域守卫/失效传播/多轮一致/压缩保持 4 任务)
+-- C³-Harness 收敛动作组合(P3,放最后)  scientific_convergence/
+   models.py: ConvergenceState(五类不确定度:性能差距/BO std/计量(Rb-ACT)/复现地板/主张稳定)+
+        Action(STOP/REPLICATE/REMEASURE/EXTEND_FREQ/ADD_TEMP/DIAGNOSE/NEW_FORMULATION/CONTINUE)
+   policy.py: U(a)=E[ΔHV]+λ·VoI-β·cost-γ·risk;已解决死区 + 硬预算门 + 单调约束(C³ 停⊆legacy 停)
+   harness.py: shadow 于 evaluate_termination 之上 -> ConvergenceCertificate(delta vs legacy verdict)
+   bench.py: 4 场景(真收敛/不可靠收敛/未收敛/预算耗尽)-> C³ 比 legacy 更少错误提前停止
+验证: 全量 tests/+backend_api/tests/+stage3_mechanism/tests/ = **410 passed**(本轮 v2 +30:
+   测量事务化 9 / R²-Memory 11 / C³-Harness 10;Rb-ACT R0 套件已并入);硬件写路径审计 autonomous_bypass=0
    (scripts/audit_hardware_write_paths.py --strict 过)
 -- 配套 v2 分析(M0-M2,只产 *_v2 旁路,绝不覆盖 legacy)  _new_data_analysis/stage0_v2/:
    versions · rb_method_invariance · arrhenius_robust · breakpoint_uncertainty ·
@@ -172,6 +197,9 @@
 | v2 gate | `run_all_checks.run_all` | 任一检查未过 | HOLD(科学声明恒 HOLD) |
 | T-CP(物理见证) | `scientific_harness/witness.py` | 仅软件见证 | 至多 possible(非 confirmed) |
 | T-gate(WP4) | `scientific_harness/action_gate.py` | 自主命令 + enforce + allowlist 外 | BLOCKED;shadow 则照常下发 |
+| T-RbACT(弃权) | `stage0_measurement/rb_act/skill.py` | u_total 过大 / 方法严重分歧 | ABSTAIN(不外报值)+ 主动建议;仅 R0 离线 |
+| T-Use(来源域守卫) | `scientific_memory/agent_memory/store.py::assert_use` | use ∈ forbidden_uses(S8 作 training_label) | UsageViolation(拦截率 100%) |
+| T-C³停(单调) | `scientific_convergence/policy.py::recommend` | legacy 未允许结束 / 不确定度未解决 | STOP 不居首(C³ 停⊆legacy 停);预算耗尽=硬停 |
 
 ## 确定性 vs LLM(诚实标注)
 
@@ -189,7 +217,8 @@
 | /api/pipeline 的 mutating 端点 | 已禁用(返 disabled,指向正确替代) |
 | evidence_jobs threshold_sweep / ablation | 已做实(M1-8,读 v2 真实产物;缺失返回生成命令而非伪造) |
 | three_pillars v2 工具 | 真实可运行,但 v2 科学声明恒 HOLD、CHI 自动化恒关 |
-| B 轨三包(`scientific_harness`/`scientific_memory`/`scientific_skills`,WP0-WP5) | 真实可运行(**208 测试全绿**;跨层失效闭环互联 + 端到端撤销演示;含 C_M(用途)/C_E(主张)/多见证 C_P/三层证书/失效->BO 闭到 GP 重训);**软件层,未经真机故障对照,不擅自计入档次** |
+| B 轨三包(`scientific_harness`/`scientific_memory`/`scientific_skills`,WP0-WP5) | 真实可运行(**410 测试全绿**;跨层失效闭环互联 + 端到端撤销演示;含 C_M(用途)/C_E(主张)/多见证 C_P/三层证书/失效->BO 闭到 GP 重训);**软件层,未经真机故障对照,不擅自计入档次** |
+| ESAS-OS 2.0 v2(`measurement_txn`/`rb_act`/`agent_memory`/`scientific_convergence`) | 真实可运行(本轮 +30 测试;测量离线事务化 / Rb-ACT R0 合成验证 / R²-Memory 跨域守卫 100% / C³ 停⊆legacy 停);**纯代码软件 v1,默认 shadow/旁挂,legacy 永不覆盖** |
 | `routers/agent.py` 自主硬件命令(`ActionGate`,WP4) | 已收口唯一入口;默认 shadow=行为不变,enforce 可拦截;审计 `autonomous_bypass=0`、`--strict` 过、fail-closed |
 | `run_online.py --harness_mode shadow\|canary\|enforce` | 真实可运行;shadow 对定温扫描有效;canary/enforce 诚实降级 shadow(属自主路径),待 G1 启用 |
 | `_new_data_analysis/stage0_v2/*` v2 分析 | 真实可运行,只产 `*_v2` 旁路产物,绝不覆盖 legacy 冻结结果 |

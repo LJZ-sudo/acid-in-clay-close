@@ -38,16 +38,17 @@
 | **P3 真实 MOBO+LLM 闭环 + 治理** | 中 | 闭环代码真、recipe SHA256 留痕、前瞻冻结;诚实 null;BO 比 random 快(4.1 vs 5.5);LLM=安全(R0.02→0.28);m6–m8 消融 governed 0% vs popularity 100% 干扰 | 轨迹短(10点/2前瞻轮) |
 | **可辨识性天花板(P2 理论)** | 中 | 三机理律 Arrhenius/Mott/VTF 在低温支 **ΔR²=0.006**(不可辨识);AICc 3 段=1.0(描述符可辨识)→ 主张封顶 C4 | 形式化理论完整度(若冲更高档) |
 
-**B 轨 Agent 方法学创新(冲 Tier S)** — 经 WP0–WP5(2026-06-24),三创新已从"并列软件包"推进到**跨层失效闭环互联 + 自主命令旁路清零 + 端到端撤销演示**;**但仍未经真机故障对照,不擅自计入当前档次**(诚实定位):
+**B 轨 Agent 方法学创新(冲 Tier S)** — 经 WP0–WP5(2026-06-24),三创新已从"并列软件包"推进到**跨层失效闭环互联 + 自主命令旁路清零 + 端到端撤销演示**;并于本轮叠加 **ESAS-OS 2.0 三个 v2 插件软件 v1**(提升保真度);**但全程仍未经真机故障对照,不擅自计入当前档次**(诚实定位):
 
-| 创新点 | 当前实现(WP0–WP5 后) | 成熟度 / 验收 |
+| 创新点 | 当前实现(WP0–WP5 + ESAS-OS 2.0 v2) | 成熟度 / 验收 |
 |---|---|---|
-| **SciTX 三重提交 Harness** | `scientific_harness/`:C_P 多见证推断(`witness.py`,仅软件见证⇒至多 possible)+ C_M(intended_use) 分级(`admission.py` U1–U6)+ C_E(claim_id) 绑定主张 + `EvidenceTransaction` 编排 + **`ActionGate` 自主命令唯一入口** | **R3→R4(命令路径)**:审计 `autonomous_bypass=0`、`--strict` 过;shadow/enforce 模式;待真机故障对照(G1) |
-| **E-Mem 证明携带记忆** | `scientific_memory/`:四值逻辑超图 + 失效传播 + 快照写门 + 根去重 + 失效→视图重建 + 压缩证书 + **`history_bridge`/`bo_retrain_bridge`(真实 history_db 物化 → GP 重训)** | **R3→R4(失效→BO 链)**:失效→重建→**GP 重训**已闭到底;待 L0/L3 层 |
-| **PC-Skills 可认证 Skills + 双账治理** | `scientific_skills/`:6 真实 EIS Skill + **三层证书(形式/统计/计量,Wilson 下界,小样本 provisional)**+ runtime/漂移/撤销 + 认知⊥执行双账户 | **R2→R3**:证书由检查产生(不可手填);待真机成功率 + canary 灰度 |
+| **SciTX 三重提交 Harness → C³-Harness** | `scientific_harness/`:C_P 多见证(`witness.py`,仅软件见证⇒至多 possible)+ C_M(`admission.py` U1–U6)+ C_E(claim_id)+ `EvidenceTransaction` + **`ActionGate` 唯一入口**;**v2:`measurement_txn.py`(测量路径离线事务化)+ `scientific_convergence/`(收敛动作组合 + 收敛证书,shadow)** | **R3→R4(命令路径)**:审计 `autonomous_bypass=0`;测量路径离线事务化已落地;C³ 停⊆legacy 停;待在线 enforce + 真机(G1) |
+| **E-Mem 证明携带记忆 → R²-Memory** | `scientific_memory/`:四值超图 + 失效传播 + 快照写门 + 根去重 + 失效→视图重建 + 压缩证书 + **`history_bridge`/`bo_retrain_bridge`(真实 history_db→GP 重训)**;**v2:`agent_memory/`(L0 事件层 / RoundState 多轮 / 角色投影 / 来源域守卫 / 决策回放 benchmark)** | **R3→R4(失效→BO 链)**:GP 重训已闭到底;L0/L3 + 多轮/多角色/跨域守卫**已落地软件 v1**;待真机重放 |
+| **PC-Skills 可认证 Skills → Rb-ACT** | `scientific_skills/`:6 真实 EIS Skill + **三层证书(形式/统计/计量,Wilson 下界,provisional)**+ runtime/漂移/撤销 + 双账户;**v2:`stage0_measurement/rb_act/`(Rb 后验/弃权/主动建议,R0 离线 shadow + 合成验证;legacy `rb_fitting` 逐位未改)** | **R2→R3**:证书由检查产生;Rb-ACT **仅 R0**;待真机成功率 + canary + Rb-ACT R1–R4 |
 
-> **跨层闭环已互联 + 端到端演示**:PC-Skills 撤销 → E-Mem 失效 → 重建 BO 视图 → **GP 在更小 committed 集上重训**(`history_bridge`+`bo_retrain_bridge`,真实 history_db);`scientific_e2e/demo_end_to_end.py` 跑通完整真链(best E1→E3,**governed 严格优于 ungoverned**,B0/B2/B4/B5 真实臂)。全量 **208 测试全绿**。
+> **跨层闭环已互联 + 端到端演示**:PC-Skills 撤销 → E-Mem 失效 → 重建 BO 视图 → **GP 在更小 committed 集上重训**(`history_bridge`+`bo_retrain_bridge`,真实 history_db);`scientific_e2e/demo_end_to_end.py` 跑通完整真链(best E1→E3,**governed 严格优于 ungoverned**,B0/B2/B4/B5 真实臂)。全量 **410 测试全绿**(本轮 ESAS-OS 2.0 v2 +30:测量事务化 9 / R²-Memory 11 / C³-Harness 10;Rb-ACT R0 套件已并入)。
 > 配套 M0–M2 v2 分析模块见 `_new_data_analysis/stage0_v2/`(版本冻结 / Rb 方法不变性 / 稳健 Arrhenius / 断点不确定度 / 合成 FPR / 可辨识性 / 复现地板方差 / 电导不确定度),均只产 `*_v2` 旁路、不覆盖 legacy。
+> **ESAS-OS 2.0 诚实边界**:四个 v2 插件均为**纯代码软件 v1**(合成谱/历史夹具/离线 replay/旁挂记忆),默认 **shadow/只记录、legacy 永不覆盖**;**提升保真度但不改档次**——档次仍由真机故障对照(G1)决定。
 
 ## 5. 关键真实结果(产物可复算)
 
@@ -69,7 +70,8 @@
 | `/api/pipeline` mutating 端点 | **已禁用**(返 disabled) |
 | evidence_jobs `threshold_sweep` / `ablation` | **已做实**(M1-8,读 v2 真实产物) |
 | three_pillars v2 工具 | 真实可运行,但 **v2 科学声明恒 HOLD、CHI 自动化恒关** |
-| B 轨三创新(`scientific_harness`/`memory`/`skills`,WP0–WP5) | 真实可运行(208 测试全绿;跨层失效闭环互联 + 端到端撤销演示;**自主命令旁路已清零**);**软件层,未经真机故障对照,不擅自计入档次** |
+| B 轨三创新(`scientific_harness`/`memory`/`skills`,WP0–WP5) | 真实可运行(410 测试全绿;跨层失效闭环互联 + 端到端撤销演示;**自主命令旁路已清零**);**软件层,未经真机故障对照,不擅自计入档次** |
+| ESAS-OS 2.0 v2(`measurement_txn`/`rb_act`/`agent_memory`/`scientific_convergence`) | 真实可运行(本轮 +30 测试;测量离线事务化 / Rb-ACT R0 合成验证 / R²-Memory 跨域守卫 100% / C³ 停⊆legacy 停);**纯代码软件 v1,默认 shadow/旁挂,legacy 永不覆盖,不预支档次** |
 | `routers/agent.py` 自主硬件命令 | **已收口经 `ActionGate` 唯一入口**(默认 shadow=行为不变,enforce 可拦截);审计 `autonomous_bypass=0` |
 | `run_online.py --harness_mode shadow\|canary\|enforce` | 真实可运行;shadow 对定温扫描有效,canary/enforce 诚实降级 shadow(属自主路径),待 G1 启用 |
 | `scripts/audit_hardware_write_paths.py` | 只读审计 + `--strict` CI 门(当前 0 旁路,exit 0) |
@@ -96,7 +98,7 @@
 - 全文(Abstract+Intro+Methods+Results 3.1–3.6+Discussion)+ 7 图 + 7 图注 + 消融/对照/诊断/定位**已齐**。
 - **A 轨唯一仍需"动手测"的硬门槛 = G1**:复现 **R=0.186/N=1.029 ×3**(测线 B 直接地板)+ 续测 **R=0.15/N=1.03、R=0.12/N=1.00**(解决"最优在边缘还是内部")。其余为出版工程(图矢量化/SI)+ `nature-polishing` 措辞。
 - **G1 时同步开 Harness shadow**:`run_online.py --harness_mode shadow` 在真机测量旁路记录三提交对账,为 Tier S 的 Harness 主张攒**真机证据**;只记录、fail-safe,不影响 G1。
-- **冲 Tier S 的 B 轨(WP0–WP5 已落地)**:三创新已"运行时语义 + 跨层失效闭环 + 自主命令旁路清零 + 端到端撤销演示";距 Tier S 投稿仍差 **真机故障对照(需 G1)+ enforce 生产灰度**(详见 `OPTIMIZATION_EXECUTION_PLAN §9` 遗留项排序),**不能用"软件 Demo/测试通过"预支 Tier S**。
+- **冲 Tier S 的 B 轨(WP0–WP5 + ESAS-OS 2.0 v2 已落地软件 v1)**:三创新已"运行时语义 + 跨层失效闭环 + 自主命令旁路清零 + 端到端撤销演示",并叠加测量路径事务化 / Rb-ACT R0 / R²-Memory / C³-Harness(纯代码,+30 测试);距 Tier S 投稿仍差 **真机故障对照(需 G1)+ enforce 生产灰度 + Rb-ACT R1–R4 解锁**(详见 `OPTIMIZATION_EXECUTION_PLAN §10`),**不能用"软件 Demo/测试通过"预支 Tier S**。
 
 ## 9. 复现入口(可移植)
 
@@ -113,6 +115,10 @@ python stage1_optimization/line_b_guardrail_run.py        # FROZEN_SEED=20260608
 # B 轨端到端撤销演示 / 硬件写路径审计
 python -m scientific_e2e.demo_end_to_end        # (在 stage1_optimization/ 下)
 python scripts/audit_hardware_write_paths.py --strict
+# ESAS-OS 2.0 v2 benchmark / 合成验证(纯代码,可离线复算)
+python -c "import sys;sys.path.insert(0,'stage1_optimization');from scientific_memory.agent_memory import bench;print(bench.run()['overall_ok'])"
+python -c "import sys;sys.path.insert(0,'stage1_optimization');from scientific_convergence import bench;print(bench.run()['ok'])"
+python -m pytest tests/test_rb_act.py tests/test_measurement_txn.py tests/test_r2_memory.py tests/test_c3_harness.py -q
 ```
 - 密钥:各 stage `.env` 填 `LLM_API_KEY`(OpenRouter);`key.txt` 第一行供分析脚本/出图。
 - 机器相关项全走环境变量(`STAGE0_CHI_DATA_DIR` 等),代码用 `Path(__file__)` 相对解析、可移植。
@@ -126,4 +132,4 @@ python scripts/audit_hardware_write_paths.py --strict
 
 ---
 
-> 一句话:**这是一个证据全真、负结果不藏、主张被代码护栏封顶的表征受限自主发现项目;当前真实结果已到 Tier B 投稿线,唯一仍需动手的硬门槛是 G1 那一组凹凸棒土同配方重复实验。B 轨三创新软件层(WP0–WP5)已成体系、208 测试全覆盖,但距 Tier S 仍差真机证据。**
+> 一句话:**这是一个证据全真、负结果不藏、主张被代码护栏封顶的表征受限自主发现项目;当前真实结果已到 Tier B 投稿线,唯一仍需动手的硬门槛是 G1 那一组凹凸棒土同配方重复实验。B 轨三创新软件层(WP0–WP5)+ ESAS-OS 2.0 三个 v2 插件(测量事务化 / Rb-ACT R0 / R²-Memory / C³-Harness)已成体系、410 测试全覆盖,但距 Tier S 仍差真机证据(故障对照 + enforce 灰度 + Rb-ACT R1–R4)。**
