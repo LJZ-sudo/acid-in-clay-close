@@ -21,7 +21,7 @@ def append_memory_event(
     payload: must be JSON-serializable.
     """
     root = project_root or Path(__file__).resolve().parent.parent.parent
-    path = log_path or (root / "output" / "agent_ops" / "agent_memory.jsonl")
+    path = log_path or (root.parent / "experiments" / "output" / "agent_ops" / "agent_memory.jsonl")
     path.parent.mkdir(parents=True, exist_ok=True)
     record = {
         "ts": datetime.now(timezone.utc).isoformat(),

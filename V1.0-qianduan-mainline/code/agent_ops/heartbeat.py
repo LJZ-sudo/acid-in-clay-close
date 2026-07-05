@@ -20,7 +20,7 @@ def write_heartbeat(
     Intended for cheap file-based monitoring (CI, humans, or a tiny watcher).
     """
     root = project_root or Path(__file__).resolve().parent.parent.parent
-    path = root / "output" / "agent_ops" / "agent_heartbeat.json"
+    path = root.parent / "experiments" / "output" / "agent_ops" / "agent_heartbeat.json"
     path.parent.mkdir(parents=True, exist_ok=True)
     body: Dict[str, Any] = {
         "ts": datetime.now(timezone.utc).isoformat(),

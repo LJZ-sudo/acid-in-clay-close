@@ -13,30 +13,40 @@
 
 `code/` 负责把历史 S8 数据与四阶段模块串起来。
 
-## 当前结构
+## 当前结构与逐文件状态（2026-07-05 核查）
+
+> 判定依据：grep 全仓调用方 + git 最后改动时间。**被 live 后端实际调用的只有
+> `process_ao_stage0.py`（及其 import 的 `process_new_materials_stage0.py`）**；
+> 其余 stage0/stage2 批处理脚本是历史 S8 一次性工具，保留作回放/复现。
 
 ```text
 code/
 ├── shared/
-│   ├── paths.py
-│   ├── manifest.py
-│   └── subprocess_utils.py
+│   ├── paths.py                      # ✅ 现役 · 全仓路径注册表（STAGE3_MECHANISM_DIR 等常量，被多处引用）
+│   ├── manifest.py                   # ✅ 现役 · runner manifest 写入工具
+│   └── subprocess_utils.py           # ✅ 现役 · 子进程编码/封装工具
+├── agent_ops/
+│   ├── heartbeat.py                  # ✅ 现役 · Agent 运维心跳
+│   └── memory.py                     # ✅ 现役 · Agent 运维记忆辅助
 ├── stage0_processing/
-│   ├── batch_process_s8_final.py
-│   ├── extract_s8_rn_from_excel.py
-│   ├── process_s8_with_dta.py
-│   └── run_stage0_wrapper.py
-├── stage1_tools/
-│   ├── initialize_cold_start.py
-│   ├── reset_optimization_history.py
-│   ├── run_offline_loop.py
-│   └── virtual_oracle.py
-└── stage2_preprocessing/
+│   ├── process_ao_stage0.py          # ✅ 现役 · ao（凹凸棒）样品 Stage0 处理，backend_api/samples 经 subprocess 调用
+│   ├── process_new_materials_stage0.py # ✅ 现役 · 新材料 Stage0 处理（被 process_ao_stage0 import；亦属 legacy 冻结管线）
+│   ├── run_stage0_wrapper.py         # ✅ 现役 · 调 stage0_measurement 的编码包装
+│   └── batch_process_s8_final.py     # 📦 历史一次性 · S8 全量批处理（回顾性数据已固化，保留可复跑）
+├── stage1_tools/                     # ▶️ 离线联调工具（不在 live 链路，联调/回放在用）
+│   ├── run_offline_loop.py           #    一键离线闭环（Stage1 + Virtual Oracle）
+│   ├── virtual_oracle.py             #    虚拟 oracle：recipe → 最近邻真实样品
+│   ├── initialize_cold_start.py      #    冷启动
+│   ├── reset_optimization_history.py #    交互式清史（危险操作，需输入 yes）
+│   └── _campaign_paths.py            #    campaign 路径辅助
+└── stage2_preprocessing/             # 📦 历史一次性 · S8 → Stage2 CSV 生成（s8_input.csv 已固化）
+    ├── run_full_pipeline.py
     ├── batch_extract_eis_features.py
     ├── convert_stage0_to_stage2.py
-    ├── extract_s8_eis_features.py
-    └── run_full_pipeline.py
+    └── extract_s8_eis_features.py
 ```
+
+注：下文历史章节中提到的 `extract_s8_rn_from_excel.py`、`process_s8_with_dta.py` 已不在当前目录（早前清理移除），相关运行说明仅作历史参考。
 
 ## Stage1 Replay
 

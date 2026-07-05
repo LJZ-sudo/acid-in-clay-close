@@ -28,6 +28,7 @@
 | `experiments/docs/REAL_MACHINE_INTEGRATION_PLAN_20260622.md` | ★ 真机联调方案（跨机迁移 + 硬件入口 + Harness shadow + 密钥） |
 | `INNOVATION_SKILLS_HARNESS_MEMORY_20260622.md` | 三大底层创新（SciTX/E-Mem/PC-Skills）设计说明 |
 | `experiments/docs/TIER_S_MANUSCRIPT_DRAFT_20260622.md` | Tier S 手稿草案（脊柱：M0–M2 + 三 Demo） |
+| `V1.0-qianduan-mainline/README.md` | ★ 主线目录索引：11 个子目录各有 README/结构文档（逐文件现役/遗留判定，2026-07-05） |
 | `experiments/prospective/README.md` | 前瞻实验纪律（“冻结 → push 盖时间戳 → 才开始测量”） |
 | `experiments/prospective/line_A_biopolymer_transfer/PREREGISTRATION.md` | 线 A（生物聚合物迁移）预注册 |
 | `experiments/prospective/line_B_mobo_closed_loop/PREREGISTRATION.md` | 线 B（真实 MOBO+LLM 闭环）预注册 + 官方 recipe |
