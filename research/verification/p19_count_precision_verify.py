@@ -88,7 +88,7 @@ def main():
     check("live_seed_adapter 单测可被 pytest collect(≥1)", live_n >= 1, f"collected={live_n}")
 
     # 快照写入 epistemic_out 供文档引用(可复核产物)
-    out = HERE.parent / "epistemic_out" / "test_count_snapshot.json"
+    out = HERE.parent / "results" / "epistemic_out" / "test_count_snapshot.json"
     out.parent.mkdir(exist_ok=True)
     import json
     snapshot = {

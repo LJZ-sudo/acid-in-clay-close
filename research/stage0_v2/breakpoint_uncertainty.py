@@ -151,7 +151,7 @@ def bootstrap_breakpoints(x: np.ndarray, y: np.ndarray, n_boot: int = 200,
 
 def run(datasets: Optional[List[str]] = None, n_boot: int = 200,
         out_subdir: str = "breakpoint_uncertainty") -> Dict[str, Any]:
-    out_dir = V.NDA_ROOT / out_subdir
+    out_dir = V.RESULTS_ROOT / out_subdir
     out_dir.mkdir(parents=True, exist_ok=True)
     names = datasets or KEY_DATASETS
     rows = []

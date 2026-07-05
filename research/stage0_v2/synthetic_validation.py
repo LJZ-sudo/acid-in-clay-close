@@ -169,7 +169,7 @@ def _interpret(null: Dict[str, Any], real: Dict[str, Any]) -> str:
 
 def run(datasets: Optional[List[str]] = None, n_draws: int = 100, seed: int = 20260622,
         out_subdir: str = "synthetic_validation") -> Dict[str, Any]:
-    out_dir = V.NDA_ROOT / out_subdir
+    out_dir = V.RESULTS_ROOT / out_subdir
     out_dir.mkdir(parents=True, exist_ok=True)
     names = datasets or KEY_DATASETS
     rows = []

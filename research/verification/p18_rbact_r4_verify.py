@@ -161,7 +161,7 @@ def main():
           f"prereg_id={sig_r4.get('rb_r4_prereg_id')}")
 
     # ---- 5. 落盘产物 ----
-    out = NDA / "epistemic_out" / "rb_act_r4_prereg.json"
+    out = NDA / "results" / "epistemic_out" / "rb_act_r4_prereg.json"
     RB.write_r4_prereg(out, contract, audit)
     reloaded = json.loads(out.read_text(encoding="utf-8"))
     check("rb_act_r4_prereg.json 落盘且可复载(含 contract+audit+admission_signals)",

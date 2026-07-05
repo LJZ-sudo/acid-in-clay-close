@@ -71,7 +71,7 @@ def main():
     print(f"真实谱 n={len(spectra)}  T∈[{spectra[-1]['T_C']:.1f},{spectra[0]['T_C']:.1f}]°C  "
           f"每谱频点≈{len(spectra[0]['f'])}")
 
-    out_dir = NDA / "epistemic_out"; out_dir.mkdir(exist_ok=True)
+    out_dir = NDA / "results" / "epistemic_out"; out_dir.mkdir(exist_ok=True)
 
     def bulk_resistance(fit):
         """从机制拟合提取'体相电阻'(对照 reverse_zero_crossing 实测 rb)。

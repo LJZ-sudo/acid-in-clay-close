@@ -172,7 +172,7 @@ def assess_dataset(ds_dir: Path) -> Dict[str, Any]:
 
 
 def run(kind: str = "lineA", out_subdir: str = "conductivity_uncertainty") -> Dict[str, Any]:
-    out_dir = V.NDA_ROOT / out_subdir
+    out_dir = V.RESULTS_ROOT / out_subdir
     out_dir.mkdir(parents=True, exist_ok=True)
     rows = []
     datasets = rl.discover_datasets(kind)

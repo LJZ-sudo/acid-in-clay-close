@@ -142,7 +142,7 @@ def prob_meaningful_difference(delta: float, floor_sd: float,
 
 
 def run(out_subdir: str = "repro_floor_v2") -> Dict[str, Any]:
-    out_dir = V.NDA_ROOT / out_subdir
+    out_dir = V.RESULTS_ROOT / out_subdir
     out_dir.mkdir(parents=True, exist_ok=True)
 
     allv = _collect(LRS_ALL)

@@ -155,7 +155,7 @@ def assess_dataset(name: str, n_draws: int = 300) -> Dict[str, Any]:
 
 def run(datasets: Optional[List[str]] = None, n_draws: int = 300,
         out_subdir: str = "identifiability_v2") -> Dict[str, Any]:
-    out_dir = V.NDA_ROOT / out_subdir
+    out_dir = V.RESULTS_ROOT / out_subdir
     out_dir.mkdir(parents=True, exist_ok=True)
     names = datasets or KEY_DATASETS
     rows = []

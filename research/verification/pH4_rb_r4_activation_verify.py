@@ -133,7 +133,7 @@ def main():
           f"gate={act['max_median_abs_delta_dex_gate']} bo_not_degraded={act['bo_not_degraded']}")
 
     # 6. 落盘复载
-    out = NDA / "epistemic_out" / "rb_act_r4_activation.json"
+    out = NDA / "results" / "epistemic_out" / "rb_act_r4_activation.json"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(act, ensure_ascii=False, indent=2), encoding="utf-8")
     reloaded = json.loads(out.read_text(encoding="utf-8"))

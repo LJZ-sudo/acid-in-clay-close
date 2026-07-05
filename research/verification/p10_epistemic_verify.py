@@ -81,7 +81,7 @@ def main():
     print(f"真实 live:n={len(T)}  T∈[{T.min()-273.15:.1f},{T.max()-273.15:.1f}]°C  "
           f"lnσ∈[{y.min():.2f},{y.max():.2f}]")
 
-    out_dir = NDA / "epistemic_out"
+    out_dir = NDA / "results" / "epistemic_out"
     out_dir.mkdir(exist_ok=True)
 
     # --- 公共:拟合检查 ---
@@ -290,7 +290,7 @@ def main():
     n_pass = sum(1 for _, s, _ in results if s == PASS)
     n_fail = sum(1 for _, s, _ in results if s == FAIL)
     print("\n" + "=" * 72)
-    print(f"汇总:{n_pass} PASS / {n_fail} FAIL   产物→ research/epistemic_out/")
+    print(f"汇总:{n_pass} PASS / {n_fail} FAIL   产物→ research/results/epistemic_out/")
     print("=" * 72)
     if n_fail:
         sys.exit(1)

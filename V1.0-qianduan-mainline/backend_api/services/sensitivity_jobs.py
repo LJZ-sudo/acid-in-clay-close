@@ -45,9 +45,9 @@ def _missing(job: str, needed: List[str], cmds: List[str]) -> Dict[str, Any]:
 
 def run_threshold_sweep(payload: Optional[dict] = None) -> Dict[str, Any]:
     """转变对 Rb 方法 / KK 阈值 / 管线假阳性的稳健性汇总(G2 阈值/方法敏感性)。"""
-    rb = _read_json(NDA / "rb_invariance" / "rb_invariance_summary_v2.json")
-    bp = _read_json(NDA / "breakpoint_uncertainty" / "breakpoint_uncertainty_summary_v2.json")
-    syn = _read_json(NDA / "synthetic_validation" / "synthetic_validation_summary_v2.json")
+    rb = _read_json(NDA / "results" / "rb_invariance" / "rb_invariance_summary_v2.json")
+    bp = _read_json(NDA / "results" / "breakpoint_uncertainty" / "breakpoint_uncertainty_summary_v2.json")
+    syn = _read_json(NDA / "results" / "synthetic_validation" / "synthetic_validation_summary_v2.json")
 
     if rb is None and bp is None and syn is None:
         return _missing(
@@ -96,8 +96,8 @@ def run_threshold_sweep(payload: Optional[dict] = None) -> Dict[str, Any]:
 
 def run_ablation(payload: Optional[dict] = None) -> Dict[str, Any]:
     """Rb 提取策略消融(4 轨迹)+ 稳健回归消融(全点/稳健/留一)。"""
-    rb_dir = NDA / "rb_invariance"
-    rob_dir = NDA / "arrhenius_robust"
+    rb_dir = NDA / "results" / "rb_invariance"
+    rob_dir = NDA / "results" / "arrhenius_robust"
     per_files = sorted(rb_dir.glob("*_rb_invariance_v2.json")) if rb_dir.exists() else []
 
     if not per_files:

@@ -79,7 +79,7 @@ def main():
 
     summary = FM.run_market(T, y, client=client, n_seed=6, n_rounds=4, include_strawman=True)
 
-    out_dir = NDA / "epistemic_out"; out_dir.mkdir(exist_ok=True)
+    out_dir = NDA / "results" / "epistemic_out"; out_dir.mkdir(exist_ok=True)
     (out_dir / "falsification_market.json").write_text(
         json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
 

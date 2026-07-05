@@ -156,7 +156,7 @@ def assess_dataset(ds_dir: Path) -> Dict[str, Any]:
 
 def run_all(kind: str = "lineA", out_subdir: str = "arrhenius_robust") -> Dict[str, Any]:
     from . import raw_loader as rl
-    out_dir = V.NDA_ROOT / out_subdir
+    out_dir = V.RESULTS_ROOT / out_subdir
     out_dir.mkdir(parents=True, exist_ok=True)
     rows = []
     datasets = rl.discover_datasets(kind)

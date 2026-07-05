@@ -22,6 +22,7 @@ from typing import Any, Dict, Iterable, List, Optional
 THIS_FILE = Path(__file__).resolve()
 NDA_ROOT = THIS_FILE.parents[1]                 # research/
 DATA_ROOT = NDA_ROOT / "data"                   # research/data/（lineA_*/lineB_* 数据集）
+RESULTS_ROOT = NDA_ROOT / "results"             # research/results/（v2 分析产物）
 REPO_ROOT = THIS_FILE.parents[2]                # 仓库根
 MAINLINE_ROOT = REPO_ROOT / "V1.0-qianduan-mainline"
 CONFIGS_DIR = MAINLINE_ROOT / "configs"

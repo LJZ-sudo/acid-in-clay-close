@@ -87,7 +87,7 @@ def main():
         print("[SKIP] 批次不足,跳过(不谎报)")
         return
 
-    out_dir = NDA / "epistemic_out"; out_dir.mkdir(exist_ok=True)
+    out_dir = NDA / "results" / "epistemic_out"; out_dir.mkdir(exist_ok=True)
 
     # 1) 机制类别互证:三批独立拟合 → 都选含相变模型
     own = {}

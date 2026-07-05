@@ -272,7 +272,7 @@ def _invariance_verdict(trajectories: Dict[str, Any]) -> Dict[str, Any]:
 
 
 def run_all(kind: str = "lineA", n_boot: int = 0, out_subdir: str = "rb_invariance") -> Dict[str, Any]:
-    out_dir = V.NDA_ROOT / out_subdir
+    out_dir = V.RESULTS_ROOT / out_subdir
     out_dir.mkdir(parents=True, exist_ok=True)
     datasets = rl.discover_datasets(kind)
     summary_rows = []
