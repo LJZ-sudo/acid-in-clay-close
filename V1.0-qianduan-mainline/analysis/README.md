@@ -36,10 +36,10 @@ legacy_freeze_manifest.json # 🧊 冻结产物 · 遗留物 hash 清单（prosp
 ### evaluation/
 `policy_ablation.py` # ✅ 库 ·（tests/test_policy_ablation.py 覆盖）策略消融，写 experiments/results/。
 
-### regularity/ / drt/ / replay/ / figures/ / analysis_scripts/
+### regularity/ / replay/ / figures/ / analysis_scripts/
 全部 ▶️ 现役脚本：
 - `regularity/build_regularity.py`：规律性证据构建（读 experiments/data）；
-- `drt/drt_evolution.py`：DRT 演化分析（README.md 自带；`relaxation_evolution.json` 被 stage0 closure 引用）;
+- ~~`drt/`~~：已于 2026-07-05 下线归档（实测 DRT 不可行，59/59 点 R²<0）→ `archive/drt_decommissioned_20260705/drt_negative_result/`;
 - `replay/`：run 证据回放（README.md 自带）；
 - `figures/`：手稿图表生成；
 - `analysis_scripts/`：杂项分析（含 `b_track_live_fulltemp.py` 全温程分析、`bind_evidence.py` 证据绑定等）；

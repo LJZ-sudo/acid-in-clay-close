@@ -12,18 +12,19 @@ EIS 分析管线（纯函数版 Facade）
 5. 单安检门 + KK警告 - QA 熔断 + KK 警告机制，最大化数据利用率
 
 执行顺序（严格）：
-数据清洗 -> 质量分析(QA) -> KK验证 -> Rb拟合 -> DRT分析
+数据清洗 -> 质量分析(QA) -> KK验证 -> Rb拟合
 
 熔断与警告规则：
 - 第一道安检门（QA）：触发致命错误 -> 立即熔断，status='REJECTED_BY_QA'
 - KK 校验（警告模式）：is_valid=False -> 继续执行，标记 'kk_warning': True
 
 主要功能：
-- 单点 EIS 分析（Rb 拟合、电导率、质量评估、KK 校验、DRT、相变检测）
+- 单点 EIS 分析（Rb 拟合、电导率、质量评估、KK 校验、相变检测）
 - 多点 Arrhenius 分析（序列过滤、分段拟合）
 - JSON 安全转换
 
-版本：3.2.0 (KK 降级为警告版)
+版本：3.3.0 (DRT 于 2026-07-05 下线归档：实测 59/59 温度点重构 R²<0（阻塞电极容性尾），
+不可作证据。算法与负结果分析已移至 archive/drt_decommissioned_20260705/。)
 """
 
 import numpy as np
@@ -32,7 +33,6 @@ from typing import Dict, List, Optional, Tuple, Any
 # 导入重构后的纯函数算法
 from .algorithms.rb_fitting import fit_rb_and_conductivity, get_default_fit_params as get_rb_fit_params
 from .algorithms.kk_validation import validate_kk_consistency
-from .algorithms.drt_analysis import analyze_drt
 from .algorithms.arrhenius import analyze_arrhenius
 from .data_quality import assess_data_quality
 # phase_detect 模块已重构为 Agent 决策专用，不再提供单点相变分数计算
@@ -52,7 +52,6 @@ def analyze_eis_point(
     run_rb=True,
     run_quality=True,
     run_kk=True,
-    run_drt=False,
     run_phase_score=False,
     rb_fit_params=None,
     prev_conductivity=None,
@@ -70,8 +69,10 @@ def analyze_eis_point(
        - 如果 is_valid=False，继续执行，标记 'kk_warning': True
        - 只有 success=False（计算失败）才会影响流程
     4. Rb 拟合 + 电导率计算
-    5. DRT 分析（可选）
-    6. 相变检测分数（可选）
+    5. 相变检测分数（可选）
+
+    注：DRT 分析已于 2026-07-05 下线归档（本数据上重构 R² 全部 < 0，不可作证据；
+    见 archive/drt_decommissioned_20260705/）。
     
     Args:
         frequencies: 频率数组 (Hz)
@@ -83,7 +84,6 @@ def analyze_eis_point(
         run_rb: 是否运行 Rb 拟合（默认 True）
         run_quality: 是否运行质量评估（默认 True，强烈建议开启）
         run_kk: 是否运行 KK 校验（默认 True，强烈建议开启）
-        run_drt: 是否运行 DRT 分析（默认 False，计算量大）
         run_phase_score: 是否运行相变检测分数（默认 False）
         rb_fit_params: Rb 拟合参数（None 使用默认值）
         prev_conductivity: 前一次电导率，用于相变检测（可选）
@@ -96,14 +96,14 @@ def analyze_eis_point(
             - status: str，处理状态
                 - 'OK': 正常完成
                 - 'REJECTED_BY_QA': 质量检查熔断
-                - 'PARTIAL': 部分成功（Rb 或 DRT 失败）
+                - 'PARTIAL': 部分成功（Rb 失败）
             - kk_warning: bool，KK 校验警告标记
             - temperature_C: float，温度 (°C)
             - temperature_K: float，温度 (K)
             - rb_result: dict，Rb 拟合结果（熔断时为 None）
             - quality_result: dict，质量评估结果
             - kk_result: dict，KK 校验结果（QA 熔断时为 None）
-            - drt_result: dict，DRT 分析结果（熔断时为 None）
+            - drt_result: 恒为 None（DRT 已下线归档，键保留以兼容历史 bundle 消费者）
             - phase_score_result: dict，相变检测分数结果（熔断时为 None）
             - error: str or None，整体失败原因
     """
@@ -267,37 +267,7 @@ def analyze_eis_point(
             result['error'] = f"Rb fitting exception: {str(e)}"
             result['status'] = 'PARTIAL'
     
-    # ===== 步骤 5: DRT 分析（可选，通过双重安检后执行） =====
-    if run_drt:
-        try:
-            drt_result = analyze_drt(
-                frequencies=freq,
-                z_real=zreal,
-                z_imag=zimag,
-                min_points=10
-            )
-            result['drt_result'] = drt_result
-            
-            # DRT 失败不影响整体状态
-            if not drt_result.get('success', False) and result['status'] != 'PARTIAL':
-                result['status'] = 'PARTIAL'
-        
-        except Exception as e:
-            result['drt_result'] = {
-                'success': False,
-                'tau': None,
-                'G': None,
-                'R_inf': None,
-                'lambda_reg': None,
-                'fit_quality': None,
-                'peaks': [],
-                'Z_fit': None,
-                'error': str(e)
-            }
-            if result['status'] != 'PARTIAL':
-                result['status'] = 'PARTIAL'
-    
-    # ===== 步骤 6: 相变检测分数（已废弃） =====
+    # ===== 步骤 5: 相变检测分数（已废弃） =====
     # 注：相变检测已由 phase_detect.py 中的 Agent 统一处理（基于局部斜率）
     # 单点相变分数计算已废弃，不再使用
     if run_phase_score:
@@ -680,7 +650,7 @@ def compact_eis_result(full_result, strip_arrays=True):
             - rb: dict，压缩的 Rb 结果
             - quality: dict，压缩的质量结果
             - kk: dict，压缩的 KK 结果
-            - drt: dict，压缩的 DRT 结果（可选）
+            - drt: dict，压缩的 DRT 结果（仅历史 bundle 会携带；DRT 已下线）
             - phase_score: dict，压缩的相变分数（可选）
     """
     compact = {

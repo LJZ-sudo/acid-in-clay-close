@@ -33,8 +33,8 @@ stage0_measurement/
 │  │  └─ algorithms/
 │  │     ├─ rb_fitting.py       # ✅ 现役 · Rb 多方法拟合（主证据路径）
 │  │     ├─ kk_validation.py    # ✅ 现役 · KK 校验（3.2.0 起故意为 warning-only，不作硬熔断）
-│  │     ├─ arrhenius.py        # ✅ 现役 · Arrhenius/断点拟合
-│  │     └─ drt_analysis.py     # ⚠️ 现役但默认休眠 · run_drt=False，标准 run 不启用
+│  │     └─ arrhenius.py        # ✅ 现役 · Arrhenius/断点拟合
+│  │        （drt_analysis.py 已于 2026-07-05 下线 → archive/drt_decommissioned_20260705/）
 │  ├─ automation/
 │  │  ├─ chi_executor.py        # ✅ 现役 · CHI 执行器（真机写原语；三层防御：窗口守卫→宏救援→新鲜度守卫）
 │  │  ├─ chi_window_guard.py    # ✅ 现役 · CHI 窗口守卫
@@ -79,5 +79,5 @@ stage0_measurement/
 ## 4. 已知休眠/占位（文件现役、局部不用）
 
 - `online_workflow._run_main_cooling_loop`：死方法，不在当前调用链。
-- `drt_analysis.py`：默认 `run_drt=False`，仅可选启用。
+- ~~`drt_analysis.py`~~：已于 2026-07-05 下线归档（实测 DRT 不可行，R² 全部 <0）→ `archive/drt_decommissioned_20260705/`。
 - `run_online.create_phase_detector()`：占位 stub，真 LLM 检测在 `phase_detect.py`。

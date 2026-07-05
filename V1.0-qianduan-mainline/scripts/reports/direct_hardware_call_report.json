@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-05T20:15:14.181302+08:00",
+  "generated_at": "2026-07-05T21:45:16.752985+08:00",
   "project_root": "C:\\Users\\LBM\\Desktop\\new\\acid-in-clay-close\\V1.0-qianduan-mainline",
   "n_hits": 31,
   "by_role": {
@@ -16,70 +16,70 @@
   "hits": [
     {
       "file": "backend_api/routers/control.py",
-      "line": 159,
+      "line": 166,
       "token": "hw_start",
       "code": "return hw.start(",
       "role": "OPERATOR_MANUAL"
     },
     {
       "file": "backend_api/routers/control.py",
-      "line": 251,
+      "line": 258,
       "token": "hw_stop",
       "code": "return hw.stop()",
       "role": "OPERATOR_MANUAL"
     },
     {
       "file": "backend_api/routers/control.py",
-      "line": 263,
+      "line": 270,
       "token": "set_temperature",
       "code": "return hw.set_temperature(req.effective_target)",
       "role": "OPERATOR_MANUAL"
     },
     {
       "file": "backend_api/routers/control.py",
-      "line": 270,
+      "line": 277,
       "token": "trigger_measurement",
       "code": "return hw.trigger_measurement()",
       "role": "OPERATOR_MANUAL"
     },
     {
       "file": "backend_api/services/hardware_adapter.py",
-      "line": 678,
+      "line": 680,
       "token": "TemperatureDriver_ctor",
       "code": "self._workflow = TemperatureDriver(port=port)",
       "role": "ADAPTER_SINK"
     },
     {
       "file": "backend_api/services/hardware_adapter.py",
-      "line": 693,
+      "line": 695,
       "token": "ChiExecutor_ctor",
       "code": "self._chi_executor = ChiExecutor()",
       "role": "ADAPTER_SINK"
     },
     {
       "file": "backend_api/services/hardware_adapter.py",
-      "line": 1189,
+      "line": 1192,
       "token": "set_temperature",
       "code": "res = self._workflow.set_temperature(target)",
       "role": "ADAPTER_SINK"
     },
     {
       "file": "backend_api/services/hardware_adapter.py",
-      "line": 1618,
+      "line": 1621,
       "token": "set_temperature",
       "code": "res = self._workflow.set_temperature(target_C)",
       "role": "ADAPTER_SINK"
     },
     {
       "file": "backend_api/services/hardware_adapter.py",
-      "line": 4317,
+      "line": 4319,
       "token": "set_temperature",
       "code": "set_res = self._workflow.set_temperature(t_start)",
       "role": "ADAPTER_SINK"
     },
     {
       "file": "backend_api/services/hardware_adapter.py",
-      "line": 4348,
+      "line": 4350,
       "token": "set_temperature",
       "code": "set_res = self._workflow.set_temperature(t)",
       "role": "ADAPTER_SINK"

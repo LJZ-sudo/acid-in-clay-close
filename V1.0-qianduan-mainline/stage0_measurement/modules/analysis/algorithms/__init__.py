@@ -5,8 +5,10 @@
 子模块：
 - rb_fitting: Rb 拟合算法
 - kk_validation: Kramers-Kronig 验证
-- drt_analysis: 弛豫时间分布分析
 - arrhenius: Arrhenius 分析
+
+注：drt_analysis 已于 2026-07-05 下线归档（本数据上 DRT 重构 R² 全部 < 0，不可作证据；
+见 archive/drt_decommissioned_20260705/）。
 
 核心原则：
 1. 纯函数 - 相同输入产生相同输出
@@ -20,12 +22,10 @@
 
 from . import rb_fitting
 from . import kk_validation
-from . import drt_analysis
 from . import arrhenius
 
 __all__ = [
     'rb_fitting',
     'kk_validation',
-    'drt_analysis',
     'arrhenius',
 ]

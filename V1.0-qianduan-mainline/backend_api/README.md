@@ -57,7 +57,7 @@ backend_api/
 3. **SciTX 治理**：measurement_txn / instrument witness / commit gate 接入；
 4. **run 证据库**：`RUNS_DIR = ../experiments/runs/<run_id>/`（events.jsonl、evidence/、manifest）；
 5. **后处理管线**：EIS 分析、Arrhenius、ao 数据摄入（写 `experiments/raw/ao/` 与 `experiments/output/ao_stage0_results/`）；
-6. **epistemic 钩子**（opt-in）：`sys.path` 注入 `analysis/` 后导入 `epistemic`（active_design canary、impedance 前向、falsification market、stage3 live 桥）。
+6. **epistemic 钩子**（2026-07-05 起默认开，fail-safe）：`sys.path` 注入 `analysis/` 后导入 `epistemic`（active_design canary、impedance 前向、falsification market、stage3 live 桥）。仍默认关的仅剩治理门：R4 替换态（人审签核）、canary/enforce 物理执行层、故障注入。
 
 ## 4. 现役 / 遗留判定汇总
 

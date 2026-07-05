@@ -455,20 +455,21 @@ class HardwareAdapter:
         self._rbact_results: List[Any] = []
         self._rb_r4_activate: bool = False
         self._rb_r4_signoff: Optional[str] = None
-        # --- Stage3 机理推理链接 live（GPT 迁移发现愿景，opt-in / fail-safe）---
+        # --- Stage3 机理推理链接 live（GPT 迁移发现愿景，fail-safe / 默认开）---
         # 收尾把真实全温区测量构造成 Stage3SeedBundle,真实 LLM 驱动
-        # S03→S04→S06→S06b（证据→假设→机理仲裁→设计原则）。默认关(成本/时延),
-        # 真机长跑或显式开启时触发;失败只记事件,绝不影响测量/入库。
-        self._enable_stage3_reasoning: bool = False
-        # --- Epistemic OS（GPT 三大原创方向的可计算对象，opt-in / fail-safe）---
+        # S03→S04→S06→S06b（证据→假设→机理仲裁→设计原则）。2026-07-05 起默认开
+        # (创新点须默认真实运作;收尾仅 3-4 次 LLM 调用,无 key 时自动降级只记事件);
+        # 失败只记事件,绝不影响测量/入库。
+        self._enable_stage3_reasoning: bool = True
+        # --- Epistemic OS（GPT 三大原创方向的可计算对象，fail-safe / 默认开 2026-07-05 起）---
         # 收尾对真实全温区 σ(T) 产出:不可辨识性证书(方案一,Fisher λ_min+JS 等价类)、
         # 最小判别实验集(方案三,集合覆盖+编译失败→等价类)、anytime-valid e-process 证伪
         # (方案二,Ville 控 type-I)+ 单位成本证伪价值。纯 numpy/scipy、不调 LLM;失败只记事件。
-        self._enable_epistemic: bool = False
-        # --- Gap2:可知性驱动内层主动选温(opt-in)。逐点据已测 σ(T) 竞争模型,
-        #     计算"单位成本期望机制判别价值"最大的下一个温度,经 ActionGate 留痕后
-        #     注入决策 prompt(advisory)。不夺用户固定物理阶梯,只提供受控建议。---
-        self._enable_active_design: bool = False
+        self._enable_epistemic: bool = True
+        # --- Gap2:可知性驱动内层主动选温(默认开 2026-07-05 起;advisory 纯计算零成本)。
+        #     逐点据已测 σ(T) 竞争模型,计算"单位成本期望机制判别价值"最大的下一个温度,
+        #     经 ActionGate 留痕后注入决策 prompt(advisory)。不夺用户固定物理阶梯,只提供受控建议。---
+        self._enable_active_design: bool = True
         # --- P13-C:active_design 模式。advisory=仅注入 prompt(默认,行为不变);
         #     canary=经 ActionGate 在用户固定阶梯的**相邻候选间**微调下一 setpoint(硬护栏:
         #     不越阶梯包络、单步邻域、回温≤15K),越界/被拦即回退固定阶梯。绝不无人值守 enforce 夺权。---
@@ -479,10 +480,11 @@ class HardwareAdapter:
         self._t_start_C: Optional[float] = None   # 阶梯包络(canary 硬护栏用)
         self._t_end_C: Optional[float] = None
         self._last_epistemic_advisory: Optional[Dict[str, Any]] = None
-        # --- Gap3/P13-B:多角色 LLM 证伪市场接 live 收尾(opt-in / 真 OpenRouter 调用 / fail-safe)。
+        # --- Gap3/P13-B:多角色 LLM 证伪市场接 live 收尾(真 OpenRouter 调用 / fail-safe / 默认开
+        #     2026-07-05 起——收尾 ~9 次 LLM 调用,成本远低于默认开的逐点 agent;无 key 自动降级)。
         #     收尾对真实 σ(T) 跑 Proposer/Falsifier/Auditor(真 LLM)+ Referee 确定性真实数据结算,
-        #     严格适当评分更新信誉/资本;因真 LLM 有成本,默认关,须显式开。---
-        self._enable_falsification_market: bool = False
+        #     严格适当评分更新信誉/资本。---
+        self._enable_falsification_market: bool = True
         # --- ESAS-OS 2.0 measurement_txn 真门控（P3，纯加法 / fail-safe / 默认开）---
         # 逐点累积 entered_bo 准入,收尾切 committed/rejected 视图并据此过滤 Stage0 bundle,
         # 让下游 BO 只吃被准入的点(深冷/坏点不污染)。
@@ -499,11 +501,11 @@ class HardwareAdapter:
         #     **绝不触碰温控/CHI 物理命令**(安全)。支持多条(dict 或 list of dict)。---
         self._inject_faults: List[Dict[str, Any]] = []
         self._fault_injections: List[Dict[str, Any]] = []
-        # --- H2:在线仪器见证(opt-in,默认关)。每点用真实 CHI 文件 + 温控稳定 + 仪器态
-        #     经真实 EvidenceTransaction 推 C_P;支持协议/见证级故障注入(ACK_LOSS/
+        # --- H2:在线仪器见证(默认开 2026-07-05 起;纯软件零成本)。每点用真实 CHI 文件 + 温控稳定
+        #     + 仪器态经真实 EvidenceTransaction 推 C_P;支持协议/见证级故障注入(ACK_LOSS/
         #     INSTRUMENT_STUCK/FILE_MISSING/FILE_DELAY/SAMPLE_SWAP/CALIBRATION_EXPIRED),
         #     驱动边界软件注入,**绝不触碰样品/温控物理安全**。fail-safe;不改 legacy 入库。---
-        self._enable_instrument_witness: bool = False
+        self._enable_instrument_witness: bool = True
         self._instrument_witness_rows: List[Dict[str, Any]] = []
         self._protocol_faults: List[Dict[str, Any]] = []
         # CHI automation handle + per-run parameters (set in connect/start).
@@ -844,16 +846,17 @@ class HardwareAdapter:
         self._enable_c3 = bool(kwargs.get("enable_c3", True))
         self._rbact_metro_dex = []
         self._rbact_active_requests = []
-        self._enable_stage3_reasoning = bool(kwargs.get("enable_stage3_reasoning", False))
-        self._enable_epistemic = bool(kwargs.get("enable_epistemic", False))
-        self._enable_active_design = bool(kwargs.get("enable_active_design", False))
+        # 创新点默认开(2026-07-05 起):全部 fail-safe,无 key 时 LLM 类自动降级只记事件。
+        self._enable_stage3_reasoning = bool(kwargs.get("enable_stage3_reasoning", True))
+        self._enable_epistemic = bool(kwargs.get("enable_epistemic", True))
+        self._enable_active_design = bool(kwargs.get("enable_active_design", True))
         _adm = str(kwargs.get("active_design_mode", "advisory") or "advisory").strip().lower()
         self._active_design_mode = _adm if _adm in ("advisory", "canary") else "advisory"
         try:
             self._canary_max_steps = max(1, min(3, int(kwargs.get("canary_max_steps", 2))))
         except (TypeError, ValueError):
             self._canary_max_steps = 2
-        self._enable_falsification_market = bool(kwargs.get("enable_falsification_market", False))
+        self._enable_falsification_market = bool(kwargs.get("enable_falsification_market", True))
         # H4:Rb-ACT R4 激活模式(替换态,须三条件齐备才生效;默认关)。
         self._rbact_results = []
         self._rb_r4_activate = bool(kwargs.get("rb_r4_activate", False))
@@ -875,8 +878,8 @@ class HardwareAdapter:
             if isinstance(d, dict) and str(d.get("type", "")).upper() in _INJECTABLE_FAULTS
         ]
         self._fault_injections = []
-        # H2:在线仪器见证(opt-in)+ 协议级故障注入(inject_fault 里 type∈_PROTOCOL_FAULTS 的条目)。
-        self._enable_instrument_witness = bool(kwargs.get("enable_instrument_witness", False))
+        # H2:在线仪器见证(默认开 2026-07-05 起)+ 协议级故障注入(inject_fault 里 type∈_PROTOCOL_FAULTS 的条目)。
+        self._enable_instrument_witness = bool(kwargs.get("enable_instrument_witness", True))
         self._instrument_witness_rows = []
         self._protocol_faults = [
             {"type": str(d["type"]).upper(), "at_step": int(d.get("at_step", 0))}
@@ -1824,7 +1827,6 @@ class HardwareAdapter:
                 run_rb=True,
                 run_quality=True,
                 run_kk=True,
-                run_drt=False,
             )
         except Exception as exc:
             return {"success": False, "failure_reason": f"analyze_eis_point raised: {exc}"}

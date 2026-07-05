@@ -6,8 +6,8 @@ Analysis 模块：科学计算与核心算法
 - algorithms: 核心算法（纯函数）
   - rb_fitting: Rb 拟合
   - kk_validation: KK 验证
-  - drt_analysis: DRT 分析
   - arrhenius: Arrhenius 分析
+  （drt_analysis 已下线归档 → archive/drt_decommissioned_20260705/）
 - eis_pipeline: EIS 分析管线（门面）
 - data_quality: 数据质量评估
 - phase_detect: 相变检测
