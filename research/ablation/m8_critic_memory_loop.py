@@ -9,7 +9,7 @@
 展示点：critic 复用项目真实的 claim/EIS overclaim guardrail（不是通用 critic），
 即"把不过度声称的诚信护栏 agent 化"。EpisodicMemory 记录每一步并持久化。
 
-产物 -> m6_baseline_ablation/m8_agent_loop/ ，不碰主线。
+产物 -> research/ablation/m8_agent_loop/ ，不碰主线。
 """
 from __future__ import annotations
 
@@ -18,7 +18,7 @@ import os
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = next(_p for _p in Path(__file__).resolve().parents if _p.name == "research").parent
 STAGE3 = ROOT / "V1.0-qianduan-mainline" / "stage3_mechanism"
 SRC = STAGE3 / "src"
 FROZEN = STAGE3 / "outputs" / "verification" / "20260607_openrouter_publication_v2"

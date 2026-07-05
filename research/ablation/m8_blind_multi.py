@@ -4,7 +4,7 @@
 在**多个 seed**下分别打分（物理合理性 + 证据接地度，1-5）。评审看不到来源。
 最后按来源聚合 mean±std（跨 judge×seed），并给出每个评审的分项。
 
-产物 -> m6_baseline_ablation/m8_blind_multi/ 。不碰主线。
+产物 -> research/ablation/m8_blind_multi/ 。不碰主线。
 """
 from __future__ import annotations
 
@@ -15,7 +15,7 @@ import random
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = next(_p for _p in Path(__file__).resolve().parents if _p.name == "research").parent
 STAGE3 = ROOT / "V1.0-qianduan-mainline" / "stage3_mechanism"
 SRC = STAGE3 / "src"
 M7 = Path(__file__).resolve().parent / "m7_full"

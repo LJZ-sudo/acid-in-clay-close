@@ -9,7 +9,7 @@
   random     : 池内组分随机组配
 
 评审模型优先用跨模型（与生成模型不同），不可达则回退生成模型并如实标注。
-产物 -> m6_baseline_ablation/m8_blind/ ，不碰主线。
+产物 -> research/ablation/m8_blind/ ，不碰主线。
 """
 from __future__ import annotations
 
@@ -19,7 +19,7 @@ import random
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = next(_p for _p in Path(__file__).resolve().parents if _p.name == "research").parent
 STAGE3 = ROOT / "V1.0-qianduan-mainline" / "stage3_mechanism"
 SRC = STAGE3 / "src"
 M7 = Path(__file__).resolve().parent / "m7_full"

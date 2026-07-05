@@ -15,7 +15,7 @@
   ontopic_rate              : 候选组分命中质子导体相关词表的比例
   seed_stability_jaccard    : 同 arm 跨 seed 的组分集合平均 Jaccard
 
-全部产物 -> m6_baseline_ablation/m7_full/ ，不碰主线。
+全部产物 -> research/ablation/m7_full/ ，不碰主线。
 """
 from __future__ import annotations
 
@@ -26,7 +26,7 @@ from collections import Counter
 from itertools import combinations
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = next(_p for _p in Path(__file__).resolve().parents if _p.name == "research").parent
 STAGE3 = ROOT / "V1.0-qianduan-mainline" / "stage3_mechanism"
 SRC = STAGE3 / "src"
 FROZEN = STAGE3 / "outputs" / "verification" / "20260607_openrouter_publication_v2"

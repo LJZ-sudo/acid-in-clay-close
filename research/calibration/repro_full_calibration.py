@@ -12,7 +12,7 @@ consolidates EVERY available real, stage0-processed repeat:
   * CHITO :  0430CS, 0501CS                                                   -> 2 repeats (boundary)
 
 All inputs are canonical stage0 `aggregated_results.json` / `arrhenius_analysis.json`
-(the CS ones were produced by m6_baseline_ablation/line_a_analysis and copied here
+(the CS ones were produced by research/ablation/line_a_analysis and copied here
 verbatim; the 6.15/6.16/6.17 ones were just produced by run_offline.py with the REAL
 membrane thickness from each folder's 材料制备.txt). Nothing is fabricated; quantities
 that cannot be computed are left null.

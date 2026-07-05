@@ -1,7 +1,7 @@
 """M6 baseline ablation for the evidence-constrained transfer/ranking agent.
 
 READ-ONLY w.r.t. mainline: this script only *reads* the frozen 20260607 stage3
-outputs and writes its own artifacts inside m6_baseline_ablation/. It does not
+outputs and writes its own artifacts inside research/ablation/. It does not
 call any LLM and does not modify any stage1/stage3 code, data, or registry.
 
 Three sub-experiments:
@@ -27,7 +27,7 @@ from pathlib import Path
 
 import numpy as np
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = next(_p for _p in Path(__file__).resolve().parents if _p.name == "research").parent
 RUN = ROOT / "V1.0-qianduan-mainline/stage3_mechanism/outputs/verification/20260607_openrouter_publication_v2"
 OUT = Path(__file__).resolve().parent
 

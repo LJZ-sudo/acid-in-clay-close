@@ -1,7 +1,7 @@
 """Line A frozen-then-validated verdict.
 
 Reads the stage0 outputs recomputed under mainline QC (KK + manual-Rb pipeline,
-outputs in m6_baseline_ablation/line_a_analysis/stage0_out) and scores each sample
+outputs in research/ablation/line_a_analysis/stage0_out) and scores each sample
 against the PREREGISTERED falsifiable predictions in
 prospective_2026H2/line_A_biopolymer_transfer/PREREGISTRATION.md §4.
 
@@ -17,9 +17,9 @@ READ-ONLY on mainline source. All artifacts stay in this folder.
 import glob, json, os
 import numpy as np
 
-BASE = "m6_baseline_ablation/line_a_analysis/stage0_out"
-OUTJSON = "m6_baseline_ablation/line_a_verdict.json"
-OUTTXT = "m6_baseline_ablation/line_a_verdict.txt"
+BASE = "research/ablation/line_a_analysis/stage0_out"
+OUTJSON = "research/ablation/line_a_verdict.json"
+OUTTXT = "research/ablation/line_a_verdict.txt"
 
 # folder -> (material, role, geometry_band, thickness_cm)
 ROLE = {

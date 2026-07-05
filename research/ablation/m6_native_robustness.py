@@ -8,7 +8,7 @@ READ-ONLY on mainline.
 import json
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = next(_p for _p in Path(__file__).resolve().parents if _p.name == "research").parent
 RUN = ROOT / "V1.0-qianduan-mainline/stage3_mechanism/outputs/verification/20260607_openrouter_publication_v2"
 OUT = Path(__file__).resolve().parent
 

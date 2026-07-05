@@ -4,7 +4,7 @@
 逐 seed 打乱顺序，用真 LLM S10 排序器排序，记录每 seed 指标，最后聚合 mean±std
 与 "全部干扰项被压到治理之下" 的命中比例。
 
-产物 -> m6_baseline_ablation/m8_s10_multi/ 。不碰主线。
+产物 -> research/ablation/m8_s10_multi/ 。不碰主线。
 """
 from __future__ import annotations
 
@@ -15,7 +15,7 @@ import random
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = next(_p for _p in Path(__file__).resolve().parents if _p.name == "research").parent
 STAGE3 = ROOT / "V1.0-qianduan-mainline" / "stage3_mechanism"
 SRC = STAGE3 / "src"
 FROZEN = STAGE3 / "outputs" / "verification" / "20260607_openrouter_publication_v2"

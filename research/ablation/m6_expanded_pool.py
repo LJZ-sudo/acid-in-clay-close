@@ -3,7 +3,7 @@ enumeration, then compare selectors on their ability to rank the experimentally
 validated winner (I1, LRS route) near the top.
 
 READ-ONLY w.r.t. mainline. No LLM calls. No experiments. All artifacts written
-inside m6_baseline_ablation/.
+inside research/ablation/.
 
 Why this is honest:
 - The candidate pool is enlarged by *combinatorial enumeration* of components
@@ -22,7 +22,7 @@ from pathlib import Path
 
 import numpy as np
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = next(_p for _p in Path(__file__).resolve().parents if _p.name == "research").parent
 RUN = ROOT / "V1.0-qianduan-mainline/stage3_mechanism/outputs/verification/20260607_openrouter_publication_v2"
 OUT = Path(__file__).resolve().parent
 

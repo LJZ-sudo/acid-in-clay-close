@@ -4,7 +4,7 @@
 本脚本只读冻结输入(descriptor_sheet + S08 文献证据池)，把 S09 切到 LLM 分支，
 看真 LLM 能否仅凭文献证据池**独立**重组出质子导体候选家族/实例。
 
-不碰主线：输出全部落在 m6_baseline_ablation/m7_llm_pilot/ 下。
+不碰主线：输出全部落在 research/ablation/m7_llm_pilot/ 下。
 """
 from __future__ import annotations
 
@@ -13,7 +13,7 @@ import os
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]          # acid-in-clay-close
+ROOT = next(_p for _p in Path(__file__).resolve().parents if _p.name == "research").parent          # acid-in-clay-close
 STAGE3 = ROOT / "V1.0-qianduan-mainline" / "stage3_mechanism"
 SRC = STAGE3 / "src"
 FROZEN = STAGE3 / "outputs" / "verification" / "20260607_openrouter_publication_v2"

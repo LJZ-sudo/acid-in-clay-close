@@ -4,7 +4,7 @@
 干扰候选（LiFePO4 电池正极 / 硅负极 / CsPbI3 钙钛矿太阳能）。让**真 LLM S10**（关掉
 s10_deterministic_from_audit）排序，看治理是否在排序阶段也把干扰项压到底部 / 给低分。
 
-产物 -> m6_baseline_ablation/m8_s10/ ，不碰主线。
+产物 -> research/ablation/m8_s10/ ，不碰主线。
 """
 from __future__ import annotations
 
@@ -13,7 +13,7 @@ import os
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = next(_p for _p in Path(__file__).resolve().parents if _p.name == "research").parent
 STAGE3 = ROOT / "V1.0-qianduan-mainline" / "stage3_mechanism"
 SRC = STAGE3 / "src"
 FROZEN = STAGE3 / "outputs" / "verification" / "20260607_openrouter_publication_v2"
