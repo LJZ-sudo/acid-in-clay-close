@@ -100,7 +100,7 @@ def main() -> None:
 
     # Emit the official-recipe sidecar consumed by the backend /api/provenance
     # endpoint + ProvenancePanel (single source of truth for the Line-B story).
-    sidecar = (ROOT.parent.parent / "research" / "prospective"
+    sidecar = (ROOT.parent.parent / "experiments" / "prospective"
                / "line_B_mobo_closed_loop" / "official_recipe.json")
     if sidecar.parent.exists():
         # preserve immutable freeze anchors / claim boundaries if already frozen

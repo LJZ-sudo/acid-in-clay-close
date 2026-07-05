@@ -29,7 +29,7 @@ except Exception:
 import numpy as np
 
 HERE = Path(__file__).resolve()
-NDA = (next(_p for _p in HERE.parents if _p.name == "V1.0-qianduan-mainline").parent / "research")
+NDA = (next(_p for _p in HERE.parents if _p.name == "V1.0-qianduan-mainline").parent / "experiments")
 MAIN = NDA.parent / "V1.0-qianduan-mainline"
 RUNS = MAIN / "runs"
 EVID = RUNS / "run_20260629_112156_9db536" / "evidence"

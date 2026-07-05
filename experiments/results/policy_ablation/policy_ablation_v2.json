@@ -1,7 +1,7 @@
 {
   "provenance": {
     "campaign": "V1.0-qianduan-mainline\\stage1_optimization\\campaigns\\attapulgite_aice_campaign.json",
-    "official_recipe": "research\\prospective\\line_B_mobo_closed_loop\\official_recipe.json",
+    "official_recipe": "experiments\\prospective\\line_B_mobo_closed_loop\\official_recipe.json",
     "freeze_commit": "c185379",
     "observed_R_range": [
       0.186,

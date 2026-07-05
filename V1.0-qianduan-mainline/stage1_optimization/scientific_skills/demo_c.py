@@ -25,7 +25,7 @@ from scientific_skills.dual_account import EpistemicAccount, RiskClearing  # noq
 from scientific_skills.risk_coverage import risk_coverage_curve  # noqa: E402
 
 REPO_ROOT = _THIS.parents[3]
-OUT_DIR = REPO_ROOT / "research" / "scientific_skills"
+OUT_DIR = REPO_ROOT / "experiments" / "scientific_skills"
 
 
 def build_registry() -> SkillRegistry:

@@ -21,7 +21,7 @@ from pptx.enum.shapes import MSO_SHAPE
 from pptx.oxml.ns import qn
 from PIL import Image
 
-NDA = (next(_p for _p in Path(__file__).resolve().parents if _p.name == "V1.0-qianduan-mainline").parent / "research")
+NDA = (next(_p for _p in Path(__file__).resolve().parents if _p.name == "V1.0-qianduan-mainline").parent / "experiments")
 FIG = NDA / "figures"
 OUT = NDA / "REPORT_DECK_20260622.pptx"
 

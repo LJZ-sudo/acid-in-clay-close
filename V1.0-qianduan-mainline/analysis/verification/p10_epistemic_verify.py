@@ -24,7 +24,7 @@ except Exception:
 import numpy as np
 
 HERE = Path(__file__).resolve()
-NDA = (next(_p for _p in HERE.parents if _p.name == "V1.0-qianduan-mainline").parent / "research")
+NDA = (next(_p for _p in HERE.parents if _p.name == "V1.0-qianduan-mainline").parent / "experiments")
 MAIN = NDA.parent / "V1.0-qianduan-mainline"
 RUN_DIR = MAIN / "runs" / "run_20260629_112156_9db536"
 for p in (str(MAIN / "analysis"),):
@@ -290,7 +290,7 @@ def main():
     n_pass = sum(1 for _, s, _ in results if s == PASS)
     n_fail = sum(1 for _, s, _ in results if s == FAIL)
     print("\n" + "=" * 72)
-    print(f"汇总:{n_pass} PASS / {n_fail} FAIL   产物→ research/results/epistemic_out/")
+    print(f"汇总:{n_pass} PASS / {n_fail} FAIL   产物→ experiments/results/epistemic_out/")
     print("=" * 72)
     if n_fail:
         sys.exit(1)

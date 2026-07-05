@@ -38,7 +38,7 @@ plt.rcParams.update({
 })
 
 HERE = Path(__file__).resolve().parent
-NDA = HERE.parents[2] / "research"
+NDA = HERE.parents[2] / "experiments"
 
 
 def save_publication(fig, stem):

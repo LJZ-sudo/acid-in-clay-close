@@ -40,7 +40,7 @@ import sys as _sys; _sys.path.insert(0, str(Path(__file__).resolve().parents[1])
 import natfig; natfig.apply()
 
 HERE = Path(__file__).resolve().parent
-NDA = HERE.parents[2] / "research"
+NDA = HERE.parents[2] / "experiments"
 sys.path.insert(0, str(HERE))
 from repro_and_calibration import _load, ok_points, per_dataset_points  # noqa: E402
 from repro_full_calibration import REGISTRY, names_in, sigma_curve, GROUPS, TOL_MAIN  # noqa: E402

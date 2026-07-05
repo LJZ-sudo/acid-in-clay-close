@@ -20,9 +20,9 @@ from typing import Any, Dict, Iterable, List, Optional
 
 # ---- 路径锚点(可移植) -------------------------------------------------- #
 THIS_FILE = Path(__file__).resolve()
-NDA_ROOT = THIS_FILE.parents[3] / "research"    # research/（输入输出 home）
-DATA_ROOT = NDA_ROOT / "data"                   # research/data/（lineA_*/lineB_* 数据集）
-RESULTS_ROOT = NDA_ROOT / "results"             # research/results/（v2 分析产物）
+NDA_ROOT = THIS_FILE.parents[3] / "experiments"    # research/（输入输出 home）
+DATA_ROOT = NDA_ROOT / "data"                   # experiments/data/（lineA_*/lineB_* 数据集）
+RESULTS_ROOT = NDA_ROOT / "results"             # experiments/results/（v2 分析产物）
 REPO_ROOT = THIS_FILE.parents[3]                # 仓库根
 MAINLINE_ROOT = REPO_ROOT / "V1.0-qianduan-mainline"
 CONFIGS_DIR = MAINLINE_ROOT / "configs"
@@ -156,7 +156,7 @@ def write_delta_report(
 # 这些是"已发表/冻结"产物,v2 绝不覆盖;清单用于事后核验它们未被改动。
 DEFAULT_LEGACY_PRODUCTS = [
     "V1.0-qianduan-mainline/stage1_optimization/campaign_memory/history_db_attapulgite.json",
-    "research/prospective/line_B_mobo_closed_loop/official_recipe.json",
+    "experiments/prospective/line_B_mobo_closed_loop/official_recipe.json",
 ]
 
 

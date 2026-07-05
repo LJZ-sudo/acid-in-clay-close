@@ -13,7 +13,7 @@ from pathlib import Path
 
 REPO = next(_p for _p in Path(__file__).resolve().parents if _p.name == "V1.0-qianduan-mainline").parent
 STAGE0 = REPO / "V1.0-qianduan-mainline" / "stage0_measurement"
-RESEARCH = REPO / "research"
+RESEARCH = REPO / "experiments"
 OUT = RESEARCH / "data"   # 数据集输出目录（lineA_*/lineB_*）
 
 # (label, data_dir relative to repo, thickness_cm, chi_pattern, line)

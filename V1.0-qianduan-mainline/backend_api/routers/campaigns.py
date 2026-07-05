@@ -41,7 +41,7 @@ _OUTPUT_DIR = STAGE1_DIR / "output"
 # it supersedes any stale on-disk single-objective next_experiment_recipe.json.
 _LINE_B_OFFICIAL = (
     PROJECT_ROOT.parent
-    / "research" / "prospective" / "line_B_mobo_closed_loop" / "official_recipe.json"
+    / "experiments" / "prospective" / "line_B_mobo_closed_loop" / "official_recipe.json"
 )
 
 
@@ -72,7 +72,7 @@ def _optimizer_identity(name: str, campaign_name: Optional[str]) -> Dict[str, An
             "label": "MOBO (ParEGO) + LLM guardrail",
             "llm_guardrail": bool(official.get("llm_used", True)),
             "llm_model": prov.get("model"),
-            "source": "research/prospective/line_B_mobo_closed_loop",
+            "source": "experiments/prospective/line_B_mobo_closed_loop",
         }
     return {
         "kind": "bo",

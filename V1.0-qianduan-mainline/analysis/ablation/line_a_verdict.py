@@ -3,7 +3,7 @@
 Reads the stage0 outputs recomputed under mainline QC (KK + manual-Rb pipeline,
 outputs in V1.0-qianduan-mainline/analysis/ablation/line_a_analysis/stage0_out) and scores each sample
 against the PREREGISTERED falsifiable predictions in
-research/prospective/line_A_biopolymer_transfer/PREREGISTRATION.md §4.
+experiments/prospective/line_A_biopolymer_transfer/PREREGISTRATION.md §4.
 
 Honest rules:
 - Ea_high taken from the highest-temperature Arrhenius segment (>=3 pts).

@@ -50,7 +50,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 HERE = Path(__file__).resolve().parent
-NDA = HERE.parents[2] / "research"
+NDA = HERE.parents[2] / "experiments"
 sys.path.insert(0, str(HERE))
 from repro_and_calibration import ok_points, per_dataset_points, _load, _valid_segment_eas  # noqa: E402
 

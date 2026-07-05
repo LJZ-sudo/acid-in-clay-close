@@ -14,7 +14,7 @@ from pathlib import Path
 import numpy as np
 from PIL import ImageGrab, Image
 
-REPO = next(_p for _p in Path(__file__).resolve().parents if _p.name == "research").parent
+REPO = next(_p for _p in Path(__file__).resolve().parents if _p.name == "experiments").parent
 MAIN = REPO / "V1.0-qianduan-mainline"
 OUT = MAIN / "output" / "b_track_real"
 TEMPLATE_DIR = MAIN / "stage0_measurement" / "controllers" / "templates"

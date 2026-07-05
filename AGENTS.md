@@ -24,13 +24,13 @@
 | `OPTIMIZATION_EXECUTION_PLAN_20260622.md` | ★ 可执行/可勾选/可验收的执行计划（双轨 + WP0–WP5 + 三阶段切换） |
 | `PROJECT_SITUATION_REPORT_20260622.md` | 现状家底（对账真实数据，诚实评估） |
 | `SYSTEM_ARCHITECTURE_CODE_GROUNDED_20260622.md` | 代码级架构（真实 `file::function` 追踪，ASCII 图） |
-| `research/docs/PUBLICATION_READINESS.md` | 判档 / 发表就绪度（R0–R5 成熟度） |
-| `research/docs/REAL_MACHINE_INTEGRATION_PLAN_20260622.md` | ★ 真机联调方案（跨机迁移 + 硬件入口 + Harness shadow + 密钥） |
+| `experiments/docs/PUBLICATION_READINESS.md` | 判档 / 发表就绪度（R0–R5 成熟度） |
+| `experiments/docs/REAL_MACHINE_INTEGRATION_PLAN_20260622.md` | ★ 真机联调方案（跨机迁移 + 硬件入口 + Harness shadow + 密钥） |
 | `INNOVATION_SKILLS_HARNESS_MEMORY_20260622.md` | 三大底层创新（SciTX/E-Mem/PC-Skills）设计说明 |
-| `research/docs/TIER_S_MANUSCRIPT_DRAFT_20260622.md` | Tier S 手稿草案（脊柱：M0–M2 + 三 Demo） |
-| `research/prospective/README.md` | 前瞻实验纪律（“冻结 → push 盖时间戳 → 才开始测量”） |
-| `research/prospective/line_A_biopolymer_transfer/PREREGISTRATION.md` | 线 A（生物聚合物迁移）预注册 |
-| `research/prospective/line_B_mobo_closed_loop/PREREGISTRATION.md` | 线 B（真实 MOBO+LLM 闭环）预注册 + 官方 recipe |
+| `experiments/docs/TIER_S_MANUSCRIPT_DRAFT_20260622.md` | Tier S 手稿草案（脊柱：M0–M2 + 三 Demo） |
+| `experiments/prospective/README.md` | 前瞻实验纪律（“冻结 → push 盖时间戳 → 才开始测量”） |
+| `experiments/prospective/line_A_biopolymer_transfer/PREREGISTRATION.md` | 线 A（生物聚合物迁移）预注册 |
+| `experiments/prospective/line_B_mobo_closed_loop/PREREGISTRATION.md` | 线 B（真实 MOBO+LLM 闭环）预注册 + 官方 recipe |
 | `three_pillars/` | 三创新点的固化证据与执行引擎 |
 
 > ⚠️ **聊天记录不跨机器**：过去与 Cursor/Agent 的对话存在本机 `~/.cursor/.../agent-transcripts/`，**不随 git 迁移**，也不入库（已 gitignore）。换机器后那段历史不在新机器上——靠本文件 + 上述文档承接上下文。
@@ -77,7 +77,7 @@ acid-in-clay-close/
 
 ## 3. 跨机器迁移（推荐路径：git clone）
 
-项目已托管在 GitHub。迁移 = 在新机器克隆 + 配置环境，**不要手工拷贝目录**（会带上本机绝对路径的历史产物且漏掉 .env 模板逻辑）。详见 `research/docs/REAL_MACHINE_INTEGRATION_PLAN_20260622.md`。
+项目已托管在 GitHub。迁移 = 在新机器克隆 + 配置环境，**不要手工拷贝目录**（会带上本机绝对路径的历史产物且漏掉 .env 模板逻辑）。详见 `experiments/docs/REAL_MACHINE_INTEGRATION_PLAN_20260622.md`。
 
 ```bash
 # 1) 克隆（远端是 SSH；当前工作分支是 remediation/tier3）
@@ -157,12 +157,12 @@ GIT_SSH_COMMAND="ssh -p 443 -o HostName=ssh.github.com" git push
 ## 6. 诚信 / claim 护栏（本项目的灵魂，勿违反）
 
 - 闭环结果**无论收敛与否都如实报告**；未越过阈值就写“执行成功但未实现 Pareto 扩展（诚实 null）”。
-- 前瞻性主张必须有 **git commit + push 时间戳** 在实验之前（见 `research/prospective/`）。
+- 前瞻性主张必须有 **git commit + push 时间戳** 在实验之前（见 `experiments/prospective/`）。
 - 允许 / 禁止声称的边界写在各 PREREGISTRATION.md 与 `official_recipe.json`；
   **驾驶舱前端只展示“测量 + 实证留痕”**，声称类文字归到论文/预注册层（不放前端）。
 - **12 条系统不变量**（B 轨权威性硬约束，写进代码）见 `OPTIMIZATION_EXECUTION_PLAN_20260622.md §4`：例如 Agent 不得直连 `hw.enqueue_command`、人工 override 必隔离留痕、未 Committed 观察不得进 BO、Instrument success 不得自动等价 PhysicalEffect=confirmed 等。
 - 当前线 B 官方第一轮 recipe：raw MOBO `R=0.0285/N=0.9841` → LLM 修正 **`R=0.28/N=0.96`**
-  （safety passed，见 `research/prospective/line_B_mobo_closed_loop/official_recipe.json`），尚未合成。
+  （safety passed，见 `experiments/prospective/line_B_mobo_closed_loop/official_recipe.json`），尚未合成。
 
 ## 7. 当前进度速记（2026-06-24）
 

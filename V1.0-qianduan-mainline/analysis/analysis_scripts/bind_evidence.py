@@ -11,7 +11,7 @@ import math
 from pathlib import Path
 
 REPO = next(_p for _p in Path(__file__).resolve().parents if _p.name == "V1.0-qianduan-mainline").parent
-OUT = REPO / "research"
+OUT = REPO / "experiments"
 DATA = OUT / "data"
 FEEDBACK = REPO / "V1.0-qianduan-mainline/stage3_mechanism/data/validation/experimental_feedback.json"
 HISTORY = REPO / "V1.0-qianduan-mainline/stage1_optimization/campaign_memory/history_db_attapulgite.json"

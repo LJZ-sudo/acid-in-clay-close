@@ -27,7 +27,7 @@ except Exception:
 import numpy as np
 
 HERE = Path(__file__).resolve()
-NDA = (next(_p for _p in HERE.parents if _p.name == "V1.0-qianduan-mainline").parent / "research")
+NDA = (next(_p for _p in HERE.parents if _p.name == "V1.0-qianduan-mainline").parent / "experiments")
 MAIN = NDA.parent / "V1.0-qianduan-mainline"
 # G-5:多批 live 合并审计 —— fe2 + fe3 + fe4b 三次真机 run 的谱合并配对,
 # 凑满预注册验收门的 paired_points≥30(单 run 也够,合并=跨 run 稳健性更强)。

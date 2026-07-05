@@ -6,7 +6,7 @@ in the exact schema needed for (a) Line A experimental_feedback records and
 import json
 from pathlib import Path
 
-RESEARCH = (next(_p for _p in Path(__file__).resolve().parents if _p.name == "V1.0-qianduan-mainline").parent / "research")
+RESEARCH = (next(_p for _p in Path(__file__).resolve().parents if _p.name == "V1.0-qianduan-mainline").parent / "experiments")
 OUT = RESEARCH          # anchors.json 输出仍在 research 根
 DATA = RESEARCH / "data"  # 数据集目录
 ANCHORS_K = [299.15, 273.15, 253.15, 233.15, 213.15, 193.15]

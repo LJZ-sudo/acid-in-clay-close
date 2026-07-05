@@ -2,7 +2,7 @@
 """P0 — Reproducibility + measurement-confidence calibration (v0), all REAL data.
 
 Reads the already-processed, canonical stage0 offline outputs in
-``research/data/<dataset>/aggregated_results.json`` (per-point real
+``experiments/data/<dataset>/aggregated_results.json`` (per-point real
 features: kk_score, kk_mu_max, rb_ohm, rb_method, conductivity, T) and the
 matching ``arrhenius_analysis.json`` (segment Ea). It does NOT re-parse raw
 spectra and NEVER fabricates numbers; if a quantity is not computable it is
@@ -41,7 +41,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 HERE = Path(__file__).resolve().parent
-NDA = HERE.parents[2] / "research"
+NDA = HERE.parents[2] / "experiments"
 
 # 6 canonical datasets (process_all.py). s1/s2/s3 are sub-sessions of 6.15_merged
 # and are excluded to avoid double-counting; lineB_R0.42 (no suffix) is legacy.

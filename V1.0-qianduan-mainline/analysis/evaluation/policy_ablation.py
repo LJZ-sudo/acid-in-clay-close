@@ -37,7 +37,7 @@ from safety.safety_validator import SafetyValidator  # noqa: E402
 
 CAMPAIGN = STAGE1 / "campaigns" / "attapulgite_aice_campaign.json"
 HISTORY_DB = STAGE1 / "campaign_memory" / "history_db_attapulgite.json"
-OFFICIAL_RECIPE = REPO_ROOT / "research" / "prospective" / "line_B_mobo_closed_loop" / "official_recipe.json"
+OFFICIAL_RECIPE = REPO_ROOT / "experiments" / "prospective" / "line_B_mobo_closed_loop" / "official_recipe.json"
 
 
 def _observed_r_range() -> Tuple[float, float]:
@@ -176,7 +176,7 @@ def run(out_subdir: str = "policy_ablation") -> Dict[str, Any]:
         },
         "verdict": verdict,
     }
-    out_dir = REPO_ROOT / "research" / "results" / out_subdir
+    out_dir = REPO_ROOT / "experiments" / "results" / out_subdir
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "policy_ablation_v2.json").write_text(
         json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")

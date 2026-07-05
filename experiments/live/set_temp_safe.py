@@ -6,7 +6,7 @@ import sys
 import time
 from pathlib import Path
 
-STAGE0 = next(_p for _p in Path(__file__).resolve().parents if _p.name == "research").parent / "V1.0-qianduan-mainline" / "stage0_measurement"
+STAGE0 = next(_p for _p in Path(__file__).resolve().parents if _p.name == "experiments").parent / "V1.0-qianduan-mainline" / "stage0_measurement"
 sys.path.insert(0, str(STAGE0))
 from modules.hardware import TemperatureDriver  # noqa: E402
 

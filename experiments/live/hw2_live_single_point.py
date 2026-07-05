@@ -24,7 +24,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-REPO = next(_p for _p in Path(__file__).resolve().parents if _p.name == "research").parent
+REPO = next(_p for _p in Path(__file__).resolve().parents if _p.name == "experiments").parent
 MAIN = REPO / "V1.0-qianduan-mainline"
 STAGE0 = MAIN / "stage0_measurement"
 sys.path.insert(0, str(STAGE0))

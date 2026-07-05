@@ -24,7 +24,7 @@ import matplotlib.pyplot as plt
 from matplotlib import font_manager
 
 REPO = next(_p for _p in Path(__file__).resolve().parents if _p.name == "V1.0-qianduan-mainline").parent
-OUT = REPO / "research" / "data"
+OUT = REPO / "experiments" / "data"
 FIGDIR = REPO / "manuscript" / "figures"
 FIGDIR.mkdir(parents=True, exist_ok=True)
 

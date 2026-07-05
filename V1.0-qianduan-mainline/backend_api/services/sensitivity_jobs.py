@@ -19,7 +19,7 @@ from typing import Any, Dict, List, Optional
 # services/ -> backend_api/ -> mainline root -> repo root
 MAINLINE_ROOT = Path(__file__).resolve().parents[2]
 REPO_ROOT = MAINLINE_ROOT.parent
-NDA = REPO_ROOT / "research"
+NDA = REPO_ROOT / "experiments"
 
 
 def _read_json(path: Path) -> Optional[Dict[str, Any]]:

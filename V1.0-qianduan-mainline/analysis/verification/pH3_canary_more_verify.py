@@ -26,7 +26,7 @@ except Exception:
     pass
 
 HERE = Path(__file__).resolve()
-NDA = (next(_p for _p in HERE.parents if _p.name == "V1.0-qianduan-mainline").parent / "research")
+NDA = (next(_p for _p in HERE.parents if _p.name == "V1.0-qianduan-mainline").parent / "experiments")
 MAIN = NDA.parent / "V1.0-qianduan-mainline"
 for p in (str(MAIN), str(MAIN / "stage1_optimization"), str(MAIN / "analysis")):
     if p not in sys.path:
