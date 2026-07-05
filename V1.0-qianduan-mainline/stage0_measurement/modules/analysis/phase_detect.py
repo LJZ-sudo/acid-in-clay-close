@@ -504,7 +504,10 @@ def _safe_default_response(
         },
         'confidence': 1.0 if action == 'CONTINUE' else 0.5,
         'warnings': [error] if error else [],
-        'error': error
+        'error': error,
+        # 诚实标记:此路径为规则回退,LLM 未被(成功)调用。
+        # 修复历史误报:hardware_adapter 曾以"有 api_key"兜底推断 llm_called=true。
+        'llm_called': False,
     }
 
 
@@ -546,6 +549,91 @@ def _apply_safety_rails(decision: Dict[str, Any], context: Dict[str, Any]) -> Di
                 )
     
     return decision
+
+
+# ============================================================
+# 辅助函数：构建决策用户消息（注入 R²-Memory + C³ 收敛证书）
+# ============================================================
+
+def _json_default(o: Any):
+    """json.dumps 兜底:numpy 布尔/整型/浮点/数组 → 原生类型。
+
+    residual_analysis 等信号自 n_points≥11 起会携带 numpy 标量(np.bool_ 等),
+    直接 dumps 会抛 'Object of type bool_ is not JSON serializable' →
+    LLM 调用被跳过、静默回落规则决策(fe4b 真机长跑步 10+ 实际踩中)。
+    """
+    try:
+        import numpy as np
+        if isinstance(o, np.bool_):
+            return bool(o)
+        if isinstance(o, np.integer):
+            return int(o)
+        if isinstance(o, np.floating):
+            return float(o)
+        if isinstance(o, np.ndarray):
+            return o.tolist()
+    except ImportError:
+        pass
+    return str(o)
+
+
+def build_decision_user_message(
+    context: Dict[str, Any],
+    memory_projection: Optional[Dict[str, Any]] = None,
+    convergence: Optional[Dict[str, Any]] = None,
+) -> str:
+    """构建发给 LLM 的用户消息。
+
+    除 Rb 信号外,**注入两块经治理的 agent 上下文**(这正是"把 agent 大脑接进
+    闭环"的关键:LLM 不再只看裸 Rb,而是带着治理过的记忆 + 收敛证据做判断):
+
+      - ``memory_projection``: R²-Memory 角色投影(本域记忆 + 外域只读参照)。
+        外域参照 ``usable_as_training_label=False`` —— LLM 可参考,但绝不可当本域标签。
+      - ``convergence``: C³-Harness 收敛证书快照(计量不确定度 / 复现地板 / 推荐动作)。
+        用于让 LLM 在"是否还要继续/补测"上对齐治理层,而非只看 Rb 曲线形状。
+    """
+    user_message_data = {
+        'status': context['status'],
+        'n_points': context['n_points'],
+        'rb_jump_analysis': context['rb_jump_analysis'],
+        'rb_cumulative_growth': context['rb_cumulative_growth'],
+        'residual_analysis': context['residual_analysis'],
+        'quality_warnings': context['quality_warnings'],
+        'current_temperature_K': context['current_temperature_K'],
+        'detection_summary': context['detection_summary'],
+    }
+
+    parts: List[str] = ["请分析以下实验数据并给出决策：", ""]
+    parts.append("## Rb 相变信号")
+    parts.append(json.dumps(user_message_data, indent=2, ensure_ascii=False,
+                            default=_json_default))
+
+    if memory_projection:
+        parts.append("")
+        parts.append(
+            "## 治理记忆（R²-Memory，经写门/用途门/来源域守卫的角色投影）\n"
+            "- in_domain_recent 为本域可作决策上下文的测量记忆。\n"
+            "- cross_domain_refs 为外域迁移参照：仅作只读启发，"
+            "usable_as_training_label=False 表示治理层禁止其成为本域标签，"
+            "你也不得据其直接对本域下结论。"
+        )
+        parts.append(json.dumps(memory_projection, indent=2, ensure_ascii=False,
+                                default=_json_default))
+
+    if convergence:
+        parts.append("")
+        parts.append(
+            "## 收敛证据（C³-Harness shadow 证书快照）\n"
+            "- recommended_action / delta_vs_legacy 为治理层对“停止 vs 继续”的裁决。\n"
+            "- 若复现地板未满（reproducibility have<required）或计量不确定度偏高，"
+            "即便 Rb 看似平滑，也不应过早判定收敛；据此校准你的 confidence。"
+        )
+        parts.append(json.dumps(convergence, indent=2, ensure_ascii=False,
+                                default=_json_default))
+
+    parts.append("")
+    parts.append("请严格按照 JSON 格式输出决策结果。")
+    return "\n".join(parts)
 
 
 # ============================================================
@@ -694,26 +782,14 @@ def analyze_experiment_state(
                 current_temp_K=context.get('current_temperature_K')
             )
     
-    # ===== 步骤 6: 构建用户消息 =====
+    # ===== 步骤 6: 构建用户消息（注入治理记忆 + 收敛证书）=====
     try:
-        # 精简数据（只发送摘要，不发送完整 full_data）
-        user_message_data = {
-            'status': context['status'],
-            'n_points': context['n_points'],
-            'rb_jump_analysis': context['rb_jump_analysis'],
-            'rb_cumulative_growth': context['rb_cumulative_growth'],
-            'residual_analysis': context['residual_analysis'],
-            'quality_warnings': context['quality_warnings'],
-            'current_temperature_K': context['current_temperature_K'],
-            'detection_summary': context['detection_summary']
-        }
-        
-        user_message = f"""请分析以下实验数据并给出决策：
-
-{json.dumps(user_message_data, indent=2, ensure_ascii=False)}
-
-请严格按照 JSON 格式输出决策结果。
-"""
+        # 精简数据（只发送摘要，不发送完整 full_data）+ R²-Memory / C³ 上下文。
+        user_message = build_decision_user_message(
+            context,
+            memory_projection=agent_context.get('memory_projection'),
+            convergence=agent_context.get('convergence'),
+        )
     
     except Exception as e:
         return _safe_default_response(
@@ -752,6 +828,7 @@ def analyze_experiment_state(
         decision = json.loads(raw_response)
         decision['success'] = True
         decision['error'] = None
+        decision['llm_called'] = True  # 只有真实走到这里(LLM 返回并解析成功)才为 True
         
     except json.JSONDecodeError as e:
         return _safe_default_response(

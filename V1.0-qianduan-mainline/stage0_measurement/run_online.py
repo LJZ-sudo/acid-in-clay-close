@@ -177,9 +177,9 @@ def parse_arguments():
         type=str,
         choices=["off", "shadow", "canary", "enforce"],
         default=None,
-        help=("Harness 模式。run_online 是人工启动的定温扫描,**只有 shadow 对它有意义**"
-              "(旁路记录、不夺控制权);canary/enforce 属自主控制路径(backend agent + SciTX 事务,"
-              "见 WP4),在本脚本会**安全降级为 shadow 记录并显式告警**,绝不在此假装 enforce。")
+        help=("Harness 模式。P13-D:canary/enforce **不再降级**,其真实语义 = 仅作用于"
+              "测量提交路径(被拒点挡出 BO,由 mode 感知 commit gate 执行);温控/CHI 物理命令"
+              "永不门控(安全)。三重提交 harness 在 shadow/canary/enforce 下均记录;off 不记录。")
     )
     parser.add_argument(
         "--shadow_harness_dir",
@@ -264,21 +264,28 @@ def create_eis_analyzer(shadow_recorder=None):
 
 
 def _resolve_harness_mode(args) -> str:
-    """归一 --harness_mode 与兼容别名 --shadow_harness;canary/enforce 在本脚本降级 shadow。"""
+    """归一 --harness_mode 与兼容别名 --shadow_harness。
+
+    P13-D:**不再把 canary/enforce 硬降级为 shadow**。canary/enforce 在本脚本的
+    真实语义 = **仅作用于测量提交路径**(被拒点是否挡出 BO,由 mode 感知的 commit gate 执行,
+    见 `hardware_adapter._commit_gate_mode` + `commit_gate.filter_bundle_eis_points`);
+    **绝不门控温控/CHI 物理命令**(安全)。run_online 自身无自主硬件命令路径,故此处只做:
+    三重提交 harness 照常记录 + 打印真实作用域;命令路径 enforce 的真机灰度属 §13.B G-4。
+    """
     mode = getattr(args, "harness_mode", None)
     if mode is None:
         mode = "shadow" if getattr(args, "shadow_harness", False) else "off"
     if mode in ("canary", "enforce"):
-        # 诚实:run_online 是人工定温扫描,无自主决策可被 SciTX 事务接管 → 降级 shadow 记录
-        print(f"   ⚠️ harness_mode={mode} 属自主控制路径(backend agent + SciTX,见 WP4);"
-              f"本脚本无自主动作可接管 → 安全降级为 shadow 记录(绝不在此假装 {mode})。")
-        mode = "shadow"
+        print(f"   🔒 harness_mode={mode}:仅作用于**测量提交路径**(被拒点挡出 BO,"
+              f"由 mode 感知 commit gate 执行);**温控/CHI 物理命令永不门控**(安全)。"
+              f"三重提交 harness 照常记录;命令路径 enforce 真机灰度见 G-4。")
     return mode
 
 
 def _maybe_build_shadow_recorder(args):
-    """按 harness_mode 构造 shadow 记录器;任何失败都返回 None(不影响主流程)。"""
-    if _resolve_harness_mode(args) != "shadow":
+    """按 harness_mode 构造三重提交记录器;任何失败都返回 None(不影响主流程)。
+    P13-D:shadow/canary/enforce 均记录(记录器本身只观测);off 不记录。"""
+    if _resolve_harness_mode(args) not in ("shadow", "canary", "enforce"):
         return None
     try:
         # 把 stage1_optimization 加到 path,按 scientific_harness.* 顶层导入,

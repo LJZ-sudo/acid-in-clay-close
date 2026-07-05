@@ -1,0 +1,95 @@
+{
+  "step_id": "s04_hypotheses",
+  "hypotheses": [
+    {
+      "hypothesis_id": "H1",
+      "mechanism_label": "Sequential freezing of weakly bound then strongly confined acid-water chains",
+      "description": "Proton transport occurs along hydrogen-bonded phosphoric-acid/water chains confined in attapulgite nanochannels, with hopping assisted by local molecular reorientation. Two thermally induced changes occur because weakly bound channel water loses mobility first near the higher-temperature break, while a more strongly confined interfacial population remains active until a lower-temperature crossover.",
+      "key_prediction": "Two distinct changes in water/acid mobility should be observable: a first loss of weakly bound water dynamics near the upper break and a second suppression of residual interfacial chain reorientation near the lower break, with the lowest-temperature regime dominated by a small residual hopping channel rather than complete vitrification.",
+      "mechanism_axes": {
+        "transport": "hybrid_grotthuss_vehicular",
+        "phase_structure": "multi_threshold_confined_domains",
+        "temperature_dependence": "piecewise_Arrhenius",
+        "transition_topology": "multi_transition",
+        "carrier_medium_state": "two_populations_strong_weak_bound"
+      },
+      "supporting_evidence_ids": [
+        "V2-E2",
+        "V2-E3",
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "conflicting_evidence_ids": [],
+      "prior_plausibility": 0.83
+    },
+    {
+      "hypothesis_id": "H2",
+      "mechanism_label": "Interfacial phosphoric-acid network with low-temperature handoff to surface-bound proton hopping",
+      "description": "The dominant conductive phase is an interfacial acid-rich layer coating the 1-D clay channel surfaces rather than a bulk-like channel filling. At higher temperatures, proton motion includes mobility of acid-water complexes along the interface, but cooling drives a handoff to more localized proton exchange among surface-bound phosphate/water motifs, producing two Arrhenius breaks.",
+      "key_prediction": "Conductivity should scale more strongly with available clay surface/interfacial occupancy than with total free pore filling, and the lowest-temperature conduction should persist even when more mobile pore water is suppressed because the residual pathway is surface-anchored.",
+      "mechanism_axes": {
+        "transport": "hybrid_grotthuss_vehicular",
+        "phase_structure": "core_shell_interfacial",
+        "temperature_dependence": "piecewise_Arrhenius",
+        "transition_topology": "multi_transition",
+        "carrier_medium_state": "interfacial_only"
+      },
+      "supporting_evidence_ids": [
+        "V2-E2",
+        "V2-E3",
+        "E2",
+        "E3"
+      ],
+      "conflicting_evidence_ids": [],
+      "prior_plausibility": 0.68
+    },
+    {
+      "hypothesis_id": "H3",
+      "mechanism_label": "Predominantly Grotthuss transport in a single confined acid-water population with two dynamical crossovers",
+      "description": "The confined phosphoric-acid/water medium behaves as one continuous hydrogen-bonded population, but its proton-transfer kinetics pass through two dynamical crossovers as rotational and translational relaxation slow on cooling. The breaks reflect changes in reorganization dynamics within one connected phase, not separation into distinct carrier populations.",
+      "key_prediction": "Spectroscopy or calorimetry would show broadened, distributed dynamical changes rather than two sharply separable water populations; despite the segmented Arrhenius behavior, structural continuity of the proton-conducting network should remain intact across the whole temperature window.",
+      "mechanism_axes": {
+        "transport": "Grotthuss_hopping",
+        "phase_structure": "single_continuous_phase",
+        "temperature_dependence": "piecewise_Arrhenius",
+        "transition_topology": "multi_transition",
+        "carrier_medium_state": "single_confined_population"
+      },
+      "supporting_evidence_ids": [
+        "V2-E1",
+        "V2-E2",
+        "E1",
+        "E3"
+      ],
+      "conflicting_evidence_ids": [
+        "V2-E3"
+      ],
+      "prior_plausibility": 0.57
+    },
+    {
+      "hypothesis_id": "H4",
+      "mechanism_label": "Cooling-driven percolation loss of channel-filling acid-water domains leaving a residual interfacial pathway",
+      "description": "At higher temperature the acid/water phase percolates through the 1-D channel network, but cooling causes sequential loss of connectivity in less confined channel-filling domains. After the first threshold, transport is restricted to narrower or better-connected channel subsets; after the second, only a sparse residual interfacial pathway remains, giving the very low conductivity and altered apparent Ea.",
+      "key_prediction": "The conductivity breaks should correlate with connectivity-sensitive signatures such as abrupt changes in effective capacitance/tortuosity proxies or stronger dependence on acid-water loading N than expected for a purely local hopping crossover.",
+      "mechanism_axes": {
+        "transport": "vehicular_diffusion",
+        "phase_structure": "single_percolation_threshold",
+        "temperature_dependence": "piecewise_Arrhenius",
+        "transition_topology": "multi_transition",
+        "carrier_medium_state": "two_populations_strong_weak_bound"
+      },
+      "supporting_evidence_ids": [
+        "V2-E2",
+        "V2-E3",
+        "E2",
+        "E3"
+      ],
+      "conflicting_evidence_ids": [
+        "V2-E3"
+      ],
+      "prior_plausibility": 0.39
+    }
+  ],
+  "reasoning_notes": "The hypotheses compete mainly on transport mode (Grotthuss-dominant, hybrid, or more vehicular/percolative), conductive-phase topology (continuous confined network, interfacial shell, or connectivity-limited domains), and carrier-medium state (single confined population versus distinct weakly/strongly bound water-acid populations). All are anchored to the robust evidence for three Arrhenius segments and two transitions, while avoiding overreliance on ambiguous EIS morphology."
+}

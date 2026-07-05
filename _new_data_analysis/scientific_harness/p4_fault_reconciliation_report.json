@@ -1,0 +1,239 @@
+{
+  "title": "Phase 4 / Tier-S 故障注入对账证据(双治理路径,真机谱)",
+  "sample_id": "ATP-R0.186-N1.029-live-fulltemp",
+  "geometry": {
+    "thickness_cm": 0.0564,
+    "area_cm2": 1.96
+  },
+  "path_A_commit_controller": {
+    "demo": "A - tri-commit physical belief-state harness",
+    "scenarios": [
+      {
+        "scenario": "healthy",
+        "fault": "NONE",
+        "physical_commit": "EFFECT_OBSERVED",
+        "metrological_commit": "VALID",
+        "epistemic_commit": "PRIMARY_EVIDENCE",
+        "entered_bo": true,
+        "expected_entered_bo": true,
+        "match": true,
+        "blind_retry_count": 0,
+        "reconciled": false
+      },
+      {
+        "scenario": "ack_lost_file_ok",
+        "fault": "TIMEOUT_ACK_LOST_FILE_OK",
+        "physical_commit": "RECONSTRUCTED",
+        "metrological_commit": "VALID",
+        "epistemic_commit": "PRIMARY_EVIDENCE",
+        "entered_bo": true,
+        "expected_entered_bo": true,
+        "match": true,
+        "blind_retry_count": 0,
+        "reconciled": true
+      },
+      {
+        "scenario": "timeout_no_effect",
+        "fault": "TIMEOUT_NO_EFFECT",
+        "physical_commit": "FAILED",
+        "metrological_commit": "INVALID",
+        "epistemic_commit": "REJECTED",
+        "entered_bo": false,
+        "expected_entered_bo": false,
+        "match": true,
+        "blind_retry_count": 0,
+        "reconciled": true
+      },
+      {
+        "scenario": "temp_not_equilibrated",
+        "fault": "TEMP_NOT_EQUILIBRATED",
+        "physical_commit": "EFFECT_OBSERVED",
+        "metrological_commit": "INVALID",
+        "epistemic_commit": "REJECTED",
+        "entered_bo": false,
+        "expected_entered_bo": false,
+        "match": true,
+        "blind_retry_count": 0,
+        "reconciled": false
+      },
+      {
+        "scenario": "calibration_expired",
+        "fault": "CALIBRATION_EXPIRED",
+        "physical_commit": "EFFECT_OBSERVED",
+        "metrological_commit": "INVALID",
+        "epistemic_commit": "REJECTED",
+        "entered_bo": false,
+        "expected_entered_bo": false,
+        "match": true,
+        "blind_retry_count": 0,
+        "reconciled": false
+      },
+      {
+        "scenario": "kk_fail",
+        "fault": "KK_FAIL",
+        "physical_commit": "EFFECT_OBSERVED",
+        "metrological_commit": "INVALID",
+        "epistemic_commit": "REJECTED",
+        "entered_bo": false,
+        "expected_entered_bo": false,
+        "match": true,
+        "blind_retry_count": 0,
+        "reconciled": false
+      }
+    ],
+    "acceptance": {
+      "blind_retry_count": 0,
+      "invalid_into_bo_count": 0,
+      "physical_state_reconstructed_correctly": true,
+      "all_scenarios_match_expectation": true,
+      "event_chain_valid": true
+    },
+    "acceptance_pass": true,
+    "n_events": 32
+  },
+  "path_B_measurement_txn": {
+    "path": "B - measurement_txn (前端 live 同源)",
+    "baseline": {
+      "source_file": "ATP-R0p186-N1p029-live-fulltemp_T12p0_f0p1_1000000_V0.txt",
+      "temperature_C": 12.0,
+      "kk_residual": 0.00714656971413572,
+      "rb_decision": "REPORT",
+      "rb_act_signals": {
+        "rb_method_spread_dex": 0.00027860780594366104,
+        "rb_method_success": true,
+        "ecm_fallback": false,
+        "uncertainty_status": "QUANTIFIED"
+      }
+    },
+    "scenarios": [
+      {
+        "scenario": "healthy",
+        "entered_bo": true,
+        "expected_entered_bo": true,
+        "bo_match": true,
+        "blind_retry_count": 0,
+        "must_reject_uses": [],
+        "must_reject_satisfied": true,
+        "admissions": {
+          "U1": "ADMIT",
+          "U2": "ADMIT",
+          "U3": "REJECT",
+          "U4": "REJECT",
+          "U5": "ADMIT",
+          "U6": "REJECT"
+        }
+      },
+      {
+        "scenario": "no_file",
+        "entered_bo": false,
+        "expected_entered_bo": false,
+        "bo_match": true,
+        "blind_retry_count": 0,
+        "must_reject_uses": [
+          "U1",
+          "U2",
+          "U3",
+          "U4",
+          "U5",
+          "U6"
+        ],
+        "must_reject_satisfied": true,
+        "admissions": {
+          "U1": "REJECT",
+          "U2": "REJECT",
+          "U3": "REJECT",
+          "U4": "REJECT",
+          "U5": "REJECT",
+          "U6": "REJECT"
+        }
+      },
+      {
+        "scenario": "sample_mismatch",
+        "entered_bo": false,
+        "expected_entered_bo": false,
+        "bo_match": true,
+        "blind_retry_count": 0,
+        "must_reject_uses": [
+          "U1",
+          "U2",
+          "U3",
+          "U4",
+          "U5",
+          "U6"
+        ],
+        "must_reject_satisfied": true,
+        "admissions": {
+          "U1": "REJECT",
+          "U2": "REJECT",
+          "U3": "REJECT",
+          "U4": "REJECT",
+          "U5": "REJECT",
+          "U6": "REJECT"
+        }
+      },
+      {
+        "scenario": "kk_fail",
+        "entered_bo": false,
+        "expected_entered_bo": false,
+        "bo_match": true,
+        "blind_retry_count": 0,
+        "must_reject_uses": [
+          "U5"
+        ],
+        "must_reject_satisfied": true,
+        "admissions": {
+          "U1": "ADMIT",
+          "U2": "ADMIT",
+          "U3": "REJECT",
+          "U4": "REJECT",
+          "U5": "REJECT",
+          "U6": "REJECT"
+        }
+      },
+      {
+        "scenario": "rb_abstain",
+        "entered_bo": false,
+        "expected_entered_bo": false,
+        "bo_match": true,
+        "blind_retry_count": 0,
+        "must_reject_uses": [
+          "U2",
+          "U5"
+        ],
+        "must_reject_satisfied": true,
+        "admissions": {
+          "U1": "ADMIT",
+          "U2": "REJECT",
+          "U3": "REJECT",
+          "U4": "REJECT",
+          "U5": "REJECT",
+          "U6": "REJECT"
+        }
+      }
+    ],
+    "acceptance": {
+      "invalid_into_bo_count": 0,
+      "healthy_entered_bo": true,
+      "all_bo_match_expectation": true,
+      "all_fault_uses_rejected": true,
+      "blind_retry_count": 0
+    },
+    "acceptance_pass": true
+  },
+  "honest_scope": {
+    "online_witness_faults": [
+      "ack_lost_file_ok",
+      "timeout_no_effect",
+      "temp_not_equilibrated",
+      "calibration_expired"
+    ],
+    "bundle_level_faults": [
+      "no_file",
+      "kk_fail",
+      "sample_mismatch",
+      "rb_abstain"
+    ],
+    "note": "在线见证类故障只能由仪器 ground-truth 对账(路径 A 模拟器/真机);bundle 可判类用真机谱走前端同源准入(路径 B)。两路合并即完整故障谱。"
+  },
+  "tier_s_gate_pass": true
+}

@@ -37,6 +37,19 @@ const useAgentStore = create((set, get) => ({
 
   toolCallHistory: [],
 
+  // ========== ESAS-OS 2.0 治理（B 轨）逐点状态（Phase 2，纯加法）==========
+  // 由后端 SHADOW_VERDICT / RBACT_DECISION / TXN_ADMISSION 事件喂入。
+  governanceByStep: {},
+
+  governanceSummary: {
+    nShadow: 0, shadowAgree: 0, shadowAgreementRate: null, shadowBlindRetry: 0,
+    nRbact: 0, rbactReport: 0, rbactAbstain: 0, rbactFlips: 0,
+    nTxn: 0, txnEnteredBo: 0,
+  },
+
+  // 当前治理面板展示的 run（历史回放/实时归属），用于跨 run 防串行。
+  governanceRunId: null,
+
   // ========== Actions ==========
 
   /**
@@ -158,6 +171,94 @@ const useAgentStore = create((set, get) => ({
     toolCallCounts: {},
     toolCallHistory: [],
   }),
+
+  /**
+   * 记录一条治理事件（shadow / Rb-ACT / txn），按 step_idx 归并成逐点行 + 累计汇总。
+   * 纯加法、fail-safe：解析异常时静默忽略，绝不影响思考链与其它状态。
+   */
+  recordGovernance: (type, payload = {}) => set((state) => {
+    try {
+      const step = Number(payload.step_idx ?? -1)
+      const byStep = { ...state.governanceByStep }
+      const row = { ...(byStep[step] || { step_idx: step, temperature_C: payload.temperature_C }) }
+      if (payload.temperature_C != null) row.temperature_C = payload.temperature_C
+      const sum = { ...state.governanceSummary }
+
+      if (type === 'SHADOW_VERDICT') {
+        row.shadow = {
+          agree: payload.agree,
+          agreementRate: payload.agreement_rate,
+          blindRetry: payload.blind_retry_count,
+        }
+        sum.nShadow += 1
+        if (payload.agree) sum.shadowAgree += 1
+        if (payload.agreement_rate != null) sum.shadowAgreementRate = payload.agreement_rate
+        if (payload.blind_retry_count != null) sum.shadowBlindRetry = payload.blind_retry_count
+      } else if (type === 'RBACT_DECISION') {
+        row.rbact = {
+          decision: payload.decision,
+          rbactRb: payload.rbact_rb_ohm,
+          legacyRb: payload.legacy_rb_ohm,
+          dlog: payload.abs_dlog10_rb,
+          flip: payload.unexplained_flip,
+        }
+        sum.nRbact += 1
+        if (String(payload.decision || '').toUpperCase().includes('ABSTAIN')) sum.rbactAbstain += 1
+        else sum.rbactReport += 1
+        if (payload.unexplained_flip) sum.rbactFlips += 1
+      } else if (type === 'TXN_ADMISSION') {
+        row.txn = {
+          enteredBo: payload.entered_bo,
+          blindRetry: payload.blind_retry_count,
+          admissions: payload.admissions || {},
+        }
+        sum.nTxn += 1
+        if (payload.entered_bo) sum.txnEnteredBo += 1
+      } else {
+        return {}
+      }
+
+      byStep[step] = row
+      return { governanceByStep: byStep, governanceSummary: sum }
+    } catch {
+      return {}
+    }
+  }),
+
+  /**
+   * 清空治理逐点状态（开始新 run / 切换回放 run 时调用），可选记录归属 runId。
+   */
+  resetGovernance: (runId = null) => set({
+    governanceByStep: {},
+    governanceSummary: {
+      nShadow: 0, shadowAgree: 0, shadowAgreementRate: null, shadowBlindRetry: 0,
+      nRbact: 0, rbactReport: 0, rbactAbstain: 0, rbactFlips: 0,
+      nTxn: 0, txnEnteredBo: 0,
+    },
+    governanceRunId: runId,
+  }),
+
+  /**
+   * 历史回放：从 events.jsonl 拉到的事件列表里筛出治理事件，先清空再按序重放，
+   * 复用 recordGovernance 逻辑，保证与实时同源、且不会与实时重复计数（先 reset）。
+   * @param {string} runId 归属 run
+   * @param {Array} events 该 run 的完整事件列表（含非治理事件，内部自行过滤）
+   */
+  loadGovernanceHistory: (runId, events = []) => {
+    get().resetGovernance(runId)
+    const GOV = new Set(['SHADOW_VERDICT', 'RBACT_DECISION', 'TXN_ADMISSION'])
+    const rows = Array.isArray(events) ? events : []
+    for (const ev of rows) {
+      try {
+        const t = String(ev?.type || ev?.event_type || '').toUpperCase()
+        if (!GOV.has(t)) continue
+        const pl = (ev?.payload && typeof ev.payload === 'object') ? ev.payload : ev
+        get().recordGovernance(t, pl)
+      } catch {
+        // fail-safe：单条坏事件不影响整体回放
+      }
+    }
+  },
 
   /**
    * Handle SSE/WS events (supports type and event_type)
@@ -373,6 +474,20 @@ const useAgentStore = create((set, get) => ({
         }
         break
 
+      case 'EXPERIMENT_STARTED':
+        // 新 run 开始：清空治理逐点状态，归属到本 run，避免与上一次回放/实时按 step 串行。
+        get().resetGovernance(merged.run_id || payload.run_id || null)
+        addThought('agent_call')
+        break
+
+      case 'SHADOW_VERDICT':
+      case 'RBACT_DECISION':
+      case 'TXN_ADMISSION':
+        // ESAS-OS 2.0 治理事件：归并到逐点治理状态 + 同时进思考链(可见)。
+        get().recordGovernance(type, payload)
+        addThought('governance', { data: merged })
+        break
+
       case 'WARNING':
         addThought('trigger', { content: message || 'Warning event', data: merged })
         break
@@ -419,6 +534,13 @@ const useAgentStore = create((set, get) => ({
     activeTools: [],
     toolCallCounts: {},
     toolCallHistory: [],
+    governanceByStep: {},
+    governanceSummary: {
+      nShadow: 0, shadowAgree: 0, shadowAgreementRate: null, shadowBlindRetry: 0,
+      nRbact: 0, rbactReport: 0, rbactAbstain: 0, rbactFlips: 0,
+      nTxn: 0, txnEnteredBo: 0,
+    },
+    governanceRunId: null,
   }),
 
   /**

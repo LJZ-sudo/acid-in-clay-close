@@ -1,0 +1,219 @@
+{
+  "llm_used": true,
+  "llm_calls": [
+    {
+      "role": "proposer",
+      "model": "openai/gpt-5.4",
+      "prompt_tokens": 379,
+      "completion_tokens": 506
+    },
+    {
+      "role": "falsifier",
+      "model": "openai/gpt-5.4",
+      "prompt_tokens": 179,
+      "completion_tokens": 130
+    },
+    {
+      "role": "auditor",
+      "model": "openai/gpt-5.4",
+      "prompt_tokens": 110,
+      "completion_tokens": 100
+    },
+    {
+      "role": "falsifier",
+      "model": "openai/gpt-5.4",
+      "prompt_tokens": 169,
+      "completion_tokens": 150
+    },
+    {
+      "role": "auditor",
+      "model": "openai/gpt-5.4",
+      "prompt_tokens": 110,
+      "completion_tokens": 99
+    },
+    {
+      "role": "falsifier",
+      "model": "openai/gpt-5.4",
+      "prompt_tokens": 159,
+      "completion_tokens": 169
+    },
+    {
+      "role": "auditor",
+      "model": "openai/gpt-5.4",
+      "prompt_tokens": 110,
+      "completion_tokens": 92
+    },
+    {
+      "role": "falsifier",
+      "model": "openai/gpt-5.4",
+      "prompt_tokens": 149,
+      "completion_tokens": 137
+    },
+    {
+      "role": "auditor",
+      "model": "openai/gpt-5.4",
+      "prompt_tokens": 110,
+      "completion_tokens": 90
+    }
+  ],
+  "contracts": [
+    {
+      "agent": "LLM_Proposer",
+      "claim_model": "arrhenius",
+      "staked_confidence": 0.72,
+      "domain": {
+        "T_min_K": 261.9,
+        "T_max_K": 286.6
+      },
+      "falsification_conditions": "['在同一温区内补充更多点后，lnσ–1/T 明显呈系统性弯曲，且弯曲幅度超出实验噪声，优于单直线拟合而被 VTF 或 Mott 显著更好描述', '在约 267–272 K 或其他附近出现可重复的斜率突变/拐点，使分段直线拟合相对单直线有明确统计优势', '独立重复测量显示该 6 点中的低温端偏离并非噪声而是稳定非线性趋势，导致活化能随温度显著变化', '样品在此温区的含水状态/相态被证明发生转变，并与电导温度依赖中的折线或玻璃态特征一一对应']",
+      "rationale": "仅就这 6 个暖端数据看，lnσ 随降温单调下降且低温侧变化加快不算特别剧烈；在这样窄的 262–287 K 温窗内，最节制、最可检验的先验是单活化能 Arrhenius。对质子导体黏土而言，暖端常可由局域质子跃迁/水辅助跳迁给出近似线性 lnσ–1/T 关系。该数据中若看相邻点斜率，最低温两点略显更陡，提示轻微曲率或潜在分段的可能，但目前点数少、温窗窄，不足以强推 segmented 或 VTF。Mott 的 T^-1/4 机制通常更常见于电子/极化子无序跳跃体系，对含水黏土质子传导不是首选。故我押注 arrhenius 作为当前最可能机制族，但保留中等幅度的不确定性，主要风险来自低温端初现的非线性/冻结迹象。",
+      "source": "llm"
+    },
+    {
+      "agent": "Strawman_Overconfident",
+      "claim_model": "arrhenius",
+      "staked_confidence": 0.97,
+      "domain": {
+        "T_min_K": 197.35,
+        "T_max_K": 286.65
+      },
+      "falsification_conditions": "总是押单一活化能直线且过度自信",
+      "rationale": "",
+      "source": "strawman"
+    }
+  ],
+  "reputation": {
+    "LLM_Proposer": 0.2881828801076024,
+    "Strawman_Overconfident": 0.10454266639960623
+  },
+  "brier": {
+    "LLM_Proposer": 0.5184,
+    "Strawman_Overconfident": 0.9409
+  },
+  "logloss": {
+    "LLM_Proposer": 1.2729656758128873,
+    "Strawman_Overconfident": 3.506557897319981
+  },
+  "settlements": {
+    "LLM_Proposer": [
+      {
+        "round_idx": 0,
+        "test_T_K": 197.35,
+        "predicted_y": -6.385942937288769,
+        "predicted_sigma": 0.0020299887340023445,
+        "observed_y": -12.98570653828048,
+        "z_score": -3251.133117364428,
+        "survived": false,
+        "outcome": 0,
+        "auditor_admissible": true,
+        "falsifier_T_K": 197.35,
+        "fvpc_best_T_K": 256.95
+      },
+      {
+        "round_idx": 1,
+        "test_T_K": 202.15,
+        "predicted_y": -6.221088808953382,
+        "predicted_sigma": 0.0020299887340023445,
+        "observed_y": -11.709034514675215,
+        "z_score": -2703.436533316,
+        "survived": false,
+        "outcome": 0,
+        "auditor_admissible": true,
+        "falsifier_T_K": 202.15,
+        "fvpc_best_T_K": 252.25
+      },
+      {
+        "round_idx": 2,
+        "test_T_K": 207.05,
+        "predicted_y": -6.06068430228003,
+        "predicted_sigma": 0.0020299887340023445,
+        "observed_y": -10.65647473345209,
+        "z_score": -2263.948737346417,
+        "survived": false,
+        "outcome": 0,
+        "auditor_admissible": true,
+        "falsifier_T_K": 207.05,
+        "fvpc_best_T_K": 247.25
+      },
+      {
+        "round_idx": 3,
+        "test_T_K": 212.15,
+        "predicted_y": -5.901602181694872,
+        "predicted_sigma": 0.0020299887340023445,
+        "observed_y": -9.676626995323677,
+        "z_score": -1859.628455270257,
+        "survived": false,
+        "outcome": 0,
+        "auditor_admissible": true,
+        "falsifier_T_K": 212.15,
+        "fvpc_best_T_K": 232.15
+      }
+    ],
+    "Strawman_Overconfident": [
+      {
+        "round_idx": 0,
+        "test_T_K": 256.95,
+        "predicted_y": -4.775556985285536,
+        "predicted_sigma": 0.0020299887340023445,
+        "observed_y": -4.765036528390391,
+        "z_score": 5.182519843054616,
+        "survived": false,
+        "outcome": 0,
+        "auditor_admissible": true,
+        "falsifier_T_K": 256.95,
+        "fvpc_best_T_K": 256.95
+      },
+      {
+        "round_idx": 1,
+        "test_T_K": 252.25,
+        "predicted_y": -4.874911481919909,
+        "predicted_sigma": 0.0020299887340023445,
+        "observed_y": -4.942787230427434,
+        "z_score": -33.43651487843475,
+        "survived": false,
+        "outcome": 0,
+        "auditor_admissible": true,
+        "falsifier_T_K": 252.25,
+        "fvpc_best_T_K": 252.25
+      },
+      {
+        "round_idx": 2,
+        "test_T_K": 247.25,
+        "predicted_y": -4.984754383239541,
+        "predicted_sigma": 0.0020299887340023445,
+        "observed_y": -5.095914005064736,
+        "z_score": -54.75873829409454,
+        "survived": false,
+        "outcome": 0,
+        "auditor_admissible": true,
+        "falsifier_T_K": 247.25,
+        "fvpc_best_T_K": 247.25
+      },
+      {
+        "round_idx": 3,
+        "test_T_K": 232.15,
+        "predicted_y": -5.345201391685759,
+        "predicted_sigma": 0.0020299887340023445,
+        "observed_y": -6.130006857368463,
+        "z_score": -386.60582324285843,
+        "survived": false,
+        "outcome": 0,
+        "auditor_admissible": true,
+        "falsifier_T_K": 232.15,
+        "fvpc_best_T_K": 232.15
+      }
+    ]
+  },
+  "seed_T_K": [
+    286.65,
+    282.25,
+    277.25,
+    272.25,
+    267.15,
+    261.85
+  ],
+  "domain_T_range": [
+    197.3,
+    286.6
+  ]
+}

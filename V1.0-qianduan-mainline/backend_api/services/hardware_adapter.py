@@ -24,6 +24,16 @@ from typing import Any, Callable, Dict, List, Optional
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 RUNS_DIR = PROJECT_ROOT / "runs"
 
+# G-2 真机故障注入合法类型(仅作用于**测量提交治理路径**的输入,绝不改温控/CHI 物理命令)。
+# 诚实边界:提交路径 measurement_txn(经 ReplayInstrument)只忠实拦截**样品核对(C_P)**与
+# **QA/计量门(M)**两类。
+_INJECTABLE_FAULTS = {"SAMPLE_MISMATCH", "QA_FAIL"}
+# H2:仪器**在线见证类**协议级故障(经 OnlineInstrumentWitness + 真实 EvidenceTransaction):
+#   ACK 丢失/仪器卡住/文件未写或延迟/在线条码错配/校准过期。驱动边界软件注入,绝不碰物理安全。
+#   物理破坏性故障(电极短接/断路、真样品损伤)仍须 dummy cell,不在此注入。
+_PROTOCOL_FAULTS = {"ACK_LOSS", "INSTRUMENT_STUCK", "FILE_MISSING", "FILE_DELAY",
+                    "SAMPLE_SWAP", "CALIBRATION_EXPIRED"}
+
 
 def _ensure_within(path: Path, root: Path, label: str) -> Path:
     resolved = path.resolve()
@@ -419,6 +429,83 @@ class HardwareAdapter:
         # provided, otherwise _do_rb_fitting falls back to its defaults.
         self._thickness_cm: Optional[float] = None
         self._area_cm2: Optional[float] = None
+        # --- ESAS-OS 2.0 治理旁路（Phase 1，纯加法 / fail-safe / 默认开）---
+        # 在 live 实时回路逐点接 shadow 三重提交 + Rb-ACT 双跑 + measurement_txn 准入,
+        # 把原本只在离线脚本里的治理组件真正接到前端驱动的测量链路上。
+        # 任何导入/执行失败都只记一条事件,绝不影响测量与入库。
+        self._enable_harness: bool = True
+        self._harness_recorder = None   # ShadowHarnessRecorder | None(惰性构建于首点)
+        self._harness_fns = None        # 治理函数缓存;None=未尝试,False=不可用
+        # --- ESAS-OS 2.0 R²-Memory（P2 真实接入 live 回路，纯加法 / fail-safe / 默认开）---
+        # 每个真实测量点经写门进 AgentMemory（角色隔离 + 跨域守卫 + 多轮 RoundState），
+        # 收尾做决策保持压缩证书。任何失败只记事件，绝不影响测量/入库。
+        self._enable_memory: bool = True
+        self._agent_memory = None       # AgentMemory | None(惰性构建于首点)
+        self._memory_bridge = None      # live_memory_bridge 模块缓存;None=未试,False=不可用
+        self._memory_foreign_id = None  # 跨域守卫外域项 id
+        # --- ESAS-OS 2.0 C³-Harness（P2 真实接入 shadow，纯加法 / fail-safe / 默认开）---
+        # 收集真实 Rb-ACT 计量不确定度(sigma_log10_total, dex) + 主动测量请求,
+        # 收尾在 legacy "扫完即停" 之上 shadow 出收敛证书(C³ 只推迟、绝不更早停)。
+        self._enable_c3: bool = True
+        self._rbact_metro_dex: List[float] = []
+        self._rbact_active_requests: List[str] = []
+        # --- H4:Rb-ACT R4 激活模式(默认关)。逐点累积 RbActResult,收尾据三条件门
+        #     (rb_r4_activate + 预注册 gates_pass + 人审签核 token)决定是否旁产 σ_v2+delta。
+        #     缺任一条件恒回退 legacy;legacy 永不覆盖。属替换态,须你签核。---
+        self._rbact_results: List[Any] = []
+        self._rb_r4_activate: bool = False
+        self._rb_r4_signoff: Optional[str] = None
+        # --- Stage3 机理推理链接 live（GPT 迁移发现愿景，opt-in / fail-safe）---
+        # 收尾把真实全温区测量构造成 Stage3SeedBundle,真实 LLM 驱动
+        # S03→S04→S06→S06b（证据→假设→机理仲裁→设计原则）。默认关(成本/时延),
+        # 真机长跑或显式开启时触发;失败只记事件,绝不影响测量/入库。
+        self._enable_stage3_reasoning: bool = False
+        # --- Epistemic OS（GPT 三大原创方向的可计算对象，opt-in / fail-safe）---
+        # 收尾对真实全温区 σ(T) 产出:不可辨识性证书(方案一,Fisher λ_min+JS 等价类)、
+        # 最小判别实验集(方案三,集合覆盖+编译失败→等价类)、anytime-valid e-process 证伪
+        # (方案二,Ville 控 type-I)+ 单位成本证伪价值。纯 numpy/scipy、不调 LLM;失败只记事件。
+        self._enable_epistemic: bool = False
+        # --- Gap2:可知性驱动内层主动选温(opt-in)。逐点据已测 σ(T) 竞争模型,
+        #     计算"单位成本期望机制判别价值"最大的下一个温度,经 ActionGate 留痕后
+        #     注入决策 prompt(advisory)。不夺用户固定物理阶梯,只提供受控建议。---
+        self._enable_active_design: bool = False
+        # --- P13-C:active_design 模式。advisory=仅注入 prompt(默认,行为不变);
+        #     canary=经 ActionGate 在用户固定阶梯的**相邻候选间**微调下一 setpoint(硬护栏:
+        #     不越阶梯包络、单步邻域、回温≤15K),越界/被拦即回退固定阶梯。绝不无人值守 enforce 夺权。---
+        self._active_design_mode: str = "advisory"
+        # H3:canary 可执行邻域宽度(单位=固定阶梯 step)。默认 2(原为隐式 1),让 active_design
+        #     在更多步产生实质微调;仍守阶梯包络 + 回温≤15K + ActionGate。clamp 到 [1,3]。
+        self._canary_max_steps: int = 2
+        self._t_start_C: Optional[float] = None   # 阶梯包络(canary 硬护栏用)
+        self._t_end_C: Optional[float] = None
+        self._last_epistemic_advisory: Optional[Dict[str, Any]] = None
+        # --- Gap3/P13-B:多角色 LLM 证伪市场接 live 收尾(opt-in / 真 OpenRouter 调用 / fail-safe)。
+        #     收尾对真实 σ(T) 跑 Proposer/Falsifier/Auditor(真 LLM)+ Referee 确定性真实数据结算,
+        #     严格适当评分更新信誉/资本;因真 LLM 有成本,默认关,须显式开。---
+        self._enable_falsification_market: bool = False
+        # --- ESAS-OS 2.0 measurement_txn 真门控（P3，纯加法 / fail-safe / 默认开）---
+        # 逐点累积 entered_bo 准入,收尾切 committed/rejected 视图并据此过滤 Stage0 bundle,
+        # 让下游 BO 只吃被准入的点(深冷/坏点不污染)。
+        self._enable_commit_gate: bool = True
+        # --- P13-D:测量提交路径的门控模式(shadow|canary|enforce)。仅作用于**测量提交**
+        #     (是否让被拒点进 BO),**绝不门控温控/CHI 物理命令**(安全)。
+        #     shadow=只记录裁决、被拒点仍进 BO(legacy 行为);canary/enforce=被拒点真挡出 BO。
+        #     默认 enforce=与历史"总是过滤"行为一致(无回归)。---
+        self._commit_gate_mode: str = "enforce"
+        self._txn_rows: List[Dict[str, Any]] = []
+        self._commit_rejected_T_C: List[float] = []
+        # --- G-2:真机故障注入(opt-in,默认关)。**只作用于治理层输入**(样品核对/QA),
+        #     让真实 measurement_txn 自然判 entered_bo=False → commit gate 挡出 BO;
+        #     **绝不触碰温控/CHI 物理命令**(安全)。支持多条(dict 或 list of dict)。---
+        self._inject_faults: List[Dict[str, Any]] = []
+        self._fault_injections: List[Dict[str, Any]] = []
+        # --- H2:在线仪器见证(opt-in,默认关)。每点用真实 CHI 文件 + 温控稳定 + 仪器态
+        #     经真实 EvidenceTransaction 推 C_P;支持协议/见证级故障注入(ACK_LOSS/
+        #     INSTRUMENT_STUCK/FILE_MISSING/FILE_DELAY/SAMPLE_SWAP/CALIBRATION_EXPIRED),
+        #     驱动边界软件注入,**绝不触碰样品/温控物理安全**。fail-safe;不改 legacy 入库。---
+        self._enable_instrument_witness: bool = False
+        self._instrument_witness_rows: List[Dict[str, Any]] = []
+        self._protocol_faults: List[Dict[str, Any]] = []
         # CHI automation handle + per-run parameters (set in connect/start).
         self._chi_executor = None
         self._chi_params: Dict[str, Any] = {}
@@ -459,11 +546,21 @@ class HardwareAdapter:
         # via start() kwargs and from POLOAPI_KEY env var.
         self._enable_agent_decision: bool = True
         self._agent_api_key: Optional[str] = None
-        self._agent_model: str = "deepseek-v3.1"
+        # 默认逐点决策模型:必须是合法 OpenRouter model ID(旧默认 "deepseek-v3.1" 非法,
+        # 会导致每点 LLM 调用 400 → 静默回落规则决策,违背"真 LLM 进闭环")。
+        self._agent_model: str = "openai/gpt-5.4"
         self._fine_scan_window_C: float = 10.0  # mirror online_workflow default
         self._fine_scan_end_C: Optional[float] = None  # bottom of fine-scan band
         self._fine_trigger_T_C: Optional[float] = None  # 触发细扫时的温度，用于事件
         self._agent_decisions: List[Dict[str, Any]] = []
+        # --- ESAS-OS 2.0 ActionGate（P5）：自主 Agent 决策的唯一受控入口 ---
+        # 之前 live 逐点 Agent 决策直接改 setpoint/scan_mode,绕过 ActionGate(bypass)。
+        # 现在每个自主覆盖动作(FINE_GRAINED_SCAN/ABORT)先过 gate:shadow 行为不变、
+        # enforce 下非 allowlist 动作 BLOCKED → 降级为安全默认(线性粗扫)。bypass 应归零。
+        self._harness_mode: str = "shadow"   # shadow | canary | enforce(env SCITX_HARNESS_MODE 可覆盖)
+        self._action_gate = None
+        self._action_gate_bypass_count: int = 0
+        self._action_gate_decisions: List[Dict[str, Any]] = []
 
         # ---- Safety guards (mirrors online_workflow defaults) ----
         # σ < threshold → stop run (sample is dead); Rb > 1e6 Ω → stop;
@@ -735,6 +832,59 @@ class HardwareAdapter:
         self._global_arrhenius = None
         self._live_arrhenius_snapshot = None
         self._events.clear()
+        # ESAS-OS 2.0:本次运行是否逐点旁路记录 shadow/Rb-ACT/txn(默认开;
+        # enable_harness=False 时完全回到原 legacy 行为)。recorder 惰性构建于首点。
+        self._enable_harness = bool(kwargs.get("enable_harness", True))
+        self._harness_recorder = None
+        # R²-Memory:本次运行是否逐点写入 AgentMemory(默认开;惰性构建于首点)。
+        self._enable_memory = bool(kwargs.get("enable_memory", True))
+        self._agent_memory = None
+        self._memory_foreign_id = None
+        # C³-Harness shadow:本次运行是否在收尾 shadow 收敛证书(默认开)。
+        self._enable_c3 = bool(kwargs.get("enable_c3", True))
+        self._rbact_metro_dex = []
+        self._rbact_active_requests = []
+        self._enable_stage3_reasoning = bool(kwargs.get("enable_stage3_reasoning", False))
+        self._enable_epistemic = bool(kwargs.get("enable_epistemic", False))
+        self._enable_active_design = bool(kwargs.get("enable_active_design", False))
+        _adm = str(kwargs.get("active_design_mode", "advisory") or "advisory").strip().lower()
+        self._active_design_mode = _adm if _adm in ("advisory", "canary") else "advisory"
+        try:
+            self._canary_max_steps = max(1, min(3, int(kwargs.get("canary_max_steps", 2))))
+        except (TypeError, ValueError):
+            self._canary_max_steps = 2
+        self._enable_falsification_market = bool(kwargs.get("enable_falsification_market", False))
+        # H4:Rb-ACT R4 激活模式(替换态,须三条件齐备才生效;默认关)。
+        self._rbact_results = []
+        self._rb_r4_activate = bool(kwargs.get("rb_r4_activate", False))
+        _so = kwargs.get("rb_r4_signoff")
+        self._rb_r4_signoff = str(_so) if _so else None
+        # measurement_txn 真门控:本次运行是否切 committed 视图并过滤 bundle(默认开)。
+        self._enable_commit_gate = bool(kwargs.get("enable_commit_gate", True))
+        _cgm = str(kwargs.get("commit_gate_mode", "enforce") or "enforce").strip().lower()
+        self._commit_gate_mode = _cgm if _cgm in ("shadow", "canary", "enforce") else "enforce"
+        self._txn_rows = []
+        self._commit_rejected_T_C = []
+        # G-2:真机故障注入(opt-in)。inject_fault=dict 或 list of dict:
+        #   {"type": "SAMPLE_MISMATCH"|"QA_FAIL", "at_step": <int>}。仅治理层,绝不改温控/CHI。
+        _inj = kwargs.get("inject_fault")
+        _inj_list = _inj if isinstance(_inj, list) else ([_inj] if isinstance(_inj, dict) else [])
+        self._inject_faults = [
+            {"type": str(d["type"]).upper(), "at_step": int(d.get("at_step", 0))}
+            for d in _inj_list
+            if isinstance(d, dict) and str(d.get("type", "")).upper() in _INJECTABLE_FAULTS
+        ]
+        self._fault_injections = []
+        # H2:在线仪器见证(opt-in)+ 协议级故障注入(inject_fault 里 type∈_PROTOCOL_FAULTS 的条目)。
+        self._enable_instrument_witness = bool(kwargs.get("enable_instrument_witness", False))
+        self._instrument_witness_rows = []
+        self._protocol_faults = [
+            {"type": str(d["type"]).upper(), "at_step": int(d.get("at_step", 0))}
+            for d in _inj_list
+            if isinstance(d, dict) and str(d.get("type", "")).upper() in _PROTOCOL_FAULTS
+        ]
+        if self._protocol_faults:
+            self._enable_instrument_witness = True  # 注了协议故障 → 自动开在线见证
 
         import uuid
         self._run_id = f"run_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{uuid.uuid4().hex[:6]}"
@@ -744,6 +894,12 @@ class HardwareAdapter:
 
         t_start = kwargs.get("t_start", 20.0)
         t_end = kwargs.get("t_end", -85.0)
+        # 记录阶梯包络(P13-C canary 硬护栏用:下一 setpoint 绝不越 [t_end, t_start])。
+        try:
+            self._t_start_C = float(t_start)
+            self._t_end_C = float(t_end)
+        except (TypeError, ValueError):
+            self._t_start_C, self._t_end_C = None, None
 
         # Geometry / CHI / BO provenance — None when not provided.
         geometry = {
@@ -928,6 +1084,15 @@ class HardwareAdapter:
             self._fine_scan_window_C = 10.0
         self._fine_scan_end_C = None
         self._agent_decisions = []
+        # ActionGate:模式 shadow|canary|enforce(显式 kwarg > env SCITX_HARNESS_MODE > shadow)。
+        import os as _os
+        _hm = (kwargs.get("harness_mode") or _os.environ.get("SCITX_HARNESS_MODE") or "shadow")
+        self._harness_mode = str(_hm).strip().lower()
+        if self._harness_mode not in ("shadow", "canary", "enforce"):
+            self._harness_mode = "shadow"
+        self._action_gate = None
+        self._action_gate_bypass_count = 0
+        self._action_gate_decisions = []
         self._consecutive_failures = 0
         self._global_arrhenius = None
         self._live_arrhenius_snapshot = None
@@ -1083,6 +1248,36 @@ class HardwareAdapter:
             "timestamp": datetime.now().isoformat(),
         }
         self._measurements.append(measurement)
+
+        # --- ESAS-OS 2.0 治理旁路（Phase 1，纯加法/fail-safe/默认开）---
+        # 单点路径("Measure Now")也逐点接 shadow + Rb-ACT + txn,推 3 个治理事件,
+        # 与 _real_measurement_loop 同源。整体失败只记 HARNESS_GOVERNANCE_ERROR,
+        # 绝不影响入库与返回。这样前端单点 live 也能在「治理」Tab 看到真实裁决。
+        if self._enable_harness and chi_result.get("success") and chi_result.get("frequencies") is not None:
+            try:
+                self._run_point_governance(
+                    step_idx=step_idx,
+                    T_C=measurement["temperature_C"],
+                    freq=chi_result.get("frequencies"),
+                    zr=chi_result.get("z_real"),
+                    zi=chi_result.get("z_imag"),
+                    eis_result=(rb_result.get("raw") if isinstance(rb_result, dict) else None),
+                    rb_result=rb_result,
+                )
+            except Exception as exc:  # noqa: BLE001
+                self._emit_event("HARNESS_GOVERNANCE_ERROR",
+                                 {"step_idx": step_idx, "error": str(exc)})
+
+        if self._enable_memory:
+            self._run_point_memory(
+                step_idx=step_idx,
+                T_C=measurement["temperature_C"],
+                rb_ohm=measurement.get("rb_ohm"),
+                sigma_S_cm=measurement.get("conductivity_S_cm"),
+                qc_grade=measurement.get("failure_reason") or ("ok" if measurement.get("success") else "fail"),
+                governance_verdict="single_point",
+            )
+
         self._emit_event("MEASUREMENT_COMPLETED", measurement)
         return {"ok": True, "measurement": measurement}
 
@@ -1924,6 +2119,56 @@ class HardwareAdapter:
             sample_id, ao_folder, campaign_config, history_db_path, stage1_output_dir, source_tag, rs1,
         )
 
+    def _apply_commit_gate_to_bundle(self, stage0_results_dir: Path) -> Optional[Dict[str, Any]]:
+        """P3 真门控:用 commit_gate 据 rejected 温度过滤 bundle 的 eis_points。
+        原 bundle 备份为 .full.json,门控后写回原路径供 Stage1 消费。fail-safe。"""
+        bundle_path = stage0_results_dir / "stage0_result_bundle.json"
+        if not bundle_path.exists():
+            return None
+        try:
+            import sys as _sys
+            p = str(PROJECT_ROOT / "stage1_optimization")
+            if p not in _sys.path:
+                _sys.path.insert(0, p)
+            from scientific_harness.commit_gate import filter_bundle_eis_points
+            bundle = json.loads(bundle_path.read_text(encoding="utf-8"))
+            res = filter_bundle_eis_points(bundle, self._commit_rejected_T_C)
+            if res["n_dropped"] > 0:
+                backup = stage0_results_dir / "stage0_result_bundle.full.json"
+                if not backup.exists():
+                    backup.write_text(json.dumps(bundle, ensure_ascii=False, indent=2), encoding="utf-8")
+                bundle_path.write_text(json.dumps(res["bundle"], ensure_ascii=False, indent=2), encoding="utf-8")
+            self._emit_event("COMMIT_GATE_BUNDLE", {
+                "n_before": res["n_before"], "n_after": res["n_after"],
+                "n_dropped": res["n_dropped"], "dropped_T_C": res["dropped_T_C"],
+            })
+            return {"n_before": res["n_before"], "n_after": res["n_after"],
+                    "n_dropped": res["n_dropped"], "dropped_T_C": res["dropped_T_C"]}
+        except Exception as exc:  # noqa: BLE001
+            self._emit_event("COMMIT_GATE_ERROR", {"stage": "bundle", "error": str(exc)})
+            return None
+
+    def _write_rbact_noise_for_stage1(self, stage0_results_dir: Path) -> None:
+        """P4 Rb-ACT R3:把本配方真实 Rb-ACT 计量不确定度(median/max dex)写到 bundle 目录旁,
+        供 run_optimization_loop 摄取为 objective_variance(噪声感知 GP train_Yvar)。fail-safe。"""
+        if not self._rbact_metro_dex:
+            return
+        try:
+            import sys as _sys
+            p = str(PROJECT_ROOT / "stage1_optimization")
+            if p not in _sys.path:
+                _sys.path.insert(0, p)
+            from scientific_harness.rbact_noise_bridge import write_rbact_noise
+            metro = sorted(self._rbact_metro_dex)
+            med = metro[len(metro) // 2]
+            out = write_rbact_noise(stage0_results_dir, med, len(metro), u_dex_max=metro[-1])
+            self._emit_event("RBACT_NOISE_PERSISTED", {
+                "rbact_u_total_dex_median": med, "rbact_u_total_dex_max": metro[-1],
+                "n_points": len(metro), "path": out,
+            })
+        except Exception as exc:  # noqa: BLE001
+            self._emit_event("RBACT_NOISE_ERROR", {"error": str(exc)})
+
     def _sync_closure_report_to_sample_bus(self, stage0_results_dir: Path) -> None:
         """Copy closure_report.json next to bundle under output/stage0_results/<sample_id>/."""
         import json
@@ -2155,6 +2400,30 @@ class HardwareAdapter:
                 self._write_post_log(summary)
                 return summary
             self._emit_event("STAGE0_COMPLETED", summary["stage0"])
+            # P3/P13-D 真门控:据 entered_bo rejected 温度过滤 bundle 的 eis_points,
+            # 让下游 Stage1 BO/Arrhenius 只吃被准入的点(深冷/坏点不污染)。fail-safe。
+            # P13-D:仅 canary/enforce 真过滤;shadow=只记录裁决、被拒点仍进 BO(legacy 行为)。
+            if self._enable_commit_gate and self._commit_rejected_T_C:
+                if self._commit_gate_enforces():
+                    gate_info = self._apply_commit_gate_to_bundle(stage0_results_dir)
+                    if gate_info:
+                        gate_info["commit_gate_mode"] = self._commit_gate_mode
+                        summary["commit_gate"] = gate_info
+                else:
+                    # shadow:只记录"若 enforce 会挡哪些点",不真过滤(被拒点仍进 BO)。
+                    summary["commit_gate"] = {
+                        "commit_gate_mode": "shadow",
+                        "applied": False,
+                        "would_reject_T_C": list(self._commit_rejected_T_C),
+                        "note": "shadow=record-only;被拒点仍进 BO(legacy 行为),未真过滤",
+                    }
+                    self._emit_event("COMMIT_GATE_SHADOW", {
+                        "commit_gate_mode": "shadow",
+                        "would_reject_T_C": list(self._commit_rejected_T_C),
+                    })
+            # P4 Rb-ACT R3:把本配方真实计量不确定度(median sigma_log10_total)落到
+            # bundle 目录旁,供 Stage1 摄取为 objective_variance(噪声感知 GP train_Yvar)。
+            self._write_rbact_noise_for_stage1(stage0_results_dir)
         except subprocess.TimeoutExpired:
             summary["errors"].append("Stage0 timed out after 600s")
             self._emit_event("POST_PROCESSING_FAILED", {"error": summary["errors"][-1]})
@@ -2426,6 +2695,101 @@ class HardwareAdapter:
             "hold_seconds": hold_seconds,
         }
 
+    def _epistemic_next_action(self, step_idx: int) -> Optional[Dict[str, Any]]:
+        """Gap2 内层主动选温:据已测 σ(T) 竞争模型,算"单位成本期望机制判别价值"
+        最大的下一个温度。返回 advisory dict(供 prompt 注入 + 事件留痕),或 None。
+
+        诚实边界:这是**受控建议**,不夺用户固定物理阶梯;真正的 setpoint 仍由
+        _apply_agent_decision 据固定策略决定。候选集 = 已测温区内未覆盖的网格 +
+        当前最冷点之下若干步(可达下一档),让选择器能"回填可疑相变区"或"加速深冷"。
+        """
+        if not self._enable_active_design:
+            return None
+        try:
+            import sys as _sys
+            import numpy as np
+            repo = Path(__file__).resolve().parents[3]   # acid-in-clay-close
+            nda = str(repo / "_new_data_analysis")
+            if nda not in _sys.path:
+                _sys.path.insert(0, nda)
+            from epistemic import active_design as _ad
+
+            pts = []
+            for m in self._measurements:
+                if not m.get("success"):
+                    continue
+                T_K = m.get("temperature_K")
+                T_C = m.get("temperature_C")
+                if T_K is None and T_C is not None:
+                    T_K = T_C + 273.15
+                sig = m.get("conductivity_S_cm")
+                if T_K is None or sig is None or sig <= 0:
+                    continue
+                pts.append((float(T_K), float(np.log(sig))))
+            if len(pts) < 4:
+                return None
+            T_obs = [p[0] for p in pts]; y_obs = [p[1] for p in pts]
+
+            # 候选温度:已测温区内 1K 网格(未测点)+ 当前最冷之下 step×{1..6}。
+            tmin, tmax = min(T_obs), max(T_obs)
+            grid = set()
+            tt = tmin
+            while tt <= tmax:
+                grid.add(round(tt, 1)); tt += 1.0
+            step = max(float(self._step_size), 1.0)
+            for k in range(1, 7):
+                grid.add(round(tmin - k * step, 1))
+            measured = {round(t, 1) for t in T_obs}
+            cands = sorted(c for c in grid if round(c, 1) not in measured)
+            if not cands:
+                return None
+
+            choice = _ad.select_next_temperature(T_obs, y_obs, cands)
+            if choice is None:
+                return None
+            advisory = {
+                "recommended_next_temp_K": choice.next_T_K,
+                "recommended_next_temp_C": choice.next_T_K - 273.15,
+                "value_per_cost": choice.value_per_cost,
+                "raw_discrimination_value": choice.raw_value,
+                "cost": choice.cost,
+                "n_competing_mechanisms": choice.n_competing,
+                "model_posterior": choice.posterior,
+                "sigma_meas": choice.sigma_meas,
+                "top5_candidates": choice.ranking[:5],
+                "rationale": choice.rationale,
+            }
+            # 过 ActionGate 留痕(advisory 命令,enforce 下不在 allowlist → 仅建议不执行)。
+            gate = self._ensure_action_gate()
+            gate_status = "unavailable"
+            if gate:
+                try:
+                    from scientific_harness.action_gate import ActionProposal
+                    prop = ActionProposal(command="EPISTEMIC_DESIGN_ADVISORY",
+                                          source="autonomous",
+                                          rationale=choice.rationale[:200],
+                                          params={"step_idx": step_idx,
+                                                  "next_temp_K": choice.next_T_K})
+                    gd = gate.submit(prop)
+                    gate_status = f"{gd.mode}:{gd.decision}:dispatched={gd.dispatched}"
+                except Exception:
+                    gate_status = "gate_error"
+            advisory["gate_status"] = str(gate_status)
+            advisory["step_idx"] = step_idx
+            self._last_epistemic_advisory = advisory   # P13-C canary 微调用最新建议
+            self._emit_event("EPISTEMIC_NEXT_ACTION", {
+                "step_idx": step_idx,
+                "n_points": len(pts),
+                **advisory,
+                "timestamp": datetime.now().isoformat(),
+            })
+            return advisory
+        except Exception as exc:  # noqa: BLE001
+            self._emit_event("EPISTEMIC_NEXT_ACTION_FAILED", {
+                "step_idx": step_idx, "error": str(exc),
+            })
+            return None
+
     def _call_agent_decision(self, step_idx: int) -> Optional[Dict[str, Any]]:
         """Per-point LLM phase / decision Agent.
 
@@ -2471,15 +2835,37 @@ class HardwareAdapter:
                     conductivity_S_per_cm=m.get("conductivity_S_cm"),
                 ))
 
+            # ESAS-OS 2.0:把"agent 大脑"真正接进闭环 —— 决策 prompt 注入
+            #   (a) R²-Memory 经治理角色投影,(b) C³-Harness 收敛证书快照。
+            #   两者均 fail-safe;构建失败不影响 LLM 调用本身。
+            memory_projection = self._memory_projection_for_prompt()
+            convergence = self._c3_snapshot()
+            # Gap2:可知性驱动的下一步温度建议(advisory,已过 ActionGate 留痕)。
+            design_advisory = self._epistemic_next_action(step_idx)
+
             self._emit_event("AGENT_CALL_STARTED", {
                 "step_idx": step_idx,
                 "n_points": len(history),
                 "has_api_key": bool(self._agent_api_key),
                 "model": self._agent_model,
+                "memory_injected": bool(memory_projection),
+                "convergence_injected": bool(convergence),
+                "active_design_injected": bool(design_advisory),
+                "design_recommended_next_C": (design_advisory or {}).get("recommended_next_temp_C"),
+                "n_memory_items": (memory_projection or {}).get("n_in_domain_memory"),
+                "convergence_recommended_action": (convergence or {}).get("recommended_action"),
             })
 
+            agent_context = {"measurement_history": history}
+            if memory_projection:
+                agent_context["memory_projection"] = memory_projection
+            if convergence:
+                agent_context["convergence"] = convergence
+            if design_advisory:
+                agent_context["active_design"] = design_advisory
+
             decision = analyze(
-                agent_context={"measurement_history": history},
+                agent_context=agent_context,
                 api_key=self._agent_api_key,
                 model=self._agent_model,
                 use_hardcoded_triggers=False,
@@ -2507,7 +2893,9 @@ class HardwareAdapter:
                 "data_quality": decision.get("data_quality"),
                 "reasoning": reasoning,
                 "warnings": warnings,
-                "llm_called": bool(decision.get("llm_called", self._agent_api_key is not None)),
+                # 诚实标记:只信 phase_detect 显式返回的 llm_called(真实成功调用才 True);
+                # 不再用"有 api_key"兜底推断(fe3/fe4b 曾因此把规则回退误报成 LLM 调用)。
+                "llm_called": bool(decision.get("llm_called", False)),
                 "rule_triggered": decision.get("rule_triggered"),
                 "model": self._agent_model,
                 "n_points": len(history),
@@ -2527,6 +2915,83 @@ class HardwareAdapter:
                 "error": str(exc),
             })
             return None
+
+    # ------------------------------------------------------------------
+    # ESAS-OS 2.0 ActionGate（P5）—— 自主 Agent 决策的唯一受控入口。
+    #   把"自主覆盖动作"映射成受控命令过 gate;enforce 下非 allowlist → BLOCKED。
+    #   不变量:任何自主覆盖动作都经过 gate(bypass=0);override 与自主隔离留痕。
+    # ------------------------------------------------------------------
+    # 自主 Agent action → ActionGate 受控命令名(CONTINUE=安全默认,无需门控)。
+    _AGENT_ACTION_TO_COMMAND = {
+        "FINE_GRAINED_SCAN": "TRIGGER_FINE_SCAN",   # ∈ allowlist → enforce 放行
+        "ABORT": "AGENT_ABORT",                      # ∉ allowlist → enforce BLOCKED(需人工)
+    }
+
+    def _ensure_action_gate(self):
+        """惰性构建 per-run ActionGate(enqueue_fn 仅留痕,实际执行由 loop 据 dispatched 决定)。"""
+        if self._action_gate is not None:
+            return self._action_gate
+        try:
+            import sys as _sys
+            base = Path(__file__).resolve().parents[2]
+            p = str(base / "stage1_optimization")
+            if p not in _sys.path:
+                _sys.path.insert(0, p)
+            from scientific_harness.action_gate import (
+                ActionGate, ALLOWED_AUTONOMOUS_COMMANDS)
+
+            def _noop_enqueue(command, params=None):
+                # gate 的"下发"在本适配器里等价于"允许 loop 应用该自主动作";
+                # 真正的 setpoint/scan 改动仍由 _apply_agent_decision 执行。
+                return True
+
+            # P13-C:把受硬护栏约束的 canary 选温命令并入 allowlist(canary/enforce 下可放行);
+            # 该命令仅在通过"单步邻域 + 阶梯包络 + 回温≤15K"预检后才提交,故是低风险动作。
+            allowed = ALLOWED_AUTONOMOUS_COMMANDS | {"EPISTEMIC_CANARY_SETPOINT"}
+            self._action_gate = ActionGate(_noop_enqueue, mode=self._harness_mode,
+                                           allowed=allowed)
+        except Exception as exc:  # noqa: BLE001
+            self._emit_event("ACTION_GATE_UNAVAILABLE", {"error": str(exc)})
+            self._action_gate = False
+        return self._action_gate
+
+    def _gate_agent_decision(self, decision: Optional[Dict[str, Any]], step_idx: int) -> Optional[Dict[str, Any]]:
+        """把自主覆盖动作过 ActionGate。BLOCKED → 降级为 CONTINUE(安全默认)。
+        CONTINUE/空决策直接放行(本就是默认)。整体 fail-safe:出错则原样返回。"""
+        if not decision:
+            return decision
+        action = decision.get("action", "CONTINUE")
+        command = self._AGENT_ACTION_TO_COMMAND.get(action)
+        if command is None:
+            return decision  # CONTINUE 等默认动作不经 gate(非自主覆盖)
+        gate = self._ensure_action_gate()
+        if not gate:
+            # gate 不可用 → 记一次 bypass(诚实),仍按原决策执行(fail-safe)。
+            self._action_gate_bypass_count += 1
+            self._emit_event("ACTION_GATE_BYPASS", {"step_idx": step_idx, "action": action})
+            return decision
+        try:
+            from scientific_harness.action_gate import ActionProposal
+            prop = ActionProposal(command=command, source="autonomous",
+                                  rationale=str(decision.get("reasoning") or "")[:200],
+                                  params={"step_idx": step_idx})
+            gd = gate.submit(prop)
+            rec = {"step_idx": step_idx, "action": action, "command": command,
+                   "mode": gd.mode, "decision": gd.decision, "dispatched": gd.dispatched}
+            self._action_gate_decisions.append(rec)
+            self._emit_event("ACTION_GATE_DECISION", rec)
+            if not gd.dispatched:
+                # enforce/canary 下被拦截 → 降级为安全默认(线性粗扫,不 abort/不细扫)。
+                self._emit_event("ACTION_GATE_BLOCKED", {
+                    "step_idx": step_idx, "action": action, "command": command,
+                    "mode": gd.mode, "downgraded_to": "CONTINUE",
+                })
+                return {"action": "CONTINUE", "reasoning": f"action_gate_blocked:{action}"}
+            return decision
+        except Exception as exc:  # noqa: BLE001
+            self._action_gate_bypass_count += 1
+            self._emit_event("ACTION_GATE_ERROR", {"step_idx": step_idx, "error": str(exc)})
+            return decision
 
     def _apply_agent_decision(
         self,
@@ -2635,13 +3100,92 @@ class HardwareAdapter:
             except (TypeError, ValueError):
                 pass
         next_t = anchor_t - self._step_size
+        # P13-C:canary 模式下,据 active_design 建议在固定阶梯相邻候选间微调(经 ActionGate + 硬护栏)。
+        fixed_next_t = next_t
+        canary_t = self._active_design_canary_nudge(fixed_next_t, anchor_t, step_idx)
+        is_reheat = False
+        if canary_t is not None:
+            next_t = canary_t
+            is_reheat = canary_t > anchor_t + 1e-6   # 微调回填到更暖点 = 回温
         return {
             "next_t": next_t,
             "abort": False,
             "in_fine_band": False,
-            "is_reheat": False,
+            "is_reheat": is_reheat,
             "agent_suggested_next_C": next_C,   # kept for debugging / events
+            "canary_applied": canary_t is not None,
+            "fixed_ladder_next_C": fixed_next_t,
         }
+
+    def _active_design_canary_nudge(self, fixed_next_t: float, anchor_t: float,
+                                    step_idx: int) -> Optional[float]:
+        """P13-C:canary 模式据 active_design 最新建议,在固定阶梯的**相邻候选间**微调下一 setpoint。
+        经 ActionGate 放行才生效;越硬护栏(单步邻域 / 阶梯包络 / 回温≤15K)或被拦即回退固定阶梯(None)。
+        advisory 模式恒返回 None(行为完全不变)。"""
+        if self._active_design_mode != "canary":
+            return None
+        adv = self._last_epistemic_advisory
+        if not adv:
+            return None
+        try:
+            rec_C = adv.get("recommended_next_temp_C")
+            if rec_C is None:
+                return None
+            rec_C = round(float(rec_C), 1)
+            step = max(float(self._step_size), 1.0)
+            max_steps = max(1, int(getattr(self, "_canary_max_steps", 2)))
+            neigh = step * max_steps
+            reasons = []
+            # 硬护栏 1:邻域(只在固定阶梯点 ±max_steps×step 内微调,禁止大跳)。H3:默认 ±2 step。
+            if abs(rec_C - fixed_next_t) > neigh + 1e-6:
+                reasons.append(f"not_adjacent(|{rec_C}-{fixed_next_t}|>{neigh})")
+            # 硬护栏 2:阶梯包络(不越 [t_end, t_start])
+            lo = self._t_end_C if self._t_end_C is not None else -1e9
+            hi = self._t_start_C if self._t_start_C is not None else 1e9
+            if not (min(lo, hi) - 1e-6 <= rec_C <= max(lo, hi) + 1e-6):
+                reasons.append(f"out_of_envelope([{lo},{hi}])")
+            # 硬护栏 3:回温≤15K(相对 anchor 不得升温超过 15℃)
+            if rec_C - anchor_t > 15.0 + 1e-6:
+                reasons.append(f"reheat>15K({rec_C - anchor_t:.1f})")
+            # 需实质移动(否则无需微调)
+            if abs(rec_C - fixed_next_t) < 0.5:
+                reasons.append("no_meaningful_move")
+            if reasons:
+                self._emit_event("EPISTEMIC_CANARY_SKIPPED", {
+                    "step_idx": step_idx, "rec_C": rec_C,
+                    "fixed_next_t": fixed_next_t, "reasons": reasons})
+                return None
+            # 通过预检 → 过 ActionGate(canary/enforce 按 allowlist 放行;shadow 照常留痕)
+            gate = self._ensure_action_gate()
+            if not gate:
+                self._action_gate_bypass_count += 1
+                self._emit_event("ACTION_GATE_BYPASS",
+                                 {"step_idx": step_idx, "action": "EPISTEMIC_CANARY_SETPOINT"})
+                return None
+            from scientific_harness.action_gate import ActionProposal
+            prop = ActionProposal(
+                command="EPISTEMIC_CANARY_SETPOINT", source="autonomous",
+                rationale=f"active_design nudge {fixed_next_t}->{rec_C}"[:200],
+                params={"step_idx": step_idx, "rec_C": rec_C, "fixed_next_t": fixed_next_t})
+            gd = gate.submit(prop)
+            rec_dec = {"step_idx": step_idx, "action": "EPISTEMIC_CANARY_SETPOINT",
+                       "command": "EPISTEMIC_CANARY_SETPOINT", "mode": gd.mode,
+                       "decision": gd.decision, "dispatched": gd.dispatched}
+            self._action_gate_decisions.append(rec_dec)
+            self._emit_event("ACTION_GATE_DECISION", rec_dec)
+            if not gd.dispatched:
+                self._emit_event("EPISTEMIC_CANARY_BLOCKED", {
+                    "step_idx": step_idx, "rec_C": rec_C, "fixed_next_t": fixed_next_t,
+                    "mode": gd.mode, "downgraded_to": "fixed_ladder"})
+                return None
+            self._emit_event("EPISTEMIC_CANARY_SETPOINT", {
+                "step_idx": step_idx, "fixed_next_t": fixed_next_t,
+                "canary_next_t": rec_C, "delta_C": round(rec_C - fixed_next_t, 2),
+                "mode": gd.mode, "value_per_cost": adv.get("value_per_cost")})
+            return rec_C
+        except Exception as exc:  # noqa: BLE001
+            self._emit_event("EPISTEMIC_CANARY_ERROR", {"step_idx": step_idx, "error": str(exc)})
+            return None
 
     def _trigger_chi_measurement(
         self,
@@ -2708,6 +3252,1029 @@ class HardwareAdapter:
             },
         )
         return chi_result
+
+    # ------------------------------------------------------------------
+    # ESAS-OS 2.0 治理旁路（Phase 1）—— 纯加法 / fail-safe / 默认开。
+    #   把 shadow 三重提交、Rb-ACT 双跑、measurement_txn 逐点准入接到 live 回路,
+    #   并经 _emit_event 推 3 个新事件(SHADOW_VERDICT/RBACT_DECISION/TXN_ADMISSION)。
+    #   设计铁律:① 不改 legacy 测量/入库路径;② 任一步失败只记事件、绝不抛回主回路。
+    # ------------------------------------------------------------------
+    def _ensure_harness_fns(self):
+        """惰性导入治理函数;成功返回 dict,失败缓存 False 并返回 None(不重试、不抛错)。"""
+        if self._harness_fns is not None:
+            return self._harness_fns or None
+        try:
+            import sys as _sys
+            base = Path(__file__).resolve().parents[2]  # V1.0-qianduan-mainline
+            for sub in ("stage0_measurement", "stage1_optimization"):
+                p = str(base / sub)
+                if p not in _sys.path:
+                    _sys.path.insert(0, p)
+            from rb_act import analyze_spectrum, ABSTAIN
+            from scientific_harness.measurement_txn import submit_measurement_offline
+            from scientific_harness.shadow import ShadowHarnessRecorder
+            self._harness_fns = {
+                "analyze_spectrum": analyze_spectrum,
+                "ABSTAIN": ABSTAIN,
+                "submit_measurement_offline": submit_measurement_offline,
+                "ShadowHarnessRecorder": ShadowHarnessRecorder,
+            }
+            return self._harness_fns
+        except Exception as exc:  # noqa: BLE001
+            self._harness_fns = False
+            try:
+                self._emit_event("HARNESS_UNAVAILABLE", {"error": str(exc)})
+            except Exception:
+                pass
+            return None
+
+    def _build_harness_recorder(self):
+        """构造 ShadowHarnessRecorder(每运行一个,落盘到 runs/<run_id>/shadow_harness)。"""
+        fns = self._ensure_harness_fns()
+        if not fns or not self._run_id:
+            return None
+        try:
+            out_dir = str(RUNS_DIR / self._run_id / "shadow_harness")
+            rec = fns["ShadowHarnessRecorder"](out_dir=out_dir, sample_id=self._sample_id or "unknown")
+            self._emit_event("HARNESS_SHADOW_STARTED", {"out_dir": out_dir})
+            return rec
+        except Exception as exc:  # noqa: BLE001
+            self._emit_event("HARNESS_UNAVAILABLE", {"error": f"shadow init: {exc}"})
+            return None
+
+    def _maybe_inject_governance_fault(self, step_idx, bundle):
+        """G-2:真机故障注入(opt-in)。**只改治理层输入**(样品核对 id / QA 状态 / 几何),
+        让真实 measurement_txn 自然判 entered_bo=False;**绝不触碰温控/CHI 物理命令**(安全)。
+
+        返回 (expected_sample_id, injected_desc|None)。未注入时 expected 取 None(=bundle sample_id)。
+        """
+        inj = next((d for d in self._inject_faults
+                    if int(d.get("at_step", -1)) == int(step_idx)), None)
+        if not inj:
+            return None, None
+        ftype = inj["type"]
+        expected_sid = None
+        try:
+            if ftype == "SAMPLE_MISMATCH":
+                # 传入与 bundle 不符的 expected id → C_P unknown → 全 REJECT(样品来源核对失败)。
+                expected_sid = f"{bundle.get('sample_id', 'unknown')}__FAULT_MISMATCH"
+            elif ftype == "QA_FAIL":
+                # 标记该点 QA 失败 → _valid_points 过滤 → qa_failed=True → 不进 BO。
+                for ep in bundle.get("eis_points", []):
+                    ep["status"] = "legacy_failure"
+                    ep["quality_flags"] = list(ep.get("quality_flags") or []) + ["legacy_failure"]
+            injected = {"type": ftype, "at_step": int(step_idx), "layer": "governance_only",
+                        "note": "仅治理层注入;温控/CHI 未受影响"}
+            self._emit_event("FAULT_INJECTED", injected)
+            return expected_sid, injected
+        except Exception as exc:  # noqa: BLE001
+            self._emit_event("HARNESS_GOVERNANCE_ERROR",
+                             {"stage": "fault_injection", "step_idx": step_idx, "error": str(exc)})
+            return None, None
+
+    def _run_point_governance(self, *, step_idx, T_C, freq, zr, zi, eis_result, rb_result,
+                              output_file=None, chamber_actual_C=None, setpoint_C=None):
+        """逐点治理旁路(shadow + Rb-ACT + txn + H2 在线仪器见证)。整体 fail-safe,绝不影响测量。"""
+        fns = self._ensure_harness_fns()
+        if not fns:
+            return
+        import numpy as _np
+        import math as _math
+        thickness = self._thickness_cm if self._thickness_cm is not None else 0.1
+        area = self._area_cm2 if self._area_cm2 is not None else 1.96
+        T_K = float(T_C) + 273.15
+        try:
+            f = _np.asarray(freq, dtype=float)
+            zrr = _np.asarray(zr, dtype=float)
+            zii = _np.asarray(zi, dtype=float)
+        except Exception:  # noqa: BLE001
+            return
+
+        # (a) shadow 三重提交旁路 —— 用 per-point 计数增量判定本点是否一致。
+        if self._harness_recorder is None:
+            self._harness_recorder = self._build_harness_recorder()
+        rec = self._harness_recorder
+        if rec is not None and eis_result is not None:
+            try:
+                n0, a0 = rec._n, rec._n_agree
+                rec.record(eis_result, freq=f, z_real=zrr, z_imag=zii, temperature_K=T_K)
+                agreed = (rec._n - n0 == 1) and (rec._n_agree - a0 == 1)
+                self._emit_event("SHADOW_VERDICT", {
+                    "step_idx": step_idx, "temperature_C": T_C,
+                    "agree": bool(agreed),
+                    "n_points": rec._n,
+                    "agreement_rate": (rec._n_agree / rec._n) if rec._n else None,
+                    "blind_retry_count": rec._n_blind_retry,
+                })
+            except Exception as exc:  # noqa: BLE001
+                self._emit_event("HARNESS_GOVERNANCE_ERROR",
+                                 {"stage": "shadow", "step_idx": step_idx, "error": str(exc)})
+
+        # (b) Rb-ACT 双跑(REPORT/ABSTAIN + |Δlog10 Rb| + 未解释翻转)。
+        admission_signals: Dict[str, Any] = {}
+        try:
+            r = fns["analyze_spectrum"](f, zrr, zii, thickness_cm=thickness, area_cm2=area)
+            legacy_rb = getattr(r, "legacy_rb_ohm", None)
+            rbact_rb = getattr(r.posterior, "rb_ohm", None) if getattr(r, "posterior", None) else None
+            delta = None
+            if r.decision != fns["ABSTAIN"] and legacy_rb and rbact_rb and legacy_rb > 0 and rbact_rb > 0:
+                delta = abs(_math.log10(rbact_rb) - _math.log10(legacy_rb))
+            admission_signals = dict(getattr(r, "admission_signals", {}) or {})
+            # H4:累积完整 RbActResult(含 legacy_rb / 后验 rb / u_dex),供收尾 R4 激活构 σ_v2+delta。
+            try:
+                if getattr(r, "temperature_K", None) is None:
+                    r.temperature_K = T_K
+                self._rbact_results.append(r)
+            except Exception:  # noqa: BLE001
+                pass
+            # 真实计量不确定度(dex)+ 主动测量请求 —— 喂 C³-Harness。
+            u_total_dex = None
+            post = getattr(r, "posterior", None)
+            if post is not None:
+                u_total_dex = getattr(post, "sigma_log10_total", None)
+            active_acts = [str(getattr(a, "action", a)) for a in (getattr(r, "active_requests", None) or [])]
+            if isinstance(u_total_dex, (int, float)):
+                self._rbact_metro_dex.append(float(u_total_dex))
+            for _a in active_acts:
+                if _a not in self._rbact_active_requests:
+                    self._rbact_active_requests.append(_a)
+            self._emit_event("RBACT_DECISION", {
+                "step_idx": step_idx, "temperature_C": T_C,
+                "decision": str(r.decision),
+                "rbact_rb_ohm": rbact_rb, "legacy_rb_ohm": legacy_rb,
+                "abs_dlog10_rb": delta,
+                "unexplained_flip": bool(delta is not None and delta > 0.30),
+                "u_total_dex": u_total_dex,
+                "active_requests": active_acts,
+            })
+        except Exception as exc:  # noqa: BLE001
+            self._emit_event("HARNESS_GOVERNANCE_ERROR",
+                             {"stage": "rb_act", "step_idx": step_idx, "error": str(exc)})
+
+        # (c) measurement_txn 逐点准入(U1–U6 / entered_bo / blind_retry)。
+        try:
+            raw = rb_result.get("raw") if isinstance(rb_result, dict) else None
+            kk_res = None
+            if isinstance(raw, dict):
+                kk_res = (raw.get("kk_result") or {}).get("mu_median")
+            bundle = {
+                "sample_id": self._sample_id or "unknown",
+                "geometry": {"thickness_cm": thickness, "area_cm2": area},
+                "file_hashes": {f"live_step_{step_idx}": "live"},
+                "eis_points": [{
+                    "T_K": T_K,
+                    "status": (rb_result.get("status") if isinstance(rb_result, dict) else None) or "OK",
+                    "kk_residual": kk_res,
+                    "rb_ohm": rb_result.get("rb_ohm") if isinstance(rb_result, dict) else None,
+                    "rb_method": rb_result.get("rb_method") if isinstance(rb_result, dict) else None,
+                }],
+                "arrhenius": {},
+            }
+            # G-2:真机故障注入(opt-in)——仅改治理层输入,让真实 txn 自然判拒(entered_bo=False)。
+            expected_sid, injected = self._maybe_inject_governance_fault(step_idx, bundle)
+            txn = fns["submit_measurement_offline"](
+                bundle, rb_act_signals=admission_signals, expected_sample_id=expected_sid)
+            adm = {str(getattr(k, "name", k)): v["status"] for k, v in txn.use_admissions.items()}
+            self._txn_rows.append({
+                "step_idx": step_idx, "T_C": T_C,
+                "entered_bo": bool(txn.entered_bo), "admissions": adm,
+                **({"injected_fault": injected} if injected else {}),
+            })
+            self._emit_event("TXN_ADMISSION", {
+                "step_idx": step_idx, "temperature_C": T_C,
+                "entered_bo": txn.entered_bo,
+                "blind_retry_count": txn.blind_retry_count,
+                "admissions": adm,
+                **({"injected_fault": injected} if injected else {}),
+            })
+            if injected:
+                # G-2 验收锚点:注入的坏点必须被治理拦截(不得进 BO)。真机后置验证器据此核对。
+                caught = not bool(txn.entered_bo)
+                rec = {"step_idx": step_idx, "T_C": T_C, "fault": injected,
+                       "entered_bo": bool(txn.entered_bo), "caught": caught}
+                self._fault_injections.append(rec)
+                self._emit_event("FAULT_INJECTION_RESULT", rec)
+        except Exception as exc:  # noqa: BLE001
+            self._emit_event("HARNESS_GOVERNANCE_ERROR",
+                             {"stage": "txn", "step_idx": step_idx, "error": str(exc)})
+
+        # (d) H2 在线仪器见证:用真实 CHI 文件 + 温控稳定 + 仪器态经真实 EvidenceTransaction 推 C_P;
+        #     支持协议级故障注入。opt-in;fail-safe;与 legacy 入库/上面 (c) 提交路径解耦。
+        if self._enable_instrument_witness:
+            self._run_instrument_witness(
+                step_idx=step_idx, T_C=T_C,
+                admission_signals=admission_signals,
+                output_file=output_file, chamber_actual_C=chamber_actual_C,
+                setpoint_C=setpoint_C, rb_result=rb_result)
+
+    def _run_instrument_witness(self, *, step_idx, T_C, admission_signals,
+                               output_file, chamber_actual_C, setpoint_C, rb_result):
+        """H2:用**真实在线见证**(真 CHI 文件 sha256 + 温控稳定 + 仪器态)经真实
+        EvidenceTransaction 推 C_P → C_M → entered_bo。支持协议级故障注入(驱动边界软件注入,
+        绝不碰样品/温控物理安全)。落 `_instrument_witness_rows`,收尾写 summary。fail-safe。"""
+        try:
+            import sys as _sys
+            p = str(PROJECT_ROOT / "stage1_optimization")
+            if p not in _sys.path:
+                _sys.path.insert(0, p)
+            from scientific_harness.instrument_witness import submit_measurement_online
+        except Exception as exc:  # noqa: BLE001
+            self._emit_event("INSTRUMENT_WITNESS_UNAVAILABLE", {"error": str(exc)})
+            return
+        try:
+            thickness = self._thickness_cm if self._thickness_cm is not None else 0.1
+            area = self._area_cm2 if self._area_cm2 is not None else 1.96
+            raw = rb_result.get("raw") if isinstance(rb_result, dict) else None
+            kk_res = None
+            if isinstance(raw, dict):
+                kk_res = (raw.get("kk_result") or {}).get("mu_median")
+            status = (rb_result.get("status") if isinstance(rb_result, dict) else None) or "OK"
+            rb_ohm = rb_result.get("rb_ohm") if isinstance(rb_result, dict) else None
+            rb_method = rb_result.get("rb_method") if isinstance(rb_result, dict) else None
+            # 从本点真实量构造 measurement_signals(与提交路径同源字段)。
+            signals = {
+                "qa_failed": bool(str(status).upper() not in ("OK", "")),
+                "kk_mu_median": kk_res, "kk_testable": kk_res is not None,
+                "uncertainty_status": "QUANTIFIED" if (area > 0 and thickness > 0) else "UNKNOWN",
+                "geometry_valid": bool(area > 0 and thickness > 0),
+                "rb_method_success": rb_ohm is not None,
+                "ecm_fallback": (rb_method == "equivalent_circuit"),
+                "n_series_points": 1,
+            }
+            # 协议级故障注入(本步命中才注)。
+            inj = next((d for d in self._protocol_faults
+                        if int(d.get("at_step", -1)) == int(step_idx)), None)
+            fault = inj["type"] if inj else None
+            txn = submit_measurement_online(
+                sample_id=self._sample_id or "unknown",
+                output_file=output_file,
+                measurement_signals=signals,
+                chi_success=True,
+                chamber_actual_C=chamber_actual_C, setpoint_C=setpoint_C,
+                rb_act_signals=admission_signals, protocol_fault=fault)
+            adm = {str(getattr(k, "name", k)): v["status"] for k, v in txn.use_admissions.items()}
+            row = {
+                "step_idx": step_idx, "T_C": T_C,
+                "c_p": txn.physical_occurred, "entered_bo": bool(txn.entered_bo),
+                "reconciled": bool(txn.reconciled), "blind_retry_count": txn.blind_retry_count,
+                "admissions": adm,
+                **({"protocol_fault": fault} if fault else {}),
+            }
+            self._instrument_witness_rows.append(row)
+            self._emit_event("INSTRUMENT_WITNESS", row)
+            if fault:
+                # 验收锚点:注入的见证类坏点必须被拦(不进 BO),且 blind_retry=0。
+                caught = (not bool(txn.entered_bo)) or (fault == "ACK_LOSS")
+                self._emit_event("PROTOCOL_FAULT_RESULT", {
+                    "step_idx": step_idx, "T_C": T_C, "fault": fault,
+                    "c_p": txn.physical_occurred, "entered_bo": bool(txn.entered_bo),
+                    "blind_retry_count": txn.blind_retry_count, "caught": caught,
+                    "note": ("ACK_LOSS 例外:文件在则应仍 confirmed(先核对、禁盲目重试);"
+                             "其余见证类故障应不进 BO。"),
+                })
+        except Exception as exc:  # noqa: BLE001
+            self._emit_event("HARNESS_GOVERNANCE_ERROR",
+                             {"stage": "instrument_witness", "step_idx": step_idx, "error": str(exc)})
+
+    def _finalize_instrument_witness(self):
+        """H2 收尾:落 runs/<id>/instrument_witness_summary.json(在线见证 + 协议故障验收锚点)。fail-safe。"""
+        if not self._enable_instrument_witness or not self._instrument_witness_rows:
+            return
+        try:
+            rows = list(self._instrument_witness_rows)
+            faulted = [r for r in rows if r.get("protocol_fault")]
+            # 验收:见证类故障(除 ACK_LOSS)全不进 BO;ACK_LOSS 应仍 confirmed(先核对)。
+            def _ok(r):
+                if r.get("protocol_fault") == "ACK_LOSS":
+                    return r.get("c_p") == "confirmed" and r.get("blind_retry_count") == 0
+                return r.get("entered_bo") is False and r.get("blind_retry_count") == 0
+            summary = {
+                "requested_protocol_faults": list(self._protocol_faults),
+                "n_points": len(rows),
+                "n_faults_injected": len(faulted),
+                "n_faults_handled": sum(1 for r in faulted if _ok(r)),
+                "all_faults_handled": bool(faulted and all(_ok(r) for r in faulted)),
+                "any_blind_retry": bool(any(r.get("blind_retry_count", 0) for r in rows)),
+                "witness_rows": rows,
+                "note": ("H2 在线仪器见证:见证来自真实 CHI 文件 + 温控稳定 + 仪器态;"
+                         "协议级故障为驱动边界软件注入,温控/CHI 物理命令未受影响。"),
+            }
+            if self._run_id:
+                out = RUNS_DIR / self._run_id / "instrument_witness_summary.json"
+                out.write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
+            self._emit_event("INSTRUMENT_WITNESS_SUMMARY", {
+                "n_points": summary["n_points"],
+                "n_faults_injected": summary["n_faults_injected"],
+                "n_faults_handled": summary["n_faults_handled"],
+                "all_faults_handled": summary["all_faults_handled"],
+                "any_blind_retry": summary["any_blind_retry"],
+            })
+        except Exception as exc:  # noqa: BLE001
+            self._emit_event("HARNESS_GOVERNANCE_ERROR",
+                             {"stage": "instrument_witness_finalize", "error": str(exc)})
+
+    # ------------------------------------------------------------------
+    # ESAS-OS 2.0 R²-Memory（P2）—— 把 AgentMemory 真正接到 live 回路。
+    #   ① 不改 legacy 测量/入库;② 任一步失败只记事件、绝不抛回主回路。
+    # ------------------------------------------------------------------
+    def _ensure_memory(self):
+        """惰性导入 live_memory_bridge + 构建 AgentMemory(每运行一个)+ 装跨域守卫。
+        成功返回 bridge 模块;失败缓存 False 并返回 None(不重试、不抛错)。"""
+        if self._memory_bridge is False:
+            return None
+        if self._memory_bridge is None:
+            try:
+                import sys as _sys
+                base = Path(__file__).resolve().parents[2]  # V1.0-qianduan-mainline
+                p = str(base / "stage1_optimization")
+                if p not in _sys.path:
+                    _sys.path.insert(0, p)
+                from scientific_memory import live_memory_bridge as _bridge
+                self._memory_bridge = _bridge
+            except Exception as exc:  # noqa: BLE001
+                self._memory_bridge = False
+                try:
+                    self._emit_event("MEMORY_UNAVAILABLE", {"error": str(exc)})
+                except Exception:
+                    pass
+                return None
+        if self._agent_memory is None:
+            try:
+                self._agent_memory = self._memory_bridge.new_campaign_memory()
+                self._memory_foreign_id = self._memory_bridge.install_cross_domain_guard(self._agent_memory)
+                self._emit_event("MEMORY_STARTED", {"foreign_guard_id": self._memory_foreign_id})
+            except Exception as exc:  # noqa: BLE001
+                self._memory_bridge = False
+                self._emit_event("MEMORY_UNAVAILABLE", {"error": f"init: {exc}"})
+                return None
+        return self._memory_bridge
+
+    def _run_point_memory(self, *, step_idx, T_C, rb_ohm, sigma_S_cm, qc_grade, governance_verdict):
+        """逐点把真实测量写入 R²-Memory(经写门 + RoundState)。整体 fail-safe。"""
+        bridge = self._ensure_memory()
+        if not bridge:
+            return
+        try:
+            res = bridge.record_point(
+                self._agent_memory,
+                step_idx=int(step_idx),
+                sample_id=self._sample_id or "unknown",
+                T_C=T_C, rb_ohm=rb_ohm, sigma_S_cm=sigma_S_cm,
+                qc_grade=qc_grade, governance_verdict=governance_verdict,
+            )
+            self._emit_event("MEMORY_POINT", {"step_idx": step_idx, **res})
+        except Exception as exc:  # noqa: BLE001
+            self._emit_event("MEMORY_ERROR", {"step_idx": step_idx, "error": str(exc)})
+
+    def _finalize_memory(self):
+        """收尾:多轮一致性 + 跨域守卫 + 决策保持压缩证书,落 runs/<id>/agent_memory_summary.json。"""
+        if not self._enable_memory or self._agent_memory is None or not self._memory_bridge:
+            return
+        try:
+            summary = self._memory_bridge.finalize(
+                self._agent_memory,
+                sample_id=self._sample_id or "unknown",
+                foreign_item_id=self._memory_foreign_id,
+            )
+            if self._run_id:
+                out = RUNS_DIR / self._run_id / "agent_memory_summary.json"
+                out.write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
+            self._emit_event("MEMORY_FINALIZE", summary)
+        except Exception as exc:  # noqa: BLE001
+            self._emit_event("MEMORY_ERROR", {"stage": "finalize", "error": str(exc)})
+
+    def _memory_projection_for_prompt(self) -> Optional[Dict[str, Any]]:
+        """把 R²-Memory 的治理角色投影取出,供 agent 决策 prompt 注入。
+
+        这是 R²-Memory **被 agent 真正消费** 的读路径(此前只有"写"接进了 live):
+        agent 看到的是经写门/用途门/来源域守卫后的视图,且外域参照带
+        ``usable_as_training_label=False``。整体 fail-safe:不可用 → None。
+        """
+        bridge = self._ensure_memory()
+        if not bridge or self._agent_memory is None:
+            return None
+        try:
+            return bridge.read_projection(self._agent_memory, max_items=10)
+        except Exception as exc:  # noqa: BLE001
+            self._emit_event("MEMORY_ERROR", {"stage": "projection", "error": str(exc)})
+            return None
+
+    def _c3_snapshot(self) -> Optional[Dict[str, Any]]:
+        """逐点 C³-Harness 收敛证书快照,供 agent 决策 prompt 注入。
+
+        与收尾 ``_finalize_c3`` 同源(都走 ``shadow_convergence``),但这里 legacy
+        verdict 取 "continue"(扫描进行中),据已累计的 Rb-ACT 计量不确定度 + 复现地板
+        给出 recommended_action / delta_vs_legacy,让 LLM 在"继续/收敛"上对齐治理层。
+        整体 fail-safe:不可用 → None。
+        """
+        if not self._enable_c3:
+            return None
+        try:
+            import sys as _sys
+            base = Path(__file__).resolve().parents[2]
+            p = str(base / "stage1_optimization")
+            if p not in _sys.path:
+                _sys.path.insert(0, p)
+            from scientific_convergence import shadow_convergence
+        except Exception:
+            return None
+        try:
+            metro = sorted(self._rbact_metro_dex)
+            metro_med = metro[len(metro) // 2] if metro else 0.0
+            termination = {
+                "verdict": "continue", "triggered_by": [],
+                "convergence": {}, "progress": {}, "budget": {},
+            }
+            cert = shadow_convergence(
+                termination,
+                metrological_uncertainty_dex=float(metro_med),
+                repro_replicates_have=1,
+                repro_replicates_required=3,
+                claim_stability=1.0,
+                rb_act_active_requests=list(self._rbact_active_requests),
+            )
+            d = cert.to_dict()
+            return {
+                "recommended_action": d.get("recommended_action"),
+                "delta_vs_legacy": d.get("delta_vs_legacy"),
+                "reasons": d.get("reasons"),
+                "metrological_uncertainty_dex_median": metro_med,
+                "reproducibility": {"have": 1, "required": 3},
+                "active_requests": list(self._rbact_active_requests),
+                "n_rbact_points": len(metro),
+            }
+        except Exception as exc:  # noqa: BLE001
+            self._emit_event("C3_UNAVAILABLE", {"stage": "snapshot", "error": str(exc)})
+            return None
+
+    # ------------------------------------------------------------------
+    # Stage3 机理推理链接 live（GPT 迁移发现愿景）—— 收尾真实 LLM 驱动
+    #   证据(S03) → 假设(S04,真 LLM) → 文献(S05) → 机理仲裁(S06,真 LLM)
+    #   → 可迁移设计原则(S06b,真 LLM)。opt-in / fail-safe,绝不影响测量与入库。
+    # ------------------------------------------------------------------
+    @staticmethod
+    def _parse_rn_from_sample(sample_id: Optional[str]):
+        """从样品名解析 R/N(如 ATP-R0.186-N1.029-...)。解析不到返回 (None, None)。"""
+        import re as _re
+        if not sample_id:
+            return None, None
+        r = _re.search(r"R([0-9]*\.?[0-9]+)", sample_id)
+        n = _re.search(r"N([0-9]*\.?[0-9]+)", sample_id)
+        return (float(r.group(1)) if r else None, float(n.group(1)) if n else None)
+
+    def _run_stage3_reasoning(self, loop_status: str):
+        """收尾把真实全温区测量喂进 stage3 机理推理链(真实 LLM)。落
+        runs/<id>/stage3_mechanism/。整体 fail-safe:任何失败只记事件。"""
+        if not self._enable_stage3_reasoning:
+            return
+        try:
+            import sys as _sys
+            base = Path(__file__).resolve().parents[2]  # V1.0-qianduan-mainline
+            s3_src = str(base / "stage3_mechanism" / "src")
+            if s3_src not in _sys.path:
+                _sys.path.insert(0, s3_src)
+            from s8_stage3.adapters.live_seed_adapter import (
+                build_seed_from_live, run_mechanism_reasoning,
+            )
+        except Exception as exc:  # noqa: BLE001
+            self._emit_event("STAGE3_REASONING_UNAVAILABLE", {"error": str(exc)})
+            return
+
+        # LLM 配置:与 phase_detect / stage1 同一把 OpenRouter key。
+        api_key = self._agent_api_key or _read_llm_key_from_env_file()
+        if not api_key:
+            self._emit_event("STAGE3_REASONING_SKIPPED", {"reason": "no LLM api key"})
+            return
+        base_url = os.environ.get("LLM_BASE_URL") or "https://openrouter.ai/api/v1"
+        model = os.environ.get("LLM_MODEL") or "openai/gpt-5.4"
+
+        try:
+            points = []
+            for m in self._measurements:
+                if not m.get("success"):
+                    continue
+                T_C = m.get("temperature_C")
+                T_K = m.get("temperature_K")
+                if T_K is None and T_C is not None:
+                    T_K = T_C + 273.15
+                sigma = m.get("conductivity_S_cm") or m.get("sigma_S_cm")
+                if T_K is None or sigma is None:
+                    continue
+                points.append({
+                    "T_C": T_C, "T_K": T_K, "rb_ohm": m.get("rb_ohm"),
+                    "sigma_S_cm": sigma, "qc_grade": m.get("qc_grade"),
+                    "r_squared": m.get("r_squared"),
+                })
+            if len(points) < 5:
+                self._emit_event("STAGE3_REASONING_SKIPPED",
+                                 {"reason": f"too few points ({len(points)})"})
+                return
+
+            arr = self._global_arrhenius if isinstance(self._global_arrhenius, dict) else None
+            transitions = (arr or {}).get("transition_temps_K") or []
+            R, N = self._parse_rn_from_sample(self._sample_id)
+
+            self._emit_event("STAGE3_REASONING_STARTED", {
+                "n_points": len(points), "n_transitions": len(transitions),
+                "R": R, "N": N, "model": model,
+            })
+
+            seed = build_seed_from_live(
+                points, sample_id=self._sample_id or "unknown",
+                R=R if R is not None else 0.0, N=N if N is not None else 0.0,
+                transitions_K=transitions, arrhenius=arr,
+            )
+            out_dir = (RUNS_DIR / self._run_id / "stage3_mechanism") if self._run_id else (base / "outputs" / "stage3_live_tmp")
+            info = run_mechanism_reasoning(
+                seed, out_dir, api_key=api_key, base_url=base_url, model=model,
+                llm_mode="live", literature_mode="api", enable_cache=False,
+            )
+            summary = {k: info[k] for k in (
+                "output_dir", "literature_status", "n_llm_calls", "n_real_llm_calls",
+                "real_call_models", "real_call_steps", "n_evidence_cards", "n_hypotheses",
+                "selected_hypothesis_id", "mechanism_label", "n_design_principles",
+                "step_results",
+            )}
+            if self._run_id:
+                out = RUNS_DIR / self._run_id / "stage3_reasoning_summary.json"
+                out.write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
+            self._emit_event("STAGE3_REASONING_COMPLETED", summary)
+        except Exception as exc:  # noqa: BLE001
+            self._emit_event("STAGE3_REASONING_ERROR", {"error": str(exc)})
+
+    # ------------------------------------------------------------------
+    # Epistemic OS（GPT 三大原创方向的可计算对象）—— 收尾对真实 σ(T) 真实运算。
+    #   方案一 不可辨识性证书 / 方案三 最小判别实验集 / 方案二 anytime-valid e-process。
+    #   纯 numpy/scipy、不调 LLM;opt-in / fail-safe(失败只记事件,绝不影响测量/入库)。
+    # ------------------------------------------------------------------
+    def _run_epistemic(self, loop_status: str):
+        if not self._enable_epistemic:
+            return
+        try:
+            import sys as _sys
+            import math as _math
+            repo = Path(__file__).resolve().parents[3]   # acid-in-clay-close
+            nda = str(repo / "_new_data_analysis")
+            if nda not in _sys.path:
+                _sys.path.insert(0, nda)
+            from epistemic import observability_certificate as _OC
+            from epistemic import min_discriminating_set as _MDS
+            from epistemic import eprocess_falsification as _EF
+            import numpy as _np
+        except Exception as exc:  # noqa: BLE001
+            self._emit_event("EPISTEMIC_UNAVAILABLE", {"error": str(exc)})
+            return
+        try:
+            T, S = [], []
+            for m in self._measurements:
+                if not m.get("success"):
+                    continue
+                tk = m.get("temperature_K")
+                if tk is None and m.get("temperature_C") is not None:
+                    tk = m["temperature_C"] + 273.15
+                sg = m.get("conductivity_S_cm") or m.get("sigma_S_cm")
+                if tk and sg and sg > 0:
+                    T.append(float(tk)); S.append(float(sg))
+            if len(T) < 6:
+                self._emit_event("EPISTEMIC_SKIPPED", {"reason": f"too few points ({len(T)})"})
+                return
+            T = _np.array(T); y = _np.log(_np.array(S))
+            o = _np.argsort(T); T, y = T[o], y[o]
+
+            out_dir = (RUNS_DIR / self._run_id / "epistemic") if self._run_id else \
+                (repo / "V1.0-qianduan-mainline" / "outputs" / "epistemic_live_tmp")
+            cert = _OC.build_certificate(T, y, delta=0.05, label=self._sample_id or "live")
+            _OC.write_certificate(cert, out_dir / "observability_certificate.json")
+            mds = _MDS.build_min_discriminating_set(T, y, delta=0.05, label=self._sample_id or "live")
+            _MDS.write_result(mds, out_dir / "min_discriminating_set.json")
+            ef = _EF.run_falsification_on_sigmaT(T, y, alpha=0.05, holdout_frac=0.45,
+                                                 label=self._sample_id or "live", n_type_i_sims=8000)
+            _EF.write_result(ef, out_dir / "eprocess_falsification.json")
+
+            summary = {
+                "n_points": int(len(T)),
+                "aic_best_model": cert.get("aic_best_model"),
+                "equivalence_classes": cert.get("equivalence_classes"),
+                "n_unidentifiable_pairs": cert.get("n_unidentifiable_pairs"),
+                "min_set_status": mds.get("compilation", {}).get("status"),
+                "min_set_T_C": mds.get("minimal_set", {}).get("exact_optimal", {}).get("action_T_C"),
+                "eprocess_crossed": ef.get("eprocess", {}).get("crossed"),
+                "eprocess_log_E_max": ef.get("eprocess", {}).get("log_E_max"),
+                "anytime_valid_ok": ef.get("type_i_control", {}).get("anytime_valid_ok"),
+                "claim_escalation_allowed": ef.get("claim_escalation_allowed"),
+                "output_dir": str(out_dir),
+            }
+            if self._run_id:
+                (RUNS_DIR / self._run_id / "epistemic_summary.json").write_text(
+                    json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
+            self._emit_event("EPISTEMIC_CERTIFICATE_COMPLETED", summary)
+        except Exception as exc:  # noqa: BLE001
+            self._emit_event("EPISTEMIC_ERROR", {"error": str(exc)})
+
+    # ------------------------------------------------------------------
+    # Epistemic OS（阻抗级正问题 P13-A）—— 收尾对真实 EIS 谱做谱级机制辨识。
+    #   把 GPT 的 impedance_forward_operator 从离线接进 live 收尾:对本 run 真机谱
+    #   拟合三竞争等效电路(single_bulk/bulk_electrode/two_population),给 AIC 权重
+    #   / Fisher λ_min 谱级可观测性 / 被动性,并与 σ(T) 层证书互证机制类别。
+    #   纯 numpy/scipy、不调 LLM;复用 _enable_epistemic 开关;fail-safe(失败只记事件)。
+    # ------------------------------------------------------------------
+    def _run_epistemic_impedance(self, loop_status: str):
+        if not self._enable_epistemic:
+            return
+        try:
+            import sys as _sys
+            repo = Path(__file__).resolve().parents[3]   # acid-in-clay-close
+            nda = str(repo / "_new_data_analysis")
+            if nda not in _sys.path:
+                _sys.path.insert(0, nda)
+            from epistemic import impedance_models as _IM
+            import numpy as _np
+        except Exception as exc:  # noqa: BLE001
+            self._emit_event("EPISTEMIC_IMPEDANCE_UNAVAILABLE", {"error": str(exc)})
+            return
+        try:
+            # 收集有真机谱(freq/z_real/z_imag)的成功点。
+            spectra = []
+            for m in self._measurements:
+                if not m.get("success"):
+                    continue
+                f = m.get("frequencies"); zr = m.get("z_real"); zi = m.get("z_imag")
+                if not (f and zr and zi) or len(f) < 10:
+                    continue
+                spectra.append({
+                    "T_C": m.get("temperature_C"), "rb_ohm": m.get("rb_ohm"),
+                    "f": _np.asarray(f, float), "zr": _np.asarray(zr, float),
+                    "zi": _np.asarray(zi, float), "qc": m.get("qc_grade"),
+                })
+            if len(spectra) < 5:
+                self._emit_event("EPISTEMIC_IMPEDANCE_SKIPPED",
+                                 {"reason": f"too few spectra ({len(spectra)})"})
+                return
+            spectra.sort(key=lambda s: (s["T_C"] if s["T_C"] is not None else 0.0))
+
+            def _bulk_R(fit):
+                th = fit.theta
+                if fit.model == "two_population":
+                    return float(th[1] + th[4])
+                return float(th[1])
+
+            rows = []
+            n_passive = n_finite = n_goodfit = n_lam = 0
+            per_T_best = []
+            for s in spectra:
+                fits = _IM.fit_all_mechanisms(s["f"], s["zr"], s["zi"])
+                w = _IM.aic_weights(fits)
+                best = max(w, key=lambda k: (w[k] if _np.isfinite(w[k]) else -1.0))
+                bf = fits[best]
+                rb_best = _bulk_R(bf)
+                if bf.ok and _np.isfinite(rb_best):
+                    n_finite += 1
+                if all(f.passive for f in fits.values() if f.ok):
+                    n_passive += 1
+                if bf.ok and _np.isfinite(bf.weighted_resid_rms) and bf.weighted_resid_rms < 0.35:
+                    n_goodfit += 1
+                if _np.isfinite(bf.lambda_min):
+                    n_lam += 1
+                per_T_best.append((s["T_C"], best))
+                rows.append({
+                    "T_C": s["T_C"], "qc": s["qc"], "rb_measured": s["rb_ohm"],
+                    "best_mechanism": best, "best_bulk_R": rb_best,
+                    "best_wrms": bf.weighted_resid_rms, "best_lambda_min": bf.lambda_min,
+                    "best_cond": bf.condition_number, "best_invariants": bf.invariants,
+                    "aic_weights": {k: (round(v, 3) if _np.isfinite(v) else None)
+                                    for k, v in w.items()},
+                })
+
+            # 体相 R 趋势一致性(诚实:绝对量级在电极阻塞下弱可辨识,只看秩相关)。
+            rho = None
+            try:
+                from scipy.stats import spearmanr
+                pairs = [(r["rb_measured"], r["best_bulk_R"]) for r in rows
+                         if r["rb_measured"] and r["best_bulk_R"]
+                         and r["rb_measured"] > 0 and r["best_bulk_R"] > 0]
+                if len(pairs) >= 4:
+                    rho, _p = spearmanr([p[0] for p in pairs], [p[1] for p in pairs])
+                    rho = float(rho)
+            except Exception:  # noqa: BLE001
+                rho = None
+
+            coldest = sorted([x for x in per_T_best if x[0] is not None],
+                             key=lambda x: x[0])[:3]
+            cold_multi = sum(1 for (_t, b) in coldest
+                             if b in ("two_population", "bulk_electrode"))
+            distinct = sorted({b for (_t, b) in per_T_best})
+
+            # 谱级稳健可辨识量:冷端 vs 暖端最优机制体相 R 的量级(相变致总阻抗上升)。
+            # 绝对体相 R 在电极阻塞下弱可辨识(见 note),但冷/暖端量级差异稳健可见。
+            def _med(vals):
+                v = sorted(x for x in vals if x is not None and _np.isfinite(x) and x > 0)
+                return float(v[len(v) // 2]) if v else None
+            warm_R = _med([r["best_bulk_R"] for r in rows
+                           if r["T_C"] is not None and r["T_C"] > -10.0])
+            cold_R = _med([r["best_bulk_R"] for r in rows
+                           if r["T_C"] is not None and r["T_C"] < -40.0])
+            cold_gt_warm = bool(warm_R and cold_R and cold_R > warm_R)
+
+            out_dir = (RUNS_DIR / self._run_id / "epistemic") if self._run_id else \
+                (repo / "V1.0-qianduan-mainline" / "outputs" / "epistemic_live_tmp")
+            out_dir.mkdir(parents=True, exist_ok=True)
+            detail = {
+                "n_spectra": len(spectra),
+                "T_C_range": [rows[0]["T_C"], rows[-1]["T_C"]],
+                "n_passive": n_passive, "n_finite_bulkR": n_finite,
+                "n_goodfit_wrms_lt_0p35": n_goodfit, "n_finite_lambda_min": n_lam,
+                "bulkR_vs_measured_spearman_rho": rho,
+                "bulkR_median_warm": warm_R, "bulkR_median_cold": cold_R,
+                "cold_bulkR_gt_warm": cold_gt_warm,
+                "cold3_best_mechanisms": [(round(t, 1), b) for (t, b) in coldest],
+                "distinct_mechanisms": distinct,
+                "note": ("谱级绝对体相 R 在电极阻塞下弱可辨识(R∥CPE 向纯 CPE 简并);"
+                         "故不强求逐点秩相关达高值——只如实报告 ρ(方向一致)。"
+                         "谱级稳健可辨识的是冷/暖端体相 R 量级差(相变致总阻抗上升)。"
+                         "绝对量级以 reverse_zero_crossing 为准;本分析仅收尾运行,不参与逐点控制。"),
+                "fits": rows,
+            }
+            (out_dir / "impedance_summary.json").write_text(
+                json.dumps(detail, ensure_ascii=False, indent=2), encoding="utf-8")
+
+            summary = {
+                "n_spectra": len(spectra),
+                "T_C_range": [rows[0]["T_C"], rows[-1]["T_C"]],
+                "n_passive": n_passive,
+                "n_goodfit_wrms_lt_0p35": n_goodfit,
+                "n_finite_lambda_min": n_lam,
+                "bulkR_vs_measured_spearman_rho": rho,
+                "bulkR_median_warm": warm_R, "bulkR_median_cold": cold_R,
+                "cold_bulkR_gt_warm": cold_gt_warm,
+                "cold3_best_mechanisms": [b for (_t, b) in coldest],
+                "distinct_mechanisms": distinct,
+                "cold_prefers_multi_arc": bool(cold_multi >= 2),
+                "output_dir": str(out_dir),
+            }
+            self._emit_event("EPISTEMIC_IMPEDANCE", summary)
+        except Exception as exc:  # noqa: BLE001
+            self._emit_event("EPISTEMIC_IMPEDANCE_ERROR", {"error": str(exc)})
+
+    # ------------------------------------------------------------------
+    # 多角色 LLM 证伪市场接 live 收尾（Gap3 / P13-B）—— 真 OpenRouter 调用。
+    #   收尾对本 run 真实 σ(T) 跑 Proposer/Falsifier/Auditor(真 LLM)+ Referee 确定性真实数据结算,
+    #   严格适当评分(EpistemicAccount)更新信誉/资本;过度自信稻草人对照应被证伪、信誉下跌。
+    #   opt-in(_enable_falsification_market,因真 LLM 有成本);fail-safe(失败只记事件,绝不影响入库)。
+    # ------------------------------------------------------------------
+    def _run_falsification_market(self, loop_status: str):
+        if not self._enable_falsification_market:
+            return
+        try:
+            import sys as _sys
+            repo = Path(__file__).resolve().parents[3]   # acid-in-clay-close
+            nda = str(repo / "_new_data_analysis")
+            skills = str(repo / "V1.0-qianduan-mainline" / "stage1_optimization")
+            for p in (nda, skills):
+                if p not in _sys.path:
+                    _sys.path.insert(0, p)
+            from epistemic import falsification_market as _FM
+            import numpy as _np
+        except Exception as exc:  # noqa: BLE001
+            self._emit_event("FALSIFICATION_MARKET_UNAVAILABLE", {"error": str(exc)})
+            return
+        try:
+            T, S = [], []
+            for m in self._measurements:
+                if not m.get("success"):
+                    continue
+                tk = m.get("temperature_K")
+                if tk is None and m.get("temperature_C") is not None:
+                    tk = m["temperature_C"] + 273.15
+                sg = m.get("conductivity_S_cm") or m.get("sigma_S_cm")
+                if tk and sg and sg > 0:
+                    T.append(float(tk)); S.append(float(sg))
+            if len(T) < 8:
+                self._emit_event("FALSIFICATION_MARKET_SKIPPED",
+                                 {"reason": f"too few points ({len(T)})"})
+                return
+            T = _np.asarray(T, float); y = _np.log(_np.asarray(S, float))
+
+            client = _FM.LLMClient()
+            if not client.available:
+                self._emit_event("FALSIFICATION_MARKET_SKIPPED",
+                                 {"reason": "no LLM_API_KEY (.env) — 真 LLM 不可用,诚实跳过"})
+                return
+
+            market = _FM.run_market(T, y, client=client, n_seed=6, n_rounds=4,
+                                    include_strawman=True)
+
+            out_dir = (RUNS_DIR / self._run_id / "epistemic") if self._run_id else \
+                (repo / "V1.0-qianduan-mainline" / "outputs" / "epistemic_live_tmp")
+            out_dir.mkdir(parents=True, exist_ok=True)
+            (out_dir / "falsification_market.json").write_text(
+                json.dumps(market, ensure_ascii=False, indent=2), encoding="utf-8")
+
+            rep = market.get("reputation", {})
+            llm_agent = next((a for a in rep if a.startswith("LLM_Proposer")), None)
+            straw = "Strawman_Overconfident"
+            summary = {
+                "llm_used": market.get("llm_used"),
+                "n_real_llm_calls": len(market.get("llm_calls", [])),
+                "real_call_roles": sorted({c.get("role") for c in market.get("llm_calls", [])}),
+                "reputation": rep,
+                "brier": market.get("brier"),
+                "domain_T_range": market.get("domain_T_range"),
+                "overconfident_strawman_beaten": bool(
+                    llm_agent and straw in rep
+                    and rep.get(llm_agent, 0.0) > rep.get(straw, 1.0)),
+                "output_dir": str(out_dir),
+            }
+            self._emit_event("MARKET_SETTLED", summary)
+        except Exception as exc:  # noqa: BLE001
+            self._emit_event("FALSIFICATION_MARKET_ERROR", {"error": str(exc)})
+
+    # ------------------------------------------------------------------
+    # ESAS-OS 2.0 C³-Harness（P2）—— 在 legacy "扫完即停" 之上 shadow 收敛证书。
+    #   不变量:C³ 的"停" ⊆ legacy 的"停"(只推迟、绝不更早停);默认只记录不夺权。
+    # ------------------------------------------------------------------
+    def _finalize_c3(self, loop_status: str):
+        """收尾 shadow 收敛证书:喂真实 Rb-ACT 计量不确定度(median sigma_log10_total)+
+        复现地板(单片 → required 3 未满)+ 主动测量请求。落 runs/<id>/c3_convergence_certificate.json。"""
+        if not self._enable_c3:
+            return
+        try:
+            import sys as _sys
+            base = Path(__file__).resolve().parents[2]
+            p = str(base / "stage1_optimization")
+            if p not in _sys.path:
+                _sys.path.insert(0, p)
+            from scientific_convergence import shadow_convergence
+        except Exception as exc:  # noqa: BLE001
+            self._emit_event("C3_UNAVAILABLE", {"error": str(exc)})
+            return
+        try:
+            metro = sorted(self._rbact_metro_dex)
+            metro_med = metro[len(metro) // 2] if metro else 0.0
+            # legacy:扫完所有设定点 → 可结束(loop_can_end);否则不结束。
+            legacy_verdict = "loop_can_end" if loop_status == "completed" else "continue"
+            termination = {
+                "verdict": legacy_verdict,
+                "triggered_by": ["stage0_sweep_complete"] if legacy_verdict == "loop_can_end" else [],
+                "convergence": {}, "progress": {}, "budget": {},
+            }
+            cert = shadow_convergence(
+                termination,
+                metrological_uncertainty_dex=float(metro_med),
+                repro_replicates_have=1,        # 单次全温区扫描 = 1 独立片(诚实:within-run)
+                repro_replicates_required=3,    # between-specimen 0.252 dex 复现地板需 ≥3
+                claim_stability=1.0,            # live 无 claim_graph 投影 → 默认 1
+                rb_act_active_requests=list(self._rbact_active_requests),
+            )
+            d = cert.to_dict()
+            d["evidence"] = {
+                "n_rbact_points": len(metro),
+                "metrological_uncertainty_dex_median": metro_med,
+                "metrological_uncertainty_dex_max": (metro[-1] if metro else None),
+                "rb_act_active_requests": list(self._rbact_active_requests),
+                "loop_status": loop_status,
+            }
+            if self._run_id:
+                out = RUNS_DIR / self._run_id / "c3_convergence_certificate.json"
+                out.write_text(json.dumps(d, ensure_ascii=False, indent=2), encoding="utf-8")
+            # H1:把真实计量证据落到 campaign 输出目录,供**随后的 Stage1 终止聚合**
+            #   (evaluate_termination 自动加载 output_dir/c3_evidence.json)真消费 → C³
+            #   在证据不足时单调安全地推迟停机。fail-safe;legacy verdict 永不改。
+            try:
+                if self._stage1_output_dir:
+                    ev_dir = Path(self._stage1_output_dir)
+                    ev_dir.mkdir(parents=True, exist_ok=True)
+                    c3_evidence = {
+                        "metrological_uncertainty_dex": metro_med,
+                        "repro_replicates_have": 1,
+                        "repro_replicates_required": 3,
+                        "claim_stability": 1.0,
+                        "rb_act_active_requests": list(self._rbact_active_requests),
+                        "source_run_id": self._run_id,
+                    }
+                    (ev_dir / "c3_evidence.json").write_text(
+                        json.dumps(c3_evidence, ensure_ascii=False, indent=2), encoding="utf-8")
+            except Exception as _exc:  # noqa: BLE001
+                self._emit_event("C3_ERROR", {"stage": "evidence_persist", "error": str(_exc)})
+            self._emit_event("C3_SHADOW_CERTIFICATE", {
+                "recommended_action": d["recommended_action"],
+                "delta_vs_legacy": d["delta_vs_legacy"],
+                "c3_stop": d["c3_stop"], "legacy_stop": d["legacy_stop"],
+                "consistent_with_legacy": d["consistent_with_legacy"],
+                "reasons": d["reasons"],
+                "metro_dex_median": metro_med,
+            })
+        except Exception as exc:  # noqa: BLE001
+            self._emit_event("C3_ERROR", {"stage": "finalize", "error": str(exc)})
+
+    def _finalize_rb_r4_activation(self):
+        """H4 收尾:据三条件门(rb_r4_activate + 预注册 gates_pass + 人审签核)决定是否旁产
+        σ_v2 + delta 喂 BO。缺任一条件恒回退 legacy;legacy 永不覆盖。落
+        runs/<id>/rb_act_r4_activation.json。fail-safe。"""
+        if not self._rbact_results:
+            return
+        try:
+            import sys as _sys
+            p = str(PROJECT_ROOT / "stage0_measurement")
+            if p not in _sys.path:
+                _sys.path.insert(0, p)
+            import rb_act as _RB
+        except Exception as exc:  # noqa: BLE001
+            self._emit_event("RB_R4_UNAVAILABLE", {"error": str(exc)})
+            return
+        try:
+            thickness = self._thickness_cm if self._thickness_cm is not None else 0.1
+            area = self._area_cm2 if self._area_cm2 is not None else 1.96
+            contract = _RB.build_r4_prereg_contract(
+                sample_id=self._sample_id, note="H4 live 收尾激活审计")
+            audit = _RB.audit_series(self._rbact_results, contract=contract)
+            act = _RB.build_activation(
+                self._rbact_results, contract=contract, audit=audit,
+                rb_r4_activate=self._rb_r4_activate, human_signoff=self._rb_r4_signoff,
+                thickness_cm=thickness, area_cm2=area)
+            if self._run_id:
+                out = RUNS_DIR / self._run_id / "rb_act_r4_activation.json"
+                out.write_text(json.dumps(
+                    {"contract": contract, "audit": audit, "activation": act},
+                    ensure_ascii=False, indent=2), encoding="utf-8")
+            self._emit_event("RB_R4_ACTIVATION", {
+                "rb_r4_active": act["rb_r4_active"],
+                "reasons": act["reasons"],
+                "gates_pass": act["gates_pass"],
+                "n_points": act["n_points"], "n_paired": act["n_paired"],
+                "legacy_overwritten": act["legacy_overwritten"],
+                "spearman_legacy_vs_v2": act["spearman_legacy_vs_v2"],
+                "median_abs_delta_log10_sigma": act["median_abs_delta_log10_sigma"],
+                "bo_not_degraded": act["bo_not_degraded"],
+            })
+        except Exception as exc:  # noqa: BLE001
+            self._emit_event("HARNESS_GOVERNANCE_ERROR",
+                             {"stage": "rb_r4_activation_finalize", "error": str(exc)})
+
+    # ------------------------------------------------------------------
+    # ESAS-OS 2.0 measurement_txn 真门控（P3）—— entered_bo 从"只记事件"升级为真门控。
+    #   收尾切 committed/rejected;rejected_T_C 在 post-processing 过滤 Stage0 bundle。
+    # ------------------------------------------------------------------
+    def _commit_gate_enforces(self) -> bool:
+        """P13-D:测量提交路径是否真门控(挡被拒点出 BO)。
+        canary/enforce=真挡;shadow=只记录不挡(legacy 行为)。**只影响测量提交,绝不影响温控/CHI。**"""
+        return self._commit_gate_mode in ("canary", "enforce")
+
+    def _finalize_fault_injection(self):
+        """G-2 真机故障注入收尾:落 runs/<id>/fault_injection_summary.json(验收锚点)。fail-safe。
+        验收 = 每个注入的坏点都被治理拦截(caught=True/entered_bo=False),且被 commit gate 剔出 BO。"""
+        try:
+            recs = list(self._fault_injections)
+            n = len(recs)
+            n_caught = sum(1 for r in recs if r.get("caught"))
+            summary = {
+                "requested": list(self._inject_faults),
+                "n_injected": n,
+                "n_caught": n_caught,
+                "all_caught": bool(n > 0 and n_caught == n),
+                "any_entered_bo": bool(any(r.get("entered_bo") for r in recs)),
+                "injections": recs,
+                "note": ("G-2 真机故障注入:仅治理层输入被改,温控/CHI 物理命令未受影响;"
+                         "验收=注入坏点全被治理拦截且未进 BO。"),
+            }
+            if self._run_id:
+                out = RUNS_DIR / self._run_id / "fault_injection_summary.json"
+                out.write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
+            self._emit_event("FAULT_INJECTION_SUMMARY", {
+                "n_injected": n, "n_caught": n_caught,
+                "all_caught": summary["all_caught"], "any_entered_bo": summary["any_entered_bo"],
+            })
+        except Exception as exc:  # noqa: BLE001
+            self._emit_event("HARNESS_GOVERNANCE_ERROR",
+                             {"stage": "fault_injection_finalize", "error": str(exc)})
+
+    def _finalize_commit_gate(self):
+        """据逐点 entered_bo 切 committed/rejected 视图,落 runs/<id>/committed_measurements.json。"""
+        if not self._enable_commit_gate or not self._txn_rows:
+            return
+        try:
+            import sys as _sys
+            base = Path(__file__).resolve().parents[2]
+            p = str(base / "stage1_optimization")
+            if p not in _sys.path:
+                _sys.path.insert(0, p)
+            from scientific_harness.commit_gate import build_committed_view
+        except Exception as exc:  # noqa: BLE001
+            self._emit_event("COMMIT_GATE_UNAVAILABLE", {"error": str(exc)})
+            return
+        try:
+            view = build_committed_view(self._txn_rows)
+            self._commit_rejected_T_C = list(view.get("rejected_T_C") or [])
+            if self._run_id:
+                out = RUNS_DIR / self._run_id / "committed_measurements.json"
+                out.write_text(json.dumps(view, ensure_ascii=False, indent=2), encoding="utf-8")
+            self._emit_event("COMMIT_GATE", {
+                "n_total": view["n_total"], "n_committed": view["n_committed"],
+                "n_rejected": view["n_rejected"],
+                "rejected_T_C": view["rejected_T_C"],
+                "commit_gate_mode": self._commit_gate_mode,
+            })
+        except Exception as exc:  # noqa: BLE001
+            self._emit_event("COMMIT_GATE_ERROR", {"stage": "finalize", "error": str(exc)})
 
     def _real_measurement_loop(self, sample_id: str, kwargs: dict):
         """Real hardware measurement loop using Stage 0 controller + real analysis.
@@ -2839,6 +4406,7 @@ class HardwareAdapter:
                 r2_val = None
                 qc_grade = "UNKNOWN"
                 rb_failure_reason: Optional[str] = None
+                rb_result = None  # 治理旁路要用(含完整 eis_pipeline raw);失败时保持 None
 
                 if chi_result.get("success") and chi_result.get("frequencies") is not None:
                     try:
@@ -2902,6 +4470,27 @@ class HardwareAdapter:
                 }
                 self._measurements.append(measurement)
 
+                # --- ESAS-OS 2.0 治理旁路（Phase 1，纯加法/fail-safe/默认开）---
+                # 仅在本点拿到成功谱时逐点接 shadow + Rb-ACT + txn,推 3 个治理事件。
+                # 整体失败只记 HARNESS_GOVERNANCE_ERROR,绝不影响上面的入库与下面的安全熔断。
+                if self._enable_harness and chi_result.get("success") and freqs_list:
+                    try:
+                        self._run_point_governance(
+                            step_idx=step_idx,
+                            T_C=measurement["temperature_C"],
+                            freq=chi_result.get("frequencies"),
+                            zr=chi_result.get("z_real"),
+                            zi=chi_result.get("z_imag"),
+                            eis_result=(rb_result.get("raw") if isinstance(rb_result, dict) else None),
+                            rb_result=rb_result,
+                            output_file=chi_result.get("output_file"),
+                            chamber_actual_C=actual_t,
+                            setpoint_C=t,
+                        )
+                    except Exception as exc:  # noqa: BLE001
+                        self._emit_event("HARNESS_GOVERNANCE_ERROR",
+                                         {"step_idx": step_idx, "error": str(exc)})
+
                 self._emit_event("Rb_FIT", {
                     "step_idx": step_idx,
                     "rb_ohm": rb_ohm,
@@ -2915,6 +4504,15 @@ class HardwareAdapter:
                     "qc_grade": qc_grade,
                     "r_squared": r2_val,
                 })
+                if self._enable_memory and chi_result.get("success") and freqs_list:
+                    self._run_point_memory(
+                        step_idx=step_idx,
+                        T_C=measurement["temperature_C"],
+                        rb_ohm=rb_ohm,
+                        sigma_S_cm=conductivity,
+                        qc_grade=qc_grade,
+                        governance_verdict="cooling_sweep",
+                    )
                 # Keep the SocketIO payload small — frequencies/z_real/z_imag
                 # can be 60+ floats each; the Analysis page pulls them via
                 # /api/data/measurements/{i}/eis instead.
@@ -3081,6 +4679,9 @@ class HardwareAdapter:
                     self.apply_policy(mode="COARSE")
 
                 decision = self._call_agent_decision(step_idx)
+                # ESAS-OS 2.0 P5:自主覆盖动作过 ActionGate(唯一受控入口)。
+                # shadow → 行为不变;enforce → 非 allowlist 动作被拦,降级安全默认。
+                decision = self._gate_agent_decision(decision, step_idx)
                 # Pass BOTH the planned setpoint t and the actual chamber
                 # temperature actual_t.  CONTINUE uses the planned t to keep
                 # the temperature grid clean (3°C ladder); FINE_GRAINED_SCAN
@@ -3112,6 +4713,52 @@ class HardwareAdapter:
         self._running = False
         if loop_status == "running":
             loop_status = "completed"
+
+        # 0) R²-Memory 收尾(决策保持压缩证书 + 跨域守卫 + 多轮一致性);fail-safe。
+        if self._enable_memory:
+            self._finalize_memory()
+        # 0b) C³-Harness 收尾 shadow 收敛证书(喂真实 Rb-ACT 不确定度 + 复现地板);fail-safe。
+        if self._enable_c3:
+            self._finalize_c3(loop_status)
+        # 0c) measurement_txn 真门控:切 committed/rejected 视图(rejected_T_C 后续过滤 bundle);fail-safe。
+        if self._enable_commit_gate:
+            self._finalize_commit_gate()
+        # 0c2) G-2 真机故障注入收尾:落 fault_injection_summary.json(注入类型 / 是否被拦 / 是否进 BO);fail-safe。
+        if self._inject_faults:
+            self._finalize_fault_injection()
+        # 0c3) H2 在线仪器见证收尾:落 instrument_witness_summary.json(在线见证 + 协议故障验收);fail-safe。
+        if self._enable_instrument_witness:
+            self._finalize_instrument_witness()
+        # 0c4) H4 Rb-ACT R4 激活收尾:三条件门决定是否旁产 σ_v2+delta(替换态,须人审);fail-safe。
+        self._finalize_rb_r4_activation()
+        # 0b2) Stage3 机理推理链(GPT 迁移发现):真实 LLM 驱动 证据→假设→机理→设计原则;opt-in/fail-safe。
+        if self._enable_stage3_reasoning:
+            self._run_stage3_reasoning(loop_status)
+        # 0b3) Epistemic OS(GPT 三大原创方向):不可辨识性证书/最小判别实验集/anytime-valid e-process;opt-in/fail-safe。
+        if self._enable_epistemic:
+            self._run_epistemic(loop_status)
+        # 0b4) Epistemic OS 阻抗级正问题(P13-A):对真机 EIS 谱做谱级机制辨识(AIC/Fisher λ_min/被动性);opt-in/fail-safe。
+        if self._enable_epistemic:
+            self._run_epistemic_impedance(loop_status)
+        # 0b5) 多角色 LLM 证伪市场(P13-B):对真实 σ(T) 跑 Proposer/Falsifier/Auditor 真 LLM + Referee 真数据结算;opt-in/fail-safe。
+        if self._enable_falsification_market:
+            self._run_falsification_market(loop_status)
+        # 0d) ActionGate 审计:自主覆盖动作过 gate 的统计 + bypass 计数(应为 0)。
+        try:
+            n_blocked = sum(1 for d in self._action_gate_decisions if not d.get("dispatched"))
+            summary_gate = {
+                "harness_mode": self._harness_mode,
+                "n_gated_autonomous_actions": len(self._action_gate_decisions),
+                "n_blocked": n_blocked,
+                "bypass_count": self._action_gate_bypass_count,
+            }
+            if self._run_id:
+                (RUNS_DIR / self._run_id / "action_gate_summary.json").write_text(
+                    json.dumps({**summary_gate, "decisions": self._action_gate_decisions},
+                               ensure_ascii=False, indent=2), encoding="utf-8")
+            self._emit_event("ACTION_GATE_SUMMARY", summary_gate)
+        except Exception as exc:  # noqa: BLE001
+            self._emit_event("ACTION_GATE_ERROR", {"stage": "finalize", "error": str(exc)})
 
         # 1) Offline global Arrhenius competitive model (same as offline pipeline)
         try:

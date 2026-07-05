@@ -74,7 +74,11 @@ def _classify(rel_posix: str) -> str:
         return "ADAPTER_SINK"
     if "scientific_harness/" in p:
         return "HARNESS_SHADOW"
-    if p.endswith("stage0_measurement/run_online.py") or "stage0_measurement/controllers/" in p:
+    if (
+        p.endswith("stage0_measurement/run_online.py")
+        or p.endswith("stage0_measurement/b_track_live_driver.py")
+        or "stage0_measurement/controllers/" in p
+    ):
         return "LEGACY_ONLINE"
     if "modules/hardware/" in p or "modules/automation/" in p:
         return "DRIVER_DEFINITION"

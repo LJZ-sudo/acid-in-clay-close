@@ -15,3 +15,10 @@ from .shadow import shadow_run, validate_synthetic  # noqa: F401
 from .synthetic import (  # noqa: F401
     randles_spectrum, blocking_spectrum, synthetic_suite, make_case,
 )
+from .prereg import (  # noqa: F401
+    build_r4_prereg_contract, audit_series, prereg_admission_signals,
+    write_r4_prereg, method_fingerprint, R4_PREREG_VERSION,
+)
+from .activation import (  # noqa: F401
+    build_activation, sigma_from_rb, R4_ACTIVATION_VERSION,
+)

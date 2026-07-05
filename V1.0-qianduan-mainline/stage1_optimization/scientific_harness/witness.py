@@ -186,4 +186,15 @@ def witnesses_from_instrument(instrument: Any, command_id: str, ack_received: bo
         ws.append(Witness(WitnessKind.SAMPLE_ID, present=True, detail=str(instrument.query_sample_id())))
     except Exception:
         pass
+    # 独立温控见证(TEMP_TRACE):仅当仪器提供 query_temp_trace 时加入(在线适配层有,
+    # 离线 ReplayInstrument 没有 → 向后兼容跳过)。稳定到设定点=独立于仪器软件的物理见证。
+    query_tt = getattr(instrument, "query_temp_trace", None)
+    if callable(query_tt):
+        try:
+            tt = query_tt()
+            if tt is not None:
+                ws.append(Witness(WitnessKind.TEMP_TRACE, present=bool(tt.get("settled")),
+                                  detail=f"setpoint={tt.get('setpoint_C')},actual={tt.get('actual_C')}"))
+        except Exception:
+            pass
     return ws

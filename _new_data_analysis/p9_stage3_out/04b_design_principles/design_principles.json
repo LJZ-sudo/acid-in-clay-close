@@ -1,0 +1,133 @@
+{
+  "step_id": "s06b_transfer_principles",
+  "principles": [
+    {
+      "principle_id": "P1",
+      "principle_type": "proton_source",
+      "acid_in_clay_origin": "The winning mechanism assigns conductivity to an interfacial phosphoric-acid/water network anchored on clay surfaces, and the observed multi-regime conductivity implies acid-mediated proton transport persists but changes pathway with temperature [V2-E1, V2-E2, V2-E3, E3].",
+      "transferable_rule": "When designing a cold-tolerant proton conductor, prefer a nonvolatile oxoacid or strongly hydrogen-bonding proton donor that can be immobilized at polar inorganic-organic interfaces rather than relying on freely mobile liquid acid domains.",
+      "target_material_descriptor": "Interfacially anchorable Brønsted-acid phase paired with an OH-rich polymer matrix and a high-surface-area hydrated silicate host",
+      "required_validation": [
+        "EIS composition dependence",
+        "acid retention after thermal hold",
+        "spectroscopic evidence of acid-surface hydrogen bonding"
+      ],
+      "failure_modes": [
+        "free acid leakage",
+        "acid-rich macrophase separation",
+        "corrosion or over-plasticization from excess acid"
+      ],
+      "evidence_ids": [
+        "V2-E1",
+        "V2-E2",
+        "V2-E3",
+        "E3"
+      ],
+      "mechanism_links": [
+        "H2"
+      ]
+    },
+    {
+      "principle_id": "P2",
+      "principle_type": "confinement_geometry",
+      "acid_in_clay_origin": "H2 is specifically favored because 1-D high-surface-area clay channels plausibly confine the acid/water phase and support an interfacial hydrogen-bond network whose transport signature changes across temperature regimes [V2-E2, V2-E3, E4].",
+      "transferable_rule": "When choosing an inorganic host, prefer anisotropic porous or fibrous solids that provide extended polar internal surfaces and nanoscale confinement for continuous interfacial proton pathways, while avoiding hosts dominated by isolated closed pores.",
+      "target_material_descriptor": "1-D fibrous hydrated magnesium/aluminosilicate-class clay or analogous high-aspect-ratio polar channel host",
+      "required_validation": [
+        "SEM/TEM dispersion",
+        "acid uptake and retention",
+        "EIS anisotropy or thickness dependence"
+      ],
+      "failure_modes": [
+        "particle aggregation that breaks pathway continuity",
+        "host pores too large to confine the acid-water network",
+        "isolated domains causing nonpercolating transport"
+      ],
+      "evidence_ids": [
+        "V2-E2",
+        "V2-E3",
+        "E4"
+      ],
+      "mechanism_links": [
+        "H2"
+      ]
+    },
+    {
+      "principle_id": "P3",
+      "principle_type": "bound_water_network",
+      "acid_in_clay_origin": "The conductivity remains measurable through deep cooling but changes regime at two temperatures, supporting a handoff from a warmer interfacial acid/water network to colder surface-bound proton hopping rather than simple bulk-water freezing control [V2-E1, V2-E2, V2-E3, E1].",
+      "transferable_rule": "For operation in the 182-299 K window, design the proton phase so that water is predominantly bound within acid-surface-polymer hydrogen-bond networks that suppress bulk-like crystallization and preserve hopping pathways after liquid-like mobility declines.",
+      "target_material_descriptor": "Hydrated hybrid network combining a strong hydrogen-bonding acid, polar silicate surface, and OH-rich biopolymer segments capable of retaining nonfreezing water",
+      "required_validation": [
+        "DSC freezing suppression",
+        "variable-temperature FTIR or Raman of bound water",
+        "low-temperature EIS regime continuity"
+      ],
+      "failure_modes": [
+        "bulk water freezing",
+        "dehydration on cooling or vacuum exposure",
+        "loss of hydrogen-bond connectivity at low temperature"
+      ],
+      "evidence_ids": [
+        "V2-E1",
+        "V2-E2",
+        "V2-E3",
+        "E1"
+      ],
+      "mechanism_links": [
+        "H2"
+      ]
+    },
+    {
+      "principle_id": "P4",
+      "principle_type": "acid_retention",
+      "acid_in_clay_origin": "Because the mechanism depends on a surface-anchored interfacial acid network, performance requires that the proton donor remain associated with the host rather than redistributing into unstable free domains; the regime changes indicate sensitivity to how this network is retained across temperature [V2-E2, V2-E3, E4].",
+      "transferable_rule": "When migrating to polymer-clay composites, prefer host and matrix chemistries that create multiple acid-binding interactions so the proton donor is retained as a distributed interphase instead of exuding as a separate liquid phase.",
+      "target_material_descriptor": "Composite of polar layered or fibrous mineral filler and OH-rich polymer bearing dense hydrogen-bond acceptor/donor functionality",
+      "required_validation": [
+        "mass-loss or leaching test",
+        "microscopy for exudation-free morphology",
+        "conductivity stability over thermal cycling"
+      ],
+      "failure_modes": [
+        "acid exudation during warm hold",
+        "phase segregation during drying",
+        "conductivity drift after thermal cycling"
+      ],
+      "evidence_ids": [
+        "V2-E2",
+        "V2-E3",
+        "E4"
+      ],
+      "mechanism_links": [
+        "H2"
+      ]
+    },
+    {
+      "principle_id": "P5",
+      "principle_type": "failure_mode_control",
+      "acid_in_clay_origin": "The impedance morphology is heuristic rather than uniquely assigned, and low-temperature points have larger uncertainty, so materials should be selected to make the interfacial pathway robust enough that interpretation does not depend on a fragile single microstate [V2-E4, E4, E2].",
+      "transferable_rule": "When screening new systems, prefer formulations whose proton transport remains percolated across expected thermal and hydration variations, and reject candidates that only conduct in a narrow, metastable, liquid-rich state.",
+      "target_material_descriptor": "Microstructurally robust hybrid proton conductor with distributed interfacial pathways across polymer, acid, and inorganic domains",
+      "required_validation": [
+        "repeat EIS over cooling-heating cycles",
+        "humidity sensitivity mapping",
+        "mechanical integrity and crack-resistance check"
+      ],
+      "failure_modes": [
+        "conductivity collapse after one freeze-thaw cycle",
+        "transport dominated by transient liquid pockets",
+        "microcracking-induced pathway loss"
+      ],
+      "evidence_ids": [
+        "V2-E4",
+        "E4",
+        "E2"
+      ],
+      "mechanism_links": [
+        "H2"
+      ]
+    }
+  ],
+  "migration_summary": "The acid-in-clay mechanism transfers to biopolymer/clay/acid systems by preserving its functional architecture rather than its exact composition: use a strong hydrogen-bonding proton donor, immobilize it on a high-surface-area anisotropic mineral host, and embed that host in an OH-rich polymer that helps retain a bound-water network. The key design move is to convert what would otherwise be free liquid acid and freezable water into a distributed interfacial proton-conducting phase that remains connected as temperature falls, allowing warm-region transport through dynamic acid/water networks and cold-region transport through more surface-bound hopping pathways. In practice, migration should prioritize acid retention, nanoscale confinement, suppression of bulk-water freezing, and robustness against phase separation or freeze-thaw damage."
+}

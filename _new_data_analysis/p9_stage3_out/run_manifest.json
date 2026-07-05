@@ -1,0 +1,142 @@
+{
+  "run_mode": "real",
+  "literature_mode": "mock",
+  "output_dir": "C:\\Users\\LBM\\Desktop\\new\\acid-in-clay-close\\_new_data_analysis\\p9_stage3_out",
+  "selected_steps": [
+    "s03_evidence_builder",
+    "s04_hypothesis_generator",
+    "s05_literature_scout_mechanism"
+  ],
+  "until_step": "s06b_design_principle_extractor",
+  "max_samples": null,
+  "sample_ids": null,
+  "manual_strict": false,
+  "stage2_input": {},
+  "stage2_input_dir": null,
+  "stage2_seed_path": null,
+  "stage2_seed_sha256": null,
+  "strict_real_input": null,
+  "adapter_warning_count": null,
+  "settings": {
+    "llm_mode": "live",
+    "model_tier": "cheap",
+    "enable_cache": false,
+    "llm_temperature": 0.0,
+    "llm_seed": null,
+    "use_structured_outputs": false
+  },
+  "prompt_manifest": [
+    {
+      "name": "global_system",
+      "path": "C:\\Users\\LBM\\Desktop\\new\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\src\\s8_stage3\\prompts\\global_system.md",
+      "sha256": "4b24ff05c9fb489ce66880da07cc82da855ddb992599b20659f47fc9254db5c8"
+    },
+    {
+      "name": "s03_evidence_builder",
+      "path": "C:\\Users\\LBM\\Desktop\\new\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\src\\s8_stage3\\prompts\\s03_evidence_builder.md",
+      "sha256": "861dcb1a282e1154df97554ccd9444d4074362d7054ee21402c1e3bb401e8011"
+    },
+    {
+      "name": "s04_hypothesis_generator",
+      "path": "C:\\Users\\LBM\\Desktop\\new\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\src\\s8_stage3\\prompts\\s04_hypothesis_generator.md",
+      "sha256": "809ae267709caed75cc8ab33f8a63a2230a595519146e66a2c2274454225b0c5"
+    },
+    {
+      "name": "s05_literature_mechanism",
+      "path": "C:\\Users\\LBM\\Desktop\\new\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\src\\s8_stage3\\prompts\\s05_literature_mechanism.md",
+      "sha256": "1ce165bb8f16b21f4992a4304908e30245d19388be16819f3e69d5a35bcb0236"
+    },
+    {
+      "name": "s06_mechanism_arbiter",
+      "path": "C:\\Users\\LBM\\Desktop\\new\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\src\\s8_stage3\\prompts\\s06_mechanism_arbiter.md",
+      "sha256": "2bbab39afc62b550eaf40ae9b696b45edc6f59d075bdc0749f10c55abc4d4749"
+    },
+    {
+      "name": "s06b_design_principle_extractor",
+      "path": "C:\\Users\\LBM\\Desktop\\new\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\src\\s8_stage3\\prompts\\s06b_design_principle_extractor.md",
+      "sha256": "9d53e160a5ca0c496904475daa95eb7937b085bbb5b6e55a6c6e1e72c9c5654c"
+    },
+    {
+      "name": "s07_descriptor_extractor",
+      "path": "C:\\Users\\LBM\\Desktop\\new\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\src\\s8_stage3\\prompts\\s07_descriptor_extractor.md",
+      "sha256": "29dc7480fcec31b5385be15d7e6cce3ee190d240e1ffe85ceb5fb121f8306ef5"
+    },
+    {
+      "name": "s08_literature_materials",
+      "path": "C:\\Users\\LBM\\Desktop\\new\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\src\\s8_stage3\\prompts\\s08_literature_materials.md",
+      "sha256": "1f589aae4ad886ac6894e4a1784e07be29b1436e9c41d2313e26225e2c28f922"
+    },
+    {
+      "name": "s09_family_generator",
+      "path": "C:\\Users\\LBM\\Desktop\\new\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\src\\s8_stage3\\prompts\\s09_family_generator.md",
+      "sha256": "417282a82e086b0e46e35ce89a695bb386c4a5e39637e64dd69d8ab9547f6f49"
+    },
+    {
+      "name": "s09_family_generator_compact",
+      "path": "C:\\Users\\LBM\\Desktop\\new\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\src\\s8_stage3\\prompts\\s09_family_generator_compact.md",
+      "sha256": "6e7c09df082213cec194b22de1c47149e69a58d9e6901f5c93c4069bb8b5e918"
+    },
+    {
+      "name": "s10_instance_ranker",
+      "path": "C:\\Users\\LBM\\Desktop\\new\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\src\\s8_stage3\\prompts\\s10_instance_ranker.md",
+      "sha256": "aa19af14289e228f2ff0df17d04602c2ac7d04b8a4f463cc98d7dc37e729319a"
+    },
+    {
+      "name": "s11_report_compiler",
+      "path": "C:\\Users\\LBM\\Desktop\\new\\acid-in-clay-close\\V1.0-qianduan-mainline\\stage3_mechanism\\src\\s8_stage3\\prompts\\s11_report_compiler.md",
+      "sha256": "982d3b65d1d5a935a06ab865e64256500afd05dbcc5f8887c63cba1f61349ef6"
+    }
+  ],
+  "step_results": [
+    {
+      "step": "s03_evidence_builder",
+      "status": "completed",
+      "error": null
+    },
+    {
+      "step": "s04_hypothesis_generator",
+      "status": "completed",
+      "error": null
+    },
+    {
+      "step": "s05_literature_scout_mechanism",
+      "status": "failed",
+      "error": "[LLMGateway] All retries failed for step=s05_literature_mechanism: Error code: 400 - {'error': {'message': 'Input required: specify \"prompt\" or \"messages\"', 'code': 400}, 'user_id': 'user_3Dbu664ULFT3Xlpm2L7ESulsWS3'}"
+    }
+  ],
+  "ranking_robustness": {},
+  "agent_trace": [
+    {
+      "step": "s03_evidence_builder",
+      "status": "completed",
+      "output_hashes": {
+        "00_sanitizer_digest.json": "5e228489076f7453b3ee008a54618375ef094e7c6cf26d36fda9dbf1b9e704ea",
+        "01_evidence/evidence_cards.json": "aab5e66ecc2d819844130cc5ecc60b15dc6aff7ab65093bd435f1132284ba7dc"
+      },
+      "guardrail_warnings": []
+    },
+    {
+      "step": "s04_hypothesis_generator",
+      "status": "completed",
+      "output_hashes": {
+        "00_sanitizer_digest.json": "5e228489076f7453b3ee008a54618375ef094e7c6cf26d36fda9dbf1b9e704ea",
+        "01_evidence/evidence_cards.json": "aab5e66ecc2d819844130cc5ecc60b15dc6aff7ab65093bd435f1132284ba7dc",
+        "02_hypotheses/hypothesis_board.json": "1e205f1a89c7fbcd81c145bfdfba0ec6d5ee3975e042a16ef53dc35f81dbaf1e"
+      },
+      "guardrail_warnings": []
+    },
+    {
+      "step": "s05_literature_scout_mechanism",
+      "status": "failed",
+      "output_hashes": {},
+      "guardrail_warnings": [],
+      "error": "[LLMGateway] All retries failed for step=s05_literature_mechanism: Error code: 400 - {'error': {'message': 'Input required: specify \"prompt\" or \"messages\"', 'code': 400}, 'user_id': 'user_3Dbu664ULFT3Xlpm2L7ESulsWS3'}"
+    }
+  ],
+  "output_hashes": {
+    "00_sanitizer_digest.json": "5e228489076f7453b3ee008a54618375ef094e7c6cf26d36fda9dbf1b9e704ea",
+    "01_evidence/evidence_cards.json": "aab5e66ecc2d819844130cc5ecc60b15dc6aff7ab65093bd435f1132284ba7dc",
+    "02_hypotheses/hypothesis_board.json": "1e205f1a89c7fbcd81c145bfdfba0ec6d5ee3975e042a16ef53dc35f81dbaf1e",
+    "llm_cost_summary.json": "aac79d9fa03ebcc1d760ca65aa1758f1bbcafc8efbb5a64f137b5d2852c43189"
+  }
+}

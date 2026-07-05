@@ -464,14 +464,86 @@ def _eval_anomaly(
 # Public API
 # ---------------------------------------------------------------------------
 
+def _c3_consume(
+    verdict: str,
+    triggered_by: List[str],
+    conv: Dict[str, Any],
+    progress: Dict[str, Any],
+    budget: Dict[str, Any],
+    anomaly: Dict[str, Any],
+    score_min: Optional[float],
+    c3_evidence: Dict[str, Any],
+) -> Dict[str, Any]:
+    """H1：把 C³-Harness 收敛证书接成**单调安全的 advisory 消费**。
+
+    铁律(与 `scientific_convergence` 的 c3_stop⊆legacy_stop 不变量一致):
+      * C³ **只能把一次"非硬停"的 loop_can_end 推迟成继续**(证据不足时);
+      * **永不**把 continue 变成停;**永不**推迟 budget 硬停(预算耗尽照停)。
+    返回证书字典 + 消费裁决;失败 fail-safe 返回 {consumed: False, error}。
+    """
+    try:
+        import sys as _sys
+        base = Path(__file__).resolve().parents[1]  # stage1_optimization
+        if str(base) not in _sys.path:
+            _sys.path.insert(0, str(base))
+        from scientific_convergence import shadow_convergence
+    except Exception as exc:  # noqa: BLE001
+        return {"consumed": False, "error": f"import: {exc}"}
+    try:
+        termination_for_c3 = {
+            "verdict": verdict,
+            "triggered_by": list(triggered_by),
+            "convergence": conv,
+            "progress": progress,
+            "budget": budget,
+            "anomaly": anomaly,
+        }
+        cert = shadow_convergence(
+            termination_for_c3,
+            metrological_uncertainty_dex=float(c3_evidence.get("metrological_uncertainty_dex", 0.0) or 0.0),
+            repro_replicates_have=c3_evidence.get("repro_replicates_have"),
+            repro_replicates_required=int(c3_evidence.get("repro_replicates_required", 3) or 3),
+            claim_stability=float(c3_evidence.get("claim_stability", 1.0) or 1.0),
+            score_min=score_min,
+            rb_act_active_requests=c3_evidence.get("rb_act_active_requests"),
+        )
+        d = cert.to_dict()
+        budget_hard = (verdict == "loop_must_end_budget") or bool(
+            (budget or {}).get("triggered") and (budget or {}).get("status") == "exhausted")
+        legacy_is_stop = verdict in ("loop_can_end", "loop_must_end_budget")
+        c3_deferred = bool(
+            legacy_is_stop and (not budget_hard)
+            and d.get("delta_vs_legacy") == "c3_defers_stop")
+        d.update({
+            "consumed": True,
+            "c3_deferred_stop": c3_deferred,
+            "budget_hard_stop": budget_hard,
+            "evidence": {
+                "metrological_uncertainty_dex": c3_evidence.get("metrological_uncertainty_dex"),
+                "repro_replicates_have": c3_evidence.get("repro_replicates_have"),
+                "repro_replicates_required": c3_evidence.get("repro_replicates_required"),
+            },
+            "note": ("advisory 消费:C³ 只能推迟一次非硬停(证据不足),永不更早停、"
+                     "永不推迟 budget 硬停;legacy verdict 字段保持不变。"),
+        })
+        return d
+    except Exception as exc:  # noqa: BLE001
+        return {"consumed": False, "error": str(exc)}
+
+
 def evaluate_termination(
     campaign_config: Dict[str, Any],
     history: Dict[str, Any],
     output_dir: Optional[Path] = None,
+    c3_evidence: Optional[Dict[str, Any]] = None,
 ) -> Dict[str, Any]:
     """主入口：给定 campaign_config + history_db，返回 termination_status v3 结构。
 
     A/B/C/D 任意一个 `triggered=True` 即视为闭环可结束（前端做最终展示）。
+
+    H1(C³ 消费):当提供 ``c3_evidence``(或 ``output_dir/c3_evidence.json`` 存在)时,
+    额外产出 ``c3`` 证书块 + ``verdict_effective``——**单调安全**地让 C³ 在证据不足时
+    推迟一次非硬停;``verdict`` 原字段永远保留 legacy 结果不变。
     """
     criteria = campaign_config.get("termination_criteria") or {}
     bounds = _extract_bounds(campaign_config)
@@ -572,10 +644,30 @@ def evaluate_termination(
         "performance_gap_to_threshold": gaps,
     }
 
+    # ---- H1: C³-Harness advisory 消费(单调安全,永不更早停;legacy verdict 不变)----
+    if c3_evidence is None and output_dir is not None:
+        ev_path = Path(output_dir) / "c3_evidence.json"
+        if ev_path.exists():
+            try:
+                c3_evidence = json.loads(ev_path.read_text(encoding="utf-8"))
+            except (OSError, json.JSONDecodeError):
+                c3_evidence = None
+    c3_block: Optional[Dict[str, Any]] = None
+    verdict_effective = verdict
+    if c3_evidence is not None:
+        c3_block = _c3_consume(
+            verdict, triggered_by, conv, progress, budget, anomaly,
+            perf_th.get("combined_score_min") if isinstance(perf_th, dict) else None,
+            c3_evidence,
+        )
+        if c3_block.get("consumed") and c3_block.get("c3_deferred_stop"):
+            verdict_effective = "continue_c3_defer"
+
     return {
         "version": criteria.get("version") or "v3",
         "rationale": criteria.get("rationale"),
         "verdict": verdict,
+        "verdict_effective": verdict_effective,
         "triggered_by": triggered_by,
         "performance": perf,
         "convergence": conv,
@@ -584,6 +676,7 @@ def evaluate_termination(
         "n_history_trials": len(trials),
         "n_closed_loop_rounds": len(rounds),
         "progress": progress,
+        "c3": c3_block,
     }
 
 

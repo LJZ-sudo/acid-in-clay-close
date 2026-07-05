@@ -1,0 +1,29 @@
+{
+  "bundle_id": "live-seed-ATP-R0.186-N1.029-fulltemp-fe2",
+  "n_samples": 1,
+  "n_segments": 3,
+  "sanitization_flags": [
+    {
+      "sample_id": "ATP-R0.186-N1.029-fulltemp-fe2",
+      "flag_type": "decreasing_conductivity_trend",
+      "detail": "Conductivity decreases with T; unusual for proton transport — verify segment count",
+      "severity": "warning"
+    }
+  ],
+  "flagged_segment_ids": {},
+  "upstream_facts": {
+    "n_live_points": 19,
+    "wide_temperature": 89.29999999999998,
+    "n_transitions": 2,
+    "source": "hardware_adapter genuine-live full-temperature sweep"
+  },
+  "composition_nodes_summary": [
+    {
+      "node_id": "node-R0.186-N1.029",
+      "r": 0.186,
+      "n": 1.029,
+      "sample_count": 1
+    }
+  ],
+  "note": "Flagged values are preserved in the original bundle but should not be treated as strong numeric evidence when passed to LLM agents."
+}

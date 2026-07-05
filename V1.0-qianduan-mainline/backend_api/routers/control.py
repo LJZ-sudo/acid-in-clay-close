@@ -8,7 +8,7 @@ from __future__ import annotations
 
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
-from typing import Optional
+from typing import Optional, Union
 
 from backend_api.services.hardware_adapter import get_hardware_adapter
 
@@ -72,8 +72,43 @@ class StartExperimentRequest(BaseModel):
     # Per-point LLM Agent (phase-transition decision after each measurement)
     enable_agent_decision: bool = True
     agent_api_key: Optional[str] = None  # overrides POLOAPI_KEY env var
-    agent_model: Optional[str] = None    # default deepseek-v3.1
+    agent_model: Optional[str] = None    # default openai/gpt-5.4(须为合法 OpenRouter model ID)
     fine_scan_window_C: Optional[float] = None
+    # 创新点 opt-in 开关(默认关:成本/时延;真机长跑时显式开以验证创新点真实运行)
+    #   - enable_active_design : Gap2 内层可知性驱动选温(advisory + ActionGate 留痕,逐点注入决策 prompt)
+    #   - enable_stage3_reasoning : §12.14 收尾 stage3 假设/机制/设计原则推理链(真 LLM)
+    #   - enable_epistemic : §12.15 收尾认知证书三对象(观测性/最小判别集/e-process 证伪);
+    #                        并附带阻抗级正问题谱级辨识(§13 P13-A,收尾对真机谱跑 MechanismModel)
+    #   - enable_falsification_market : §13 P13-B 收尾多角色 LLM 证伪市场(真 OpenRouter,默认关因有成本)
+    enable_active_design: bool = False
+    #   - active_design_mode : "advisory"(默认,仅注入 prompt,行为不变)|
+    #       "canary"(P13-C:经 ActionGate 在固定阶梯相邻候选间微调下一 setpoint,受硬护栏约束)
+    active_design_mode: str = "advisory"
+    enable_stage3_reasoning: bool = False
+    enable_epistemic: bool = False
+    enable_falsification_market: bool = False
+    #   - commit_gate_mode : "enforce"(默认,被拒点真挡出 BO)| "canary"(同 enforce,灰度)|
+    #       "shadow"(P13-D:只记录裁决、被拒点仍进 BO=legacy)。仅门控测量提交,绝不门控温控/CHI。
+    commit_gate_mode: str = "enforce"
+    #   - inject_fault : G-2 真机故障注入(opt-in,真机验收治理拦截用)。dict 或 list of dict:
+    #       {"type": "SAMPLE_MISMATCH"|"QA_FAIL", "at_step": <int>}。
+    #       **只作用于测量提交治理层输入**(样品核对/QA),让真实 txn 判 entered_bo=False;
+    #       **绝不触碰温控/CHI 物理命令**(安全)。默认 None=不注入。
+    inject_fault: Optional[Union[dict, list]] = None
+    # H 系列旧材料硬化(2026-07-05)live 终验开关(opt-in,默认关;纯加法、legacy 永不覆盖):
+    #   - enable_instrument_witness : H2 在线仪器见证。每点用真实 CHI 文件 sha256 + 温控稳定
+    #       TEMP_TRACE + 仪器态经真实 EvidenceTransaction 推 C_P。协议级故障经 inject_fault 里
+    #       type∈{ACK_LOSS,INSTRUMENT_STUCK,FILE_MISSING,FILE_DELAY,SAMPLE_SWAP,CALIBRATION_EXPIRED}
+    #       条目注入(仅驱动边界软件注入,绝不触碰温控/CHI 物理安全)。注了协议故障会自动开本见证。
+    #   - canary_max_steps : H3 active_design canary 可执行邻域步数(clamp 1–3,默认 2)。
+    #       仅在 enable_active_design=True 且 active_design_mode="canary" 时生效;硬护栏不变。
+    #   - rb_r4_activate / rb_r4_signoff : H4 Rb-ACT R4 替换态激活(须三条件齐备:本 flag +
+    #       预注册 gates_pass + 人审签核 token)。缺任一条件恒回退 legacy,legacy_overwritten=0。
+    #       **默认关**——未提供签核 token 时数值链恒 100% legacy,软件绝不自行替换。
+    enable_instrument_witness: bool = False
+    canary_max_steps: int = 2
+    rb_r4_activate: bool = False
+    rb_r4_signoff: Optional[str] = None
     # Safety thresholds + finalize behaviour (mirror run_online.py defaults)
     min_conductivity_threshold: Optional[float] = None  # σ hard fuse (S/cm)
     max_rb_ohm: Optional[float] = None                  # Rb hard fuse (Ω)
@@ -147,6 +182,17 @@ def start_experiment(req: Optional[StartExperimentRequest] = None):
         enable_agent_decision=req.enable_agent_decision,
         agent_api_key=req.agent_api_key,
         agent_model=req.agent_model,
+        enable_active_design=req.enable_active_design,
+        active_design_mode=req.active_design_mode,
+        enable_stage3_reasoning=req.enable_stage3_reasoning,
+        enable_epistemic=req.enable_epistemic,
+        enable_falsification_market=req.enable_falsification_market,
+        commit_gate_mode=req.commit_gate_mode,
+        inject_fault=req.inject_fault,
+        enable_instrument_witness=req.enable_instrument_witness,
+        canary_max_steps=req.canary_max_steps,
+        rb_r4_activate=req.rb_r4_activate,
+        rb_r4_signoff=req.rb_r4_signoff,
         fine_scan_window_C=req.fine_scan_window_C,
         min_conductivity_threshold=req.min_conductivity_threshold,
         max_rb_ohm=req.max_rb_ohm,

@@ -336,6 +336,99 @@
         "round": 2,
         "note": "Line B round-2 prospective MOBO+LLM recipe (raw MOBO R=0.245/N=0.923 -> LLM gpt-5.4 final R=0.42/N=1.02). Frozen+pushed 2026-06-10, synthesized 2026-06-11 (measured-after-freeze). Does NOT beat campaign best (trial 1 R0.186/N1.029, score -1.94); honest prospective execution, not a discovery."
       }
+    },
+    {
+      "trial_id": 11,
+      "timestamp": "2026-06-30T22:06:01.260698",
+      "parameters": {
+        "R": 0.186,
+        "N": 1.03
+      },
+      "objectives": {
+        "conductivity_room_temp_S_cm": 0.014075101628667428,
+        "ea_high_temp_eV": 0.13860254061602603,
+        "ea_low_temp_eV": 1.0673858946995904,
+        "n_segments": 3.0,
+        "ea_low_excess_eV": 0.8594820837755515,
+        "combined_score": -2.6970971243964756
+      },
+      "metadata": {
+        "sample_id": "ATP-R0.186-N1.029-fulltemp-fe3",
+        "source": "stage0_measurement",
+        "source_mode": "real",
+        "source_tag": "attapulgite_aice",
+        "input_bundle_hash": "823d2073205c1bb32a782f3341581de506a209e9ce48fb7aebe06c27ec00dfaa",
+        "objective_valid": true,
+        "invalid_reasons": [],
+        "parser_mode": "bundle",
+        "stage0_bundle_path": "C:\\Users\\LBM\\Desktop\\new\\acid-in-clay-close\\V1.0-qianduan-mainline\\output\\ao_stage0_results\\2026.6.30__ATP-R0.186-N1.029-fulltemp-fe3\\stage0_result_bundle.json",
+        "timestamp": "2026-06-30T22:06:01.211553",
+        "objective_variance": 0.000428154549920507,
+        "noise_source": "RB_ACT_METROLOGICAL_DIRECT",
+        "rbact_u_total_dex": 0.020691895754630773
+      }
+    },
+    {
+      "trial_id": 12,
+      "timestamp": "2026-07-02T11:00:30.702881",
+      "parameters": {
+        "R": 0.186,
+        "N": 1.03
+      },
+      "objectives": {
+        "conductivity_room_temp_S_cm": 0.013266440513707116,
+        "ea_high_temp_eV": 0.07097464572109757,
+        "ea_low_temp_eV": 0.07097464572109757,
+        "n_segments": 1.0,
+        "ea_low_excess_eV": 0.0,
+        "combined_score": -2.0901695231624995
+      },
+      "metadata": {
+        "sample_id": "ATP-R0.186-N1.029-fulltemp-fe4",
+        "source": "stage0_measurement",
+        "source_mode": "real",
+        "source_tag": "attapulgite_aice",
+        "input_bundle_hash": "7c5569389450730de9db499737f128b4cea3cdcffd37f9b3c27dbcc97eabc05c",
+        "objective_valid": true,
+        "invalid_reasons": [],
+        "parser_mode": "bundle",
+        "stage0_bundle_path": "C:\\Users\\LBM\\Desktop\\new\\acid-in-clay-close\\V1.0-qianduan-mainline\\output\\ao_stage0_results\\2026.7.2__ATP-R0.186-N1.029-fulltemp-fe4\\stage0_result_bundle.json",
+        "timestamp": "2026-07-02T11:00:30.676319",
+        "objective_variance": 0.00042871279378072354,
+        "noise_source": "RB_ACT_METROLOGICAL_DIRECT",
+        "rbact_u_total_dex": 0.02070538079294181
+      }
+    },
+    {
+      "trial_id": 13,
+      "timestamp": "2026-07-02T22:46:33.188997",
+      "parameters": {
+        "R": 0.186,
+        "N": 1.03
+      },
+      "objectives": {
+        "conductivity_room_temp_S_cm": 0.01455374125191647,
+        "ea_high_temp_eV": 0.1222253109985074,
+        "ea_low_temp_eV": 0.8185571147081172,
+        "n_segments": 3.0,
+        "ea_low_excess_eV": 0.6352191482103561,
+        "combined_score": -2.5213108576822183
+      },
+      "metadata": {
+        "sample_id": "ATP-R0.186-N1.029-fulltemp-fe4b",
+        "source": "stage0_measurement",
+        "source_mode": "real",
+        "source_tag": "attapulgite_aice",
+        "input_bundle_hash": "a6d53e40bc3bab8d36200db405fb387937f4dbc8719aa1775d6a307b1cdd31ed",
+        "objective_valid": true,
+        "invalid_reasons": [],
+        "parser_mode": "bundle",
+        "stage0_bundle_path": "C:\\Users\\LBM\\Desktop\\new\\acid-in-clay-close\\V1.0-qianduan-mainline\\output\\ao_stage0_results\\2026.7.2__ATP-R0.186-N1.029-fulltemp-fe4b\\stage0_result_bundle.json",
+        "timestamp": "2026-07-02T22:46:33.141391",
+        "objective_variance": 0.0004285585845156135,
+        "noise_source": "RB_ACT_METROLOGICAL_DIRECT",
+        "rbact_u_total_dex": 0.02070165656452675
+      }
     }
   ]
 }

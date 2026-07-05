@@ -1,0 +1,100 @@
+{
+  "object": "FalsificationValuePerCost",
+  "label": "live_run",
+  "selected_model": "segmented",
+  "competitors": [
+    "arrhenius",
+    "mott",
+    "vtf"
+  ],
+  "rho": 0.5,
+  "sigma_ln": 0.06843470222422438,
+  "best_next_experiment_T_C": -36.87,
+  "ranked_actions": [
+    {
+      "T_C": -36.87,
+      "min_KL_vs_competitors": 58.713223598288586,
+      "cost": 2.692307692307693,
+      "risk": 0.5641025641025643,
+      "falsification_value_per_cost": 19.739790692528054
+    },
+    {
+      "T_C": -35.9,
+      "min_KL_vs_competitors": 56.1672300272361,
+      "cost": 2.659574468085106,
+      "risk": 0.5531914893617019,
+      "falsification_value_per_cost": 19.129418922319545
+    },
+    {
+      "T_C": -34.58,
+      "min_KL_vs_competitors": 47.047143042810305,
+      "cost": 2.6153846153846154,
+      "risk": 0.5384615384615384,
+      "falsification_value_per_cost": 16.309676254840905
+    },
+    {
+      "T_C": -32.29,
+      "min_KL_vs_competitors": 34.00175277601678,
+      "cost": 2.5384615384615388,
+      "risk": 0.5128205128205129,
+      "falsification_value_per_cost": 12.165764754721598
+    },
+    {
+      "T_C": -39.16,
+      "min_KL_vs_competitors": 34.37128649378836,
+      "cost": 2.7692307692307696,
+      "risk": 0.5897435897435899,
+      "falsification_value_per_cost": 11.217407307596199
+    },
+    {
+      "T_C": 13.5,
+      "min_KL_vs_competitors": 10.094809505758665,
+      "cost": 1.0,
+      "risk": 0.0,
+      "falsification_value_per_cost": 10.094809505758665
+    },
+    {
+      "T_C": -30.9,
+      "min_KL_vs_competitors": 27.56188349128549,
+      "cost": 2.491601343784994,
+      "risk": 0.4972004479283313,
+      "falsification_value_per_cost": 10.058341625548813
+    },
+    {
+      "T_C": -30.01,
+      "min_KL_vs_competitors": 23.95010866757909,
+      "cost": 2.4615384615384612,
+      "risk": 0.48717948717948706,
+      "falsification_value_per_cost": 8.853594673323077
+    },
+    {
+      "T_C": 11.21,
+      "min_KL_vs_competitors": 9.12814402266364,
+      "cost": 1.0769230769230766,
+      "risk": 0.025641025641025536,
+      "falsification_value_per_cost": 8.376414514914872
+    },
+    {
+      "T_C": 9.1,
+      "min_KL_vs_competitors": 8.18949075636994,
+      "cost": 1.1478163493840978,
+      "risk": 0.049272116461365936,
+      "falsification_value_per_cost": 6.984923825633583
+    },
+    {
+      "T_C": 8.92,
+      "min_KL_vs_competitors": 8.107812499722979,
+      "cost": 1.1538461538461533,
+      "risk": 0.05128205128205107,
+      "falsification_value_per_cost": 6.874014945417311
+    },
+    {
+      "T_C": -75.8,
+      "min_KL_vs_competitors": 29.560800547324913,
+      "cost": 4.0,
+      "risk": 1.0,
+      "falsification_value_per_cost": 6.569066788294425
+    }
+  ],
+  "note": "选'单位成本对最难区分竞争解释判别力最大'的实验,而非最可能成功的实验"
+}

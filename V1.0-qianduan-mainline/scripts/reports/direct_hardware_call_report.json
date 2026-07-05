@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-06-24T09:40:24.412612+08:00",
-  "project_root": "C:\\Users\\JZ\\Desktop\\paper\\acid-in-clay-close\\V1.0-qianduan-mainline",
-  "n_hits": 27,
+  "generated_at": "2026-07-05T15:52:07.476894+08:00",
+  "project_root": "C:\\Users\\LBM\\Desktop\\new\\acid-in-clay-close\\V1.0-qianduan-mainline",
+  "n_hits": 31,
   "by_role": {
     "ADAPTER_SINK": 6,
     "DRIVER_DEFINITION": 2,
     "HARNESS_SHADOW": 3,
-    "LEGACY_ONLINE": 11,
+    "LEGACY_ONLINE": 15,
     "OPERATOR_MANUAL": 4,
     "TEST": 1
   },
@@ -15,95 +15,116 @@
   "allowlist": [],
   "hits": [
     {
-      "file": "stage0_measurement/run_online.py",
-      "line": 365,
-      "token": "TemperatureDriver_ctor",
-      "code": "temp_driver = TemperatureDriver(",
-      "role": "LEGACY_ONLINE"
-    },
-    {
-      "file": "stage0_measurement/run_online.py",
-      "line": 379,
-      "token": "ChiExecutor_ctor",
-      "code": "chi_executor = ChiExecutor()",
-      "role": "LEGACY_ONLINE"
-    },
-    {
-      "file": "tests/test_stage0_stage1_contracts.py",
-      "line": 213,
-      "token": "ChiExecutor_ctor",
-      "code": "executor = mod.ChiExecutor(config={\"wait_times\": {}, \"measurement_time_mapping\": {}})",
-      "role": "TEST"
-    },
-    {
       "file": "backend_api/routers/control.py",
-      "line": 124,
+      "line": 159,
       "token": "hw_start",
       "code": "return hw.start(",
       "role": "OPERATOR_MANUAL"
     },
     {
       "file": "backend_api/routers/control.py",
-      "line": 205,
+      "line": 251,
       "token": "hw_stop",
       "code": "return hw.stop()",
       "role": "OPERATOR_MANUAL"
     },
     {
       "file": "backend_api/routers/control.py",
-      "line": 217,
+      "line": 263,
       "token": "set_temperature",
       "code": "return hw.set_temperature(req.effective_target)",
       "role": "OPERATOR_MANUAL"
     },
     {
       "file": "backend_api/routers/control.py",
-      "line": 224,
+      "line": 270,
       "token": "trigger_measurement",
       "code": "return hw.trigger_measurement()",
       "role": "OPERATOR_MANUAL"
     },
     {
       "file": "backend_api/services/hardware_adapter.py",
-      "line": 581,
+      "line": 678,
       "token": "TemperatureDriver_ctor",
       "code": "self._workflow = TemperatureDriver(port=port)",
       "role": "ADAPTER_SINK"
     },
     {
       "file": "backend_api/services/hardware_adapter.py",
-      "line": 596,
+      "line": 693,
       "token": "ChiExecutor_ctor",
       "code": "self._chi_executor = ChiExecutor()",
       "role": "ADAPTER_SINK"
     },
     {
       "file": "backend_api/services/hardware_adapter.py",
-      "line": 1024,
+      "line": 1189,
       "token": "set_temperature",
       "code": "res = self._workflow.set_temperature(target)",
       "role": "ADAPTER_SINK"
     },
     {
       "file": "backend_api/services/hardware_adapter.py",
-      "line": 1423,
+      "line": 1618,
       "token": "set_temperature",
       "code": "res = self._workflow.set_temperature(target_C)",
       "role": "ADAPTER_SINK"
     },
     {
       "file": "backend_api/services/hardware_adapter.py",
-      "line": 2750,
+      "line": 4317,
       "token": "set_temperature",
       "code": "set_res = self._workflow.set_temperature(t_start)",
       "role": "ADAPTER_SINK"
     },
     {
       "file": "backend_api/services/hardware_adapter.py",
-      "line": 2781,
+      "line": 4348,
       "token": "set_temperature",
       "code": "set_res = self._workflow.set_temperature(t)",
       "role": "ADAPTER_SINK"
+    },
+    {
+      "file": "stage0_measurement/b_track_live_driver.py",
+      "line": 104,
+      "token": "TemperatureDriver_ctor",
+      "code": "drv = TemperatureDriver(port=args.port, baudrate=19200, temp_min=-120.0, temp_max=40.0)",
+      "role": "LEGACY_ONLINE"
+    },
+    {
+      "file": "stage0_measurement/b_track_live_driver.py",
+      "line": 106,
+      "token": "ChiExecutor_ctor",
+      "code": "_cfg = ChiExecutor()._get_default_config()",
+      "role": "LEGACY_ONLINE"
+    },
+    {
+      "file": "stage0_measurement/b_track_live_driver.py",
+      "line": 108,
+      "token": "ChiExecutor_ctor",
+      "code": "chi = ChiExecutor(config=_cfg)",
+      "role": "LEGACY_ONLINE"
+    },
+    {
+      "file": "stage0_measurement/b_track_live_driver.py",
+      "line": 192,
+      "token": "set_temperature",
+      "code": "drv.set_temperature(18.0, is_cooling=False)",
+      "role": "LEGACY_ONLINE"
+    },
+    {
+      "file": "stage0_measurement/run_online.py",
+      "line": 372,
+      "token": "TemperatureDriver_ctor",
+      "code": "temp_driver = TemperatureDriver(",
+      "role": "LEGACY_ONLINE"
+    },
+    {
+      "file": "stage0_measurement/run_online.py",
+      "line": 386,
+      "token": "ChiExecutor_ctor",
+      "code": "chi_executor = ChiExecutor()",
+      "role": "LEGACY_ONLINE"
     },
     {
       "file": "stage0_measurement/controllers/online_workflow.py",
@@ -170,7 +191,7 @@
     },
     {
       "file": "stage0_measurement/modules/automation/chi_executor.py",
-      "line": 845,
+      "line": 1037,
       "token": "ChiExecutor_ctor",
       "code": "executor = ChiExecutor(config)",
       "role": "DRIVER_DEFINITION"
@@ -202,6 +223,13 @@
       "token": "instrument_dispatch",
       "code": "dispatch = instrument.dispatch(command_id)",
       "role": "HARNESS_SHADOW"
+    },
+    {
+      "file": "tests/test_stage0_stage1_contracts.py",
+      "line": 213,
+      "token": "ChiExecutor_ctor",
+      "code": "executor = mod.ChiExecutor(config={\"wait_times\": {}, \"measurement_time_mapping\": {}})",
+      "role": "TEST"
     }
   ],
   "note": "autonomous_bypass = 自主决策环直连硬件、绕过 SciTX 的位置;WP4 cutover 后应清零。其余角色(OPERATOR_MANUAL/ADAPTER_SINK/LEGACY_ONLINE/HARNESS_SHADOW/DRIVER_DEFINITION)属允许或非真硬件路径。"

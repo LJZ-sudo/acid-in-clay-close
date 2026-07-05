@@ -301,21 +301,35 @@ class OptimizationOrchestrator:
         try:
             # 只有当参数非空时才写入
             if current_parameters:
+                trial_metadata = {
+                    "sample_id": sample_id,
+                    "source": "stage0_measurement",
+                    "source_mode": self.source_mode,
+                    "source_tag": self.source_tag,
+                    "input_bundle_hash": self.state0_parser.get_input_bundle_hash(),
+                    "objective_valid": objective_valid,
+                    "invalid_reasons": objective_invalid_reasons,
+                    "parser_mode": self.state0_parser.get_parser_mode(),
+                    "stage0_bundle_path": self.state0_parser.get_bundle_path(),
+                    "timestamp": datetime.now().isoformat()
+                }
+                # ESAS-OS 2.0 Rb-ACT R3:若 bundle 旁有 rbact_noise.json,把真实计量
+                # 不确定度转成 objective_variance(噪声感知 GP 的 train_Yvar)写进 metadata,
+                # 并标注 noise_source。读不到则原样(优化器回落 PROXY,诚实)。
+                try:
+                    from scientific_harness.rbact_noise_bridge import (
+                        load_rbact_noise, stamp_metadata,
+                    )
+                    bundle_path = self.state0_parser.get_bundle_path()
+                    if bundle_path:
+                        u_dex = load_rbact_noise(Path(bundle_path).parent)
+                        trial_metadata = stamp_metadata(trial_metadata, u_dex)
+                except Exception as _rbact_exc:  # noqa: BLE001
+                    logger.warning(f"⚠️ Rb-ACT R3 噪声注入跳过: {_rbact_exc}")
                 trial_id = self.memory_manager.add_trial(
                     parameters=current_parameters,
                     objectives=persisted_objectives,
-                    metadata={
-                        "sample_id": sample_id,
-                        "source": "stage0_measurement",
-                        "source_mode": self.source_mode,
-                        "source_tag": self.source_tag,
-                        "input_bundle_hash": self.state0_parser.get_input_bundle_hash(),
-                        "objective_valid": objective_valid,
-                        "invalid_reasons": objective_invalid_reasons,
-                        "parser_mode": self.state0_parser.get_parser_mode(),
-                        "stage0_bundle_path": self.state0_parser.get_bundle_path(),
-                        "timestamp": datetime.now().isoformat()
-                    }
+                    metadata=trial_metadata,
                 )
                 logger.info(f"✅ 实验记录已保存 | Trial ID: {trial_id}")
             else:

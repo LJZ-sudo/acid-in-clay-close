@@ -1,0 +1,28 @@
+[
+  {
+    "step": "s03_evidence_builder",
+    "status": "completed",
+    "output_hashes": {
+      "00_sanitizer_digest.json": "5e228489076f7453b3ee008a54618375ef094e7c6cf26d36fda9dbf1b9e704ea",
+      "01_evidence/evidence_cards.json": "aab5e66ecc2d819844130cc5ecc60b15dc6aff7ab65093bd435f1132284ba7dc"
+    },
+    "guardrail_warnings": []
+  },
+  {
+    "step": "s04_hypothesis_generator",
+    "status": "completed",
+    "output_hashes": {
+      "00_sanitizer_digest.json": "5e228489076f7453b3ee008a54618375ef094e7c6cf26d36fda9dbf1b9e704ea",
+      "01_evidence/evidence_cards.json": "aab5e66ecc2d819844130cc5ecc60b15dc6aff7ab65093bd435f1132284ba7dc",
+      "02_hypotheses/hypothesis_board.json": "1e205f1a89c7fbcd81c145bfdfba0ec6d5ee3975e042a16ef53dc35f81dbaf1e"
+    },
+    "guardrail_warnings": []
+  },
+  {
+    "step": "s05_literature_scout_mechanism",
+    "status": "failed",
+    "output_hashes": {},
+    "guardrail_warnings": [],
+    "error": "[LLMGateway] All retries failed for step=s05_literature_mechanism: Error code: 400 - {'error': {'message': 'Input required: specify \"prompt\" or \"messages\"', 'code': 400}, 'user_id': 'user_3Dbu664ULFT3Xlpm2L7ESulsWS3'}"
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "object": "ReputationProperScoring",
+  "agents": {
+    "calibrated": {
+      "brier": 0.20249999999999999,
+      "logloss": 0.5978370007556205,
+      "reputation": 0.36330956935901115
+    },
+    "overconfident": {
+      "brier": 0.47089999999999976,
+      "logloss": 1.7685085524023438,
+      "reputation": 0.09494096515155599
+    }
+  },
+  "execution_authority_ignores_self_confidence": true,
+  "note": "严格适当评分:诚实报告概率最优;过度自信者信誉被惩罚;执行权不读自报置信度"
+}

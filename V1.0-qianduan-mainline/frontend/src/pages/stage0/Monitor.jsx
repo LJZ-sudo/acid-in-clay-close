@@ -5,13 +5,14 @@ import {
 } from 'antd'
 import {
   PauseCircleOutlined, PlayCircleOutlined, StopOutlined, ThunderboltOutlined,
-  RobotOutlined, LineChartOutlined, FileTextOutlined,
+  RobotOutlined, LineChartOutlined, FileTextOutlined, SafetyCertificateOutlined,
 } from '@ant-design/icons'
 import ReactECharts from 'echarts-for-react'
 import { useTranslation } from 'react-i18next'
 import { useUIStore, useDataStore, useAgentStore } from '../../stores'
 import { controlApi } from '../../api/control'
 import AIThinkingPanel from './AIThinkingPanel'
+import GovernancePanel from './GovernancePanel'
 
 const { Text } = Typography
 
@@ -191,6 +192,11 @@ function Monitor() {
                       />
                     </div>
                   ),
+                },
+                {
+                  key: 'gov',
+                  label: <Space><SafetyCertificateOutlined />治理</Space>,
+                  children: <GovernancePanel />,
                 },
                 {
                   key: 'raw',

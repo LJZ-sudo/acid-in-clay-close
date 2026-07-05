@@ -1,0 +1,170 @@
+{
+  "object": "UnidentifiabilityCertificate",
+  "label": "live_run",
+  "n_points": 19,
+  "T_range_C": [
+    -75.79999999999998,
+    13.5
+  ],
+  "measurement_noise_sd_ln": 0.06843470222422438,
+  "noise_sd_note": "代理:最灵活模型(segmented/vtf)残差 sd,含部分模型失配,为上界式",
+  "js_delta_threshold": 0.05,
+  "models": [
+    "arrhenius",
+    "mott",
+    "vtf",
+    "segmented"
+  ],
+  "fisher_observability": {
+    "arrhenius": {
+      "ok": true,
+      "k": 2,
+      "lambda_min": 0.0009337212600433603,
+      "lambda_max": 4057.0320494179264,
+      "condition_number": 4345014.109702852,
+      "worst_observable_direction": [
+        -0.0041836042441398495,
+        -0.9999912486894715
+      ],
+      "fim_eigenvalues": [
+        0.0009337212600433603,
+        4057.0320494179264
+      ],
+      "param_std_upper": 32.72588321825549
+    },
+    "mott": {
+      "ok": true,
+      "k": 2,
+      "lambda_min": 0.20021965560630406,
+      "lambda_max": 4318.741626217752,
+      "condition_number": 21570.01825390101,
+      "worst_observable_direction": [
+        -0.24620687342246592,
+        -0.9692173004437828
+      ],
+      "fim_eigenvalues": [
+        0.20021965560630406,
+        4318.741626217752
+      ],
+      "param_std_upper": 2.2348410758483572
+    },
+    "vtf": {
+      "ok": true,
+      "k": 3,
+      "lambda_min": 0.005988164182949212,
+      "lambda_max": 4110.602438325879,
+      "condition_number": 686454.531428926,
+      "worst_observable_direction": [
+        -0.008255175613686862,
+        -0.9978803442654766,
+        0.06454975293679899
+      ],
+      "fim_eigenvalues": [
+        0.005988164182949212,
+        44.05206493331644,
+        4110.602438325879
+      ],
+      "param_std_upper": 12.922696668780665
+    },
+    "segmented": {
+      "ok": true,
+      "k": 4,
+      "lambda_min": 0.00010642016380477125,
+      "lambda_max": 86222908361.37048,
+      "condition_number": 810212137236954.4,
+      "worst_observable_direction": [
+        8.334875602258188e-11,
+        2.1768676652743134e-08,
+        -0.9999999999999977,
+        -6.243489526596479e-08
+      ],
+      "fim_eigenvalues": [
+        0.00010642016380477125,
+        0.00013095603819144623,
+        2348.80130037001,
+        86222908361.37048
+      ],
+      "param_std_upper": 96.93665702035923
+    }
+  },
+  "pairwise": [
+    {
+      "pair": [
+        "arrhenius",
+        "mott"
+      ],
+      "sup_JS": 0.6142693476916898,
+      "best_action_T_K": 197.35,
+      "best_action_T_C": -75.79999999999998,
+      "distinguishable": true
+    },
+    {
+      "pair": [
+        "arrhenius",
+        "vtf"
+      ],
+      "sup_JS": 0.693147180559945,
+      "best_action_T_K": 198.8635593220339,
+      "best_action_T_C": -74.28644067796608,
+      "distinguishable": true
+    },
+    {
+      "pair": [
+        "arrhenius",
+        "segmented"
+      ],
+      "sup_JS": 0.693147180559945,
+      "best_action_T_K": 197.35,
+      "best_action_T_C": -75.79999999999998,
+      "distinguishable": true
+    },
+    {
+      "pair": [
+        "mott",
+        "vtf"
+      ],
+      "sup_JS": 0.693147180559945,
+      "best_action_T_K": 197.35,
+      "best_action_T_C": -75.79999999999998,
+      "distinguishable": true
+    },
+    {
+      "pair": [
+        "mott",
+        "segmented"
+      ],
+      "sup_JS": 0.693147180559945,
+      "best_action_T_K": 197.35,
+      "best_action_T_C": -75.79999999999998,
+      "distinguishable": true
+    },
+    {
+      "pair": [
+        "vtf",
+        "segmented"
+      ],
+      "sup_JS": 0.693147120899611,
+      "best_action_T_K": 236.70254237288134,
+      "best_action_T_C": -36.44745762711864,
+      "distinguishable": true
+    }
+  ],
+  "equivalence_classes": [
+    [
+      "arrhenius"
+    ],
+    [
+      "mott"
+    ],
+    [
+      "vtf"
+    ],
+    [
+      "segmented"
+    ]
+  ],
+  "n_distinguishable_pairs": 6,
+  "n_unidentifiable_pairs": 0,
+  "verdict": "all_pairs_distinguishable_under_current_design",
+  "aic_best_model": "segmented"
+}

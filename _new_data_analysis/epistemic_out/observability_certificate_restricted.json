@@ -1,0 +1,193 @@
+{
+  "object": "UnidentifiabilityCertificate",
+  "label": "restricted_warm_window",
+  "n_points": 10,
+  "T_range_C": [
+    -30.899999999999977,
+    13.5
+  ],
+  "measurement_noise_sd_ln": 0.025797633447124997,
+  "noise_sd_note": "代理:最灵活模型(segmented/vtf)残差 sd,含部分模型失配,为上界式",
+  "js_delta_threshold": 0.05,
+  "models": [
+    "arrhenius",
+    "mott",
+    "vtf",
+    "segmented"
+  ],
+  "fisher_observability": {
+    "arrhenius": {
+      "ok": true,
+      "k": 2,
+      "lambda_min": 0.0006338786973167365,
+      "lambda_max": 15026.107917293837,
+      "condition_number": 23705021.13559054,
+      "worst_observable_direction": [
+        -0.0037901991212198503,
+        -0.9999928171695143
+      ],
+      "fim_eigenvalues": [
+        0.0006338786973167365,
+        15026.107917293837
+      ],
+      "param_std_upper": 39.71887341045416
+    },
+    "mott": {
+      "ok": true,
+      "k": 2,
+      "lambda_min": 0.1595375991975061,
+      "lambda_max": 15950.459793263617,
+      "condition_number": 99979.3144280496,
+      "worst_observable_direction": [
+        -0.24076033305642447,
+        -0.9705845980781683
+      ],
+      "fim_eigenvalues": [
+        0.1595375991975061,
+        15950.459793263617
+      ],
+      "param_std_upper": 2.5036203552957965
+    },
+    "vtf": {
+      "ok": true,
+      "k": 3,
+      "lambda_min": 0.0006510351427739625,
+      "lambda_max": 15037.376499039516,
+      "condition_number": 23097641.757044826,
+      "worst_observable_direction": [
+        -0.006568358831073496,
+        -0.9639853497098506,
+        0.2658742225320895
+      ],
+      "fim_eigenvalues": [
+        0.0006510351427739625,
+        1.4357339323553486,
+        15037.376499039516
+      ],
+      "param_std_upper": 39.19203225080577
+    },
+    "segmented": {
+      "ok": true,
+      "k": 4,
+      "lambda_min": 4.6774281071637613e-05,
+      "lambda_max": 3936550416.8704987,
+      "condition_number": 84160575570182.17,
+      "worst_observable_direction": [
+        5.9901146816044355e-12,
+        1.6431021621620846e-09,
+        0.99999999999999,
+        1.425366190557621e-07
+      ],
+      "fim_eigenvalues": [
+        4.6774281071637613e-05,
+        0.0001155752099541924,
+        9015.641289427589,
+        3936550416.8704987
+      ],
+      "param_std_upper": 146.21651869819812
+    }
+  },
+  "pairwise": [
+    {
+      "pair": [
+        "arrhenius",
+        "mott"
+      ],
+      "sup_JS": 0.02297132897934226,
+      "best_action_T_K": 242.25,
+      "best_action_T_C": -30.899999999999977,
+      "distinguishable": false,
+      "required_new_capability": {
+        "options": [
+          {
+            "capability": "reduce_noise_x3_via_replication",
+            "achieved_sup_JS": 0.17560059207158382,
+            "breaks_equivalence": true,
+            "best_action_T_C": -30.899999999999977
+          },
+          {
+            "capability": "extend_temperature_window_pm40K",
+            "achieved_sup_JS": 0.6922515166530131,
+            "breaks_equivalence": true,
+            "best_action_T_C": -70.89999999999998
+          },
+          {
+            "capability": "reduce_noise_x3_AND_extend_window",
+            "achieved_sup_JS": 0.693147180559945,
+            "breaks_equivalence": true,
+            "best_action_T_C": -70.89999999999998
+          }
+        ],
+        "any_feasible": true,
+        "cheapest_feasible": "reduce_noise_x3_AND_extend_window",
+        "note": "存在可打破等价的新能力"
+      }
+    },
+    {
+      "pair": [
+        "arrhenius",
+        "vtf"
+      ],
+      "sup_JS": 0.5151505658227623,
+      "best_action_T_K": 242.25,
+      "best_action_T_C": -30.899999999999977,
+      "distinguishable": true
+    },
+    {
+      "pair": [
+        "arrhenius",
+        "segmented"
+      ],
+      "sup_JS": 0.48527649345452956,
+      "best_action_T_K": 242.25,
+      "best_action_T_C": -30.899999999999977,
+      "distinguishable": true
+    },
+    {
+      "pair": [
+        "mott",
+        "vtf"
+      ],
+      "sup_JS": 0.5739174921692396,
+      "best_action_T_K": 242.25,
+      "best_action_T_C": -30.899999999999977,
+      "distinguishable": true
+    },
+    {
+      "pair": [
+        "mott",
+        "segmented"
+      ],
+      "sup_JS": 0.5511157864900498,
+      "best_action_T_K": 242.25,
+      "best_action_T_C": -30.899999999999977,
+      "distinguishable": true
+    },
+    {
+      "pair": [
+        "vtf",
+        "segmented"
+      ],
+      "sup_JS": 0.07764669352158238,
+      "best_action_T_K": 256.95,
+      "best_action_T_C": -16.19999999999999,
+      "distinguishable": true
+    }
+  ],
+  "equivalence_classes": [
+    [
+      "arrhenius",
+      "mott"
+    ],
+    [
+      "vtf"
+    ],
+    [
+      "segmented"
+    ]
+  ],
+  "n_distinguishable_pairs": 5,
+  "n_unidentifiable_pairs": 1,
+  "verdict": "design_conditional_unidentifiability",
+  "aic_best_model": "vtf"
+}

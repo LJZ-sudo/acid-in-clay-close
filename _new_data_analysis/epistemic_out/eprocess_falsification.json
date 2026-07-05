@@ -1,0 +1,66 @@
+{
+  "object": "FalsificationEProcess",
+  "label": "live_run",
+  "H0": "single_arrhenius_warm_holdout_frozen",
+  "H1": "segmented_warm_holdout_frozen",
+  "n_holdout_warm": 9,
+  "n_test_cold": 10,
+  "sigma_ln": 0.06843470222422735,
+  "alpha": 0.05,
+  "test_T_C": [
+    -30.9,
+    -35.9,
+    -41.0,
+    -45.9,
+    -51.0,
+    -56.0,
+    -61.0,
+    -66.1,
+    -71.0,
+    -75.8
+  ],
+  "eprocess": {
+    "alpha": 0.05,
+    "threshold_1_over_alpha": 20.0,
+    "log_E_trajectory": [
+      1.0366429810939335,
+      3.7885777228817616,
+      17.306840081598573,
+      54.65461868491149,
+      118.82095183002906,
+      219.82064034438025,
+      370.2881307612535,
+      580.9337188711593,
+      865.617435272738,
+      1249.4740092156248
+    ],
+    "E_trajectory_clipped": [
+      2.8197352035587278,
+      44.19350015184213,
+      32829566.388189323,
+      5.447525920420457e+23,
+      4.011286798938267e+51,
+      2.9301584789524017e+95,
+      6.517663039782845e+160,
+      1.978374279848779e+252,
+      1.0142320547350045e+304,
+      1.0142320547350045e+304
+    ],
+    "log_E_final": 1249.4740092156248,
+    "log_E_max": 1249.4740092156248,
+    "E_final_clipped": 1.0142320547350045e+304,
+    "E_max_clipped": 1.0142320547350045e+304,
+    "crossed": true,
+    "stopping_time": 2,
+    "n_steps": 10
+  },
+  "type_i_control": {
+    "n_sims": 20000,
+    "alpha": 0.05,
+    "empirical_false_alarm_rate": 0.01765,
+    "anytime_valid_ok": true,
+    "note": "Ville 上界 α;经验越界率应 ≤ α(允许少量 MC 噪声)"
+  },
+  "claim_escalation_allowed": true,
+  "interpretation": "E_t 越过 1/α 且 type-I 受控 ⇒ 可在 anytime-valid 意义下拒绝 H0(单 Arrhenius),支持存在低温机制转变(C 级证据,仍需复现门)"
+}

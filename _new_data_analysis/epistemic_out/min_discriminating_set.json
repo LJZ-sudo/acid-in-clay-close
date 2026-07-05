@@ -1,0 +1,88 @@
+{
+  "object": "MinimalDiscriminatingExperimentSet",
+  "label": "live_run",
+  "models": [
+    "arrhenius",
+    "mott",
+    "vtf",
+    "segmented"
+  ],
+  "n_model_pairs": 6,
+  "measurement_noise_sd_ln": 0.06843470222422438,
+  "js_delta_threshold": 0.05,
+  "n_candidate_actions": 19,
+  "cost_model": "c(T)=1 + 3*(Tmax-T)/(Tmax-Tmin)  (冷点最贵≈4x,平衡慢/高阻EIS慢)",
+  "n_separable_pairs": 6,
+  "n_unidentifiable_pairs": 0,
+  "compilation": {
+    "status": "ok",
+    "reason": "全部可分对都能被最小实验集分开"
+  },
+  "minimal_set": {
+    "exact_optimal": {
+      "action_T_K": [
+        286.65
+      ],
+      "action_T_C": [
+        13.5
+      ],
+      "n_actions": 1,
+      "total_cost": 1.0
+    },
+    "greedy": {
+      "n_actions": 1,
+      "total_cost": 1.0,
+      "approx_ratio_vs_exact": 1.0
+    },
+    "per_pair_separating_action": [
+      {
+        "pair": [
+          "arrhenius",
+          "mott"
+        ],
+        "separated_by_T_C": 13.5,
+        "JS_at_action": 0.2768302390616842
+      },
+      {
+        "pair": [
+          "arrhenius",
+          "vtf"
+        ],
+        "separated_by_T_C": 13.5,
+        "JS_at_action": 0.6931471803933218
+      },
+      {
+        "pair": [
+          "arrhenius",
+          "segmented"
+        ],
+        "separated_by_T_C": 13.5,
+        "JS_at_action": 0.693147180559945
+      },
+      {
+        "pair": [
+          "mott",
+          "vtf"
+        ],
+        "separated_by_T_C": 13.5,
+        "JS_at_action": 0.6931471805595727
+      },
+      {
+        "pair": [
+          "mott",
+          "segmented"
+        ],
+        "separated_by_T_C": 13.5,
+        "JS_at_action": 0.693147180559945
+      },
+      {
+        "pair": [
+          "vtf",
+          "segmented"
+        ],
+        "separated_by_T_C": 13.5,
+        "JS_at_action": 0.6596337881757556
+      }
+    ]
+  }
+}

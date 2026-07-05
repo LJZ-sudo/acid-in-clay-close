@@ -28,3 +28,16 @@ __all__ = [
     'ChiExecutor',
     'calculate_chi_measurement_time',
 ]
+
+# 真机健壮性回移（纯加法）：宏救援 + 窗口守卫。导入失败（缺 pywinauto 等）绝不连累主路径。
+try:  # noqa: SIM105
+    from .chi_macro_rescue import ChiMacroRescue
+    __all__.append('ChiMacroRescue')
+except Exception:  # noqa: BLE001
+    ChiMacroRescue = None
+
+try:  # noqa: SIM105
+    from .chi_window_guard import ChiWindowGuard
+    __all__.append('ChiWindowGuard')
+except Exception:  # noqa: BLE001
+    ChiWindowGuard = None

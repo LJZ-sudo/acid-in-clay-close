@@ -52,6 +52,95 @@ class ChiExecutor:
                 - click_offsets: 点击偏移配置
         """
         self.config = config or self._get_default_config()
+        # 真机健壮性回移(L1,纯加法/可回退):保存等关键步骤前强制把 CHI 置于前台,
+        # 避免点击/打字漏入别的窗口(浏览器/PDF)。守卫惰性创建、缺依赖自动跳过;
+        # 环境变量 CHI_WINDOW_GUARD=0 可完全关闭、退回原行为。
+        self._win_guard = None
+        self._win_guard_disabled = os.environ.get("CHI_WINDOW_GUARD", "1") in ("0", "false", "False")
+
+    def _focus_chi(self, retries: int = 3) -> bool:
+        """点击/打字前把 CHI 主窗口强制激活到前台(best-effort,绝不抛错)。
+
+        返回是否确认 CHI 处于前台。任何失败(缺 pywinauto/win32、连接不上)都只是
+        返回 False 并让调用方按原逻辑继续——纯加固,不改变既有行为与置信度阈值。
+        """
+        if self._win_guard_disabled:
+            return False
+        try:
+            if self._win_guard is None:
+                from .chi_window_guard import ChiWindowGuard
+                self._win_guard = ChiWindowGuard()
+            ok, _ = self._win_guard.activate(retries=retries)
+            return bool(ok)
+        except Exception:  # noqa: BLE001 — 守卫绝不连累主流程
+            return False
+
+    def _try_macro_rescue(self, chi_params, current_temperature_C):
+        """保存/读回失败、但测量已跑完时，用 CHI 宏 tsave 救回内存里那条谱（回移）。
+
+        纯加法兜底：只在主路径"保存"步失败时被调用；用宏 ``tsave``（**不带 run**，
+        故不会把数据降级到 1e5），把 GUI Run 已测好的 1e6 谱直接落盘。
+        开关：chi_params['enable_macro_rescue']（默认 True）或环境变量 CHI_MACRO_RESCUE=0 关闭。
+        失败/缺依赖时返回 None，调用方按原失败逻辑继续。
+        """
+        if not chi_params.get('enable_macro_rescue', True):
+            return None
+        if os.environ.get("CHI_MACRO_RESCUE", "1") in ("0", "false", "False"):
+            return None
+        try:
+            from .chi_macro_rescue import ChiMacroRescue
+            rescuer = ChiMacroRescue()
+            r = rescuer.rescue_save(
+                chi_params,
+                output_dir=chi_params.get('your_position'),
+                current_temperature_C=current_temperature_C,
+            )
+            if r and r.get('success'):
+                # 新鲜度护栏：救援存的是 CHI 内存里的谱；若测量未真正触发新扫描，
+                # 内存里仍是旧谱。据采集时间头判 stale → 拒收（不把旧谱当新点）。
+                fresh, age = self._verify_spectrum_freshness(r.get('output_file'))
+                if not fresh:
+                    print(f"   [CHI] 宏救援得到 STALE 旧谱(采集 {age:.0f} 分钟前)，拒收")
+                    return None
+                return r
+        except Exception:  # noqa: BLE001 — 救援绝不连累主流程
+            return None
+        return None
+
+    def _spectrum_acquisition_age_min(self, filepath):
+        """读 CHI 谱文件头第一行的采集时间,返回距今分钟数(无法解析时返回 None)。
+
+        CHI .txt 第一行形如 ``June 27, 2026   22:21:27``。用于新鲜度护栏:若一次"测量"
+        实际没触发新扫描(start 假成功/弹窗挡住 Run),保存/宏救援会落到 CHI 内存里的**旧谱**,
+        其采集时间会远早于当前 → 据此判定 stale、拒收,杜绝"把昨天的谱当成今天的点"。
+        """
+        import re as _re
+        from datetime import datetime as _dt
+        try:
+            with open(filepath, "r", encoding="utf-8", errors="ignore") as f:
+                first = f.readline().strip()
+            m = _re.match(r"([A-Za-z]+)\s+(\d{1,2}),\s*(\d{4})\s+(\d{1,2}):(\d{2}):(\d{2})", first)
+            if not m:
+                return None
+            acq = _dt.strptime(f"{m.group(1)} {m.group(2)} {m.group(3)} "
+                               f"{m.group(4)}:{m.group(5)}:{m.group(6)}", "%B %d %Y %H:%M:%S")
+            return (_dt.now() - acq).total_seconds() / 60.0
+        except Exception:  # noqa: BLE001
+            return None
+
+    def _verify_spectrum_freshness(self, filepath):
+        """新鲜度护栏:谱采集时间过旧 → (False, age) 判 stale;新鲜/无法判→(True, age)。
+
+        阈值 `max_spectrum_age_min`(默认 45 分钟,远大于单次 EIS 用时、足以容忍慢扫,
+        但能挡住数小时前的旧谱)。`verify_spectrum_freshness=False` 或缺时间头时放行(不误杀)。
+        """
+        if not self.config.get('verify_spectrum_freshness', True):
+            return True, None
+        age = self._spectrum_acquisition_age_min(filepath)
+        if age is None:
+            return True, None  # 无法解析时间头:不误杀,放行(保持原行为)
+        max_age = self.config.get('max_spectrum_age_min', 45.0)
+        return (age <= max_age), age
 
     def close(self):
         """Release GUI automation state.
@@ -192,6 +281,21 @@ class ChiExecutor:
         step_result = self._step_save_data(chi_params, filename, get_screenshot)
         steps_result['save_data'] = step_result
         if not step_result['success']:
+            # 测量已在步骤 1-3 跑完、谱在 CHI 内存里：尝试宏 tsave 救援（回移，纯加法兜底）
+            rescue = self._try_macro_rescue(chi_params, current_temperature_C)
+            if rescue:
+                steps_result['macro_rescue'] = {'success': True, 'output_file': rescue['output_file'],
+                                                'n_points': rescue.get('n_points')}
+                return {
+                    'success': True,
+                    'frequencies': rescue['frequencies'],
+                    'z_real': rescue['z_real'],
+                    'z_imag': rescue['z_imag'],
+                    'output_file': rescue['output_file'],
+                    'steps': steps_result,
+                    'error': None,
+                    'rescued': True,
+                }
             return {
                 'success': False,
                 'frequencies': None,
@@ -208,6 +312,21 @@ class ChiExecutor:
         steps_result['read_data'] = step_result
         
         if not step_result['success']:
+            # 落盘校验失败（典型"另存为假成功"：GUI 报成功但磁盘无文件）：尝试宏 tsave 救援
+            rescue = self._try_macro_rescue(chi_params, current_temperature_C)
+            if rescue:
+                steps_result['macro_rescue'] = {'success': True, 'output_file': rescue['output_file'],
+                                                'n_points': rescue.get('n_points')}
+                return {
+                    'success': True,
+                    'frequencies': rescue['frequencies'],
+                    'z_real': rescue['z_real'],
+                    'z_imag': rescue['z_imag'],
+                    'output_file': rescue['output_file'],
+                    'steps': steps_result,
+                    'error': None,
+                    'rescued': True,
+                }
             return {
                 'success': False,
                 'frequencies': None,
@@ -218,6 +337,19 @@ class ChiExecutor:
                 'error': f"Step 5 failed: {step_result['error']}"
             }
         
+        # 新鲜度护栏：若这次"测量"没真正触发新扫描，保存会落到 CHI 内存里的旧谱 →
+        # 据采集时间头判 stale，拒收（杜绝"把昨天的谱当成今天的点"，2026-06-28 实事故）。
+        fresh, age = self._verify_spectrum_freshness(expected_file)
+        steps_result['freshness'] = {'fresh': fresh, 'acquisition_age_min': age}
+        if not fresh:
+            return {
+                'success': False, 'frequencies': None, 'z_real': None, 'z_imag': None,
+                'output_file': expected_file, 'steps': steps_result,
+                'error': (f"STALE spectrum rejected: acquisition {age:.0f} min old "
+                          f"(> {self.config.get('max_spectrum_age_min', 45.0)} min) — "
+                          f"测量很可能未真正触发新扫描，拒绝把旧谱当新点。")
+            }
+
         # 成功返回
         return {
             'success': True,
@@ -242,7 +374,10 @@ class ChiExecutor:
                 'success': False,
                 'error': f'Template not found: {template_path}'
             }
-        
+
+        # L1(回移):若 CHI 已在运行,先置前台(best-effort);未运行则守卫无害返回。
+        self._focus_chi()
+
         screenshot = get_screenshot()
         success, msg = self._click_template(template_path, screenshot)
         
@@ -270,7 +405,12 @@ class ChiExecutor:
                 'success': False,
                 'error': f'Template not found: {template_path}'
             }
-        
+
+        # L1(回移):点 Run 前强制把 CHI 置前台,确保"开始测量"点击确实落在 CHI 窗口、
+        # 真正触发新扫描(否则可能点空/点到别处→不起扫描→后续保存到内存旧谱,2026-06-28 实事故)。
+        self._focus_chi()
+        time.sleep(self.config['wait_times'].get('save_as_settle', 0.6))
+
         screenshot = get_screenshot()
         success, msg = self._click_template(template_path, screenshot)
         
@@ -306,7 +446,11 @@ class ChiExecutor:
     def _step_save_data(self, chi_params, filename, get_screenshot):
         """步骤：保存数据"""
         template_dir = chi_params['template_dir']
-        
+
+        # L1(回移):保存流程开始前,强制把 CHI 抢到前台(消除"被别的窗口盖住/焦点跑掉"
+        # 导致点击/打字漏入浏览器等窗口的根因)。失败不阻断,按原逻辑继续。
+        self._focus_chi()
+
         # 4.1: 点击另存为
         result = self._substep_save_as(template_dir, get_screenshot)
         if not result['success']:
@@ -410,15 +554,57 @@ class ChiExecutor:
     # ========================================================
     
     def _substep_save_as(self, template_dir, get_screenshot):
-        """子步骤：点击另存为"""
+        """子步骤：点击另存为（多重健壮化，回移自 E: 副本 2026-06-14 修复）
+
+        背景（实测淀粉-1 在 -56/-59/-86℃ 共丢 3 个点）：此前这里只用默认置信度
+        （0.5）点一次且**不重试**，模板匹配分恰好 0.4960<0.5 时直接失败，把已测完的
+        整条谱丢弃。本轮 HW-2 也复现：save_as 实测匹配分 ~0.476<0.5 丢点。
+
+        三层处理：
+        1. 先 settle 再首次截图，让瞬态在高置信度档命中（避免无谓降阈值的误点风险）；
+        2. 仍未中再按 **高置信度区间** 逐级微降重试（save_as_confidences，默认
+           [0.5, 0.47, 0.45]）——覆盖 0.476/0.496 这类临界匹配；
+        3. 全部失败落盘诊断截图，把"看不见的 GUI flake"变成可排查证据。
+
+        ⚠️ 绝不降到全局 retry_confidences 的 0.1：菜单未弹出时，0.1/0.2 在**整屏**几乎
+        必然误匹配到 CHI 之外的窗口（浏览器）并点过去 → 焦点被带走、文件名打进 Bing、
+        CHI 显示 Run Unsavd.（E: 已知问题 KNOWN_ISSUE_coldsave_falsesuccess_20260614）。
+        """
         template_path = os.path.join(template_dir, "save_as.png")
-        screenshot = get_screenshot()
-        success, msg = self._click_template(template_path, screenshot)
-        
-        if not success:
-            return {'success': False, 'error': f'Failed to click save_as: {msg}'}
-        
-        return {'success': True, 'error': None}
+        # 仅用高置信度档重试；绝不降到 retry_confidences 的 0.1（见上方说明）。
+        confidence_levels = self.config.get('save_as_confidences', [0.5, 0.47, 0.45])
+
+        # (1) settle，让保存菜单/窗口渲染稳定后再匹配
+        time.sleep(self.config['wait_times'].get('save_as_settle', 0.6))
+
+        last_msg = ''
+        last_screenshot = None
+        for conf in confidence_levels:
+            screenshot = get_screenshot()
+            last_screenshot = screenshot
+            success, msg = self._click_template(template_path, screenshot, confidence=conf)
+            if success:
+                return {'success': True, 'error': None}
+            last_msg = msg
+            time.sleep(self.config['wait_times']['retry'])
+
+        # (3) 诊断截图（best-effort，绝不因诊断失败影响主流程）
+        diag_path = None
+        try:
+            if last_screenshot is not None:
+                diag_dir = os.path.join(template_dir, "_save_as_failures")
+                os.makedirs(diag_dir, exist_ok=True)
+                diag_path = os.path.join(
+                    diag_dir, f"save_as_fail_{time.strftime('%Y%m%d_%H%M%S')}.png"
+                )
+                cv2.imwrite(diag_path, cv2.cvtColor(last_screenshot, cv2.COLOR_RGB2BGR))
+        except Exception:  # noqa: BLE001
+            diag_path = None
+
+        err = f'Failed to click save_as after all retries: {last_msg}'
+        if diag_path:
+            err += f' (diagnostic screenshot: {diag_path})'
+        return {'success': False, 'error': err}
     
     def _substep_select_save_type(self, template_dir, get_screenshot):
         """子步骤：选择保存类型"""
@@ -807,6 +993,7 @@ class ChiExecutor:
                 'enter': 1.0,            # Enter 键后等待
                 'save': 2.0,             # 保存后等待
                 'file_generation': 2.0,  # 文件生成等待
+                'save_as_settle': 0.6,   # 另存为前 settle（回移：让瞬态在高置信度档命中）
             },
             'click_offsets': {
                 'textbox_right': -15,    # 文本框右侧偏移
@@ -814,6 +1001,11 @@ class ChiExecutor:
                 'directory': 30,         # 目录图标偏移
             },
             'retry_confidences': [0.5, 0.4, 0.3, 0.2, 0.1],  # 重试置信度序列
+            # 另存为专用高置信度区间（回移）：绝不降到 0.1，避免整屏误匹配点到 CHI 之外的窗口
+            'save_as_confidences': [0.5, 0.47, 0.45],
+            # 新鲜度护栏：谱采集时间头超过 max_spectrum_age_min 分钟即判 stale、拒收
+            'verify_spectrum_freshness': True,
+            'max_spectrum_age_min': 45.0,
             'filename_confidences': [0.1, 0.05, 0.03, 0.02, 0.01],  # 文件名编辑置信度
             'measurement_time_mapping': {
                 (1000000, 0.01): 820,

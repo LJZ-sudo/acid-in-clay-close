@@ -1,0 +1,12 @@
+{
+  "pytest_collected_total": 411,
+  "pytest_collected_by_dir": {
+    "tests": 232,
+    "backend_api/tests": 16,
+    "stage3_mechanism/tests": 163
+  },
+  "def_test_functions": 408,
+  "parametrize_expansion_delta": 3,
+  "canonical_phrase": "411 pytest collected items (408 def test_ + 3 @parametrize expansions)",
+  "live_seed_adapter_dedicated_test": "stage3_mechanism\\tests\\test_live_seed_adapter.py"
+}

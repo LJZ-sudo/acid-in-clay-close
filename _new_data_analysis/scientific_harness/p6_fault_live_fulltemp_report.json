@@ -1,0 +1,104 @@
+{
+  "title": "P6 故障注入(前端驱动 genuine-live 谱):bundle 类故障被治理真拒",
+  "spectra_dir": "E:\\chi_data\\p3_fulltemp_fe2",
+  "sample_id": "ATP-R0.186-N1.029-fulltemp-fe2",
+  "baseline": {
+    "file": "ATP-R0.186-N1.029-fulltemp-fe2_T14.0_f0.1_1000000_V0.txt",
+    "T_C": 14.0,
+    "rb_decision": "REPORT",
+    "kk": 0.007569366788487967
+  },
+  "corrupted_chain": {
+    "rb_decision": "ABSTAIN",
+    "kk": null
+  },
+  "scenarios": [
+    {
+      "scenario": "healthy",
+      "entered_bo": true,
+      "expected_entered_bo": true,
+      "bo_match": true,
+      "blind_retry_count": 0,
+      "must_reject_satisfied": true,
+      "admissions": {
+        "U1": "ADMIT",
+        "U2": "ADMIT",
+        "U3": "REJECT",
+        "U4": "REJECT",
+        "U5": "ADMIT",
+        "U6": "REJECT"
+      }
+    },
+    {
+      "scenario": "deleted_file",
+      "entered_bo": false,
+      "expected_entered_bo": false,
+      "bo_match": true,
+      "blind_retry_count": 0,
+      "must_reject_satisfied": true,
+      "admissions": {
+        "U1": "REJECT",
+        "U2": "REJECT",
+        "U3": "REJECT",
+        "U4": "REJECT",
+        "U5": "REJECT",
+        "U6": "REJECT"
+      }
+    },
+    {
+      "scenario": "sample_mismatch",
+      "entered_bo": false,
+      "expected_entered_bo": false,
+      "bo_match": true,
+      "blind_retry_count": 0,
+      "must_reject_satisfied": true,
+      "admissions": {
+        "U1": "REJECT",
+        "U2": "REJECT",
+        "U3": "REJECT",
+        "U4": "REJECT",
+        "U5": "REJECT",
+        "U6": "REJECT"
+      }
+    },
+    {
+      "scenario": "corrupted_spectrum",
+      "entered_bo": false,
+      "expected_entered_bo": false,
+      "bo_match": true,
+      "blind_retry_count": 0,
+      "must_reject_satisfied": true,
+      "admissions": {
+        "U1": "REJECT",
+        "U2": "REJECT",
+        "U3": "REJECT",
+        "U4": "REJECT",
+        "U5": "REJECT",
+        "U6": "REJECT"
+      }
+    }
+  ],
+  "checks": {
+    "healthy_entered_bo": true,
+    "no_invalid_into_bo": true,
+    "all_bo_match": true,
+    "all_fault_uses_rejected": true,
+    "no_blind_retry": true,
+    "corrupted_not_in_bo": true
+  },
+  "honest_scope": {
+    "bundle_level_faults": [
+      "deleted_file",
+      "sample_mismatch",
+      "corrupted_spectrum"
+    ],
+    "online_witness_faults_retained": [
+      "ack_lost",
+      "timeout_no_effect",
+      "temp_not_equilibrated",
+      "calibration_expired"
+    ],
+    "note": "在线见证类只能由仪器 ground-truth 对账(见 p4_fault_reconciliation 路径 A),无真机不在此伪造;本脚本覆盖已落盘 bundle 可判类。"
+  },
+  "acceptance_pass": true
+}

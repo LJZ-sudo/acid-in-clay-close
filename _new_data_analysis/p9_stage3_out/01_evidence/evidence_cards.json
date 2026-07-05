@@ -1,0 +1,175 @@
+{
+  "step_id": "s03_evidence",
+  "evidence_cards": [
+    {
+      "card_id": "V2-E1",
+      "claim_type": "observation",
+      "statement": "Conductivity decreases monotonically across the measured window: sigma = 1.422e-02 S/cm at 13.5 C down to 2.293e-06 S/cm at -75.8 C (19 genuine-live EIS points).",
+      "source_sample_ids": [
+        "ATP-R0.186-N1.029-fulltemp-fe2"
+      ],
+      "support_metrics": {
+        "sigma_high_S_cm": "1.422e-02",
+        "T_high_C": "13.5",
+        "sigma_low_S_cm": "2.293e-06",
+        "T_low_C": "-75.8",
+        "n_points": "19",
+        "v2_evidence_id": "LIVE-1",
+        "v2_layer": "temperature_transport",
+        "v2_strength": "strong"
+      },
+      "counterexamples": [
+        "EIS-only; absolute sigma depends on cell geometry"
+      ],
+      "language_guardrail": "Authoritative Stage2 V2 evidence; do not promote beyond its stated scope.",
+      "allowed_downstream_use": [
+        "hypothesis_generation",
+        "mechanism_arbitration",
+        "claim_audit"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "card_id": "V2-E2",
+      "claim_type": "observation",
+      "statement": "Global Arrhenius analysis selects a multi-regime model (continuous_3) with transport-regime transition(s) near -35.2 C, -69.5 C (selection confidence 0.9564).",
+      "source_sample_ids": [
+        "ATP-R0.186-N1.029-fulltemp-fe2"
+      ],
+      "support_metrics": {
+        "n_transitions": "2",
+        "transition_temps_C": "-35.2 C, -69.5 C",
+        "best_model_type": "continuous_3",
+        "model_confidence": "0.9564",
+        "v2_evidence_id": "LIVE-2",
+        "v2_layer": "temperature_transport",
+        "v2_strength": "strong"
+      },
+      "counterexamples": [
+        "Regime change inferred from sigma(T); not a structural proof"
+      ],
+      "language_guardrail": "Authoritative Stage2 V2 evidence; do not promote beyond its stated scope.",
+      "allowed_downstream_use": [
+        "hypothesis_generation",
+        "mechanism_arbitration",
+        "claim_audit"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "card_id": "V2-E3",
+      "claim_type": "interpretation",
+      "statement": "Apparent activation energy differs between temperature regimes (per-segment Ea = 0.914 eV, 0.728 eV, 0.139 eV), consistent with a change in the dominant proton-transport pathway.",
+      "source_sample_ids": [
+        "ATP-R0.186-N1.029-fulltemp-fe2"
+      ],
+      "support_metrics": {
+        "ea_segment_1_eV": "0.914",
+        "ea_segment_2_eV": "0.728",
+        "ea_segment_3_eV": "0.139",
+        "v2_evidence_id": "LIVE-3",
+        "v2_layer": "model_competition",
+        "v2_strength": "moderate"
+      },
+      "counterexamples": [
+        "Ea from segment Arrhenius slope; interpretation non-unique"
+      ],
+      "language_guardrail": "Authoritative Stage2 V2 evidence; do not promote beyond its stated scope.",
+      "allowed_downstream_use": [
+        "hypothesis_generation",
+        "mechanism_arbitration",
+        "claim_audit"
+      ],
+      "confidence": 0.72
+    },
+    {
+      "card_id": "V2-E4",
+      "claim_type": "observation",
+      "statement": "Per-point EIS fit quality is recorded for the live sweep (QC grade distribution: {'D': 19}); low-temperature high-impedance points carry larger fit uncertainty.",
+      "source_sample_ids": [
+        "ATP-R0.186-N1.029-fulltemp-fe2"
+      ],
+      "support_metrics": {
+        "qc_D": "19",
+        "v2_evidence_id": "LIVE-4",
+        "v2_layer": "data_quality",
+        "v2_strength": "weak"
+      },
+      "counterexamples": [
+        "Fit quality varies with impedance magnitude across temperature"
+      ],
+      "language_guardrail": "Authoritative Stage2 V2 evidence; do not promote beyond its stated scope.",
+      "allowed_downstream_use": [
+        "hypothesis_generation",
+        "mechanism_arbitration",
+        "claim_audit"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "card_id": "E1",
+      "claim_type": "observation",
+      "statement": "Conductivity was measured over a wide temperature span in 3 fitted segments.",
+      "source_sample_ids": [
+        "ATP-R0.186-N1.029-fulltemp-fe2"
+      ],
+      "support_metrics": {
+        "wide_range_segment_count": "3"
+      },
+      "counterexamples": [],
+      "language_guardrail": "Wide-temperature coverage is observational; it is not a mechanism proof.",
+      "allowed_downstream_use": [
+        "hypothesis_generation",
+        "mechanism_arbitration"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "card_id": "E2",
+      "claim_type": "observation",
+      "statement": "Multiple fitted transport regimes were detected in 1 samples.",
+      "source_sample_ids": [
+        "ATP-R0.186-N1.029-fulltemp-fe2"
+      ],
+      "support_metrics": {
+        "multi_segment_sample_count": "1",
+        "ea_range_ev": "0.139-0.914"
+      },
+      "counterexamples": [],
+      "language_guardrail": "Multiple regimes constrain hypotheses but do not uniquely identify transport type.",
+      "allowed_downstream_use": [
+        "hypothesis_generation",
+        "mechanism_arbitration"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "card_id": "E3",
+      "claim_type": "observation",
+      "statement": "Live wide-temperature sweep shows multi-regime sigma(T) behaviour with 2 detected transition(s).",
+      "source_sample_ids": [],
+      "support_metrics": {},
+      "counterexamples": [],
+      "language_guardrail": "Stage2 atlas hint; contextual use only.",
+      "allowed_downstream_use": [
+        "hypothesis_generation"
+      ],
+      "confidence": 0.76512
+    },
+    {
+      "card_id": "E4",
+      "claim_type": "observation",
+      "statement": "EIS measurements provide heuristic impedance-shape information only; equivalent-circuit morphology is not uniquely determined.",
+      "source_sample_ids": [],
+      "support_metrics": {},
+      "counterexamples": [],
+      "language_guardrail": "EIS is heuristic only and must not be used as stand-alone mechanism proof.",
+      "allowed_downstream_use": [
+        "mechanism_arbitration",
+        "claim_audit"
+      ],
+      "confidence": 1.0
+    }
+  ],
+  "summary_notes": "Extracted 8 evidence cards from 1 samples (authoritative_v2_cards=4; derived_supplement_cards=4; skipped_v2_units=0)."
+}

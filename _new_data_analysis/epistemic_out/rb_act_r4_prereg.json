@@ -1,0 +1,80 @@
+{
+  "contract": {
+    "prereg_version": "1.0",
+    "stage": "R4_PREREGISTRATION",
+    "sample_id": "p18-fe3",
+    "created_utc": "2026-07-04T15:14:55.322802+00:00",
+    "method_fingerprint": {
+      "rb_act_version": "1.0",
+      "thresholds": {
+        "ABSTAIN_METHOD_DEX": 0.3,
+        "ABSTAIN_TOTAL_DEX": 0.4,
+        "WARN_TOTAL_DEX": 0.15,
+        "ROUGHNESS_REMEASURE": 0.15,
+        "UNEXPLAINED_FLIP_DEX": 0.3
+      },
+      "posterior": "log-domain BMA over credible set (fit-quality weighted)",
+      "legacy_methods": "rb_fitting.fit_all_rb_methods (parallel 4-method + ensemble)",
+      "skill_source_sha256": "aa1827fc1012b31105870ae50e4733fc394df36a2c13efaf800c7f5d022f101b",
+      "thresholds_sha256": "8d957be8e9ee11a07ae0b7bcb410fffca0bd24182144dd5c7f46928c2bb15571"
+    },
+    "acceptance_gates": {
+      "min_paired_points": 30,
+      "max_unexplained_flip_rate": 0.0,
+      "max_unexplained_flips": 0,
+      "min_report_rate": 0.6,
+      "min_ci95_coverage": 0.9,
+      "max_median_abs_delta_dex": 0.1
+    },
+    "activation_policy": "本契约仅冻结规则并做审计;正式替换 legacy(Rb-ACT 值进 σ/BO)须真机多批双跑达标(见 acceptance_gates)+ 人审,属 G-5。此步 rb_r4_active 恒 False。",
+    "legacy_override": false,
+    "note": "P18 真谱预注册审计",
+    "contract_hash": "558f10ad6b84d3e11412d140ef619bfa239778dd47c305e8d885ec85b5de9064"
+  },
+  "audit": {
+    "audited_utc": "2026-07-04T15:14:55.323773+00:00",
+    "contract_hash": "558f10ad6b84d3e11412d140ef619bfa239778dd47c305e8d885ec85b5de9064",
+    "n_total": 87,
+    "n_paired": 75,
+    "n_report": 75,
+    "n_abstain": 12,
+    "report_rate": 0.8621,
+    "n_unexplained_flips": 0,
+    "unexplained_flips": [],
+    "median_abs_delta_log10": 0.0,
+    "p90_abs_delta_log10": 0.0,
+    "legacy_overwritten": 0,
+    "gate_checks": {
+      "paired_points": {
+        "value": 75,
+        "threshold": 30,
+        "pass": true
+      },
+      "unexplained_flips": {
+        "value": 0,
+        "threshold": 0,
+        "pass": true
+      },
+      "report_rate": {
+        "value": 0.8621,
+        "threshold": 0.6,
+        "pass": true
+      },
+      "median_abs_delta_dex": {
+        "value": 0.0,
+        "threshold": 0.1,
+        "pass": true
+      }
+    },
+    "gates_pass": true,
+    "rb_r4_active": false,
+    "activation_recommended": true
+  },
+  "admission_signals": {
+    "rb_r4_preregistered": true,
+    "rb_r4_active": false,
+    "rb_r4_prereg_id": "558f10ad6b84",
+    "rb_r4_gates_pass": true,
+    "rb_r4_unexplained_flips": 0
+  }
+}

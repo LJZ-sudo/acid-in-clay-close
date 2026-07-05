@@ -32,6 +32,17 @@ from typing import Dict, Optional
 
 try:
     from impedance.validation import linKK
+    # 兼容性补丁(2026-06-28):impedance 1.7.1 的 eval_linKK 用 eval(circuit_string,
+    # circuit_elements) 求值电路串,但 circuit_elements 命名空间里缺少 ``np`` →
+    # 串内 np.* 引用触发 "NameError: name 'np' is not defined",linKK 整条失败、
+    # kk_residual 恒为 None。此处把 numpy 注入该命名空间即可修复(纯加法、不改版本、
+    # 不改任何计算;setdefault 保证不覆盖、可随时移除)。
+    try:
+        import impedance.validation as _imp_validation
+        if isinstance(getattr(_imp_validation, "circuit_elements", None), dict):
+            _imp_validation.circuit_elements.setdefault("np", np)
+    except Exception:  # noqa: BLE001
+        pass
     IMPEDANCE_AVAILABLE = True
 except ImportError:
     IMPEDANCE_AVAILABLE = False

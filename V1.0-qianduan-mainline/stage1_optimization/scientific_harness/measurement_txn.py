@@ -107,6 +107,12 @@ def build_measurement_signals_from_bundle(
         for k in ("rb_method_spread_dex", "rb_method_success", "ecm_fallback", "uncertainty_status"):
             if k in rb_act_signals and rb_act_signals[k] is not None:
                 signals[k] = rb_act_signals[k]
+        # P13-E:Rb-ACT R4 预注册的**审计-only** 信号(留痕 R4 已预注册/门是否满足/翻转数),
+        # 仅供事务审计,**绝不参与 assess_use 的用途裁决**(entered_bo / 数值链完全不受影响)。
+        for k in ("rb_r4_preregistered", "rb_r4_active", "rb_r4_prereg_id",
+                  "rb_r4_gates_pass", "rb_r4_unexplained_flips"):
+            if k in rb_act_signals and rb_act_signals[k] is not None:
+                signals[k] = rb_act_signals[k]
     return signals
 
 

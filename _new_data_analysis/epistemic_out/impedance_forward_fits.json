@@ -1,0 +1,428 @@
+{
+  "n_spectra": 19,
+  "fits": [
+    {
+      "T_C": 13.5,
+      "qc": "D",
+      "rb_measured": 2.02331675315774,
+      "best_mechanism": "bulk_electrode",
+      "best_bulk_R": 97538.25638798435,
+      "best_wrms": 0.24582044946853548,
+      "best_lambda_min": 8.041657041437322e-09,
+      "best_cond": 4.963903912564277e+17,
+      "best_invariants": {
+        "n_arcs": 1,
+        "R_bulk": 97538.25638798435,
+        "char_freq_Hz": 0.0030762614346935193,
+        "cpe_exponent": 0.8670766344586914,
+        "electrode_tail": true,
+        "electrode_cpe_exponent": 0.9052744680499406
+      },
+      "aic_weights": {
+        "single_bulk": 0.0,
+        "bulk_electrode": 1.0,
+        "two_population": 0.0
+      }
+    },
+    {
+      "T_C": 9.1,
+      "qc": "D",
+      "rb_measured": 2.1341611893583723,
+      "best_mechanism": "bulk_electrode",
+      "best_bulk_R": 7765.055191871022,
+      "best_wrms": 0.2426435622893665,
+      "best_lambda_min": 0.0,
+      "best_cond": Infinity,
+      "best_invariants": {
+        "n_arcs": 1,
+        "R_bulk": 7765.055191871022,
+        "char_freq_Hz": 0.004859483768083586,
+        "cpe_exponent": 0.885889322141437,
+        "electrode_tail": true,
+        "electrode_cpe_exponent": 0.8974490833778781
+      },
+      "aic_weights": {
+        "single_bulk": 0.0,
+        "bulk_electrode": 1.0,
+        "two_population": 0.0
+      }
+    },
+    {
+      "T_C": 4.1,
+      "qc": "D",
+      "rb_measured": 2.262350464576074,
+      "best_mechanism": "single_bulk",
+      "best_bulk_R": 141738.14999999997,
+      "best_wrms": 0.24192096286548787,
+      "best_lambda_min": 1.3770309922053573e-06,
+      "best_cond": 9062402008861478.0,
+      "best_invariants": {
+        "n_arcs": 1,
+        "R_bulk": 141738.14999999997,
+        "char_freq_Hz": 0.013566854243740142,
+        "cpe_exponent": 0.896947416645998
+      },
+      "aic_weights": {
+        "single_bulk": 1.0,
+        "bulk_electrode": 0.0,
+        "two_population": 0.0
+      }
+    },
+    {
+      "T_C": -0.9,
+      "qc": "D",
+      "rb_measured": 2.4313577785688856,
+      "best_mechanism": "bulk_electrode",
+      "best_bulk_R": 5056.02598313876,
+      "best_wrms": 0.23714631334440497,
+      "best_lambda_min": 0.0,
+      "best_cond": Infinity,
+      "best_invariants": {
+        "n_arcs": 1,
+        "R_bulk": 5056.02598313876,
+        "char_freq_Hz": 7.548933823879371e-06,
+        "cpe_exponent": 0.8900756305611588,
+        "electrode_tail": true,
+        "electrode_cpe_exponent": 0.8945160960455079
+      },
+      "aic_weights": {
+        "single_bulk": 0.0,
+        "bulk_electrode": 1.0,
+        "two_population": 0.0
+      }
+    },
+    {
+      "T_C": -6.0,
+      "qc": "D",
+      "rb_measured": 2.703106079180789,
+      "best_mechanism": "bulk_electrode",
+      "best_bulk_R": 8327.089767283916,
+      "best_wrms": 0.23284920594736588,
+      "best_lambda_min": 1.9168968465821247e-06,
+      "best_cond": 6033318776390218.0,
+      "best_invariants": {
+        "n_arcs": 1,
+        "R_bulk": 8327.089767283916,
+        "char_freq_Hz": 0.010554261643475353,
+        "cpe_exponent": 0.925414128762695,
+        "electrode_tail": true,
+        "electrode_cpe_exponent": 0.8899816775166448
+      },
+      "aic_weights": {
+        "single_bulk": 0.0,
+        "bulk_electrode": 1.0,
+        "two_population": 0.0
+      }
+    },
+    {
+      "T_C": -11.3,
+      "qc": "D",
+      "rb_measured": 3.2476782006920417,
+      "best_mechanism": "bulk_electrode",
+      "best_bulk_R": 9027.141162923532,
+      "best_wrms": 0.2197320056580153,
+      "best_lambda_min": 9.186067303145401e-07,
+      "best_cond": 1.3527567653062184e+16,
+      "best_invariants": {
+        "n_arcs": 1,
+        "R_bulk": 9027.141162923532,
+        "char_freq_Hz": 0.011747022597133332,
+        "cpe_exponent": 0.9236309137915689,
+        "electrode_tail": true,
+        "electrode_cpe_exponent": 0.8881957390185792
+      },
+      "aic_weights": {
+        "single_bulk": 0.0,
+        "bulk_electrode": 1.0,
+        "two_population": 0.0
+      }
+    },
+    {
+      "T_C": -16.2,
+      "qc": "D",
+      "rb_measured": 3.3763860944684407,
+      "best_mechanism": "bulk_electrode",
+      "best_bulk_R": 9171.281700246316,
+      "best_wrms": 0.2168052697723946,
+      "best_lambda_min": 0.0,
+      "best_cond": Infinity,
+      "best_invariants": {
+        "n_arcs": 1,
+        "R_bulk": 9171.281700246316,
+        "char_freq_Hz": 4.2375492408642756e-06,
+        "cpe_exponent": 0.8933745848441792,
+        "electrode_tail": true,
+        "electrode_cpe_exponent": 0.8934542939997832
+      },
+      "aic_weights": {
+        "single_bulk": 0.0,
+        "bulk_electrode": 1.0,
+        "two_population": 0.0
+      }
+    },
+    {
+      "T_C": -20.9,
+      "qc": "D",
+      "rb_measured": 4.033186009538951,
+      "best_mechanism": "bulk_electrode",
+      "best_bulk_R": 7041.38950963797,
+      "best_wrms": 0.2037283525977289,
+      "best_lambda_min": 0.0,
+      "best_cond": Infinity,
+      "best_invariants": {
+        "n_arcs": 1,
+        "R_bulk": 7041.38950963797,
+        "char_freq_Hz": 5.6825110690395815e-06,
+        "cpe_exponent": 0.893531158750065,
+        "electrode_tail": true,
+        "electrode_cpe_exponent": 0.8932583291178143
+      },
+      "aic_weights": {
+        "single_bulk": 0.0,
+        "bulk_electrode": 1.0,
+        "two_population": 0.0
+      }
+    },
+    {
+      "T_C": -25.9,
+      "qc": "D",
+      "rb_measured": 4.7005682767047965,
+      "best_mechanism": "bulk_electrode",
+      "best_bulk_R": 46617.698618915936,
+      "best_wrms": 0.19318978216204694,
+      "best_lambda_min": 6.337056719060305e-07,
+      "best_cond": 5473010095003089.0,
+      "best_invariants": {
+        "n_arcs": 1,
+        "R_bulk": 46617.698618915936,
+        "char_freq_Hz": 0.019123828635616673,
+        "cpe_exponent": 0.9096052788668996,
+        "electrode_tail": true,
+        "electrode_cpe_exponent": 0.8739855536494486
+      },
+      "aic_weights": {
+        "single_bulk": 0.0,
+        "bulk_electrode": 1.0,
+        "two_population": 0.0
+      }
+    },
+    {
+      "T_C": -30.9,
+      "qc": "D",
+      "rb_measured": 5.708848629620317,
+      "best_mechanism": "bulk_electrode",
+      "best_bulk_R": 505.1202659917916,
+      "best_wrms": 0.17376747430732242,
+      "best_lambda_min": 0.0,
+      "best_cond": Infinity,
+      "best_invariants": {
+        "n_arcs": 1,
+        "R_bulk": 505.1202659917916,
+        "char_freq_Hz": 2.0550525725330027,
+        "cpe_exponent": 0.9134299973616298,
+        "electrode_tail": true,
+        "electrode_cpe_exponent": 0.9227911182010142
+      },
+      "aic_weights": {
+        "single_bulk": 0.0,
+        "bulk_electrode": 1.0,
+        "two_population": 0.0
+      }
+    },
+    {
+      "T_C": -35.9,
+      "qc": "D",
+      "rb_measured": 7.134344320486815,
+      "best_mechanism": "single_bulk",
+      "best_bulk_R": 201847.39999999997,
+      "best_wrms": 0.15909608150162347,
+      "best_lambda_min": 0.0,
+      "best_cond": Infinity,
+      "best_invariants": {
+        "n_arcs": 1,
+        "R_bulk": 201847.39999999997,
+        "char_freq_Hz": 0.013003394488344151,
+        "cpe_exponent": 0.8957530352673824
+      },
+      "aic_weights": {
+        "single_bulk": 1.0,
+        "bulk_electrode": 0.0,
+        "two_population": 0.0
+      }
+    },
+    {
+      "T_C": -41.0,
+      "qc": "D",
+      "rb_measured": 13.22060058798824,
+      "best_mechanism": "single_bulk",
+      "best_bulk_R": 270908.49999999994,
+      "best_wrms": 0.11012765733513732,
+      "best_lambda_min": 1.5574350091914605e-06,
+      "best_cond": 1.5237469245714392e+16,
+      "best_invariants": {
+        "n_arcs": 1,
+        "R_bulk": 270908.49999999994,
+        "char_freq_Hz": 0.010115570882662194,
+        "cpe_exponent": 0.8919594832689957
+      },
+      "aic_weights": {
+        "single_bulk": 1.0,
+        "bulk_electrode": 0.0,
+        "two_population": 0.0
+      }
+    },
+    {
+      "T_C": -45.9,
+      "qc": "D",
+      "rb_measured": 33.84951005840363,
+      "best_mechanism": "single_bulk",
+      "best_bulk_R": 358515.82053603046,
+      "best_wrms": 0.056846731370119793,
+      "best_lambda_min": 3.067338142341882e-06,
+      "best_cond": 8631997005382453.0,
+      "best_invariants": {
+        "n_arcs": 1,
+        "R_bulk": 358515.82053603046,
+        "char_freq_Hz": 0.00855200650940674,
+        "cpe_exponent": 0.8985839130202439
+      },
+      "aic_weights": {
+        "single_bulk": 1.0,
+        "bulk_electrode": 0.0,
+        "two_population": 0.0
+      }
+    },
+    {
+      "T_C": -51.0,
+      "qc": "D",
+      "rb_measured": 73.40952040207581,
+      "best_mechanism": "single_bulk",
+      "best_bulk_R": 370803.9905942085,
+      "best_wrms": 0.033580293989503844,
+      "best_lambda_min": 0.0,
+      "best_cond": Infinity,
+      "best_invariants": {
+        "n_arcs": 1,
+        "R_bulk": 370803.9905942085,
+        "char_freq_Hz": 0.009420836212837095,
+        "cpe_exponent": 0.9028893790276382
+      },
+      "aic_weights": {
+        "single_bulk": 1.0,
+        "bulk_electrode": 0.0,
+        "two_population": 0.0
+      }
+    },
+    {
+      "T_C": -56.0,
+      "qc": "D",
+      "rb_measured": 174.1,
+      "best_mechanism": "single_bulk",
+      "best_bulk_R": 524554.9999999999,
+      "best_wrms": 0.05071504070063544,
+      "best_lambda_min": 0.0,
+      "best_cond": Infinity,
+      "best_invariants": {
+        "n_arcs": 1,
+        "R_bulk": 524554.9999999999,
+        "char_freq_Hz": 0.007273276811434216,
+        "cpe_exponent": 0.9053420985408805
+      },
+      "aic_weights": {
+        "single_bulk": 1.0,
+        "bulk_electrode": 0.0,
+        "two_population": 0.0
+      }
+    },
+    {
+      "T_C": -61.0,
+      "qc": "D",
+      "rb_measured": 458.7,
+      "best_mechanism": "single_bulk",
+      "best_bulk_R": 515884.99999961973,
+      "best_wrms": 0.09334341451506405,
+      "best_lambda_min": 8.678111739412444e-07,
+      "best_cond": 3.7391805201389704e+16,
+      "best_invariants": {
+        "n_arcs": 1,
+        "R_bulk": 515884.99999961973,
+        "char_freq_Hz": 0.008161470466716766,
+        "cpe_exponent": 0.9023438015134119
+      },
+      "aic_weights": {
+        "single_bulk": 1.0,
+        "bulk_electrode": 0.0,
+        "two_population": 0.0
+      }
+    },
+    {
+      "T_C": -66.1,
+      "qc": "D",
+      "rb_measured": 1222.0,
+      "best_mechanism": "two_population",
+      "best_bulk_R": 641392.6690164383,
+      "best_wrms": 0.1757922377462477,
+      "best_lambda_min": 0.0,
+      "best_cond": Infinity,
+      "best_invariants": {
+        "n_arcs": 2,
+        "R1": 342044.10104068776,
+        "R2": 299348.56797575054,
+        "char_freq1_Hz": 0.016223401247918736,
+        "char_freq2_Hz": 4.147783439168481e-06,
+        "freq_separation_decades": 3.5923258363116983
+      },
+      "aic_weights": {
+        "single_bulk": 0.0,
+        "bulk_electrode": 0.0,
+        "two_population": 1.0
+      }
+    },
+    {
+      "T_C": -71.0,
+      "qc": "D",
+      "rb_measured": 3501.0,
+      "best_mechanism": "two_population",
+      "best_bulk_R": 374754.4877486967,
+      "best_wrms": 0.04933759752447776,
+      "best_lambda_min": 4.1688379695675185e-13,
+      "best_cond": 4.00682741892928e+29,
+      "best_invariants": {
+        "n_arcs": 2,
+        "R1": 3537.7631164314494,
+        "R2": 371216.7246322653,
+        "char_freq1_Hz": 177172.02437248113,
+        "char_freq2_Hz": 0.015278764350320207,
+        "freq_separation_decades": 7.064306914788569
+      },
+      "aic_weights": {
+        "single_bulk": 0.0,
+        "bulk_electrode": 0.0,
+        "two_population": 1.0
+      }
+    },
+    {
+      "T_C": -75.8,
+      "qc": "D",
+      "rb_measured": 12550.0,
+      "best_mechanism": "two_population",
+      "best_bulk_R": 1225150.6946977729,
+      "best_wrms": 0.05262523653314052,
+      "best_lambda_min": 0.0,
+      "best_cond": Infinity,
+      "best_invariants": {
+        "n_arcs": 2,
+        "R1": 12206.306541257858,
+        "R2": 1212944.388156515,
+        "char_freq1_Hz": 51763.164488687275,
+        "char_freq2_Hz": 0.003455626187512192,
+        "freq_separation_decades": 7.1754940620995615
+      },
+      "aic_weights": {
+        "single_bulk": 0.0,
+        "bulk_electrode": 0.0,
+        "two_population": 1.0
+      }
+    }
+  ]
+}

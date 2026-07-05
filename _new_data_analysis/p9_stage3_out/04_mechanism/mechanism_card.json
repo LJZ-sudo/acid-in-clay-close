@@ -1,0 +1,42 @@
+{
+  "step_id": "s06_mechanism",
+  "mechanism_card": {
+    "selected_hypothesis_id": "H2",
+    "mechanism_label": "Interfacial phosphoric-acid network with low-temperature handoff to surface-bound proton hopping",
+    "justification": "H2 is the best working mechanism because it explains the observed multi-regime conductivity with two temperature crossovers using chemistry that is especially plausible for a phosphoric-acid/water phase confined inside attapulgite's high-surface-area 1-D channels. In this picture, the dominant conducting medium is an interfacial acid-rich hydrogen-bond network anchored to clay surfaces. At higher temperature, proton motion benefits from faster acid/water complex mobility and dynamically averaged hydrogen-bond rearrangements, so the impedance is dominated by a low-frequency tail while any faster bulk-like/interfacial relaxation is compressed or unresolved. On cooling, translational and reorientational freedom of the interfacial network decreases, and transport increasingly hands off to more localized surface-bound hopping through a more strongly constrained H-bond network. That naturally gives multiple Arrhenius regimes without requiring literal freezing of distinct bulk water pools, which is a stronger claim than the current evidence supports. H2 also best accommodates the decoupling between conductivity break temperatures and EIS arc emergence: the Arrhenius breaks mark changes in the dominant microscopic transport pathway, whereas the visible arc reflects when a resistive-capacitive interfacial/network relaxation becomes slow enough to enter the frequency window. Given the system context of an acid-in-clay composite with no polymer binder, an interfacial mechanism is more chemically grounded than a predominantly vehicular channel-filling picture.",
+    "confidence": 0.74,
+    "evidence_alignment": [
+      "V2-E1: The monotonic drop in conductivity over nearly four orders of magnitude is consistent with progressive slowing of proton transport in a confined acid/water interfacial network on cooling.",
+      "V2-E2: Two detected transition temperatures are naturally explained by a high-T interfacial mobile-network regime, an intermediate mixed/handoff regime, and a low-T surface-bound hopping regime.",
+      "V2-E3: Strongly different segment-wise activation energies support a change in dominant transport physics rather than a single unchanged mechanism with weak perturbation; H2 explicitly predicts such pathway handoff.",
+      "E1: Three fitted temperature segments match the multi-regime interfacial-network plus low-T hopping scenario.",
+      "E2: Multiple transport regimes are expected if interfacial proton motion changes from dynamically assisted motion to more localized surface-bound hopping as the confined medium stiffens.",
+      "E3: The live sweep showing two transitions is consistent with two dynamical crossovers in the interfacial acid/water network.",
+      "E4: Because EIS morphology is only heuristic, H2 is preferred partly because it explains arc emergence as a resolvability/timescale issue rather than treating any one equivalent circuit as uniquely diagnostic.",
+      "V2-E4: Poorer low-temperature fit quality is compatible with rising impedance and partial separation of multiple overlapping interfacial/network processes, without undermining the qualitative crossover picture."
+    ],
+    "literature_support": [
+      "W4406091125: Broadly supports the principle that proton conduction in aqueous acid systems reflects a balance of Grotthuss-like hopping and vehicular contributions that can shift with confinement and temperature.",
+      "W3021158186: Broadly supports the plausibility of surface-confined hydrogen-bond networks sustaining proton transport in narrow channels rather than requiring bulk-like liquid transport.",
+      "W4389805062: Broadly consistent with the importance of interfaces and confined water/acid structuring in layered or porous inorganic hosts, supporting an interfacial transport picture.",
+      "synthesis_notes: The literature set is weak and mostly non-diagnostic, but the synthesis itself indicates that confinement/interfacial effects are the most defensible chemistry-based discriminator among the hypotheses."
+    ],
+    "t_arc_t_break_explanation": "T_arc and T_break need not coincide because they probe different physical observables. T_break comes from the slope change in dc/near-dc conductivity versus temperature and therefore marks when the dominant proton-transport mechanism or activation barrier changes. T_arc, in contrast, is the temperature where a separate relaxation becomes resolvable in the EIS frequency window as an arc or semicircle; this depends on the RC time constant, overlap with other processes, and instrument window, not only on the underlying transport transition itself. In H2, the conductivity break reflects handoff from a more mobile interfacial acid/water network to increasingly surface-bound hopping, while the arc appears when the associated interfacial/network polarization or bottleneck relaxation slows enough on cooling to separate from the low-frequency tail.",
+    "eis_evolution_explanation": "H2 explains the EIS morphology evolution mainly through a combination of (a) and (b). At room/high temperature, the interfacial acid-water network is dynamically fast and partially averaged, so the characteristic relaxation time of the resistive-capacitive network process is too short and/or too overlapped to be resolved; the Nyquist response is therefore dominated by the low-frequency linear or inclined tail. On cooling, the interfacial network stiffens, local reorientation slows, and proton motion becomes more localized along surface-bound hydrogen-bond pathways. That shifts a bulk/network-interfacial relaxation to longer times so that it enters the experimental window, and an additional slow interfacial polarization/bottleneck process becomes more evident. The observable consequence is the gradual emergence of a mid-/high-frequency semicircle together with the retained low-frequency line, i.e. a transition from mostly tail-like behavior at high T to 'semicircle + line' at low T.",
+    "caveats": [
+      "The literature packet is largely non-relevant, so the arbitration rests mainly on internal evidence consistency and chemistry-based plausibility rather than direct one-to-one literature confirmation.",
+      "The data support multi-regime transport but do not uniquely prove an interfacial-only morphology; some contribution from weakly bound channel-filling acid/water domains may still coexist within the selected H2 picture."
+    ],
+    "rejected_hypotheses": [
+      "H1 rejected: It fits the idea of two thresholds, but it leans too strongly on sequential freezing of weakly bound then strongly confined populations; the present evidence shows dynamical crossovers in conductivity, not direct proof of discrete freezing events or two separable water/acid populations.",
+      "H3 rejected: A single continuous confined population with two crossovers can explain piecewise Arrhenius behavior, but it does not capture the strong chemistry-driven role of clay interfaces as convincingly as H2 and offers a weaker explanation for the emergence of a distinct interfacial semicircle on cooling.",
+      "H4 rejected: Cooling-driven percolation loss with predominantly vehicular diffusion is less plausible for phosphoric-acid/water proton conduction in confined clay because the measured behavior and known chemistry favor substantial hopping/Grotthuss participation rather than mainly vehicular transport; also H4 over-emphasizes connectivity loss without needing it to explain the EIS evolution."
+    ],
+    "why_not": [
+      "H1: it would have explained two separated transition temperatures more directly via two confined populations.",
+      "H3: it would have explained the data with the fewest assumed structural populations.",
+      "H4: it would have explained a strong conductivity collapse on cooling via connectivity loss if such percolation evidence existed."
+    ]
+  },
+  "arbitration_method": "evidence_consistency + literature_weight + eis_evolution_check"
+}

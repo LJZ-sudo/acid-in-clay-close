@@ -1,0 +1,52 @@
+{
+  "batches": {
+    "A": {
+      "n": 33,
+      "best_pipeline": "continuous_3",
+      "best_independent_fit": "segmented",
+      "transitions_K": [
+        256.2033454095666,
+        225.9481194942022
+      ]
+    },
+    "B": {
+      "n": 34,
+      "best_pipeline": "continuous_3",
+      "best_independent_fit": "segmented",
+      "transitions_K": [
+        254.3289144802235,
+        222.11427477179552
+      ]
+    },
+    "C": {
+      "n": 42,
+      "best_pipeline": "continuous_3",
+      "best_independent_fit": "segmented",
+      "transitions_K": [
+        257.4200606439393,
+        226.75429773721643
+      ]
+    }
+  },
+  "transition_cv": {
+    "T1_percent": 0.4966876798902128,
+    "T2_percent": 0.8999087260827149
+  },
+  "sigmaT_pairwise_lnsigma_rms": {
+    "A-B": 0.42622200469088833,
+    "A-C": 0.48188372548071906,
+    "B-C": 0.16993402367164878
+  },
+  "crossval_median_abs_lnsigma_err": {
+    "A": 0.3784438058851798,
+    "B": 0.2914150404225513,
+    "C": 0.25040798529645447
+  },
+  "sigma_within_mean": 0.13254819696938033,
+  "sigma_repro_mean": 0.35934658461441876,
+  "open_physical_items": [
+    "new_R_N_synthesis",
+    "real_hardware_fault_injection",
+    "online_live_multibatch"
+  ]
+}

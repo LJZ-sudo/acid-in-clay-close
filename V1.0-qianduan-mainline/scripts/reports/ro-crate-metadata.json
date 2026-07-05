@@ -16,7 +16,7 @@
       "@id": "./",
       "name": "Proton-conductor agentic discovery — reproducibility crate",
       "description": "Evidence-governed semi-closed-loop discovery: code, configs, certs, reports.",
-      "datePublished": "2026-06-24T16:40:54.028055+08:00",
+      "datePublished": "2026-07-05T15:52:32.554734+08:00",
       "hasPart": [
         {
           "@id": "configs/objective_registry.yaml"
@@ -75,21 +75,21 @@
       "@id": "scripts/reports/direct_hardware_call_report.json",
       "description": "硬件写路径审计(autonomous_bypass=0)",
       "present": true,
-      "sha256": "c55b5f95169df1c1a11bea7ded85104a86ba5f1a7907d7fee0cf26661e534926",
-      "contentSize": 6982
+      "sha256": "a0f260ea77dc58725f06f8c6c71c3afbf1839104ed67665e1dfd1193514ec4e5",
+      "contentSize": 7913
     },
     {
       "@type": "Dataset",
       "@id": "stage1_optimization/campaign_memory/history_db_attapulgite.json",
       "description": "线 B 真实 trial 历史",
       "present": true,
-      "sha256": "ea006aebe18cd5ed1b3a5d37e8018ced5c8f9259d10a37a4c988e4aeee66d3da",
-      "contentSize": 12870
+      "sha256": "f4af67b21dfec7febf58fc972c586b12bfa73d89367b454b21f7a7d83419ede6",
+      "contentSize": 16728
     }
   ],
   "_summary": {
     "n_artifacts": 6,
     "n_present": 6,
-    "generated_at": "2026-06-24T16:40:54.028055+08:00"
+    "generated_at": "2026-07-05T15:52:32.554734+08:00"
   }
 }
