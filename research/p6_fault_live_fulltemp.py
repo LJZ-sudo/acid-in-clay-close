@@ -37,7 +37,7 @@ CHI_DIR = Path(r"E:\chi_data\p3_fulltemp_fe2")
 THICKNESS_CM = 0.0564
 AREA_CM2 = 1.96
 SAMPLE_ID = "ATP-R0.186-N1.029-fulltemp-fe2"
-OUT = REPO / "_new_data_analysis" / "scientific_harness" / "p6_fault_live_fulltemp_report.json"
+OUT = REPO / "research" / "scientific_harness" / "p6_fault_live_fulltemp_report.json"
 _T_RE = re.compile(r"_T(-?\d+(?:[.p]\d+)?)_")
 
 

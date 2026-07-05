@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Publication-quality result figures from the canonical stage0 outputs.
 
-Reads _new_data_analysis/<label>/{aggregated_results,arrhenius_analysis}.json
+Reads research/<label>/{aggregated_results,arrhenius_analysis}.json
 (Arrhenius model is ln(sigma) vs 1000/T; segment slope/intercept are in that space)
 and emits two figures into manuscript/figures/:
 
@@ -12,7 +12,7 @@ and emits two figures into manuscript/figures/:
        (a) Arrhenius for R0.28 (round 1) and R0.42 (round 2);
            (b) campaign combined_score per trial (new prospective rounds vs incumbent best).
 
-Run from repo root:  python _new_data_analysis/plot_results.py
+Run from repo root:  python research/plot_results.py
 """
 import json
 import math
@@ -24,7 +24,7 @@ import matplotlib.pyplot as plt
 from matplotlib import font_manager
 
 REPO = Path(__file__).resolve().parents[1]
-OUT = REPO / "_new_data_analysis"
+OUT = REPO / "research"
 FIGDIR = REPO / "manuscript" / "figures"
 FIGDIR.mkdir(parents=True, exist_ok=True)
 

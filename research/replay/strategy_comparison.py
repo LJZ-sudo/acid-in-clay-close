@@ -19,7 +19,7 @@ PART B — closed loop = plain BO + language-model safety screening:
   low-R edge, that matches the recorded raw-MOBO proposal that the language model corrected. We
   then place the two recorded raw->screened pairs next to the campaign best.
 
-Run from repo root:  python _new_data_analysis/replay/strategy_comparison.py
+Run from repo root:  python research/replay/strategy_comparison.py
 """
 from __future__ import annotations
 

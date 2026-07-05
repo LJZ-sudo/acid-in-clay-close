@@ -11,7 +11,7 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from _new_data_analysis.stage0_v2.conductivity_uncertainty import (  # noqa: E402
+from research.stage0_v2.conductivity_uncertainty import (  # noqa: E402
     estimate_point, combined_score_distribution,
 )
 

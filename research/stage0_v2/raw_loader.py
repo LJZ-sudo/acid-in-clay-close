@@ -101,7 +101,7 @@ def load_dataset_points(aggregated_json: str | Path) -> List[Dict[str, Any]]:
 
 
 def discover_datasets(kind: str = "lineA") -> List[Path]:
-    """列出 _new_data_analysis 下含 aggregated_results.json 的数据集目录。"""
+    """列出 research 下含 aggregated_results.json 的数据集目录。"""
     from .versions import NDA_ROOT
     pat = "lineA_*" if kind == "lineA" else ("lineB_*" if kind == "lineB" else "*")
     out: List[Path] = []

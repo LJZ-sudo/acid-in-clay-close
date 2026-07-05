@@ -14,7 +14,7 @@
 每点失败(多为 start 未起扫描→护栏拒收)自动重试 --retries 次。每测完一点立即写
 进度 JSON(--progress),便于不接管 GUI 时远程监看。
 
-本文件已从 _new_data_analysis/ 收编进 stage0_measurement/（入口收敛,2026-07-05）,
+本文件已从 research/ 收编进 stage0_measurement/（入口收敛,2026-07-05）,
 定为唯一 CLI 全温区 live driver;run_online.py 的 run_cooling_loop 路径仍保留但
 其首点起扫描 bug 未修复前不作为 live 入口。
 
@@ -200,7 +200,7 @@ def main() -> int:
     print(f"进度: {args.progress}")
     print(f"shadow: {shadow_dir}")
     print(f"raw: {args.chi_data_dir}")
-    print("后处理: python _new_data_analysis/b_track_live_fulltemp.py (FT-1..FT-4, 仓库根目录下)")
+    print("后处理: python research/b_track_live_fulltemp.py (FT-1..FT-4, 仓库根目录下)")
     return 0 if n_ok > 0 else 1
 
 

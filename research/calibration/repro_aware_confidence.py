@@ -19,7 +19,7 @@ Method (no leakage):
     pool predictions -> one AUROC. Reports BOTH all-repeats and June-standardized subsets.
     No fabrication; everything derived from canonical stage0 outputs.
 
-Run from repo root:  python _new_data_analysis/calibration/repro_aware_confidence.py
+Run from repo root:  python research/calibration/repro_aware_confidence.py
 """
 from __future__ import annotations
 

@@ -18,7 +18,7 @@ G3 — diagnose AUROC < 0.5:
   (iii) Murphy decomposition of the Brier score (reliability vs resolution) for raw vs isotonic,
        to show the ECE gain is reliability (re-centring), not new resolution.
 
-Run from repo root:  python _new_data_analysis/calibration/g2g3_ablation_diagnosis.py
+Run from repo root:  python research/calibration/g2g3_ablation_diagnosis.py
 """
 from __future__ import annotations
 

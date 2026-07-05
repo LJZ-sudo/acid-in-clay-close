@@ -2,7 +2,7 @@
 """P0 — Reproducibility + measurement-confidence calibration (v0), all REAL data.
 
 Reads the already-processed, canonical stage0 offline outputs in
-``_new_data_analysis/<dataset>/aggregated_results.json`` (per-point real
+``research/<dataset>/aggregated_results.json`` (per-point real
 features: kk_score, kk_mu_max, rb_ohm, rb_method, conductivity, T) and the
 matching ``arrhenius_analysis.json`` (segment Ea). It does NOT re-parse raw
 spectra and NEVER fabricates numbers; if a quantity is not computable it is

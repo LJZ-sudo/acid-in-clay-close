@@ -3,7 +3,7 @@
 through the canonical stage0 offline pipeline, then emit a compact comparison table.
 
 Run from repo root:
-    python _new_data_analysis/process_all.py
+    python research/process_all.py
 """
 import json
 import os
@@ -13,7 +13,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
 STAGE0 = REPO / "V1.0-qianduan-mainline" / "stage0_measurement"
-OUT = REPO / "_new_data_analysis"
+OUT = REPO / "research"
 
 # (label, data_dir relative to repo, thickness_cm, chi_pattern, line)
 DATASETS = [

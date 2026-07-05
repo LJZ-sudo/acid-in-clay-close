@@ -39,7 +39,7 @@ data/raw_eis/
 *.db
 
 # Runtime state files (auto-written by backend / live workflow)
-_new_data_analysis/status.json
+research/status.json
 V1.0-qianduan-mainline/stage0_measurement/online_experiment_state.json
 
 # Regenerated audit report dir (snapshot archived in archive/V1.0-qianduan-mainline/codex)

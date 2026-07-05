@@ -9,7 +9,7 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from _new_data_analysis.evaluation import policy_ablation as PA  # noqa: E402
+from research.evaluation import policy_ablation as PA  # noqa: E402
 
 
 def _by_policy(results, name):

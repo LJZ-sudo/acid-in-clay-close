@@ -12,7 +12,7 @@ T_break convention: the MAIN transition = transition_temps_K[0] (separates the h
 near-athermal segment 0 from the low-T activated segment 1). A 1-point segment-2 tail
 (common pwlf artifact at the coldest point) is ignored for Ea but noted.
 
-Run from repo root:  python _new_data_analysis/regularity/build_regularity.py
+Run from repo root:  python research/regularity/build_regularity.py
 """
 from __future__ import annotations
 
@@ -38,7 +38,7 @@ plt.rcParams.update({
 })
 
 HERE = Path(__file__).resolve().parent
-NDA = HERE.parent  # _new_data_analysis
+NDA = HERE.parent  # research
 
 
 def save_publication(fig, stem):

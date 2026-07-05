@@ -44,7 +44,7 @@ CHI_DIR = Path(r"E:\chi_data\b_track_fulltemp")
 THICKNESS_CM = 0.0564
 AREA_CM2 = 1.96
 SAMPLE_ID = "ATP-R0.186-N1.029-live-fulltemp"
-OUT = REPO / "_new_data_analysis" / "scientific_harness" / "p4_fault_reconciliation_report.json"
+OUT = REPO / "research" / "scientific_harness" / "p4_fault_reconciliation_report.json"
 
 _T_RE = re.compile(r"_T(-?\d+(?:[.p]\d+)?)_")
 

@@ -176,7 +176,7 @@ def run(out_subdir: str = "policy_ablation") -> Dict[str, Any]:
         },
         "verdict": verdict,
     }
-    out_dir = REPO_ROOT / "_new_data_analysis" / out_subdir
+    out_dir = REPO_ROOT / "research" / out_subdir
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "policy_ablation_v2.json").write_text(
         json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")

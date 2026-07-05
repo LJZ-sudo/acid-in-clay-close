@@ -28,7 +28,7 @@ from scientific_memory.claim_graph import ClaimGraph, NodeType  # noqa: E402
 from scientific_memory.invalidation_engine import InvalidationEngine  # noqa: E402
 
 REPO_ROOT = _THIS.parents[3]
-OUT_DIR = REPO_ROOT / "_new_data_analysis" / "scientific_memory"
+OUT_DIR = REPO_ROOT / "research" / "scientific_memory"
 
 
 def build_demo_graph(db_path: str = ":memory:") -> ClaimGraph:

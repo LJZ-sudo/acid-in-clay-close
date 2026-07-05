@@ -23,7 +23,7 @@ from scientific_harness.commit_controller import CommitController  # noqa: E402
 from scientific_harness.fault_injection import InstrumentSimulator, Fault  # noqa: E402
 
 REPO_ROOT = _THIS.parents[3]
-OUT_DIR = REPO_ROOT / "_new_data_analysis" / "scientific_harness"
+OUT_DIR = REPO_ROOT / "research" / "scientific_harness"
 
 # 干净测量(analysis 层)
 _CLEAN = {"qa_failed": False, "kk_mu_median": 0.05, "rb_method_spread_dex": 0.02,

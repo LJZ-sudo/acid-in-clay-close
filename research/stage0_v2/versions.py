@@ -20,7 +20,7 @@ from typing import Any, Dict, Iterable, List, Optional
 
 # ---- 路径锚点(可移植) -------------------------------------------------- #
 THIS_FILE = Path(__file__).resolve()
-NDA_ROOT = THIS_FILE.parents[1]                 # _new_data_analysis/
+NDA_ROOT = THIS_FILE.parents[1]                 # research/
 REPO_ROOT = THIS_FILE.parents[2]                # 仓库根
 MAINLINE_ROOT = REPO_ROOT / "V1.0-qianduan-mainline"
 CONFIGS_DIR = MAINLINE_ROOT / "configs"
@@ -164,7 +164,7 @@ def freeze_legacy_manifest(
 ) -> Dict[str, Any]:
     """记录 legacy 产物的 sha256 + 大小 + mtime(只读,不改动任何文件)。
 
-    默认把 _new_data_analysis 下所有 lineA_*/lineB_* 的 aggregated/arrhenius
+    默认把 research 下所有 lineA_*/lineB_* 的 aggregated/arrhenius
     也纳入(它们是本轮分析的输入,需冻结基线)。
     """
     products: List[str] = list(DEFAULT_LEGACY_PRODUCTS)

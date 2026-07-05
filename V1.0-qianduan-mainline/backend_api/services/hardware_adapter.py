@@ -2709,7 +2709,7 @@ class HardwareAdapter:
             import sys as _sys
             import numpy as np
             repo = Path(__file__).resolve().parents[3]   # acid-in-clay-close
-            nda = str(repo / "_new_data_analysis")
+            nda = str(repo / "research")
             if nda not in _sys.path:
                 _sys.path.insert(0, nda)
             from epistemic import active_design as _ad
@@ -3814,7 +3814,7 @@ class HardwareAdapter:
             import sys as _sys
             import math as _math
             repo = Path(__file__).resolve().parents[3]   # acid-in-clay-close
-            nda = str(repo / "_new_data_analysis")
+            nda = str(repo / "research")
             if nda not in _sys.path:
                 _sys.path.insert(0, nda)
             from epistemic import observability_certificate as _OC
@@ -3884,7 +3884,7 @@ class HardwareAdapter:
         try:
             import sys as _sys
             repo = Path(__file__).resolve().parents[3]   # acid-in-clay-close
-            nda = str(repo / "_new_data_analysis")
+            nda = str(repo / "research")
             if nda not in _sys.path:
                 _sys.path.insert(0, nda)
             from epistemic import impedance_models as _IM
@@ -4027,7 +4027,7 @@ class HardwareAdapter:
         try:
             import sys as _sys
             repo = Path(__file__).resolve().parents[3]   # acid-in-clay-close
-            nda = str(repo / "_new_data_analysis")
+            nda = str(repo / "research")
             skills = str(repo / "V1.0-qianduan-mainline" / "stage1_optimization")
             for p in (nda, skills):
                 if p not in _sys.path:

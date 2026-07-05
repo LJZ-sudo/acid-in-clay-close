@@ -7,7 +7,7 @@
   - ablation        ← Rb 提取策略消融(legacy/fixed_plateau/fixed_zero_crossing/ensemble)
         + 稳健回归消融(全点/稳健/留一)
 
-只读 `_new_data_analysis/*/...summary_v2.json` 等产物,绝不重跑重计算、绝不伪造;
+只读 `research/*/...summary_v2.json` 等产物,绝不重跑重计算、绝不伪造;
 产物缺失时返回 generated=False + 生成命令提示(诚实)。
 """
 from __future__ import annotations
@@ -19,7 +19,7 @@ from typing import Any, Dict, List, Optional
 # services/ -> backend_api/ -> mainline root -> repo root
 MAINLINE_ROOT = Path(__file__).resolve().parents[2]
 REPO_ROOT = MAINLINE_ROOT.parent
-NDA = REPO_ROOT / "_new_data_analysis"
+NDA = REPO_ROOT / "research"
 
 
 def _read_json(path: Path) -> Optional[Dict[str, Any]]:
@@ -54,9 +54,9 @@ def run_threshold_sweep(payload: Optional[dict] = None) -> Dict[str, Any]:
             "threshold_sweep",
             ["rb_invariance_summary_v2.json", "breakpoint_uncertainty_summary_v2.json",
              "synthetic_validation_summary_v2.json"],
-            ["python -m _new_data_analysis.stage0_v2.rb_method_invariance --kind lineA",
-             "python -m _new_data_analysis.stage0_v2.breakpoint_uncertainty --n_boot 150",
-             "python -m _new_data_analysis.stage0_v2.synthetic_validation --n_draws 80"],
+            ["python -m research.stage0_v2.rb_method_invariance --kind lineA",
+             "python -m research.stage0_v2.breakpoint_uncertainty --n_boot 150",
+             "python -m research.stage0_v2.synthetic_validation --n_draws 80"],
         )
 
     # 以数据集为行,合并三类敏感性
@@ -104,8 +104,8 @@ def run_ablation(payload: Optional[dict] = None) -> Dict[str, Any]:
         return _missing(
             "ablation",
             ["rb_invariance/*_rb_invariance_v2.json", "arrhenius_robust/*_robust_v2.json"],
-            ["python -m _new_data_analysis.stage0_v2.rb_method_invariance --kind lineA",
-             "python -m _new_data_analysis.stage0_v2.arrhenius_robust --kind lineA"],
+            ["python -m research.stage0_v2.rb_method_invariance --kind lineA",
+             "python -m research.stage0_v2.arrhenius_robust --kind lineA"],
         )
 
     results: List[Dict[str, Any]] = []

@@ -58,7 +58,7 @@ def arc_apex_freq(f: np.ndarray, zi: np.ndarray):
 
 def main() -> None:
     agg = json.loads(
-        (REPO / "_new_data_analysis" / DATASET / "aggregated_results.json").read_text(encoding="utf-8")
+        (REPO / "research" / DATASET / "aggregated_results.json").read_text(encoding="utf-8")
     )
     ok = [m for m in agg.get("measurements", []) if m.get("status") == "OK" and m.get("filepath")]
     ok.sort(key=lambda m: m["temperature_C"])

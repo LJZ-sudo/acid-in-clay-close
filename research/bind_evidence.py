@@ -4,14 +4,14 @@
   (B) add trial 10 (R0.42/N1.02) to history_db_attapulgite.json
 
 Both operations are strictly append: existing entries are preserved verbatim.
-Values are read from the canonical stage0 outputs (_new_data_analysis/*).
+Values are read from the canonical stage0 outputs (research/*).
 """
 import json
 import math
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
-OUT = REPO / "_new_data_analysis"
+OUT = REPO / "research"
 FEEDBACK = REPO / "V1.0-qianduan-mainline/stage3_mechanism/data/validation/experimental_feedback.json"
 HISTORY = REPO / "V1.0-qianduan-mainline/stage1_optimization/campaign_memory/history_db_attapulgite.json"
 
@@ -103,7 +103,7 @@ fb.setdefault("append_log", []).append({
     "appended_at": "2026-06-15",
     "added_records": added,
     "note": "June 2026 Line-A prospective batch (thick-film LRS x2 + starch control x2). "
-            "Append-only; frozen registry untouched. Source: _new_data_analysis stage0 outputs."
+            "Append-only; frozen registry untouched. Source: research stage0 outputs."
 })
 FEEDBACK.write_text(json.dumps(fb, indent=2, ensure_ascii=False), encoding="utf-8")
 print(f"[A] experimental_feedback.json: appended {added} (total {len(fb['validation_records'])} records)")
