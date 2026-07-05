@@ -38,6 +38,8 @@ def main() -> int:
     ap.add_argument("--area-m2", type=float, default=None)
     ap.add_argument("--material-note", default="qualification run (old material)")
     ap.add_argument("--no-faults", action="store_true", help="跳过 H2/G-2 故障注入")
+    ap.add_argument("--no-stage1", action="store_true",
+                    help="只跑 Stage0 后处理,不跑 Stage1 BO(验证段/部分温区 run 用,避免污染优化历史)")
     ap.add_argument("--base-url", default="http://127.0.0.1:8000")
     args = ap.parse_args()
 
@@ -47,7 +49,7 @@ def main() -> int:
         "coarse_step": args.coarse, "fine_step": args.fine,
         "thickness_m": args.thickness_m, "area_m2": args.area_m2,
         "material_note": args.material_note,
-        "auto_postprocess": True, "run_stage1_after_stage0": True,
+        "auto_postprocess": True, "run_stage1_after_stage0": not args.no_stage1,
         # 创新点后端已默认全开;这里显式写出以便 payload 自身可审计。
         "enable_agent_decision": True,
         "enable_active_design": True, "active_design_mode": "canary", "canary_max_steps": 2,
