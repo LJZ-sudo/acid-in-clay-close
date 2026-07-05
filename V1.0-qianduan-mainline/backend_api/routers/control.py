@@ -85,10 +85,11 @@ class StartExperimentRequest(BaseModel):
     #                        纯 numpy/scipy 零 LLM 成本。
     #   - enable_falsification_market : §13 P13-B 收尾多角色 LLM 证伪市场(真 OpenRouter,收尾 ~9 次调用)
     enable_active_design: bool = True
-    #   - active_design_mode : "advisory"(默认,仅注入 prompt,行为不变)|
-    #       "canary"(P13-C:经 ActionGate 在固定阶梯相邻候选间微调下一 setpoint,受硬护栏约束)。
-    #       canary 属物理执行层,保持显式开启(安全三阶段纪律),不随默认翻转。
-    active_design_mode: str = "advisory"
+    #   - active_design_mode : "canary"(2026-07-05 起默认——H3 创新点真实执行:经 ActionGate 在
+    #       固定阶梯**相邻候选间**微调下一 setpoint,三重硬护栏不变:±canary_max_steps×step 邻域、
+    #       不越 [t_end,t_start] 阶梯包络、回温≤15K;越界/被拦即回退固定阶梯)|
+    #       "advisory"(仅注入 prompt,行为不变,可显式降级)。
+    active_design_mode: str = "canary"
     enable_stage3_reasoning: bool = True
     enable_epistemic: bool = True
     enable_falsification_market: bool = True
@@ -110,11 +111,12 @@ class StartExperimentRequest(BaseModel):
     #       仅在 enable_active_design=True 且 active_design_mode="canary" 时生效;硬护栏不变。
     #   - rb_r4_activate / rb_r4_signoff : H4 Rb-ACT R4 替换态激活(须三条件齐备:本 flag +
     #       预注册 gates_pass + 人审签核 token)。缺任一条件恒回退 legacy,legacy_overwritten=0。
-    #       **默认关(有意人审门,不随默认翻转)**——未提供签核 token 时数值链恒 100% legacy,
-    #       软件绝不自行替换。
+    #       2026-07-05 起 flag 默认开——R4 合同/审计/门检查每次 run 收尾真实执行并落
+    #       rb_act_r4_activation.json;**唯一剩下的门是人审签核 token**(必须由人提供,
+    #       软件绝不自行替换数值链——这是主张边界,不随默认翻转)。
     enable_instrument_witness: bool = True
     canary_max_steps: int = 2
-    rb_r4_activate: bool = False
+    rb_r4_activate: bool = True
     rb_r4_signoff: Optional[str] = None
     # Safety thresholds + finalize behaviour (mirror run_online.py defaults)
     min_conductivity_threshold: Optional[float] = None  # σ hard fuse (S/cm)

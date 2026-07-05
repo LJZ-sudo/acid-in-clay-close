@@ -449,11 +449,12 @@ class HardwareAdapter:
         self._enable_c3: bool = True
         self._rbact_metro_dex: List[float] = []
         self._rbact_active_requests: List[str] = []
-        # --- H4:Rb-ACT R4 激活模式(默认关)。逐点累积 RbActResult,收尾据三条件门
+        # --- H4:Rb-ACT R4 激活模式。逐点累积 RbActResult,收尾据三条件门
         #     (rb_r4_activate + 预注册 gates_pass + 人审签核 token)决定是否旁产 σ_v2+delta。
-        #     缺任一条件恒回退 legacy;legacy 永不覆盖。属替换态,须你签核。---
+        #     2026-07-05 起 flag 默认开(合同/审计/门检查每次 run 真实执行并落盘);
+        #     缺签核 token 恒回退 legacy;legacy 永不覆盖。替换态须你签核。---
         self._rbact_results: List[Any] = []
-        self._rb_r4_activate: bool = False
+        self._rb_r4_activate: bool = True
         self._rb_r4_signoff: Optional[str] = None
         # --- Stage3 机理推理链接 live（GPT 迁移发现愿景，fail-safe / 默认开）---
         # 收尾把真实全温区测量构造成 Stage3SeedBundle,真实 LLM 驱动
@@ -470,10 +471,11 @@ class HardwareAdapter:
         #     逐点据已测 σ(T) 竞争模型,计算"单位成本期望机制判别价值"最大的下一个温度,
         #     经 ActionGate 留痕后注入决策 prompt(advisory)。不夺用户固定物理阶梯,只提供受控建议。---
         self._enable_active_design: bool = True
-        # --- P13-C:active_design 模式。advisory=仅注入 prompt(默认,行为不变);
-        #     canary=经 ActionGate 在用户固定阶梯的**相邻候选间**微调下一 setpoint(硬护栏:
-        #     不越阶梯包络、单步邻域、回温≤15K),越界/被拦即回退固定阶梯。绝不无人值守 enforce 夺权。---
-        self._active_design_mode: str = "advisory"
+        # --- P13-C:active_design 模式。canary=默认(2026-07-05 起,H3 真实执行):经 ActionGate
+        #     在用户固定阶梯的**相邻候选间**微调下一 setpoint(硬护栏:不越阶梯包络、
+        #     ±canary_max_steps×step 邻域、回温≤15K),越界/被拦即回退固定阶梯;
+        #     advisory=仅注入 prompt(可显式降级)。绝不无人值守 enforce 夺权。---
+        self._active_design_mode: str = "canary"
         # H3:canary 可执行邻域宽度(单位=固定阶梯 step)。默认 2(原为隐式 1),让 active_design
         #     在更多步产生实质微调;仍守阶梯包络 + 回温≤15K + ActionGate。clamp 到 [1,3]。
         self._canary_max_steps: int = 2
@@ -850,16 +852,16 @@ class HardwareAdapter:
         self._enable_stage3_reasoning = bool(kwargs.get("enable_stage3_reasoning", True))
         self._enable_epistemic = bool(kwargs.get("enable_epistemic", True))
         self._enable_active_design = bool(kwargs.get("enable_active_design", True))
-        _adm = str(kwargs.get("active_design_mode", "advisory") or "advisory").strip().lower()
-        self._active_design_mode = _adm if _adm in ("advisory", "canary") else "advisory"
+        _adm = str(kwargs.get("active_design_mode", "canary") or "canary").strip().lower()
+        self._active_design_mode = _adm if _adm in ("advisory", "canary") else "canary"
         try:
             self._canary_max_steps = max(1, min(3, int(kwargs.get("canary_max_steps", 2))))
         except (TypeError, ValueError):
             self._canary_max_steps = 2
         self._enable_falsification_market = bool(kwargs.get("enable_falsification_market", True))
-        # H4:Rb-ACT R4 激活模式(替换态,须三条件齐备才生效;默认关)。
+        # H4:Rb-ACT R4 激活模式(替换态,须三条件齐备才生效;flag 默认开,签核 token 须人给)。
         self._rbact_results = []
-        self._rb_r4_activate = bool(kwargs.get("rb_r4_activate", False))
+        self._rb_r4_activate = bool(kwargs.get("rb_r4_activate", True))
         _so = kwargs.get("rb_r4_signoff")
         self._rb_r4_signoff = str(_so) if _so else None
         # measurement_txn 真门控:本次运行是否切 committed 视图并过滤 bundle(默认开)。

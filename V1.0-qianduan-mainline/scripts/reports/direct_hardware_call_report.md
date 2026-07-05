@@ -1,6 +1,6 @@
 # 硬件写路径审计报告（direct hardware call report）
 
-- 生成时间：2026-07-05T22:10:41.237686+08:00
+- 生成时间：2026-07-05T22:21:41.539276+08:00
 - 命中总数：31
 - **自主旁路点（应清零）：0**
 
@@ -23,16 +23,16 @@
 
 | 文件 | 行 | token | 角色 |
 |---|---|---|---|
-| backend_api/routers/control.py | 166 | hw_start | OPERATOR_MANUAL |
-| backend_api/routers/control.py | 258 | hw_stop | OPERATOR_MANUAL |
-| backend_api/routers/control.py | 270 | set_temperature | OPERATOR_MANUAL |
-| backend_api/routers/control.py | 277 | trigger_measurement | OPERATOR_MANUAL |
-| backend_api/services/hardware_adapter.py | 680 | TemperatureDriver_ctor | ADAPTER_SINK |
-| backend_api/services/hardware_adapter.py | 695 | ChiExecutor_ctor | ADAPTER_SINK |
-| backend_api/services/hardware_adapter.py | 1192 | set_temperature | ADAPTER_SINK |
-| backend_api/services/hardware_adapter.py | 1621 | set_temperature | ADAPTER_SINK |
-| backend_api/services/hardware_adapter.py | 4319 | set_temperature | ADAPTER_SINK |
-| backend_api/services/hardware_adapter.py | 4350 | set_temperature | ADAPTER_SINK |
+| backend_api/routers/control.py | 168 | hw_start | OPERATOR_MANUAL |
+| backend_api/routers/control.py | 260 | hw_stop | OPERATOR_MANUAL |
+| backend_api/routers/control.py | 272 | set_temperature | OPERATOR_MANUAL |
+| backend_api/routers/control.py | 279 | trigger_measurement | OPERATOR_MANUAL |
+| backend_api/services/hardware_adapter.py | 682 | TemperatureDriver_ctor | ADAPTER_SINK |
+| backend_api/services/hardware_adapter.py | 697 | ChiExecutor_ctor | ADAPTER_SINK |
+| backend_api/services/hardware_adapter.py | 1194 | set_temperature | ADAPTER_SINK |
+| backend_api/services/hardware_adapter.py | 1623 | set_temperature | ADAPTER_SINK |
+| backend_api/services/hardware_adapter.py | 4321 | set_temperature | ADAPTER_SINK |
+| backend_api/services/hardware_adapter.py | 4352 | set_temperature | ADAPTER_SINK |
 | stage0_measurement/b_track_live_driver.py | 104 | TemperatureDriver_ctor | LEGACY_ONLINE |
 | stage0_measurement/b_track_live_driver.py | 106 | ChiExecutor_ctor | LEGACY_ONLINE |
 | stage0_measurement/b_track_live_driver.py | 108 | ChiExecutor_ctor | LEGACY_ONLINE |

@@ -56,13 +56,15 @@ runtime = {
     "提交门控(enforce)":     ("_commit_gate_mode", "enforce"),
     "commit gate 开":        ("_enable_commit_gate", True),
     "Epistemic 认知证书+阻抗": ("_enable_epistemic", True),
-    "active_design(advisory)": ("_enable_active_design", True),
-    "advisory 模式":         ("_active_design_mode", "advisory"),
+    "active_design 开":      ("_enable_active_design", True),
+    "H3 canary 模式(默认执行)": ("_active_design_mode", "canary"),
+    "H3 canary 邻域步数":    ("_canary_max_steps", 2),
     "Stage3 机理推理链":     ("_enable_stage3_reasoning", True),
     "LLM 证伪市场":          ("_enable_falsification_market", True),
     "H2 在线仪器见证":       ("_enable_instrument_witness", True),
-    # 有意默认关的治理门
-    "H4 R4 替换态(应关)":    ("_rb_r4_activate", False),
+    "H4 R4 评估链(flag 开)":  ("_rb_r4_activate", True),
+    # 唯一的人审门:签核 token 必须由人提供,软件绝不自行替换数值链
+    "H4 签核 token(须人给,应 None)": ("_rb_r4_signoff", None),
     "ActionGate 命令路径(应 shadow)": ("_harness_mode", "shadow"),
 }
 all_ok = True
