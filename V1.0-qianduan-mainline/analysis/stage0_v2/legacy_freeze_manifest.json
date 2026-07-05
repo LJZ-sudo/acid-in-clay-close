@@ -9,212 +9,202 @@
       "stage0_v2_policy": "da45db8ed5327d9d45407e314014ed811eca46f00baf8165bf601348454be1af",
       "rb_method_policy": "43949a81157d42afe6e16713ece534dcd99c3cafd03712e05cbb6b640ede117a",
       "evidence_admission_v2": "4931d6e794f1056445f8621de5c39702466c82d3c39f9f050e00b9e397a45960",
-      "objective_registry": "5fe3cd0476730dcb1a31776be30cf83cbfb0de252d327aa871b32b129345fa0c"
+      "objective_registry": "193a65c7b5d39235ef29a8e29c72429e965490dfa8424dc216d169269ab7fac5"
     },
-    "git_commit": "fb17c68",
-    "generated_at": "2026-06-22T13:50:55.388452+08:00"
+    "git_commit": "659126c",
+    "generated_at": "2026-07-05T20:15:14.405040+08:00"
   },
-  "n_products": 40,
+  "n_products": 38,
   "products": {
     "V1.0-qianduan-mainline/stage1_optimization/campaign_memory/history_db_attapulgite.json": {
-      "sha256": "ea006aebe18cd5ed1b3a5d37e8018ced5c8f9259d10a37a4c988e4aeee66d3da",
-      "size_bytes": 12870,
-      "mtime_iso": "2026-06-15T02:42:29.638992+00:00"
+      "sha256": "f4af67b21dfec7febf58fc972c586b12bfa73d89367b454b21f7a7d83419ede6",
+      "size_bytes": 16728,
+      "mtime_iso": "2026-07-02T14:46:33.191060+00:00"
     },
-    "prospective_2026H2/line_B_mobo_closed_loop/official_recipe.json": {
+    "experiments/prospective/line_B_mobo_closed_loop/official_recipe.json": {
       "sha256": "e14d0c7a75f21e4a6b22856bc35d106a18c45bbaaf0bd90eac5039f8fdb1adb7",
       "size_bytes": 1709,
-      "mtime_iso": "2026-06-08T05:16:16.753869+00:00"
+      "mtime_iso": "2026-06-26T15:21:40.246269+00:00"
     },
-    "_new_data_analysis\\lineA_CHITO_0430CS\\aggregated_results.json": {
+    "experiments\\data\\lineA_CHITO_0430CS\\aggregated_results.json": {
       "sha256": "53ee0b488df37e546eee4b712f31054ac1d9b55e5cd426a8f89fd193d24e93ff",
       "size_bytes": 24801,
-      "mtime_iso": "2026-06-15T04:12:00.376426+00:00"
+      "mtime_iso": "2026-06-26T15:21:39.438157+00:00"
     },
-    "_new_data_analysis\\lineA_CHITO_0430CS\\arrhenius_analysis.json": {
+    "experiments\\data\\lineA_CHITO_0430CS\\arrhenius_analysis.json": {
       "sha256": "f5749e07d9ada736b23a2c137e3a3f4c8d72048bf6b29c0d5207334dc61285ad",
       "size_bytes": 2020,
-      "mtime_iso": "2026-06-15T04:12:00.556533+00:00"
+      "mtime_iso": "2026-06-26T15:21:39.439159+00:00"
     },
-    "_new_data_analysis\\lineA_CHITO_0501CS\\aggregated_results.json": {
+    "experiments\\data\\lineA_CHITO_0501CS\\aggregated_results.json": {
       "sha256": "2fa177f87327744469bda6cdc7c82a2cb1d543292843c68afd08e0b7c306c533",
       "size_bytes": 23954,
-      "mtime_iso": "2026-06-15T04:12:05.038339+00:00"
+      "mtime_iso": "2026-06-26T15:21:39.441158+00:00"
     },
-    "_new_data_analysis\\lineA_CHITO_0501CS\\arrhenius_analysis.json": {
+    "experiments\\data\\lineA_CHITO_0501CS\\arrhenius_analysis.json": {
       "sha256": "bf263d0d5b70b679c8f718bbd25c35782fcce69d03fb248984e644730aeba051",
       "size_bytes": 2005,
-      "mtime_iso": "2026-06-15T04:12:05.210631+00:00"
+      "mtime_iso": "2026-06-26T15:21:39.441158+00:00"
     },
-    "_new_data_analysis\\lineA_LRS_0429CS\\aggregated_results.json": {
+    "experiments\\data\\lineA_LRS_0429CS\\aggregated_results.json": {
       "sha256": "a030b0a3023b5a2c06001fef8577b0b4324b924f24171073a0c42cd0beaef7e6",
       "size_bytes": 30826,
-      "mtime_iso": "2026-06-15T04:11:56.078874+00:00"
+      "mtime_iso": "2026-06-26T15:21:39.444158+00:00"
     },
-    "_new_data_analysis\\lineA_LRS_0429CS\\arrhenius_analysis.json": {
+    "experiments\\data\\lineA_LRS_0429CS\\arrhenius_analysis.json": {
       "sha256": "87c8114bef0d49b27d5ce279b9dda4f37215a38130218eb8b962017f54a4b072",
       "size_bytes": 1873,
-      "mtime_iso": "2026-06-15T04:11:56.231000+00:00"
+      "mtime_iso": "2026-06-26T15:21:39.444158+00:00"
     },
-    "_new_data_analysis\\lineA_LRS_0509CS\\aggregated_results.json": {
+    "experiments\\data\\lineA_LRS_0509CS\\aggregated_results.json": {
       "sha256": "8e5cfee3c2db3c4e7006498a5d092aebb041d1604d06d7a017ba999c37f027f9",
       "size_bytes": 30069,
-      "mtime_iso": "2026-06-15T04:12:09.795490+00:00"
+      "mtime_iso": "2026-06-26T15:21:39.448247+00:00"
     },
-    "_new_data_analysis\\lineA_LRS_0509CS\\arrhenius_analysis.json": {
+    "experiments\\data\\lineA_LRS_0509CS\\arrhenius_analysis.json": {
       "sha256": "4c6c23f0f05f45aa85c49a198775d2135b9eb4c52f5c4b1ca41324696a28626e",
       "size_bytes": 1874,
-      "mtime_iso": "2026-06-15T04:12:09.941608+00:00"
+      "mtime_iso": "2026-06-26T15:21:39.449249+00:00"
     },
-    "_new_data_analysis\\lineA_LRS_0615_s2\\aggregated_results.json": {
+    "experiments\\data\\lineA_LRS_0615_s2\\aggregated_results.json": {
       "sha256": "21c89b799841efd9cf04df9243e63feceb084d4e00737043e4912e39bfa295c4",
       "size_bytes": 31426,
-      "mtime_iso": "2026-06-21T11:43:46.748690+00:00"
+      "mtime_iso": "2026-06-26T15:21:39.451460+00:00"
     },
-    "_new_data_analysis\\lineA_LRS_0615_s2\\arrhenius_analysis.json": {
+    "experiments\\data\\lineA_LRS_0615_s2\\arrhenius_analysis.json": {
       "sha256": "b07f85114d0c8252e17fea020f9d62c377d6f3d75b9ee3da9a29b66541ce114a",
       "size_bytes": 2002,
-      "mtime_iso": "2026-06-21T11:43:46.749686+00:00"
+      "mtime_iso": "2026-06-26T15:21:39.452459+00:00"
     },
-    "_new_data_analysis\\lineA_LRS_0616_s3\\aggregated_results.json": {
+    "experiments\\data\\lineA_LRS_0616_s3\\aggregated_results.json": {
       "sha256": "5c98e37d3778a51b893a83b336e54bb4a81f548a4e65d4890ef46663180ad873",
       "size_bytes": 39193,
-      "mtime_iso": "2026-06-21T11:43:51.895853+00:00"
+      "mtime_iso": "2026-06-26T15:21:39.454460+00:00"
     },
-    "_new_data_analysis\\lineA_LRS_0616_s3\\arrhenius_analysis.json": {
+    "experiments\\data\\lineA_LRS_0616_s3\\arrhenius_analysis.json": {
       "sha256": "2d12a6c7aac2d31d1957b24b559087b71772b4db65c02914a3596ba1fb1fcd23",
       "size_bytes": 1874,
-      "mtime_iso": "2026-06-21T11:43:51.897857+00:00"
+      "mtime_iso": "2026-06-26T15:21:39.455460+00:00"
     },
-    "_new_data_analysis\\lineA_LRS_0617_s3b\\aggregated_results.json": {
+    "experiments\\data\\lineA_LRS_0617_s3b\\aggregated_results.json": {
       "sha256": "79d30613d3cebed904788419278eb6803f1f0396e88ae521c3643737902a61c9",
       "size_bytes": 34090,
-      "mtime_iso": "2026-06-21T11:43:56.192285+00:00"
+      "mtime_iso": "2026-06-26T15:21:39.457460+00:00"
     },
-    "_new_data_analysis\\lineA_LRS_0617_s3b\\arrhenius_analysis.json": {
+    "experiments\\data\\lineA_LRS_0617_s3b\\arrhenius_analysis.json": {
       "sha256": "864a0725d00a2c95dc90f28d36ff7f362456be3bcdfcd8e78df452e89a003fa5",
       "size_bytes": 2027,
-      "mtime_iso": "2026-06-21T11:43:56.194288+00:00"
+      "mtime_iso": "2026-06-26T15:21:39.458460+00:00"
     },
-    "_new_data_analysis\\lineA_LRS_6.12\\aggregated_results.json": {
+    "experiments\\data\\lineA_LRS_6.12\\aggregated_results.json": {
       "sha256": "6f0778e7a0cdc75812b4fc08897fc82516b7ae1967362579f61b1b468a48e0cf",
       "size_bytes": 31562,
-      "mtime_iso": "2026-06-15T02:34:15.008970+00:00"
+      "mtime_iso": "2026-06-26T15:21:39.461466+00:00"
     },
-    "_new_data_analysis\\lineA_LRS_6.12\\arrhenius_analysis.json": {
+    "experiments\\data\\lineA_LRS_6.12\\arrhenius_analysis.json": {
       "sha256": "4f8774a056125e71283957aa452499ea65ffb5d3bf7ba57108afae08d90ac92e",
       "size_bytes": 1866,
-      "mtime_iso": "2026-06-15T02:34:15.009970+00:00"
+      "mtime_iso": "2026-06-26T15:21:39.462461+00:00"
     },
-    "_new_data_analysis\\lineA_LRS_6.15_merged\\aggregated_results.json": {
+    "experiments\\data\\lineA_LRS_6.15_merged\\aggregated_results.json": {
       "sha256": "ac53137318eca729790822fbec6a5680bdf98c9d371e1fde2749a49a2966f136",
       "size_bytes": 50641,
-      "mtime_iso": "2026-06-15T02:34:21.196254+00:00"
+      "mtime_iso": "2026-06-26T15:21:39.465460+00:00"
     },
-    "_new_data_analysis\\lineA_LRS_6.15_merged\\arrhenius_analysis.json": {
+    "experiments\\data\\lineA_LRS_6.15_merged\\arrhenius_analysis.json": {
       "sha256": "e3749616eef65f3ad9546660981786652675440df3df5b26755e0f40448f9579",
       "size_bytes": 1863,
-      "mtime_iso": "2026-06-15T02:34:21.197758+00:00"
+      "mtime_iso": "2026-06-26T15:21:39.466460+00:00"
     },
-    "_new_data_analysis\\lineA_LRS_6.15_s1\\aggregated_results.json": {
+    "experiments\\data\\lineA_LRS_6.15_s1\\aggregated_results.json": {
       "sha256": "0c3a8c5e79444eda8bf50fd7b46b3abefc5310c61cde8fa031b081c32fdd4ba1",
       "size_bytes": 15545,
-      "mtime_iso": "2026-06-15T02:27:13.579414+00:00"
+      "mtime_iso": "2026-06-26T15:21:39.469462+00:00"
     },
-    "_new_data_analysis\\lineA_LRS_6.15_s1\\arrhenius_analysis.json": {
+    "experiments\\data\\lineA_LRS_6.15_s1\\arrhenius_analysis.json": {
       "sha256": "3ca1c30424f736cb069bc322cd4c5ea950fa4a926df10a51520b0394b451ea8c",
       "size_bytes": 1891,
-      "mtime_iso": "2026-06-15T02:27:13.579414+00:00"
+      "mtime_iso": "2026-06-26T15:21:39.469462+00:00"
     },
-    "_new_data_analysis\\lineA_LRS_6.15_s2\\aggregated_results.json": {
+    "experiments\\data\\lineA_LRS_6.15_s2\\aggregated_results.json": {
       "sha256": "1bb3adbd57de04948cca123564a8c82e647c22dfe788e09a63beef6c3de8972b",
       "size_bytes": 22271,
-      "mtime_iso": "2026-06-15T02:27:16.332231+00:00"
+      "mtime_iso": "2026-06-26T15:21:39.472461+00:00"
     },
-    "_new_data_analysis\\lineA_LRS_6.15_s2\\arrhenius_analysis.json": {
+    "experiments\\data\\lineA_LRS_6.15_s2\\arrhenius_analysis.json": {
       "sha256": "bd59df74475f122e5fb56e8a9a53f51db3e51a1363b11d95afbe129ea66b38ff",
       "size_bytes": 1080,
-      "mtime_iso": "2026-06-15T02:27:16.332231+00:00"
+      "mtime_iso": "2026-06-26T15:21:39.472461+00:00"
     },
-    "_new_data_analysis\\lineA_LRS_6.15_s3\\aggregated_results.json": {
+    "experiments\\data\\lineA_LRS_6.15_s3\\aggregated_results.json": {
       "sha256": "64542a0224630c7a00f199282e7c10e74adf5a4f3f8d054c7bc3c421f2655cd8",
       "size_bytes": 13131,
-      "mtime_iso": "2026-06-15T02:27:19.048428+00:00"
+      "mtime_iso": "2026-06-26T15:21:39.475460+00:00"
     },
-    "_new_data_analysis\\lineA_LRS_6.15_s3\\arrhenius_analysis.json": {
+    "experiments\\data\\lineA_LRS_6.15_s3\\arrhenius_analysis.json": {
       "sha256": "8ccbe84c8d65d4fd7b8e84ad9e320803b10a6949eda4ed7c77f90fec90e84902",
       "size_bytes": 1098,
-      "mtime_iso": "2026-06-15T02:27:19.049428+00:00"
+      "mtime_iso": "2026-06-26T15:21:39.475460+00:00"
     },
-    "_new_data_analysis\\lineA_starch_0427CS\\aggregated_results.json": {
+    "experiments\\data\\lineA_starch_0427CS\\aggregated_results.json": {
       "sha256": "9235482172b381a893fcc8fb7bfa151788c17e1385c23e008be13ccae79b4df8",
       "size_bytes": 45505,
-      "mtime_iso": "2026-06-15T04:11:44.551969+00:00"
+      "mtime_iso": "2026-06-26T15:21:39.479459+00:00"
     },
-    "_new_data_analysis\\lineA_starch_0427CS\\arrhenius_analysis.json": {
+    "experiments\\data\\lineA_starch_0427CS\\arrhenius_analysis.json": {
       "sha256": "abee9c441f46dbb4ce7af1ee9208b3e191c688555bdd7bda7fe520b82acbebb4",
       "size_bytes": 1852,
-      "mtime_iso": "2026-06-15T04:11:46.309008+00:00"
+      "mtime_iso": "2026-06-26T15:21:39.479459+00:00"
     },
-    "_new_data_analysis\\lineA_starch_0428CS\\aggregated_results.json": {
+    "experiments\\data\\lineA_starch_0428CS\\aggregated_results.json": {
       "sha256": "88ecdbec68afce06bf0d46fa4ed601a0bd1ad7d8663b357858ed4a50a4203bac",
       "size_bytes": 31678,
-      "mtime_iso": "2026-06-15T04:11:51.219646+00:00"
+      "mtime_iso": "2026-06-26T15:21:39.481461+00:00"
     },
-    "_new_data_analysis\\lineA_starch_0428CS\\arrhenius_analysis.json": {
+    "experiments\\data\\lineA_starch_0428CS\\arrhenius_analysis.json": {
       "sha256": "6bdec610df2cacd12cb977de4038cec12e2c1a65030e4b2f897c49270c16d220",
       "size_bytes": 1877,
-      "mtime_iso": "2026-06-15T04:11:51.372836+00:00"
+      "mtime_iso": "2026-06-26T15:21:39.482460+00:00"
     },
-    "_new_data_analysis\\lineA_starch_6.11\\aggregated_results.json": {
+    "experiments\\data\\lineA_starch_6.11\\aggregated_results.json": {
       "sha256": "cb27e94919d3eacffe0f51fb05ce5859ea73f8bb4ea2294c527768701201891b",
       "size_bytes": 32648,
-      "mtime_iso": "2026-06-15T02:34:12.173372+00:00"
+      "mtime_iso": "2026-06-26T15:21:39.484467+00:00"
     },
-    "_new_data_analysis\\lineA_starch_6.11\\arrhenius_analysis.json": {
+    "experiments\\data\\lineA_starch_6.11\\arrhenius_analysis.json": {
       "sha256": "81459a5702dd53be1d42af857c7775133a56410f62c36507fe9a8435fc37b26b",
       "size_bytes": 1876,
-      "mtime_iso": "2026-06-15T02:34:12.173372+00:00"
+      "mtime_iso": "2026-06-26T15:21:39.485465+00:00"
     },
-    "_new_data_analysis\\lineA_starch_6.13\\aggregated_results.json": {
+    "experiments\\data\\lineA_starch_6.13\\aggregated_results.json": {
       "sha256": "e47d24bed1fb074d60cdd139880038a76cfe608fba9cda82d91d01f04f166f92",
       "size_bytes": 28971,
-      "mtime_iso": "2026-06-15T02:34:17.960260+00:00"
+      "mtime_iso": "2026-06-26T15:21:39.487465+00:00"
     },
-    "_new_data_analysis\\lineA_starch_6.13\\arrhenius_analysis.json": {
+    "experiments\\data\\lineA_starch_6.13\\arrhenius_analysis.json": {
       "sha256": "34e181e1f4e9e0777b4f2bda0e70c4a290b5d44c5bd1530d97449241dec61ed8",
       "size_bytes": 1878,
-      "mtime_iso": "2026-06-15T02:34:17.961607+00:00"
+      "mtime_iso": "2026-06-26T15:21:39.488464+00:00"
     },
-    "_new_data_analysis\\lineB_R0.28_6.10\\aggregated_results.json": {
+    "experiments\\data\\lineB_R0.28_6.10\\aggregated_results.json": {
       "sha256": "7c702791ebc6053335c4ba853441ef11ca34b8f446f1a09359a5463b1ae7d0db",
       "size_bytes": 30761,
-      "mtime_iso": "2026-06-15T02:34:27.028119+00:00"
+      "mtime_iso": "2026-06-26T15:21:39.491469+00:00"
     },
-    "_new_data_analysis\\lineB_R0.28_6.10\\arrhenius_analysis.json": {
+    "experiments\\data\\lineB_R0.28_6.10\\arrhenius_analysis.json": {
       "sha256": "ec5c3bcb612f93756b3daf607c66b38205469a2cfe23dc48a511d451734c0d92",
       "size_bytes": 1880,
-      "mtime_iso": "2026-06-15T02:34:27.028119+00:00"
+      "mtime_iso": "2026-06-26T15:21:39.491469+00:00"
     },
-    "_new_data_analysis\\lineB_R0.42\\aggregated_results.json": {
-      "sha256": "b64b147c6355a1f3a9ebb4c6a3e0e51d8737aafc91afad99dbf1fc405ee18017",
-      "size_bytes": 30138,
-      "mtime_iso": "2026-06-15T02:23:22.659971+00:00"
-    },
-    "_new_data_analysis\\lineB_R0.42\\arrhenius_analysis.json": {
-      "sha256": "59fa5b9acbe6dcf35c7a611dbb4e015d13df77183b9878a83fe3f711915a182b",
-      "size_bytes": 1876,
-      "mtime_iso": "2026-06-15T02:23:22.660928+00:00"
-    },
-    "_new_data_analysis\\lineB_R0.42_6.11\\aggregated_results.json": {
+    "experiments\\data\\lineB_R0.42_6.11\\aggregated_results.json": {
       "sha256": "01dbfa68ddc6b3ab364a2984a7fd313a360d5fbb6a1a0accf37b1be1ede872c6",
       "size_bytes": 32836,
-      "mtime_iso": "2026-06-15T02:34:24.167138+00:00"
+      "mtime_iso": "2026-06-26T15:21:39.500557+00:00"
     },
-    "_new_data_analysis\\lineB_R0.42_6.11\\arrhenius_analysis.json": {
+    "experiments\\data\\lineB_R0.42_6.11\\arrhenius_analysis.json": {
       "sha256": "ccfb2ee7cf97c37a76b4c4f58797eb56cb8c9ac54315c9da718879f7fbdaacf0",
       "size_bytes": 1877,
-      "mtime_iso": "2026-06-15T02:34:24.167138+00:00"
+      "mtime_iso": "2026-06-26T15:21:39.501554+00:00"
     }
   }
 }
