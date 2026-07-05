@@ -44,21 +44,21 @@ acid-in-clay-close/
 ├─ PROJECT_SITUATION_REPORT_20260622.md       # 现状家底
 ├─ SYSTEM_ARCHITECTURE_CODE_GROUNDED_20260622.md # 代码级架构
 ├─ INNOVATION_SKILLS_HARNESS_MEMORY_20260622.md  # 三大底层创新设计
-├─ research/                                  # ★ 研究代码/数据/文档收敛 home（原 _new_data_analysis + m6_baseline_ablation + prospective_2026H2）
-│  ├─ stage0_v2/ · calibration/ · evaluation/ · epistemic/  # M0–M2 分析硬化 v2 代码库
-│  ├─ verification/                           # p2..p21 / pH1..pH4 验证脚本套件
-│  ├─ live/                                   # hw0..hw3 / b_track_* / watch_* 离线&联调脚本
-│  ├─ analysis_scripts/                       # process_all / plot_results / bind_evidence 等
-│  ├─ ablation/                               # 基线/消融与 Line A 复算（原 m6_baseline_ablation）
-│  ├─ prospective/                            # 前瞻预注册（线 A / 线 B，含 line_B official_recipe.json）
-│  ├─ docs/                                   # PUBLICATION_READINESS / TIER_S 手稿 / 真机方案 等
+├─ research/                                  # ★ 输入/输出 home（数据、结果、文档、预注册；分析代码已并入主线 analysis/）
 │  ├─ data/                                   # lineA_*/lineB_* 各批次实验数据（aggregated/arrhenius）
-│  └─ results/                                # v2 分析产物（rb_invariance / repro_floor_v2 / epistemic_out 等）
+│  ├─ results/                                # v2 分析产物（rb_invariance / repro_floor_v2 / epistemic_out 等）
+│  ├─ docs/                                   # PUBLICATION_READINESS / TIER_S 手稿 / 真机方案 等
+│  ├─ prospective/                            # 前瞻预注册（线 A / 线 B，含 line_B official_recipe.json）
+│  ├─ live/                                   # hw0..hw3 / watch_* 真机联调探针脚本（含串口写，刻意留在主线审计面之外）
+│  └─ scientific_harness|memory|skills/       # 三 Demo 的输出产物
 ├─ manuscript/                                # 手稿构建（draft + build 脚本）
 ├─ three_pillars/                             # 三创新点证据 + pillar3 执行引擎/门禁
 ├─ archive/                                   # 历史/实验性代码归档（保留可追溯，不在主路径）
-└─ V1.0-qianduan-mainline/                     # ★ 主线代码（最核心）
+└─ V1.0-qianduan-mainline/                     # ★ 主线代码（最核心，唯一代码 home）
    ├─ backend_api/        # FastAPI 后端（端口 8000），routers/* 为只读看板 + 控制
+   ├─ analysis/           # ★ 研究分析代码（原 research 代码包）：stage0_v2/ calibration/ evaluation/
+   │                      #   epistemic/ regularity/ drt/ replay/ figures/ ablation/ analysis_scripts/
+   │                      #   verification/(p2..p21/pH1..pH4) + natfig.py；读写仍指向 ../research/{data,results}
    ├─ frontend/           # React + Vite + Ant Design 驾驶舱（端口 5173）
    ├─ configs/            # ★ M0 冻结策略：rb_method_policy / evidence_admission_v2 / objective_registry / dataset_registry / terminology_aliases / stage0_v2_policy
    ├─ stage0_measurement/ # Stage0 测量 / 相检测 / CHI 数据接入（含 run_online.py --harness_mode）

@@ -54,9 +54,9 @@ def run_threshold_sweep(payload: Optional[dict] = None) -> Dict[str, Any]:
             "threshold_sweep",
             ["rb_invariance_summary_v2.json", "breakpoint_uncertainty_summary_v2.json",
              "synthetic_validation_summary_v2.json"],
-            ["python -m research.stage0_v2.rb_method_invariance --kind lineA",
-             "python -m research.stage0_v2.breakpoint_uncertainty --n_boot 150",
-             "python -m research.stage0_v2.synthetic_validation --n_draws 80"],
+            ["python -m analysis.stage0_v2.rb_method_invariance --kind lineA",
+             "python -m analysis.stage0_v2.breakpoint_uncertainty --n_boot 150",
+             "python -m analysis.stage0_v2.synthetic_validation --n_draws 80"],
         )
 
     # 以数据集为行,合并三类敏感性
@@ -104,8 +104,8 @@ def run_ablation(payload: Optional[dict] = None) -> Dict[str, Any]:
         return _missing(
             "ablation",
             ["rb_invariance/*_rb_invariance_v2.json", "arrhenius_robust/*_robust_v2.json"],
-            ["python -m research.stage0_v2.rb_method_invariance --kind lineA",
-             "python -m research.stage0_v2.arrhenius_robust --kind lineA"],
+            ["python -m analysis.stage0_v2.rb_method_invariance --kind lineA",
+             "python -m analysis.stage0_v2.arrhenius_robust --kind lineA"],
         )
 
     results: List[Dict[str, Any]] = []

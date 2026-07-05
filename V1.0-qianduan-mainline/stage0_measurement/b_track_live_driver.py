@@ -200,7 +200,7 @@ def main() -> int:
     print(f"进度: {args.progress}")
     print(f"shadow: {shadow_dir}")
     print(f"raw: {args.chi_data_dir}")
-    print("后处理: python research/b_track_live_fulltemp.py (FT-1..FT-4, 仓库根目录下)")
+    print("后处理: python V1.0-qianduan-mainline/analysis/analysis_scripts/b_track_live_fulltemp.py (FT-1..FT-4, 仓库根目录下)")
     return 0 if n_ok > 0 else 1
 
 

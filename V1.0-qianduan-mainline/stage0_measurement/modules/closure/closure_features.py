@@ -227,7 +227,7 @@ def _extract_drt_peaks(bundle: dict) -> List[DRTPeak]:
     Reliability gate (R^2 > 0.8) is intentional: on the current LRS spectra the
     canonical Tikhonov DRT is unreliable (reconstruction R^2 < 0 — blocking-electrode
     low-frequency capacitive tail is beyond a pure relaxation kernel; see
-    ``research/drt/relaxation_evolution.json``). So we surface no relaxation
+    ``V1.0-qianduan-mainline/analysis/drt/relaxation_evolution.json``). So we surface no relaxation
     peaks rather than untrustworthy ones. When the bundle later carries a DRT result
     that passes the gate, peaks flow through automatically. Accepts both the compact
     (``bundle['drt']``) and full (``bundle['drt_result']``) shapes.

@@ -5,11 +5,11 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).resolve().parents[2]
-if str(REPO_ROOT) not in sys.path:
-    sys.path.insert(0, str(REPO_ROOT))
+MAINLINE = Path(__file__).resolve().parents[1]
+if str(MAINLINE) not in sys.path:
+    sys.path.insert(0, str(MAINLINE))
 
-from research.stage0_v2.repro_floor_variance import (  # noqa: E402
+from analysis.stage0_v2.repro_floor_variance import (  # noqa: E402
     prob_meaningful_difference,
 )
 

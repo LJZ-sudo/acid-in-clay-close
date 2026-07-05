@@ -7,11 +7,11 @@ from pathlib import Path
 
 import numpy as np
 
-REPO_ROOT = Path(__file__).resolve().parents[2]
-if str(REPO_ROOT) not in sys.path:
-    sys.path.insert(0, str(REPO_ROOT))
+MAINLINE = Path(__file__).resolve().parents[1]
+if str(MAINLINE) not in sys.path:
+    sys.path.insert(0, str(MAINLINE))
 
-from research.stage0_v2.conductivity_uncertainty import (  # noqa: E402
+from analysis.stage0_v2.conductivity_uncertainty import (  # noqa: E402
     estimate_point, combined_score_distribution,
 )
 
