@@ -44,8 +44,11 @@ acid-in-clay-close/
 ├─ PROJECT_SITUATION_REPORT_20260622.md       # 现状家底
 ├─ SYSTEM_ARCHITECTURE_CODE_GROUNDED_20260622.md # 代码级架构
 ├─ INNOVATION_SKILLS_HARNESS_MEMORY_20260622.md  # 三大底层创新设计
-├─ research/                                  # ★ 输入/输出 home（数据、结果、文档、预注册；分析代码已并入主线 analysis/）
-│  ├─ data/                                   # lineA_*/lineB_* 各批次实验数据（aggregated/arrhenius）
+├─ experiments/                               # ★ 输入/输出 home（原 research；代码零残留，全部在主线 analysis/）
+│  ├─ raw/                                    # 原始仪器数据（← 主线 data/：新材料/ ao/ raw_eis/ archive/）
+│  ├─ data/                                   # lineA_*/lineB_* 各批次数据集（aggregated/arrhenius）
+│  ├─ output/                                 # stage0 bundles / e1_floor / b_track_real（← 主线 output/）
+│  ├─ outputs/ · runs/ · logs/                # 运行时产物：epistemic tmp / 14 个 run 证据库 / 后端日志（gitignore）
 │  ├─ results/                                # v2 分析产物（rb_invariance / repro_floor_v2 / epistemic_out 等）
 │  ├─ docs/                                   # PUBLICATION_READINESS / TIER_S 手稿 / 真机方案 等
 │  ├─ prospective/                            # 前瞻预注册（线 A / 线 B，含 line_B official_recipe.json）
@@ -54,11 +57,11 @@ acid-in-clay-close/
 ├─ manuscript/                                # 手稿构建（draft + build 脚本）
 ├─ three_pillars/                             # 三创新点证据 + pillar3 执行引擎/门禁
 ├─ archive/                                   # 历史/实验性代码归档（保留可追溯，不在主路径）
-└─ V1.0-qianduan-mainline/                     # ★ 主线代码（最核心，唯一代码 home）
+└─ V1.0-qianduan-mainline/                     # ★ 主线（唯一代码 home，顶层已无任何数据目录）
    ├─ backend_api/        # FastAPI 后端（端口 8000），routers/* 为只读看板 + 控制
-   ├─ analysis/           # ★ 研究分析代码（原 research 代码包）：stage0_v2/ calibration/ evaluation/
-   │                      #   epistemic/ regularity/ drt/ replay/ figures/ ablation/ analysis_scripts/
-   │                      #   verification/(p2..p21/pH1..pH4) + natfig.py；读写仍指向 ../research/{data,results}
+   ├─ analysis/           # ★ 研究分析代码：stage0_v2/ calibration/ evaluation/ epistemic/ regularity/
+   │                      #   drt/ replay/ figures/ ablation/ analysis_scripts/
+   │                      #   verification/(p2..p21/pH1..pH4) + natfig.py；读写指向 ../experiments/
    ├─ frontend/           # React + Vite + Ant Design 驾驶舱（端口 5173）
    ├─ configs/            # ★ M0 冻结策略：rb_method_policy / evidence_admission_v2 / objective_registry / dataset_registry / terminology_aliases / stage0_v2_policy
    ├─ stage0_measurement/ # Stage0 测量 / 相检测 / CHI 数据接入（含 run_online.py --harness_mode）

@@ -33,7 +33,7 @@ venv/
 output/
 outputs/
 runs/
-data/raw_eis/
+experiments/logs/
 *.log
 *.sqlite
 *.db
