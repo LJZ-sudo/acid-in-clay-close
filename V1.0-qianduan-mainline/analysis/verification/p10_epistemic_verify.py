@@ -26,7 +26,7 @@ import numpy as np
 HERE = Path(__file__).resolve()
 NDA = (next(_p for _p in HERE.parents if _p.name == "V1.0-qianduan-mainline").parent / "experiments")
 MAIN = NDA.parent / "V1.0-qianduan-mainline"
-RUN_DIR = MAIN / "runs" / "run_20260629_112156_9db536"
+RUN_DIR = MAIN.parent / "experiments" / "runs" / "run_20260629_112156_9db536"
 for p in (str(MAIN / "analysis"),):
     if p not in sys.path:
         sys.path.insert(0, p)

@@ -46,7 +46,7 @@ def check(name, cond, detail=""):
     print(f"[{PASS if cond else FAIL}] {name}" + (f" — {detail}" if detail else ""))
 
 
-REAL_EIS = (MAIN / "data" / "ao" / "2026.5.11"
+REAL_EIS = (MAIN.parent / "experiments" / "raw" / "ao" / "2026.5.11"
             / "凹-R0.23-N1.03-2_T18_f0.1_1000000_V0.txt")
 
 SAMPLE = "ATA-2026-5-11-R0.186-N1.029"

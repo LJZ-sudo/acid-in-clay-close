@@ -18,18 +18,18 @@ OUT = RESEARCH / "data"   # 数据集输出目录（lineA_*/lineB_*）
 
 # (label, data_dir relative to repo, thickness_cm, chi_pattern, line)
 DATASETS = [
-    ("lineA_starch_6.11",      "V1.0-qianduan-mainline/data/新材料/2026.6.11淀粉", 0.0628, "*.txt", "A"),
-    ("lineA_LRS_6.12",         "V1.0-qianduan-mainline/data/新材料/2026.6.12藕粉", 0.0737, "*.txt", "A"),
-    ("lineA_starch_6.13",      "V1.0-qianduan-mainline/data/新材料/2026.6.13淀粉", 0.0737, "*.txt", "A"),
+    ("lineA_starch_6.11",      "experiments/raw/新材料/2026.6.11淀粉", 0.0628, "*.txt", "A"),
+    ("lineA_LRS_6.12",         "experiments/raw/新材料/2026.6.12藕粉", 0.0737, "*.txt", "A"),
+    ("lineA_starch_6.13",      "experiments/raw/新材料/2026.6.13淀粉", 0.0737, "*.txt", "A"),
     # 6.15 藕粉 = same LRS sample #1 (6.13藕粉-1) measured across sessions -> merge whole folder
-    ("lineA_LRS_6.15_merged",  "V1.0-qianduan-mainline/data/新材料/2026.6.15藕粉", 0.0701, "*.txt", "A"),
+    ("lineA_LRS_6.15_merged",  "experiments/raw/新材料/2026.6.15藕粉", 0.0701, "*.txt", "A"),
     # additional independent LRS repeats (same material, other pressed pellets); real
     # thickness from each folder's 材料制备.txt (sample #2, #3, #3-rerun)
-    ("lineA_LRS_0615_s2",  "V1.0-qianduan-mainline/data/新材料/2026.6.15", 0.0778, "*.txt", "A"),
-    ("lineA_LRS_0616_s3",  "V1.0-qianduan-mainline/data/新材料/2026.6.16", 0.0734, "*.txt", "A"),
-    ("lineA_LRS_0617_s3b", "V1.0-qianduan-mainline/data/新材料/2026.6.17", 0.0734, "*.txt", "A"),
-    ("lineB_R0.42_6.11",   "V1.0-qianduan-mainline/data/ao/2026.6.11R0.42-N1.02", 0.0697, "*.txt", "B"),
-    ("lineB_R0.28_6.10",   "V1.0-qianduan-mainline/data/ao/2026.6.10__BO-R0.28-N0.96-w96y-1", 0.0783, "*.txt", "B"),
+    ("lineA_LRS_0615_s2",  "experiments/raw/新材料/2026.6.15", 0.0778, "*.txt", "A"),
+    ("lineA_LRS_0616_s3",  "experiments/raw/新材料/2026.6.16", 0.0734, "*.txt", "A"),
+    ("lineA_LRS_0617_s3b", "experiments/raw/新材料/2026.6.17", 0.0734, "*.txt", "A"),
+    ("lineB_R0.42_6.11",   "experiments/raw/ao/2026.6.11R0.42-N1.02", 0.0697, "*.txt", "B"),
+    ("lineB_R0.28_6.10",   "experiments/raw/ao/2026.6.10__BO-R0.28-N0.96-w96y-1", 0.0783, "*.txt", "B"),
 ]
 
 

@@ -18,7 +18,7 @@ from pydantic import BaseModel
 router = APIRouter()
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
-RUNS_DIR = PROJECT_ROOT / "runs"
+RUNS_DIR = PROJECT_ROOT.parent / "experiments" / "runs"
 
 _SAFE_ID_CHARS = set("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_.")
 

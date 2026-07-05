@@ -32,8 +32,8 @@ import re
 from datetime import datetime
 
 # Config
-DATA_BASE_DIR = PROJECT_ROOT / "data" / "raw_eis" / "S8"
-OUTPUT_BASE_DIR = PROJECT_ROOT / "output" / "stage0_results"
+DATA_BASE_DIR = PROJECT_ROOT.parent / "experiments" / "raw" / "raw_eis" / "S8"
+OUTPUT_BASE_DIR = PROJECT_ROOT.parent / "experiments" / "output" / "stage0_results"
 SAMPLE_THICKNESS_CM = 0.12
 SAMPLE_AREA_CM2 = 3.919348
 

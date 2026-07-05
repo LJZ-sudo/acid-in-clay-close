@@ -122,7 +122,7 @@ def main():
     import argparse
     
     parser = argparse.ArgumentParser(description='Batch extract EIS features for all S8 samples')
-    parser.add_argument('--stage0-dir', default='../../output/stage0_results', help='Stage0 results directory')
+    parser.add_argument('--stage0-dir', default='../../../experiments/output/stage0_results', help='Stage0 results directory')
     parser.add_argument('--raw-eis-base', default='../../data/raw_eis/S8', help='Raw EIS base directory')
     parser.add_argument('--force', '-f', action='store_true', help='Force re-extraction')
     

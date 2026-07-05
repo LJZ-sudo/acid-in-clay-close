@@ -34,7 +34,7 @@ RUN_ID = sys.argv[1] if len(sys.argv) > 1 else "run_20260630_135646_f33d5e"
 HERE = Path(__file__).resolve()
 NDA = (next(_p for _p in HERE.parents if _p.name == "V1.0-qianduan-mainline").parent / "experiments")
 MAIN = NDA.parent / "V1.0-qianduan-mainline"
-EVID = MAIN / "runs" / RUN_ID / "evidence"
+EVID = MAIN.parent / "experiments" / "runs" / RUN_ID / "evidence"
 
 # 让生产模块可导入(backend_api 包)+ epistemic 可解析。
 if str(MAIN) not in sys.path:

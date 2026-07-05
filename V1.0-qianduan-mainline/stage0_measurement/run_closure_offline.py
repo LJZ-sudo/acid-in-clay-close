@@ -6,13 +6,13 @@ Examples
 Dry run (no LLM, deterministic-only) for one sample::
 
     python -m stage0_measurement.run_closure_offline \\
-        --bundles V1.0-qianduan-mainline/output/stage0_results/S8-2-1-1 \\
+        --bundles experiments/output/stage0_results/S8-2-1-1 \\
         --no-llm
 
 Full run for all S8 bundles, writing closure_report.json next to each bundle::
 
     python -m stage0_measurement.run_closure_offline \\
-        --bundles "V1.0-qianduan-mainline/output/stage0_results/S8-*" \\
+        --bundles "experiments/output/stage0_results/S8-*" \\
         --campaign S8-acid-in-clay
 """
 

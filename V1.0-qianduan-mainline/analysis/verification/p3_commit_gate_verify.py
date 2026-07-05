@@ -22,7 +22,7 @@ from scientific_harness.commit_gate import build_committed_view, filter_bundle_e
 
 def load_txn_rows(run_id):
     """从真实 run 事件读逐点 TXN_ADMISSION(entered_bo 为真机当时裁决)。"""
-    ev = MAIN / "runs" / run_id / "events.jsonl"
+    ev = MAIN.parent / "experiments" / "runs" / run_id / "events.jsonl"
     rows = []
     with ev.open(encoding="utf-8") as fh:
         for line in fh:

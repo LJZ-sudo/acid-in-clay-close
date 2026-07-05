@@ -26,8 +26,8 @@ if str(_STAGE0_DIR) not in sys.path:
 
 from modules.io_utils.chi_parser import parse_chi_file  # noqa: E402
 
-_DATA_NEW_MATERIALS = MAINLINE_ROOT / "data" / "新材料"
-_DATA_ROOT = MAINLINE_ROOT / "data"
+_DATA_NEW_MATERIALS = MAINLINE_ROOT.parent / "experiments" / "raw" / "新材料"
+_DATA_ROOT = MAINLINE_ROOT.parent / "experiments" / "raw"
 
 
 def _relocate_filepath(orig: str) -> Optional[Path]:

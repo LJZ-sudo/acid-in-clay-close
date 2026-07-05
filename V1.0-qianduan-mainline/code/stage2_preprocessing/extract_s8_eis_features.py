@@ -507,7 +507,7 @@ def main():
     parser.add_argument('sample_id', help='Sample ID (e.g., S8-2-1-1)')
     parser.add_argument('scan_dir', help='Scan directory (e.g., 300-120K 3K-min)')
     parser.add_argument('--raw-eis-base', default='../../data/raw_eis/S8', help='Raw EIS base directory')
-    parser.add_argument('--stage0-results', default='../../output/stage0_results', help='Stage0 results directory')
+    parser.add_argument('--stage0-results', default='../../../experiments/output/stage0_results', help='Stage0 results directory')
     parser.add_argument('--output', '-o', help='Output file path')
     
     args = parser.parse_args()

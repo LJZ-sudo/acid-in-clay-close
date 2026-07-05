@@ -26,12 +26,12 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 # Stage0 bundle locations: support both legacy (output/stage0_results) and
 # the per-stage local layout (stage0_measurement/output/stage0_results).
 _STAGE0_RESULT_DIRS = [
-    PROJECT_ROOT / "output" / "stage0_results",
+    PROJECT_ROOT.parent / "experiments" / "output" / "stage0_results",
     PROJECT_ROOT / "stage0_measurement" / "output" / "stage0_results",
 ]
 # process_ao_stage0.py 默认把 bundle 写到按日期命名的子目录下，sample_id 在 JSON 里
 # （例如文件夹 2026.5.12 / bundle.sample_id = ATA-2026-5-12-R0.35-N0.95）
-_AO_STAGE0_RESULTS_ROOT = PROJECT_ROOT / "output" / "ao_stage0_results"
+_AO_STAGE0_RESULTS_ROOT = PROJECT_ROOT.parent / "experiments" / "output" / "ao_stage0_results"
 
 
 _SAFE_ID_CHARS = set(
@@ -287,12 +287,12 @@ def _resolve_source_folder(sd: Path) -> Optional[Path]:
         if "data" in parts:
             i = parts.index("data")
             candidates.append(PROJECT_ROOT.joinpath(*parts[i:]))
-        candidates.append(PROJECT_ROOT / "data" / "ao" / p.name)
+        candidates.append(PROJECT_ROOT.parent / "experiments" / "raw" / "ao" / p.name)
     # sd 自身的目录名常常就是日期或 <date>__<tag>
     name = sd.name
     base = name.split("__", 1)[0]
-    candidates.append(PROJECT_ROOT / "data" / "ao" / base)
-    candidates.append(PROJECT_ROOT / "data" / "ao" / name)
+    candidates.append(PROJECT_ROOT.parent / "experiments" / "raw" / "ao" / base)
+    candidates.append(PROJECT_ROOT.parent / "experiments" / "raw" / "ao" / name)
     for c in candidates:
         try:
             if c.exists() and c.is_dir():

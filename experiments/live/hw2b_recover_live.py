@@ -33,7 +33,7 @@ from scientific_harness.shadow import ShadowHarnessRecorder  # noqa: E402
 from scientific_harness.measurement_txn import submit_measurement_offline  # noqa: E402
 from scientific_harness.admission import REJECT  # noqa: E402
 
-OUT = MAIN / "output" / "b_track_real"
+OUT = MAIN.parent / "experiments" / "output" / "b_track_real"
 LIVE_FILE = Path(r"E:\chi_data\ATP-R0.186-N1.029-live_T19.0_f0.1_1000000_V0.txt")
 SAMPLE = "ATP-R0.186-N1.029-live"
 T_C = 19.0

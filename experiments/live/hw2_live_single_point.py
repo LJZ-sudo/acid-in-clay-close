@@ -39,7 +39,7 @@ from modules.automation import ChiExecutor  # noqa: E402
 sys.path.insert(0, str(STAGE0))
 from run_online import create_eis_analyzer  # noqa: E402
 
-OUT = MAIN / "output" / "b_track_real"
+OUT = MAIN.parent / "experiments" / "output" / "b_track_real"
 
 
 def build_shadow_recorder(out_dir: str, sample_id: str):

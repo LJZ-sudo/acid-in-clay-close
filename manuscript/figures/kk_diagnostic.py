@@ -20,7 +20,7 @@ import numpy as np
 from impedance.validation import linKK
 
 REPO = Path(__file__).resolve().parent.parent.parent
-RAW = REPO / "V1.0-qianduan-mainline" / "data" / "新材料" / "2026.5.9CS"
+RAW = REPO / "experiments" / "raw" / "新材料" / "2026.5.9CS"
 
 TARGETS = {
     "+18C main": "18℃",

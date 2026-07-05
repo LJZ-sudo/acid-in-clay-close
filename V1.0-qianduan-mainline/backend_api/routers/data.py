@@ -84,7 +84,7 @@ def get_measurements(
     hw = get_hardware_adapter()
     live = hw.get_measurements()
 
-    results_dir = PROJECT_ROOT / "output" / "phase1_results"
+    results_dir = PROJECT_ROOT.parent / "experiments" / "output" / "phase1_results"
     static_measurements = []
     if results_dir.exists():
         files = sorted(results_dir.glob("*_analysis_result.json"))
@@ -188,7 +188,7 @@ def get_arrhenius(sample_id: Optional[str] = None):
     if not sample_id:
         return {"error": "sample_id required"}
     _validate_id(sample_id, "sample_id")
-    result_file = PROJECT_ROOT / "output" / "phase1_results" / f"{sample_id}_analysis_result.json"
+    result_file = PROJECT_ROOT.parent / "experiments" / "output" / "phase1_results" / f"{sample_id}_analysis_result.json"
     if not result_file.exists():
         raise HTTPException(404, f"Result not found for {sample_id}")
     data = json.loads(result_file.read_text(encoding="utf-8"))
@@ -407,7 +407,7 @@ def get_report(exp_id: Optional[str] = None, language: str = "en-US"):
     if not exp_id:
         return {"error": "sample_id required"}
     _validate_id(exp_id, "exp_id")
-    report_dir = PROJECT_ROOT / "output" / "stage1_reports"
+    report_dir = PROJECT_ROOT.parent / "experiments" / "output" / "stage1_reports"
     report_file = report_dir / f"{exp_id}_scientific_state_report.md"
     if not report_file.exists():
         raise HTTPException(404, f"Report not found for {exp_id}")
@@ -416,7 +416,7 @@ def get_report(exp_id: Optional[str] = None, language: str = "en-US"):
 
 @router.get("/experiments")
 def list_experiments():
-    results_dir = PROJECT_ROOT / "output" / "phase1_results"
+    results_dir = PROJECT_ROOT.parent / "experiments" / "output" / "phase1_results"
     if not results_dir.exists():
         return {"experiments": []}
     files = sorted(results_dir.glob("*_analysis_result.json"))
@@ -434,7 +434,7 @@ def get_history():
 @router.get("/experiment/{exp_id}")
 def get_experiment(exp_id: str):
     _validate_id(exp_id, "exp_id")
-    result_file = PROJECT_ROOT / "output" / "phase1_results" / f"{exp_id}_analysis_result.json"
+    result_file = PROJECT_ROOT.parent / "experiments" / "output" / "phase1_results" / f"{exp_id}_analysis_result.json"
     if not result_file.exists():
         raise HTTPException(404, f"Experiment not found: {exp_id}")
     return json.loads(result_file.read_text(encoding="utf-8"))
@@ -554,7 +554,7 @@ def apply_approved_next_plan(exp_id: Optional[str] = None):
         }
         canonical = extract_canonical_phase1_input(analysis_data)
 
-        output_dir = Path(__file__).resolve().parent.parent.parent / "output" / "stage1_reports"
+        output_dir = Path(__file__).resolve().parent.parent.parent.parent / "experiments" / "output" / "stage1_reports"
         output_dir.mkdir(parents=True, exist_ok=True)
         output_path = output_dir / f"report_{sample_id}_{len(measurements)}pts.md"
 
@@ -591,7 +591,7 @@ def apply_approved_next_plan(exp_id: Optional[str] = None):
 def get_saved_next_plan(sample_id: str):
     """Retrieve a previously generated next_experiment_plan.json for a sample."""
     sample_id = _validate_id(sample_id, "sample_id")
-    reports_dir = Path(__file__).resolve().parent.parent.parent / "output" / "stage1_reports"
+    reports_dir = Path(__file__).resolve().parent.parent.parent.parent / "experiments" / "output" / "stage1_reports"
     plan_files = sorted(reports_dir.glob(f"{sample_id}_next_experiment_plan.json"), reverse=True)
     if not plan_files:
         return {"ok": False, "message": f"No saved plan for {sample_id}"}

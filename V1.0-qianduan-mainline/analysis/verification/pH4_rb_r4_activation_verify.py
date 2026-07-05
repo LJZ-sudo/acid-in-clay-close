@@ -33,9 +33,9 @@ HERE = Path(__file__).resolve()
 NDA = (next(_p for _p in HERE.parents if _p.name == "V1.0-qianduan-mainline").parent / "experiments")
 MAIN = NDA.parent / "V1.0-qianduan-mainline"
 EVID_RUNS = [
-    MAIN / "runs" / "run_20260629_112156_9db536" / "evidence",   # fe2
-    MAIN / "runs" / "run_20260630_135646_f33d5e" / "evidence",   # fe3
-    MAIN / "runs" / "run_20260702_144507_52a878" / "evidence",   # fe4b
+    MAIN.parent / "experiments" / "runs" / "run_20260629_112156_9db536" / "evidence",   # fe2
+    MAIN.parent / "experiments" / "runs" / "run_20260630_135646_f33d5e" / "evidence",   # fe3
+    MAIN.parent / "experiments" / "runs" / "run_20260702_144507_52a878" / "evidence",   # fe4b
 ]
 for p in (str(MAIN / "stage0_measurement"), str(MAIN / "stage1_optimization"), str(MAIN / "analysis")):
     if p not in sys.path:

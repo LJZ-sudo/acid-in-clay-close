@@ -21,7 +21,7 @@ sys.path.insert(0, str(MAIN / "stage0_measurement"))
 from modules.io_utils.chi_parser import parse_chi_file  # noqa: E402
 from rb_act import analyze_spectrum, ABSTAIN  # noqa: E402
 
-OUT = MAIN / "output" / "b_track_real"
+OUT = MAIN.parent / "experiments" / "output" / "b_track_real"
 FLIP_DEX = 0.30
 
 

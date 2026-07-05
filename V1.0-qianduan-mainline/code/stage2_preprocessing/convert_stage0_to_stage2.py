@@ -285,8 +285,8 @@ def main():
     import argparse
     
     parser = argparse.ArgumentParser(description='Convert Stage0 to Stage2 input')
-    parser.add_argument('--stage0-dir', default='../../output/stage0_results')
-    parser.add_argument('--rn-mapping', default='../../output/stage0_results/s8_sample_rn.json')
+    parser.add_argument('--stage0-dir', default='../../../experiments/output/stage0_results')
+    parser.add_argument('--rn-mapping', default='../../../experiments/output/stage0_results/s8_sample_rn.json')
     parser.add_argument('--output', '-o', default='../../stage2_statistics/data/s8_input.csv')
     parser.add_argument('--no-eis', action='store_true', help='Skip EIS features')
     

@@ -44,7 +44,7 @@ REPO = HERE.parent.parent
 P2 = REPO / "three_pillars" / "pillar2_descriptor_qc"
 WIDE = P2 / "figure_data" / "wide_temperature_performance_summary.csv"
 RBQC = P2 / "eis_qc_v2" / "selected_rb_qc_v2.csv"
-RAW = REPO / "V1.0-qianduan-mainline" / "data" / "新材料"
+RAW = REPO / "experiments" / "raw" / "新材料"
 
 # reuse the project's own KK algorithm
 sys.path.insert(0, str(REPO / "V1.0-qianduan-mainline" / "stage0_measurement"))

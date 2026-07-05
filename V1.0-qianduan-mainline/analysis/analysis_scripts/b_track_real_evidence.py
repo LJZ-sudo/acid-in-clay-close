@@ -33,9 +33,9 @@ from scientific_harness.demo_a import run as run_fault_matrix  # noqa: E402
 from scientific_harness.measurement_txn import submit_measurement_offline  # noqa: E402
 from scientific_harness.admission import REJECT  # noqa: E402
 
-OUT = MAIN / "output" / "b_track_real"
-BUNDLE_ROOT = MAIN / "output" / "stage0_results"
-E1 = MAIN / "output" / "e1_floor"
+OUT = MAIN.parent / "experiments" / "output" / "b_track_real"
+BUNDLE_ROOT = MAIN.parent / "experiments" / "output" / "stage0_results"
+E1 = MAIN.parent / "experiments" / "output" / "e1_floor"
 
 BATCHES = [
     {"key": "A", "sample_id": "ATP-R0.186-N1.029-batchA-0624"},

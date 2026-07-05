@@ -19,7 +19,7 @@ from fastapi.responses import StreamingResponse
 router = APIRouter()
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
-RUNS_DIR = PROJECT_ROOT / "runs"
+RUNS_DIR = PROJECT_ROOT.parent / "experiments" / "runs"
 
 
 @router.get("/evidence/{evidence_id}")
@@ -89,7 +89,7 @@ def check_reports(files: str = Query("")):
             continue
         fpath = PROJECT_ROOT / f
         if not fpath.exists():
-            fpath = PROJECT_ROOT / "output" / f
+            fpath = PROJECT_ROOT.parent / "experiments" / "output" / f
         exists = fpath.exists() and fpath.resolve().is_relative_to(PROJECT_ROOT.resolve())
         results[f] = {"exists": exists, "size": fpath.stat().st_size if exists else 0}
     return {"results": results}
@@ -103,7 +103,7 @@ def download_report(file: str = Query("")):
 
     report_path = PROJECT_ROOT / file
     if not report_path.exists():
-        output_path = PROJECT_ROOT / "output" / file
+        output_path = PROJECT_ROOT.parent / "experiments" / "output" / file
         if output_path.exists():
             report_path = output_path
         else:
@@ -123,8 +123,8 @@ def download_report(file: str = Query("")):
     )
 
 
-LITERATURE_DIR = PROJECT_ROOT / "data" / "literature"
-LITERATURE_RECS_PATH = PROJECT_ROOT / "output" / "literature_recommendations.json"
+LITERATURE_DIR = PROJECT_ROOT.parent / "experiments" / "raw" / "literature"
+LITERATURE_RECS_PATH = PROJECT_ROOT.parent / "experiments" / "output" / "literature_recommendations.json"
 
 
 @router.get("/literature/recommendations")

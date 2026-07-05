@@ -32,9 +32,9 @@ MAIN = NDA.parent / "V1.0-qianduan-mainline"
 # G-5:多批 live 合并审计 —— fe2 + fe3 + fe4b 三次真机 run 的谱合并配对,
 # 凑满预注册验收门的 paired_points≥30(单 run 也够,合并=跨 run 稳健性更强)。
 EVID_RUNS = [
-    MAIN / "runs" / "run_20260629_112156_9db536" / "evidence",   # fe2
-    MAIN / "runs" / "run_20260630_135646_f33d5e" / "evidence",   # fe3
-    MAIN / "runs" / "run_20260702_144507_52a878" / "evidence",   # fe4b(G-4 enforce 长跑)
+    MAIN.parent / "experiments" / "runs" / "run_20260629_112156_9db536" / "evidence",   # fe2
+    MAIN.parent / "experiments" / "runs" / "run_20260630_135646_f33d5e" / "evidence",   # fe3
+    MAIN.parent / "experiments" / "runs" / "run_20260702_144507_52a878" / "evidence",   # fe4b(G-4 enforce 长跑)
 ]
 for p in (str(MAIN / "stage0_measurement"), str(MAIN / "stage1_optimization"), str(MAIN / "analysis")):
     if p not in sys.path:

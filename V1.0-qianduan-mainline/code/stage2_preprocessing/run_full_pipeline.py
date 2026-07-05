@@ -132,9 +132,9 @@ def main():
     import argparse
     
     parser = argparse.ArgumentParser(description='Run full Stage0 to Stage2 pipeline')
-    parser.add_argument('--stage0-dir', default='../../output/stage0_results')
+    parser.add_argument('--stage0-dir', default='../../../experiments/output/stage0_results')
     parser.add_argument('--raw-eis-base', default='../../data/raw_eis/S8')
-    parser.add_argument('--rn-mapping', default='../../output/stage0_results/s8_sample_rn.json')
+    parser.add_argument('--rn-mapping', default='../../../experiments/output/stage0_results/s8_sample_rn.json')
     parser.add_argument('--output', default='../../stage2_statistics/data/s8_input.csv')
     parser.add_argument('--skip-eis', action='store_true', help='Skip EIS extraction')
     parser.add_argument('--force-eis', action='store_true', help='Force re-extract EIS')

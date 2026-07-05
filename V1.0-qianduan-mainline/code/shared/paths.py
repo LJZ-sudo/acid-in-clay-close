@@ -11,7 +11,7 @@ STAGE1_DIR = PROJECT_ROOT / "stage1_optimization"
 STAGE2_DIR = PROJECT_ROOT / "stage2_statistics"
 STAGE3_DIR = PROJECT_ROOT / "stage3_mechanism"
 
-OUTPUT_DIR = PROJECT_ROOT / "output"
+OUTPUT_DIR = PROJECT_ROOT.parent / "experiments" / "output"
 STAGE0_RESULTS = OUTPUT_DIR / "stage0_results"
-RAW_EIS_S8 = PROJECT_ROOT / "data" / "raw_eis" / "S8"
+RAW_EIS_S8 = PROJECT_ROOT.parent / "experiments" / "raw" / "raw_eis" / "S8"
 

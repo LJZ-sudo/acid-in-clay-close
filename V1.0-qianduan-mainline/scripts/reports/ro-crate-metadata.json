@@ -16,7 +16,7 @@
       "@id": "./",
       "name": "Proton-conductor agentic discovery — reproducibility crate",
       "description": "Evidence-governed semi-closed-loop discovery: code, configs, certs, reports.",
-      "datePublished": "2026-07-05T19:57:53.584771+08:00",
+      "datePublished": "2026-07-05T20:05:55.645268+08:00",
       "hasPart": [
         {
           "@id": "configs/objective_registry.yaml"
@@ -75,7 +75,7 @@
       "@id": "scripts/reports/direct_hardware_call_report.json",
       "description": "硬件写路径审计(autonomous_bypass=0)",
       "present": true,
-      "sha256": "e06ad19f3781cbd3ee345450e514c3fb8d2c29b5fbd81720bb75e7d2cdedeec7",
+      "sha256": "55eb65c16dca2123c4a8e849af0c738b6deb1440f56d35b6392d48b847498ffb",
       "contentSize": 7913
     },
     {
@@ -90,6 +90,6 @@
   "_summary": {
     "n_artifacts": 6,
     "n_present": 6,
-    "generated_at": "2026-07-05T19:57:53.584771+08:00"
+    "generated_at": "2026-07-05T20:05:55.645268+08:00"
   }
 }

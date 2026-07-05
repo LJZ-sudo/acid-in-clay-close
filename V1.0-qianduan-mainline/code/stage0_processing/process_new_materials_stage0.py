@@ -36,9 +36,9 @@ if sys.platform == "win32" and "pytest" not in sys.modules:
 
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
-DATA_NEW_MATERIALS = PROJECT_ROOT / "data" / "新材料"
-OUTPUT_ROOT = PROJECT_ROOT / "output" / "new_materials_stage0_results"
-NORMALIZED_INPUT_ROOT = PROJECT_ROOT / "output" / "new_materials_stage0_input"
+DATA_NEW_MATERIALS = PROJECT_ROOT.parent / "experiments" / "raw" / "新材料"
+OUTPUT_ROOT = PROJECT_ROOT.parent / "experiments" / "output" / "new_materials_stage0_results"
+NORMALIZED_INPUT_ROOT = PROJECT_ROOT.parent / "experiments" / "output" / "new_materials_stage0_input"
 WRAPPER_SCRIPT = Path(__file__).resolve().parent / "run_stage0_wrapper.py"
 
 # Per-folder excluded temperature points (low-T outliers etc.)

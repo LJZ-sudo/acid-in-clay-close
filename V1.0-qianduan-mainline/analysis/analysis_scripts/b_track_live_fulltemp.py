@@ -43,9 +43,9 @@ from rb_act import analyze_spectrum, ABSTAIN  # noqa: E402
 from scientific_harness.measurement_txn import submit_measurement_offline  # noqa: E402
 from scientific_harness.admission import REJECT  # noqa: E402
 
-OUT = MAIN / "output" / "b_track_real" / "fulltemp"
-FLOOR = MAIN / "output" / "e1_floor" / "LINE_B_LOCAL_DIRECT.json"
-OFFLINE_BUNDLES = MAIN / "output" / "stage0_results"
+OUT = MAIN.parent / "experiments" / "output" / "b_track_real" / "fulltemp"
+FLOOR = MAIN.parent / "experiments" / "output" / "e1_floor" / "LINE_B_LOCAL_DIRECT.json"
+OFFLINE_BUNDLES = MAIN.parent / "experiments" / "output" / "stage0_results"
 FLIP_DEX = 0.30
 WARM_CUT_C = -20.0
 # 兼容两种温度写法:正常 `_T-1.0_` 与宏救援/文件名清洗后的 `_T-1p0_`(小数点→'p')。

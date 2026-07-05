@@ -28,7 +28,7 @@ HERE = Path(__file__).resolve()
 MAIN = next(_p for _p in HERE.parents if _p.name == "V1.0-qianduan-mainline")
 S1 = MAIN / "stage1_optimization"
 S3_SRC = MAIN / "stage3_mechanism" / "src"
-RUN_DIR = MAIN / "runs" / "run_20260629_112156_9db536"
+RUN_DIR = MAIN.parent / "experiments" / "runs" / "run_20260629_112156_9db536"
 for p in (str(S3_SRC), str(S1), str(MAIN)):
     if p not in sys.path:
         sys.path.insert(0, p)
@@ -184,7 +184,7 @@ def main():
               f"{info.get('step_results')}")
 
         # 展示真实产出 + 落盘证据
-        out_dir = Path(info.get("output_dir") or (MAIN / "outputs" / "stage3_live_tmp"))
+        out_dir = Path(info.get("output_dir") or (MAIN.parent / "experiments" / "outputs" / "stage3_live_tmp"))
         try:
             hb = out_dir / "02_hypotheses" / "hypothesis_board.json"
             mc = out_dir / "04_mechanism" / "mechanism_card.json"

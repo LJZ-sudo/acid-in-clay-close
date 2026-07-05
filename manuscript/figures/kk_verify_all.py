@@ -20,7 +20,7 @@ import numpy as np
 from impedance.validation import linKK
 
 REPO = Path(__file__).resolve().parent.parent.parent
-RAW = REPO / "V1.0-qianduan-mainline" / "data" / "新材料"
+RAW = REPO / "experiments" / "raw" / "新材料"
 THRESH = 0.2
 EXCLUDED = {"2026.4.29CS": {-80.0, -77.0}}
 

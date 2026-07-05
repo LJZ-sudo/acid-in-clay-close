@@ -28,8 +28,8 @@ STAGE0 = REPO / "V1.0-qianduan-mainline" / "stage0_measurement"
 sys.path.insert(0, str(STAGE0))
 from modules.io_utils.result_bundle import build_bundle_for_sample, write_bundle  # noqa: E402
 
-OUT = REPO / "V1.0-qianduan-mainline" / "output" / "e1_floor"
-BUNDLE_ROOT = REPO / "V1.0-qianduan-mainline" / "output" / "stage0_results"
+OUT = REPO / "experiments" / "output" / "e1_floor"
+BUNDLE_ROOT = REPO / "experiments" / "output" / "stage0_results"
 WARM_CUT_C = -20.0  # warm: T_C >= -20; cold: T_C < -20
 
 # 三批回溯重复（同配方 R=0.186/N=1.029），几何取自各批 材料制备.txt

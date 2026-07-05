@@ -19,7 +19,7 @@ sys.path.insert(0, str(MAIN / "stage0_measurement"))
 from modules.hardware import TemperatureDriver  # noqa: E402
 
 PORT = "COM3"
-OUT = MAIN / "output" / "b_track_real"
+OUT = MAIN.parent / "experiments" / "output" / "b_track_real"
 
 
 def main() -> int:

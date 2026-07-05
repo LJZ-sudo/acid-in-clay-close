@@ -22,10 +22,10 @@ from process_new_materials_stage0 import (
 )
 
 
-AO_INPUT_ROOT = PROJECT_ROOT / "data" / "ao"
-AO_OUTPUT_ROOT = PROJECT_ROOT / "output" / "ao_stage0_results"
-AO_NORMALIZED_ROOT = PROJECT_ROOT / "output" / "ao_stage0_input"
-SAMPLE_BUS_ROOT = PROJECT_ROOT / "output" / "stage0_results"
+AO_INPUT_ROOT = PROJECT_ROOT.parent / "experiments" / "raw" / "ao"
+AO_OUTPUT_ROOT = PROJECT_ROOT.parent / "experiments" / "output" / "ao_stage0_results"
+AO_NORMALIZED_ROOT = PROJECT_ROOT.parent / "experiments" / "output" / "ao_stage0_input"
+SAMPLE_BUS_ROOT = PROJECT_ROOT.parent / "experiments" / "output" / "stage0_results"
 
 
 def _read_recipe_text(folder: Path) -> str:

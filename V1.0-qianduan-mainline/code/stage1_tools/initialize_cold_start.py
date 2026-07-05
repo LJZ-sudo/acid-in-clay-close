@@ -31,8 +31,8 @@ from _campaign_paths import (
     require_not_real_history_reset,
 )
 
-INVENTORY_PATH = PROJECT_ROOT / "output" / "stage0_results" / "s8_sample_rn.json"
-REAL_DATA_ROOT = PROJECT_ROOT / "output" / "stage0_results"
+INVENTORY_PATH = PROJECT_ROOT.parent / "experiments" / "output" / "stage0_results" / "s8_sample_rn.json"
+REAL_DATA_ROOT = PROJECT_ROOT.parent / "experiments" / "output" / "stage0_results"
 STAGE1_INPUT_DIR = PROJECT_ROOT / "stage1_optimization" / "demo_stage0_results"
 _STORAGE = load_campaign_storage(DEFAULT_REPLAY_CAMPAIGN)
 HISTORY_DB_PATH = _STORAGE.history_db

@@ -22,7 +22,7 @@ from pathlib import Path
 from typing import Any, Callable, Dict, List, Optional
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
-RUNS_DIR = PROJECT_ROOT / "runs"
+RUNS_DIR = PROJECT_ROOT.parent / "experiments" / "runs"
 
 # G-2 真机故障注入合法类型(仅作用于**测量提交治理路径**的输入,绝不改温控/CHI 物理命令)。
 # 诚实边界:提交路径 measurement_txn(经 ReplayInstrument)只忠实拦截**样品核对(C_P)**与
@@ -2185,7 +2185,7 @@ class HardwareAdapter:
         bid = str(bundle.get("sample_id") or "").strip()
         if not bid:
             return
-        bus_root = PROJECT_ROOT / "output" / "stage0_results"
+        bus_root = PROJECT_ROOT.parent / "experiments" / "output" / "stage0_results"
         dest_dir = bus_root / bid
         dest_dir.mkdir(parents=True, exist_ok=True)
         shutil.copy2(closure_path, dest_dir / "closure_report.json")
@@ -2276,10 +2276,10 @@ class HardwareAdapter:
         history_db = _ensure_within(Path(history_db_path), PROJECT_ROOT, "history_db_path")
         stage1_output_dir = _ensure_within(Path(stage1_output_dir), PROJECT_ROOT, "stage1_output_dir")
         chi_src_root = Path(os.environ.get("STAGE0_CHI_DATA_DIR") or r"E:\chi_data")
-        ao_dst_root = _ensure_within(PROJECT_ROOT / "data" / "ao" / ao_folder, PROJECT_ROOT / "data" / "ao", "ao_folder")
+        ao_dst_root = _ensure_within(PROJECT_ROOT.parent / "experiments" / "raw" / "ao" / ao_folder, PROJECT_ROOT.parent / "experiments" / "raw" / "ao", "ao_folder")
         stage0_results_dir = _ensure_within(
-            PROJECT_ROOT / "output" / "ao_stage0_results" / ao_folder,
-            PROJECT_ROOT / "output" / "ao_stage0_results",
+            PROJECT_ROOT.parent / "experiments" / "output" / "ao_stage0_results" / ao_folder,
+            PROJECT_ROOT.parent / "experiments" / "output" / "ao_stage0_results",
             "stage0_results_dir",
         )
 
@@ -3784,7 +3784,7 @@ class HardwareAdapter:
                 R=R if R is not None else 0.0, N=N if N is not None else 0.0,
                 transitions_K=transitions, arrhenius=arr,
             )
-            out_dir = (RUNS_DIR / self._run_id / "stage3_mechanism") if self._run_id else (base / "outputs" / "stage3_live_tmp")
+            out_dir = (RUNS_DIR / self._run_id / "stage3_mechanism") if self._run_id else (base.parent / "experiments" / "outputs" / "stage3_live_tmp")
             info = run_mechanism_reasoning(
                 seed, out_dir, api_key=api_key, base_url=base_url, model=model,
                 llm_mode="live", literature_mode="api", enable_cache=False,
@@ -3842,7 +3842,7 @@ class HardwareAdapter:
             o = _np.argsort(T); T, y = T[o], y[o]
 
             out_dir = (RUNS_DIR / self._run_id / "epistemic") if self._run_id else \
-                (repo / "V1.0-qianduan-mainline" / "outputs" / "epistemic_live_tmp")
+                (repo / "experiments" / "outputs" / "epistemic_live_tmp")
             cert = _OC.build_certificate(T, y, delta=0.05, label=self._sample_id or "live")
             _OC.write_certificate(cert, out_dir / "observability_certificate.json")
             mds = _MDS.build_min_discriminating_set(T, y, delta=0.05, label=self._sample_id or "live")
@@ -3976,7 +3976,7 @@ class HardwareAdapter:
             cold_gt_warm = bool(warm_R and cold_R and cold_R > warm_R)
 
             out_dir = (RUNS_DIR / self._run_id / "epistemic") if self._run_id else \
-                (repo / "V1.0-qianduan-mainline" / "outputs" / "epistemic_live_tmp")
+                (repo / "experiments" / "outputs" / "epistemic_live_tmp")
             out_dir.mkdir(parents=True, exist_ok=True)
             detail = {
                 "n_spectra": len(spectra),
@@ -4064,7 +4064,7 @@ class HardwareAdapter:
                                     include_strawman=True)
 
             out_dir = (RUNS_DIR / self._run_id / "epistemic") if self._run_id else \
-                (repo / "V1.0-qianduan-mainline" / "outputs" / "epistemic_live_tmp")
+                (repo / "experiments" / "outputs" / "epistemic_live_tmp")
             out_dir.mkdir(parents=True, exist_ok=True)
             (out_dir / "falsification_market.json").write_text(
                 json.dumps(market, ensure_ascii=False, indent=2), encoding="utf-8")

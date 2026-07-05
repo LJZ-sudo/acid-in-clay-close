@@ -45,8 +45,8 @@ from shared.manifest import write_manifest
 from _campaign_paths import DEFAULT_REPLAY_CAMPAIGN, load_campaign_storage
 
 LAST_ORACLE_MATCH_PATH = PROJECT_ROOT / "stage1_optimization" / "output" / "last_virtual_oracle_match.json"
-INVENTORY_PATH = PROJECT_ROOT / "output" / "stage0_results" / "s8_sample_rn.json"
-REAL_DATA_ROOT = PROJECT_ROOT / "output" / "stage0_results"
+INVENTORY_PATH = PROJECT_ROOT.parent / "experiments" / "output" / "stage0_results" / "s8_sample_rn.json"
+REAL_DATA_ROOT = PROJECT_ROOT.parent / "experiments" / "output" / "stage0_results"
 STAGE1_INPUT_DIR = PROJECT_ROOT / "stage1_optimization" / "demo_stage0_results"
 
 _STORAGE = load_campaign_storage(DEFAULT_REPLAY_CAMPAIGN)

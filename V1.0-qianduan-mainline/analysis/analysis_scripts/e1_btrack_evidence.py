@@ -34,8 +34,8 @@ from rb_act import analyze_spectrum, ABSTAIN, REPORT, REPORT_CONDITIONAL  # noqa
 from scientific_harness.measurement_txn import submit_measurement_offline  # noqa: E402
 from scientific_harness.admission import IntendedUse, REJECT  # noqa: E402
 
-OUT = MAIN / "output" / "e1_floor"
-BUNDLE_ROOT = MAIN / "output" / "stage0_results"
+OUT = MAIN.parent / "experiments" / "output" / "e1_floor"
+BUNDLE_ROOT = MAIN.parent / "experiments" / "output" / "stage0_results"
 FLIP_DEX = 0.30  # Rb-ACT REPORT 但与 legacy 偏离 > 0.30 dex → 未解释翻转（需复核）
 
 BATCHES = [

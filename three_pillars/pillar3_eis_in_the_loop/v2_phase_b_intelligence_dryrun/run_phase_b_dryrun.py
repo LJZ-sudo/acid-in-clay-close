@@ -52,7 +52,7 @@ PROTECTED_FILES = [
 ]
 PROTECTED_DIRS = [
     "V1.0-qianduan-mainline/stage3_mechanism/outputs/verification",
-    "V1.0-qianduan-mainline/data",
+    "experiments/raw",
 ]
 
 

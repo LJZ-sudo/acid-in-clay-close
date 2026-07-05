@@ -31,7 +31,7 @@ import numpy as np
 HERE = Path(__file__).resolve()
 NDA = (next(_p for _p in HERE.parents if _p.name == "V1.0-qianduan-mainline").parent / "experiments")
 MAIN = NDA.parent / "V1.0-qianduan-mainline"
-RUNS = MAIN / "runs"
+RUNS = MAIN.parent / "experiments" / "runs"
 EVID = RUNS / "run_20260629_112156_9db536" / "evidence"
 for p in (str(MAIN), str(MAIN / "stage0_measurement"), str(MAIN / "stage1_optimization"), str(MAIN / "analysis")):
     if p not in sys.path:

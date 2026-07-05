@@ -44,7 +44,7 @@ def _build_action_gate(hw):
         return None
 
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
-_AGENT_STATE_DIR = _PROJECT_ROOT / "runs" / "_agent_state"
+_AGENT_STATE_DIR = _PROJECT_ROOT.parent / "experiments" / "runs" / "_agent_state"
 _DECISIONS_FILE = _AGENT_STATE_DIR / "decisions.jsonl"
 _CONFIG_FILE = _AGENT_STATE_DIR / "config.json"
 

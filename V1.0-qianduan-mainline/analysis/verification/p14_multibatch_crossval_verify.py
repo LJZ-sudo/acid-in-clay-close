@@ -35,7 +35,7 @@ import numpy as np
 HERE = Path(__file__).resolve()
 NDA = (next(_p for _p in HERE.parents if _p.name == "V1.0-qianduan-mainline").parent / "experiments")
 MAIN = NDA.parent / "V1.0-qianduan-mainline"
-S0 = MAIN / "output" / "stage0_results"
+S0 = MAIN.parent / "experiments" / "output" / "stage0_results"
 if str(MAIN / "analysis") not in sys.path:
     sys.path.insert(0, str(MAIN / "analysis"))
 

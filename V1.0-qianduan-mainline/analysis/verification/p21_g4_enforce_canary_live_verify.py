@@ -23,7 +23,7 @@ except Exception:
 
 HERE = Path(__file__).resolve()
 MAIN = next(_p for _p in HERE.parents if _p.name == "V1.0-qianduan-mainline")
-RUN = MAIN / "runs" / "run_20260702_144507_52a878"   # fe4b:G-4 enforce+canary 全温区长跑
+RUN = MAIN.parent / "experiments" / "runs" / "run_20260702_144507_52a878"   # fe4b:G-4 enforce+canary 全温区长跑
 
 PASS, FAIL = "PASS", "FAIL"
 results = []
