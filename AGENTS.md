@@ -52,7 +52,8 @@ acid-in-clay-close/
 │  ├─ ablation/                               # 基线/消融与 Line A 复算（原 m6_baseline_ablation）
 │  ├─ prospective/                            # 前瞻预注册（线 A / 线 B，含 line_B official_recipe.json）
 │  ├─ docs/                                   # PUBLICATION_READINESS / TIER_S 手稿 / 真机方案 等
-│  └─ lineA_*/ lineB_*/                       # 各批次实验数据（aggregated/arrhenius）
+│  ├─ data/                                   # lineA_*/lineB_* 各批次实验数据（aggregated/arrhenius）
+│  └─ results/                                # v2 分析产物（rb_invariance / repro_floor_v2 / epistemic_out 等）
 ├─ manuscript/                                # 手稿构建（draft + build 脚本）
 ├─ three_pillars/                             # 三创新点证据 + pillar3 执行引擎/门禁
 ├─ archive/                                   # 历史/实验性代码归档（保留可追溯，不在主路径）
