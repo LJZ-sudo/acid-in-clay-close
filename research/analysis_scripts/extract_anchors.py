@@ -6,7 +6,9 @@ in the exact schema needed for (a) Line A experimental_feedback records and
 import json
 from pathlib import Path
 
-OUT = next(_p for _p in Path(__file__).resolve().parents if _p.name == "research")
+RESEARCH = next(_p for _p in Path(__file__).resolve().parents if _p.name == "research")
+OUT = RESEARCH          # anchors.json 输出仍在 research 根
+DATA = RESEARCH / "data"  # 数据集目录
 ANCHORS_K = [299.15, 273.15, 253.15, 233.15, 213.15, 193.15]
 IDEAL_EA_LOW_LIMIT_EV = 0.089  # ea_low_excess = max(0, ea_low - this); matches campaign convention
 
@@ -26,7 +28,7 @@ def nearest(ms, targetK, tol=2.5):
 
 
 def summarize(label):
-    d = OUT / label
+    d = DATA / label
     agg = json.loads((d / "aggregated_results.json").read_text(encoding="utf-8"))
     arr = json.loads((d / "arrhenius_analysis.json").read_text(encoding="utf-8"))
     ms = [m for m in agg.get("measurements", []) if m.get("success")]

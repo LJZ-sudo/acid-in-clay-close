@@ -69,7 +69,7 @@ def _ea_high(ds_dir: Path) -> Optional[float]:
 def _collect(names: List[str]) -> Dict[str, Dict[str, Optional[float]]]:
     out = {}
     for n in names:
-        ds = V.NDA_ROOT / n
+        ds = V.DATA_ROOT / n
         agg = ds / "aggregated_results.json"
         if not agg.exists():
             continue

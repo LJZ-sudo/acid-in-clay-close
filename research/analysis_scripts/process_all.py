@@ -13,7 +13,8 @@ from pathlib import Path
 
 REPO = next(_p for _p in Path(__file__).resolve().parents if _p.name == "research").parent
 STAGE0 = REPO / "V1.0-qianduan-mainline" / "stage0_measurement"
-OUT = REPO / "research"
+RESEARCH = REPO / "research"
+OUT = RESEARCH / "data"   # 数据集输出目录（lineA_*/lineB_*）
 
 # (label, data_dir relative to repo, thickness_cm, chi_pattern, line)
 DATASETS = [
@@ -117,7 +118,7 @@ def main():
               f"ea_high={fmt(s['ea_high'])}eV ea_mid={fmt(s['ea_mid'])}eV "
               f"nseg={s['n_seg']} Tlow={s['T_low']}C")
     # write CSV
-    csv = OUT / "new_data_summary.csv"
+    csv = RESEARCH / "new_data_summary.csv"
     cols = ["line", "label", "thickness", "n_success", "n_kk_warn", "sigma_max",
             "T_at_max", "sigma_273", "sigma_253", "sigma_233", "T_low",
             "ea_high", "ea_mid", "n_seg"]

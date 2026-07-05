@@ -130,7 +130,7 @@ def confusion_matrix(T: np.ndarray, y: np.ndarray, n_draws: int = 300,
 
 
 def assess_dataset(name: str, n_draws: int = 300) -> Dict[str, Any]:
-    agg = V.NDA_ROOT / name / "aggregated_results.json"
+    agg = V.DATA_ROOT / name / "aggregated_results.json"
     T, y = _load_T_lnsigma(agg)
     cm = confusion_matrix(T, y, n_draws=n_draws)
     # 实践可辨识性结论
@@ -160,7 +160,7 @@ def run(datasets: Optional[List[str]] = None, n_draws: int = 300,
     names = datasets or KEY_DATASETS
     rows = []
     for name in names:
-        if not (V.NDA_ROOT / name / "aggregated_results.json").exists():
+        if not (V.DATA_ROOT / name / "aggregated_results.json").exists():
             continue
         res = assess_dataset(name, n_draws=n_draws)
         (out_dir / f"{name}_identifiability_v2.json").write_text(

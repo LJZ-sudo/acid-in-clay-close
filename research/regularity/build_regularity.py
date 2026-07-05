@@ -92,7 +92,7 @@ def near_sigma(ms, targetK, tol=2.0):
 
 
 def extract(label):
-    folder = NDA / label
+        folder = NDA / "data" / label
     agg = folder / "aggregated_results.json"
     arr = folder / "arrhenius_analysis.json"
     r = {"n_pts": 0, "T_hi_C": None, "T_lo_C": None, "sigma_max": None, "T_at_max_C": None,

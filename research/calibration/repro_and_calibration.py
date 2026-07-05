@@ -2,7 +2,7 @@
 """P0 — Reproducibility + measurement-confidence calibration (v0), all REAL data.
 
 Reads the already-processed, canonical stage0 offline outputs in
-``research/<dataset>/aggregated_results.json`` (per-point real
+``research/data/<dataset>/aggregated_results.json`` (per-point real
 features: kk_score, kk_mu_max, rb_ohm, rb_method, conductivity, T) and the
 matching ``arrhenius_analysis.json`` (segment Ea). It does NOT re-parse raw
 spectra and NEVER fabricates numbers; if a quantity is not computable it is
@@ -60,7 +60,7 @@ JUMP_SPAN_DEX = 0.3            # residual span over which v1 penalty ramps 0 -> 
 
 
 def _load(name: str, fname: str) -> dict:
-    p = NDA / name / fname
+    p = NDA / "data" / name / fname
     if not p.exists():
         return {}
     return json.loads(p.read_text(encoding="utf-8"))

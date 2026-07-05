@@ -91,7 +91,7 @@ def names_in(group: str, jun_batch_only: bool = False) -> list[str]:
             continue
         if jun_batch_only and not doc:
             continue
-        if (NDA / n / "aggregated_results.json").exists():
+        if (NDA / "data" / n / "aggregated_results.json").exists():
             out.append(n)
     return out
 

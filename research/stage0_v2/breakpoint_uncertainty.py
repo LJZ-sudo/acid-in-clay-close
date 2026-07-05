@@ -156,7 +156,7 @@ def run(datasets: Optional[List[str]] = None, n_boot: int = 200,
     names = datasets or KEY_DATASETS
     rows = []
     for name in names:
-        ds = V.NDA_ROOT / name
+        ds = V.DATA_ROOT / name
         agg = ds / "aggregated_results.json"
         if not agg.exists():
             continue

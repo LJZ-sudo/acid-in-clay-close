@@ -135,7 +135,7 @@ def injected_break_power(x: np.ndarray, y: np.ndarray, n_draws: int, seed: int,
 
 
 def assess_dataset(name: str, n_draws: int, seed: int) -> Dict[str, Any]:
-    agg = V.NDA_ROOT / name / "aggregated_results.json"
+    agg = V.DATA_ROOT / name / "aggregated_results.json"
     x, y = _xy_from_aggregated(agg)
     null = smooth_null_fpr(x, y, n_draws=n_draws, seed=seed)
     inj = injected_break_power(x, y, n_draws=n_draws, seed=seed + 1)
@@ -174,7 +174,7 @@ def run(datasets: Optional[List[str]] = None, n_draws: int = 100, seed: int = 20
     names = datasets or KEY_DATASETS
     rows = []
     for name in names:
-        if not (V.NDA_ROOT / name / "aggregated_results.json").exists():
+        if not (V.DATA_ROOT / name / "aggregated_results.json").exists():
             continue
         res = assess_dataset(name, n_draws=n_draws, seed=seed)
         (out_dir / f"{name}_synthetic_v2.json").write_text(

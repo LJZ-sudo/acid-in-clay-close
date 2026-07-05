@@ -12,6 +12,7 @@ from pathlib import Path
 
 REPO = next(_p for _p in Path(__file__).resolve().parents if _p.name == "research").parent
 OUT = REPO / "research"
+DATA = OUT / "data"
 FEEDBACK = REPO / "V1.0-qianduan-mainline/stage3_mechanism/data/validation/experimental_feedback.json"
 HISTORY = REPO / "V1.0-qianduan-mainline/stage1_optimization/campaign_memory/history_db_attapulgite.json"
 
@@ -19,7 +20,7 @@ anchors = json.loads((OUT / "anchors.json").read_text(encoding="utf-8"))
 
 
 def arr_ea_high(label):
-    a = json.loads((OUT / label / "arrhenius_analysis.json").read_text(encoding="utf-8"))
+    a = json.loads((DATA / label / "arrhenius_analysis.json").read_text(encoding="utf-8"))
     return a["segments"][0]["Ea_eV"]
 
 
