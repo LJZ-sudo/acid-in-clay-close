@@ -6,7 +6,7 @@
 
 `stage1_optimization` 是 attapulgite AiCE 真机闭环的配方优化与下一步实验规划层。它读取 Stage0 结果目录，提取宽温域 EIS / Arrhenius 指标，写入 campaign memory，再由贝叶斯优化器给出数学建议，并由 LLM 策略规划器结合物理约束生成下一轮 recipe。
 
-**当前主线（且唯一）campaign** 是 `attapulgite_aice_campaign`，使用真实 Stage0/Stage1 history：`campaign_memory/history_db_attapulgite.json`。S8/sepiolite 母系统证据已于 2026-06-07 迁出本目录，归档到 `three_pillars/pillar1_transfer_agent/s8_acid_in_clay_mother_system/`，作为 Pillar 1 transfer agent 的母证据使用，**不再进入 Stage1 任何代码路径**。
+**当前主线（且唯一）campaign** 是 `attapulgite_aice_campaign`，使用真实 Stage0/Stage1 history：`campaign_memory/history_db_attapulgite.json`。S8/sepiolite 母系统证据已于 2026-06-07 迁出本目录，归档到 `experiments/three_pillars/pillar1_transfer_agent/s8_acid_in_clay_mother_system/`，作为 Pillar 1 transfer agent 的母证据使用，**不再进入 Stage1 任何代码路径**。
 
 ## 2. 当前真实目录结构
 
@@ -57,7 +57,7 @@ stage1_optimization/
         └── closed_loop_rounds/
 ```
 
-旧文档中提到的 `README.md`、`PROJECT_SUMMARY.md`、`example_usage.py` 不存在，不再作为事实源。`s8_sepiolite_campaign.json`、`history_db.json`、`campaign_memory/{archive,backups}/`、`output/archive/20260518_legacy_s8_root_output/` 已于 2026-06-07 移除/迁出，请参考 `three_pillars/pillar1_transfer_agent/s8_acid_in_clay_mother_system/`。
+旧文档中提到的 `README.md`、`PROJECT_SUMMARY.md`、`example_usage.py` 不存在，不再作为事实源。`s8_sepiolite_campaign.json`、`history_db.json`、`campaign_memory/{archive,backups}/`、`output/archive/20260518_legacy_s8_root_output/` 已于 2026-06-07 移除/迁出，请参考 `experiments/three_pillars/pillar1_transfer_agent/s8_acid_in_clay_mother_system/`。
 
 ## 3. 当前执行链
 
@@ -85,7 +85,7 @@ campaign JSON
 历史 reference（不再属于 Stage1）：
 
 - S8 sepiolite 母系统的 campaign config + 20 trial history 已迁出本目录，归档至
-  `three_pillars/pillar1_transfer_agent/s8_acid_in_clay_mother_system/`。
+  `experiments/three_pillars/pillar1_transfer_agent/s8_acid_in_clay_mother_system/`。
 - 当前 Stage1 代码路径中**没有任何 .py 文件读取 S8 history**；`attapulgite_aice_campaign.json` 的
   `transfer_reference` 字段是 declarative marker，仅供 Pillar 1 写作/论证引用。
 

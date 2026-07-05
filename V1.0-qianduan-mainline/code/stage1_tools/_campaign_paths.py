@@ -13,6 +13,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 STAGE1_DIR = PROJECT_ROOT / "stage1_optimization"
 DEFAULT_REPLAY_CAMPAIGN = (
     PROJECT_ROOT.parent
+    / "experiments"
     / "three_pillars"
     / "pillar1_transfer_agent"
     / "s8_acid_in_clay_mother_system"

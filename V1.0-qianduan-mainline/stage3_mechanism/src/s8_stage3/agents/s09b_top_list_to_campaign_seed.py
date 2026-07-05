@@ -55,7 +55,7 @@ logger = logging.getLogger(__name__)
 
 # Default AiCE parameter space (originally mirrored the S8 sepiolite campaign
 # space; that campaign config has since been migrated to
-# three_pillars/pillar1_transfer_agent/s8_acid_in_clay_mother_system/
+# experiments/three_pillars/pillar1_transfer_agent/s8_acid_in_clay_mother_system/
 # s8_sepiolite_campaign_config.json). We reuse it as the baseline shape; the
 # domain_knowledge string and material_system are rewritten per-candidate.
 _DEFAULT_PARAMETERS: dict[str, dict[str, Any]] = {

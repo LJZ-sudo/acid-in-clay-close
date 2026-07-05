@@ -41,7 +41,7 @@ import matplotlib.pyplot as plt
 
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parent.parent
-P2 = REPO / "three_pillars" / "pillar2_descriptor_qc"
+P2 = REPO / "experiments" / "three_pillars" / "pillar2_descriptor_qc"
 WIDE = P2 / "figure_data" / "wide_temperature_performance_summary.csv"
 RBQC = P2 / "eis_qc_v2" / "selected_rb_qc_v2.csv"
 RAW = REPO / "experiments" / "raw" / "新材料"

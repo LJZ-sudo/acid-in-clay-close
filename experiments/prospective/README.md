@@ -54,5 +54,5 @@ git push origin <branch>
   **不要**混用旧的重建锚 `data/validation/timing_reference_registry.json`（那是另一次旧 run，给 4–5 月旧实验用的）。
 
 - **线 B 锚点**：复用已锁定的 v2 round 协议
-  `three_pillars/pillar3_eis_in_the_loop/bo_v2_locked/`（objective spec + R1–R4 locked recipes + execution-engine 硬门禁）。
+  `experiments/three_pillars/pillar3_eis_in_the_loop/bo_v2_locked/`（objective spec + R1–R4 locked recipes + execution-engine 硬门禁）。
   线 B 在执行前还需完成两处代码改造（见线 B 文件 §4），否则只是"单目标 BO + reviewer guardrail"，达不到"真实 MOBO+LLM 闭环"。

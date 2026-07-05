@@ -7,7 +7,7 @@ future ``attapulgite_aice_v2_locked`` campaign can pursue a Pareto front instead
 of the historical scalar ``combined_score``.
 
 It implements the objective contract locked in
-``three_pillars/pillar3_eis_in_the_loop/bo_v2_objective_spec_20260527.md``:
+``experiments/three_pillars/pillar3_eis_in_the_loop/bo_v2_objective_spec_20260527.md``:
 
   * ``sigma_RT``       maximize  (near-room-temperature proton conductivity)
   * ``Ea_high``        minimize  (high-segment apparent activation energy, eV)
@@ -371,7 +371,7 @@ class MOBOOptimizer(BaseOptimizer):
             "random_state": self.random_state,
             "cold_start_threshold": self.threshold,
             "objectives": [{"key": o.key, "direction": o.direction} for o in self.objectives],
-            "objective_spec_ref": "three_pillars/pillar3_eis_in_the_loop/bo_v2_objective_spec_20260527.md",
+            "objective_spec_ref": "experiments/three_pillars/pillar3_eis_in_the_loop/bo_v2_objective_spec_20260527.md",
             **self._last_info,
         }
         return prov

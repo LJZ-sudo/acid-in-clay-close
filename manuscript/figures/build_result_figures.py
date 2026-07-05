@@ -7,9 +7,9 @@
                        panel B: (R,N) exploration + frozen MOBO+LLM recipes
 
 Data sources (all real, in-repo):
-  three_pillars/pillar2_descriptor_qc/eis_qc_v2/selected_rb_qc_v2.csv
-  three_pillars/pillar2_descriptor_qc/figure_data/wide_temperature_performance_summary.csv
-  three_pillars/pillar2_descriptor_qc/figure_data/ea_benchmark_table.csv
+  experiments/three_pillars/pillar2_descriptor_qc/eis_qc_v2/selected_rb_qc_v2.csv
+  experiments/three_pillars/pillar2_descriptor_qc/figure_data/wide_temperature_performance_summary.csv
+  experiments/three_pillars/pillar2_descriptor_qc/figure_data/ea_benchmark_table.csv
   V1.0-qianduan-mainline/stage1_optimization/output/attapulgite_aice/closed_loop_metrics.json
 """
 from __future__ import annotations
@@ -25,7 +25,7 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parent.parent.parent
 OUT = Path(__file__).resolve().parent
-QC = ROOT / "three_pillars" / "pillar2_descriptor_qc"
+QC = ROOT / "experiments" / "three_pillars" / "pillar2_descriptor_qc"
 SEL = QC / "eis_qc_v2" / "selected_rb_qc_v2.csv"
 WIDE = QC / "figure_data" / "wide_temperature_performance_summary.csv"
 EABENCH = QC / "figure_data" / "ea_benchmark_table.csv"

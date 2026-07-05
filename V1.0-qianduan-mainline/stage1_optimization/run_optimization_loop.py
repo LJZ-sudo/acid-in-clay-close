@@ -35,7 +35,7 @@ from optimizers.mobo_optimizer import MOBOOptimizer, locked_v2_objectives
 
 # v2 capability: keys as actually persisted in the attapulgite history DB
 # (Stage0 metric names), mapped onto the locked v2 objective contract
-# (three_pillars/pillar3_eis_in_the_loop/bo_v2_objective_spec_20260527.md).
+# (experiments/three_pillars/pillar3_eis_in_the_loop/bo_v2_objective_spec_20260527.md).
 MOBO_HISTORY_OBJECTIVE_KEYS = {
     "sigma_key": "conductivity_room_temp_S_cm",  # sigma_RT, maximize
     "ea_high_key": "ea_high_temp_eV",            # Ea_high, minimize

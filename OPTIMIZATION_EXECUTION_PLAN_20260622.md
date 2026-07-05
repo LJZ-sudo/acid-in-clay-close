@@ -1,11 +1,11 @@
 # 优化执行计划（EXECUTION PLAN，现状快照：2026-07-05）
 
-> 这是一份**可执行、可勾选、可验收**的执行计划。判档/就绪度见 `_new_data_analysis/PUBLICATION_READINESS.md`;架构与真实 `file::function` 见 `SYSTEM_ARCHITECTURE_CODE_GROUNDED_20260622.md`;现状家底见 `PROJECT_SITUATION_REPORT_20260622.md`。
+> 这是一份**可执行、可勾选、可验收**的执行计划。判档/就绪度见 `experiments/docs/PUBLICATION_READINESS.md`;架构与真实 `file::function` 见 `SYSTEM_ARCHITECTURE_CODE_GROUNDED_20260622.md`;现状家底见 `PROJECT_SITUATION_REPORT_20260622.md`。
 > 本版为**重写版**:合并了此前所有分日期(WP0–WP5 / ESAS-OS 2.0 / Epistemic-OS / P13-A~F / G-系列 / H 系列旧材料硬化)的进展层,只保留截至 2026-07-05 的真实状态——**已完成什么、还差什么**。历史 run 用 run-id 标识。
 
 > **双轨铁律(贯穿全程)**:
 > ① **A 轨(材料/EIS/治理)与 B 轨(Agent 方法学)都必须做、并行推进**——不是二选一。A 占实验台,B 主要纯代码,天然并行。
-> ② 改任何影响主张的参数/阈值前,先 `git commit + push` 盖时间戳(`prospective_2026H2` 纪律)。
+> ② 改任何影响主张的参数/阈值前,先 `git commit + push` 盖时间戳(`experiments/prospective` 纪律)。
 > ③ **绝不覆盖已发表/冻结产物**——一律产 `*_v2` 并行版 + `delta_report`;阈值/策略先写进 `configs/*` 冻结再跑全量。
 > ④ 除 **G-1 与后续凹凸棒土闭环**外不新增湿实验;故障评测一律用空载/参考电路/dummy/软件注入,**不在贵重样品上做破坏性物理注入**。
 > ⑤ **不用"软件 Demo/测试通过"预支 Tier-S 档次**——档次由真机证据决定。
@@ -77,7 +77,7 @@
 
 ### 4.1 A 轨分析门 + B 轨软件底座
 
-- **M0–M2 分析门**(纯代码,`_new_data_analysis/stage0_v2/`):冻结/版本化 + Rb 方法不变性 + 合成 FPR + 稳健 Arrhenius + 证据准入 + 断点 CI + 评分注册表(G7)+ 可辨识性 + 复现地板层级方差 + 噪声感知 MOBO + LLM vs 5 基线 + PromptEnvelope。
+- **M0–M2 分析门**(纯代码,`V1.0-qianduan-mainline/analysis/stage0_v2/`):冻结/版本化 + Rb 方法不变性 + 合成 FPR + 稳健 Arrhenius + 证据准入 + 断点 CI + 评分注册表(G7)+ 可辨识性 + 复现地板层级方差 + 噪声感知 MOBO + LLM vs 5 基线 + PromptEnvelope。
 - **A 轨 G1 主门**:线 B 同配方 3 片独立重复 → `LINE_B_LOCAL_DIRECT`(WARM median 0.106/p90 0.146 dex、COLD median 0.158/**p90 0.356 dex**);去 Fig3 生物聚合物代理 caveat。**诚实边界**:n=3 回溯离线数据、冷段比代理松。
 - **B 轨 WP0–WP5**:WP0 语义/审计(ObjectiveRegistry/DatasetRegistry 13/15/术语别名/LLMCallBundle/硬件写路径审计)· WP1 SciTX(`EvidenceTransaction` + C_M(U1–U6)/C_E/多见证 C_P + `--harness_mode`)· WP2 PC-Skills(6 EIS Skill + 三层证书 + drift/revocation + 双账户)· WP3 E-Mem(快照写门/根去重/失效→BO 重建→**GP 重训**/压缩证书)· WP4 Cutover(`ActionGate` 唯一入口 → `autonomous_bypass=0`)· WP5 评测(端到端撤销演示 governed 严格优于 ungoverned + B0/B2/B4/B5 真实臂 + RO-Crate)。
 - **ESAS-OS 2.0 四插件**:P0 测量事务化(`measurement_txn`)· P1 Rb-ACT(`rb_act`)· P2 R²-Memory(`agent_memory`,forbidden-use 拦截 100%)· P3 C³-Harness(`scientific_convergence`,C³ 停⊆legacy 停)。**默认 shadow/旁挂,legacy 永不覆盖**。
@@ -194,7 +194,7 @@
 1. **冻结**:阈值/策略先写进 `configs/*.yaml` 并 commit+push 盖戳,再跑全量。
 2. **并行**:v2 产物一律 `*_v2` 命名,**legacy 产物只读、永不覆盖**。
 3. **delta**:每次 v2 运行产 `delta_report`(逐条对比 legacy:Rb/σ/断点/最优 trial/收敛判定有无翻转、翻转是否被解释)。
-4. **预注册**:任何会改主张的接入(尤其 Rb-ACT ≥R3/R4)前,先在 `prospective_2026H2` 写明允许/禁止声称再开跑。
+4. **预注册**:任何会改主张的接入(尤其 Rb-ACT ≥R3/R4)前,先在 `experiments/prospective` 写明允许/禁止声称再开跑。
 5. **可回滚**:缺 `objective_definition_id`/版本字段时按 legacy 回填并记 `backfilled=true`。
 
 ---

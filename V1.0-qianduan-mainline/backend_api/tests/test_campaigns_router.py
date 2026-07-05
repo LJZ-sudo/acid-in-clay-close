@@ -3,7 +3,7 @@
 
 Runs against the real on-disk Stage1 data — no mocking. As of 2026-06-07 the
 S8 sepiolite mother-system campaign has been archived to
-three_pillars/pillar1_transfer_agent/s8_acid_in_clay_mother_system/, so the
+experiments/three_pillars/pillar1_transfer_agent/s8_acid_in_clay_mother_system/, so the
 only campaign shipped under stage1_optimization/campaigns/ is
 `attapulgite_aice_campaign`.
 """

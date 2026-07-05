@@ -9,7 +9,7 @@
 
 ```text
 [人/实验员/领域专家]
-  - 前瞻纪律:改任何主张相关参数前先 git commit+push 盖时间戳(prospective_2026H2)
+  - 前瞻纪律:改任何主张相关参数前先 git commit+push 盖时间戳(experiments/prospective)
   - 选 campaign(凹凸棒土 attapulgite)+ R/N 配方;或离线复算历史数据
   - 真机:在 /control 连硬件(COM3 TemperatureDriver + ChiExecutor)启动测量
       |-- (真机在线) --> Stage0       |-- (离线/复算) --> Stage0
@@ -75,11 +75,11 @@
   Socket.IO: _emit_event;通道 temperature_update/measurement_complete/phase_transition/...
   前端: React+Vite+AntD;Monitor 有只读「治理」Tab(实时 + 历史回放)
 
-[6] 三创新点 v2 守卫引擎(独立 CLI, HOLD 偏置)  (three_pillars/.../v2_engine_tools/)
+[6] 三创新点 v2 守卫引擎(独立 CLI, HOLD 偏置)  (experiments/three_pillars/.../v2_engine_tools/)
   run_all_checks(HOLD 偏置:硬编码 v2_claims_status="HOLD", enables_chi_automation=False)
 ```
 
-## B 轨 Agent 方法学创新 + ESAS-OS 2.0 + Epistemic-OS（stage1_optimization/scientific_*/ + stage0_measurement/rb_act/ + _new_data_analysis/epistemic/）
+## B 轨 Agent 方法学创新 + ESAS-OS 2.0 + Epistemic-OS（stage1_optimization/scientific_*/ + stage0_measurement/rb_act/ + V1.0-qianduan-mainline/analysis/epistemic/）
 
 > 与冻结闭环互补;默认 shadow/旁挂、legacy 永不覆盖。软件层已成体系,真机治理路径已验证(G-2/G-4);H 系列(H1–H4)把 C³ 主循环消费/在线仪器见证/canary 多驱动/R4 激活模式软件实现并离线真验,数值链替换须人审(G-5)。
 
@@ -124,7 +124,7 @@
    **现状(H1 已消费)**:`termination_evaluator._c3_consume` 单调安全消费(c3_stop⊆legacy_stop,
      只推迟非硬停、永不更早停、budget 硬停不可推迟);`evaluate_termination` 出 `verdict_effective`/`c3`;
      live `_finalize_c3` 落 `c3_evidence.json` 供 Stage1 聚合自动消费;`pH1` 11/11 真 replay
-== Epistemic-OS 认知层  _new_data_analysis/epistemic/(均已接 live 收尾)==
+== Epistemic-OS 认知层  V1.0-qianduan-mainline/analysis/epistemic/(均已接 live 收尾)==
 -- 认知证书三对象(σ(T) 层,4 经验温度律高斯预测)
    epistemic_models: arrhenius/mott/vtf/segmented(log-σ vs 1/T + Fisher Jacobian)
    Scheme1 可观测性证书: FIM λ_min + 机制等价类(sup_a D_JS + UnionFind)
@@ -208,7 +208,7 @@
 | live 回路 BO | 收尾一次性 post-sweep(非逐点内层);`entered_bo`=准入标记 |
 | 离线 create_phase_detector() | DEPRECATED,恒返回 False |
 
-> 溯源:本文件由对 `stage0_measurement/`、`stage1_optimization/`、`stage3_mechanism/`、`stage2_statistics/`、`backend_api/`、`frontend/`、`three_pillars/`、`_new_data_analysis/epistemic/` 真实源码逐文件读取得到。
+> 溯源:本文件由对 `stage0_measurement/`、`stage1_optimization/`、`stage3_mechanism/`、`stage2_statistics/`、`backend_api/`、`frontend/`、`experiments/three_pillars/`、`V1.0-qianduan-mainline/analysis/epistemic/` 真实源码逐文件读取得到。
 
 ---
 

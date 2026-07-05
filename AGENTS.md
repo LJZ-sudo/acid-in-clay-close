@@ -32,7 +32,7 @@
 | `experiments/prospective/README.md` | 前瞻实验纪律（“冻结 → push 盖时间戳 → 才开始测量”） |
 | `experiments/prospective/line_A_biopolymer_transfer/PREREGISTRATION.md` | 线 A（生物聚合物迁移）预注册 |
 | `experiments/prospective/line_B_mobo_closed_loop/PREREGISTRATION.md` | 线 B（真实 MOBO+LLM 闭环）预注册 + 官方 recipe |
-| `three_pillars/` | 三创新点的固化证据与执行引擎 |
+| `experiments/three_pillars/` | 三创新点的固化证据与执行引擎（2026-07-05 自顶层迁入 experiments/） |
 
 > ⚠️ **聊天记录不跨机器**：过去与 Cursor/Agent 的对话存在本机 `~/.cursor/.../agent-transcripts/`，**不随 git 迁移**，也不入库（已 gitignore）。换机器后那段历史不在新机器上——靠本文件 + 上述文档承接上下文。
 
@@ -54,9 +54,9 @@ acid-in-clay-close/
 │  ├─ docs/                                   # PUBLICATION_READINESS / TIER_S 手稿 / 真机方案 等
 │  ├─ prospective/                            # 前瞻预注册（线 A / 线 B，含 line_B official_recipe.json）
 │  ├─ live/                                   # hw0..hw3 / watch_* 真机联调探针脚本（含串口写，刻意留在主线审计面之外）
+│  ├─ three_pillars/                          # 三创新点固化证据 + pillar3 执行引擎/门禁（2026-07-05 自顶层迁入；hash 锁定，只读）
 │  └─ scientific_harness|memory|skills/       # 三 Demo 的输出产物
 ├─ manuscript/                                # 手稿构建（draft + build 脚本）
-├─ three_pillars/                             # 三创新点证据 + pillar3 执行引擎/门禁
 ├─ archive/                                   # 历史/实验性代码归档（保留可追溯，不在主路径）
 └─ V1.0-qianduan-mainline/                     # ★ 主线（唯一代码 home，顶层已无任何数据目录）
    ├─ backend_api/        # FastAPI 后端（端口 8000），routers/* 为只读看板 + 控制

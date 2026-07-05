@@ -1,7 +1,7 @@
 # 项目真实情况报告（现状快照：2026-07-05）
 
 > **真实性声明**:本报告所有论断均由三类证据支撑——(a) 逐文件读取真实源码、(b) 对真实 stage0/stage1/live-run 产物 JSON 重算、(c) 真实 LLM/盲评消融。凡冻结/存根/只读/代理/缺口处均显式标注,不取自总结文档的自述,不美化、不藏负结果。
-> 配套文档:`SYSTEM_ARCHITECTURE_CODE_GROUNDED_20260622.md`(代码级执行追踪 + `file::function`)、`OPTIMIZATION_EXECUTION_PLAN_20260622.md`(可勾选执行计划)、`_new_data_analysis/PUBLICATION_READINESS.md`(发表就绪度)。
+> 配套文档:`SYSTEM_ARCHITECTURE_CODE_GROUNDED_20260622.md`(代码级执行追踪 + `file::function`)、`OPTIMIZATION_EXECUTION_PLAN_20260622.md`(可勾选执行计划)、`experiments/docs/PUBLICATION_READINESS.md`(发表就绪度)。
 > 本版为**重写版**:合并了此前所有分日期的进展层,只保留截至 2026-07-05 的真实结论。历史 run 用 run-id 作标识(非文档版本日期)。
 
 ---
@@ -104,7 +104,7 @@ A、B 双轨都必须做、并行推进:A 的瓶颈是实验台时间,B 主要�
 | B 轨三包(`scientific_harness`/`memory`/`skills`) | 真实可运行;跨层失效闭环互联 + 端到端撤销演示;自主命令旁路 `autonomous_bypass=0` |
 | ESAS-OS 2.0 四插件(`measurement_txn`/`rb_act`/`agent_memory`/`scientific_convergence`) | 真实可运行;**测量事务化/Rb-ACT/R²-Memory 已接 live 回路**;**C³-Harness 已从"只写盘"升级为"主循环消费"(H1:`termination_evaluator` 单调安全消费 `c3_evidence.json`,只推迟非硬停)**;legacy 永不覆盖 |
 | 在线仪器见证(`scientific_harness/instrument_witness.py`,H2) | 真实可运行;每点用真实 CHI 文件 sha256 + 温控稳定 + 仪器态经真实 `EvidenceTransaction` 推 C_P;支持协议级故障注入(ACK/仪器卡住/文件/条码/校准);已离线真验(`pH2` 17/17),接 live 逐点,live 终验待旧材料 run |
-| Epistemic-OS(`_new_data_analysis/epistemic/`) | 真实可运行;认知证书(σ 层)/阻抗正问题(谱级)/证伪市场(多角色 LLM)**均已接 live 收尾**;active_design 逐点注入 prompt(advisory)+ canary **±2 step 多驱动**(H3) |
+| Epistemic-OS(`V1.0-qianduan-mainline/analysis/epistemic/`) | 真实可运行;认知证书(σ 层)/阻抗正问题(谱级)/证伪市场(多角色 LLM)**均已接 live 收尾**;active_design 逐点注入 prompt(advisory)+ canary **±2 step 多驱动**(H3) |
 | 逐点 LLM agent(`phase_detect`) | 真实调用(n≥5 起,数据积累期 n<5 走规则);**numpy 序列化 bug 已修并复验** |
 | Rb-ACT 数值链 | R0–R3 真接、R4 预注册审计通过 + **R4 激活模式已实现(H4,三条件人审门+σ_v2+delta)**;未签核时 **legacy `rb_fitting.py` 仍是 σ/BO 主计算路径**(R4 恒回退 legacy) |
 | live 回路 BO | 收尾**一次性 post-sweep BO**(非逐点内层);`entered_bo`=准入标记 |
@@ -151,7 +151,7 @@ python stage1_optimization/line_b_guardrail_run.py        # FROZEN_SEED=20260608
 # B 轨端到端撤销演示 / 硬件写路径审计
 python -m scientific_e2e.demo_end_to_end
 python scripts/audit_hardware_write_paths.py --strict
-# 创新点 live/离线验证脚本(真实数据/真 LLM)见 _new_data_analysis/p*.py
+# 创新点 live/离线验证脚本(真实数据/真 LLM)见 V1.0-qianduan-mainline/analysis/verification/p*.py
 ```
 - 密钥:各 stage `.env` 填 `LLM_API_KEY`(OpenRouter);`key.txt` 第一行供分析脚本/出图。
 - 机器相关项走环境变量(`STAGE0_CHI_DATA_DIR` 等),代码用 `Path(__file__)` 相对解析、可移植。
@@ -160,7 +160,7 @@ python scripts/audit_hardware_write_paths.py --strict
 
 ## 11. 诚信纪律（项目灵魂）
 
-- **前瞻**:改主张相关参数前先 git commit+push 盖时间戳(`prospective_2026H2`);线 B 官方 recipe 已冻结(freeze_commit `c185379`,2026-06-08,raw R0.0285→LLM R0.28,safety passed)。
+- **前瞻**:改主张相关参数前先 git commit+push 盖时间戳(`experiments/prospective`);线 B 官方 recipe 已冻结(freeze_commit `c185379`,2026-06-08,raw R0.0285→LLM R0.28,safety passed)。
 - **主张阶梯**:C0–C5,EIS-only **硬封顶 C4**;11 条绝对化措辞正则护栏。
 - **闭环留痕**:每轮三件套 SHA256 链;LLM 只存 prompt 指纹。
 - **分层**:`replay ≠ real`、每体系独立 history、S8 母体系不混入 BO、v2 声明恒 HOLD、legacy 永不覆盖。

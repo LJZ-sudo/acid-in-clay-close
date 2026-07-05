@@ -48,8 +48,8 @@
 - **工具**：**Origin**（半对数 σ vs T，三条曲线 + 标记冷却转变区）。当前 `Fig3_sigma_T.png` 是 matplotlib 占位，
   投稿请用 Origin 重画。
 - **数据**：
-  - 主：`three_pillars/pillar2_descriptor_qc/eis_qc_v2/selected_rb_qc_v2.csv`（列 `sample_id, temperature_C, selected_conductivity_s_cm`）
-  - 摘要：`three_pillars/pillar2_descriptor_qc/figure_data/wide_temperature_performance_summary.csv`
+  - 主：`experiments/three_pillars/pillar2_descriptor_qc/eis_qc_v2/selected_rb_qc_v2.csv`（列 `sample_id, temperature_C, selected_conductivity_s_cm`）
+  - 摘要：`experiments/three_pillars/pillar2_descriptor_qc/figure_data/wide_temperature_performance_summary.csv`
   - 代表样：LRS=`2026.5.9CS`，CHITO=`2026.4.30CS`，淀粉=`2026.4.27CS`
 - **现在可画**：✅。**线 A 回来**：加薄膜重复样曲线/误差棒（升级，不重画）。
 
@@ -59,7 +59,7 @@
 - **工具**：**Origin**（面板 A：ln(σT) vs 1000/T，分段拟合 + 各样 Eₐ_high 注释；面板 B：Eₐ 条形对标）。
 - **数据**：
   - 面板 A：同 Fig 3 的 `selected_rb_qc_v2.csv` / `wide_temperature_performance_summary.csv`
-  - 面板 B：`three_pillars/pillar2_descriptor_qc/figure_data/ea_benchmark_table.csv`
+  - 面板 B：`experiments/three_pillars/pillar2_descriptor_qc/figure_data/ea_benchmark_table.csv`
 - **现在可画**：✅。注意 CHITO 高温段无稳定 Arrhenius 区（Eₐ 标 N/A，勿强行拟合）。
 
 ### Fig 5 · 闭环 (R,N) 轨迹 + Pareto（数据，**现在骨架/等线 B 补全**，Origin）

@@ -14,7 +14,7 @@ History of related artifacts:
 - The retired S8/sepiolite mother-system history (the previous `history_db.json` /
   20 retrospective trials) and its campaign config have been migrated out of
   `stage1_optimization/` and archived under
-  `three_pillars/pillar1_transfer_agent/s8_acid_in_clay_mother_system/` on
+  `experiments/three_pillars/pillar1_transfer_agent/s8_acid_in_clay_mother_system/` on
   2026-06-07. They are now Pillar 1 transfer-agent evidence, not Stage1 BO
   training data, and must not be mixed back into the attapulgite history.
 - Older `archive/20260518_legacy_backups/` and `backups/` subdirectories (which

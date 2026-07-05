@@ -5,7 +5,7 @@ Optimizers Module
 - ``BayesianOptimizer``: 冻结主线使用的单目标 GP+EI 优化器。
 - ``MOBOOptimizer`` 与 Pareto 工具（Tier 3 / v2 能力）: 多目标 ParEGO 优化器，
   独立于冻结闭环，按
-  ``three_pillars/pillar3_eis_in_the_loop/bo_v2_objective_spec_20260527.md``
+  ``experiments/three_pillars/pillar3_eis_in_the_loop/bo_v2_objective_spec_20260527.md``
   定义目标。
 """
 from .bayesian_opt import BayesianOptimizer
