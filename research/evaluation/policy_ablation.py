@@ -37,7 +37,7 @@ from safety.safety_validator import SafetyValidator  # noqa: E402
 
 CAMPAIGN = STAGE1 / "campaigns" / "attapulgite_aice_campaign.json"
 HISTORY_DB = STAGE1 / "campaign_memory" / "history_db_attapulgite.json"
-OFFICIAL_RECIPE = REPO_ROOT / "prospective_2026H2" / "line_B_mobo_closed_loop" / "official_recipe.json"
+OFFICIAL_RECIPE = REPO_ROOT / "research" / "prospective" / "line_B_mobo_closed_loop" / "official_recipe.json"
 
 
 def _observed_r_range() -> Tuple[float, float]:

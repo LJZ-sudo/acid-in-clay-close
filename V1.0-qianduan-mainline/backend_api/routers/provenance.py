@@ -32,7 +32,7 @@ _TIMING_REGISTRY = (
 )
 _LINE_B_RECIPE = (
     _REPO_ROOT
-    / "prospective_2026H2" / "line_B_mobo_closed_loop" / "official_recipe.json"
+    / "research" / "prospective" / "line_B_mobo_closed_loop" / "official_recipe.json"
 )
 
 

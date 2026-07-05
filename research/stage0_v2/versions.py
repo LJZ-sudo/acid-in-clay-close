@@ -154,7 +154,7 @@ def write_delta_report(
 # 这些是"已发表/冻结"产物,v2 绝不覆盖;清单用于事后核验它们未被改动。
 DEFAULT_LEGACY_PRODUCTS = [
     "V1.0-qianduan-mainline/stage1_optimization/campaign_memory/history_db_attapulgite.json",
-    "prospective_2026H2/line_B_mobo_closed_loop/official_recipe.json",
+    "research/prospective/line_B_mobo_closed_loop/official_recipe.json",
 ]
 
 

@@ -144,7 +144,7 @@ def main() -> None:
     print("=" * 78)
 
     # -- write round-2 sidecar (separate file; round-1 record untouched) ------ #
-    sidecar = (ROOT.parent.parent / "prospective_2026H2"
+    sidecar = (ROOT.parent.parent / "research" / "prospective"
                / "line_B_mobo_closed_loop" / "official_recipe_round2.json")
     payload = {
         "line": "B",

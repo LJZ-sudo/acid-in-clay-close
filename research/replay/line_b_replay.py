@@ -56,8 +56,8 @@ from sklearn.gaussian_process import GaussianProcessRegressor  # noqa: E402
 from sklearn.gaussian_process.kernels import Matern  # noqa: E402
 
 HISTORY = STAGE1 / "campaign_memory" / "history_db_attapulgite.json"
-RECIPE1 = ROOT / "prospective_2026H2" / "line_B_mobo_closed_loop" / "official_recipe.json"
-RECIPE2 = ROOT / "prospective_2026H2" / "line_B_mobo_closed_loop" / "official_recipe_round2.json"
+RECIPE1 = ROOT / "research" / "prospective" / "line_B_mobo_closed_loop" / "official_recipe.json"
+RECIPE2 = ROOT / "research" / "prospective" / "line_B_mobo_closed_loop" / "official_recipe_round2.json"
 
 # map history objective keys -> locked v2 spec keys
 KEY_MAP = {

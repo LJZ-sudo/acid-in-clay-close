@@ -24,13 +24,13 @@
 | `OPTIMIZATION_EXECUTION_PLAN_20260622.md` | ★ 可执行/可勾选/可验收的执行计划（双轨 + WP0–WP5 + 三阶段切换） |
 | `PROJECT_SITUATION_REPORT_20260622.md` | 现状家底（对账真实数据，诚实评估） |
 | `SYSTEM_ARCHITECTURE_CODE_GROUNDED_20260622.md` | 代码级架构（真实 `file::function` 追踪，ASCII 图） |
-| `_new_data_analysis/PUBLICATION_READINESS.md` | 判档 / 发表就绪度（R0–R5 成熟度） |
-| `_new_data_analysis/REAL_MACHINE_INTEGRATION_PLAN_20260622.md` | ★ 真机联调方案（跨机迁移 + 硬件入口 + Harness shadow + 密钥） |
+| `research/docs/PUBLICATION_READINESS.md` | 判档 / 发表就绪度（R0–R5 成熟度） |
+| `research/docs/REAL_MACHINE_INTEGRATION_PLAN_20260622.md` | ★ 真机联调方案（跨机迁移 + 硬件入口 + Harness shadow + 密钥） |
 | `INNOVATION_SKILLS_HARNESS_MEMORY_20260622.md` | 三大底层创新（SciTX/E-Mem/PC-Skills）设计说明 |
-| `_new_data_analysis/TIER_S_MANUSCRIPT_DRAFT_20260622.md` | Tier S 手稿草案（脊柱：M0–M2 + 三 Demo） |
-| `prospective_2026H2/README.md` | 前瞻实验纪律（“冻结 → push 盖时间戳 → 才开始测量”） |
-| `prospective_2026H2/line_A_biopolymer_transfer/PREREGISTRATION.md` | 线 A（生物聚合物迁移）预注册 |
-| `prospective_2026H2/line_B_mobo_closed_loop/PREREGISTRATION.md` | 线 B（真实 MOBO+LLM 闭环）预注册 + 官方 recipe |
+| `research/docs/TIER_S_MANUSCRIPT_DRAFT_20260622.md` | Tier S 手稿草案（脊柱：M0–M2 + 三 Demo） |
+| `research/prospective/README.md` | 前瞻实验纪律（“冻结 → push 盖时间戳 → 才开始测量”） |
+| `research/prospective/line_A_biopolymer_transfer/PREREGISTRATION.md` | 线 A（生物聚合物迁移）预注册 |
+| `research/prospective/line_B_mobo_closed_loop/PREREGISTRATION.md` | 线 B（真实 MOBO+LLM 闭环）预注册 + 官方 recipe |
 | `three_pillars/` | 三创新点的固化证据与执行引擎 |
 
 > ⚠️ **聊天记录不跨机器**：过去与 Cursor/Agent 的对话存在本机 `~/.cursor/.../agent-transcripts/`，**不随 git 迁移**，也不入库（已 gitignore）。换机器后那段历史不在新机器上——靠本文件 + 上述文档承接上下文。
@@ -44,11 +44,18 @@ acid-in-clay-close/
 ├─ PROJECT_SITUATION_REPORT_20260622.md       # 现状家底
 ├─ SYSTEM_ARCHITECTURE_CODE_GROUNDED_20260622.md # 代码级架构
 ├─ INNOVATION_SKILLS_HARNESS_MEMORY_20260622.md  # 三大底层创新设计
-├─ _new_data_analysis/                        # M0–M2 分析硬化 v2 产物 + 判档 + 真机方案 + 手稿
-├─ m6_baseline_ablation/                      # 基线/消融与 Line A 复算
+├─ research/                                  # ★ 研究代码/数据/文档收敛 home（原 _new_data_analysis + m6_baseline_ablation + prospective_2026H2）
+│  ├─ stage0_v2/ · calibration/ · evaluation/ · epistemic/  # M0–M2 分析硬化 v2 代码库
+│  ├─ verification/                           # p2..p21 / pH1..pH4 验证脚本套件
+│  ├─ live/                                   # hw0..hw3 / b_track_* / watch_* 离线&联调脚本
+│  ├─ analysis_scripts/                       # process_all / plot_results / bind_evidence 等
+│  ├─ ablation/                               # 基线/消融与 Line A 复算（原 m6_baseline_ablation）
+│  ├─ prospective/                            # 前瞻预注册（线 A / 线 B，含 line_B official_recipe.json）
+│  ├─ docs/                                   # PUBLICATION_READINESS / TIER_S 手稿 / 真机方案 等
+│  └─ lineA_*/ lineB_*/                       # 各批次实验数据（aggregated/arrhenius）
 ├─ manuscript/                                # 手稿构建（draft + build 脚本）
-├─ prospective_2026H2/                        # 前瞻预注册（线 A / 线 B，含 line_B official_recipe.json）
 ├─ three_pillars/                             # 三创新点证据 + pillar3 执行引擎/门禁
+├─ archive/                                   # 历史/实验性代码归档（保留可追溯，不在主路径）
 └─ V1.0-qianduan-mainline/                     # ★ 主线代码（最核心）
    ├─ backend_api/        # FastAPI 后端（端口 8000），routers/* 为只读看板 + 控制
    ├─ frontend/           # React + Vite + Ant Design 驾驶舱（端口 5173）
@@ -69,7 +76,7 @@ acid-in-clay-close/
 
 ## 3. 跨机器迁移（推荐路径：git clone）
 
-项目已托管在 GitHub。迁移 = 在新机器克隆 + 配置环境，**不要手工拷贝目录**（会带上本机绝对路径的历史产物且漏掉 .env 模板逻辑）。详见 `_new_data_analysis/REAL_MACHINE_INTEGRATION_PLAN_20260622.md`。
+项目已托管在 GitHub。迁移 = 在新机器克隆 + 配置环境，**不要手工拷贝目录**（会带上本机绝对路径的历史产物且漏掉 .env 模板逻辑）。详见 `research/docs/REAL_MACHINE_INTEGRATION_PLAN_20260622.md`。
 
 ```bash
 # 1) 克隆（远端是 SSH；当前工作分支是 remediation/tier3）
@@ -149,12 +156,12 @@ GIT_SSH_COMMAND="ssh -p 443 -o HostName=ssh.github.com" git push
 ## 6. 诚信 / claim 护栏（本项目的灵魂，勿违反）
 
 - 闭环结果**无论收敛与否都如实报告**；未越过阈值就写“执行成功但未实现 Pareto 扩展（诚实 null）”。
-- 前瞻性主张必须有 **git commit + push 时间戳** 在实验之前（见 `prospective_2026H2/`）。
+- 前瞻性主张必须有 **git commit + push 时间戳** 在实验之前（见 `research/prospective/`）。
 - 允许 / 禁止声称的边界写在各 PREREGISTRATION.md 与 `official_recipe.json`；
   **驾驶舱前端只展示“测量 + 实证留痕”**，声称类文字归到论文/预注册层（不放前端）。
 - **12 条系统不变量**（B 轨权威性硬约束，写进代码）见 `OPTIMIZATION_EXECUTION_PLAN_20260622.md §4`：例如 Agent 不得直连 `hw.enqueue_command`、人工 override 必隔离留痕、未 Committed 观察不得进 BO、Instrument success 不得自动等价 PhysicalEffect=confirmed 等。
 - 当前线 B 官方第一轮 recipe：raw MOBO `R=0.0285/N=0.9841` → LLM 修正 **`R=0.28/N=0.96`**
-  （safety passed，见 `prospective_2026H2/line_B_mobo_closed_loop/official_recipe.json`），尚未合成。
+  （safety passed，见 `research/prospective/line_B_mobo_closed_loop/official_recipe.json`），尚未合成。
 
 ## 7. 当前进度速记（2026-06-24）
 
