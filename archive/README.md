@@ -17,6 +17,8 @@
 | `V1.0-qianduan-mainline/codex/` | 同名 | 2026-06-08 一次性审计快照（零运行时读取）；`scripts/audit_mainline.py` 会按需重新生成 `codex/`（该目录现已 gitignore） |
 | `manuscript/report_ppt/` | 同名 | 预手稿阶段 PPT（lab-meeting 用），无现役引用 |
 | `m6_baseline_ablation/_*.py / _*.txt` | `m6_baseline_ablation/` | throwaway 探针/scratch 脚本与输出 |
+| `drt_decommissioned_20260705/` | `stage0_measurement/.../drt_analysis.py` + `analysis/drt/` | DRT 实测不可行（59/59 点重构 R²<0），用户决定下线；负结果证据一并保存 |
+| `report_deck_20260705/` | `analysis/figures/` + `analysis/analysis_scripts/build_pptx.py` | 预手稿阶段汇报 deck 与概念草图 → 正式图表管线在 `manuscript/figures/` |
 
 ## 同期入口收敛（非归档，但同一次重构）
 

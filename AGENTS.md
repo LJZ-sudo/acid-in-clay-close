@@ -61,7 +61,7 @@ acid-in-clay-close/
 └─ V1.0-qianduan-mainline/                     # ★ 主线（唯一代码 home，顶层已无任何数据目录）
    ├─ backend_api/        # FastAPI 后端（端口 8000），routers/* 为只读看板 + 控制
    ├─ analysis/           # ★ 研究分析代码：stage0_v2/ calibration/ evaluation/ epistemic/ regularity/
-   │                      #   replay/ figures/ ablation/ analysis_scripts/（drt/ 已下线归档 → archive/）
+   │                      #   replay/ ablation/ analysis_scripts/（drt/、figures/ 已归档 → archive/）
    │                      #   verification/(p2..p21/pH1..pH4) + natfig.py；读写指向 ../experiments/
    ├─ frontend/           # React + Vite + Ant Design 驾驶舱（端口 5173）
    ├─ configs/            # ★ M0 冻结策略：rb_method_policy / evidence_admission_v2 / objective_registry / dataset_registry / terminology_aliases / stage0_v2_policy

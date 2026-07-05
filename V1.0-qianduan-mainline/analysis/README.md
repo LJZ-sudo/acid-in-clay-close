@@ -36,14 +36,14 @@ legacy_freeze_manifest.json # 🧊 冻结产物 · 遗留物 hash 清单（prosp
 ### evaluation/
 `policy_ablation.py` # ✅ 库 ·（tests/test_policy_ablation.py 覆盖）策略消融，写 experiments/results/。
 
-### regularity/ / replay/ / figures/ / analysis_scripts/
+### regularity/ / replay/ / analysis_scripts/
 全部 ▶️ 现役脚本：
 - `regularity/build_regularity.py`：规律性证据构建（读 experiments/data）；
 - ~~`drt/`~~：已于 2026-07-05 下线归档（实测 DRT 不可行，59/59 点 R²<0）→ `archive/drt_decommissioned_20260705/drt_negative_result/`;
 - `replay/`：run 证据回放（README.md 自带）；
-- `figures/`：手稿图表生成；
+- ~~`figures/`~~ + ~~`analysis_scripts/build_pptx.py`~~：预手稿汇报 deck 与概念草图，已归档 → `archive/report_deck_20260705/`（正式图表管线在 `manuscript/figures/`）；
 - `analysis_scripts/`：杂项分析（含 `b_track_live_fulltemp.py` 全温程分析、`bind_evidence.py` 证据绑定等）；
-- `natfig.py`（包根）：✅ 库 · Nature 风格出图工具，被 figures/ 与手稿脚本复用。
+- `natfig.py`（包根）：✅ 库 · Nature 风格出图工具，被 calibration/replay 出图脚本复用。
 
 ### ablation/ — M6/M7/M8 消融 + 线 A 冻结验证
 ```
